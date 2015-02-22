@@ -28,7 +28,7 @@ if (serverCommandAvailable "#kick") then {
 // Briefing per la facció BLUFOR
 //if (_faccioUnitat == "blu_f") exitWith {
 //	player sideChat format ["DEBUG (briefing.sqf): Utilitzant briefing per %1",_faccioUnitat];
-//	#include "scripts\briefing\cc_briefing_blu_f.sqf"
+	#include "scripts\briefing\cc_briefing_blu_f.sqf"
 //};
 
 // COMPROVACIÓ D'ERRORS: Si la facció de la unitat no està definida es mostra un missatge d'error.
