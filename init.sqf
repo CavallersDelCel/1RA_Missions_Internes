@@ -11,6 +11,10 @@ enableSaving [false, false];
 // Desactivar les ordres per radio o informes
 enableSentences false;
 
+// Execució del script per generar els Briefings
 cc_script_briefing = [] execVM "briefing.sqf";
+
+// Inicialitzar el sistema de radios
+[] execVM "scripts\radios\inicialitzar_radios.sqf";
 
 //============================================ FI DEL FITXER ============================================//

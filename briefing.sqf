@@ -8,6 +8,7 @@
 //             partides TvT. De moment només està inclòs com a plantilla.                                //
 //=======================================================================================================//
 
+// Esperar una mica per tal de que el sistema de briefing s'inicialitzi correctament
 if (!isDedicated && (isNull player)) then
 {
     waitUntil {sleep 0.1; !isNull player};
