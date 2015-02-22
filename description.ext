@@ -1,0 +1,39 @@
+//=======================================================================================================//
+// Arxiu: Description.ext                                                                                //
+// Autor: CC_Magnetar                                                                                    //
+// Versió: 0.1                                                                                           //
+// Creació del Document: 22/02/2015                                                                      //
+//=======================================================================================================//
+
+//=======================================================================================================//
+// Header de la missió: - Definició del mode de joc, nombre mínim de jugadors i nombre màxim de jugadors //
+//=======================================================================================================//
+
+class Header
+{
+	gameType = Coop;     // Mode de joc: https://community.bistudio.com/wiki/Multiplayer_Game_Types
+	minPlayers = 1;      // Nombre mínim de jugadors
+	maxPlayers = 14;     // Nombre màxim de jugadors
+};
+
+//=======================================================================================================//
+// Pantalla de càrrega https://community.bistudio.com/wiki/Description.ext                               //
+//=======================================================================================================//
+
+onLoadName = "Jagdtag";                                // Nom de la missió (apareix en gran)
+onLoadMission = "Operació Jagdtag (Dia de caça).";     // Descripció breu de la missió
+author = "CC_Magnetar";                                // Autor
+loadScreen = "loadLogo.jpg";                           // Imatge mentre es carrega la missió
+overviewPicture = "overviewLogo.jpg";                  // Imatge que es mostra al seleccionar la missió.
+                                                       // Ha d'estar en format .paa i aspecte 2:1
+overviewText = "Operació Jagdtag (Dia de caça)."       // Text que es mostra al seleccionar la missó.
+
+
+//=======================================================================================================//
+// Respawn Settings: Definició del tipus de respawn. https://community.bistudio.com/wiki/Arma_3_Respawn  //
+//=======================================================================================================//
+
+respawn = "BIRD"         // Es fa un respawn com a ocell, fi de la partida pel jugador
+disabledAI = 1           // Amaga les unitats amigues jugables ue no són controlades per un jugador
+                         // (Playable Unit) https://community.bistudio.com/wiki/Description.ext#disabledAI
+respawnTemplates[] = {"Seagull","Spectator","EndMission"};
