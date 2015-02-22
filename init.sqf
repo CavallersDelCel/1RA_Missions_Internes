@@ -6,9 +6,11 @@
 //=======================================================================================================//
 
 // Desactivar guardar i guardar automàticament
-enableSaving [false, false]
+enableSaving [false, false];
 
 // Desactivar les ordres per radio o informes
 enableSentences false;
 
 cc_script_briefing = [] execVM "briefing.sqf";
+
+//============================================ FI DEL FITXER ============================================//
