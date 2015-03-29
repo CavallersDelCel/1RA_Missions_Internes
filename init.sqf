@@ -15,6 +15,6 @@ enableSentences false;
 cc_script_briefing = [] execVM "briefing.sqf";
 
 // Inicialitzar el sistema de radios
-[] execVM "scripts\radios\inicialitzar_radios.sqf";
+cc_script_radio = [] execVM "scripts\radios\inicialitzar_radios.sqf";
 
 //============================================ FI DEL FITXER ============================================//

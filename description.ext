@@ -23,8 +23,8 @@ class Header
 onLoadName = "Jagdtag";                                // Nom de la missió (apareix en gran)
 onLoadMission = "Operació Jagdtag (Dia de caça).";     // Descripció breu de la missió
 author = "CC_Magnetar";                                // Autor
-loadScreen = "pics\loadLogo.jpg";                           // Imatge mentre es carrega la missió
-overviewPicture = "pics\overviewLogo.jpg";                  // Imatge que es mostra al seleccionar la missió.
+loadScreen = "pics\loadLogo.jpg";                      // Imatge mentre es carrega la missió
+overviewPicture = "pics\overviewLogo.jpg";             // Imatge que es mostra al seleccionar la missió.
                                                        // Ha d'estar en format .paa i aspecte 2:1
 overviewText = "Operació Jagdtag (Dia de caça)."       // Text que es mostra al seleccionar la missó.
 
@@ -34,7 +34,7 @@ overviewText = "Operació Jagdtag (Dia de caça)."       // Text que es mostra a
 //=======================================================================================================//
 
 respawn = "BIRD";        // Es fa un respawn com a ocell, fi de la partida pel jugador
-disabledAI = 1;          // Amaga les unitats amigues jugables ue no són controlades per un jugador
+disabledAI = 1;          // Amaga les unitats amigues jugables que no són controlades per un jugador
                          // (Playable Unit) https://community.bistudio.com/wiki/Description.ext#disabledAI
 respawnTemplates[] = {"Seagull","Spectator","EndMission"};
 
@@ -43,19 +43,29 @@ respawnTemplates[] = {"Seagull","Spectator","EndMission"};
 //=======================================================================================================//
 class Params
 {
-
+	//===================================================================================================//
+	// Debug: Variable per controlar Debug.
+	// Opció per defecte: Habilitat
+	//===================================================================================================//
+	class cc_param_debugOutput
+    {
+        title = "Sistemes de radio";
+        values[] = {0,1};
+        texts[] = {"Desactivat","Activat"};
+        default = 1;
+        code = "cc_var_debugOutput = %1";
+    };
 	//===================================================================================================//
 	// Radios: Sistemes de radios.
 	// Opció per defecte: Task Force Arrowhead (TFAR)
 	//===================================================================================================//
-
     class cc_param_radios
     {
-            title = "Sistemes de radio";
-            values[] = {0,1,2};
-            texts[] = {"Cap","TFAR","ACRE2"};
-            default = 1;
-            code = "cc_var_radios = %1";
+        title = "Sistemes de radio";
+        values[] = {0,1,2};
+        texts[] = {"Cap","TFAR","ACRE2"};
+        default = 1;
+        code = "cc_var_radios = %1";
     };
 };
 
@@ -96,7 +106,7 @@ class CfgDebriefing
 		pictureColor[] = {0.0,0.3,0.6,1};
 	};
 	
-		class FinalFallit2
+	class FinalFallit2
 	{
 		title = "Missió fallida #2";
 		subtitle = "";
@@ -116,6 +126,41 @@ class CfgDebriefing
 		pictureColor[] = {0.0,0.3,0.6,1};
 	};
 	
+};
+
+// Funcions per les missions dels Cavallers del Cel
+class CfgFunctions
+{
+	class CC // Defines the "owner"
+	{
+		// Funcions comunes i essencials pel funcionament dels scripts
+		class comu
+		{
+			file = "scripts\comu";
+			class processarParamsArray
+			{
+				preInit = 1;   // La funció s'executa al iniciar la missió, ABANS d'inicialitzar objectes
+				postInit = 1;  // La funció s'executa al iniciar la missió, DESPRÉS d'inicialitzar objectes
+			};
+		};
+		
+		// Funcions per equipar els diferents rols amb els perfils dels Cavallers del Cel
+		class configEquipacio
+		{
+			file = "scripts\configEquipacio";
+			class configEquipacio{};
+		};
+		
+		// Funcions per inicialitzar el sistema de radio Task Force Arrowhead (TFAR)		
+		class tfar
+		{
+			file = "scripts\radios\tfar";
+			class tfar_treureRadios{};
+			class tfar_afegirRadios{};
+			class tfar_configurarFreqRadios{};
+			class tfar_configurarXatEspectador{};
+		};
+	};
 };
 
 //============================================ FI DEL FITXER ============================================//
