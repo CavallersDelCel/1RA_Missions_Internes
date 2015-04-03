@@ -68,6 +68,11 @@ if(_tipusUnitat != "nil") then {
 
 	// Si les radios estan habilitades, cal assignar-les depenent del rol
 	if(cc_tfar_config_distribuirRadios) then {
+	
+		if( !tf_give_microdagr_to_soldier) then {
+			_unitat unlinkItem "ItemWatch";
+			_unitat linkItem "ItemWatch";
+		};
 				
 		// Assignar radios de Rifleman i curt abast (Short range)
 		if(_tipusUnitat in cc_tfar_llistaRF ) then {
