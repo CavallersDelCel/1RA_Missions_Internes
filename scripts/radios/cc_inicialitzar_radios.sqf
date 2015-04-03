@@ -16,7 +16,7 @@ if(cc_var_radios != 0) then {
   switch (cc_var_radios) do {
 		// Task Force Arrowhead (TFAR)
 		case 1: {
-			[] execVM "scripts\radios\tfar\inicialitzar_tfar.sqf";
+			[] execVM "scripts\radios\tfar\cc_inicialitzar_tfar.sqf";
 		};
 		// Advanced Combat Radio Environment 2 (ACRE 2)
 		case 2: {

@@ -14,7 +14,7 @@ private["_unitat", "_tipusUnitat", "_radioLR","_radioSR","_radioRF", "_radioActi
 
 _unitat = player;
 
-//_tipusUnitat = _unitat getVariable ["cc_var_configEquipacio", "NIL"];
+_tipusUnitat = _unitat getVariable ["cc_var_configEquipacio", "NIL"];
 
 // Definir les radios que s'assignaran.
 //   - radioLR: Long Range Radio
@@ -63,19 +63,12 @@ if (cc_tfar_config_utilitzarRadiosPerDefecte) then {
 	};
 };
 
-
-player sideChat format ["DEBUG (fn_tfar_afegirRadops.sqf): Afegint ara les radios."];
-
-_tipusUnitat = "LSM4A1OCP";
-
 // Assignar radios depenent del tipus d'unitat (fn_configEquipacio)
 if(_tipusUnitat != "nil") then {
 
 	// Si les radios estan habilitades, cal assignar-les depenent del rol
 	if(cc_tfar_config_distribuirRadios) then {
-		
-		player sideChat format ["DEBUG (fn_tfar_afegirRadios.sqf): Afegint radios al tipus d'unitat %1", _tipusUnitat];
-		
+				
 		// Assignar radios de Rifleman i curt abast (Short range)
 		if(_tipusUnitat in cc_tfar_llistaRF ) then {
 			_unitat linkItem _radioRF;
@@ -94,8 +87,7 @@ if(_tipusUnitat != "nil") then {
 			{
 				_unitat addItemToBackpack _x
 			} forEach _objectesMotxilla;
-		};
-			
+		};	
 	};
 };
 

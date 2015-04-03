@@ -4,7 +4,8 @@
 // Versió: 0.1                                                                                           //
 // Creació del Document: 22/02/2015                                                                      //
 // Descripció: Aquest document serveix per oferir informació de la missió si la unitat forma part de     //
-//             la facció "United States Army".                                                   //
+//             la facció RHS: United States Army "rhs_faction_usarmy_wd".                                //
+//             http://doc.rhsmods.org/index.php/United_States_Army                                       //
 //=======================================================================================================//
 
 //=======================================================================================================//

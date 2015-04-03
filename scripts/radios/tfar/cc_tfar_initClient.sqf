@@ -19,14 +19,16 @@ if(alive player) then {
 	// Treure totes les ràdios de l'inventari
 	[] call cc_fnc_tfar_treureRadios;
 
-	// Esperar fins que l'equip estigui assignat
-	//waitUntil{(player getVariable ["cc_var_configEquipacio_Llesta", false])};
+	// Esperar fins que l'equipació estigui assignada
+	waitUntil{(player getVariable ["cc_var_configEquipacio_Llesta", false])};
 
 	// Afegir les ràdios a cada unitat
 	[] call cc_fnc_tfar_afegirRadios;
 
 	// Configurar el xat d'espectador
 	[] call cc_fnc_tfar_configurarXatEspectador;
+	
+	player sideChat format ["DEBUG (fn_tfar_initClient.sqf): Radios configurades."];
 } else {
 	// El jugador no està viu i per tant no cal configurar les ràdios.
 	[] call cc_fnc_tfar_configurarXatEspectador;

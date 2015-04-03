@@ -8,18 +8,18 @@
 //=======================================================================================================//
 
 // Incloure el fitxer de configuració
-#include "tfar_configuracio.sqf"
+#include "cc_tfar_configuracio.sqf"
 
 // Si el script s'està executant en un servidor
 if(isDedicated) then {
-	[] execVM "scripts\radios\tfar\tfar_initServidor.sqf";
+	[] execVM "scripts\radios\tfar\cc_tfar_initServidor.sqf";
 } else {
-	[] execVM "scripts\radios\tfar\tfar_initClient.sqf";
+	[] execVM "scripts\radios\tfar\cc_tfar_initClient.sqf";
 	
     // Si no s'utilitza un servidor dedicat però un jugador fa de host, s'ha d'executar també el script
 	// de servidor
     if((!isDedicated) && (isServer)) then {
-		[] execVM "scripts\radios\tfar\tfar_initServidor.sqf";
+		[] execVM "scripts\radios\tfar\cc_tfar_initServidor.sqf";
 	};
 };
 

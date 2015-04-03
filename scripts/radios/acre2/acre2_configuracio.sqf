@@ -32,12 +32,12 @@ cc_tfar_config_distribuirRadios = true;
 cc_tfar_config_assignarCanals = true;
 
 // Llista d'unitats amb Rifleman Radio (fn_configEquipacio.sqf)
-cc_tfar_llistaRF = ["FUM4A1OCP", "GRM4A1OCP", "FAM249OCP", "ME240BOCP", "ATM4A1OCP", "TISR25OCP", "EXM4A1OCP"];
+cc_acre2_llistaRF = ["FUM4A1OCP", "GRM4A1OCP", "FAM249OCP", "ME240BOCP", "ATM4A1OCP", "TISR25OCP", "EXM4A1OCP"];
 
 // Llista d'unitats amb Short Range Radio (fn_configEquipacio.sqf)
-cc_tfar_llistaSR = ["LSM4A1OCP", "LEM4A1OCP", "MGM4A1OCP", "FM2010OCP"];
+cc_acre2_llistaSR = ["LSM4A1OCP", "LEM4A1OCP", "MGM4A1OCP", "FM2010OCP"];
 
 // Llista d'unitats amb Long Range Radio (fn_configEquipacio.sqf)
-cc_tfar_llistaLR = ["LSM4A1OCP", "LEM4A1OCP"];
+cc_acre2_llistaLR = ["LSM4A1OCP", "LEM4A1OCP"];
 
 //============================================ FI DEL FITXER ============================================//

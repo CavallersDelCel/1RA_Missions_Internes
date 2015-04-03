@@ -20,14 +20,18 @@ class Header
 // Pantalla de càrrega https://community.bistudio.com/wiki/Description.ext                               //
 //=======================================================================================================//
 
-onLoadName = "Jagdtag";                                // Nom de la missió (apareix en gran)
-onLoadMission = "Operació Jagdtag (Dia de caça).";     // Descripció breu de la missió
+onLoadName = "*** Nom de la missió. **** ";            // Nom de la missió (apareix en gran)
+onLoadMission = "*** Descripció de la missió. ***";    // Descripció breu de la missió
 author = "CC_Magnetar";                                // Autor
 loadScreen = "pics\loadLogo.jpg";                      // Imatge mentre es carrega la missió
 overviewPicture = "pics\overviewLogo.jpg";             // Imatge que es mostra al seleccionar la missió.
                                                        // Ha d'estar en format .paa i aspecte 2:1
-overviewText = "Operació Jagdtag (Dia de caça)."       // Text que es mostra al seleccionar la missó.
+overviewText = "*** Text a mostrar. ***"               // Text que es mostra al seleccionar la missó.
 
+//=======================================================================================================//
+// Consola de Debug de BIS: https://community.bistudio.com/wiki/Description.ext#enableDebugConsole       //
+//=======================================================================================================//
+enableDebugConsole = 1;  // Habilitada per SP i administradors en MP.
 
 //=======================================================================================================//
 // Respawn Settings: Definició del tipus de respawn. https://community.bistudio.com/wiki/Arma_3_Respawn  //
@@ -67,6 +71,14 @@ class Params
         default = 1;
         code = "cc_var_radios = %1";
     };
+	class cc_param_equipacio
+	{
+		title = "Utilitzar perfils";
+		values[] = {0,1};
+		texts[] = {"No","Si"};
+		default = 1;
+		code = "cc_var_utilitzarPerfils = %1"
+	};
 };
 
 //=======================================================================================================//

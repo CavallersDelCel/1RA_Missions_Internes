@@ -1,10 +1,11 @@
 //=======================================================================================================//
-// Arxiu: cc_briefing_rhs_vpvo.sqf                                                                    //
+// Arxiu: cc_briefing_rhs_vpvo.sqf                                                                       //
 // Autor: CC_Magnetar                                                                                    //
 // Versió: 0.1                                                                                           //
 // Creació del Document: 22/02/2015                                                                      //
 // Descripció: Aquest document serveix per oferir informació de la missió si la unitat forma part de     //
-//             la facció "Russian Air Defense Troops (VPVO)".                                                   //
+//             la facció RHS: Russian Air Defense Troops (VPVO) "rhs_faction_vpvo".                      //
+//             http://doc.rhsmods.org/index.php/Russian_Air_Defense_Troops                               //
 //=======================================================================================================//
 
 //=======================================================================================================//
