@@ -1,5 +1,5 @@
 //=======================================================================================================//
-// Arxiu: tfar_configuracio.sqf                                                                          //
+// Arxiu: cc_tfar_configuracio.sqf                                                                       //
 // Autor: CC_Magnetar                                                                                    //
 // Versió: 0.1                                                                                           //
 // Creació del Document: 09/03/2015                                                                      //

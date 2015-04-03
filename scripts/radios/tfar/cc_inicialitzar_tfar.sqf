@@ -1,10 +1,10 @@
 //=======================================================================================================//
-// Arxiu: inicialitzar_tfar.sqf                                                                          //
+// Arxiu: cc_inicialitzar_tfar.sqf                                                                       //
 // Autor: CC_Magnetar                                                                                    //
 // Versió: 0.1                                                                                           //
 // Creació del Document: 22/02/2015                                                                      //
-// Descripció: Aquest document serveix per inicialitzar els paràmetres per les radios al Task Force      //
-//             Arrowhead Radio (TFAR) https://github.com/michail-nikolaev/task-force-arma-3-radio/wiki   //
+// Descripció: Aquest document serveix per configurar el Task Force  Arrowhead Radio (TFAR)              //
+//             https://github.com/michail-nikolaev/task-force-arma-3-radio/wiki                          //
 //=======================================================================================================//
 
 // Incloure el fitxer de configuració
