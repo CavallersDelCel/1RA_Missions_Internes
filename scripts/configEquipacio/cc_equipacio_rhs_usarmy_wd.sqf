@@ -35,20 +35,28 @@ _esInfanteria = _unitat isKindOf "CAManBase";
 // Treure tota l'equipació que porta la unitat en el cas que sigui infanteria
 if (_esInfanteria) then {
 	removeAllWeapons _unitat;
-	removeAllItems _unitat;
 	removeAllAssignedItems _unitat;
-	removeUniform _unitat;
-	removeVest _unitat;
-	removeBackpack _unitat;
+	clearAllItemsFromBackpack _unitat;
+	removeAllContainers _unitat;
 	removeHeadgear _unitat;
-	removeGoggles _unitat;
 };
 
 // Elements comuns
 _uniforme = "rhs_uniform_cu_ocp_patchless";
-_armilla = "rhsusf_iotv_ocp_Squadleader";
-_motxilla = "rhsusf_assault_eagleaiii_ocp";
+_armillaSQLider = "rhsusf_iotv_ocp_squadleader";
+_armilla = "rhsusf_iotv_ocp_rifleman";
+_armillaGR = "rhsusf_iotv_ocp_rifleman";
 _casc = "rhsusf_ach_helmet_headset_ocp";
+_motxilla = "rhsusf_assault_eagleaiii_ocp";
+
+_arma = "rhs_weap_m4a1";
+_arma320 = "rhs_weap_m4a1_m320";
+_armaSilenciador = "rhsusf_acc_rotex5_grey";
+_armaSurefire = "rhsusf_acc_SF3P556";
+_armaLaserLlanterna = "rhsusf_acc_anpeq15";
+_armaMira = "rhsusf_acc_ACOG";
+
+_pistola = "hgun_P07_F";
 
 _gps = "ItemGPS";
 _rellotge = "ItemWatch";
@@ -60,70 +68,195 @@ _terminalUAV = "B_UavTerminal";
 // Configurar l'equip per cada unitat
 switch (_tipusUnitat) do
 {
-	// Líder d'Esquadra
-	case "lideresquadra":
+	// Cap de secció (Platoon leader)
+	case "pl":
+	{
+		// Uniforme, casc, armilla i motxila
+		_unitat addUniform _uniforme;
+		_unitat addHeadgear _casc;
+		_unitat addVest _armillaSQLider;
+		_unitat addBackpack _motxilla;
+		
+		// Arma principal
+		_unitat addWeapon _arma320;
+		_unitat addPrimaryWeaponItem _armaSurefire;
+		_unitat addPrimaryWeaponItem _armaLaserLlanterna;
+		_unitat addPrimaryWeaponItem _armaMira;
+		
+		// Arma secundària
+		_unitat addWeapon _pistola;
+		
+		// Objectes
+		_unitat linkItem _mapa;
+		_unitat linkItem _rellotge;
+		_unitat linkItem _brujola;
+		_unitat linkItem _gps;
+		_unitat linkItem _radio;
+		
+		// Objectes a l'uniforme
+		
+		// Objectes a l'armilla
+		(vestContainer _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",5];
+		(vestContainer _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",1];
+		
+		// Objectes a la motxilla
+	};
+	
+	// Sergent (Platoon Sergeant)
+	case "psg":
+	{
+	
+	};
+	
+	// Radio Operador (Platoon Radiotelephone Operator)
+	case "rto":
+	{
+	
+	};
+	
+	// Observador avançat (Forward Observer)
+	case "fo":
+	{
+	
+	};
+	
+	// Metge (Platoon Medic)
+	case "me":
+	{
+		
+	};
+
+	// Líder d'Esquadra (Squad Leader)
+	case "sl":
 	{
 		
 	};
 	
-	// Líder d'Equip
-	case "liderequip":
+	// Líder d'Equip (Team leader)
+	case "tl":
 	{
 		
 	};
 	
-	// Fuseller
-	case "fuseller":
+	// Fuseller (Rifleman)
+	case "rfl":
+	{
+		// Uniforme, casc, armilla i motxila
+		_unitat addUniform _uniforme;
+		_unitat addHeadgear _casc;
+		_unitat addVest _armillaSQLider;
+		_unitat addBackpack _motxilla;
+		
+		// Arma principal
+		_unitat addWeapon _arma;
+		_unitat addPrimaryWeaponItem _armaSurefire;
+		_unitat addPrimaryWeaponItem _armaLaserLlanterna;
+		_unitat addPrimaryWeaponItem _armaMira;
+		
+		// Arma secundària
+		_unitat addWeapon _pistola;
+		
+		// Objectes
+		_unitat linkItem _mapa;
+		_unitat linkItem _rellotge;
+		_unitat linkItem _brujola;
+		//_unitat linkItem _gps;
+		_unitat linkItem _radio;
+		
+	};
+	
+	// Granader (Grenadier)
+	case "gr":
+	{
+		// Uniforme, casc, armilla i motxila
+		_unitat addUniform _uniforme;
+		_unitat addHeadgear _casc;
+		_unitat addVest _armillaGR;
+		_unitat addBackpack _motxilla;
+		
+		// Arma principal
+		_unitat addWeapon _arma320;
+		_unitat addPrimaryWeaponItem _armaSurefire;
+		_unitat addPrimaryWeaponItem _armaLaserLlanterna;
+		_unitat addPrimaryWeaponItem _armaMira;
+		
+		// Arma secundària
+		_unitat addWeapon _pistola;
+		
+		// Objectes
+		_unitat linkItem _mapa;
+		_unitat linkItem _rellotge;
+		_unitat linkItem _brujola;
+		//_unitat linkItem _gps;
+		_unitat linkItem _radio;
+	};
+	
+	// Fuseller automàtic (Automatic Rifleman)
+	case "ar":
 	{
 		
 	};
 	
-	// Granader
-	case "granader":
+	// Tirador designat (Designated Marksman)
+	case "dm":
 	{
 		
 	};
 	
-	// Fuseller automàtic
-	case "fusellerautomatic":
+	
+	// Metrallador (Machine Gunner)
+	case "mg":
 	{
 		
 	};
 	
-	// Metrallador
-	case "metrallador":
+	// Assitent de metrallador (Assitant Machine Gunner)
+	case "amg":
+	{
+	
+	};
+	
+	// Antitanc (Antitank)
+	case "at":
+	{
+	
+		
+	};
+	
+	// Assistent d'antitanc (Ammo handler)
+	case "aat"
+	{
+	
+	};
+	
+	// Anti aèri (Anti Air gunner)
+	case "aa"
+	{
+	
+	};
+	
+	// Assistent d'anti aèri (Anti Air Assitant)
+	case "aaa"
+	{
+	
+	};
+	
+	// Enginyer (Engineer)
+	case "en":
 	{
 		
 	};
 	
-	// Antitanc
-	case "antitanc":
+	// Franctirador (Sniper)
+	case "sn":
 	{
 		
 	};
 	
-	// Tirador
-	case "tirador":
+	// Observador (Spotter)
+	case "ob":
 	{
-		
-	};
 	
-	// Metge
-	case "metge":
-	{
-		
-	};
-	
-	// Explosius
-	case "explosius":
-	{
-		
-	};
-	
-	// Franctirador
-	case "franctirador":
-	{
-		
 	};
 };
 

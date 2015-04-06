@@ -31,10 +31,8 @@ cc_tfar_config_utilitzarRadiosPerDefecte = false;
 //   - true: es distribueixen radios
 cc_tfar_config_distribuirRadios = true;
 
-
-
 // Llista d'unitats amb Rifleman Radio (fn_configEquipacio.sqf)
-cc_tfar_llistaRF = ["fuseller", "granader", "fusellerautmatic", "metrallador", "antitanc", "tirador", "explosius"];
+cc_tfar_llistaRF = ["fuseller", "granader", "fusellerautomatic", "metrallador", "antitanc", "tirador", "explosius"];
 
 // Llista d'unitats amb Short Range Radio (fn_configEquipacio.sqf)
 cc_tfar_llistaSR = ["lideresquadra", "liderequip", "metge", "franctirador"];
