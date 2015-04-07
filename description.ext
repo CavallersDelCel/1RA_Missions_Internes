@@ -26,7 +26,7 @@ author = "CC_Magnetar";                                // Autor
 loadScreen = "pics\loadLogo.jpg";                      // Imatge mentre es carrega la missió
 overviewPicture = "pics\overviewLogo.jpg";             // Imatge que es mostra al seleccionar la missió.
                                                        // Ha d'estar en format .paa i aspecte 2:1
-overviewText = "*** Text a mostrar. ***"               // Text que es mostra al seleccionar la missó.
+overviewText = "*** Text a mostrar. ***";               // Text que es mostra al seleccionar la missó.
 
 //=======================================================================================================//
 // Consola de Debug de BIS: https://community.bistudio.com/wiki/Description.ext#enableDebugConsole       //

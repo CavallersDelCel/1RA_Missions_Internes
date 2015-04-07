@@ -44,7 +44,7 @@ _armillaSAW = "rhsusf_iotv_ocp_SAW";
 
 _casc = "rhsusf_ach_helmet_headset_ocp";
 
-_ulleres "G_Tactical_Clear";
+_ulleres = "G_Tactical_Clear";
 
 _motxilla = "rhsusf_assault_eagleaiii_ocp";
 
@@ -333,7 +333,7 @@ switch (_tipusUnitat) do
 	};
 	
 	// Assistent d'antitanc (Ammo handler)
-	case "aat"
+	case "aat":
 	{
 		// Uniforme, casc, armilla i motxila
 		_unitat addVest _armillaRFL;
@@ -347,7 +347,7 @@ switch (_tipusUnitat) do
 	};
 	
 	// Anti aèri (Anti Air gunner)
-	case "aa"
+	case "aa":
 	{
 		// Uniforme, casc, armilla i motxila
 		_unitat addVest _armillaRFL;
@@ -364,7 +364,7 @@ switch (_tipusUnitat) do
 	};
 	
 	// Assistent d'anti aèri (Anti Air Assitant)
-	case "aaa"
+	case "aaa":
 	{
 		// Uniforme, casc, armilla i motxila
 		_unitat addVest _armillaRFL;
@@ -395,7 +395,7 @@ switch (_tipusUnitat) do
 	case "sn":
 	{
 		// Uniforme i armilla
-		_unitat removeUniform;
+		removeUniform _unitat;
 		_unitat forceAddUniform _uniformeSN;
 		_unitat addVest _armillaRFL;
 		
@@ -410,7 +410,7 @@ switch (_tipusUnitat) do
 	case "sp":
 	{
 		// Uniforme i armilla
-		_unitat removeUniform;
+		removeUniform _unitat;
 		_unitat forceAddUniform _uniformeSN;
 		_unitat addVest _armillaRFL;
 		
