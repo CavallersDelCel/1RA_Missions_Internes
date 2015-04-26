@@ -23,6 +23,9 @@
 //                  metge               Metge                                                            //
 //                  explosius           Explosius                                                        //
 //                  franctirador        Franctirador                                                     //
+//                                                                                                       //
+// Canvis: 0.1 (2015/04/02) Versió inicial.                                                              //
+//         0.2 (2015/04/26) Canviada la facció de les unitats RHS v0.3.7.                                //
 //=======================================================================================================//
 
 // Esperar a inicialitzar les variables
@@ -81,17 +84,17 @@ if (_faccioUnitat == "civ_f") then {
 };
 
 // Equipació per la facció USA "United States Army"
-if (_faccioUnitat == "rhs_faction_usarmy_wd") then {
+if (_faccioUnitat == "rhs_faction_usarmy_14") then {
 	if( cc_var_utilitzarPerfils == 1 ) then	{
-		#include "cc_equipacio_rhs_usarmy_wd_perfils.sqf"
+		#include "cc_equipacio_rhs_usarmy_14_perfils.sqf"
 	} else {
-		#include "cc_equipacio_rhs_usarmy_wd.sqf"
+		#include "cc_equipacio_rhs_usarmy_14.sqf"
 	}
 };
 
 // Equipació per la facció USA "United States Marine Corps"
-if (_faccioUnitat == "rhs_faction_usmc_wd") then {
-	#include "cc_equipacio_rhs_usmc_wd.sqf"
+if (_faccioUnitat == "rhs_faction_usmc_14") then {
+	#include "cc_equipacio_rhs_usmc_14.sqf"
 };
 
 // Equipació per la facció russa "Russian Air Defense Troops"

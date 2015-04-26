@@ -1,5 +1,5 @@
 //=======================================================================================================//
-// Arxiu: cc_equipacio_rhs_usarmy_wd_perfils.sqf                                                         //
+// Arxiu: cc_equipacio_rhs_usarmy_14_perfils.sqf                                                         //
 // Autor: CC_Magnetar                                                                                    //
 // Versió: 0.1                                                                                           //
 // Creació del Document: 02/04/2015                                                                      //
@@ -13,17 +13,20 @@
 //             on "ROL_JUGADOR" és una de les següents entrades:                                         //
 //                                                                                                       //
 //                  ROL_JUGADOR         PERFIL associat                                                  //
-//                  lideresquadra       CC - Lider d'esquadra M4A1+M320 OCP                              //
-//                  liderequip          CC - Lider d'equip M4A1+M320 OCP                                 //
-//                  fuseller            CC - Fuseller M4A1 OCP                                           //
-//                  granader            CC - Granader M4A1+M320 OCP                                      //
-//                  fusellerautomatic   CC - FA M249 OCP                                                 //
-//                  metrallador         CC - Metrallador M240B OCP                                       //
-//                  antitanc            CC - AT M4A1+AT4 OCP                                             //
-//                  tirador             CC - Tirador SR-25EC OCP                                         //
-//                  metge               CC - Metge M4A1 OCP                                              //
-//                  explosius           CC - Explosius M4A1 OCP                                          //
-//                  franctirador        CC - Franctirador M2010ESR OCP                                   //
+//                  sl                  CC - Lider d'esquadra M4A1+M320 OCP                              //
+//                  tl                  CC - Lider d'equip M4A1+M320 OCP                                 //
+//                  rfl                 CC - Fuseller M4A1 OCP                                           //
+//                  gr                  CC - Granader M4A1+M320 OCP                                      //
+//                  ar                  CC - FA M249 OCP                                                 //
+//                  mg                  CC - Metrallador M240B OCP                                       //
+//                  at                  CC - AT M4A1+AT4 OCP                                             //
+//                  dm                  CC - Tirador SR-25EC OCP                                         //
+//                  me                  CC - Metge M4A1 OCP                                              //
+//                  en                  CC - Explosius M4A1 OCP                                          //
+//                  sn                  CC - Franctirador M2010ESR OCP                                   //
+//                                                                                                       //
+// Canvis: 0.1 (2015/04/02) Versió inicial.                                                              //
+//         0.2 (2015/04/26) Canviat el nom del fitxer i afegit el perfil del Javelin                     //
 //=======================================================================================================//
 
 _tipusUnitat = toLower (_this select 0);
@@ -32,68 +35,74 @@ _unitat = _this select 1;
 // Configurar l'equip per cada unitat
 switch (_tipusUnitat) do
 {
-	// Líder d'Esquadra
-	case "lideresquadra":
+	// Líder d'Esquadra (Squad Leader)
+	case "sl":
 	{
 		_loadout = [_unitat,[profileNamespace,"CC - Lider d'esquadra M4A1+M320 OCP"]] call BIS_fnc_loadInventory;
 	};
 	
-	// Líder d'Equip
-	case "liderequip":
+	// Líder d'Equip (Team Leader)
+	case "tl":
 	{
 		_loadout = [_unitat,[profileNamespace,"CC - Lider d'equip M4A1+M320 OCP"]] call BIS_fnc_loadInventory;
 	};
 	
-	// Fuseller
-	case "fuseller":
+	// Fuseller (Rifleman)
+	case "rfl":
 	{
 		_loadout = [_unitat,[profileNamespace,"CC - Fuseller M4A1 OCP"]] call BIS_fnc_loadInventory;
 	};
 	
-	// Granader
-	case "granader":
-	{
-		_loadout = [_unitat,[profileNamespace,"CC - Granader M4A1+M320 OCP"]] call BIS_fnc_loadInventory;
-	};
-	
-	// Fuseller automàtic
-	case "fusellerautomatic":
-	{
-		_loadout = [_unitat,[profileNamespace,"CC - FA M249 OCP"]] call BIS_fnc_loadInventory;
-	};
-	
-	// Metrallador
-	case "metrallador":
-	{
-		_loadout = [_unitat,[profileNamespace,"CC - Metrallador M240B OC"]] call BIS_fnc_loadInventory;
-	};
-	
-	// Antitanc
-	case "antitanc":
+	// Fuseller AT4 (Rifleman AT4)
+	case "rflat":
 	{
 		_loadout = [_unitat,[profileNamespace,"CC - AT M4A1+AT4 OCP"]] call BIS_fnc_loadInventory;
 	};
 	
-	// Tirador
-	case "tirador":
+	// Granader (Grenadier)
+	case "gr":
+	{
+		_loadout = [_unitat,[profileNamespace,"CC - Granader M4A1+M320 OCP"]] call BIS_fnc_loadInventory;
+	};
+	
+	// Fuseller automàtic (Automatic Rifleman)
+	case "ar":
+	{
+		_loadout = [_unitat,[profileNamespace,"CC - FA M249 OCP"]] call BIS_fnc_loadInventory;
+	};
+	
+	// Metrallador (Machine Gunner)
+	case "mg":
+	{
+		_loadout = [_unitat,[profileNamespace,"CC - Metrallador M240B OC"]] call BIS_fnc_loadInventory;
+	};
+	
+	// Antitanc (Antitank)
+	case "at":
+	{
+		_loadout = [_unitat,[profileNamespace,"CC - AT M4A1 + Javelin OCP"]] call BIS_fnc_loadInventory;
+	};
+	
+	// Tirador designat (Designated Marksman)
+	case "dm":
 	{
 		_loadout = [_unitat,[profileNamespace,"CC - Tirador SR-25EC OCP"]] call BIS_fnc_loadInventory;
 	};
 	
-	// Metge
-	case "metge":
+	// Metge (Platoon Medic)
+	case "me":
 	{
 		_loadout = [_unitat,[profileNamespace,"CC - Metge M4A1 OCP"]] call BIS_fnc_loadInventory;
 	};
 	
-	// Explosius
-	case "explosius":
+	// Enginyer (Engineer)
+	case "en":
 	{
 		_loadout = [_unitat,[profileNamespace,"CC - Explosius M4A1 OCP"]] call BIS_fnc_loadInventory;
 	};
 	
-	// Franctirador
-	case "franctirador":
+	// Franctirador (Sniper)
+	case "sn":
 	{
 		_loadout = [_unitat,[profileNamespace,"CC - Franctirador M2010ESR OCP"]] call BIS_fnc_loadInventory;
 	};

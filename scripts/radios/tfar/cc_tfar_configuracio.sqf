@@ -17,7 +17,7 @@ tf_same_sw_frequencies_for_side = true;
 tf_same_lr_frequencies_for_side = true;
 
 // Assignar rellotge (false) o microDAGR (true) per la radio Rifleman
-tf_give_microdagr_to_soldier = false;
+tf_give_microdagr_to_soldier = true;
 
 // Variable per saber quines radios s'han d'equipar. Si les que venen per defecte amb el TFAR o
 // si es volen customitzar.
@@ -32,12 +32,12 @@ cc_tfar_config_utilitzarRadiosPerDefecte = false;
 cc_tfar_config_distribuirRadios = true;
 
 // Llista d'unitats amb Rifleman Radio (fn_configEquipacio.sqf)
-cc_tfar_llistaRF = ["fuseller", "granader", "fusellerautomatic", "metrallador", "antitanc", "tirador", "explosius"];
+cc_tfar_llistaRF = ["rfl", "rflat", "gr", "ar", "dm", "mg", "amg", "at", "aat", "aa", "aaa", "en", "div"];
 
 // Llista d'unitats amb Short Range Radio (fn_configEquipacio.sqf)
-cc_tfar_llistaSR = ["lideresquadra", "liderequip", "metge", "franctirador"];
+cc_tfar_llistaSR = ["pl", "psg", "rto", "fo", "me", "sl", "tl", "sn", "sp"];
 
 // Llista d'unitats amb Long Range Radio (fn_configEquipacio.sqf)
-cc_tfar_llistaLR = ["lideresquadra", "liderequip"];
+cc_tfar_llistaLR = ["rto", "fo"];
 
 //============================================ FI DEL FITXER ============================================//

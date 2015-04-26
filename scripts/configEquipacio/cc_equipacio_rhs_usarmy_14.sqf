@@ -1,5 +1,5 @@
 //=======================================================================================================//
-// Arxiu: cc_equipacio_rhs_usarmy_wd.sqf                                                                 //
+// Arxiu: cc_equipacio_rhs_usarmy_14.sqf                                                                 //
 // Autor: CC_Magnetar                                                                                    //
 // Versió: 0.1                                                                                           //
 // Creació del Document: 02/04/2015                                                                      //
@@ -14,70 +14,128 @@
 //             on "ROL_JUGADOR" és una de les següents entrades:                                         //
 //                                                                                                       //
 //                  ROL_JUGADOR         Rol assignat                                                     //
-//                  lideresquadra       Líder d'esquadra                                                 //
-//                  liderequip          Líder d'equip                                                    //
-//                  fuseller            Fuseller                                                         //
-//                  granader            Granader                                                         //
-//                  fusellerautomatic   Fuseller automàtic                                               //
-//                  metrallador         Metrallador                                                      //
-//                  antitanc            Antitanc                                                         //
-//                  tirador             Tirador                                                          //
-//                  metge               Metge                                                            //
-//                  explosius           Explosius                                                        //
-//                  franctirador        Franctirador                                                     //
+//                  pl                  Cap de secció (Platoon Leader)                                   //
+//                  psg                 Sergent (Platoon Sergeant)                                       //
+//                  rto                 Operador de Radio (Platoon Radiotelephone Operator)              //
+//                  fo                  Observador avançat (Forward Observer)                            //
+//                  me                  Metge (Platoon Medic)                                            //
+//                  sl                  Líder d'esquadra (Squad Leader)                                  //
+//                  tl                  Líder d'equip (Team Leader)                                      //
+//                  rfl                 Fuseller (Rifleman)                                              //
+//                  rflat               Fusellser amb AT4 (Rifleman with AT4)                            //
+//                  gr                  Granader (Grenadier)                                             //
+//                  ar                  Fuseller automàtic (Automàtic Rifleman)                          //
+//                  dm                  Tirador designat (Designated Marksman)                           //
+//                  mg                  Metrallador (Machine Gunner)                                     //
+//                  amg                 Assitent de metrallador (Assitant Machine Gunner)                //
+//                  at                  Antitanc (Antitank)                                              //
+//                  aat                 Assistent d'antitanc (AT Ammo handler)                           //
+//                  aa                  Anti aèri (Anti Air gunner)                                      //
+//                  aaa                 Assistent d'anti aèri (Anti Air Assitant)                        //
+//                  en                  Enginyer (Engineer)                                              //
+//                  sn                  Franctirador (Sniper)                                            //
+//                  sp                  Observador (Spotter)                                             //
+//                  div                 Bussejador                                                       //
+//                                                                                                       //
+// Canvis: 0.1 (2015/04/02) Versió inicial.                                                              //
+//         0.2 (2015/04/26) Canviat el nom del fitxer i dels uniformes                                   //
 //=======================================================================================================//
 
 _tipusUnitat = toLower (_this select 0);
 _unitat = _this select 1;
 _esInfanteria = _unitat isKindOf "CAManBase"; 
 
-// Elements comuns
-_uniforme = "rhs_uniform_cu_ocp_patchless";
-_uniformeSN = "U_B_GhillieSuit";
+//=======================================================================================================//
+// Resum d'equipació: Armes, accessoris, ulleres, armilles, ...                                          //
+//=======================================================================================================//
 
+// Uniformes
+_uniforme = "rhs_uniform_cu_ocp";
+_uniformeSN = "U_B_GhillieSuit";
+_uniformeDIV = "U_B_Wetsuit";
+
+// Armilles
 _armillaSQ = "rhsusf_iotv_ocp_squadleader";
 _armillaTL = "rhsusf_iotv_ocp_teamleader";
 _armillaRFL = "rhsusf_iotv_ocp_rifleman";
 _armillaGR = "rhsusf_iotv_ocp_grenadier";
 _armillaME = "rhsusf_iotv_ocp_medic";
 _armillaSAW = "rhsusf_iotv_ocp_SAW";
+_armillaDIV = "V_RebreatherB";
 
+// Cascs
 _casc = "rhsusf_ach_helmet_headset_ocp";
+_cascSN = "rhs_Booniehat_ocp";
 
+// Ulleres
 _ulleres = "G_Tactical_Clear";
+_ulleresDIV = "G_Diving";
 
+// Motxilla
 _motxilla = "rhsusf_assault_eagleaiii_ocp";
 
+// Armes principals
 _arma = "rhs_weap_m4a1";
 _arma320 = "rhs_weap_m4a1_m320";
 _armaAR = "rhs_weap_m249_pip";
 _armaMG = "rhs_weap_m240B";
 _armaDM = "rhs_weap_m14ebrri";
+_armaSN = "rhs_weap_XM2010_sa";
+_armaDIV = "arifle_SDAR_F";
 
+// Silenciadors
 _armaSilenciador = "rhsusf_acc_rotex5_grey";
 _armaSurefire = "rhsusf_acc_SF3P556";
 
+// Accessoris
 _armaLaserLlanterna = "rhsusf_acc_anpeq15";
 _armaLaserLlanternaAR = "rhsusf_acc_anpeq15A";
 _armaLaserLlanternaSN = "rhsusf_acc_anpeq15side";
 
+// Mires
 _armaMira = "rhsusf_acc_ACOG";
 _armaMiraAR = "rhsusf_acc_ELCAN";
 _armaMiraDM = "rhsusf_acc_LEUPOLDMK4";
 _armaMiraSN = "rhsusf_acc_LEUPOLDMK4_2";
 
+// Bípodes
+_armabipodeDM = "rhsusf_acc_harris_bipod";
+_armabipodeSN = "rhsusf_acc_harris_bipod";
+
+// Llençadores AT/AA
 _armaLlencadorRF = "rhs_weap_M136_hedp";
 _armaLlencadorAT = "rhs_weap_fgm148";
 _armaLlencadorAA = "rhs_weap_fim92";
 
-_pistola = "hgun_P07_F";
+// Pistoles
+_pistola = "rhsusf_weap_m1911a1";
 
+// Objectes
 _gps = "ItemGPS";
 _rellotge = "ItemWatch";
 _mapa = "ItemMap";
 _brujola = "ItemCompass";
 _radio = "ItemRadio";
 _terminalUAV = "B_UavTerminal";
+
+// Prismàtics
+_prismatic = "lerca_1200_tan";
+
+// Visió nocturna
+_visioNocturna = "rhsusf_ANPVS_14";
+
+// Objectes depenents de AGM
+_taps = "AGM_EarBuds";
+_morfina = "AGM_Morphine";
+_epinefrina = "AGM_Epipen";
+_benes = "AGM_Bandage";
+_bossaSang = "AGM_Bloodbag";
+_cintaDentencio = "AGM_CableTie";
+_vectorIV = "AGM_Vector";
+_einesMapa = "AGM_MapToos";
+_kestrel = "AGM_ItemKestrel";
+_clacker = "AGM_Clacker";
+_kitDesactivacio = "AGM_DefusalKit";
 
 // Treure tota l'equipació que porta la unitat en el cas que sigui infanteria
 if (_esInfanteria) then {
@@ -105,7 +163,7 @@ if (_esInfanteria) then {
 // Configurar l'equip per cada unitat
 switch (_tipusUnitat) do
 {
-	// Cap de secció (Platoon leader)
+	// Cap de secció (Platoon Leader)
 	case "pl":
 	{
 		// Uniforme, casc, armilla i motxila
@@ -144,7 +202,7 @@ switch (_tipusUnitat) do
 		_unitat addPrimaryWeaponItem _armaMira;
 	};
 	
-	// Radio Operador (Platoon Radiotelephone Operator)
+	// Operador de Radio (Platoon Radiotelephone Operator)
 	case "rto":
 	{
 		// Uniforme, casc, armilla i motxila
@@ -231,6 +289,7 @@ switch (_tipusUnitat) do
 		_unitat addPrimaryWeaponItem _armaMira;	
 	};
 	
+	// Fusellser amb AT4 (Rifleman with AT4)
 	case "rflat":
 	{
 		// Uniforme, casc, armilla i motxila
@@ -292,13 +351,36 @@ switch (_tipusUnitat) do
 	// Metrallador (Machine Gunner)
 	case "mg":
 	{
+		(uniformContainer _unitat) addItemCargoGlobal [_taps,1];
+		(uniformContainer _unitat) addItemCargoGlobal [_cintaDetencio,1];
+		(uniformContainer _unitat) addItemCargoGlobal [_einesMapa,1];
+		(uniformContainer _unitat) addItemCargoGlobal [_epinefrina,1];
+		(uniformContainer _unitat) addItemCargoGlobal [_morfina,1];
+		(uniformContainer _unitat) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",2];
+		(uniformContainer _unitat) addMagazineCargoGlobal ["rhs_mag_an_m8hc",2];
+		(uniformContainer _unitat) addMagazineCargoGlobal ["rhs_mag_m67",3];
+		
 		// Uniforme, casc, armilla i motxila
 		_unitat addVest _armillaSAW;
+		(vestContainer _unitat) addItemCargoGlobal [_benes,2];
+		(vestContainer _unitat) addItemCargoGlobal [_morfina,1];
+		(vestContainer _unitat) addItemCargoGlobal [_epinefrina,1];
+		(vestContainer _unitat) addMagazineCargoGlobal ["rhs_mag_m67",3];
+		(vestContainer _unitat) addMagazineCargoGlobal ["rhsusf_100Rnd_762x51",3];
+		
 		_unitat addBackpack _motxilla;
+		(unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
+		(unitBackpack _unitat) addItemCargoGlobal [_benes,4];
+		(unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_mk84",1];
+		(unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_an_m8hc",3];
+		(unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_m18_red",1];
+		(unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_m18_green",1];
+		(unitBackpack _unitat) addMagazineCargoGlobal ["rhsusf_100Rnd_762x51",1];
 		
 		// Arma principal
 		_unitat addWeapon _armaMG;
 		_unitat addPrimaryWeaponItem _armaMiraAR;
+		_unitat addWeapon _prismatic;
 	};
 	
 	// Assitent de metrallador (Assitant Machine Gunner)
@@ -332,7 +414,7 @@ switch (_tipusUnitat) do
 		_unitat addWeapon _armaLlencadorAT;
 	};
 	
-	// Assistent d'antitanc (Ammo handler)
+	// Assistent d'antitanc (AT Ammo handler)
 	case "aat":
 	{
 		// Uniforme, casc, armilla i motxila
@@ -424,7 +506,25 @@ switch (_tipusUnitat) do
 		// Objectes
 		_unitat linkItem _gps;
 	};
+	
+	// Bussejador
+	case "div":
+	{
+		// Uniforme i armilla
+		removeUniform _unitat;
+		removeHeadgear _unitat;
+		removeGoggles _unitat;
+		
+		_unitat forceAddUniform _uniformeDIV;
+		_unitat addVest _armillaDIV;
+		_unitat addGoggles _ulleresDIV;
+		
+		// Arma principal
+		_unitat addWeapon _armaDIV;
+	};
 };
 
 // Insiginia de la unitat
 [_unitat,"PATCH_CC_CC"] call bis_fnc_setUnitInsignia;
+
+//============================================ FI DEL FITXER ============================================//

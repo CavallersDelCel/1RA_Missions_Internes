@@ -5,6 +5,8 @@
 // Creació del Document: 03/04/2015                                                                      //
 // Descripció: Aquest document serveix crear una pantalla d'introducció i mostrar el nom de la missió    //
 //             així com la data i la localització                                                        //
+// Canvis: 0.1 (2015/04/02) Versió inicial.                                                              //
+//         0.2 (2015/04/26) Canviada la facció de les unitats RHS v0.3.7.                                //
 //=======================================================================================================//
 
 if (isDedicated) exitWith {};
@@ -27,8 +29,8 @@ if ( cc_var_debugOutput == 1 ) then
 };
 	
 // Briefing per la facció BLUFOR
-if (_faccioUnitat == "rhs_faction_usarmy_wd") exitWith {
-	#include "cc_intro_rhs_faction_usarmy_wd.sqf"
+if (_faccioUnitat == "rhs_faction_usarmy_14") exitWith {
+	#include "cc_intro_rhs_faction_usarmy_14.sqf"
 };    
 
 // COMPROVACIÓ D'ERRORS: Si la facció de la unitat no està definida es mostra un missatge d'error.
