@@ -1,5 +1,5 @@
 //=======================================================================================================//
-// Arxiu: tfar_afegirRadios.sqf                                                                          //
+// Arxiu: fn_tfar_afegirRadios.sqf                                                                       //
 // Autor: CC_Magnetar                                                                                    //
 // Versió: 0.1                                                                                           //
 // Creació del Document: 09/03/2015                                                                      //

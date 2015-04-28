@@ -25,7 +25,7 @@ tf_give_microdagr_to_soldier = true;
 //   - true: les radios per defecte del TFAR seran assignades.
 cc_tfar_config_utilitzarRadiosPerDefecte = false;
 
-// Variablee per controlar si es distribueixen radios a la partida. Pot ser útil en cas de missions
+// Variable per controlar si es distribueixen radios a la partida. Pot ser útil en cas de missions
 // de supervivència.
 //   - false: no es distribueixen radios
 //   - true: es distribueixen radios

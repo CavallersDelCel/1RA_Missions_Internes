@@ -76,7 +76,7 @@ class Params
 		title = "Utilitzar perfils";
 		values[] = {0,1};
 		texts[] = {"No","Si"};
-		default = 1;
+		default = 0;
 		code = "cc_var_utilitzarPerfils = %1";
 	};
 };

@@ -4,8 +4,11 @@
 // Versió: 0.1                                                                                           //
 // Creació del Document: 02/04/2015                                                                      //
 // Descripció: Aquest document serveix per equipar els jugadors amb els perfils estàndard del grup dels  //
-//             Cavallers del Cel. Requereix que el jugador formi part de la facció RHS: United States    //
-//             Army "rhs_faction_usarmy_wd" (http://doc.rhsmods.org/index.php/United_States_Army)        //
+//             Cavallers del Cel. Es requereixen els següents mods per funcionar correctament:           //                                                    //
+//                  - RHS United States Armed Forces (RHS USAF).                                         //
+//                  - Task Force Arrowhead Radio (TFAR).                                                 //
+//                  - Authentic Gameplay Modification (AGM).                                             //
+//                                                                                                       //
 //             Cal afegir la següent línia al INIT de la unitat en l'editor:                             //
 //                                                                                                       //
 //                  ["ROL_JUGADOR",this] call cc_fnc_configEquipacio;                                    //
@@ -16,10 +19,11 @@
 //                  sl                  CC - Lider d'esquadra M4A1+M320 OCP                              //
 //                  tl                  CC - Lider d'equip M4A1+M320 OCP                                 //
 //                  rfl                 CC - Fuseller M4A1 OCP                                           //
+//                  rflat               CC - AT M4A1+AT4 OCP                                             //
 //                  gr                  CC - Granader M4A1+M320 OCP                                      //
 //                  ar                  CC - FA M249 OCP                                                 //
 //                  mg                  CC - Metrallador M240B OCP                                       //
-//                  at                  CC - AT M4A1+AT4 OCP                                             //
+//                  at                  CC - AT M4A1 + Javelin OCP                                       //
 //                  dm                  CC - Tirador SR-25EC OCP                                         //
 //                  me                  CC - Metge M4A1 OCP                                              //
 //                  en                  CC - Explosius M4A1 OCP                                          //

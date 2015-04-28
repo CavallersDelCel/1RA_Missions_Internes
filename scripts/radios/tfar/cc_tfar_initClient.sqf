@@ -12,7 +12,7 @@ sleep 3;
 
 // Configurar el TFAR. Si el jugador està viu, les ràdios que venen per defecte es treuran i s'assinaran
 // les radios que es desitgin utilitzant depenent del rol tal i com s'ha especificat al fitxer
-// "tfar_configuracio.sqf". El xat d'espectador es configurarà depenent de si el jugador està viu o no.
+// "cc_tfar_configuracio.sqf". El xat d'espectador es configurarà depenent de si el jugador està viu o no.
 
 // Si el jugador està viu, procedir
 if(alive player) then {
@@ -26,7 +26,7 @@ if(alive player) then {
 	[] call cc_fnc_tfar_afegirRadios;
 
 	// Configurar el xat d'espectador
-	[] call cc_fnc_tfar_configurarXatEspectador;
+	//[] call cc_fnc_tfar_configurarXatEspectador;
 	
 	player sideChat format ["DEBUG (fn_tfar_initClient.sqf): Radios configurades."];
 } else {

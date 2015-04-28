@@ -1,5 +1,5 @@
 //=======================================================================================================//
-// Arxiu: tfar_treureRadios.sqf                                                                          //
+// Arxiu: fn_tfar_treureRadios.sqf                                                                       //
 // Autor: CC_Magnetar                                                                                    //
 // Versió: 0.1                                                                                           //
 // Creació del Document: 09/03/2015                                                                      //

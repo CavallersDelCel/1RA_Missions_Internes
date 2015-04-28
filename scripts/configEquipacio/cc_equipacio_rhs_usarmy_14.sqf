@@ -5,7 +5,7 @@
 // Creació del Document: 02/04/2015                                                                      //
 // Descripció: Aquest document serveix per equipar els jugadors amb l'equipació dissenyada per la missió //
 //             sense fer servir els perfils estàndard del grup dels Cavallers del Cel. Requereix que el  //
-//             jugador formi part de la facció RHS: United States Army "rhs_faction_usarmy_wd"           //
+//             jugador formi part de la facció RHS: United States Army "rhs_faction_usarmy_14"           //
 //             (http://doc.rhsmods.org/index.php/United_States_Army). Cal afegir la següent línia al     //
 //             INIT de la unitat en l'editor:                                                            //
 //                                                                                                       //
@@ -35,10 +35,10 @@
 //                  en                  Enginyer (Engineer)                                              //
 //                  sn                  Franctirador (Sniper)                                            //
 //                  sp                  Observador (Spotter)                                             //
-//                  div                 Bussejador                                                       //
+//                  div                 Bussejador (Diver)                                               //
 //                                                                                                       //
 // Canvis: 0.1 (2015/04/02) Versió inicial.                                                              //
-//         0.2 (2015/04/26) Canviat el nom del fitxer i dels uniformes                                   //
+//         0.2 (2015/04/26) Canviat el nom del fitxer i dels uniformes (RHS v0.3.7).                     //
 //=======================================================================================================//
 
 _tipusUnitat = toLower (_this select 0);
@@ -145,6 +145,7 @@ if (_esInfanteria) then {
 	removeAllContainers _unitat;
 	removeHeadgear _unitat;
 	
+	// Uniforme, casc i ulleres
 	_unitat forceaddUniform _uniforme;
 	_unitat addHeadgear _casc;
 	_unitat addGoggles _ulleres;
@@ -166,7 +167,7 @@ switch (_tipusUnitat) do
 	// Cap de secció (Platoon Leader)
 	case "pl":
 	{
-		// Uniforme, casc, armilla i motxila
+		// Armilla i motxilla
 		_unitat addVest _armillaSQ;
 		_unitat addBackpack _motxilla;
 		
@@ -186,12 +187,15 @@ switch (_tipusUnitat) do
 		(vestContainer _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",1];
 		
 		// Objectes a la motxilla
+		
+		// Assignar rang
+		_unitat setRank "LIEUTENANT";
 	};
 	
 	// Sergent (Platoon Sergeant)
 	case "psg":
 	{
-		// Uniforme, casc, armilla i motxila
+		// Armilla i motxilla
 		_unitat addVest _armillaSQ;
 		_unitat addBackpack _motxilla;
 		
@@ -200,12 +204,15 @@ switch (_tipusUnitat) do
 		_unitat addPrimaryWeaponItem _armaSurefire;
 		_unitat addPrimaryWeaponItem _armaLaserLlanterna;
 		_unitat addPrimaryWeaponItem _armaMira;
+		
+		// Assignar rang
+		_unitat setRank "SERGEANT";
 	};
 	
 	// Operador de Radio (Platoon Radiotelephone Operator)
 	case "rto":
 	{
-		// Uniforme, casc, armilla i motxila
+		// Armilla i motxilla
 		_unitat addVest _armillaRFL;
 		_unitat addBackpack _motxilla;
 		
@@ -214,12 +221,15 @@ switch (_tipusUnitat) do
 		_unitat addPrimaryWeaponItem _armaSurefire;
 		_unitat addPrimaryWeaponItem _armaLaserLlanterna;
 		_unitat addPrimaryWeaponItem _armaMira;
+		
+		// Assignar rang
+		_unitat setRank "PRIVATE";
 	};
 	
 	// Observador avançat (Forward Observer)
 	case "fo":
 	{
-		// Uniforme, casc, armilla i motxila
+		// Armilla i motxilla
 		_unitat addVest _armillaRFL;
 		_unitat addBackpack _motxilla;
 		
@@ -231,12 +241,15 @@ switch (_tipusUnitat) do
 		
 		// Objectes
 		_unitat linkItem _terminalUAV;
+		
+		// Assignar rang
+		_unitat setRank "PRIVATE";
 	};
 	
 	// Metge (Platoon Medic)
 	case "me":
 	{
-		// Uniforme, casc, armilla i motxila
+		// Armilla i motxilla
 		_unitat addVest _armillaME;
 		_unitat addBackpack _motxilla;
 		
@@ -245,12 +258,15 @@ switch (_tipusUnitat) do
 		_unitat addPrimaryWeaponItem _armaSurefire;
 		_unitat addPrimaryWeaponItem _armaLaserLlanterna;
 		_unitat addPrimaryWeaponItem _armaMira;
+		
+		// Assignar rang
+		_unitat setRank "PRIVATE";
 	};
 
 	// Líder d'Esquadra (Squad Leader)
 	case "sl":
 	{
-		// Uniforme, casc, armilla i motxila
+		// Armilla i motxilla
 		_unitat addVest _armillaSQ;
 		_unitat addBackpack _motxilla;
 		
@@ -259,12 +275,15 @@ switch (_tipusUnitat) do
 		_unitat addPrimaryWeaponItem _armaSurefire;
 		_unitat addPrimaryWeaponItem _armaLaserLlanterna;
 		_unitat addPrimaryWeaponItem _armaMira;
+		
+		// Assignar rang
+		_unitat setRank "SERGEANT";
 	};
 	
 	// Líder d'Equip (Team leader)
 	case "tl":
 	{
-		// Uniforme, casc, armilla i motxila
+		// Armilla i motxilla
 		_unitat addVest _armillaTL;
 		_unitat addBackpack _motxilla;
 		
@@ -273,12 +292,15 @@ switch (_tipusUnitat) do
 		_unitat addPrimaryWeaponItem _armaSurefire;
 		_unitat addPrimaryWeaponItem _armaLaserLlanterna;
 		_unitat addPrimaryWeaponItem _armaMira;
+		
+		// Assignar rang
+		_unitat setRank "CORPORAL";
 	};
 	
 	// Fuseller (Rifleman)
 	case "rfl":
 	{
-		// Uniforme, casc, armilla i motxila
+		// Armilla i motxilla
 		_unitat addVest _armillaRFL;
 		_unitat addBackpack _motxilla;
 		
@@ -286,13 +308,16 @@ switch (_tipusUnitat) do
 		_unitat addWeapon _arma;
 		_unitat addPrimaryWeaponItem _armaSurefire;
 		_unitat addPrimaryWeaponItem _armaLaserLlanterna;
-		_unitat addPrimaryWeaponItem _armaMira;	
+		_unitat addPrimaryWeaponItem _armaMira;
+
+		// Assignar rang
+		_unitat setRank "PRIVATE";
 	};
 	
 	// Fusellser amb AT4 (Rifleman with AT4)
 	case "rflat":
 	{
-		// Uniforme, casc, armilla i motxila
+		// Armilla i motxilla
 		_unitat addVest _armillaRFL;
 		_unitat addBackpack _motxilla;
 		
@@ -303,13 +328,16 @@ switch (_tipusUnitat) do
 		_unitat addPrimaryWeaponItem _armaMira;
 		
 		// Llençador AT4
-		_unitat addWeapon _armaLlencadorAT4;	
+		_unitat addWeapon _armaLlencadorAT4;
+		
+		// Assignar rang
+		_unitat setRank "PRIVATE";
 	};
 	
 	// Granader (Grenadier)
 	case "gr":
 	{
-		// Uniforme, casc, armilla i motxila
+		// Armilla i motxilla
 		_unitat addVest _armillaGR;
 		_unitat addBackpack _motxilla;
 		
@@ -318,12 +346,15 @@ switch (_tipusUnitat) do
 		_unitat addPrimaryWeaponItem _armaSurefire;
 		_unitat addPrimaryWeaponItem _armaLaserLlanterna;
 		_unitat addPrimaryWeaponItem _armaMira;
+		
+		// Assignar rang
+		_unitat setRank "PRIVATE";
 	};
 	
 	// Fuseller automàtic (Automatic Rifleman)
 	case "ar":
 	{
-		// Uniforme, casc, armilla i motxila
+		// Armilla i motxilla
 		_unitat addVest _armillaSAW;
 		_unitat addBackpack _motxilla;
 		
@@ -331,12 +362,15 @@ switch (_tipusUnitat) do
 		_unitat addWeapon _armaAR;
 		_unitat addPrimaryWeaponItem _armaLaserLlanternaAR;
 		_unitat addPrimaryWeaponItem _armaMiraAR;
+		
+		// Assignar rang
+		_unitat setRank "PRIVATE";
 	};
 	
 	// Tirador designat (Designated Marksman)
 	case "dm":
 	{
-		// Uniforme, casc, armilla i motxila
+		// Armilla i motxilla
 		_unitat addVest _armillaRFL;
 		_unitat addBackpack _motxilla;
 		
@@ -345,6 +379,9 @@ switch (_tipusUnitat) do
 		_unitat addWeapon _armaDM;
 		_unitat addPrimaryWeaponItem _armaLaserLlanternaSN;
 		_unitat addPrimaryWeaponItem _armaMira;
+		
+		// Assignar rang
+		_unitat setRank "PRIVATE";
 	};
 	
 	
@@ -360,7 +397,7 @@ switch (_tipusUnitat) do
 		(uniformContainer _unitat) addMagazineCargoGlobal ["rhs_mag_an_m8hc",2];
 		(uniformContainer _unitat) addMagazineCargoGlobal ["rhs_mag_m67",3];
 		
-		// Uniforme, casc, armilla i motxila
+		// Armilla i motxilla
 		_unitat addVest _armillaSAW;
 		(vestContainer _unitat) addItemCargoGlobal [_benes,2];
 		(vestContainer _unitat) addItemCargoGlobal [_morfina,1];
@@ -381,12 +418,15 @@ switch (_tipusUnitat) do
 		_unitat addWeapon _armaMG;
 		_unitat addPrimaryWeaponItem _armaMiraAR;
 		_unitat addWeapon _prismatic;
+		
+		// Assignar rang
+		_unitat setRank "PRIVATE";
 	};
 	
 	// Assitent de metrallador (Assitant Machine Gunner)
 	case "amg":
 	{
-		// Uniforme, casc, armilla i motxila
+		// Armilla i motxilla
 		_unitat addVest _armillaRFL;
 		_unitat addBackpack _motxilla;
 		
@@ -395,12 +435,15 @@ switch (_tipusUnitat) do
 		_unitat addPrimaryWeaponItem _armaSurefire;
 		_unitat addPrimaryWeaponItem _armaLaserLlanterna;
 		_unitat addPrimaryWeaponItem _armaMira;
+		
+		// Assignar rang
+		_unitat setRank "PRIVATE";
 	};
 	
 	// Antitanc (Antitank)
 	case "at":
 	{
-		// Uniforme, casc, armilla i motxila
+		// Armilla i motxilla
 		_unitat addVest _armillaRFL;
 		_unitat addBackpack _motxilla;
 		
@@ -412,12 +455,15 @@ switch (_tipusUnitat) do
 		
 		// Javelin
 		_unitat addWeapon _armaLlencadorAT;
+		
+		// Assignar rang
+		_unitat setRank "PRIVATE";
 	};
 	
 	// Assistent d'antitanc (AT Ammo handler)
 	case "aat":
 	{
-		// Uniforme, casc, armilla i motxila
+		// Armilla i motxilla
 		_unitat addVest _armillaRFL;
 		_unitat addBackpack _motxilla;
 		
@@ -426,12 +472,15 @@ switch (_tipusUnitat) do
 		_unitat addPrimaryWeaponItem _armaSurefire;
 		_unitat addPrimaryWeaponItem _armaLaserLlanterna;
 		_unitat addPrimaryWeaponItem _armaMira;
+		
+		// Assignar rang
+		_unitat setRank "PRIVATE";
 	};
 	
 	// Anti aèri (Anti Air gunner)
 	case "aa":
 	{
-		// Uniforme, casc, armilla i motxila
+		// Armilla i motxilla
 		_unitat addVest _armillaRFL;
 		_unitat addBackpack _motxilla;
 		
@@ -443,12 +492,15 @@ switch (_tipusUnitat) do
 		
 		// Stinger
 		_unitat addWeapon _armaLlencadorAA;
+		
+		// Assignar rang
+		_unitat setRank "PRIVATE";
 	};
 	
 	// Assistent d'anti aèri (Anti Air Assitant)
 	case "aaa":
 	{
-		// Uniforme, casc, armilla i motxila
+		// Armilla i motxilla
 		_unitat addVest _armillaRFL;
 		_unitat addBackpack _motxilla;
 		
@@ -457,12 +509,15 @@ switch (_tipusUnitat) do
 		_unitat addPrimaryWeaponItem _armaSurefire;
 		_unitat addPrimaryWeaponItem _armaLaserLlanterna;
 		_unitat addPrimaryWeaponItem _armaMira;
+		
+		// Assignar rang
+		_unitat setRank "PRIVATE";
 	};
 	
 	// Enginyer (Engineer)
 	case "en":
 	{
-		// Uniforme, casc, armilla i motxila
+		// Armilla i motxilla
 		_unitat addVest _armillaRFL;
 		_unitat addBackpack _motxilla;
 		
@@ -471,6 +526,9 @@ switch (_tipusUnitat) do
 		_unitat addPrimaryWeaponItem _armaSurefire;
 		_unitat addPrimaryWeaponItem _armaLaserLlanterna;
 		_unitat addPrimaryWeaponItem _armaMira;
+		
+		// Assignar rang
+		_unitat setRank "PRIVATE";
 	};
 	
 	// Franctirador (Sniper)
@@ -486,6 +544,8 @@ switch (_tipusUnitat) do
 		_unitat addPrimaryWeaponItem _armaLaserLlanternaSN;
 		_unitat addPrimaryWeaponItem _armaMiraSN;
 
+		// Assignar rang
+		_unitat setRank "PRIVATE";
 	};
 	
 	// Observador (Spotter)
@@ -505,9 +565,12 @@ switch (_tipusUnitat) do
 		
 		// Objectes
 		_unitat linkItem _gps;
+		
+		// Assignar rang
+		_unitat setRank "PRIVATE";
 	};
 	
-	// Bussejador
+	// Bussejador (Diver)
 	case "div":
 	{
 		// Uniforme i armilla
@@ -521,6 +584,9 @@ switch (_tipusUnitat) do
 		
 		// Arma principal
 		_unitat addWeapon _armaDIV;
+		
+		// Assignar rang
+		_unitat setRank "PRIVATE";
 	};
 };
 

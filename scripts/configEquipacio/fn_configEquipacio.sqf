@@ -12,17 +12,28 @@
 //             on "ROL_JUGADOR" és una de les següents entrades:                                         //
 //                                                                                                       //
 //                  ROL_JUGADOR         Rol assignat                                                     //
-//                  lideresquadra       Líder d'esquadra                                                 //
-//                  liderequip          Líder d'equip                                                    //
-//                  fuseller            Fuseller                                                         //
-//                  granader            Granader                                                         //
-//                  fusellerautomatic   Fuseller Automàtic                                               //
-//                  metrallador         Metrallador                                                      //
-//                  antitanc            Antitanc                                                         //
-//                  tirador             Tirador                                                          //
-//                  metge               Metge                                                            //
-//                  explosius           Explosius                                                        //
-//                  franctirador        Franctirador                                                     //
+//                  pl                  Cap de secció (Platoon Leader)                                   //
+//                  psg                 Sergent (Platoon Sergeant)                                       //
+//                  rto                 Operador de Radio (Platoon Radiotelephone Operator)              //
+//                  fo                  Observador avançat (Forward Observer)                            //
+//                  me                  Metge (Platoon Medic)                                            //
+//                  sl                  Líder d'esquadra (Squad Leader)                                  //
+//                  tl                  Líder d'equip (Team Leader)                                      //
+//                  rfl                 Fuseller (Rifleman)                                              //
+//                  rflat               Fusellser amb AT4 (Rifleman with AT4)                            //
+//                  gr                  Granader (Grenadier)                                             //
+//                  ar                  Fuseller automàtic (Automàtic Rifleman)                          //
+//                  dm                  Tirador designat (Designated Marksman)                           //
+//                  mg                  Metrallador (Machine Gunner)                                     //
+//                  amg                 Assitent de metrallador (Assitant Machine Gunner)                //
+//                  at                  Antitanc (Antitank)                                              //
+//                  aat                 Assistent d'antitanc (AT Ammo handler)                           //
+//                  aa                  Anti aèri (Anti Air gunner)                                      //
+//                  aaa                 Assistent d'anti aèri (Anti Air Assitant)                        //
+//                  en                  Enginyer (Engineer)                                              //
+//                  sn                  Franctirador (Sniper)                                            //
+//                  sp                  Observador (Spotter)                                             //
+//                  div                 Bussejador (Diver)                                               //
 //                                                                                                       //
 // Canvis: 0.1 (2015/04/02) Versió inicial.                                                              //
 //         0.2 (2015/04/26) Canviada la facció de les unitats RHS v0.3.7.                                //
@@ -60,7 +71,11 @@ if (cc_var_debugOutput == 1) then
 
 // Equipació per la facció BLUFOR
 if (_faccioUnitat == "blu_f") then {
-	#include "cc_equipacio_blu_f.sqf"
+	if( cc_var_utilitzarPerfils == 1 ) then	{
+		#include "cc_equipacio_rhs_usarmy_14_perfils.sqf"
+	} else {
+		#include "cc_equipacio_blu_f.sqf"
+	}
 };
 
 // Equipació per la facció FIA
