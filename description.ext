@@ -20,7 +20,7 @@ class Header
 // Pantalla de càrrega https://community.bistudio.com/wiki/Description.ext                               //
 //=======================================================================================================//
 
-onLoadName = "*** Nom de la missió. **** ";            // Nom de la missió (apareix en gran)
+onLoadName = "*** Nom de la missió. ***";            // Nom de la missió (apareix en gran)
 onLoadMission = "*** Descripció de la missió. ***";    // Descripció breu de la missió
 author = "CC_Magnetar";                                // Autor
 loadScreen = "pics\loadLogo.jpg";                      // Imatge mentre es carrega la missió
