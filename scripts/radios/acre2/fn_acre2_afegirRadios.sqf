@@ -26,14 +26,14 @@ if(_tipusUnitat != "nil") then {
 		// unitats
 		if(cc_acre2_config_tothomRadioSoldats) then {
 			
-			if( _unitat canAdd cc_acre2_radioSoldats ){
+			if( _unitat canAdd cc_acre2_radioSoldats ) then {
 				_unitat addItem cc_acre2_radioSoldats;
 			} else {
 				player sideChat format ["ERROR (fn_acre2_afegirRadios.sqf): No es pot afegir la radio %1.", cc_acre2_radioSoldats];
 			};
 		} else {
-			if (_tipusUnitat in cc_acre2_llistaRadioSoldats){
-				if( _unitat canAdd cc_acre2_radioSoldats ){
+			if (_tipusUnitat in cc_acre2_llistaRadioSoldats) then {
+				if( _unitat canAdd cc_acre2_radioSoldats ) then {
 					_unitat addItem cc_acre2_radioSoldats;
 				} else {
 					player sideChat format ["ERROR (fn_acre2_afegirRadios.sqf): No es pot afegir la radio %1.", cc_acre2_radioSoldats];
@@ -41,16 +41,16 @@ if(_tipusUnitat != "nil") then {
 			};
 		};
 		
-		if (_tipusUnitat in cc_acre2_llistaRadioOficials){
-			if( _unitat canAdd cc_acre2_radioOficials ){
+		if (_tipusUnitat in cc_acre2_llistaRadioOficials) then {
+			if( _unitat canAdd cc_acre2_radioOficials ) then {
 				_unitat addItem cc_acre2_radioOficials;
 			} else {
 				player sideChat format ["ERROR (fn_acre2_afegirRadios.sqf): No es pot afegir la radio %1.", cc_acre2_radioOficials];
 			};
 		};
 		
-		if (_tipusUnitat in cc_acre2_llistaRadioRTO){
-			if( _unitat canAdd cc_acre2_radioRTO ){
+		if (_tipusUnitat in cc_acre2_llistaRadioRTO) then {
+			if( _unitat canAdd cc_acre2_radioRTO ) then {
 				_unitat addItemToBackPack cc_acre2_radioRTO;
 			} else {
 				player sideChat format ["ERROR (fn_acre2_afegirRadios.sqf): No es pot afegir la radio %1.", cc_acre2_radioRTO];

@@ -3,7 +3,7 @@
 // Autor: CC_Magnetar                                                                                    //
 // Versió: 0.1                                                                                           //
 // Creació del Document: 28/04/2015                                                                      //
-// Descripció: Configuració d'el xat d'espectador i deshabilitar la veu al morir utilitzant el Advanced  //
+// Descripció: Configuració del xat d'espectador i deshabilitar la veu al morir utilitzant el Advanced   //
 //             Combat Radio Environment 2 (ACRE2)                                                        //
 //             http://gitlab.idi-systems.com/idi-systems/acre2-public/wikis/home                         //
 //=======================================================================================================//

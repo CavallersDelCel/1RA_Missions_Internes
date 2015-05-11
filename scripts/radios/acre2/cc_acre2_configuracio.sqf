@@ -30,11 +30,15 @@
 // Configuració de les funcionalitats de BABEL                                                           //
 //=======================================================================================================//
 
+cc_acre2_config_idomes = [["angles","Anglès"],["rus","Rus"],["persa","Persa"],["grec","Grec"]];
+
 cc_acre2_config_idioma_rhsusaf = ["angles"];
-cc_acre2_config_idioma_rhs = ["rus"];
+cc_acre2_config_idioma_rhsafrf = ["rus"];
 cc_acre2_config_idioma_blufor = ["angles"];
 cc_acre2_config_idioma_opfor = ["persa"];
 cc_acre2_config_idioma_indfor = ["grec"];
+cc_acre2_config_idioma_fia = ["angles","grec"];
+cc_acre2_config_idioma_civ = ["grec"];
 
 //=======================================================================================================//
 // Configuració de la dificultat                                                                         //
@@ -65,6 +69,11 @@ cc_acre2_config_idioma_indfor = ["grec"];
 //   - true: es distribueixen radios
 cc_acre2_config_distribuirRadios = true;
 
+// Variable per controlar si les freqüències s'han de dividir per bàndol
+//   - false: els bàndols comparteixen freqüències
+//   - true: les freqüències es divideixen per bàndols
+cc_acre2_config_dividirFrequencies = true;
+
 // Variable per controlar si es distribueix la radio definida a la variable "cc_acre2_radioSoldats", per
 // defecte una AN/PRC 343, a totes les unitats.
 //    - false: només les unitats a la llista "cc_acre2_llistaRadioSoldats" rebran aquesta ràdio.
@@ -79,6 +88,9 @@ cc_acre2_radioOficials = "ACRE_PRC152";
 
 // Radio extra
 cc_acre2_radioRTO = "ACRE_PRC117F";
+
+// Noms dels canals a les radios AN/PRC 148, AN/PRC 152 i AN/PRC 117F
+cc_acre2_config_llistaCanals = ["ALFA 1","ALFA 2","ALFA 3","COMANDAMENT","SUPORT","ARTILLERIA"];
 
 // Llista d'unitats amb Rifleman Radio (fn_configEquipacio.sqf)
 cc_acre2_llistaRadioSoldats = ["rfl", "rflat", "gr", "ar", "dm", "mg", "amg", "at", "aat", "aa", "aaa", "en", "div"];

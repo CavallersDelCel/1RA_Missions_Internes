@@ -10,7 +10,7 @@
 //=======================================================================================================//
 
 // Declaració de variables
-private["_unitat"];
+private["_unitat","_isRadio"];
 
 _unitat = player;
 

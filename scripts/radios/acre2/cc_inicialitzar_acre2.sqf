@@ -10,22 +10,17 @@
 // Incloure el fitxer de configuració
 #include "cc_acre2_configuracio.sqf"
 
+// Configurar els presets per cada radio
+[] execVM "scripts\radios\acre2\cc_acre2_confCanals.sqf";
+
 // Si el script s'està executant en un servidor
-
 if (hasInterface) then {
-	[] execVM "scripts\radios\acre2\cc_acre2_initClient.sqf";
-};
 
-if(isDedicated) then {
-	[] execVM "scripts\radios\tfar\cc_tfar_initServidor.sqf";
-} else {
-	[] execVM "scripts\radios\tfar\cc_tfar_initClient.sqf";
+	{
+		_x call acre_api_fnc_babelAddLanguageType;
+	} foreach cc_acre2_config_idomes;
 	
-    // Si no s'utilitza un servidor dedicat però un jugador fa de host, s'ha d'executar també el script
-	// de servidor
-    if((!isDedicated) && (isServer)) then {
-		[] execVM "scripts\radios\tfar\cc_tfar_initServidor.sqf";
-	};
+	[] execVM "scripts\radios\acre2\cc_acre2_initClient.sqf";
 };
 
 //============================================ FI DEL FITXER ============================================//

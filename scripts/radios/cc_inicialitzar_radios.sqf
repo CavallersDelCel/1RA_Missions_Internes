@@ -20,7 +20,7 @@ if(cc_var_radios != 0) then {
 		};
 		// Advanced Combat Radio Environment 2 (ACRE 2)
 		case 2: {
-//			[] execVM "scripts\radios\acre2\inicialitzar_acre2.sqf";
+			[] execVM "scripts\radios\acre2\cc_inicialitzar_acre2.sqf";
 		};
 	};
 };
