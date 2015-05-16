@@ -58,20 +58,12 @@ cc_script_intro = [] execVM "scripts\intro\cc_intro.sqf";
 // Inicialitzar el sistema de radios
 cc_script_radio = [] execVM "scripts\radios\cc_inicialitzar_radios.sqf";
 
+
 if ( isServer ) then {
 	cc_script_zeus = [] execVM "scripts\zeus\cc_zeus_init.sqf"
 };
 
 // Desactivar les radios
 [] call compile preprocessFile "ActivarRadios.sqf";
-
-sleep 5;
-
-if (isServer) then 
-{
-//ZeusModule = your curator module name; true = boolean, if civilians should be editable by zeus as well - set to false if you don't want civilians to be editable.
-[ZeusModule] execVM "InitZeus.sqf";
-[ZeusModule1] execVM "InitZeus.sqf";
-};
 
 //============================================ FI DEL FITXER ============================================//
