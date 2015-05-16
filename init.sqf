@@ -58,12 +58,10 @@ cc_script_intro = [] execVM "scripts\intro\cc_intro.sqf";
 // Inicialitzar el sistema de radios
 cc_script_radio = [] execVM "scripts\radios\cc_inicialitzar_radios.sqf";
 
-
 if ( isServer ) then {
 	cc_script_zeus = [] execVM "scripts\zeus\cc_zeus_init.sqf"
 };
 
-// Desactivar les radios
 [] call compile preprocessFile "ActivarRadios.sqf";
 
 //============================================ FI DEL FITXER ============================================//
