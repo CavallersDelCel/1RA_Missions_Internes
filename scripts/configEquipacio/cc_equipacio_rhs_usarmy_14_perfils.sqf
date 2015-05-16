@@ -78,13 +78,13 @@ switch (_tipusUnitat) do
 	// Metrallador (Machine Gunner)
 	case "mg":
 	{
-		_loadout = [_unitat,[profileNamespace,"CC - Metrallador M240B OC"]] call BIS_fnc_loadInventory;
+		_loadout = [_unitat,[profileNamespace,"CC - Metrallador M240B OCP"]] call BIS_fnc_loadInventory;
 	};
 	
 	// Antitanc (Antitank)
 	case "at":
 	{
-		_loadout = [_unitat,[profileNamespace,"CC - AT M4A1 + Javelin OCP"]] call BIS_fnc_loadInventory;
+		_loadout = [_unitat,[profileNamespace,"CC - AT M4A1+Javelin OCP"]] call BIS_fnc_loadInventory;
 	};
 	
 	// Tirador designat (Designated Marksman)
