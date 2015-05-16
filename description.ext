@@ -20,13 +20,14 @@ class Header
 // Pantalla de càrrega https://community.bistudio.com/wiki/Description.ext                               //
 //=======================================================================================================//
 
-onLoadName = "*** Nom de la missió. ***";            // Nom de la missió (apareix en gran)
-onLoadMission = "*** Descripció de la missió. ***";    // Descripció breu de la missió
+onLoadName = "Jagdtag: Dia de caça";                   // Nom de la missió (apareix en gran)
+onLoadMission = "Localitzar i eliminar el traidor";    // Descripció breu de la missió
 author = "CC_Magnetar";                                // Autor
 loadScreen = "imatges\loadLogo.jpg";                      // Imatge mentre es carrega la missió
 overviewPicture = "imatges\overviewLogo.jpg";             // Imatge que es mostra al seleccionar la missió.
                                                        // Ha d'estar en format .paa i aspecte 2:1
-overviewText = "*** Text a mostrar. ***";              // Text que es mostra al seleccionar la missó.
+// Text que es mostra al seleccionar la missó.
+overviewText = "Un antic alt comandament ha venut informació classificada a les forces enemigues. Cal respondre amb contundència.";
 
 //=======================================================================================================//
 // Consola de Debug de BIS: https://community.bistudio.com/wiki/Description.ext#enableDebugConsole       //
@@ -125,43 +126,91 @@ class Params
 //=======================================================================================================//
 class CfgDebriefing
 {
-	class Final1
+	class FinalExit1
 	{
-		title = "Final #1";
+		title = "Missió acabada amb èxit.";
 		subtitle = "";
-		description = "*** Debriefing del final #1. ***";
-		pictureBackground = "";
-		picture = "b_inf";
-		pictureColor[] = {0.0,0.3,0.6,1};
-	};
-
-	class Final2
-	{
-		title = "Ending #2";
-		subtitle = "";
-		description = "*** Debriefing del final #2. ***";
+		description = "Les forces aliades han aconseguit eliminar el traidor i reestablir la comunicació per ràdio.";
 		pictureBackground = "";
 		picture = "b_inf";
 		pictureColor[] = {0.0,0.3,0.6,1};
 	};
 	
-	//class End3, End4, ....
-
-	class FinalFallit1
+	class FinalExit2
 	{
-		title = "Missió fallida #1";
+		title = "Missió acabada amb èxit.";
 		subtitle = "";
-		description = "*** Debriefing del final fallit #1. ***";
+		description = "Les forces aliades han aconseguit eliminar el traidor sense reestablir la comunicació per ràdio.";
 		pictureBackground = "";
 		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class FinalExit3
+	{
+		title = "Missió acabada amb èxit.";
+		subtitle = "";
+		description = "Les forces aliades han aconseguit eliminar el traidor sense reestablir la comunicació per ràdio. A més a més han aconseguit informes d'inteligència que delaten moviments de tropes enemigues.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+	class FinalExit4
+	{
+		title = "Èxit total.";
+		subtitle = "";
+		description = "Les forces aliades han aconseguit eliminar el traidor i reestablir la comunicació per ràdio. A més a més han aconseguit informes d'inteligència que delaten moviments de tropes enemigues.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class FinalFallit1
+	{
+		title = "Missió fallida";
+		subtitle = "";
+		description = "Les forces aliades han sigut eliminades i han aconseguit reestablir la comunicació per ràdio. El traidor ha pogut escapar.";
+		pictureBackground = "";
+		picture = "KIA";
 		pictureColor[] = {0.0,0.3,0.6,1};
 	};
 	
 	class FinalFallit2
 	{
-		title = "Missió fallida #2";
+		title = "Missió fallida";
 		subtitle = "";
-		description = "*** Debriefing final fallit #2. ***";
+		description = "Les forces aliades han sigut eliminades però han aconseguit acabar amb el traidor sense reestablir la comunicació per ràdio.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class FinalFallit3
+	{
+		title = "Missió fallida";
+		subtitle = "";
+		description = "Les forces aliades han sigut eliminades però han aconseguit acabar amb el traidor i reestablir la comunicació per ràdio.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class FinalFallit4
+	{
+		title = "Desertors!";
+		subtitle = "";
+		description = "Les forces aliades han desertat sense assolir cap dels objectius.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class FinalFallit5
+	{
+		title = "Desertors!";
+		subtitle = "";
+		description = "Les forces aliades han desertat sense assolir cap dels objectius però com a mínim han tingut la decència de d";
 		pictureBackground = "";
 		picture = "b_inf";
 		pictureColor[] = {0.0,0.3,0.6,1};
@@ -171,9 +220,9 @@ class CfgDebriefing
 	{
 		title = "Fracàs absolut";
 		subtitle = "";
-		description = "*** Descripció de què és fracàs absolut. ***";
+		description = "Les forces aliades han sigut eliminades sense assolir cap dels objectius.";
 		pictureBackground = "";
-		picture = "b_inf";
+		picture = "KIA";
 		pictureColor[] = {0.0,0.3,0.6,1};
 	};
 	

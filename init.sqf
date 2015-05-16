@@ -5,6 +5,31 @@
 // Creació del Document: 22/02/2015                                                                      //
 //=======================================================================================================//
 
+// Marcadors al mapa
+"IED1" setMarkerAlpha 0;
+"IED2" setMarkerAlpha 0;
+"IED3" setMarkerAlpha 0;
+"IED4" setMarkerAlpha 0;
+"IED5" setMarkerAlpha 0;
+"IED6" setMarkerAlpha 0;
+"IED7" setMarkerAlpha 0;
+
+"ObjMaritim2" setMarkerAlpha 0;
+"ObjMaritim2_1" setMarkerAlpha 0;
+"ObjMaritim2_2" setMarkerAlpha 0;
+"ObjMaritim3" setMarkerAlpha 0;
+"ObjMaritim4" setMarkerAlpha 0;
+
+"ObjTerra2" setMarkerAlpha 0;
+"ObjTerra2_1" setMarkerAlpha 0;
+"ObjTerra2_2" setMarkerAlpha 0;
+
+intelEspionatge = 0;
+intelIED = 0;
+intelTropes = 0;
+torresDestruides = 0;
+traidorMort = 0;
+
 //=======================================================================================================//
 // Desactivar guardar i guardar automàticament: https://community.bistudio.com/wiki/enableSaving         //
 //=======================================================================================================//
@@ -36,5 +61,9 @@ cc_script_radio = [] execVM "scripts\radios\cc_inicialitzar_radios.sqf";
 if ( isServer ) then {
 	cc_script_zeus = [] execVM "scripts\zeus\cc_zeus_init.sqf"
 };
+
+// Desactivar les radios
+[] call compile preprocessFile "ActivarRadios.sqf";
+
 
 //============================================ FI DEL FITXER ============================================//
