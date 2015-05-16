@@ -65,5 +65,4 @@ if ( isServer ) then {
 // Desactivar les radios
 [] call compile preprocessFile "ActivarRadios.sqf";
 
-
 //============================================ FI DEL FITXER ============================================//
