@@ -1,7 +1,7 @@
 //=======================================================================================================//
 // Arxiu: configEquipacio.sqf                                                                            //
 // Autor: CC_Magnetar                                                                                    //
-// Versió: 0.1                                                                                           //
+// Versió: 0.3                                                                                           //
 // Creació del Document: 02/04/2015                                                                      //
 // Descripció: Aquest document serveix per equipar els jugadors depenent del rol i la facció. A l'hora   //
 //             de configurar l'equip de la unitat la següent línia s'ha d'afegir al INIT de la unitat en //
@@ -35,8 +35,11 @@
 //                  sp                  Observador (Spotter)                                             //
 //                  div                 Bussejador (Diver)                                               //
 //                                                                                                       //
+//                  hmmwv               Equipació per HMMWVs                                             //
+//                                                                                                       //
 // Canvis: 0.1 (2015/04/02) Versió inicial.                                                              //
 //         0.2 (2015/04/26) Canviada la facció de les unitats RHS v0.3.7.                                //
+//         0.3 (2015/05/17) Afegida l'equipació pel vehicle HMMWV                                        //
 //=======================================================================================================//
 
 // Esperar a inicialitzar les variables

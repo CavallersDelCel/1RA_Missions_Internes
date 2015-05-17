@@ -5,7 +5,7 @@
 // Creació del Document: 02/04/2015                                                                      //
 // Descripció: Aquest document serveix per equipar els jugadors amb l'equipació dissenyada per la missió //
 //             sense fer servir els perfils estàndard del grup dels Cavallers del Cel. Requereix que el  //
-//             jugador formi part de la facció NATO BLUFOR "blu_f". Cal afegir la següent línia al  INTI //
+//             jugador formi part de la facció NATO BLUFOR "blu_f". Cal afegir la següent línia al  INIT //
 //             de la unitat en l'editor:                                                                 //
 //                                                                                                       //
 //                  ["ROL_JUGADOR",this] call cc_fnc_configEquipacio;                                    //
@@ -35,6 +35,8 @@
 //                  sn                  Franctirador (Sniper)                                            //
 //                  sp                  Observador (Spotter)                                             //
 //                  div                 Bussejador                                                       //
+//                                                                                                       //
+//                  hmmwv               Equipació per HMMWVs                                             //
 //                                                                                                       //
 // Canvis: 0.1 (2015/04/02) Versió inicial.                                                              //
 //=======================================================================================================//
@@ -755,6 +757,31 @@ switch (_tipusUnitat) do
 		
 		// Arma principal
 		_unitat addWeapon _armaDIV;
+	};
+		
+	case "hmmwv":
+	{
+		clearWeaponCargoGlobal _unitat;
+		clearMagazineCargoGlobal _unitat;
+		clearItemCargoGlobal _unitat;
+		clearBackpackCargoGlobal _unitat;
+		
+		_unitat addWeaponCargoGlobal [_armaDM,1];
+		_unitat addItemCargoGlobal [_armaMiraDM, 1];
+		_unitat addItemCargoGlobal [_armabipodeDM, 1];
+		_unitat addWeaponCargoGlobal [_armaLlencadorAT,2];
+		_unitat addMagazineCargoGlobal ["rhs_fgm148_magazine_AT",2];
+		_unitat addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",10];
+		_unitat addMagazineCargoGlobal ["rhs_mag_m67",5];
+		_unitat addMagazineCargoGlobal ["rhsusf_100Rnd_556x45_soft_pouch",5];
+		_unitat addMagazineCargoGlobal ["SatchelCharge_Remote_Mag",2];
+		_unitat addMagazineCargoGlobal ["rhs_mag_M433_HEDP",8];
+		_unitat addMagazineCargoGlobal ["rhsusf_20Rnd_762x51_m118_special_Mag",6];
+		_unitat addItemCargoGlobal [_clacker,1];
+		_unitat addItemCargoGlobal [_morfina,10];
+		_unitat addItemCargoGlobal [_epinefrina,10];
+		_unitat addItemCargoGlobal [_benes,10];
+		_unitat addItemCargoGlobal [_bossaSang,3];
 	};
 };
 
