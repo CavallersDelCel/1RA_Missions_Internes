@@ -32,9 +32,9 @@ titleCut ["", "BLACK FADED", 999];
 	// Nom de la missió, dia i localització
 	[
 		[
-			["Operació Dia de Caça","<t color = '#F70D1A' align = 'right' shadow = '1' size = '1.2'>%1</t><br/>"],
+			["Operació Jagdtag: Dia de Caça","<t color = '#F70D1A' align = 'right' shadow = '1' size = '1.2'>%1</t><br/>"],
 			[([([daytime] call BIS_fnc_TimeToString),0,4] call BIS_fnc_trimString) + " " + str(date select 2) + "." + str(date select 1) + "." + str(date select 0),"<t align = 'right' shadow = '1' size = '1.0'>%1</t><br/>"],
-			["Nord Oest d'Altis","<t align = 'right' shadow = '1' size = '1.0'>%1</t>"]
+			["Nord de Stratis","<t align = 'right' shadow = '1' size = '1.0'>%1</t>"]
 		],-safeZoneX,-safeZoneY
 	] spawn BIS_fnc_typeText; 
 	

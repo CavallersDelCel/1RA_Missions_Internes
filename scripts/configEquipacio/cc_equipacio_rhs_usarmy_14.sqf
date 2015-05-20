@@ -91,7 +91,7 @@ _arma = "rhs_weap_m4a1";
 _arma320 = "rhs_weap_m4a1_m320";
 _armaAR = "rhs_weap_m249_pip";
 _armaMG = "rhs_weap_m240B";
-_armaDM = "rhs_weap_m14ebrri";
+_armaDM = "rhs_weap_sr25_ec";
 _armaSN = "rhs_weap_XM2010_sa";
 _armaDIV = "arifle_SDAR_F";
 
@@ -464,6 +464,9 @@ switch (_tipusUnitat) do
 		_unitat addPrimaryWeaponItem _armaLaserLlanterna;
 		_unitat addPrimaryWeaponItem _armaMira;
 		
+		// Objectes
+		_unitat linkItem _gps;
+		
 		// Binocles
 		_unitat addWeapon _vectorIV;
 	};
@@ -655,6 +658,7 @@ switch (_tipusUnitat) do
 		(unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_mk84",2];
 		(unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_an_m8hc",1];
 		(unitBackpack _unitat) addMagazineCargoGlobal ["rhsusf_20Rnd_762x51_m118_special_Mag",5];
+		(unitBackpack _unitat) addItemCargoGlobal ["rhsusf_acc_SR25S",1];
 		
 		// Arma principal
 		// Missing muzzle attachment
@@ -1039,7 +1043,11 @@ switch (_tipusUnitat) do
 		// Arma principal
 		_unitat addWeapon _armaDIV;
 	};
+<<<<<<< HEAD
 		
+=======
+	
+>>>>>>> canvis a la missio
 	case "hmmwv":
 	{
 		clearWeaponCargoGlobal _unitat;
@@ -1062,6 +1070,7 @@ switch (_tipusUnitat) do
 		_unitat addItemCargoGlobal [_morfina,10];
 		_unitat addItemCargoGlobal [_epinefrina,10];
 		_unitat addItemCargoGlobal [_benes,10];
+<<<<<<< HEAD
 		_unitat addItemCargoGlobal [_bossaSang500,5];
 		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
 			_unitat addItemCargoGlobal [_atropina,10];
@@ -1082,6 +1091,10 @@ switch (_tipusUnitat) do
 if (_esInfanteria) then {
 	_aprincipal = primaryWeapon _unitat;
 	_unitat selectWeapon _aprincipal;
+=======
+		_unitat addItemCargoGlobal [_bossaSang,3];
+	};
+>>>>>>> canvis a la missio
 };
 
 // Insiginia de la unitat

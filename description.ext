@@ -21,7 +21,7 @@ class Header
 //=======================================================================================================//
 
 onLoadName = "Jagdtag: Dia de caça";                   // Nom de la missió (apareix en gran)
-onLoadMission = "Localitzar i eliminar el traidor";    // Descripció breu de la missió
+onLoadMission = "Localitzar i eliminar el traidor.";    // Descripció breu de la missió
 author = "CC_Magnetar";                                // Autor
 loadScreen = "imatges\loadLogo.jpg";                      // Imatge mentre es carrega la missió
 overviewPicture = "imatges\overviewLogo.jpg";             // Imatge que es mostra al seleccionar la missió.
@@ -155,8 +155,28 @@ class CfgDebriefing
 		picture = "b_inf";
 		pictureColor[] = {0.0,0.3,0.6,1};
 	};
-
+	
 	class FinalExit4
+	{
+		title = "Missió acabada amb èxit.";
+		subtitle = "";
+		description = "Les forces aliades han aconseguit reestablir la comunicació per ràdio però el traidor ha pogut escapar.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class FinalExit5
+	{
+		title = "Missió acabada amb èxit.";
+		subtitle = "";
+		description = "Les forces aliades han aconseguit reestablir la comunicació per ràdio i han aconseguit informes d'inteligència que delaten moviments de tropes enemigues. El traidor ha pogut escapar.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class FinalExit6
 	{
 		title = "Èxit total.";
 		subtitle = "";
