@@ -23,7 +23,7 @@ tf_give_microdagr_to_soldier = true;
 // si es volen customitzar.
 //   - false: customitzar les radios (Editar el fitxer: fn_tfar_afegirRadios.sqf)
 //   - true: les radios per defecte del TFAR seran assignades.
-cc_tfar_config_utilitzarRadiosPerDefecte = false;
+cc_tfar_config_utilitzarRadiosPerDefecte = true;
 
 // Variable per controlar si es distribueixen radios a la partida. Pot ser útil en cas de missions
 // de supervivència.
