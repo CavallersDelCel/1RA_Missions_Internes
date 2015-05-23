@@ -1043,11 +1043,7 @@ switch (_tipusUnitat) do
 		// Arma principal
 		_unitat addWeapon _armaDIV;
 	};
-<<<<<<< HEAD
-		
-=======
-	
->>>>>>> canvis a la missio
+
 	case "hmmwv":
 	{
 		clearWeaponCargoGlobal _unitat;
@@ -1070,7 +1066,6 @@ switch (_tipusUnitat) do
 		_unitat addItemCargoGlobal [_morfina,10];
 		_unitat addItemCargoGlobal [_epinefrina,10];
 		_unitat addItemCargoGlobal [_benes,10];
-<<<<<<< HEAD
 		_unitat addItemCargoGlobal [_bossaSang500,5];
 		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
 			_unitat addItemCargoGlobal [_atropina,10];
@@ -1091,10 +1086,6 @@ switch (_tipusUnitat) do
 if (_esInfanteria) then {
 	_aprincipal = primaryWeapon _unitat;
 	_unitat selectWeapon _aprincipal;
-=======
-		_unitat addItemCargoGlobal [_bossaSang,3];
-	};
->>>>>>> canvis a la missio
 };
 
 // Insiginia de la unitat

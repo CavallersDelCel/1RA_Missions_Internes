@@ -21,7 +21,11 @@ _briefingAdmin = "
 <br/><br/>
 Aquesta missió s'ha comprovat que funciona amb el següent:
 <br/><br/>
-*** Llistat d'addons i les seves versions. ***
+- Community Base Addons CBA v1.1.20.150416
+<br/>
+- RHS United States Army Forces (RHS USAF) v0.3.7.
+<br/>
+- Task Force Arrowhead Radio (TFAR) v0.9.7.3
 <br/><br/>
 Si els requisits no es compleixen o les versions són diferents cal comprovar prèviament que tot funcioni correctament.
 <br/><br/>
@@ -32,6 +36,7 @@ Si els requisits no es compleixen o les versions són diferents cal comprovar pr
 //=======================================================================================================//
 
 _briefingNotes = "
+
 <br/>
 <font color='#FF0000' size='18'>Notes del creador de la missió</font>
 <br/><br/>
@@ -49,9 +54,7 @@ _briefingNotes = "
 <br/>
 <font color='#00FFFF'>Dificultat:</font> Elevada.
 <br/>
-<font color='#00FFFF'>Resum de la missió:</font>
-<br/><br/>
-*** Notes i missatges addicionals del creador de la missió. ***
+<font color='#00FFFF'>Resum de la missió:</font> Operació ""Jagdtag: Dia de caça"" és una missió que divideix una esquadra en dos equips independents que no es podran comunicar per ràdio fins que les torres inhibidores de senyal siguin destruïdes. Partint d'escaça informació inicial els dos equips van obtenint més detalls dels objectius a mesura que s'avança en la missió a través d'informes d'inteligència. Per tal d'acomplir els objectius es requereixen entre 8 i 12 jugadors molt ben coordinats ja que es considera una missió difícil.
 ";
 
 //=======================================================================================================//
