@@ -65,4 +65,10 @@ if ( isServer ) then {
 // Desactivar les radios
 [] call compile preprocessFile "ActivarRadios.sqf";
 
+if (isServer) then 
+{
+//ZeusModule = your curator module name; true = boolean, if civilians should be editable by zeus as well - set to false if you don't want civilians to be editable.
+[ZeusModule] execVM "InitZeus.sqf";
+};
+
 //============================================ FI DEL FITXER ============================================//
