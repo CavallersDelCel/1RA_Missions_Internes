@@ -1155,7 +1155,6 @@ switch (_tipusUnitat) do
 	
 	case "sdv1":
 	{
-	
 		clearWeaponCargoGlobal _unitat;
 		clearMagazineCargoGlobal _unitat;
 		clearItemCargoGlobal _unitat;

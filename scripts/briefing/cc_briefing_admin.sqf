@@ -15,6 +15,7 @@
 //=======================================================================================================//
 // NOTES: ADMINISTRADOR                                                                                  //
 //=======================================================================================================//
+
 _briefingAdmin = "
 <br/>
 <font color='#FF0000' size='18'>Informació per l'administrador</font>
@@ -60,22 +61,6 @@ _briefingNotes = "
 <font color='#00FFFF'>Resum de la missió:</font> Operació ""Jagdtag: Dia de caça"" és una missió que divideix una esquadra en dos equips independents que no es podran comunicar per ràdio fins que les torres inhibidores de senyal siguin destruïdes. Partint d'escaça informació inicial els dos equips van obtenint més detalls dels objectius a mesura que s'avança en la missió a través d'informes d'inteligència. Per tal d'acomplir els objectius es requereixen entre 8 i 12 jugadors molt ben coordinats ja que es considera una missió difícil. Les tasques no s'actualitzen un cop completades i són els jugadors els qui decideixen si l'han completat o no.
 <br/><br/>
 ";
-
-//=======================================================================================================//
-// NOTES: FINALS DE MISSIÓ                                                                               //
-//=======================================================================================================//
-
-_briefing = _briefing + "
-<br/>
-<font color='#FF0000' size='18'>Diferents finals de la missió</font>
-<br/>
-Selecciona un dels finals per activar-lo.
-<br/><br/>
-";
-
-//=======================================================================================================//
-// NOTES: FINALS DE LA MISSIÓ                                                                            //
-//=======================================================================================================//
 
 _briefingFinals = "
 <br/>
