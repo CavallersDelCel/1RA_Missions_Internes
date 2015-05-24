@@ -1046,7 +1046,7 @@ switch (_tipusUnitat) do
 		clearItemCargoGlobal _unitat;
 		clearBackpackCargoGlobal _unitat;
 		
-		_unitat addWeaponCargoGlobal [_armaDM,1];
+				_unitat addWeaponCargoGlobal [_armaDM,1];
 		_unitat addItemCargoGlobal [_armaMiraDM, 1];
 		_unitat addItemCargoGlobal [_armabipodeDM, 1];
 		_unitat addWeaponCargoGlobal [_armaLlencadorAT,2];
@@ -1074,6 +1074,88 @@ switch (_tipusUnitat) do
 			_unitat addItemCargoGlobal [_kitQuirurgic,3];
 			_unitat addItemCargoGlobal [_kitPrimersAuxilis,3];
 		};
+	};
+	
+	case "sdv1":
+	{
+	
+		clearWeaponCargoGlobal _unitat;
+		clearMagazineCargoGlobal _unitat;
+		clearItemCargoGlobal _unitat;
+		clearBackpackCargoGlobal _unitat;
+	
+		/*
+		_unitat addItemCargoGlobal [_uniforme,3];
+		_unitat addItemCargoGlobal [_casc,3];
+		_unitat addItemCargoGlobal [_armillaSQ,1];
+		_unitat addItemCargoGlobal [_armillaRFL,1];
+		_unitat addItemCargoGlobal [_armillaGR,1];
+		_unitat addBackpackCargoGlobal [_motxilla,3];
+		
+		// Motxilles
+		_llista = everyContainer _unitat;
+		
+		_count = 0;
+		{
+			_temp = _llista select _count;
+			_nom = _temp select 0;
+			
+			if( _nom == _armillaSQ) then{
+				hint "ArmillaSQ seleccionada";
+				_x addMagazineCargo ["rhs_mag_30Rnd_556x45_M855A1_Stanag",1];
+			};
+			_count = _count + 1;
+		} forEach _llista;
+		
+		
+		_llistamotxilles = everybackpack _unitat;
+		
+		{
+			_x addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",5];
+			_x addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",2];
+		} forEach _llistamotxilles;
+		
+		_temp = _llistamotxilles select 0;
+		_temp addMagazineCargoGlobal ["rhs_mag_m714_White",2];
+		_temp = _llistamotxilles select 1;
+		_temp addMagazineCargoGlobal ["rhs_m136_hedp_mag",1];
+		_temp = _llistamotxilles select 2;
+		_temp addMagazineCargoGlobal ["rhs_mag_m714_White",2];
+		_temp addMagazineCargoGlobal ["rhs_mag_M433_HEDP",5];
+		
+		// Armes
+		_unitat addWeaponCargoGlobal [_pistola,3];
+		_unitat addWeaponCargoGlobal [_arma320,2];
+		_unitat addWeaponCargoGlobal [_arma,1];
+		_unitat addItemCargoGlobal [_armaSurefire,3];
+		_unitat addItemCargoGlobal [_armaLaserLlanterna,3];
+		_unitat addItemCargoGlobal [_armaMira,3];
+		_unitat addWeapon _armaLlencadorAT4;*/
+	};
+		
+	case "sdv2":
+	{
+		clearWeaponCargoGlobal _unitat;
+		clearMagazineCargoGlobal _unitat;
+		clearItemCargoGlobal _unitat;
+		clearBackpackCargoGlobal _unitat;
+		/*
+		_unitat addItemCargoGlobal [_uniforme,3];
+		_unitat addItemCargoGlobal [_armillaSQ,1];
+		_unitat addItemCargoGlobal [_armillaRFL,1];
+		_unitat addItemCargoGlobal [_armillaGR,1];
+		_unitat addItemCargoGlobal [_motxilla,3];
+		
+		_llistamotxilles = everybackpack _unitat;
+		{
+			_x addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",5];
+			_x addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",2];
+		} forEach _llistamotxilles;
+		
+		_temp = _llistamotxilles select 0;
+		_temp addMagazineCargoGlobal ["rhs_mag_m714_White",2];
+		_temp = _llistamotxilles select 1;
+		_temp addMagazineCargoGlobal ["rhs_m136_hedp_mag",1];*/
 	};
 };
 
