@@ -23,7 +23,7 @@ tf_give_microdagr_to_soldier = true;
 // si es volen customitzar.
 //   - false: customitzar les radios (Editar el fitxer: fn_tfar_afegirRadios.sqf)
 //   - true: les radios per defecte del TFAR seran assignades.
-cc_tfar_config_utilitzarRadiosPerDefecte = true;
+cc_tfar_config_utilitzarRadiosPerDefecte = false;
 
 // Variable per controlar si es distribueixen radios a la partida. Pot ser útil en cas de missions
 // de supervivència.
@@ -32,12 +32,12 @@ cc_tfar_config_utilitzarRadiosPerDefecte = true;
 cc_tfar_config_distribuirRadios = true;
 
 // Llista d'unitats amb Rifleman Radio (fn_configEquipacio.sqf)
-cc_tfar_llistaRF = ["rfl", "rflat", "gr", "ar", "dm", "mg", "amg", "at", "aat", "aa", "aaa", "en", "div"];
+cc_tfar_llistaRF = ["rfl", "rflat", "gr", "ar", "dm", "mg", "amg", "at", "aat", "aa", "aaa", "en", "divme","div"];
 
 // Llista d'unitats amb Short Range Radio (fn_configEquipacio.sqf)
-cc_tfar_llistaSR = ["pl", "psg", "rto", "fo", "me", "sl", "tl", "sn", "sp"];
+cc_tfar_llistaSR = ["pl", "psg", "rto", "fo", "me", "sl", "tl", "sn", "sp", "divsl"];
 
 // Llista d'unitats amb Long Range Radio (fn_configEquipacio.sqf)
-cc_tfar_llistaLR = ["rto", "fo"];
+cc_tfar_llistaLR = ["rto", "fo", "sl", "tl"];
 
 //============================================ FI DEL FITXER ============================================//

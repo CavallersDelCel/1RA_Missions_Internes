@@ -21,10 +21,10 @@ class Header
 //=======================================================================================================//
 
 onLoadName = "Jagdtag: Dia de caça";                   // Nom de la missió (apareix en gran)
-onLoadMission = "Localitzar i eliminar el traidor.";    // Descripció breu de la missió
+onLoadMission = "Localitzar i eliminar el traidor.";   // Descripció breu de la missió
 author = "CC_Magnetar";                                // Autor
-loadScreen = "imatges\loadLogo.jpg";                      // Imatge mentre es carrega la missió
-overviewPicture = "imatges\overviewLogo.jpg";             // Imatge que es mostra al seleccionar la missió.
+loadScreen = "pics\loadJagdtag.jpg";                   // Imatge mentre es carrega la missió
+overviewPicture = "pics\overviewJagdtag.jpg";          // Imatge que es mostra al seleccionar la missió.
                                                        // Ha d'estar en format .paa i aspecte 2:1
 // Text que es mostra al seleccionar la missó.
 overviewText = "Un antic alt comandament ha venut informació classificada a les forces enemigues. Cal respondre amb contundència.";
