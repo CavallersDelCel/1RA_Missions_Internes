@@ -29,7 +29,6 @@ overviewPicture = "pics\overviewJagdtag.jpg";          // Imatge que es mostra a
 // Text que es mostra al seleccionar la missó.
 overviewText = "Un antic membre del servei d'espionatge ha desertat i ha venut informació classificada a les forces enemigues. Cal respondre amb contundència. Les comunicacions per ràdio no funcionen.";
 
-
 //=======================================================================================================//
 // Consola de Debug de BIS: https://community.bistudio.com/wiki/Description.ext#enableDebugConsole       //
 //=======================================================================================================//
@@ -58,7 +57,7 @@ class Params
         title = "Mode Debug";
         values[] = {0,1};
         texts[] = {"Desactivat","Activat"};
-        default = 1;
+        default = 0;
     };
 	
 	//===================================================================================================//
