@@ -788,6 +788,12 @@ switch (_tipusUnitat) do
 	};
 };
 
+// Selecciona l'arma principal per defecte
+if (_esInfanteria) then {
+	_aprincipal = primaryWeapon _unitat;
+	_unitat selectWeapon _aprincipal;
+};
+
 // Insiginia de la unitat
 [_unitat,"PATCH_CC_CC"] call bis_fnc_setUnitInsignia;
 
