@@ -1107,6 +1107,7 @@ switch (_tipusUnitat) do
 	};
 };
 
+
 // Selecciona l'arma principal per defecte
 if (_esInfanteria) then {
 	_aprincipal = primaryWeapon _unitat;

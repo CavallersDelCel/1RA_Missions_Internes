@@ -13,7 +13,7 @@ class Header
 {
 	gameType = Coop;     // Mode de joc: https://community.bistudio.com/wiki/Multiplayer_Game_Types
 	minPlayers = 1;      // Nombre mínim de jugadors
-	maxPlayers = 14;     // Nombre màxim de jugadors
+	maxPlayers = 12;     // Nombre màxim de jugadors
 };
 
 //=======================================================================================================//
@@ -27,7 +27,7 @@ loadScreen = "pics\loadJagdtag.jpg";                   // Imatge mentre es carre
 overviewPicture = "pics\overviewJagdtag.jpg";          // Imatge que es mostra al seleccionar la missió.
                                                        // Ha d'estar en format .paa i aspecte 2:1
 // Text que es mostra al seleccionar la missó.
-overviewText = "Un antic alt comandament ha venut informació classificada a les forces enemigues. Cal respondre amb contundència.";
+overviewText = "Un antic membre del servei d'espionatge ha desertat i ha venut informació classificada a les forces enemigues. Cal respondre amb contundència. Les comunicacions per ràdio no funcionen.";
 
 //=======================================================================================================//
 // Consola de Debug de BIS: https://community.bistudio.com/wiki/Description.ext#enableDebugConsole       //

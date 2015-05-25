@@ -21,9 +21,11 @@ _briefingAdmin = "
 <br/><br/>
 Aquesta missió s'ha comprovat que funciona amb el següent:
 <br/><br/>
-- Community Base Addons CBA v1.1.20.150416
+- Community Base Addons (CBA) v1.1.20.150416
 <br/>
 - RHS United States Army Forces (RHS USAF) v0.3.7.
+<br/>
+- British Ridgback PPV (BFX) v3.0.
 <br/>
 - Task Force Arrowhead Radio (TFAR) v0.9.7.3
 <br/><br/>
