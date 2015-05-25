@@ -15,7 +15,15 @@ _credits = player createDiaryRecord ["diary", ["Crèdits","
 <br/>
 Missió generada per CC_Magnetar per a la comunitat dels Cavallers del Cel.
 <br/><br/>
-Amb la col·laboració de CC_Viper, CC_ZeroQ, CC_SilverArrow, CC_Arnau002, CC_Davidaf.
+Amb la col·laboració de *** possibles col·laboradors ***.
+"]];
+
+//=======================================================================================================//
+// NOTES: RADIO                                                                                          //
+//=======================================================================================================//
+_admlog = player createDiaryRecord ["diary", ["Freqüències de Radio","
+<br/>
+*** Llistat de les freqüències de ràdio de les esquadres i equips ***
 "]];
 
 //=======================================================================================================//
@@ -23,7 +31,13 @@ Amb la col·laboració de CC_Viper, CC_ZeroQ, CC_SilverArrow, CC_Arnau002, CC_Da
 //=======================================================================================================//
 _admlog = player createDiaryRecord ["diary", ["Administració/Logística","
 <br/>
-*** Descripció de support aèri, evacuació mèdica, CAS etc en cas d'existir. ***
+<font color='#FF0000' size='18'>Suport</font>
+<br/>
+*** Descripció de les unitats de suport, evacuació mèdica, CAS etc. en cas d'existir.
+<br/><br/>
+<font color='#FF0000' size='18'>Abastiment</font>
+<br/>
+*** Abastiment de les tropes: munició addicional, ...
 "]];
 
 //=======================================================================================================//
@@ -31,15 +45,15 @@ _admlog = player createDiaryRecord ["diary", ["Administració/Logística","
 //=======================================================================================================//
 _execucio = player createDiaryRecord ["diary", ["Execució","
 <br/>
-<font size='18'>Ordres del general/Plà d'atac</font>
+<font color='#FF0000' size='18'>Ordres del general/Plà d'atac</font>
 <br/>
 *** Breu descripció del plà d'atac. ***
 <br/><br/>
-<font size='18'>RUTA D'ATAC</font>
+<font color='#FF0000' size='18'>Ruta d'atac</font>
 <br/>
 *** Instruccions d'inserció, atac i extracció. ***
 <br/><br/>
-<font size='18'>TASQUES ESPECIALS</font>
+<font color='#FF0000' size='18'>Tasques especials</font>
 <br/>
 *** Tasques especials. ***
 "]];
@@ -59,11 +73,11 @@ _intel = player createDiaryRecord ["diary", ["Inteligència","
 <br/>
 *** Informe d'inteligència. ***
 <br/><br/>
-<font size='18'>FORCES ENEMIGUES</font>
+<font color='#FF0000' size='18'>Forces enemigues</font>
 <br/>
 *** Descripció de les forces enemigues.***
 <br/><br/>
-<font size='18'>FORCES ALIADES</font>
+<font color='#FF0000' size='18'>Forces aliades</font>
 <br/>
 *** Breu descripció de les forces aliades.***
 "]];

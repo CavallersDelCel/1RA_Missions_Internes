@@ -438,7 +438,7 @@ switch (_tipusUnitat) do
 		_unitat addPrimaryWeaponItem _armaMira;	
 		
 		// Llençador AT4
-		_unitat addWeapon _armaLlencadorAT4;	
+		_unitat addWeapon _armaLlencadorRF;	
 	};
 	
 	// Granader (Grenadier)

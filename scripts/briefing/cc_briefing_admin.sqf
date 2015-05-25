@@ -11,15 +11,19 @@
 //=======================================================================================================//
 // MISSATGES QUE NOMÉS VEURÀ L'ADMINISTRADOR                                                             //
 //=======================================================================================================//
-_customText = "";
 
 //=======================================================================================================//
 // NOTES: ADMINISTRADOR                                                                                  //
 //=======================================================================================================//
-_briefing ="
+_briefingAdmin ="
 <br/>
-<font size='18'>Secció de l'administrador</font><br/>
-*** Informació que només l'administrador podrà veure. ***
+<font color='#FF0000' size='18'>Informació per l'administrador</font>
+<br/><br/>
+Aquesta missió s'ha comprovat que funciona amb el següent:
+<br/><br/>
+*** Llistat d'addons i les seves versions. ***
+<br/><br/>
+Si els requisits no es compleixen o les versions són diferents cal comprovar prèviament que tot funcioni correctament.
 <br/><br/>
 ";
 
@@ -27,13 +31,30 @@ _briefing ="
 // NOTES: CREADOR DE LA MISSIÓ                                                                           //
 //=======================================================================================================//
 
-_briefing ="
+_briefingNotes ="
 <br/>
-<font size='18'>Notes del creador de la missió</font><br/>
-*** Notes i missatges del creador de la missió. ***
+<font color='#FF0000' size='18'>Notes del creador de la missió</font>
+<br/><br/>
+<font color='#00FFFF'>Nom de la Missió:</font> ""Operació Jagdtag: Dia de caça"".
+<br/>
+<font color='#00FFFF'>Versió:</font> 1.0.
+<br/>
+<font color='#00FFFF'>Autor:</font> CC Magnetar.
+<br/>
+<font color='#00FFFF'>Nombre mínim de jugadors:</font> 8.
+<br/>
+<font color='#00FFFF'>Nombre màxim de jugadors:</font> 12.
+<br/>
+<font color='#00FFFF'>Respawn:</font> Deshabilitat.
+<br/>
+<font color='#00FFFF'>Dificultat:</font> Elevada.
+<br/>
+<font color='#00FFFF'>Resum de la missió:</font>
+<br/><br/>
+*** Notes i missatges addicionals del creador de la missió. ***
 ";
 
-_briefing = _briefing + _customText;
+_briefing = _briefingAdmin + _briefingNotes;
 _briefing = _briefing + "<br/><br/>";
 
 //=======================================================================================================//

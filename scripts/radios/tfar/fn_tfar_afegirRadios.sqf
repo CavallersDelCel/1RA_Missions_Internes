@@ -45,9 +45,9 @@ if (cc_tfar_config_utilitzarRadiosPerDefecte) then {
 	switch ((side player)) do {
 		case (west):
 		{
-			_radioLR = "tf_rt1523g_rhs";
-			_radioSR = "tf_anprc152";
-			_radioRF = "tf_anprc152";
+			_radioLR = "tf_rt1523g_big_rhs";
+			_radioSR = TF_defaultWestPersonalRadio;
+			_radioRF = TF_defaultWestRiflemanRadio;
 		};
 		case (east):
 		{
