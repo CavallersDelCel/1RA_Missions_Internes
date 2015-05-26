@@ -28,7 +28,10 @@ if(alive player) then {
 	// Configurar el xat d'espectador
 	//[] call cc_fnc_tfar_configurarXatEspectador;
 	
-	player sideChat format ["DEBUG (fn_tfar_initClient.sqf): Radios configurades."];
+	// DEBUG OUTPUT
+	if (cc_var_debugOutput == 1) then {
+		player sideChat format ["DEBUG (fn_tfar_initClient.sqf): Radios configurades."];
+	};
 } else {
 	// El jugador no està viu i per tant no cal configurar les ràdios.
 	[] call cc_fnc_tfar_configurarXatEspectador;

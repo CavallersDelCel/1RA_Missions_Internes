@@ -177,6 +177,7 @@ class CfgFunctions
 			class tfar_afegirRadios{};
 			class tfar_configurarFreqRadios{};
 			class tfar_configurarXatEspectador{};
+			class tfar_modificarSenyal{};
 		};
 		
 		class acre2

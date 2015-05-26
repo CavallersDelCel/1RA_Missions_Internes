@@ -67,8 +67,7 @@ _unitat setVariable ["cc_var_configEquipacio",_tipusUnitat,true];
 _unitat setVariable ["cc_var_configEquipacio_Llesta",false,true];
 
 // DEBUG OUTPUT
-if (cc_var_debugOutput == 1) then
-{
+if (cc_var_debugOutput == 1) then {
 	_unitat sideChat format ["DEBUG (configEquipacio.sqf): facció de la unitat: %1", _faccioUnitat];
 };
 
