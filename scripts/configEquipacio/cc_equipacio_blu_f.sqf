@@ -125,18 +125,56 @@ _prismatic = "lerca_1200_tan";
 // Visió nocturna
 _visioNocturna = "rhsusf_ANPVS_14";
 
-// Objectes depenents de AGM
-_taps = "AGM_EarBuds";
-_morfina = "AGM_Morphine";
-_epinefrina = "AGM_Epipen";
-_benes = "AGM_Bandage";
-_bossaSang = "AGM_Bloodbag";
-_cintaDentencio = "AGM_CableTie";
-_vectorIV = "AGM_Vector";
-_einesMapa = "AGM_MapToos";
-_kestrel = "AGM_ItemKestrel";
-_clacker = "AGM_Clacker";
-_kitDesactivacio = "AGM_DefusalKit";
+//=======================================================================================================//
+// Objectes depenents de ACE 3                                                                           //
+//=======================================================================================================//
+
+// General
+_bateriaUAV = "ACE_UAVBattery";
+_cintaDentencio = "ACE_CableTie";
+_einesMapa = "ACE_MapTools";
+_microDAGR = "ACE_microDAGR";
+_taps = "ACE_EarPlugs";
+_vectorIV = "ACE_Vector";
+
+// Objectes per tirador designat/franctirador/observador
+_atragmx = "ACE_ATragMX";
+_kestrel = "ACE_Kestrel4500";
+
+// Objectes relacionats amb explosius
+_claker = "ACE_Clacker";
+_clakerm26 = "ACE_M26_Clacker";
+_kitDesactivacio = "ACE_DefusalKit";
+_telefon = "ACE_Cellphone";
+
+// Objectes mèdics: Droques
+_atropina = "ACE_atropine";
+_epinefrina = "ACE_epinephrine";
+_morfina = "ACE_morphine";
+
+// Objectes mèdics: Benes
+_benes = "ACE_fieldDressing";
+_benesElastiques = "ACE_elasticBandage";
+_benesRapides = "ACE_quikclot";
+_benesEmpaquetants = "ACE_packingBandage";
+
+// Objectes mèdics: bosses
+_bossaSang250 = "ACE_bloodIV_250";
+_bossaSang500 = "ACE_bloodIV_250";
+_bossaSang1000 = "ACE_bloodIV_250";
+_bossaPlasma250 = "ACE_plasmaIV_250";
+_bossaPlasma500 = "ACE_plasmaIV_500";
+_bossPlasma1000 = "ACE_plasmaIV";
+_bossaSalina250 = "ACE_salineIV_250";
+_bossaSalina500 = "ACE_salineIV_500";
+_bossaSalina1000 = "ACE_salineIV_1000";
+
+// Objectes mèdics: Kits
+_kitPrimersAuxilis = "ACE_personalAidKit";
+_kitQuirurgic = "ACE_surgicalKit";
+
+// Objectes mèdics: Torniquets
+_torniquet = "ACE_tourniquet";
 
 // Treure tota l'equipació que porta la unitat en el cas que sigui infanteria
 if (_esInfanteria) then {
