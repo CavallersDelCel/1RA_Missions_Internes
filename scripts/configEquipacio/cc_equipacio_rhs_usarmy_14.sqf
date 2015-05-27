@@ -227,6 +227,7 @@ switch (_tipusUnitat) do
 		// Objectes a l'armilla
 		(vestContainer _unitat) addItemCargoGlobal [_benes,2];
 		(vestContainer _unitat) addItemCargoGlobal [_einesMapa,1];
+		(vestContainer _unitat) addItemCargoGlobal [_microDAGR,1];
 		(vestContainer _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",8];
 		(vestContainer _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",1];
 		(vestContainer _unitat) addMagazineCargoGlobal ["rhs_mag_M433_HEDP",2];
@@ -248,7 +249,7 @@ switch (_tipusUnitat) do
 		_unitat addPrimaryWeaponItem _armaMira;
 
 		// Objectes
-		_unitat linkItem _gps;
+		//_unitat linkItem _gps;
 		
 		// Binocles
 		_unitat addWeapon _vectorIV;
@@ -319,11 +320,18 @@ switch (_tipusUnitat) do
 		(vestContainer _unitat) addMagazineCargoGlobal ["rhs_mag_mk84",1];
 		
 		// Objectes a la motxilla
-		(unitBackpack _unitat) addItemCargoGlobal [_benes,20];
 		(unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
+		(unitBackpack _unitat) addItemCargoGlobal [_benes,10];
+		(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,10];
+		(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,10];
+		(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,8];
+		(unitBackpack _unitat) addItemCargoGlobal [_torniquet,5];
 		(unitBackpack _unitat) addItemCargoGlobal [_morfina,8];
-		(unitBackpack _unitat) addItemCargoGlobal [_epinefrina,8];	 
-		(unitBackpack _unitat) addItemCargoGlobal [_bossaSang,2];
+		(unitBackpack _unitat) addItemCargoGlobal [_epinefrina,8];	
+		(unitBackpack _unitat) addItemCargoGlobal [_atropina,8];
+		(unitBackpack _unitat) addItemCargoGlobal [_kitQuirurgic,2];
+		(unitBackpack _unitat) addItemCargoGlobal [_kitPrimersAuxilis,2];
+		(unitBackpack _unitat) addItemCargoGlobal [_bossaSalina500,6];
 		(unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",2];
 		
 		
@@ -348,6 +356,7 @@ switch (_tipusUnitat) do
 		// Objectes a l'armilla
 		(vestContainer _unitat) addItemCargoGlobal [_benes,2];
 		(vestContainer _unitat) addItemCargoGlobal [_einesMapa,1];
+		(vestContainer _unitat) addItemCargoGlobal [_microDAGR,1];
 		(vestContainer _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",8];
 		(vestContainer _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",1];
 		(vestContainer _unitat) addMagazineCargoGlobal ["rhs_mag_M433_HEDP",2];
@@ -355,7 +364,11 @@ switch (_tipusUnitat) do
 		(vestContainer _unitat) addMagazineCargoGlobal ["rhs_mag_m67",2];
 		
 		// Objectes a la motxilla
-		(unitBackpack _unitat) addItemCargoGlobal [_benes,4];
+		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
+		(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
+		(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
+		(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
+		(unitBackpack _unitat) addItemCargoGlobal [_torniquet,1];
 		(unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
 		(unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",5];
 		(unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",2];
@@ -369,7 +382,7 @@ switch (_tipusUnitat) do
 		_unitat addPrimaryWeaponItem _armaMira;
 
 		// Objectes
-		_unitat linkItem _gps;
+		//_unitat linkItem _gps;
 		
 		// Binocles
 		_unitat addWeapon _vectorIV;
@@ -396,7 +409,11 @@ switch (_tipusUnitat) do
 		(vestContainer _unitat) addMagazineCargoGlobal ["rhs_mag_m67",2];
 		
 		// Objectes a la motxilla
-		(unitBackpack _unitat) addItemCargoGlobal [_benes,4];
+		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
+		(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
+		(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
+		(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
+		(unitBackpack _unitat) addItemCargoGlobal [_torniquet,1];
 		(unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
 		(unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",5];
 		(unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",2];
@@ -431,7 +448,11 @@ switch (_tipusUnitat) do
 		(vestContainer _unitat) addMagazineCargoGlobal ["rhs_mag_m67",4];
 		
 		// Objectes a la motxilla
-		(unitBackpack _unitat) addItemCargoGlobal [_benes,4];
+		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
+		(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
+		(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
+		(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
+		(unitBackpack _unitat) addItemCargoGlobal [_torniquet,1];
 		(unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
 		(unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",5];
 		(unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",2];
@@ -463,7 +484,11 @@ switch (_tipusUnitat) do
 		(vestContainer _unitat) addMagazineCargoGlobal ["rhs_mag_m67",4];
 		
 		// Objectes a la motxilla
-		(unitBackpack _unitat) addItemCargoGlobal [_benes,4];
+		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
+		(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
+		(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
+		(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
+		(unitBackpack _unitat) addItemCargoGlobal [_torniquet,1];
 		(unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
 		(unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",5];
 		(unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",2];
@@ -501,7 +526,11 @@ switch (_tipusUnitat) do
 		(vestContainer _unitat) addMagazineCargoGlobal ["rhs_mag_M433_HEDP",6];
 		
 		// Objectes a la motxilla
-		(unitBackpack _unitat) addItemCargoGlobal [_benes,4];
+		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
+		(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
+		(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
+		(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
+		(unitBackpack _unitat) addItemCargoGlobal [_torniquet,1];
 		(unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
 		(unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",5];
 		(unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",1];
@@ -533,7 +562,11 @@ switch (_tipusUnitat) do
 		(vestContainer _unitat) addMagazineCargoGlobal ["rhs_mag_m67",3];
 		
 		// Objectes a la motxilla
-		(unitBackpack _unitat) addItemCargoGlobal [_benes,4];
+		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
+		(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
+		(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
+		(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
+		(unitBackpack _unitat) addItemCargoGlobal [_torniquet,1];
 		(unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
 		(unitBackpack _unitat) addMagazineCargoGlobal ["rhsusf_200Rnd_556x45_soft_pouch",1];
 		(unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_mk84",2];
@@ -558,11 +591,16 @@ switch (_tipusUnitat) do
 		// Objectes a l'armilla
 		(vestContainer _unitat) addItemCargoGlobal [_benes,2];
 		(vestContainer _unitat) addItemCargoGlobal [_kestrel,1];
+		(vestContainer _unitat) addItemCargoGlobal [_atragmx,1];
 		(vestContainer _unitat) addMagazineCargoGlobal ["rhs_mag_m67",3];
 		(vestContainer _unitat) addMagazineCargoGlobal ["rhsusf_20Rnd_762x51_m118_special_Mag",6];
 		
 		// Objectes a la motxilla
-		(unitBackpack _unitat) addItemCargoGlobal [_benes,4];
+		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
+		(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
+		(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
+		(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
+		(unitBackpack _unitat) addItemCargoGlobal [_torniquet,1];
 		(unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
 		(unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_mk84",2];
 		(unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_an_m8hc",1];
@@ -594,7 +632,11 @@ switch (_tipusUnitat) do
 		
 		_unitat addBackpack _motxilla;
 		(unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
-		(unitBackpack _unitat) addItemCargoGlobal [_benes,4];
+		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
+		(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
+		(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
+		(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
+		(unitBackpack _unitat) addItemCargoGlobal [_torniquet,1];
 		(unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_mk84",1];
 		(unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_an_m8hc",2];
 		(unitBackpack _unitat) addMagazineCargoGlobal ["rhsusf_100Rnd_762x51",2];
@@ -635,7 +677,11 @@ switch (_tipusUnitat) do
 		(vestContainer _unitat) addMagazineCargoGlobal ["rhs_mag_m67",4];
 		
 		// Objectes a la motxilla
-		(unitBackpack _unitat) addItemCargoGlobal [_benes,4];
+		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
+		(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
+		(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
+		(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
+		(unitBackpack _unitat) addItemCargoGlobal [_torniquet,1];
 		(unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
 		(unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",5];
 		(unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",2];
@@ -710,14 +756,18 @@ switch (_tipusUnitat) do
 		(uniformContainer _unitat) addItemCargoGlobal [_clacker,1];
 		
 		// Objectes a l'armilla
-		(vestContainer _unitat) addItemCargoGlobal [_benes,6];
+		(vestContainer _unitat) addItemCargoGlobal [_benes,2];
 		(vestContainer _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",8];
 		(vestContainer _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",1];
 		(vestContainer _unitat) addMagazineCargoGlobal ["rhs_mag_m67",2];
 		(vestContainer _unitat) addItemCargoGlobal [_visioNocturna,1];
 		
 		// Objectes a la motxilla
-		(unitBackpack _unitat) addMagazineCargoGlobal ["SatchelCharge_Remote_Mag",2];
+		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
+		(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
+		(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
+		(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
+		(unitBackpack _unitat) addItemCargoGlobal [_torniquet,1];
 		
 		// Arma principal
 		_unitat addWeapon _arma;
@@ -734,6 +784,13 @@ switch (_tipusUnitat) do
 		_unitat forceAddUniform _uniformeSN;
 		_unitat addVest _armillaRFL;
 		
+		// Objectes a l'armilla
+		(vestContainer _unitat) addItemCargoGlobal [_benes,2];
+		(vestContainer _unitat) addItemCargoGlobal [_microDAGR,1];
+		(vestContainer _unitat) addItemCargoGlobal [_einesMapa,1];
+		(vestContainer _unitat) addItemCargoGlobal [_kestrel,1];
+		(vestContainer _unitat) addItemCargoGlobal [_atragmx,1];
+		
 		// Arma principal
 		_unitat addWeapon _armaSN;
 		_unitat addPrimaryWeaponItem _armaLaserLlanternaSN;
@@ -748,6 +805,13 @@ switch (_tipusUnitat) do
 		removeUniform _unitat;
 		_unitat forceAddUniform _uniformeSN;
 		_unitat addVest _armillaRFL;
+		
+		// Objectes a l'armilla
+		(vestContainer _unitat) addItemCargoGlobal [_benes,2];
+		(vestContainer _unitat) addItemCargoGlobal [_microDAGR,1];
+		(vestContainer _unitat) addItemCargoGlobal [_einesMapa,1];
+		(vestContainer _unitat) addItemCargoGlobal [_kestrel,1];
+		(vestContainer _unitat) addItemCargoGlobal [_atragmx,1];
 		
 		_unitat addWeapon _arma320;
 		_unitat addPrimaryWeaponItem _armaSurefire;
@@ -785,7 +849,11 @@ switch (_tipusUnitat) do
 		// No es poden posar objectes a l'armilla de bussejador
 		
 		// Objectes a la motxilla
-		(unitBackpack _unitat) addItemCargoGlobal [_benes,4];
+		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
+		(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
+		(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
+		(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
+		(unitBackpack _unitat) addItemCargoGlobal [_torniquet,1];
 		(unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
 		(unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",5];
 		(unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",2];
@@ -821,10 +889,18 @@ switch (_tipusUnitat) do
 		_unitat addMagazineCargoGlobal ["rhs_mag_M433_HEDP",8];
 		_unitat addMagazineCargoGlobal ["rhsusf_20Rnd_762x51_m118_special_Mag",6];
 		_unitat addItemCargoGlobal [_clacker,1];
+		_unitat addItemCargoGlobal [_atropina,10];
 		_unitat addItemCargoGlobal [_morfina,10];
 		_unitat addItemCargoGlobal [_epinefrina,10];
 		_unitat addItemCargoGlobal [_benes,10];
-		_unitat addItemCargoGlobal [_bossaSang,3];
+		_unitat addItemCargoGlobal [_benesElastiques,10];
+		_unitat addItemCargoGlobal [_benesRapides,10];
+		_unitat addItemCargoGlobal [_benesEmpaquetants,10];
+		_unitat addItemCargoGlobal [_bossaSalina500,5];
+		_unitat addItemCargoGlobal [_bossaPlasma500,5];
+		_unitat addItemCargoGlobal [_bossaSang500,5];
+		_unitat addItemCargoGlobal [_kitQuirurgic,3];
+		_unitat addItemCargoGlobal [_kitPrimersAuxilis,3];
 	};
 };
 
