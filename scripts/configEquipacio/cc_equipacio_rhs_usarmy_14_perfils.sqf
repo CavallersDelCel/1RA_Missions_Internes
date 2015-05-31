@@ -33,6 +33,8 @@
 //         0.2 (2015/04/26) Canviat el nom del fitxer i afegit el perfil del Javelin                     //
 //=======================================================================================================//
 
+private["_loadout"];
+
 _tipusUnitat = toLower (_this select 0);
 _unitat = _this select 1;
 

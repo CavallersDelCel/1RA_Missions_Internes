@@ -29,4 +29,6 @@ cc_script_intro = [] execVM "scripts\intro\cc_intro.sqf";
 // Inicialitzar el sistema de radios
 cc_script_radio = [] execVM "scripts\radios\cc_inicialitzar_radios.sqf";
 
+//cc_script_ace3 = [] execVM "scripts\ace3\cc_ace3_config.sqf";
+
 //============================================ FI DEL FITXER ============================================//

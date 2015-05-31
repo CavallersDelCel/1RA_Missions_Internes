@@ -42,8 +42,6 @@
 //         0.3 (2015/05/17) Afegida l'equipació pel vehicle HMMWV                                        //
 //=======================================================================================================//
 
-//waitUntil {!isNull player};
-
 // Declaració de variables
 private ["_faccioUnitat", "_tipusUnitat", "_unitat"];
 

@@ -43,7 +43,7 @@ if (serverCommandAvailable "#kick") then {
 	
 	// DEBUG OUTPUT
 	if ( cc_param_debugOutput == 1 ) then
-	{
+
 		player sideChat format ["DEBUG (briefing.sqf): Utilitzant briefing per administrador.", _faccioUnitat];
 	};
 };
