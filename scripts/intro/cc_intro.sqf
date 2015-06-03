@@ -12,7 +12,7 @@
 if (isDedicated) exitWith {};
 
 // Esperar a que la variable que habilita/deshabilita el text de Debug estigui inicialitzada
-waitUntil {!isNil "cc_var_debugOutput"};
+waitUntil {!isNil "cc_param_debugOutput"};
 	
 // Identificar la facció de la unitat.
 _faccioUnitat = toLower (faction player);
@@ -23,7 +23,7 @@ if (_faccioUnitat != toLower (faction (leader group player))) then {
 };
 	
 // DEBUG OUTPUT
-if ( cc_var_debugOutput == 1 ) then
+if ( cc_param_debugOutput == 1 ) then
 {
 	player sideChat format ["DEBUG (cc_intro.sqf): facció del jugador: %1", _faccioUnitat];
 };

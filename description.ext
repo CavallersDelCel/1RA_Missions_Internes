@@ -23,8 +23,8 @@ class Header
 onLoadName = "*** Nom de la missió. ***";            // Nom de la missió (apareix en gran)
 onLoadMission = "*** Descripció de la missió. ***";    // Descripció breu de la missió
 author = "CC_Magnetar";                                // Autor
-loadScreen = "pics\loadLogo.jpg";                      // Imatge mentre es carrega la missió
-overviewPicture = "pics\overviewLogo.jpg";             // Imatge que es mostra al seleccionar la missió.
+loadScreen = "imatges\loadLogo.jpg";                      // Imatge mentre es carrega la missió
+overviewPicture = "imatges\overviewLogo.jpg";             // Imatge que es mostra al seleccionar la missió.
                                                        // Ha d'estar en format .paa i aspecte 2:1
 overviewText = "*** Text a mostrar. ***";              // Text que es mostra al seleccionar la missó.
 
@@ -57,7 +57,6 @@ class Params
         values[] = {0,1};
         texts[] = {"Desactivat","Activat"};
         default = 1;
-        code = "cc_var_debugOutput = %1";
     };
 	
 	//===================================================================================================//
@@ -70,20 +69,18 @@ class Params
         values[] = {0,1,2};
         texts[] = {"Cap","TFAR","ACRE2"};
         default = 1;
-        code = "cc_var_radios = %1";
     };
 	
 	//===================================================================================================//
 	// Perfils: Utilitzar els perfils a l'hora d'equipar les unitats                                     //
 	// Opció per defecte: Els perfils no s'utilitzen.                                                    //
 	//===================================================================================================//
-	class cc_param_equipacio
+	class cc_param_utilitzarPerfils
 	{
 		title = "Utilitzar perfils";
 		values[] = {0,1};
 		texts[] = {"No","Si"};
 		default = 0;
-		code = "cc_var_utilitzarPerfils = %1";
 	};
 };
 

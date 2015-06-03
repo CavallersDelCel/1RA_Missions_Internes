@@ -20,7 +20,7 @@ if (!isDedicated && (isNull player)) then
 private ["_faccioUnitat"];
 
 // Esperar a que la variable que habilita/deshabilita el text de Debug estigui inicialitzada
-waitUntil {!isNil "cc_var_debugOutput"};
+waitUntil {!isNil "cc_param_debugOutput"};
 
 
 // Identificar la facció de la unitat.
@@ -32,7 +32,7 @@ if (_faccioUnitat != toLower (faction (leader group player))) then {
 };
 
 // DEBUG OUTPUT
-if ( cc_var_debugOutput == 1 ) then
+if ( cc_param_debugOutput == 1 ) then
 {
 	player sideChat format ["DEBUG (briefing.sqf): facció del jugador: %1", _faccioUnitat];
 };
@@ -42,7 +42,7 @@ if (serverCommandAvailable "#kick") then {
 	#include "scripts\briefing\cc_briefing_admin.sqf"
 	
 	// DEBUG OUTPUT
-	if ( cc_var_debugOutput == 1 ) then
+	if ( cc_param_debugOutput == 1 ) then
 	{
 		player sideChat format ["DEBUG (briefing.sqf): Utilitzant briefing per administrador.", _faccioUnitat];
 	};
@@ -53,7 +53,7 @@ if (_faccioUnitat == "blu_f") exitWith {
 	#include "scripts\briefing\cc_briefing_blu_f.sqf"
 	
 	// DEBUG OUTPUT
-	if ( cc_var_debugOutput == 1 ) then
+	if ( cc_param_debugOutput == 1 ) then
 	{
 		player sideChat format ["DEBUG (briefing.sqf): Utilitzant briefing per la facció %1.", _faccioUnitat];
 	};
@@ -64,7 +64,7 @@ if (_faccioUnitat in ["blu_g_f","ind_g_f","opf_g_f"]) exitWith {
 	#include "scripts\briefing\cc_briefing_fia_f.sqf"
 	
 	// DEBUG OUTPUT
-	if ( cc_var_debugOutput == 1 ) then
+	if ( cc_param_debugOutput == 1 ) then
 	{
 		player sideChat format ["DEBUG (briefing.sqf): Utilitzant briefing per la facció %1.", _faccioUnitat];
 	};
@@ -75,7 +75,7 @@ if (_faccioUnitat == "opf_f") exitWith {
 	#include "scripts\briefing\cc_briefing_opf_f.sqf"
 	
 	// DEBUG OUTPUT
-	if ( cc_var_debugOutput == 1 ) then
+	if ( cc_param_debugOutput == 1 ) then
 	{
 		player sideChat format ["DEBUG (briefing.sqf): Utilitzant briefing per la facció %1.", _faccioUnitat];
 	};
@@ -86,7 +86,7 @@ if (_faccioUnitat == "ind_f") exitWith {
 	#include "scripts\briefing\cc_briefing_ind_f.sqf"
 	
 	// DEBUG OUTPUT
-	if ( cc_var_debugOutput == 1 ) then
+	if ( cc_param_debugOutput == 1 ) then
 	{
 		player sideChat format ["DEBUG (briefing.sqf): Utilitzant briefing per la facció %1.", _faccioUnitat];
 	};
@@ -97,7 +97,7 @@ if (_faccioUnitat == "civ_f") exitWith {
 	#include "scripts\briefing\cc_briefing_civ_f.sqf"
 	
 	// DEBUG OUTPUT
-	if ( cc_var_debugOutput == 1 ) then
+	if ( cc_param_debugOutput == 1 ) then
 	{
 		player sideChat format ["DEBUG (briefing.sqf): Utilitzant briefing per la facció %1.", _faccioUnitat];
 	};
@@ -108,7 +108,7 @@ if (_faccioUnitat == "rhs_faction_usarmy_14") exitWith {
 	#include "scripts\briefing\cc_briefing_rhs_usarmy_14.sqf"
 	
 	// DEBUG OUTPUT
-	if ( cc_var_debugOutput == 1 ) then
+	if ( cc_param_debugOutput == 1 ) then
 	{
 		player sideChat format ["DEBUG (briefing.sqf): Utilitzant briefing per la facció %1.", _faccioUnitat];
 	};
@@ -119,7 +119,7 @@ if (_faccioUnitat == "rhs_faction_usmc_14") exitWith {
 	#include "scripts\briefing\cc_briefing_rhs_usmc_14.sqf"
 	
 	// DEBUG OUTPUT
-	if ( cc_var_debugOutput == 1 ) then
+	if ( cc_param_debugOutput == 1 ) then
 	{
 		player sideChat format ["DEBUG (briefing.sqf): Utilitzant briefing per la facció %1.", _faccioUnitat];
 	};
@@ -130,7 +130,7 @@ if (_faccioUnitat == "rhs_faction_vpvo" ) exitWith {
 	#include "scripts\briefing\cc_briefing_rhs_vpvo.sqf"
 	
 	// DEBUG OUTPUT
-	if ( cc_var_debugOutput == 1 ) then
+	if ( cc_param_debugOutput == 1 ) then
 	{
 		player sideChat format ["DEBUG (briefing.sqf): Utilitzant briefing per la facció %1.", _faccioUnitat];
 	};

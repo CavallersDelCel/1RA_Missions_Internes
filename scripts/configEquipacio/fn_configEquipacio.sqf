@@ -42,8 +42,10 @@
 //         0.3 (2015/05/17) Afegida l'equipació pel vehicle HMMWV                                        //
 //=======================================================================================================//
 
-// Esperar a inicialitzar les variables
-waitUntil {!isnil "cc_var_utilitzarPerfils"};
+// Depenent d'on s'executi el script, averiguar si cal executar-lo o no
+if !(local _unitat) exitWith {};
+
+waitUntil {!isNull player};
 
 // Declaració de variables
 private ["_faccioUnitat", "_tipusUnitat", "_unitat"];
@@ -57,8 +59,7 @@ if(count _this > 2) then
   _faccio = toLower (_this select 2);
 };
 
-// Depenent d'on s'executi el script, averiguar si cal executar-lo o no
-if !(local _unitat) exitWith {};
+
 
 // Guarda en una variable pública el tipus d'unitat
 _unitat setVariable ["cc_var_configEquipacio",_tipusUnitat,true];
@@ -67,13 +68,13 @@ _unitat setVariable ["cc_var_configEquipacio",_tipusUnitat,true];
 _unitat setVariable ["cc_var_configEquipacio_Llesta",false,true];
 
 // DEBUG OUTPUT
-if (cc_var_debugOutput == 1) then {
+if (cc_param_debugOutput == 1) then {
 	_unitat sideChat format ["DEBUG (configEquipacio.sqf): facció de la unitat: %1", _faccioUnitat];
 };
 
 // Equipació per la facció BLUFOR
 if (_faccioUnitat == "blu_f") then {
-	if( cc_var_utilitzarPerfils == 1 ) then	{
+	if( cc_param_utilitzarPerfils == 1 ) then	{
 		#include "cc_equipacio_rhs_usarmy_14_perfils.sqf"
 	} else {
 		#include "cc_equipacio_blu_f.sqf"
@@ -102,7 +103,7 @@ if (_faccioUnitat == "civ_f") then {
 
 // Equipació per la facció USA "United States Army"
 if (_faccioUnitat == "rhs_faction_usarmy_14") then {
-	if( cc_var_utilitzarPerfils == 1 ) then	{
+	if( cc_param_utilitzarPerfils == 1 ) then	{
 		#include "cc_equipacio_rhs_usarmy_14_perfils.sqf"
 	} else {
 		#include "cc_equipacio_rhs_usarmy_14.sqf"

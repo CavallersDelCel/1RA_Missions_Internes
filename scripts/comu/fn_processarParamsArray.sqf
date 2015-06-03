@@ -10,14 +10,12 @@
 
 _paramArray = paramsArray;
 {
-	_paramName =(configName ((missionConfigFile >> "Params") select _forEachIndex));
-	_paramValue = (_paramArray select _forEachIndex);
-	_paramCode = ( getText (missionConfigFile >> "Params" >> _paramName >> "code"));
-	_code = format[_paramCode, _paramValue];
-	call compile _code;
-	if (isServer) then {
-		publicVariable _paramName;
-	};
-} foreach _paramArray;
-
+    _nomParametre = (configName ((missionConfigFile >> "Params") select _forEachIndex));
+    _valorParametre = _nomParametre call BIS_fnc_getParamValue;
+    call compile format["%1 = %2", _nomParametre, _valorParametre];
+    if (isServer OR isDedicated){
+      publicVariable _nomParametre;
+    };
+} forEach _paramArray;
+    
 //============================================ FI DEL FITXER ============================================//

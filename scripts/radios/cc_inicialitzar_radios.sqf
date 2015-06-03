@@ -8,12 +8,12 @@
 //=======================================================================================================//
 
 // Espera a que el paràmetre que controla el sistema de radios estigui inicialitzat
-waitUntil{!isNil "cc_var_radios"};
+waitUntil{!isNil "cc_param_radios"};
 
 // Si es selecciona algun sistema de radios s'ha d'inicialitzar.
-if(cc_var_radios != 0) then {
+if(cc_param_radios != 0) then {
 
-  switch (cc_var_radios) do {
+  switch (cc_param_radios) do {
 		// Task Force Arrowhead (TFAR)
 		case 1: {
 			[] execVM "scripts\radios\tfar\cc_inicialitzar_tfar.sqf";
