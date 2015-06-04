@@ -49,7 +49,9 @@ if(alive _unitat) then {
 	// Afegir les ràdios a cada unitat
 	[] call cc_fnc_acre2_afegirRadios;
 	
-	_unitat sideChat format ["DEBUG (fn_acre2_initClient.sqf): Radios configurades."];
+	if ( cc_param_debugOutput == 1 ) then {
+		_unitat sideChat format ["DEBUG (fn_acre2_initClient.sqf): Radios configurades."];
+	};
 } else {
 	// El jugador no està viu i per tant no cal configurar les ràdios.
 	[] call cc_fnc_acre2_configurarXatEspectador;

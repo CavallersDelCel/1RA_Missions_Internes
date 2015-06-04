@@ -213,6 +213,13 @@ if (isClass (configFile >> "CfgPatches" >> "ace_common")) then {
     {
         _x setVariable ["ace_medical_isMedicalFacility", true, true];
     } foreach _edificisMedics;
+	
+	if ( cc_param_debugOutput == 1 ) then {
+		player sideChat format ["DEBUG (cc_ace3_config.sqf): ACE 3 configurat."];
+	};
+	
 } else {
-	player sideChat format ["DEBUG (cc_ace3_config.sqf): ACE3 no es pot configurar ja que no està carregat."];
+	if ( cc_param_debugOutput == 1 ) then {
+		player sideChat format ["DEBUG (cc_ace3_config.sqf): ACE 3 no es pot configurar ja que no està carregat."];
+	};
 };

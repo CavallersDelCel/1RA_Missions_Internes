@@ -93,20 +93,18 @@ class Params
 		values[] = {0,1};
 		texts[] = {"AGM","ACE3"};
 		default = 1;
-		code = "cc_var_modRealisme = %1";
 	};
 	
 	//===================================================================================================//
 	// Sistema mèdic: Nivell de detall del sistema mèdic de ACE3.                                        //
 	// Opció per defecte: Avançat.                                                                        //
 	//===================================================================================================//
-	class cc_param_ace3SistemaMedic
+	class cc_param_SistemaMedic
 	{
 		title = "Sistema mèdic";
 		values[] = {0,1};
 		texts[] = {"ACE3 Bàsic","ACE3 Avançat"};
 		default = 1;
-		code = "cc_var_SistemaMedic = %1";
 	};
 	
 	//===================================================================================================//
@@ -119,7 +117,6 @@ class Params
 	//	values[] = {0,1};
 	//	texts[] = {"Bàsic","Avançat"};
 	//	default = 1;
-	//	code = "cc_var_ace3SistemaBalistica = %1";
 	//};
 };
 
@@ -194,7 +191,7 @@ class CfgFunctions
 			class processarParamsArray
 			{
 				preInit = 1;   // La funció s'executa al iniciar la missió, ABANS d'inicialitzar objectes
-			//	postInit = 1;  // La funció s'executa al iniciar la missió, DESPRÉS d'inicialitzar objectes
+				postInit = 1;  // La funció s'executa al iniciar la missió, DESPRÉS d'inicialitzar objectes
 			};
 		};
 		
@@ -225,10 +222,16 @@ class CfgFunctions
 			class acre2_configurarXatEspectador{};
 		};
 		
-		//class ace3
-		//{
-		//	file = "scripts\ace3";
-		//};
+		class zeus
+		{
+			file = "scripts\zeus";
+			class zeus_eventHandlers
+			{
+				PostInit = 1;  // La funció s'executa al iniciar la missió, DESPRÉS d'inicialitzar objectes
+			};
+			class zeus_afegirGrups{};
+			class zeus_afegirObjectes{};
+		}
 	};
 };
 

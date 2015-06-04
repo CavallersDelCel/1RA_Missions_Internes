@@ -8,7 +8,7 @@
 //             jugador formi part de la facció NATO BLUFOR "blu_f". Cal afegir la següent línia al  INIT //
 //             de la unitat en l'editor:                                                                 //
 //                                                                                                       //
-//                  ["ROL_JUGADOR",this] spawn cc_fnc_configEquipacio;                                    //
+//                  ["ROL_JUGADOR",this] spawn cc_fnc_configEquipacio;                                   //
 //                                                                                                       //
 //             on "ROL_JUGADOR" és una de les següents entrades:                                         //
 //                                                                                                       //
@@ -128,7 +128,7 @@ _prismatic = "lerca_1200_tan";
 // Visió nocturna
 _visioNocturna = "rhsusf_ANPVS_14";
 
-if (cc_var_modRealisme == 1) then {
+if (cc_param_modRealisme == 1) then {
 	//===================================================================================================//
 	// Objectes depenents de ACE 3                                                                       //
 	//===================================================================================================//
@@ -244,7 +244,7 @@ switch (_tipusUnitat) do
 		// Objectes a l'armilla
 		(vestContainer _unitat) addItemCargoGlobal [_benes,2];
 		(vestContainer _unitat) addItemCargoGlobal [_einesMapa,1];
-		if (cc_var_modRealisme == 1) then {
+		if (cc_param_modRealisme == 1) then {
 			(vestContainer _unitat) addItemCargoGlobal [_microDAGR,1];
 		};
 		(vestContainer _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",8];
@@ -341,7 +341,7 @@ switch (_tipusUnitat) do
 		// Objectes a la motxilla
 		(unitBackpack _unitat) addItemCargoGlobal [_morfina,8];
 		(unitBackpack _unitat) addItemCargoGlobal [_epinefrina,8];	
-		if (cc_var_modRealisme == 1) then {
+		if (cc_param_modRealisme == 1) then {
 			(unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
 			(unitBackpack _unitat) addItemCargoGlobal [_benes,10];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,10];
@@ -380,7 +380,7 @@ switch (_tipusUnitat) do
 		// Objectes a l'armilla
 		(vestContainer _unitat) addItemCargoGlobal [_benes,2];
 		(vestContainer _unitat) addItemCargoGlobal [_einesMapa,1];
-		if (cc_var_modRealisme == 1) then {
+		if (cc_param_modRealisme == 1) then {
 			(vestContainer _unitat) addItemCargoGlobal [_microDAGR,1];
 		};
 		(vestContainer _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",8];
@@ -391,7 +391,7 @@ switch (_tipusUnitat) do
 		
 		// Objectes a la motxilla
 		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
-		if (cc_var_modRealisme == 1) then {
+		if (cc_param_modRealisme == 1) then {
 			(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
@@ -438,7 +438,7 @@ switch (_tipusUnitat) do
 		
 		// Objectes a la motxilla
 		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
-		if (cc_var_modRealisme == 1) then {
+		if (cc_param_modRealisme == 1) then {
 			(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
@@ -479,7 +479,7 @@ switch (_tipusUnitat) do
 		
 		// Objectes a la motxilla
 		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
-		if (cc_var_modRealisme == 1) then {
+		if (cc_param_modRealisme == 1) then {
 			(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
@@ -517,7 +517,7 @@ switch (_tipusUnitat) do
 		
 		// Objectes a la motxilla
 		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
-		if (cc_var_modRealisme == 1) then {
+		if (cc_param_modRealisme == 1) then {
 			(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
@@ -561,7 +561,7 @@ switch (_tipusUnitat) do
 		
 		// Objectes a la motxilla
 		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
-		if (cc_var_modRealisme == 1) then {
+		if (cc_param_modRealisme == 1) then {
 			(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
@@ -599,7 +599,7 @@ switch (_tipusUnitat) do
 		
 		// Objectes a la motxilla
 		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
-		if (cc_var_modRealisme == 1) then {
+		if (cc_param_modRealisme == 1) then {
 			(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
@@ -629,7 +629,7 @@ switch (_tipusUnitat) do
 		// Objectes a l'armilla
 		(vestContainer _unitat) addItemCargoGlobal [_benes,2];
 		(vestContainer _unitat) addItemCargoGlobal [_kestrel,1];
-		if (cc_var_modRealisme == 1) then {
+		if (cc_param_modRealisme == 1) then {
 			(vestContainer _unitat) addItemCargoGlobal [_atragmx,1];
 		};
 		(vestContainer _unitat) addMagazineCargoGlobal ["rhs_mag_m67",3];
@@ -637,7 +637,7 @@ switch (_tipusUnitat) do
 		
 		// Objectes a la motxilla
 		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
-		if (cc_var_modRealisme == 1) then {
+		if (cc_param_modRealisme == 1) then {
 			(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
@@ -675,7 +675,7 @@ switch (_tipusUnitat) do
 		_unitat addBackpack _motxilla;
 		(unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
 		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
-		if (cc_var_modRealisme == 1) then {
+		if (cc_param_modRealisme == 1) then {
 			(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
@@ -722,7 +722,7 @@ switch (_tipusUnitat) do
 		
 		// Objectes a la motxilla
 		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
-		if (cc_var_modRealisme == 1) then {
+		if (cc_param_modRealisme == 1) then {
 			(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
@@ -810,7 +810,7 @@ switch (_tipusUnitat) do
 		
 		// Objectes a la motxilla
 		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
-		if (cc_var_modRealisme == 1) then {
+		if (cc_param_modRealisme == 1) then {
 			(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
@@ -834,7 +834,7 @@ switch (_tipusUnitat) do
 		
 		// Objectes a l'armilla
 		(vestContainer _unitat) addItemCargoGlobal [_benes,2];
-		if (cc_var_modRealisme == 1) then {
+		if (cc_param_modRealisme == 1) then {
 			(vestContainer _unitat) addItemCargoGlobal [_microDAGR,1];
 			(vestContainer _unitat) addItemCargoGlobal [_atragmx,1];
 		};
@@ -859,7 +859,7 @@ switch (_tipusUnitat) do
 		
 		// Objectes a l'armilla
 		(vestContainer _unitat) addItemCargoGlobal [_benes,2];
-		if (cc_var_modRealisme == 1) then {
+		if (cc_param_modRealisme == 1) then {
 			(vestContainer _unitat) addItemCargoGlobal [_microDAGR,1];
 			(vestContainer _unitat) addItemCargoGlobal [_atragmx,1];
 		};
@@ -903,7 +903,7 @@ switch (_tipusUnitat) do
 		
 		// Objectes a la motxilla
 		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
-		if (cc_var_modRealisme == 1) then {
+		if (cc_param_modRealisme == 1) then {
 			(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
