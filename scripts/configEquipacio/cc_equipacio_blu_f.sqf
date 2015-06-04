@@ -90,7 +90,7 @@ _arma = "rhs_weap_m4a1";
 _arma320 = "rhs_weap_m4a1_m320";
 _armaAR = "rhs_weap_m249_pip";
 _armaMG = "rhs_weap_m240B";
-_armaDM = "rhs_weap_m14ebrri";
+_armaDM = "rhs_weap_sr25_ec";
 _armaSN = "rhs_weap_XM2010_sa";
 _armaDIV = "arifle_SDAR_F";
 
@@ -1172,7 +1172,6 @@ switch (_tipusUnitat) do
 		} forEach _llista;
 		
 		// Afegeix a les motxilles equipament especial a cada unitat
-		
 		_llistamotxilles = everybackpack _unitat;
 		// Fuseller (RFL)
 		_temp = _llistamotxilles select 0;
@@ -1249,7 +1248,9 @@ switch (_tipusUnitat) do
 		// Metge (ME)
 		_temp = _llista select 2;
 		(_temp select 1) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",1];
-				
+		
+		// Resta d'equip
+		_unitat addItemCargoGlobal [_casc,3];
 		_unitat addItemCargoGlobal [_armillaRFL,1];
 		_unitat addItemCargoGlobal [_armillaGR,1];
 		_unitat addItemCargoGlobal [_armillaME,1];
