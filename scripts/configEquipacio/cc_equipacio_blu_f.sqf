@@ -5,7 +5,7 @@
 // Creació del Document: 02/04/2015                                                                      //
 // Descripció: Aquest document serveix per equipar els jugadors amb l'equipació dissenyada per la missió //
 //             sense fer servir els perfils estàndard del grup dels Cavallers del Cel. Requereix que el  //
-//             jugador formi part de la facció NATO BLUFOR "blu_f". Cal afegir la següent línia al  INIT //
+//             jugador formi part de la facció NATO BLUFOR "blu_f". Cal afegir la següent línia al INIT  //
 //             de la unitat en l'editor:                                                                 //
 //                                                                                                       //
 //                  ["ROL_JUGADOR",this] spawn cc_fnc_configEquipacio;                                   //
@@ -51,6 +51,11 @@ _esInfanteria = _unitat isKindOf "CAManBase";
 //=======================================================================================================//
 // Resum d'equipació: Armes, accessoris, ulleres, armilles, ...                                          //
 //=======================================================================================================//
+
+private["_bateriaUAV", "_cintaDentencio", "_einesMapa", "_microDAGR", "_taps", "_vectorIV", "_atragmx", "_kestrel", "_claker", "_clakerm26", "_kitDesactivacio", "_telefon"];
+private["_atropina", "_epinefrina", "_morfina", "_benes", "_benesElastiques", "_benesRapides", "_benesEmpaquetants"];
+private["_bossaSang250", "_bossaSang500", "_bossaSang1000", "_bossaPlasma250", "_bossaPlasma500", "_bossPlasma1000", "_bossaSalina250", "_bossaSalina500", "_bossaSalina1000"];
+private["_kitPrimersAuxilis", "_kitQuirurgic", "_torniquet"];
 
 // Uniformes
 _uniforme = "rhs_uniform_cu_ocp";
@@ -188,7 +193,7 @@ if (cc_param_modRealisme == 1) then {
 	_morfina = "AGM_Morphine";
 	_epinefrina = "AGM_Epipen";
 	_benes = "AGM_Bandage";
-	_bossaSang = "AGM_Bloodbag";
+	_bossaSang500 = "AGM_Bloodbag";
 	_cintaDentencio = "AGM_CableTie";
 	_vectorIV = "AGM_Vector";
 	_einesMapa = "AGM_MapToos";
@@ -341,8 +346,8 @@ switch (_tipusUnitat) do
 		// Objectes a la motxilla
 		(unitBackpack _unitat) addItemCargoGlobal [_morfina,8];
 		(unitBackpack _unitat) addItemCargoGlobal [_epinefrina,8];	
-		if (cc_param_modRealisme == 1) then {
-			(unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
+		(unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
+		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
 			(unitBackpack _unitat) addItemCargoGlobal [_benes,10];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,10];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,10];
@@ -354,7 +359,7 @@ switch (_tipusUnitat) do
 			(unitBackpack _unitat) addItemCargoGlobal [_bossaSalina500,6];
 		} else {
 			(unitBackpack _unitat) addItemCargoGlobal [_benes,20];
-			(unitBackpack _unitat) addItemCargoGlobal [_bossaSang,2];
+			(unitBackpack _unitat) addItemCargoGlobal [_bossaSang500,2];
 		};
 		(unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",2];
 		
@@ -391,7 +396,7 @@ switch (_tipusUnitat) do
 		
 		// Objectes a la motxilla
 		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
-		if (cc_param_modRealisme == 1) then {
+		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
 			(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
@@ -438,7 +443,7 @@ switch (_tipusUnitat) do
 		
 		// Objectes a la motxilla
 		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
-		if (cc_param_modRealisme == 1) then {
+		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
 			(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
@@ -479,7 +484,7 @@ switch (_tipusUnitat) do
 		
 		// Objectes a la motxilla
 		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
-		if (cc_param_modRealisme == 1) then {
+		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
 			(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
@@ -517,7 +522,7 @@ switch (_tipusUnitat) do
 		
 		// Objectes a la motxilla
 		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
-		if (cc_param_modRealisme == 1) then {
+		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
 			(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
@@ -561,7 +566,7 @@ switch (_tipusUnitat) do
 		
 		// Objectes a la motxilla
 		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
-		if (cc_param_modRealisme == 1) then {
+		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
 			(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
@@ -599,7 +604,7 @@ switch (_tipusUnitat) do
 		
 		// Objectes a la motxilla
 		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
-		if (cc_param_modRealisme == 1) then {
+		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
 			(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
@@ -637,7 +642,7 @@ switch (_tipusUnitat) do
 		
 		// Objectes a la motxilla
 		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
-		if (cc_param_modRealisme == 1) then {
+		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
 			(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
@@ -675,7 +680,7 @@ switch (_tipusUnitat) do
 		_unitat addBackpack _motxilla;
 		(unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
 		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
-		if (cc_param_modRealisme == 1) then {
+		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
 			(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
@@ -722,7 +727,7 @@ switch (_tipusUnitat) do
 		
 		// Objectes a la motxilla
 		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
-		if (cc_param_modRealisme == 1) then {
+		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
 			(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
@@ -810,7 +815,7 @@ switch (_tipusUnitat) do
 		
 		// Objectes a la motxilla
 		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
-		if (cc_param_modRealisme == 1) then {
+		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
 			(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
@@ -903,7 +908,7 @@ switch (_tipusUnitat) do
 		
 		// Objectes a la motxilla
 		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
-		if (cc_param_modRealisme == 1) then {
+		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
 			(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
@@ -944,18 +949,22 @@ switch (_tipusUnitat) do
 		_unitat addMagazineCargoGlobal ["rhs_mag_M433_HEDP",8];
 		_unitat addMagazineCargoGlobal ["rhsusf_20Rnd_762x51_m118_special_Mag",6];
 		_unitat addItemCargoGlobal [_clacker,1];
-		_unitat addItemCargoGlobal [_atropina,10];
 		_unitat addItemCargoGlobal [_morfina,10];
 		_unitat addItemCargoGlobal [_epinefrina,10];
 		_unitat addItemCargoGlobal [_benes,10];
-		_unitat addItemCargoGlobal [_benesElastiques,10];
-		_unitat addItemCargoGlobal [_benesRapides,10];
-		_unitat addItemCargoGlobal [_benesEmpaquetants,10];
-		_unitat addItemCargoGlobal [_bossaSalina500,5];
-		_unitat addItemCargoGlobal [_bossaPlasma500,5];
 		_unitat addItemCargoGlobal [_bossaSang500,5];
-		_unitat addItemCargoGlobal [_kitQuirurgic,3];
-		_unitat addItemCargoGlobal [_kitPrimersAuxilis,3];
+		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
+			_unitat addItemCargoGlobal [_atropina,10];
+			_unitat addItemCargoGlobal [_benesElastiques,10];
+			_unitat addItemCargoGlobal [_benesRapides,10];
+			_unitat addItemCargoGlobal [_benesEmpaquetants,10];
+			_unitat addItemCargoGlobal [_bossaSalina500,5];
+		
+			_unitat addItemCargoGlobal [_bossaPlasma500,5];
+			
+			_unitat addItemCargoGlobal [_kitQuirurgic,3];
+			_unitat addItemCargoGlobal [_kitPrimersAuxilis,3];
+		};
 	};
 };
 

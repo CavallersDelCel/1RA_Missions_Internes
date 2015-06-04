@@ -134,7 +134,7 @@ _prismatic = "lerca_1200_tan";
 // Visió nocturna
 _visioNocturna = "rhsusf_ANPVS_14";
 
-if (cc_param_modRealisme == 1) then{
+if (cc_param_modRealisme == 1) then {
 	//===================================================================================================//
 	// Objectes depenents de ACE 3                                                                       //
 	//===================================================================================================//
@@ -250,7 +250,7 @@ switch (_tipusUnitat) do
 		// Objectes a l'armilla
 		(vestContainer _unitat) addItemCargoGlobal [_benes,2];
 		(vestContainer _unitat) addItemCargoGlobal [_einesMapa,1];
-		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
+		if (cc_param_modRealisme == 1) then {
 			(vestContainer _unitat) addItemCargoGlobal [_microDAGR,1];
 		};
 		(vestContainer _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",8];
