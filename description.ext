@@ -245,7 +245,6 @@ class CfgDebriefing
 		picture = "KIA";
 		pictureColor[] = {0.0,0.3,0.6,1};
 	};
-	
 };
 
 // Funcions per les missions dels Cavallers del Cel
