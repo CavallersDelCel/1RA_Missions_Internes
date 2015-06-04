@@ -1,12 +1,12 @@
 //=======================================================================================================//
-// Arxiu: cc_intro_rhs_faction_usarmy_14.sqf                                                             //
+// Arxiu: cc_intro_rhs_faction_insurgents.sqf                                                            //
 // Autor: CC_Magnetar                                                                                    //
 // Versió: 0.1                                                                                           //
-// Creació del Document: 03/04/2015                                                                      //
+// Creació del Document: 04/06/2015                                                                      //
 // Descripció: Aquest document serveix crear una pantalla d'introducció i mostrar el nom de la missió    //
 //             així com la data i la localització per la facció RHS: United States Army                  //
-//             "rhs_faction_usarmy_14":                                                                  //
-//             http://class.rhsmods.org/rhsusaf/CfgGroups_West_rhs_faction_usarmy_wd.html                //                                     //                                                      //
+//             "rhs_faction_insurgents":                                                                 //
+//             http://class.rhsmods.org/rhsafrf/CfgGroups_Indep_rhs_faction_insurgents.html              //                                     //                                                      //
 //=======================================================================================================//
 
 // Mostrar una pantalla negra

@@ -1,49 +1,47 @@
 //=======================================================================================================//
-// Arxiu: cc_equipacio_blu_f.sqf                                                                         //
+// Arxiu: cc_equipacio_rhs_insurgents.sqf                                                                //
 // Autor: CC_Magnetar                                                                                    //
-// VersiÛ: 0.1                                                                                           //
-// CreaciÛ del Document: 02/04/2015                                                                      //
-// DescripciÛ: Aquest document serveix per equipar els jugadors amb l'equipaciÛ dissenyada per la missiÛ //
-//             sense fer servir els perfils est‡ndard del grup dels Cavallers del Cel. Requereix que el  //
-//             jugador formi part de la facciÛ NATO BLUFOR "blu_f". Cal afegir la seg¸ent lÌnia al INIT  //
-//             de la unitat en l'editor:                                                                 //
+// Versi√≥: 0.1                                                                                           //
+// Creaci√≥ del Document: 04/06/2015                                                                      //
+// Descripci√≥: Aquest document serveix per equipar els jugadors amb l'equipaci√≥ dissenyada per la missi√≥ //
+//             sense fer servir els perfils est√†ndard del grup dels Cavallers del Cel. Requereix que el  //
+//             jugador formi part de la facci√≥ RHS: Insurgents "rhs_faction_insurgents"                  //
+//             http://class.rhsmods.org/rhsafrf/CfgGroups_Indep_rhs_faction_insurgents.html              //
+//             Cal afegirla seg√ºent l√≠nia al INIT de la unitat en l'editor:                              //
 //                                                                                                       //
 //                  0 = ["ROL_JUGADOR",this] spawn cc_fnc_configEquipacio;                               //
 //                                                                                                       //
-//             on "ROL_JUGADOR" Ès una de les seg¸ents entrades:                                         //
+//             on "ROL_JUGADOR" √©s una de les seg√ºents entrades:                                         //
 //                                                                                                       //
 //                  ROL_JUGADOR         Rol assignat                                                     //
-//                  pl                  Cap de secciÛ (Platoon Leader)                                   //
+//                  pl                  Cap de secci√≥ (Platoon Leader)                                   //
 //                  psg                 Sergent (Platoon Sergeant)                                       //
 //                  rto                 Operador de Radio (Platoon Radiotelephone Operator)              //
-//                  fo                  Observador avanÁat (Forward Observer)                            //
+//                  fo                  Observador avan√ßat (Forward Observer)                            //
 //                  me                  Metge (Platoon Medic)                                            //
-//                  sl                  LÌder d'esquadra (Squad Leader)                                  //
-//                  tl                  LÌder d'equip (Team Leader)                                      //
+//                  sl                  L√≠der d'esquadra (Squad Leader)                                  //
+//                  tl                  L√≠der d'equip (Team Leader)                                      //
 //                  rfl                 Fuseller (Rifleman)                                              //
 //                  rflat               Fusellser amb AT4 (Rifleman with AT4)                            //
 //                  gr                  Granader (Grenadier)                                             //
-//                  ar                  Fuseller autom‡tic (Autom‡tic Rifleman)                          //
+//                  ar                  Fuseller autom√†tic (Autom√†tic Rifleman)                          //
 //                  dm                  Tirador designat (Designated Marksman)                           //
 //                  mg                  Metrallador (Machine Gunner)                                     //
 //                  amg                 Assitent de metrallador (Assitant Machine Gunner)                //
 //                  at                  Antitanc (Antitank)                                              //
 //                  aat                 Assistent d'antitanc (AT Ammo handler)                           //
-//                  aa                  Anti aËri (Anti Air gunner)                                      //
-//                  aaa                 Assistent d'anti aËri (Anti Air Assitant)                        //
+//                  aa                  Anti a√®ri (Anti Air gunner)                                      //
+//                  aaa                 Assistent d'anti a√®ri (Anti Air Assitant)                        //
 //                  en                  Enginyer (Engineer)                                              //
 //                  sn                  Franctirador (Sniper)                                            //
 //                  sp                  Observador (Spotter)                                             //
-//                  divsl               Bussejador lÌder d'esquadra (Diver Squad Leader)                 //
+//                  divsl               Bussejador l√≠der d'esquadra (Diver Squad Leader)                 //
 //                  divme               Bussejador metge (Diver Medic)                                   //
-//                  div                 Bussejador                                                       //
+//                  div                 Bussejador (Diver)                                               //
 //                                                                                                       //
-//                  hmmwv               EquipaciÛ per HMMWVs                                             //
+//                  hmmwv               Equipaci√≥ per HMMWVs                                             //
 //                                                                                                       //
-// Canvis: 0.1 (2015/04/02) VersiÛ inicial.                                                              //
-//         0.2 (2015/04/26) Canviat el nom del fitxer i dels uniformes (RHS v0.3.7).                     //
-//         0.3 (2015/05/17) Afegida l'equipaciÛ pel vehicle HMMWV.                                       //
-//         0.4 (2015/05/26) Canviat al sistema ACE3.                                                     //                     
+// Canvis: 0.1 (2015/06/04) Versi√≥ inicial.                                                              //                    
 //=======================================================================================================//
 
 _tipusUnitat = toLower (_this select 0);
@@ -51,7 +49,7 @@ _unitat = _this select 1;
 _esInfanteria = _unitat isKindOf "CAManBase"; 
 
 //=======================================================================================================//
-// Resum d'equipaciÛ: Armes, accessoris, ulleres, armilles, ...                                          //
+// Resum d'equipaci√≥: Armes, accessoris, ulleres, armilles, ...                                          //
 //=======================================================================================================//
 
 private["_bateriaUAV", "_cintaDentencio", "_einesMapa", "_microDAGR", "_taps", "_vectorIV", "_atragmx", "_kestrel", "_clacker", "_clackerm26", "_kitDesactivacio", "_telefon"];
@@ -109,11 +107,11 @@ _armaMiraAR = "rhsusf_acc_ELCAN";
 _armaMiraDM = "rhsusf_acc_LEUPOLDMK4";
 _armaMiraSN = "rhsusf_acc_LEUPOLDMK4_2";
 
-// BÌpodes
+// B√≠podes
 _armabipodeDM = "rhsusf_acc_harris_bipod";
 _armabipodeSN = "rhsusf_acc_harris_bipod";
 
-// LlenÁadores AT/AA
+// Llen√ßadores AT/AA
 _armaLlencadorRF = "rhs_weap_M136_hedp";
 _armaLlencadorAT = "rhs_weap_fgm148";
 _armaLlencadorAA = "rhs_weap_fim92";
@@ -129,10 +127,10 @@ _brujola = "ItemCompass";
 _radio = "ItemRadio";
 _terminalUAV = "B_UavTerminal";
 
-// Prism‡tics
+// Prism√†tics
 _prismatic = "lerca_1200_tan";
 
-// VisiÛ nocturna
+// Visi√≥ nocturna
 _visioNocturna = "rhsusf_ANPVS_14";
 
 if (cc_param_modRealisme == 1) then {
@@ -158,18 +156,18 @@ if (cc_param_modRealisme == 1) then {
 	_kitDesactivacio = "ACE_DefusalKit";
 	_telefon = "ACE_Cellphone";
 
-	// Objectes mËdics: Droques
+	// Objectes m√®dics: Droques
 	_atropina = "ACE_atropine";
 	_epinefrina = "ACE_epinephrine";
 	_morfina = "ACE_morphine";
 
-	// Objectes mËdics: Benes
+	// Objectes m√®dics: Benes
 	_benes = "ACE_fieldDressing";
 	_benesElastiques = "ACE_elasticBandage";
 	_benesRapides = "ACE_quikclot";
 	_benesEmpaquetants = "ACE_packingBandage";
 
-	// Objectes mËdics: bosses
+	// Objectes m√®dics: bosses
 	_bossaSang250 = "ACE_bloodIV_250";
 	_bossaSang500 = "ACE_bloodIV_250";
 	_bossaSang1000 = "ACE_bloodIV_250";
@@ -180,11 +178,11 @@ if (cc_param_modRealisme == 1) then {
 	_bossaSalina500 = "ACE_salineIV_500";
 	_bossaSalina1000 = "ACE_salineIV_1000";
 
-	// Objectes mËdics: Kits
+	// Objectes m√®dics: Kits
 	_kitPrimersAuxilis = "ACE_personalAidKit";
 	_kitQuirurgic = "ACE_surgicalKit";
 
-	// Objectes mËdics: Torniquets
+	// Objectes m√®dics: Torniquets
 	_torniquet = "ACE_tourniquet";
 } else {
 
@@ -205,7 +203,7 @@ if (cc_param_modRealisme == 1) then {
 };
 
 
-// Treure tota l'equipaciÛ que porta la unitat en el cas que sigui infanteria
+// Treure tota l'equipaci√≥ que porta la unitat en el cas que sigui infanteria
 if (_esInfanteria) then {
 	removeAllWeapons _unitat;
 	removeAllAssignedItems _unitat;
@@ -223,7 +221,7 @@ if (_esInfanteria) then {
 	(uniformContainer _unitat) addItemCargoGlobal [_epinefrina,1];
 	(uniformContainer _unitat) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",2];
 	
-	// Arma secund‡ria
+	// Arma secund√†ria
 	_unitat addWeapon _pistola;
 	
 	// Afegir objectes comuns
@@ -237,7 +235,7 @@ if (_esInfanteria) then {
 // Configurar l'equip per cada unitat
 switch (_tipusUnitat) do
 {
-	// Cap de secciÛ (Platoon Leader)
+	// Cap de secci√≥ (Platoon Leader)
 	case "pl":
 	{
 		// Armilla i motxilla
@@ -309,7 +307,7 @@ switch (_tipusUnitat) do
 		_unitat addPrimaryWeaponItem _armaMira;
 	};
 	
-	// Observador avanÁat (Forward Observer)
+	// Observador avan√ßat (Forward Observer)
 	case "fo":
 	{
 		// Armilla i motxilla
@@ -373,7 +371,7 @@ switch (_tipusUnitat) do
 		_unitat addPrimaryWeaponItem _armaMira;
 	};
 
-	// LÌder d'Esquadra (Squad Leader)
+	// L√≠der d'Esquadra (Squad Leader)
 	case "sl":
 	{
 		// Armilla i motxilla
@@ -423,7 +421,7 @@ switch (_tipusUnitat) do
 		_unitat addWeapon _vectorIV;
 	};
 	
-	// LÌder d'Equip (Team leader)
+	// L√≠der d'Equip (Team leader)
 	case "tl":
 	{
 		// Armilla i motxilla
@@ -543,7 +541,7 @@ switch (_tipusUnitat) do
 		_unitat addPrimaryWeaponItem _armaLaserLlanterna;
 		_unitat addPrimaryWeaponItem _armaMira;	
 		
-		// LlenÁador AT4
+		// Llen√ßador AT4
 		_unitat addWeapon _armaLlencadorRF;	
 	};
 	
@@ -589,7 +587,7 @@ switch (_tipusUnitat) do
 		_unitat addPrimaryWeaponItem _armaMira;
 	};
 	
-	// Fuseller autom‡tic (Automatic Rifleman)
+	// Fuseller autom√†tic (Automatic Rifleman)
 	case "ar":
 	{
 		// Armilla i motxilla
@@ -682,7 +680,7 @@ switch (_tipusUnitat) do
 		_unitat addBackpack _motxilla;
 		(unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
 		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
-		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
+		if (cc_param_modRealisme == 1) then {
 			(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
@@ -729,7 +727,7 @@ switch (_tipusUnitat) do
 		
 		// Objectes a la motxilla
 		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
-		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
+		if (cc_param_modRealisme == 1) then {
 			(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
@@ -766,7 +764,7 @@ switch (_tipusUnitat) do
 		_unitat addPrimaryWeaponItem _armaMira;
 	};
 	
-	// Anti aËri (Anti Air gunner)
+	// Anti a√®ri (Anti Air gunner)
 	case "aa":
 	{
 		// Armilla i motxilla
@@ -783,7 +781,7 @@ switch (_tipusUnitat) do
 		_unitat addWeapon _armaLlencadorAA;
 	};
 	
-	// Assistent d'anti aËri (Anti Air Assitant)
+	// Assistent d'anti a√®ri (Anti Air Assitant)
 	case "aaa":
 	{
 		// Armilla i motxilla
@@ -817,7 +815,7 @@ switch (_tipusUnitat) do
 		
 		// Objectes a la motxilla
 		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
-		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
+		if (cc_param_modRealisme == 1) then {
 			(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
@@ -884,7 +882,7 @@ switch (_tipusUnitat) do
 		_unitat linkItem _gps;
 	};
 	
-	// Bussejador: LÌder d'esquadra (divsl)
+	// Bussejador: L√≠der d'esquadra (divsl)
 	case "divsl":
 	{
 		// Treure l'uniforme, casc i armilla

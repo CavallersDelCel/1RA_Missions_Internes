@@ -7,7 +7,7 @@
 //             de configurar l'equip de la unitat la següent línia s'ha d'afegir al INIT de la unitat en //
 //             l'editor:                                                                                 //
 //                                                                                                       //
-//                  ["ROL_JUGADOR",this] spawn cc_fnc_configEquipacio;                                   //
+//                  0 = ["ROL_JUGADOR",this] spawn cc_fnc_configEquipacio;                               //
 //                                                                                                       //
 //             on "ROL_JUGADOR" és una de les següents entrades:                                         //
 //                                                                                                       //
@@ -109,6 +109,15 @@ if (_faccioUnitat == "rhs_faction_usarmy_14") then {
 // Equipació per la facció USA "United States Marine Corps"
 if (_faccioUnitat == "rhs_faction_usmc_14") then {
 	#include "cc_equipacio_rhs_usmc_14.sqf"
+};
+
+// Equipació per la facció USA "United States Army"
+if (_faccioUnitat == "rhs_faction_insurgents") then {
+	if( cc_param_utilitzarPerfils == 1 ) then {
+		#include "cc_equipacio_rhs_usarmy_14_perfils.sqf"
+	} else {
+		#include "cc_equipacio_rhs_insurgents.sqf"
+	};
 };
 
 // Equipació per la facció russa "Russian Air Defense Troops"

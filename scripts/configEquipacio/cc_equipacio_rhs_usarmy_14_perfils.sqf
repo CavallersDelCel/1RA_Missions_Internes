@@ -11,7 +11,7 @@
 //                                                                                                       //
 //             Cal afegir la següent línia al INIT de la unitat en l'editor:                             //
 //                                                                                                       //
-//                  ["ROL_JUGADOR",this] spawn cc_fnc_configEquipacio;                                   //
+//                  0 = ["ROL_JUGADOR",this] spawn cc_fnc_configEquipacio;                               //
 //                                                                                                       //
 //             on "ROL_JUGADOR" és una de les següents entrades:                                         //
 //                                                                                                       //

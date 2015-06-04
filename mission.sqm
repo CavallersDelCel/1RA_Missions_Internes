@@ -9,7 +9,8 @@ class Mission
 		"A3_Characters_F_BLUFOR",
 		"rhsusf_c_troops",
 		"A3_Weapons_F_Ammoboxes",
-		"A3_Modules_F_Curator_Curator"
+		"A3_Modules_F_Curator_Curator",
+		"rhs_cti_insurgents"
 	};
 	addOnsAuto[]=
 	{
@@ -17,6 +18,7 @@ class Mission
 		"a3_characters_f",
 		"rhsusf_c_troops",
 		"A3_Modules_F_Curator_Curator",
+		"rhs_cti_insurgents",
 		"A3_Weapons_F_Ammoboxes",
 		"a3_map_stratis"
 	};
@@ -53,7 +55,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=3;
+		items=4;
 		class Item0
 		{
 			side="EAST";
@@ -87,7 +89,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="LEsq";
-					init="[""sl"",this] spawn cc_fnc_configEquipacio;";
+					init="0 = [""sl"",this] spawn cc_fnc_configEquipacio;";
 					description="Lider d'Esquadra";
 				};
 			};
@@ -138,6 +140,25 @@ class Mission
 				};
 			};
 		};
+		class Item3
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2773.8315,69.184654,4469.3193};
+					id=3;
+					side="GUER";
+					vehicle="rhs_g_Soldier_GL_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					init="0 = [""sl"",this] spawn cc_fnc_configEquipacio;";
+				};
+			};
+		};
 	};
 	class Vehicles
 	{
@@ -145,7 +166,7 @@ class Mission
 		class Item0
 		{
 			position[]={1621.6919,5.5,5181.668};
-			id=3;
+			id=4;
 			side="EMPTY";
 			vehicle="Box_NATO_Wps_F";
 			skill=0.60000002;
