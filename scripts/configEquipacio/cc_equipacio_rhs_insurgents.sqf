@@ -1,49 +1,47 @@
 //=======================================================================================================//
-// Arxiu: cc_equipacio_blu_f.sqf                                                                         //
+// Arxiu: cc_equipacio_rhs_insurgents.sqf                                                                //
 // Autor: CC_Magnetar                                                                                    //
-// VersiÛ: 0.1                                                                                           //
-// CreaciÛ del Document: 02/04/2015                                                                      //
-// DescripciÛ: Aquest document serveix per equipar els jugadors amb l'equipaciÛ dissenyada per la missiÛ //
-//             sense fer servir els perfils est‡ndard del grup dels Cavallers del Cel. Requereix que el  //
-//             jugador formi part de la facciÛ NATO BLUFOR "blu_f". Cal afegir la seg¸ent lÌnia al INIT  //
-//             de la unitat en l'editor:                                                                 //
+// Versi√≥: 0.1                                                                                           //
+// Creaci√≥ del Document: 04/06/2015                                                                      //
+// Descripci√≥: Aquest document serveix per equipar els jugadors amb l'equipaci√≥ dissenyada per la missi√≥ //
+//             sense fer servir els perfils est√†ndard del grup dels Cavallers del Cel. Requereix que el  //
+//             jugador formi part de la facci√≥ RHS: Insurgents "rhs_faction_insurgents"                  //
+//             http://class.rhsmods.org/rhsafrf/CfgGroups_Indep_rhs_faction_insurgents.html              //
+//             Cal afegirla seg√ºent l√≠nia al INIT de la unitat en l'editor:                              //
 //                                                                                                       //
 //                  0 = ["ROL_JUGADOR",this] spawn cc_fnc_configEquipacio;                               //
 //                                                                                                       //
-//             on "ROL_JUGADOR" Ès una de les seg¸ents entrades:                                         //
+//             on "ROL_JUGADOR" √©s una de les seg√ºents entrades:                                         //
 //                                                                                                       //
 //                  ROL_JUGADOR         Rol assignat                                                     //
-//                  pl                  Cap de secciÛ (Platoon Leader)                                   //
+//                  pl                  Cap de secci√≥ (Platoon Leader)                                   //
 //                  psg                 Sergent (Platoon Sergeant)                                       //
 //                  rto                 Operador de Radio (Platoon Radiotelephone Operator)              //
-//                  fo                  Observador avanÁat (Forward Observer)                            //
+//                  fo                  Observador avan√ßat (Forward Observer)                            //
 //                  me                  Metge (Platoon Medic)                                            //
-//                  sl                  LÌder d'esquadra (Squad Leader)                                  //
-//                  tl                  LÌder d'equip (Team Leader)                                      //
+//                  sl                  L√≠der d'esquadra (Squad Leader)                                  //
+//                  tl                  L√≠der d'equip (Team Leader)                                      //
 //                  rfl                 Fuseller (Rifleman)                                              //
 //                  rflat               Fusellser amb AT4 (Rifleman with AT4)                            //
 //                  gr                  Granader (Grenadier)                                             //
-//                  ar                  Fuseller autom‡tic (Autom‡tic Rifleman)                          //
+//                  ar                  Fuseller autom√†tic (Autom√†tic Rifleman)                          //
 //                  dm                  Tirador designat (Designated Marksman)                           //
 //                  mg                  Metrallador (Machine Gunner)                                     //
 //                  amg                 Assitent de metrallador (Assitant Machine Gunner)                //
 //                  at                  Antitanc (Antitank)                                              //
 //                  aat                 Assistent d'antitanc (AT Ammo handler)                           //
-//                  aa                  Anti aËri (Anti Air gunner)                                      //
-//                  aaa                 Assistent d'anti aËri (Anti Air Assitant)                        //
+//                  aa                  Anti a√®ri (Anti Air gunner)                                      //
+//                  aaa                 Assistent d'anti a√®ri (Anti Air Assitant)                        //
 //                  en                  Enginyer (Engineer)                                              //
 //                  sn                  Franctirador (Sniper)                                            //
 //                  sp                  Observador (Spotter)                                             //
-//                  divsl               Bussejador lÌder d'esquadra (Diver Squad Leader)                 //
+//                  divsl               Bussejador l√≠der d'esquadra (Diver Squad Leader)                 //
 //                  divme               Bussejador metge (Diver Medic)                                   //
-//                  div                 Bussejador                                                       //
+//                  div                 Bussejador (Diver)                                               //
 //                                                                                                       //
-//                  hmmwv               EquipaciÛ per HMMWVs                                             //
+//                  hmmwv               Equipaci√≥ per HMMWVs                                             //
 //                                                                                                       //
-// Canvis: 0.1 (2015/04/02) VersiÛ inicial.                                                              //
-//         0.2 (2015/04/26) Canviat el nom del fitxer i dels uniformes (RHS v0.3.7).                     //
-//         0.3 (2015/05/17) Afegida l'equipaciÛ pel vehicle HMMWV.                                       //
-//         0.4 (2015/05/26) Canviat al sistema ACE3.                                                     //                     
+// Canvis: 0.1 (2015/06/04) Versi√≥ inicial.                                                              //                    
 //=======================================================================================================//
 
 _tipusUnitat = toLower (_this select 0);
@@ -51,7 +49,7 @@ _unitat = _this select 1;
 _esInfanteria = _unitat isKindOf "CAManBase"; 
 
 //=======================================================================================================//
-// Resum d'equipaciÛ: Armes, accessoris, ulleres, armilles, ...                                          //
+// Resum d'equipaci√≥: Armes, accessoris, ulleres, armilles, ...                                          //
 //=======================================================================================================//
 
 private["_bateriaUAV", "_cintaDentencio", "_einesMapa", "_microDAGR", "_taps", "_vectorIV", "_atragmx", "_kestrel", "_clacker", "_clackerm26", "_kitDesactivacio", "_telefon"];
@@ -90,7 +88,7 @@ _arma = "rhs_weap_m4a1";
 _arma320 = "rhs_weap_m4a1_m320";
 _armaAR = "rhs_weap_m249_pip";
 _armaMG = "rhs_weap_m240B";
-_armaDM = "rhs_weap_sr25_ec";
+_armaDM = "rhs_weap_m14ebrri";
 _armaSN = "rhs_weap_XM2010_sa";
 _armaDIV = "arifle_SDAR_F";
 
@@ -104,16 +102,16 @@ _armaLaserLlanternaAR = "rhsusf_acc_anpeq15A";
 _armaLaserLlanternaSN = "rhsusf_acc_anpeq15side";
 
 // Mires
-_armaMira = "rhsusf_acc_eotech_552";
-_armaMiraAR = "rhsusf_acc_eotech_552";
+_armaMira = "rhsusf_acc_ACOG";
+_armaMiraAR = "rhsusf_acc_ELCAN";
 _armaMiraDM = "rhsusf_acc_LEUPOLDMK4";
 _armaMiraSN = "rhsusf_acc_LEUPOLDMK4_2";
 
-// BÌpodes
+// B√≠podes
 _armabipodeDM = "rhsusf_acc_harris_bipod";
 _armabipodeSN = "rhsusf_acc_harris_bipod";
 
-// LlenÁadores AT/AA
+// Llen√ßadores AT/AA
 _armaLlencadorRF = "rhs_weap_M136_hedp";
 _armaLlencadorAT = "rhs_weap_fgm148";
 _armaLlencadorAA = "rhs_weap_fim92";
@@ -129,11 +127,11 @@ _brujola = "ItemCompass";
 _radio = "ItemRadio";
 _terminalUAV = "B_UavTerminal";
 
-// Prism‡tics
+// Prism√†tics
 _prismatic = "lerca_1200_tan";
 
-// VisiÛ nocturna
-_visioNocturna = "rhsusf_ANPVS_15";
+// Visi√≥ nocturna
+_visioNocturna = "rhsusf_ANPVS_14";
 
 if (cc_param_modRealisme == 1) then {
 	//===================================================================================================//
@@ -158,18 +156,18 @@ if (cc_param_modRealisme == 1) then {
 	_kitDesactivacio = "ACE_DefusalKit";
 	_telefon = "ACE_Cellphone";
 
-	// Objectes mËdics: Droques
+	// Objectes m√®dics: Droques
 	_atropina = "ACE_atropine";
 	_epinefrina = "ACE_epinephrine";
 	_morfina = "ACE_morphine";
 
-	// Objectes mËdics: Benes
+	// Objectes m√®dics: Benes
 	_benes = "ACE_fieldDressing";
 	_benesElastiques = "ACE_elasticBandage";
 	_benesRapides = "ACE_quikclot";
 	_benesEmpaquetants = "ACE_packingBandage";
 
-	// Objectes mËdics: bosses
+	// Objectes m√®dics: bosses
 	_bossaSang250 = "ACE_bloodIV_250";
 	_bossaSang500 = "ACE_bloodIV_250";
 	_bossaSang1000 = "ACE_bloodIV_250";
@@ -180,11 +178,11 @@ if (cc_param_modRealisme == 1) then {
 	_bossaSalina500 = "ACE_salineIV_500";
 	_bossaSalina1000 = "ACE_salineIV_1000";
 
-	// Objectes mËdics: Kits
+	// Objectes m√®dics: Kits
 	_kitPrimersAuxilis = "ACE_personalAidKit";
 	_kitQuirurgic = "ACE_surgicalKit";
 
-	// Objectes mËdics: Torniquets
+	// Objectes m√®dics: Torniquets
 	_torniquet = "ACE_tourniquet";
 } else {
 
@@ -205,7 +203,7 @@ if (cc_param_modRealisme == 1) then {
 };
 
 
-// Treure tota l'equipaciÛ que porta la unitat en el cas que sigui infanteria
+// Treure tota l'equipaci√≥ que porta la unitat en el cas que sigui infanteria
 if (_esInfanteria) then {
 	removeAllWeapons _unitat;
 	removeAllAssignedItems _unitat;
@@ -223,7 +221,7 @@ if (_esInfanteria) then {
 	(uniformContainer _unitat) addItemCargoGlobal [_epinefrina,1];
 	(uniformContainer _unitat) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",2];
 	
-	// Arma secund‡ria
+	// Arma secund√†ria
 	_unitat addWeapon _pistola;
 	
 	// Afegir objectes comuns
@@ -237,7 +235,7 @@ if (_esInfanteria) then {
 // Configurar l'equip per cada unitat
 switch (_tipusUnitat) do
 {
-	// Cap de secciÛ (Platoon Leader)
+	// Cap de secci√≥ (Platoon Leader)
 	case "pl":
 	{
 		// Armilla i motxilla
@@ -309,7 +307,7 @@ switch (_tipusUnitat) do
 		_unitat addPrimaryWeaponItem _armaMira;
 	};
 	
-	// Observador avanÁat (Forward Observer)
+	// Observador avan√ßat (Forward Observer)
 	case "fo":
 	{
 		// Armilla i motxilla
@@ -373,7 +371,7 @@ switch (_tipusUnitat) do
 		_unitat addPrimaryWeaponItem _armaMira;
 	};
 
-	// LÌder d'Esquadra (Squad Leader)
+	// L√≠der d'Esquadra (Squad Leader)
 	case "sl":
 	{
 		// Armilla i motxilla
@@ -423,7 +421,7 @@ switch (_tipusUnitat) do
 		_unitat addWeapon _vectorIV;
 	};
 	
-	// LÌder d'Equip (Team leader)
+	// L√≠der d'Equip (Team leader)
 	case "tl":
 	{
 		// Armilla i motxilla
@@ -543,7 +541,7 @@ switch (_tipusUnitat) do
 		_unitat addPrimaryWeaponItem _armaLaserLlanterna;
 		_unitat addPrimaryWeaponItem _armaMira;	
 		
-		// LlenÁador AT4
+		// Llen√ßador AT4
 		_unitat addWeapon _armaLlencadorRF;	
 	};
 	
@@ -589,7 +587,7 @@ switch (_tipusUnitat) do
 		_unitat addPrimaryWeaponItem _armaMira;
 	};
 	
-	// Fuseller autom‡tic (Automatic Rifleman)
+	// Fuseller autom√†tic (Automatic Rifleman)
 	case "ar":
 	{
 		// Armilla i motxilla
@@ -682,7 +680,7 @@ switch (_tipusUnitat) do
 		_unitat addBackpack _motxilla;
 		(unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
 		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
-		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
+		if (cc_param_modRealisme == 1) then {
 			(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
@@ -729,7 +727,7 @@ switch (_tipusUnitat) do
 		
 		// Objectes a la motxilla
 		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
-		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
+		if (cc_param_modRealisme == 1) then {
 			(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
@@ -766,7 +764,7 @@ switch (_tipusUnitat) do
 		_unitat addPrimaryWeaponItem _armaMira;
 	};
 	
-	// Anti aËri (Anti Air gunner)
+	// Anti a√®ri (Anti Air gunner)
 	case "aa":
 	{
 		// Armilla i motxilla
@@ -783,7 +781,7 @@ switch (_tipusUnitat) do
 		_unitat addWeapon _armaLlencadorAA;
 	};
 	
-	// Assistent d'anti aËri (Anti Air Assitant)
+	// Assistent d'anti a√®ri (Anti Air Assitant)
 	case "aaa":
 	{
 		// Armilla i motxilla
@@ -817,7 +815,7 @@ switch (_tipusUnitat) do
 		
 		// Objectes a la motxilla
 		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
-		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
+		if (cc_param_modRealisme == 1) then {
 			(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
@@ -884,7 +882,7 @@ switch (_tipusUnitat) do
 		_unitat linkItem _gps;
 	};
 	
-	// Bussejador: LÌder d'esquadra (divsl)
+	// Bussejador: L√≠der d'esquadra (divsl)
 	case "divsl":
 	{
 		// Treure l'uniforme, casc i armilla
@@ -1046,7 +1044,7 @@ switch (_tipusUnitat) do
 		clearItemCargoGlobal _unitat;
 		clearBackpackCargoGlobal _unitat;
 		
-				_unitat addWeaponCargoGlobal [_armaDM,1];
+		_unitat addWeaponCargoGlobal [_armaDM,1];
 		_unitat addItemCargoGlobal [_armaMiraDM, 1];
 		_unitat addItemCargoGlobal [_armabipodeDM, 1];
 		_unitat addWeaponCargoGlobal [_armaLlencadorAT,2];
@@ -1074,333 +1072,6 @@ switch (_tipusUnitat) do
 			_unitat addItemCargoGlobal [_kitQuirurgic,3];
 			_unitat addItemCargoGlobal [_kitPrimersAuxilis,3];
 		};
-	};
-		
-	case "blx":
-	{
-		clearWeaponCargoGlobal _unitat;
-		clearMagazineCargoGlobal _unitat;
-		clearItemCargoGlobal _unitat;
-		clearBackpackCargoGlobal _unitat;
-		
-		_unitat addWeaponCargoGlobal [_armaDM,1];
-		_unitat addItemCargoGlobal [_armaMiraDM, 1];
-		_unitat addItemCargoGlobal [_armabipodeDM, 1];
-		_unitat addWeaponCargoGlobal [_armaLlencadorAT,2];
-		_unitat addWeaponCargoGlobal [_armaLlencadorRF,1];
-		_unitat addMagazineCargoGlobal ["rhs_fgm148_magazine_AT",2];
-		_unitat addMagazineCargoGlobal ["rhs_m136_hedp_mag",1];
-		_unitat addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",15];
-		_unitat addMagazineCargoGlobal ["rhs_mag_m67",5];
-		_unitat addMagazineCargoGlobal ["rhsusf_100Rnd_556x45_soft_pouch",7];
-		_unitat addMagazineCargoGlobal ["SatchelCharge_Remote_Mag",2];
-		_unitat addMagazineCargoGlobal ["rhs_mag_M433_HEDP",8];
-		_unitat addMagazineCargoGlobal ["rhsusf_20Rnd_762x51_m118_special_Mag",10];
-		_unitat addItemCargoGlobal [_clacker,1];
-		_unitat addItemCargoGlobal [_morfina,10];
-		_unitat addItemCargoGlobal [_epinefrina,10];
-		_unitat addItemCargoGlobal [_benes,15];
-		_unitat addItemCargoGlobal [_bossaSang500,5];
-		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
-			_unitat addItemCargoGlobal [_atropina,10];
-			_unitat addItemCargoGlobal [_benesElastiques,10];
-			_unitat addItemCargoGlobal [_benesRapides,10];
-			_unitat addItemCargoGlobal [_benesEmpaquetants,10];
-			_unitat addItemCargoGlobal [_bossaSalina500,5];
-		
-			_unitat addItemCargoGlobal [_bossaPlasma500,5];
-			
-			_unitat addItemCargoGlobal [_kitQuirurgic,3];
-			_unitat addItemCargoGlobal [_kitPrimersAuxilis,3];
-		};
-	};
-
-	case "sdv1":
-	{
-		clearWeaponCargoGlobal _unitat;
-		clearMagazineCargoGlobal _unitat;
-		clearItemCargoGlobal _unitat;
-		clearBackpackCargoGlobal _unitat;
-
-		_unitat addItemCargoGlobal [_uniforme,3];
-		_llista = everyContainer _unitat;
-		
-		// LÌder d'esquadra (SL)
-		_temp = _llista select 0;
-		(_temp select 1) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",1];
-		// Fuseller (RF)
-		_temp = _llista select 1;
-		(_temp select 1) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",1];
-		// Fuseller autom‡tic (AR)
-		// Sense equipaciÛ addicional
-		
-		// Resta d'equip
-		_unitat addItemCargoGlobal [_casc,3];
-		_unitat addItemCargoGlobal [_armillaSQ,1];
-		_unitat addItemCargoGlobal [_armillaRFL,1];
-		_unitat addItemCargoGlobal [_armillaSAW,1];
-		_unitat addBackpackCargoGlobal [_motxilla,2];
-		
-		_llista = everyContainer _unitat;
-		
-		_count = 0;
-		{
-			_temp = _llista select _count;
-			_nom = _temp select 0;
-			
-			if(_nom == _uniforme) then {
-				(_temp select 1) addItemCargoGlobal [_taps,1];
-				(_temp select 1) addItemCargoGlobal [_morfina,1];
-				(_temp select 1) addItemCargoGlobal [_epinefrina,1];
-				(_temp select 1) addItemCargoGlobal [_benes,2];
-				(_temp select 1) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",1];
-			};
-			
-			if( _nom == _armillaSQ) then{
-				(_temp select 1) addItemCargoGlobal [_benes,2];
-				(_temp select 1) addItemCargoGlobal [_einesMapa,1];
-				(_temp select 1) addItemCargoGlobal [_armaSilenciador,1];
-				(_temp select 1) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",8];
-				(_temp select 1) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",1];
-				(_temp select 1) addMagazineCargoGlobal ["rhs_mag_M433_HEDP",2];
-				(_temp select 1) addMagazineCargoGlobal ["rhs_mag_mk84",1];
-				(_temp select 1) addMagazineCargoGlobal ["rhs_mag_m67",2];
-			};
-			
-			if( _nom == _armillaRFL) then{
-				(_temp select 1) addItemCargoGlobal [_benes,2];
-				(_temp select 1) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",8];
-				(_temp select 1) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",1];
-				(_temp select 1) addMagazineCargoGlobal ["rhs_mag_m67",4];
-			};
-				
-			if(_nom == _armillaSAW) then {
-				(_temp select 1) addItemCargoGlobal [_benes,2];
-				(_temp select 1) addMagazineCargoGlobal ["rhsusf_100Rnd_556x45_soft_pouch",3];
-				(_temp select 1) addMagazineCargoGlobal ["rhs_mag_m67",3];
-			};
-					
-			_count = _count + 1;
-		} forEach _llista;
-		
-		// Afegeix a les motxilles equipament especial a cada unitat
-		_llistamotxilles = everybackpack _unitat;
-		// Fuseller (RFL)
-		_temp = _llistamotxilles select 0;
-		_temp addItemCargoGlobal [_benes,2];
-		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
-			_temp addItemCargoGlobal [_benesElastiques,3];
-			_temp addItemCargoGlobal [_benesRapides,3];
-			_temp addItemCargoGlobal [_benesEmpaquetants,3];
-			_temp addItemCargoGlobal [_torniquet,1];
-		};
-		_temp addItemCargoGlobal [_visioNocturna,1];
-		_temp addItemCargoGlobal [_armaSilenciador,1];
-		_temp addItemCargoGlobal [_armaSurefire,1];
-		_temp addItemCargoGlobal [_armaLaserLlanterna,1];
-		_temp addItemCargoGlobal [_armaMira,1];
-		_temp addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",5];
-		_temp addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",2];
-		_temp addMagazineCargoGlobal ["rhs_mag_an_m8hc",2];
-		_temp addMagazineCargoGlobal ["rhs_mag_mk84",2];
-		// Fuseller Autom‡tic (RFL)
-		_temp = _llistamotxilles select 1;
-		_temp addItemCargoGlobal [_benes,2];
-		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
-			_temp addItemCargoGlobal [_benesElastiques,3];
-			_temp addItemCargoGlobal [_benesRapides,3];
-			_temp addItemCargoGlobal [_benesEmpaquetants,3];
-			_temp addItemCargoGlobal [_torniquet,1];
-		};
-		_temp addItemCargoGlobal [_visioNocturna,1];
-		_temp addItemCargoGlobal [_armaLaserLlanternaAR,1];
-		_temp addItemCargoGlobal [_armaMiraAR,1];
-		_temp addMagazineCargoGlobal ["rhsusf_200Rnd_556x45_soft_pouch",2];
-		_temp addMagazineCargoGlobal ["rhs_mag_mk84",2];
-		_temp addMagazineCargoGlobal ["rhs_mag_an_m8hc",1];
-		
-		/* Motxilla del TFAR */
-		_unitat addBackpackCargoGlobal ["tf_rt1523g_big_rhs",1];
-		_llista = everyContainer _unitat;
-		_count = 0;
-		{
-			_temp = _llista select _count;
-			_nom = _temp select 0;
-			
-			// LÌder d'esquadra (SL)
-			if(_nom == "tf_rt1523g_big_rhs") then {
-				(_temp select 1) addItemCargoGlobal [_benes,2];
-				if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
-					(_temp select 1) addItemCargoGlobal [_benesElastiques,3];
-					(_temp select 1) addItemCargoGlobal [_benesRapides,3];
-					(_temp select 1) addItemCargoGlobal [_benesEmpaquetants,3];
-					(_temp select 1) addItemCargoGlobal [_torniquet,1];
-				};
-				(_temp select 1) addItemCargoGlobal [_visioNocturna,1];
-				(_temp select 1) addItemCargoGlobal [_armaSilenciador,1];
-				(_temp select 1) addItemCargoGlobal [_armaSurefire,1];
-				(_temp select 1) addItemCargoGlobal [_armaLaserLlanterna,1];
-				(_temp select 1) addItemCargoGlobal [_armaMira,1];
-				(_temp select 1) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",5];
-				(_temp select 1) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",2];
-				(_temp select 1) addMagazineCargoGlobal ["rhs_mag_m714_White",2];
-				(_temp select 1) addMagazineCargoGlobal ["rhs_mag_an_m8hc",2];
-			};
-			_count = _count + 1;
-		} forEach _llista;
-
-		// Armes
-		_unitat addWeaponCargoGlobal [_arma320,1];
-		_unitat addWeaponCargoGlobal [_arma,1];
-		_unitat addWeaponCargoGlobal [_armaLlencadorRF,1];
-		_unitat addWeaponCargoGlobal [_armaAR,1];
-		_unitat addMagazineCargoGlobal ["rhs_m136_hedp_mag",1];
-	};
-		
-	case "sdv2":
-	{
-		clearWeaponCargoGlobal _unitat;
-		clearMagazineCargoGlobal _unitat;
-		clearItemCargoGlobal _unitat;
-		clearBackpackCargoGlobal _unitat;
-		
-		// Afegeix als uniformes equipament especial a cada unitat
-		_unitat addItemCargoGlobal [_uniforme,3];
-		_llista = everyContainer _unitat;
-
-		// Granader (GR)
-		_temp = _llista select 0;
-		(_temp select 1) addMagazineCargoGlobal ["rhs_mag_M433_HEDP",4];
-		(_temp select 1) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",1];
-		// Tirador (DM)
-		_temp = _llista select 1;
-		(_temp select 1) addMagazineCargoGlobal ["rhsusf_20Rnd_762x51_m118_special_Mag",1];
-		// Metge (ME)
-		_temp = _llista select 2;
-		(_temp select 1) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",1];
-		
-		// Resta d'equip
-		_unitat addItemCargoGlobal [_casc,3];
-		_unitat addItemCargoGlobal [_armillaRFL,1];
-		_unitat addItemCargoGlobal [_armillaGR,1];
-		_unitat addItemCargoGlobal [_armillaME,1];
-		_unitat addItemCargoGlobal [_motxilla,3];
-		
-		_llista = everyContainer _unitat;
-		_count = 0;
-		{
-			_temp = _llista select _count;
-			_nom = _temp select 0;
-			
-			if(_nom == _uniforme) then {
-				(_temp select 1) addItemCargoGlobal [_taps,1];
-				(_temp select 1) addItemCargoGlobal [_morfina,1];
-				(_temp select 1) addItemCargoGlobal [_epinefrina,1];
-				(_temp select 1) addItemCargoGlobal [_benes,2];
-				(_temp select 1) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",1];
-			};
-					
-			if( _nom == _armillaRFL) then{
-				(_temp select 1) addItemCargoGlobal [_benes,2];
-				(_temp select 1) addItemCargoGlobal [_kestrel,1];
-				(_temp select 1) addMagazineCargoGlobal ["rhs_mag_m67",3];
-				(_temp select 1) addMagazineCargoGlobal ["rhsusf_20Rnd_762x51_m118_special_Mag",6];
-				
-			};
-			
-			if( _nom == _armillaGR) then{
-				(_temp select 1) addItemCargoGlobal [_benes,2];
-				(_temp select 1) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",6];
-				(_temp select 1) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",1];
-				(_temp select 1) addMagazineCargoGlobal ["rhs_mag_m67",4];
-				(_temp select 1) addMagazineCargoGlobal ["rhs_mag_M433_HEDP",6];
-			};
-			
-			if( _nom == _armillaME) then{
-				(_temp select 1) addItemCargoGlobal [_benes,2];
-				(_temp select 1) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",8];
-				(_temp select 1) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",1];
-				(_temp select 1) addMagazineCargoGlobal ["rhs_mag_m67",3];
-				(_temp select 1) addMagazineCargoGlobal ["rhs_mag_an_m8hc",1];
-				(_temp select 1) addMagazineCargoGlobal ["rhs_mag_mk84",1];
-			};
-			
-			_count = _count + 1;
-		} forEach _llista;
-		
-		// Afegeix a les motxilles equipament especial a cada unitat
-		_unitat addBackpackCargoGlobal [_motxilla,3];
-		_llistamotxilles = everybackpack _unitat;
-				
-		// Granader (GR)
-		_temp = _llistamotxilles select 0;
-		_temp addItemCargoGlobal [_benes,2];
-		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
-			_temp addItemCargoGlobal [_benesElastiques,3];
-			_temp addItemCargoGlobal [_benesRapides,3];
-			_temp addItemCargoGlobal [_benesEmpaquetants,3];
-			_temp addItemCargoGlobal [_torniquet,1];
-		};
-		_temp addItemCargoGlobal [_visioNocturna,1];
-		_temp addItemCargoGlobal [_armaLaserLlanternaSN,1];
-		_temp addItemCargoGlobal [_armaMiraDM,1];
-		_temp addItemCargoGlobal [_armabipodeDM,1];
-		_temp addItemCargoGlobal ["rhsusf_acc_SR25S",1];
-		_temp addMagazineCargoGlobal ["rhs_mag_mk84",2];
-		_temp addMagazineCargoGlobal ["rhs_mag_an_m8hc",1];
-		_temp addMagazineCargoGlobal ["rhsusf_20Rnd_762x51_m118_special_Mag",5];
-		_temp addItemCargoGlobal ["rhsusf_acc_SR25S",1];
-		// Granader (GR)
-		_temp = _llistamotxilles select 1;
-		_temp addItemCargoGlobal [_benes,2];
-		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
-			_temp addItemCargoGlobal [_benesElastiques,3];
-			_temp addItemCargoGlobal [_benesRapides,3];
-			_temp addItemCargoGlobal [_benesEmpaquetants,3];
-			_temp addItemCargoGlobal [_torniquet,1];
-		};
-		_temp addItemCargoGlobal [_visioNocturna,1];
-		_temp addItemCargoGlobal [_armaSilenciador,1];
-		_temp addItemCargoGlobal [_armaSurefire,1];
-		_temp addItemCargoGlobal [_armaLaserLlanterna,1];
-		_temp addItemCargoGlobal [_armaMira,1];
-		_temp addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",5];
-		_temp addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",1];
-		_temp addMagazineCargoGlobal ["rhs_mag_m714_White",2];
-		_temp addMagazineCargoGlobal ["rhs_mag_an_m8hc",2];
-		_temp addMagazineCargoGlobal ["rhs_mag_mk84",2];
-		_temp addMagazineCargoGlobal ["rhs_mag_M433_HEDP",5];
-		// Metge (ME)
-		_temp = _llistamotxilles select 2;
-		_temp addItemCargoGlobal [_visioNocturna,1];
-		_temp addItemCargoGlobal [_armaSilenciador,1];
-		_temp addItemCargoGlobal [_armaSurefire,1];
-		_temp addItemCargoGlobal [_armaLaserLlanterna,1];
-		_temp addItemCargoGlobal [_armaMira,1];
-		_temp addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",2];
-		_temp addItemCargoGlobal [_morfina,8];
-		_temp addItemCargoGlobal [_epinefrina,8];
-		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
-			(_temp select 1) addItemCargoGlobal [_benes,10];
-			(_temp select 1) addItemCargoGlobal [_benesElastiques,10];
-			(_temp select 1) addItemCargoGlobal [_benesRapides,10];
-			(_temp select 1) addItemCargoGlobal [_benesEmpaquetants,8];
-			(_temp select 1) addItemCargoGlobal [_torniquet,5];
-			(_temp select 1) addItemCargoGlobal [_atropina,8];
-			(_temp select 1) addItemCargoGlobal [_kitQuirurgic,2];
-			(_temp select 1) addItemCargoGlobal [_kitPrimersAuxilis,2];
-			(_temp select 1) addItemCargoGlobal [_bossaSalina500,6];
-		} else {
-			(unitBackpack _unitat) addItemCargoGlobal [_benes,20];
-			(unitBackpack _unitat) addItemCargoGlobal [_bossaSang500,2];
-		};		
-		
-		// Armes
-		_unitat addWeaponCargoGlobal [_arma320,1];
-		_unitat addWeaponCargoGlobal [_arma,1];
-		_unitat addWeaponCargoGlobal [_armaDM,1];
-		_unitat addWeaponCargoGlobal [_armaLlencadorRF,1];
-		_unitat addMagazineCargoGlobal ["rhs_m136_hedp_mag",1];
 	};
 };
 

@@ -7,6 +7,7 @@
 //             així com la data i la localització                                                        //
 // Canvis: 0.1 (2015/04/02) Versió inicial.                                                              //
 //         0.2 (2015/04/26) Canviada la facció de les unitats RHS v0.3.7.                                //
+//         0.3 (2015/06/04) Afegida la facció RHS Insurgents.                                            //
 //=======================================================================================================//
 
 if (isDedicated) exitWith {};
@@ -23,8 +24,7 @@ if (_faccioUnitat != toLower (faction (leader group player))) then {
 };
 	
 // DEBUG OUTPUT
-if ( cc_param_debugOutput == 1 ) then
-{
+if ( cc_param_debugOutput == 1 ) then {
 	player sideChat format ["DEBUG (cc_intro.sqf): facció del jugador: %1", _faccioUnitat];
 };
 	
@@ -32,6 +32,10 @@ if ( cc_param_debugOutput == 1 ) then
 if (_faccioUnitat == "rhs_faction_usarmy_14") exitWith {
 	#include "cc_intro_rhs_faction_usarmy_14.sqf"
 };    
+
+if (_faccioUnitat == "rhs_faction_insurgents") exitWith {
+	#include "cc_intro_rhs_faction_insurgents.sqf"
+};
 
 // COMPROVACIÓ D'ERRORS: Si la facció de la unitat no està definida es mostra un missatge d'error.
 player globalchat format ["DEBUG (cc_intro.sqf): La facció %1 no està definida",_faccioUnitat];

@@ -6,10 +6,10 @@
 // Descripció: Aquest document serveix per equipar els jugadors amb l'equipació dissenyada per la missió //
 //             sense fer servir els perfils estàndard del grup dels Cavallers del Cel. Requereix que el  //
 //             jugador formi part de la facció RHS: United States Army "rhs_faction_usarmy_14"           //
-//             (http://doc.rhsmods.org/index.php/United_States_Army). Cal afegir la següent línia al     //
-//             INIT de la unitat en l'editor:                                                            //
+//             http://class.rhsmods.org/rhsusaf/CfgGroups_West_rhs_faction_usarmy_wd.html                // 
+//             Cal afegir la següent línia al INIT de la unitat en l'editor:                             //
 //                                                                                                       //
-//                  ["ROL_JUGADOR",this] spawn cc_fnc_configEquipacio;                                   //
+//                  0 = ["ROL_JUGADOR",this] spawn cc_fnc_configEquipacio;                               //
 //                                                                                                       //
 //             on "ROL_JUGADOR" és una de les següents entrades:                                         //
 //                                                                                                       //
