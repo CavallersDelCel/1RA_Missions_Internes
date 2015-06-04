@@ -42,10 +42,7 @@
 //         0.3 (2015/05/17) Afegida l'equipació pel vehicle HMMWV                                        //
 //=======================================================================================================//
 
-// Depenent d'on s'executi el script, averiguar si cal executar-lo o no
-if !(local _unitat) exitWith {};
-
-waitUntil {!isNull player};
+//waitUntil {!isNull player};
 
 // Declaració de variables
 private ["_faccioUnitat", "_tipusUnitat", "_unitat"];
@@ -53,13 +50,14 @@ private ["_faccioUnitat", "_tipusUnitat", "_unitat"];
 _tipusUnitat = toLower (_this select 0);
 _unitat = _this select 1;
 
+// Depenent d'on s'executi el script, averiguar si cal executar-lo o no
+if !(local _unitat) exitWith {};
+
 _faccioUnitat = toLower (faction _unitat);
 if(count _this > 2) then
 {
   _faccio = toLower (_this select 2);
 };
-
-
 
 // Guarda en una variable pública el tipus d'unitat
 _unitat setVariable ["cc_var_configEquipacio",_tipusUnitat,true];

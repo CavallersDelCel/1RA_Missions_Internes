@@ -29,7 +29,7 @@ if(alive player) then {
 	//[] call cc_fnc_tfar_configurarXatEspectador;
 	
 	// DEBUG OUTPUT
-	if (cc_var_debugOutput == 1) then {
+	if (cc_param_debugOutput == 1) then {
 		player sideChat format ["DEBUG (fn_tfar_initClient.sqf): Radios configurades."];
 	};
 } else {

@@ -19,7 +19,7 @@ if (_faccioUnitat != toLower (faction (leader group player))) then {
 };
 
 // DEBUG OUTPUT
-if ( cc_var_debugOutput == 1 ) then
+if ( cc_param_debugOutput == 1 ) then
 {
 	player sideChat format ["DEBUG (fn_acre2_determinarcc_acre2_determinarIdiomes.sqf): facció del jugador: %1", _faccioUnitat];
 };
@@ -31,7 +31,7 @@ if (_faccioUnitat == "blu_f") exitWith {
 	cc_acre2_config_idioma_blufor call acre_api_fnc_babelSetSpokenLanguages;
 	[cc_acre2_config_idioma_blufor select 0] call acre_api_fnc_babelSetSpeakingLanguage;
 	// DEBUG OUTPUT
-	if ( cc_var_debugOutput == 1 ) then
+	if ( cc_param_debugOutput == 1 ) then
 	{
 		player sideChat format ["DEBUG (cc_acre2_determinarIdiomes.sqf): Utilitzant %1 per la faccio %2.", cc_acre2_config_idioma_blufor, _faccioUnitat];
 	};
@@ -43,7 +43,7 @@ if (_faccioUnitat in ["blu_g_f","ind_g_f","opf_g_f"]) exitWith {
 	cc_acre2_config_idioma_fia call acre_api_fnc_babelSetSpokenLanguages;
 	[cc_acre2_config_idioma_fia select 0] call acre_api_fnc_babelSetSpeakingLanguage;
 	// DEBUG OUTPUT
-	if ( cc_var_debugOutput == 1 ) then
+	if ( cc_param_debugOutput == 1 ) then
 	{
 		player sideChat format ["DEBUG (cc_acre2_determinarIdiomes.sqf): Utilitzant %1 per la faccio %2.", cc_acre2_config_idioma_fia, _faccioUnitat];
 	};
@@ -55,7 +55,7 @@ if (_faccioUnitat == "opf_f") exitWith {
 	cc_acre2_config_idioma_opfor call acre_api_fnc_babelSetSpokenLanguages;
 	[cc_acre2_config_idioma_opfor select 0] call acre_api_fnc_babelSetSpeakingLanguage;
 	// DEBUG OUTPUT
-	if ( cc_var_debugOutput == 1 ) then
+	if ( cc_param_debugOutput == 1 ) then
 	{
 		player sideChat format ["DEBUG (cc_acre2_determinarIdiomes.sqf): Utilitzant %1 per la faccio %2.", cc_acre2_config_idioma_opfor, _faccioUnitat];
 	};
@@ -67,7 +67,7 @@ if (_faccioUnitat == "ind_f") exitWith {
 	cc_acre2_config_idioma_indfor call acre_api_fnc_babelSetSpokenLanguages;
 	[cc_acre2_config_idioma_indfor select 0] call acre_api_fnc_babelSetSpeakingLanguage;
 	// DEBUG OUTPUT
-	if ( cc_var_debugOutput == 1 ) then
+	if ( cc_param_debugOutput == 1 ) then
 	{
 		player sideChat format ["DEBUG (cc_acre2_determinarIdiomes.sqf): Utilitzant %1 per la faccio %2.", cc_acre2_config_idioma_indfor, _faccioUnitat];
 	};
@@ -79,7 +79,7 @@ if (_faccioUnitat == "civ_f") exitWith {
 	cc_acre2_config_idioma_civ call acre_api_fnc_babelSetSpokenLanguages;
 	[cc_acre2_config_idioma_civ select 0] call acre_api_fnc_babelSetSpeakingLanguage;
 	// DEBUG OUTPUT
-	if ( cc_var_debugOutput == 1 ) then
+	if ( cc_param_debugOutput == 1 ) then
 	{
 		player sideChat format ["DEBUG (cc_acre2_determinarIdiomes.sqf): Utilitzant %1 per la faccio %2.", cc_acre2_config_idioma_civ, _faccioUnitat];
 	};
@@ -91,7 +91,7 @@ if (_faccioUnitat in ["rhs_faction_usarmy_14","rhs_faction_usarmy_10","rhs_facti
 	cc_acre2_config_idioma_rhsusaf call acre_api_fnc_babelSetSpokenLanguages;
 	[cc_acre2_config_idioma_rhsusaf select 0] call acre_api_fnc_babelSetSpeakingLanguage;
 	// DEBUG OUTPUT
-	if ( cc_var_debugOutput == 1 ) then
+	if ( cc_param_debugOutput == 1 ) then
 	{
 		player sideChat format ["DEBUG (cc_acre2_determinarIdiomes.sqf): Utilitzant %1 per la faccio %2.", cc_acre2_config_idioma_rhsusaf, _faccioUnitat];
 	};
@@ -103,7 +103,7 @@ if (_faccioUnitat == "rhs_faction_vpvo" ) exitWith {
 	cc_acre2_config_idioma_rhsusaf call acre_api_fnc_babelSetSpokenLanguages;
 	[cc_acre2_config_idioma_rhsusaf select 0] call acre_api_fnc_babelSetSpeakingLanguage;
 	// DEBUG OUTPUT
-	if ( cc_var_debugOutput == 1 ) then
+	if ( cc_param_debugOutput == 1 ) then
 	{
 		player sideChat format ["DEBUG (cc_acre2_determinarIdiomes.sqf): Utilitzant %1 per la faccio %2.", cc_acre2_config_idioma_rhsafrf, _faccioUnitat];
 	};
