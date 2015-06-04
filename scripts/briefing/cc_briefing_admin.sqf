@@ -15,7 +15,7 @@
 //=======================================================================================================//
 // NOTES: ADMINISTRADOR                                                                                  //
 //=======================================================================================================//
-_briefingAdmin ="
+_briefingAdmin = "
 <br/>
 <font color='#FF0000' size='18'>Informació per l'administrador</font>
 <br/><br/>
@@ -31,7 +31,7 @@ Si els requisits no es compleixen o les versions són diferents cal comprovar pr
 // NOTES: CREADOR DE LA MISSIÓ                                                                           //
 //=======================================================================================================//
 
-_briefingNotes ="
+_briefingNotes = "
 <br/>
 <font color='#FF0000' size='18'>Notes del creador de la missió</font>
 <br/><br/>
@@ -54,7 +54,19 @@ _briefingNotes ="
 *** Notes i missatges addicionals del creador de la missió. ***
 ";
 
-_briefing = _briefingAdmin + _briefingNotes;
+//=======================================================================================================//
+// NOTES: FINALS DE LA MISSIÓ                                                                            //
+//=======================================================================================================//
+
+_briefingFinals = "
+<br/>
+<font color='#FF0000' size='18'>Diferents finals de la missió</font>
+<br/>
+Selecciona un dels finals per activar-lo.
+<br/><br/>
+";
+
+_briefing = _briefingAdmin + _briefingNotes + _briefingFinals;
 _briefing = _briefing + "<br/><br/>";
 
 //=======================================================================================================//
