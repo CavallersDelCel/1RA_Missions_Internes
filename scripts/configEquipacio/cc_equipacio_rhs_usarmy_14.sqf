@@ -105,8 +105,8 @@ _armaLaserLlanternaAR = "rhsusf_acc_anpeq15A";
 _armaLaserLlanternaSN = "rhsusf_acc_anpeq15side";
 
 // Mires
-_armaMira = "rhsusf_acc_ACOG";
-_armaMiraAR = "rhsusf_acc_ELCAN";
+_armaMira = "rhsusf_acc_eotech_552";
+_armaMiraAR = "rhsusf_acc_eotech_552";
 _armaMiraDM = "rhsusf_acc_LEUPOLDMK4";
 _armaMiraSN = "rhsusf_acc_LEUPOLDMK4_2";
 
@@ -134,7 +134,7 @@ _terminalUAV = "B_UavTerminal";
 _prismatic = "lerca_1200_tan";
 
 // Visió nocturna
-_visioNocturna = "rhsusf_ANPVS_14";
+_visioNocturna = "rhsusf_ANPVS_15";
 
 if (cc_param_modRealisme == 1) then {
 	//===================================================================================================//
@@ -1078,32 +1078,6 @@ switch (_tipusUnitat) do
 			_unitat addItemCargoGlobal [_kitQuirurgic,3];
 			_unitat addItemCargoGlobal [_kitPrimersAuxilis,3];
 		};
-	};
-	
-	case "sdvsq":
-	{
-		clearWeaponCargoGlobal _unitat;
-		clearMagazineCargoGlobal _unitat;
-		clearItemCargoGlobal _unitat;
-		clearBackpackCargoGlobal _unitat;
-		
-		_unitat addItemCargoGlobal [_uniforme,3];
-		_unitat addItemCargoGlobal [_armillaSQ,1];
-		_unitat addItemCargoGlobal [_armillaRFL,1];
-		_unitat addItemCargoGlobal [_armillaGR,1];
-	};
-	
-	case "sdvme":
-	{
-		clearWeaponCargoGlobal _unitat;
-		clearMagazineCargoGlobal _unitat;
-		clearItemCargoGlobal _unitat;
-		clearBackpackCargoGlobal _unitat;
-		
-		_unitat addItemCargoGlobal [_uniforme,3];
-		_unitat addItemCargoGlobal [_armillaSQ,1];
-		_unitat addItemCargoGlobal [_armillaRFL,1];
-		_unitat addItemCargoGlobal [_armillaGR,1];
 	};
 };
 

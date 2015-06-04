@@ -104,8 +104,8 @@ _armaLaserLlanternaAR = "rhsusf_acc_anpeq15A";
 _armaLaserLlanternaSN = "rhsusf_acc_anpeq15side";
 
 // Mires
-_armaMira = "rhsusf_acc_ACOG";
-_armaMiraAR = "rhsusf_acc_ELCAN";
+_armaMira = "rhsusf_acc_eotech_552";
+_armaMiraAR = "rhsusf_acc_eotech_552";
 _armaMiraDM = "rhsusf_acc_LEUPOLDMK4";
 _armaMiraSN = "rhsusf_acc_LEUPOLDMK4_2";
 
@@ -133,7 +133,7 @@ _terminalUAV = "B_UavTerminal";
 _prismatic = "lerca_1200_tan";
 
 // Visió nocturna
-_visioNocturna = "rhsusf_ANPVS_14";
+_visioNocturna = "rhsusf_ANPVS_15";
 
 if (cc_param_modRealisme == 1) then {
 	//===================================================================================================//
@@ -1100,7 +1100,19 @@ switch (_tipusUnitat) do
 		_unitat addItemCargoGlobal [_morfina,10];
 		_unitat addItemCargoGlobal [_epinefrina,10];
 		_unitat addItemCargoGlobal [_benes,15];
-		_unitat addItemCargoGlobal [_bossaSang,3];
+		_unitat addItemCargoGlobal [_bossaSang500,5];
+		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
+			_unitat addItemCargoGlobal [_atropina,10];
+			_unitat addItemCargoGlobal [_benesElastiques,10];
+			_unitat addItemCargoGlobal [_benesRapides,10];
+			_unitat addItemCargoGlobal [_benesEmpaquetants,10];
+			_unitat addItemCargoGlobal [_bossaSalina500,5];
+		
+			_unitat addItemCargoGlobal [_bossaPlasma500,5];
+			
+			_unitat addItemCargoGlobal [_kitQuirurgic,3];
+			_unitat addItemCargoGlobal [_kitPrimersAuxilis,3];
+		};
 	};
 
 	case "sdv1":
@@ -1175,7 +1187,13 @@ switch (_tipusUnitat) do
 		_llistamotxilles = everybackpack _unitat;
 		// Fuseller (RFL)
 		_temp = _llistamotxilles select 0;
-		_temp addItemCargoGlobal [_benes,4];
+		_temp addItemCargoGlobal [_benes,2];
+		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
+			_temp addItemCargoGlobal [_benesElastiques,3];
+			_temp addItemCargoGlobal [_benesRapides,3];
+			_temp addItemCargoGlobal [_benesEmpaquetants,3];
+			_temp addItemCargoGlobal [_torniquet,1];
+		};
 		_temp addItemCargoGlobal [_visioNocturna,1];
 		_temp addItemCargoGlobal [_armaSilenciador,1];
 		_temp addItemCargoGlobal [_armaSurefire,1];
@@ -1187,7 +1205,13 @@ switch (_tipusUnitat) do
 		_temp addMagazineCargoGlobal ["rhs_mag_mk84",2];
 		// Fuseller Automàtic (RFL)
 		_temp = _llistamotxilles select 1;
-		_temp addItemCargoGlobal [_benes,4];
+		_temp addItemCargoGlobal [_benes,2];
+		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
+			_temp addItemCargoGlobal [_benesElastiques,3];
+			_temp addItemCargoGlobal [_benesRapides,3];
+			_temp addItemCargoGlobal [_benesEmpaquetants,3];
+			_temp addItemCargoGlobal [_torniquet,1];
+		};
 		_temp addItemCargoGlobal [_visioNocturna,1];
 		_temp addItemCargoGlobal [_armaLaserLlanternaAR,1];
 		_temp addItemCargoGlobal [_armaMiraAR,1];
@@ -1205,7 +1229,13 @@ switch (_tipusUnitat) do
 			
 			// Líder d'esquadra (SL)
 			if(_nom == "tf_rt1523g_big_rhs") then {
-				(_temp select 1) addItemCargoGlobal [_benes,4];
+				(_temp select 1) addItemCargoGlobal [_benes,2];
+				if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
+					(_temp select 1) addItemCargoGlobal [_benesElastiques,3];
+					(_temp select 1) addItemCargoGlobal [_benesRapides,3];
+					(_temp select 1) addItemCargoGlobal [_benesEmpaquetants,3];
+					(_temp select 1) addItemCargoGlobal [_torniquet,1];
+				};
 				(_temp select 1) addItemCargoGlobal [_visioNocturna,1];
 				(_temp select 1) addItemCargoGlobal [_armaSilenciador,1];
 				(_temp select 1) addItemCargoGlobal [_armaSurefire,1];
@@ -1304,7 +1334,13 @@ switch (_tipusUnitat) do
 				
 		// Granader (GR)
 		_temp = _llistamotxilles select 0;
-		_temp addItemCargoGlobal [_benes,4];
+		_temp addItemCargoGlobal [_benes,2];
+		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
+			_temp addItemCargoGlobal [_benesElastiques,3];
+			_temp addItemCargoGlobal [_benesRapides,3];
+			_temp addItemCargoGlobal [_benesEmpaquetants,3];
+			_temp addItemCargoGlobal [_torniquet,1];
+		};
 		_temp addItemCargoGlobal [_visioNocturna,1];
 		_temp addItemCargoGlobal [_armaLaserLlanternaSN,1];
 		_temp addItemCargoGlobal [_armaMiraDM,1];
@@ -1316,7 +1352,13 @@ switch (_tipusUnitat) do
 		_temp addItemCargoGlobal ["rhsusf_acc_SR25S",1];
 		// Granader (GR)
 		_temp = _llistamotxilles select 1;
-		_temp addItemCargoGlobal [_benes,4];
+		_temp addItemCargoGlobal [_benes,2];
+		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
+			_temp addItemCargoGlobal [_benesElastiques,3];
+			_temp addItemCargoGlobal [_benesRapides,3];
+			_temp addItemCargoGlobal [_benesEmpaquetants,3];
+			_temp addItemCargoGlobal [_torniquet,1];
+		};
 		_temp addItemCargoGlobal [_visioNocturna,1];
 		_temp addItemCargoGlobal [_armaSilenciador,1];
 		_temp addItemCargoGlobal [_armaSurefire,1];
@@ -1330,16 +1372,28 @@ switch (_tipusUnitat) do
 		_temp addMagazineCargoGlobal ["rhs_mag_M433_HEDP",5];
 		// Metge (ME)
 		_temp = _llistamotxilles select 2;
-		_temp addItemCargoGlobal [_benes,20];
 		_temp addItemCargoGlobal [_visioNocturna,1];
 		_temp addItemCargoGlobal [_armaSilenciador,1];
 		_temp addItemCargoGlobal [_armaSurefire,1];
 		_temp addItemCargoGlobal [_armaLaserLlanterna,1];
 		_temp addItemCargoGlobal [_armaMira,1];
-		_temp addItemCargoGlobal [_morfina,8];
-		_temp addItemCargoGlobal [_epinefrina,8];	 
-		_temp addItemCargoGlobal [_bossaSang,2];
 		_temp addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",2];
+		_temp addItemCargoGlobal [_morfina,8];
+		_temp addItemCargoGlobal [_epinefrina,8];
+		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
+			(_temp select 1) addItemCargoGlobal [_benes,10];
+			(_temp select 1) addItemCargoGlobal [_benesElastiques,10];
+			(_temp select 1) addItemCargoGlobal [_benesRapides,10];
+			(_temp select 1) addItemCargoGlobal [_benesEmpaquetants,8];
+			(_temp select 1) addItemCargoGlobal [_torniquet,5];
+			(_temp select 1) addItemCargoGlobal [_atropina,8];
+			(_temp select 1) addItemCargoGlobal [_kitQuirurgic,2];
+			(_temp select 1) addItemCargoGlobal [_kitPrimersAuxilis,2];
+			(_temp select 1) addItemCargoGlobal [_bossaSalina500,6];
+		} else {
+			(unitBackpack _unitat) addItemCargoGlobal [_benes,20];
+			(unitBackpack _unitat) addItemCargoGlobal [_bossaSang500,2];
+		};		
 		
 		// Armes
 		_unitat addWeaponCargoGlobal [_arma320,1];
