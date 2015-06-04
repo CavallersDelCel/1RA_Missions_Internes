@@ -7,7 +7,7 @@
 //             de configurar l'equip de la unitat la següent línia s'ha d'afegir al INIT de la unitat en //
 //             l'editor:                                                                                 //
 //                                                                                                       //
-//                  ["ROL_JUGADOR",this] call cc_fnc_configEquipacio;                                    //
+//                  ["ROL_JUGADOR",this] spawn cc_fnc_configEquipacio;                                    //
 //                                                                                                       //
 //             on "ROL_JUGADOR" és una de les següents entrades:                                         //
 //                                                                                                       //

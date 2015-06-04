@@ -9,7 +9,7 @@
 //             (http://doc.rhsmods.org/index.php/United_States_Army). Cal afegir la següent línia al     //
 //             INIT de la unitat en l'editor:                                                            //
 //                                                                                                       //
-//                  ["ROL_JUGADOR",this] call cc_fnc_configEquipacio;                                    //
+//                  ["ROL_JUGADOR",this] spawn cc_fnc_configEquipacio;                                    //
 //                                                                                                       //
 //             on "ROL_JUGADOR" és una de les següents entrades:                                         //
 //                                                                                                       //
