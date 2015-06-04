@@ -13,9 +13,9 @@
 //=======================================================================================================//
 _credits = player createDiaryRecord ["diary", ["Crèdits","
 <br/>
-Missió generada per CC_Magnetar per a la comunitat dels Cavallers del Cel.
+Missió generada per <font color='#00FFFF'>*** Autors ***</font> per a la <font color='#00FFFF'>Comunitat Catalana de Simulació - Cavallers del Cel</font>.
 <br/><br/>
-Amb la col·laboració de *** possibles col·laboradors ***.
+Amb la col·laboració de CC_Magnetar (plantilla) i *** possibles col·laboradors ***.
 "]];
 
 //=======================================================================================================//

@@ -4,7 +4,7 @@
 // Versió: 0.1                                                                                           //
 // Creació del Document: 22/02/2015                                                                      //
 // Descripció: Aquest document serveix per oferir informació de la missió si la unitat forma part de     //
-//             la facció Indenpendent (ind_f).                                                                  //
+//             la facció Indenpendent (ind_f).                                                           //
 //=======================================================================================================//
 
 //=======================================================================================================//
@@ -12,9 +12,9 @@
 //=======================================================================================================//
 _credits = player createDiaryRecord ["diary", ["Crèdits","
 <br/>
-Missió generada per CC_Magnetar per a la comunitat dels Cavallers del Cel.
+Missió generada per <font color='#00FFFF'>*** Autors ***</font> per a la <font color='#00FFFF'>Comunitat Catalana de Simulació - Cavallers del Cel</font>.
 <br/><br/>
-Amb la col·laboració de CC_Viper, CC_ZeroQ, CC_SilverArrow, CC_Arnau002, CC_Davidaf.
+Amb la col·laboració de CC_Magnetar (plantilla) i *** possibles col·laboradors ***.
 "]];
 
 //=======================================================================================================//
