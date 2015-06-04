@@ -3382,7 +3382,7 @@ class Mission
 					rank="LIEUTENANT";
 					skill=0.5;
 					text="Esq1_SL";
-					init="CC_GrupMaritim = group this; (group this) setGroupID [""Gos de caça 1""]; this moveinDriver Submari1; [""divsl"",this] call cc_fnc_configEquipacio;";
+					init="CC_GrupMaritim = group this; (group this) setGroupID [""Gos de caça 1""]; this moveinDriver Submari1; [""divsl"",this] spawn cc_fnc_configEquipacio;";
 					description="Líder d'Esquadra - Viper";
 				};
 				class Item1
@@ -3395,7 +3395,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.5;
 					text="Esq1_RFL";
-					init="CC_GrupMaritim = group this; (group this) setGroupID [""Gos de caça 1""]; this assignAsCargoIndex [Submari1, 1]; this moveInCargo Submari1; [""div"",this] call cc_fnc_configEquipacio;";
+					init="CC_GrupMaritim = group this; (group this) setGroupID [""Gos de caça 1""]; this assignAsCargoIndex [Submari1, 1]; this moveInCargo Submari1; [""div"",this] spawn cc_fnc_configEquipacio;";
 					description="Fuseller";
 				};
 				class Item2
@@ -3408,7 +3408,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.5;
 					text="Esq1_GR";
-					init="CC_GrupMaritim = group this; (group this) setGroupID [""Gos de caça 1""]; this assignAsCargoIndex [Submari2, 1]; this moveInCargo Submari2; [""div"",this] call cc_fnc_configEquipacio;";
+					init="CC_GrupMaritim = group this; (group this) setGroupID [""Gos de caça 1""]; this assignAsCargoIndex [Submari2, 1]; this moveInCargo Submari2; [""div"",this] spawn cc_fnc_configEquipacio;";
 					description="Granader";
 				};
 				class Item3
@@ -3421,7 +3421,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.5;
 					text="Esq1_AR";
-					init="CC_GrupMaritim = group this; (group this) setGroupID [""Gos de caça 1""]; this moveInGunner Submari1; [""div"",this] call cc_fnc_configEquipacio;";
+					init="CC_GrupMaritim = group this; (group this) setGroupID [""Gos de caça 1""]; this moveInGunner Submari1; [""div"",this] spawn cc_fnc_configEquipacio;";
 					description="Fuseller Automàtic - Magnetar";
 				};
 				class Item4
@@ -3434,7 +3434,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.5;
 					text="Esq1_DM";
-					init="CC_GrupMaritim = group this; (group this) setGroupID [""Gos de caça 1""]; this moveinDriver Submari2; [""div"",this] call cc_fnc_configEquipacio;";
+					init="CC_GrupMaritim = group this; (group this) setGroupID [""Gos de caça 1""]; this moveinDriver Submari2; [""div"",this] spawn cc_fnc_configEquipacio;";
 					description="Tirador - ZeroQ";
 				};
 				class Item5
@@ -3447,7 +3447,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.5;
 					text="Esq1_ME";
-					init="CC_GrupMaritim = group this; (group this) setGroupID [""Gos de caça 1""]; this moveInGunner Submari2; [""divme"",this] call cc_fnc_configEquipacio;";
+					init="CC_GrupMaritim = group this; (group this) setGroupID [""Gos de caça 1""]; this moveInGunner Submari2; [""divme"",this] spawn cc_fnc_configEquipacio;";
 					description="Metge - Tuixó";
 				};
 			};
@@ -3488,7 +3488,7 @@ class Mission
 					rank="SERGEANT";
 					skill=0.5;
 					text="Esq2_TL";
-					init="CC_EquipTerra = group this; (group this) setGroupID [""Gos de caça 2""]; this assignAsCargoIndex [HeliInsercio, 10]; this moveInCargo HeliInsercio; [""tl"",this] call cc_fnc_configEquipacio;";
+					init="CC_EquipTerra = group this; (group this) setGroupID [""Gos de caça 2""]; this assignAsCargoIndex [HeliInsercio, 10]; this moveInCargo HeliInsercio; [""tl"",this] spawn cc_fnc_configEquipacio;";
 					description="Líder d'Equip - SilverArrow";
 				};
 				class Item1
@@ -3501,7 +3501,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.5;
 					text="Esq2_ME";
-					init="CC_EquipTerra = group this; (group this) setGroupID [""Gos de caça 2""]; this assignAsCargoIndex [HeliInsercio, 11]; this moveInCargo HeliInsercio; [""me"",this] call cc_fnc_configEquipacio;";
+					init="CC_EquipTerra = group this; (group this) setGroupID [""Gos de caça 2""]; this assignAsCargoIndex [HeliInsercio, 11]; this moveInCargo HeliInsercio; [""me"",this] spawn cc_fnc_configEquipacio;";
 					description="Metge - Kopant";
 				};
 				class Item2
@@ -3514,7 +3514,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.40000001;
 					text="Esq2_RFL";
-					init="CC_EquipTerra = group this; (group this) setGroupID [""Gos de caça 2""]; this assignAsCargoIndex [HeliInsercio, 4]; this moveInCargo HeliInsercio; [""at"",this] call cc_fnc_configEquipacio;";
+					init="CC_EquipTerra = group this; (group this) setGroupID [""Gos de caça 2""]; this assignAsCargoIndex [HeliInsercio, 4]; this moveInCargo HeliInsercio; [""at"",this] spawn cc_fnc_configEquipacio;";
 					description="Antitanc (Javelin) - Arnau002";
 				};
 				class Item3
@@ -3527,7 +3527,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.40000001;
 					text="Esq2_GR";
-					init="CC_EquipTerra = group this; (group this) setGroupID [""Gos de caça 2""]; this assignAsCargoIndex [HeliInsercio, 3]; this moveInCargo HeliInsercio; [""gr"",this] call cc_fnc_configEquipacio;";
+					init="CC_EquipTerra = group this; (group this) setGroupID [""Gos de caça 2""]; this assignAsCargoIndex [HeliInsercio, 3]; this moveInCargo HeliInsercio; [""gr"",this] spawn cc_fnc_configEquipacio;";
 					description="Granader - Davidaf";
 				};
 				class Item4
@@ -3540,7 +3540,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.5;
 					text="Esq2_EN";
-					init="CC_EquipTerra = group this; (group this) setGroupID [""Gos de caça 2""]; this assignAsCargoIndex [HeliInsercio, 2]; this moveInCargo HeliInsercio; [""en"",this] call cc_fnc_configEquipacio;";
+					init="CC_EquipTerra = group this; (group this) setGroupID [""Gos de caça 2""]; this assignAsCargoIndex [HeliInsercio, 2]; this moveInCargo HeliInsercio; [""en"",this] spawn cc_fnc_configEquipacio;";
 					description="Especialista en explosius - Frodo";
 				};
 				class Item5
@@ -3553,7 +3553,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.40000001;
 					text="Esq2_AR";
-					init="CC_EquipTerra = group this; (group this) setGroupID [""Gos de caça 2""]; this assignAsCargoIndex [HeliInsercio, 1]; this moveInCargo HeliInsercio; [""ar"",this] call cc_fnc_configEquipacio;";
+					init="CC_EquipTerra = group this; (group this) setGroupID [""Gos de caça 2""]; this assignAsCargoIndex [HeliInsercio, 1]; this moveInCargo HeliInsercio; [""ar"",this] spawn cc_fnc_configEquipacio;";
 					description="Fuseller automàtic - Diplock";
 				};
 			};
@@ -4777,7 +4777,7 @@ class Mission
 			leader=1;
 			skill=0.5;
 			health=0.92538565;
-			init="[""hmmwv"",this] call cc_fnc_configEquipacio;";
+			init="[""hmmwv"",this] spawn cc_fnc_configEquipacio;";
 		};
 		class Item36
 		{
@@ -4790,7 +4790,7 @@ class Mission
 			leader=1;
 			skill=0.5;
 			health=0.93729705;
-			init="[""blx"",this] call cc_fnc_configEquipacio;";
+			init="[""blx"",this] spawn cc_fnc_configEquipacio;";
 		};
 		class Item37
 		{
@@ -4946,7 +4946,7 @@ class Mission
 			vehicle="B_SDV_01_F";
 			skill=0.5;
 			text="Submari1";
-			init="[""sdv1"",this] call cc_fnc_configEquipacio;";
+			init="[""sdv1"",this] spawn cc_fnc_configEquipacio;";
 		};
 		class Item51
 		{
@@ -4958,7 +4958,7 @@ class Mission
 			vehicle="B_SDV_01_F";
 			skill=0.5;
 			text="Submari2";
-			init="[""sdv2"",this] call cc_fnc_configEquipacio;";
+			init="[""sdv2"",this] spawn cc_fnc_configEquipacio;";
 		};
 		class Item52
 		{
