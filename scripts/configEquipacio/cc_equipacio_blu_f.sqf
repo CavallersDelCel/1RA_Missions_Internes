@@ -34,6 +34,8 @@
 //                  en                  Enginyer (Engineer)                                              //
 //                  sn                  Franctirador (Sniper)                                            //
 //                  sp                  Observador (Spotter)                                             //
+//                  divsl               Bussejador líder d'esquadra (Diver Squad Leader)                 //
+//                  divme               Bussejador metge (Diver Medic)                                   //
 //                  div                 Bussejador                                                       //
 //                                                                                                       //
 //                  hmmwv               Equipació per HMMWVs                                             //
@@ -880,6 +882,113 @@ switch (_tipusUnitat) do
 		
 		// Objectes
 		_unitat linkItem _gps;
+	};
+	
+	// Bussejador: Líder d'esquadra (divsl)
+	case "divsl":
+	{
+		// Treure l'uniforme, casc i armilla
+		removeUniform _unitat;
+		removeHeadgear _unitat;
+		removeGoggles _unitat;
+		
+		// Uniforme, armilla i motxilla
+		_unitat forceAddUniform _uniformeDIV;
+		_unitat addVest _armillaDIV;
+		_unitat addBackpack _motxillaDIV;
+		
+		// Objectes a l'uniforme
+		(uniformContainer _unitat) addItemCargoGlobal [_taps,1];
+		(uniformContainer _unitat) addItemCargoGlobal [_morfina,1];
+		(uniformContainer _unitat) addItemCargoGlobal [_epinefrina,1];
+		(uniformContainer _unitat) addItemCargoGlobal [_benes,2];
+		(uniformContainer _unitat) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",4];
+		(uniformContainer _unitat) addMagazineCargoGlobal ["20Rnd_556x45_UW_mag",3];
+		
+		// Objectes a l'armilla
+		// No es poden posar objectes a l'armilla de bussejador
+		
+		// Objectes a la motxilla
+		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
+		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
+			(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
+			(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
+			(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
+			(unitBackpack _unitat) addItemCargoGlobal [_torniquet,1];
+		};
+		(unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
+		(unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_mk84",1];
+		(unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_an_m8hc",2];
+		(unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_m67",4];
+		(unitBackpack _unitat) addMagazineCargoGlobal ["30Rnd_556x45_Stanag",7];
+		(unitBackpack _unitat) addMagazineCargoGlobal ["20Rnd_556x45_UW_mag",4];
+		
+		// Ulleres
+		_unitat addGoggles _ulleresDIV;
+		
+		// Arma principal
+		_unitat addWeapon _armaDIV;
+		
+		// Objectes
+		_unitat linkItem _gps;
+		
+		// Binocles
+		_unitat addWeapon _vectorIV;
+	};
+	
+	// Bussejador metge (divme)
+	case "divme":
+	{
+		// Treure l'uniforme, casc i armilla
+		removeUniform _unitat;
+		removeHeadgear _unitat;
+		removeGoggles _unitat;
+		
+		// Uniforme, armilla i motxilla
+		_unitat forceAddUniform _uniformeDIV;
+		_unitat addVest _armillaDIV;
+		_unitat addBackpack _motxillaDIV;
+		
+		// Objectes a l'uniforme
+		(uniformContainer _unitat) addItemCargoGlobal [_taps,1];
+		(uniformContainer _unitat) addItemCargoGlobal [_morfina,1];
+		(uniformContainer _unitat) addItemCargoGlobal [_epinefrina,1];
+		(uniformContainer _unitat) addItemCargoGlobal [_benes,2];
+		(uniformContainer _unitat) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",4];
+		(uniformContainer _unitat) addMagazineCargoGlobal ["20Rnd_556x45_UW_mag",3];
+		
+		// Objectes a l'armilla
+		// No es poden posar objectes a l'armilla de bussejador
+		
+		// Objectes a la motxilla
+		(unitBackpack _unitat) addItemCargoGlobal [_morfina,8];
+		(unitBackpack _unitat) addItemCargoGlobal [_epinefrina,8];	
+		(unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
+		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
+			(unitBackpack _unitat) addItemCargoGlobal [_benes,8];
+			(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,8];
+			(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,8];
+			(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,6];
+			(unitBackpack _unitat) addItemCargoGlobal [_torniquet,3];
+			(unitBackpack _unitat) addItemCargoGlobal [_atropina,8];
+			(unitBackpack _unitat) addItemCargoGlobal [_kitQuirurgic,2];
+			(unitBackpack _unitat) addItemCargoGlobal [_kitPrimersAuxilis,2];
+			(unitBackpack _unitat) addItemCargoGlobal [_bossaSalina500,3];
+		} else {
+			(unitBackpack _unitat) addItemCargoGlobal [_benes,15];
+			(unitBackpack _unitat) addItemCargoGlobal [_bossaSang500,2];
+		};
+		(unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_mk84",1];
+		(unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_an_m8hc",2];
+		(unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_m67",1];
+		(unitBackpack _unitat) addMagazineCargoGlobal ["30Rnd_556x45_Stanag",3];
+		(unitBackpack _unitat) addMagazineCargoGlobal ["20Rnd_556x45_UW_mag",3];
+		
+		// Ulleres
+		_unitat addGoggles _ulleresDIV;
+		
+		// Arma principal
+		_unitat addWeapon _armaDIV;
 	};
 	
 	// Bussejador
