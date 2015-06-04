@@ -54,7 +54,7 @@ _esInfanteria = _unitat isKindOf "CAManBase";
 // Resum d'equipació: Armes, accessoris, ulleres, armilles, ...                                          //
 //=======================================================================================================//
 
-private["_bateriaUAV", "_cintaDentencio", "_einesMapa", "_microDAGR", "_taps", "_vectorIV", "_atragmx", "_kestrel", "_claker", "_clakerm26", "_kitDesactivacio", "_telefon"];
+private["_bateriaUAV", "_cintaDentencio", "_einesMapa", "_microDAGR", "_taps", "_vectorIV", "_atragmx", "_kestrel", "_clacker", "_clackerm26", "_kitDesactivacio", "_telefon"];
 private["_atropina", "_epinefrina", "_morfina", "_benes", "_benesElastiques", "_benesRapides", "_benesEmpaquetants"];
 private["_bossaSang250", "_bossaSang500", "_bossaSang1000", "_bossaPlasma250", "_bossaPlasma500", "_bossPlasma1000", "_bossaSalina250", "_bossaSalina500", "_bossaSalina1000"];
 private["_kitPrimersAuxilis", "_kitQuirurgic", "_torniquet"];
@@ -153,8 +153,8 @@ if (cc_param_modRealisme == 1) then {
 	_kestrel = "ACE_Kestrel4500";
 
 	// Objectes relacionats amb explosius
-	_claker = "ACE_Clacker";
-	_clakerm26 = "ACE_M26_Clacker";
+	_clacker = "ACE_Clacker";
+	_clackerm26 = "ACE_M26_Clacker";
 	_kitDesactivacio = "ACE_DefusalKit";
 	_telefon = "ACE_Cellphone";
 
@@ -991,7 +991,7 @@ switch (_tipusUnitat) do
 		_unitat addWeapon _armaDIV;
 	};
 	
-	// Bussejador
+	// Bussejador (div)
 	case "div":
 	{
 		// Treure l'uniforme, casc i armilla
