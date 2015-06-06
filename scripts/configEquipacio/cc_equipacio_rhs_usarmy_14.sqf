@@ -821,13 +821,7 @@ switch (_tipusUnitat) do
 		(vestContainer _unitat) addItemCargoGlobal [_visioNocturna,1];
 		
 		// Objectes a la motxilla
-		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
-		if (cc_param_modRealisme == 1) then {
-			(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
-			(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
-			(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
-			(unitBackpack _unitat) addItemCargoGlobal [_torniquet,1];
-		};
+		(unitBackpack _unitat) addMagazineCargoGlobal ["SatchelCharge_Remote_Mag",2];
 		
 		// Arma principal
 		_unitat addWeapon _arma;
