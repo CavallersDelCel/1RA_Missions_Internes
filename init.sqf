@@ -62,6 +62,35 @@ if ( isServer ) then {
 	cc_script_zeus = [] execVM "scripts\zeus\cc_zeus_init.sqf"
 };
 
+cc_crearEntradaEspionatge = compileFinal "
+	_jugador = _this select 0;
+	{
+
+		_x createDiaryRecord[ ""Diary"", [""Documents Secrets"", ""Aquests documents detallen informació sobre la localització del traidor. També especulen sobre la presència d'un alt comandament enemic. <br/><br/>El traidor: Erik Schultz.<br/><br/><img image='imatges\Traidor.jpg'/> ""]];
+		[""Nova Informació:"",""Documents Secrets""] call BIS_fnc_infoText;
+	} forEach units (group _jugador) - [_jugador];
+";
+
+cc_crearEntradaIEDs = compileFinal "
+	_jugador = _this select 0;
+	{
+
+		_x createDiaryRecord[ ""Diary"", [""IEDs"", ""Localització dels IEDs afegida al mapa.""]];
+		[""Nova Informació:"",""Localització dels IEDs""] call BIS_fnc_infoText;
+	} forEach units (group _jugador) - [_jugador];
+";
+
+cc_crearEntradaRadio = compileFinal "
+	_jugador = _this select 0;
+	{
+
+		_x createDiaryRecord[ ""Diary"", [""Inhibidors de senyal"", ""Aquests documents contenen informació detallada sobre la localització de les torres inhibidores de senyal de ràdio.""]];
+		[""Nova Informació:"",""Inhibidors de senyal""] call BIS_fnc_infoText;
+	} forEach units (group _jugador) - [_jugador];
+";
+
+//[] execVM "ActivarRadios.sqf";
+
 [] call compile preprocessFile "ActivarRadios.sqf";
 
 //============================================ FI DEL FITXER ============================================//

@@ -4487,7 +4487,7 @@ class Mission
 			leader=1;
 			skill=0.60000002;
 			text="LaptopIntel";
-			init="this attachTo [CampTable, [0.5,0,0.55]]; this call bis_fnc_initIntelObject; Intel_IED = [this, ""RscAttributeDiaryRecord"", [""IEDs"", format [""Localització dels IEDs afegida al mapa""]]] call bis_fnc_setServerVariable;";
+			init="_intelIEDMar = LaptopIntel addAction [""Agafar Informació"", ""AgafarInfoIEDs.sqf""];";
 		};
 		class Item9
 		{
@@ -4565,7 +4565,7 @@ class Mission
 			vehicle="Intel_File2_F";
 			skill=0.60000002;
 			text="DocEspionatge";
-			init="[this, ""RscAttributeDiaryRecord"", [""Documents Secrets"", format [""Aquests documents detallen informació sobre la localització del traidor. També especulen sobre la presència d'un alt comandament enemic.""]]] call bis_fnc_setServerVariable;";
+			init="_DocEspionatge = DocEspionatge addAction [""Agafar Documents"", ""AgafarInfoEspionatge.sqf""];";
 		};
 		class Item17
 		{
@@ -4921,7 +4921,7 @@ class Mission
 			leader=1;
 			skill=0.60000002;
 			text="LaptopIntel_Terra";
-			init="this attachTo [CampTable_Terra, [0.5,0,0.55]]; this call bis_fnc_initIntelObject; [this, ""RscAttributeDiaryRecord"", [""IEDs"", format [""Localització dels IEDs afegida al mapa""]]] call bis_fnc_setServerVariable;";
+			init="_intelIEDTerra = LaptopIntel_Terra addAction [""Agafar Informació"", ""AgafarInfoIEDs.sqf""];";
 		};
 		class Item49
 		{
@@ -5462,7 +5462,7 @@ class Mission
 			vehicle="Intel_File2_F";
 			skill=0.60000002;
 			text="DocRadio";
-			init="[this, ""RscAttributeDiaryRecord"", [""Informe d'Inteligència"", format [""Aquests documents detallen informació sobre la localització de les torres inhibidores de senyal de radio.""]]] call bis_fnc_setServerVariable;";
+			init="_DocRadio = DocRadio addAction [""Agafar Documents"", ""AgafarInfoRadio.sqf""];";
 		};
 		class Item106
 		{
@@ -5736,7 +5736,7 @@ class Mission
 	};
 	class Sensors
 	{
-		items=22;
+		items=21;
 		class Item0
 		{
 			position[]={4478.9771,114.75451,6763.4429};
@@ -5851,7 +5851,7 @@ class Mission
 			interruptable=1;
 			age="UNKNOWN";
 			expCond="!alive LaptopIntel";
-			expActiv="""IED1"" setMarkerAlphaLocal 1; ""IED2"" setMarkerAlphaLocal 1; ""IED3"" setMarkerAlphaLocal 1; ""IED4"" setMarkerAlphaLocal 1; ""IED5"" setMarkerAlphaLocal 1; ""IED6"" setMarkerAlphaLocal 1; ""IED7"" setMarkerAlphaLocal 1; intelIED = 1;";
+			expActiv="intelIED = 1;";
 			class Effects
 			{
 			};
@@ -5866,7 +5866,7 @@ class Mission
 			interruptable=1;
 			age="UNKNOWN";
 			expCond="!alive DocEspionatge";
-			expActiv="""ObjMaritim2"" setMarkerAlphaLocal 1; ""ObjMaritim2_1"" setMarkerAlphaLocal 1; ""ObjMaritim2_2"" setMarkerAlphaLocal 1; ""ObjMaritim3"" setMarkerAlphaLocal 1; ""ObjMaritim4"" setMarkerAlphaLocal 1; intelEspionatge = 1;";
+			expActiv="intelEspionatge = 1;";
 			class Effects
 			{
 			};
@@ -5965,7 +5965,7 @@ class Mission
 			interruptable=1;
 			age="UNKNOWN";
 			expCond="!alive LaptopIntel_Terra";
-			expActiv="""IED1"" setMarkerAlphaLocal 1; ""IED2"" setMarkerAlphaLocal 1; ""IED3"" setMarkerAlphaLocal 1; ""IED4"" setMarkerAlphaLocal 1; ""IED5"" setMarkerAlphaLocal 1; ""IED6"" setMarkerAlphaLocal 1; ""IED7"" setMarkerAlphaLocal 1; intelIED = 1;";
+			expActiv="intelIED = 1;";
 			class Effects
 			{
 			};
@@ -6000,21 +6000,6 @@ class Mission
 		};
 		class Item18
 		{
-			position[]={4497.3115,105.27145,6801.9155};
-			a=1;
-			b=1;
-			angle=181.134;
-			rectangular=1;
-			interruptable=1;
-			age="UNKNOWN";
-			expCond="!alive DocRadio";
-			expActiv="""ObjTerra2"" setMarkerAlphaLocal 1; ""ObjTerra2_1"" setMarkerAlphaLocal 1; ""ObjTerra2_2"" setMarkerAlphaLocal 1; ""ObjMaritim3"" setMarkerAlphaLocal 1;";
-			class Effects
-			{
-			};
-		};
-		class Item19
-		{
 			position[]={5309.8555,94.140717,4188.1294};
 			a=100;
 			b=100;
@@ -6030,7 +6015,7 @@ class Mission
 			{
 			};
 		};
-		class Item20
+		class Item19
 		{
 			position[]={6948.0576,-0.043723445,7684.5435};
 			a=0;
@@ -6044,7 +6029,7 @@ class Mission
 			{
 			};
 		};
-		class Item21
+		class Item20
 		{
 			position[]={6592.8008,24.403225,5346.3447};
 			a=1;
