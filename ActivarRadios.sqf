@@ -9,13 +9,13 @@ if( torresDestruides == 0 ) then {
 };
 
 if( torresDestruides == 1 ) then {
-	_factorReceiving = 100.0;
-	_factorSending = 0.01;
+	_factorReceiving = 10.0;
+	_factorSending = 0.1;
 };
 
 if( torresDestruides == 2 ) then {
-	_factorReceiving = 10.0;
-	_factorSending = 0.1;
+	_factorReceiving = 2.0;
+	_factorSending = 0.8;
 };
 
 if( torresDestruides == 3 ) then {
