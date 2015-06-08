@@ -40,7 +40,8 @@ class Mission
 		"A3_Structures_F_EPA_Mil_Scrapyard",
 		"A3_Boat_F_Boat_Armed_01",
 		"A3_armor_f_beta_APC_Tracked_02",
-		"blx_ridgback"
+		"blx_ridgback",
+		"A3_Structures_F_EPC_Items_Documents"
 	};
 	addOnsAuto[]=
 	{
@@ -68,7 +69,7 @@ class Mission
 		"A3_Structures_F_EPB_Civ_Camping",
 		"A3_Structures_F_EPC_Items_Electronics",
 		"A3_Structures_F_Wrecks",
-		"A3_Data_F_Curator_Intel",
+		"A3_Structures_F_EPC_Items_Documents",
 		"A3_Weapons_F_Explosives",
 		"A3_Structures_F_Mil_Fortification",
 		"A3_Structures_F_Mil_Helipads",
@@ -3877,7 +3878,7 @@ class Mission
 						items=4;
 						class Item0
 						{
-							value="Esq1_AR";
+							value="Esq2_ME";
 							parentCls="ModuleCurator_F";
 							typeName="Owner";
 						};
@@ -4562,7 +4563,7 @@ class Mission
 			position[]={7045.6152,9.7421026,5944.5322};
 			id=183;
 			side="EMPTY";
-			vehicle="Intel_File2_F";
+			vehicle="Land_File_research_F";
 			skill=0.60000002;
 			text="DocEspionatge";
 			init="_DocEspionatge = DocEspionatge addAction [""Agafar Documents"", ""AgafarInfoEspionatge.sqf""];";
@@ -4777,7 +4778,7 @@ class Mission
 			leader=1;
 			skill=0.5;
 			health=0.92538565;
-			init="[""hmmwv"",this] spawn cc_fnc_configEquipacio;";
+			init="0 = [""hmmwv"",this] spawn cc_fnc_configEquipacio;";
 		};
 		class Item36
 		{
@@ -4790,7 +4791,7 @@ class Mission
 			leader=1;
 			skill=0.5;
 			health=0.93729705;
-			init="[""blx"",this] spawn cc_fnc_configEquipacio;";
+			init="0 = [""blx"",this] spawn cc_fnc_configEquipacio;";
 		};
 		class Item37
 		{
@@ -4946,7 +4947,7 @@ class Mission
 			vehicle="B_SDV_01_F";
 			skill=0.5;
 			text="Submari1";
-			init="[""sdv1"",this] spawn cc_fnc_configEquipacio;";
+			init="0 = [""sdv1"",this] spawn cc_fnc_configEquipacio;";
 		};
 		class Item51
 		{
@@ -4958,7 +4959,7 @@ class Mission
 			vehicle="B_SDV_01_F";
 			skill=0.5;
 			text="Submari2";
-			init="[""sdv2"",this] spawn cc_fnc_configEquipacio;";
+			init="0 = [""sdv2"",this] spawn cc_fnc_configEquipacio;";
 		};
 		class Item52
 		{
@@ -5459,7 +5460,7 @@ class Mission
 			position[]={4496.1196,105.68626,6798.8657};
 			id=272;
 			side="EMPTY";
-			vehicle="Intel_File2_F";
+			vehicle="Land_File_research_F";
 			skill=0.60000002;
 			text="DocRadio";
 			init="_DocRadio = DocRadio addAction [""Agafar Documents"", ""AgafarInfoRadio.sqf""];";
