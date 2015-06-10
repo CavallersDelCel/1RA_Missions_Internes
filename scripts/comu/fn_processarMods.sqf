@@ -2,9 +2,10 @@
 // Arxiu: fn_processarMods.sqf                                                                           //
 // Autor: CC_Magnetar                                                                                    //
 // Versió: 0.1                                                                                           //
-// Creació del Document: 09/06/2015                                                                      //
+// Creació del Document: 2015/06/09                                                                      //
 // Descripció: Aquest document serveix per processar els mods que s'han carregat i configurar la partida //
 //             de forma adequada. Els mods es pordran més endavant customitzar a init.sqf                //
+// Canvis: 0.1 (2015/06/09) Versió inicial                                                               //
 //=======================================================================================================//
 
 cc_mod_acre2 = isClass (configFile >> "CfgPatches" >> "acre_main");        // Comprovar si ACRE 2 està carregat.
