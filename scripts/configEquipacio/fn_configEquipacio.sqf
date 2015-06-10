@@ -1,13 +1,13 @@
 //=======================================================================================================//
 // Arxiu: configEquipacio.sqf                                                                            //
 // Autor: CC_Magnetar                                                                                    //
-// Versió: 0.3                                                                                           //
-// Creació del Document: 02/04/2015                                                                      //
+// Versió: 0.4                                                                                           //
+// Creació del Document: 2015/04/02                                                                      //
 // Descripció: Aquest document serveix per equipar els jugadors depenent del rol i la facció. A l'hora   //
 //             de configurar l'equip de la unitat la següent línia s'ha d'afegir al INIT de la unitat en //
 //             l'editor:                                                                                 //
 //                                                                                                       //
-//                  0 = ["ROL_JUGADOR",this] spawn cc_fnc_configEquipacio;                               //
+//                  ["ROL_JUGADOR",this] call cc_fnc_configEquipacio;                                    //
 //                                                                                                       //
 //             on "ROL_JUGADOR" és una de les següents entrades:                                         //
 //                                                                                                       //
@@ -33,13 +33,17 @@
 //                  en                  Enginyer (Engineer)                                              //
 //                  sn                  Franctirador (Sniper)                                            //
 //                  sp                  Observador (Spotter)                                             //
+//                  divsl               Bussejador líder d'esquadra (Diver Squad Leader)                 //
+//                  divme               Bussejador metge (Diver Medic)                                   //
 //                  div                 Bussejador (Diver)                                               //
 //                                                                                                       //
 //                  hmmwv               Equipació per HMMWVs                                             //
 //                                                                                                       //
 // Canvis: 0.1 (2015/04/02) Versió inicial.                                                              //
 //         0.2 (2015/04/26) Canviada la facció de les unitats RHS v0.3.7.                                //
-//         0.3 (2015/05/17) Afegida l'equipació pel vehicle HMMWV                                        //
+//         0.3 (2015/05/17) Afegida l'equipació pel vehicle HMMWV, divsl i divme.                        //
+//         0.4 (2015/06/10) Afegit el cas default amb equipació de fuseller (rfl) i s'ha mogut la opció  //
+//                          d'utilitzar els perfils a init.sqf.                                          //
 //=======================================================================================================//
 
 // Declaració de variables
@@ -70,11 +74,7 @@ if (cc_param_debugOutput == 1) then {
 
 // Equipació per la facció BLUFOR
 if (_faccioUnitat == "blu_f") then {
-	if( cc_param_utilitzarPerfils == 1 ) then {
-		#include "cc_equipacio_rhs_usarmy_14_perfils.sqf"
-	} else {
-		#include "cc_equipacio_blu_f.sqf"
-	};
+	#include "cc_equipacio_blu_f.sqf"
 };
 
 // Equipació per la facció FIA
@@ -99,11 +99,7 @@ if (_faccioUnitat == "civ_f") then {
 
 // Equipació per la facció USA "United States Army"
 if (_faccioUnitat == "rhs_faction_usarmy_14") then {
-	if( cc_param_utilitzarPerfils == 1 ) then {
-		#include "cc_equipacio_rhs_usarmy_14_perfils.sqf"
-	} else {
-		#include "cc_equipacio_rhs_usarmy_14.sqf"
-	};
+	#include "cc_equipacio_rhs_usarmy_14.sqf"
 };
 
 // Equipació per la facció USA "United States Marine Corps"
@@ -113,11 +109,7 @@ if (_faccioUnitat == "rhs_faction_usmc_14") then {
 
 // Equipació per la facció USA "United States Army"
 if (_faccioUnitat == "rhs_faction_insurgents") then {
-	if( cc_param_utilitzarPerfils == 1 ) then {
-		#include "cc_equipacio_rhs_usarmy_14_perfils.sqf"
-	} else {
-		#include "cc_equipacio_rhs_insurgents.sqf"
-	};
+	#include "cc_equipacio_rhs_insurgents.sqf"
 };
 
 // Equipació per la facció russa "Russian Air Defense Troops"

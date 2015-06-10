@@ -5,7 +5,6 @@
 // Creació del Document: 08/03/2015                                                                      //
 // Descripció: Aquest document serveix per processar la matriu paramsArray. Fitxer basat en:             //
 //             http://www.ferstaberinde.com/f3/en/)                                                      //
-//             INIT de l'editor el següent:                                                              //
 //=======================================================================================================//
 
 _paramArray = paramsArray;
