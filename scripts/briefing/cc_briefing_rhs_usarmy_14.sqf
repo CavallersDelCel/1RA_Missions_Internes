@@ -92,9 +92,9 @@ L'extracció es farà a càrrec de Falcó 1 sota el protocol de radio Alfa en ca
 "]];
 
 //=======================================================================================================//
-// NOTES: INTELIGÈNCIA                                                                                   //
+// NOTES: INTEL·LIGÈNCIA                                                                                 //
 //=======================================================================================================//
-_intel = player createDiaryRecord ["diary", ["Inteligència","
+_intel = player createDiaryRecord ["diary", ["Intel·ligència","
 <br/>
 <font color='#FF0000' size='18'>Forces enemigues</font>
 <br/>

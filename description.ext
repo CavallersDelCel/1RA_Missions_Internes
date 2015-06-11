@@ -61,18 +61,6 @@ class Params
     };
 	
 	//===================================================================================================//
-	// Radios: Sistemes de radios.                                                                       //
-	// Opció per defecte: Task Force Arrowhead (TFAR)                                                    //
-	//===================================================================================================//
-    class cc_param_radios
-    {
-        title = "Sistemes de radio";
-        values[] = {0,1,2};
-        texts[] = {"Cap","TFAR","ACRE2"};
-        default = 1;
-    };
-	
-	//===================================================================================================//
 	// Perfils: Utilitzar els perfils a l'hora d'equipar les unitats                                     //
 	// Opció per defecte: Els perfils no s'utilitzen.                                                    //
 	//===================================================================================================//
@@ -81,18 +69,6 @@ class Params
 		title = "Utilitzar perfils";
 		values[] = {0,1};
 		texts[] = {"No","Si"};
-		default = 0;
-	};
-	
-	//===================================================================================================//
-	// Millora de realisme: Mod a utilitzar per millorar el realisme.                                    //
-	// Opció per defecte: ACE3.                                                                          //
-	//===================================================================================================//
-	class cc_param_modRealisme
-	{
-		title = "Millora de realisme";
-		values[] = {0,1};
-		texts[] = {"AGM","ACE3"};
 		default = 0;
 	};
 	
@@ -259,7 +235,11 @@ class CfgFunctions
 			class processarParamsArray
 			{
 				preInit = 1;   // La funció s'executa al iniciar la missió, ABANS d'inicialitzar objectes
-				postInit = 1;  // La funció s'executa al iniciar la missió, DESPRÉS d'inicialitzar objectes
+				// postInit = 1;  // La funció s'executa al iniciar la missió, DESPRÉS d'inicialitzar objectes
+			};
+			class processarMods
+			{
+				preInit = 1;  // La funció s'executa al iniciar la missió, ABANS d'inicialitzar objectes
 			};
 		};
 		

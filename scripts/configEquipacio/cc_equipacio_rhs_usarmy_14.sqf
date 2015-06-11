@@ -2,14 +2,14 @@
 // Arxiu: cc_equipacio_rhs_usarmy_14.sqf                                                                 //
 // Autor: CC_Magnetar                                                                                    //
 // Versió: 0.3                                                                                           //
-// Creació del Document: 02/04/2015                                                                      //
+// Creació del Document: 2015/04/02                                                                      //
 // Descripció: Aquest document serveix per equipar els jugadors amb l'equipació dissenyada per la missió //
 //             sense fer servir els perfils estàndard del grup dels Cavallers del Cel. Requereix que el  //
 //             jugador formi part de la facció RHS: United States Army "rhs_faction_usarmy_14"           //
 //             http://class.rhsmods.org/rhsusaf/CfgGroups_West_rhs_faction_usarmy_wd.html                // 
 //             Cal afegir la següent línia al INIT de la unitat en l'editor:                             //
 //                                                                                                       //
-//                  0 = ["ROL_JUGADOR",this] spawn cc_fnc_configEquipacio;                               //
+//                  ["ROL_JUGADOR",this] call cc_fnc_configEquipacio;                                    //
 //                                                                                                       //
 //             on "ROL_JUGADOR" és una de les següents entrades:                                         //
 //                                                                                                       //
@@ -47,6 +47,20 @@
 //         0.4 (2015/05/26) Canviat al sistema ACE3.                                                     //                     
 //=======================================================================================================//
 
+//=======================================================================================================//
+// Declaració de variables                                                                               //
+//=======================================================================================================//
+
+private["_bateriaUAV", "_cintaDentencio", "_einesMapa", "_microDAGR", "_taps", "_vectorIV", "_atragmx", "_kestrel", "_clacker", "_clackerm26", "_kitDesactivacio", "_telefon"];
+private["_atropina", "_epinefrina", "_morfina", "_benes", "_benesElastiques", "_benesRapides", "_benesEmpaquetants"];
+private["_bossaSang250", "_bossaSang500", "_bossaSang1000", "_bossaPlasma250", "_bossaPlasma500", "_bossPlasma1000", "_bossaSalina250", "_bossaSalina500", "_bossaSalina1000"];
+private["_kitPrimersAuxilis", "_kitQuirurgic", "_torniquet"];
+private["_aprincipal"];
+
+//=======================================================================================================//
+// Obtenir el tipus d'unitat i si és un soldat d'infanteria                                              //
+//=======================================================================================================//
+
 _tipusUnitat = toLower (_this select 0);
 _unitat = _this select 1;
 _esInfanteria = _unitat isKindOf "CAManBase"; 
@@ -54,11 +68,6 @@ _esInfanteria = _unitat isKindOf "CAManBase";
 //=======================================================================================================//
 // Resum d'equipació: Armes, accessoris, ulleres, armilles, ...                                          //
 //=======================================================================================================//
-
-private["_bateriaUAV", "_cintaDentencio", "_einesMapa", "_microDAGR", "_taps", "_vectorIV", "_atragmx", "_kestrel", "_clacker", "_clackerm26", "_kitDesactivacio", "_telefon"];
-private["_atropina", "_epinefrina", "_morfina", "_benes", "_benesElastiques", "_benesRapides", "_benesEmpaquetants"];
-private["_bossaSang250", "_bossaSang500", "_bossaSang1000", "_bossaPlasma250", "_bossaPlasma500", "_bossPlasma1000", "_bossaSalina250", "_bossaSalina500", "_bossaSalina1000"];
-private["_kitPrimersAuxilis", "_kitQuirurgic", "_torniquet"];
 
 // Uniformes
 _uniforme = "rhs_uniform_cu_ocp";
@@ -136,7 +145,7 @@ _prismatic = "lerca_1200_tan";
 // Visió nocturna
 _visioNocturna = "rhsusf_ANPVS_15";
 
-if (cc_param_modRealisme == 1) then {
+if (cc_mod_ace3) then {
 	//===================================================================================================//
 	// Objectes depenents de ACE 3                                                                       //
 	//===================================================================================================//
@@ -187,7 +196,9 @@ if (cc_param_modRealisme == 1) then {
 
 	// Objectes mèdics: Torniquets
 	_torniquet = "ACE_tourniquet";
-} else {
+};
+
+if (cc_mod_agm) then {
 
 	//===================================================================================================//
 	// Objectes depenents de AGM                                                                         //
@@ -252,7 +263,7 @@ switch (_tipusUnitat) do
 		// Objectes a l'armilla
 		(vestContainer _unitat) addItemCargoGlobal [_benes,2];
 		(vestContainer _unitat) addItemCargoGlobal [_einesMapa,1];
-		if (cc_param_modRealisme == 1) then {
+		if (cc_mod_ace3) then {
 			(vestContainer _unitat) addItemCargoGlobal [_microDAGR,1];
 		};
 		(vestContainer _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",8];
@@ -350,7 +361,7 @@ switch (_tipusUnitat) do
 		(unitBackpack _unitat) addItemCargoGlobal [_morfina,8];
 		(unitBackpack _unitat) addItemCargoGlobal [_epinefrina,8];	
 		(unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
-		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
+		if (cc_mod_ace3 and cc_param_SistemaMedic == 1) then {
 			(unitBackpack _unitat) addItemCargoGlobal [_benes,10];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,10];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,10];
@@ -360,7 +371,9 @@ switch (_tipusUnitat) do
 			(unitBackpack _unitat) addItemCargoGlobal [_kitQuirurgic,2];
 			(unitBackpack _unitat) addItemCargoGlobal [_kitPrimersAuxilis,2];
 			(unitBackpack _unitat) addItemCargoGlobal [_bossaSalina500,6];
-		} else {
+		};
+		
+		if( cc_mod_agm or (cc_mod_ace3 and cc_param_SistemaMedic == 0)) then {
 			(unitBackpack _unitat) addItemCargoGlobal [_benes,20];
 			(unitBackpack _unitat) addItemCargoGlobal [_bossaSang500,2];
 		};
@@ -388,7 +401,7 @@ switch (_tipusUnitat) do
 		// Objectes a l'armilla
 		(vestContainer _unitat) addItemCargoGlobal [_benes,2];
 		(vestContainer _unitat) addItemCargoGlobal [_einesMapa,1];
-		if (cc_param_modRealisme == 1) then {
+		if (cc_mod_ace3) then {
 			(vestContainer _unitat) addItemCargoGlobal [_microDAGR,1];
 		};
 		(vestContainer _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",8];
@@ -399,7 +412,7 @@ switch (_tipusUnitat) do
 		
 		// Objectes a la motxilla
 		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
-		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
+		if (cc_mod_ace3 and cc_param_SistemaMedic == 1) then {
 			(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
@@ -446,7 +459,7 @@ switch (_tipusUnitat) do
 		
 		// Objectes a la motxilla
 		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
-		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
+		if (cc_mod_ace3 and cc_param_SistemaMedic == 1) then {
 			(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
@@ -490,7 +503,7 @@ switch (_tipusUnitat) do
 		
 		// Objectes a la motxilla
 		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
-		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
+		if (cc_mod_ace3 and cc_param_SistemaMedic == 1) then {
 			(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
@@ -528,7 +541,7 @@ switch (_tipusUnitat) do
 		
 		// Objectes a la motxilla
 		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
-		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
+		if (cc_mod_ace3 and cc_param_SistemaMedic == 1) then {
 			(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
@@ -572,7 +585,7 @@ switch (_tipusUnitat) do
 		
 		// Objectes a la motxilla
 		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
-		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
+		if (cc_mod_ace3 and cc_param_SistemaMedic == 1) then {
 			(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
@@ -610,7 +623,7 @@ switch (_tipusUnitat) do
 		
 		// Objectes a la motxilla
 		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
-		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
+		if (cc_mod_ace3 and cc_param_SistemaMedic == 1) then {
 			(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
@@ -640,7 +653,7 @@ switch (_tipusUnitat) do
 		// Objectes a l'armilla
 		(vestContainer _unitat) addItemCargoGlobal [_benes,2];
 		(vestContainer _unitat) addItemCargoGlobal [_kestrel,1];
-		if (cc_param_modRealisme == 1) then {
+		if (cc_mod_ace3) then {
 			(vestContainer _unitat) addItemCargoGlobal [_atragmx,1];
 		};
 		(vestContainer _unitat) addMagazineCargoGlobal ["rhs_mag_m67",3];
@@ -648,7 +661,7 @@ switch (_tipusUnitat) do
 		
 		// Objectes a la motxilla
 		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
-		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
+		if (cc_mod_ace3 and cc_param_SistemaMedic == 1) then {
 			(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
@@ -687,7 +700,7 @@ switch (_tipusUnitat) do
 		_unitat addBackpack _motxilla;
 		(unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
 		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
-		if (cc_param_modRealisme == 1) then {
+		if (cc_mod_ace3) then {
 			(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
@@ -734,7 +747,7 @@ switch (_tipusUnitat) do
 		
 		// Objectes a la motxilla
 		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
-		if (cc_param_modRealisme == 1) then {
+		if (cc_mod_ace3) then {
 			(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
@@ -840,7 +853,7 @@ switch (_tipusUnitat) do
 		
 		// Objectes a l'armilla
 		(vestContainer _unitat) addItemCargoGlobal [_benes,2];
-		if (cc_param_modRealisme == 1) then {
+		if (cc_mod_ace3) then {
 			(vestContainer _unitat) addItemCargoGlobal [_microDAGR,1];
 			(vestContainer _unitat) addItemCargoGlobal [_atragmx,1];
 		};
@@ -865,7 +878,7 @@ switch (_tipusUnitat) do
 		
 		// Objectes a l'armilla
 		(vestContainer _unitat) addItemCargoGlobal [_benes,2];
-		if (cc_param_modRealisme == 1) then {
+		if (cc_mod_ace3) then {
 			(vestContainer _unitat) addItemCargoGlobal [_microDAGR,1];
 			(vestContainer _unitat) addItemCargoGlobal [_atragmx,1];
 		};
@@ -909,7 +922,7 @@ switch (_tipusUnitat) do
 		
 		// Objectes a la motxilla
 		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
-		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
+		if (cc_mod_ace3 and cc_param_SistemaMedic == 1) then {
 			(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
@@ -963,7 +976,7 @@ switch (_tipusUnitat) do
 		(unitBackpack _unitat) addItemCargoGlobal [_morfina,8];
 		(unitBackpack _unitat) addItemCargoGlobal [_epinefrina,8];	
 		(unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
-		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
+		if (cc_mod_ace3 and cc_param_SistemaMedic == 1) then {
 			(unitBackpack _unitat) addItemCargoGlobal [_benes,8];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,8];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,8];
@@ -973,7 +986,8 @@ switch (_tipusUnitat) do
 			(unitBackpack _unitat) addItemCargoGlobal [_kitQuirurgic,2];
 			(unitBackpack _unitat) addItemCargoGlobal [_kitPrimersAuxilis,2];
 			(unitBackpack _unitat) addItemCargoGlobal [_bossaSalina500,3];
-		} else {
+		};
+		if( cc_mod_agm or (cc_mod_ace3 and cc_param_SistemaMedic == 0)) then {
 			(unitBackpack _unitat) addItemCargoGlobal [_benes,15];
 			(unitBackpack _unitat) addItemCargoGlobal [_bossaSang500,2];
 		};
@@ -1016,7 +1030,7 @@ switch (_tipusUnitat) do
 		
 		// Objectes a la motxilla
 		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
-		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
+		if (cc_mod_ace3 and cc_param_SistemaMedic == 1) then {
 			(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
@@ -1059,7 +1073,7 @@ switch (_tipusUnitat) do
 		_unitat addItemCargoGlobal [_epinefrina,10];
 		_unitat addItemCargoGlobal [_benes,10];
 		_unitat addItemCargoGlobal [_bossaSang500,5];
-		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
+		if (cc_mod_ace3 and cc_param_SistemaMedic == 1) then {
 			_unitat addItemCargoGlobal [_atropina,10];
 			_unitat addItemCargoGlobal [_benesElastiques,10];
 			_unitat addItemCargoGlobal [_benesRapides,10];

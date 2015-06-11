@@ -52,11 +52,11 @@ _missio = player createDiaryRecord ["diary", ["Missió","
 "]];
 
 //=======================================================================================================//
-// NOTES: INTELIGÈNCIA                                                                                   //
+// NOTES: INTEL·LIGÈNCIA                                                                                 //
 //=======================================================================================================//
-_intel = player createDiaryRecord ["diary", ["Inteligència","
+_intel = player createDiaryRecord ["diary", ["Intel·ligència","
 <br/>
-*** Informe d'inteligència. ***
+*** Informe d'intel·ligència. ***
 <br/><br/>
 <font size='18'>FORCES ENEMIGUES</font>
 <br/>
