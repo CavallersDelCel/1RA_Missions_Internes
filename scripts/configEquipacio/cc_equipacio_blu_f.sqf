@@ -1116,7 +1116,7 @@ switch (_tipusUnitat) do
 		_unitat addItemCargoGlobal [_epinefrina,10];
 		_unitat addItemCargoGlobal [_benes,15];
 		_unitat addItemCargoGlobal [_bossaSang500,5];
-		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
+		if (cc_var_ace3 and cc_param_SistemaMedic == 1) then {
 			_unitat addItemCargoGlobal [_atropina,10];
 			_unitat addItemCargoGlobal [_benesElastiques,10];
 			_unitat addItemCargoGlobal [_benesRapides,10];
@@ -1203,7 +1203,7 @@ switch (_tipusUnitat) do
 		// Fuseller (RFL)
 		_temp = _llistamotxilles select 0;
 		_temp addItemCargoGlobal [_benes,2];
-		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
+		if (cc_var_ace3 and cc_param_SistemaMedic == 1) then {
 			_temp addItemCargoGlobal [_benesElastiques,3];
 			_temp addItemCargoGlobal [_benesRapides,3];
 			_temp addItemCargoGlobal [_benesEmpaquetants,3];
@@ -1221,7 +1221,7 @@ switch (_tipusUnitat) do
 		// Fuseller Automàtic (RFL)
 		_temp = _llistamotxilles select 1;
 		_temp addItemCargoGlobal [_benes,2];
-		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
+		if (cc_var_ace3 and cc_param_SistemaMedic == 1) then {
 			_temp addItemCargoGlobal [_benesElastiques,3];
 			_temp addItemCargoGlobal [_benesRapides,3];
 			_temp addItemCargoGlobal [_benesEmpaquetants,3];
@@ -1245,7 +1245,7 @@ switch (_tipusUnitat) do
 			// Líder d'esquadra (SL)
 			if(_nom == "tf_rt1523g_big_rhs") then {
 				(_temp select 1) addItemCargoGlobal [_benes,2];
-				if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
+				if (cc_var_ace3 and cc_param_SistemaMedic == 1) then {
 					(_temp select 1) addItemCargoGlobal [_benesElastiques,3];
 					(_temp select 1) addItemCargoGlobal [_benesRapides,3];
 					(_temp select 1) addItemCargoGlobal [_benesEmpaquetants,3];
@@ -1350,7 +1350,7 @@ switch (_tipusUnitat) do
 		// Granader (GR)
 		_temp = _llistamotxilles select 0;
 		_temp addItemCargoGlobal [_benes,2];
-		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
+		if (cc_var_ace3 and cc_param_SistemaMedic == 1) then {
 			_temp addItemCargoGlobal [_benesElastiques,3];
 			_temp addItemCargoGlobal [_benesRapides,3];
 			_temp addItemCargoGlobal [_benesEmpaquetants,3];
@@ -1368,7 +1368,7 @@ switch (_tipusUnitat) do
 		// Granader (GR)
 		_temp = _llistamotxilles select 1;
 		_temp addItemCargoGlobal [_benes,2];
-		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
+		if (cc_var_ace3 and cc_param_SistemaMedic == 1) then {
 			_temp addItemCargoGlobal [_benesElastiques,3];
 			_temp addItemCargoGlobal [_benesRapides,3];
 			_temp addItemCargoGlobal [_benesEmpaquetants,3];
@@ -1395,19 +1395,19 @@ switch (_tipusUnitat) do
 		_temp addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",2];
 		_temp addItemCargoGlobal [_morfina,8];
 		_temp addItemCargoGlobal [_epinefrina,8];
-		if (cc_param_modRealisme == 1 && cc_param_SistemaMedic == 1) then {
-			(_temp select 1) addItemCargoGlobal [_benes,10];
-			(_temp select 1) addItemCargoGlobal [_benesElastiques,10];
-			(_temp select 1) addItemCargoGlobal [_benesRapides,10];
-			(_temp select 1) addItemCargoGlobal [_benesEmpaquetants,8];
-			(_temp select 1) addItemCargoGlobal [_torniquet,5];
-			(_temp select 1) addItemCargoGlobal [_atropina,8];
-			(_temp select 1) addItemCargoGlobal [_kitQuirurgic,2];
-			(_temp select 1) addItemCargoGlobal [_kitPrimersAuxilis,2];
-			(_temp select 1) addItemCargoGlobal [_bossaSalina500,6];
+		if (cc_var_ace3 and cc_param_SistemaMedic == 1) then {
+			_temp addItemCargoGlobal [_benes,10];
+			_temp addItemCargoGlobal [_benesElastiques,10];
+			_temp addItemCargoGlobal [_benesRapides,10];
+			_temp addItemCargoGlobal [_benesEmpaquetants,8];
+			_temp addItemCargoGlobal [_torniquet,5];
+			_temp addItemCargoGlobal [_atropina,8];
+			_temp addItemCargoGlobal [_kitQuirurgic,2];
+			_temp addItemCargoGlobal [_kitPrimersAuxilis,2];
+			_temp addItemCargoGlobal [_bossaSalina500,6];
 		} else {
-			(unitBackpack _unitat) addItemCargoGlobal [_benes,20];
-			(unitBackpack _unitat) addItemCargoGlobal [_bossaSang500,2];
+			_temp addItemCargoGlobal [_benes,20];
+			_temp addItemCargoGlobal [_bossaSang500,2];
 		};		
 		
 		// Armes
