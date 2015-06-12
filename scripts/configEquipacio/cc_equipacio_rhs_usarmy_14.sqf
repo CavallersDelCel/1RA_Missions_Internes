@@ -211,7 +211,7 @@ if (cc_mod_agm) then {
 	_bossaSang500 = "AGM_Bloodbag";
 	_cintaDentencio = "AGM_CableTie";
 	_vectorIV = "AGM_Vector";
-	_einesMapa = "AGM_MapToos";
+	_einesMapa = "AGM_MapTools";
 	_kestrel = "AGM_ItemKestrel";
 	_clacker = "AGM_Clacker";
 	_kitDesactivacio = "AGM_DefusalKit";
@@ -359,9 +359,9 @@ switch (_tipusUnitat) do
 		(vestContainer _unitat) addMagazineCargoGlobal ["rhs_mag_mk84",1];
 		
 		// Objectes a la motxilla
+		(unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
 		(unitBackpack _unitat) addItemCargoGlobal [_morfina,8];
 		(unitBackpack _unitat) addItemCargoGlobal [_epinefrina,8];	
-		(unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
 		if (cc_mod_ace3 and cc_param_SistemaMedic == 1) then {
 			(unitBackpack _unitat) addItemCargoGlobal [_benes,10];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,10];
