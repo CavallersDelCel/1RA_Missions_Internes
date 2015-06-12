@@ -58,7 +58,7 @@ if !(local _unitat) exitWith {};
 _faccioUnitat = toLower (faction _unitat);
 if(count _this > 2) then
 {
-  _faccio = toLower (_this select 2);
+	_faccio = toLower (_this select 2);
 };
 
 // Guarda en una variable pública el tipus d'unitat
