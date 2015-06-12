@@ -1,12 +1,12 @@
 //=======================================================================================================//
-// Arxiu: cc_equipacio_rhs_usmc_d.sqf                                                                    //
+// Arxiu: cc_equipacio_rhs_usmc_wd.sqf                                                                   //
 // Autor: CC_Magnetar                                                                                    //
-// Versió: 0.6                                                                                           //
-// Creació del Document: 2015/04/02                                                                      //
+// Versió: 0.1                                                                                           //
+// Creació del Document: 2015/06/12                                                                      //
 // Descripció: Aquest document serveix per equipar els jugadors amb l'equipació dissenyada per la missió //
 //             sense fer servir els perfils estàndard del grup dels Cavallers del Cel. Requereix que el  //
-//             jugador formi part de la facció RHS: United States Army "rhs_faction_usmc_d"              //
-//             http://class.rhsmods.org/rhsusaf/CfgGroups_West_rhs_faction_usmc_d.html                   // 
+//             jugador formi part de la facció RHS: United States Army "rhs_faction_usmc_wd"             //
+//             http://class.rhsmods.org/rhsusaf/CfgGroups_West_rhs_faction_usmc_wd.html                  // 
 //             Cal afegir la següent línia al INIT de la unitat en l'editor:                             //
 //                                                                                                       //
 //                  ["ROL_JUGADOR",this] call cc_fnc_configEquipacio;                                    //
@@ -41,12 +41,7 @@
 //                                                                                                       //
 //                  hmmwv               Equipació per HMMWVs                                             //
 //                                                                                                       //
-// Canvis: 0.1 (2015/04/02) Versió inicial.                                                              //
-//         0.2 (2015/04/26) Canviat el nom del fitxer i dels uniformes (RHS v0.3.7).                     //
-//         0.3 (2015/05/17) Afegida l'equipació pel vehicle HMMWV.                                       //
-//         0.4 (2015/05/26) Canviat al sistema ACE3.                                                     //
-//         0.5 (2015/06/10) Afegit el cas default amb equipació de fuseller (rfl).                       //
-//         0.6 (2015/06/12) Canvis a la M249 i M240B degut a la versió 0.3.8 de RHS.                     //
+// Canvis: 0.1 (2015/06/12) Versió inicial.                                                              //
 //=======================================================================================================//
 
 //=======================================================================================================//
@@ -1095,7 +1090,7 @@ switch (_tipusUnitat) do
 	
 	default
 	{
-		_unitat sideChat format ["DEBUG (cc_equipacio_rhs_usmc_d.sqf): el tipus d'unitat %1 no està definit. Utilitzant l'equipació de fuseller.", _tipusUnitat];
+		_unitat sideChat format ["DEBUG (cc_equipacio_rhs_usmc_wd.sqf): el tipus d'unitat %1 no està definit. Utilitzant l'equipació de fuseller.", _tipusUnitat];
 		
 		// Armilla i motxilla
 		_unitat addVest _armillaRFL;
