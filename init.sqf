@@ -33,7 +33,7 @@ onPreloadFinished {
     cc_preload_completat = true; 
 };
 
-if (cc_param_utilitzarPerfils == 1 && !isServer) then {
+if (cc_param_utilitzarPerfils == 1 && !isDedicated) then {
 	cc_script_perfils = [] execVM "scripts\configEquipacio\cc_equipacio_rhs_usarmy_14_perfils.sqf";
 };
 
