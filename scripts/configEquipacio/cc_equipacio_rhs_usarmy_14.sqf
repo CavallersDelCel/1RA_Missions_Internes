@@ -44,7 +44,8 @@
 // Canvis: 0.1 (2015/04/02) Versió inicial.                                                              //
 //         0.2 (2015/04/26) Canviat el nom del fitxer i dels uniformes (RHS v0.3.7).                     //
 //         0.3 (2015/05/17) Afegida l'equipació pel vehicle HMMWV.                                       //
-//         0.4 (2015/05/26) Canviat al sistema ACE3.                                                     //                     
+//         0.4 (2015/05/26) Canviat al sistema ACE3.                                                     //
+//         0.5 (2015/06/10) Afegit el cas default amb equipació de fuseller (rfl).                       //                     
 //=======================================================================================================//
 
 //=======================================================================================================//
@@ -1089,6 +1090,45 @@ switch (_tipusUnitat) do
 			_unitat addItemCargoGlobal [_kitQuirurgic,3];
 			_unitat addItemCargoGlobal [_kitPrimersAuxilis,3];
 		};
+	};
+	
+	default
+	{
+		_unitat sideChat format ["DEBUG (cc_equipacio_rhs_usarmy_14.sqf): el tipus d'unitat %1 no està definit. Utilitzant l'equipació de fuseller.", _tipusUnitat];
+		
+		// Armilla i motxilla
+		_unitat addVest _armillaRFL;
+		_unitat addBackpack _motxilla;
+		
+		// Objectes a l'uniforme
+		(uniformContainer _unitat) addItemCargoGlobal [_armaSilenciador,1];
+		(uniformContainer _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",1];
+		
+		// Objectes a l'armilla
+		(vestContainer _unitat) addItemCargoGlobal [_benes,2];
+		(vestContainer _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",8];
+		(vestContainer _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",1];
+		(vestContainer _unitat) addMagazineCargoGlobal ["rhs_mag_m67",4];
+		
+		// Objectes a la motxilla
+		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
+		if (cc_mod_ace3 and cc_param_SistemaMedic == 1) then {
+			(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
+			(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
+			(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
+			(unitBackpack _unitat) addItemCargoGlobal [_torniquet,1];
+		};
+		(unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
+		(unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",5];
+		(unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",2];
+		(unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_mk84",2];
+		(unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_an_m8hc",2];
+		
+		// Arma principal
+		_unitat addWeapon _arma;
+		_unitat addPrimaryWeaponItem _armaSurefire;
+		_unitat addPrimaryWeaponItem _armaLaserLlanterna;
+		_unitat addPrimaryWeaponItem _armaMira;	
 	};
 };
 
