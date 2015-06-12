@@ -1,7 +1,7 @@
 //=======================================================================================================//
 // Arxiu: cc_equipacio_rhs_usarmy_14.sqf                                                                 //
 // Autor: CC_Magnetar                                                                                    //
-// Versió: 0.3                                                                                           //
+// Versió: 0.6                                                                                           //
 // Creació del Document: 2015/04/02                                                                      //
 // Descripció: Aquest document serveix per equipar els jugadors amb l'equipació dissenyada per la missió //
 //             sense fer servir els perfils estàndard del grup dels Cavallers del Cel. Requereix que el  //
@@ -45,7 +45,8 @@
 //         0.2 (2015/04/26) Canviat el nom del fitxer i dels uniformes (RHS v0.3.7).                     //
 //         0.3 (2015/05/17) Afegida l'equipació pel vehicle HMMWV.                                       //
 //         0.4 (2015/05/26) Canviat al sistema ACE3.                                                     //
-//         0.5 (2015/06/10) Afegit el cas default amb equipació de fuseller (rfl).                       //                     
+//         0.5 (2015/06/10) Afegit el cas default amb equipació de fuseller (rfl).                       //
+//         0.6 (2015/06/12) Canvis a la M249 degut a la versió 0.3.8 de RHS.                             //
 //=======================================================================================================//
 
 //=======================================================================================================//
@@ -99,7 +100,7 @@ _motxillaDIV = "B_AssaultPack_blk";
 // Armes principals
 _arma = "rhs_weap_m4a1";
 _arma320 = "rhs_weap_m4a1_m320";
-_armaAR = "rhs_weap_m249_pip";
+_armaAR = "rhs_weap_m249_pip_S";
 _armaMG = "rhs_weap_m240B";
 _armaDM = "rhs_weap_sr25_ec";
 _armaSN = "rhs_weap_XM2010_sa";
