@@ -1091,7 +1091,7 @@ switch (_tipusUnitat) do
 	
 	default
 	{
-		_unitat sideChat format ["DEBUG (cc_equipacio_rhs_usarmy_14.sqf): el tipus d'unitat %1 no està definit. Utilitzant l'equipació de fuseller.", _tipusUnitat];
+		_unitat sideChat format ["DEBUG (cc_equipacio_rhs_insurgents.sqf): el tipus d'unitat %1 no està definit. Utilitzant l'equipació de fuseller.", _tipusUnitat];
 		
 		// Armilla i motxilla
 		_unitat addVest _armillaRFL;
