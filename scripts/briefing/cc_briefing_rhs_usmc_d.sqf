@@ -1,10 +1,10 @@
 //=======================================================================================================//
-// Arxiu: cc_briefing_rhs_usmc_wd.sqf                                                                    //
+// Arxiu: cc_briefing_rhs_usmc_d.sqf                                                                     //
 // Autor: CC_Magnetar                                                                                    //
 // Versió: 0.1                                                                                           //
-// Creació del Document: 22/02/2015                                                                      //
+// Creació del Document: 2015/02/22                                                                      //
 // Descripció: Aquest document serveix per oferir informació de la missió si la unitat forma part de     //
-//             la facció RHS: United States Marine Corps "rhs_faction_usmc_wd"                           //
+//             la facció RHS: United States Marine Corps "rhs_faction_usmc_d"                            //
 //             http://doc.rhsmods.org/index.php/United_States_Marine_Corps                               //
 //=======================================================================================================//
 

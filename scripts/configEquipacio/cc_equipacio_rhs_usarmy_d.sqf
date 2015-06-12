@@ -1,12 +1,12 @@
 //=======================================================================================================//
-// Arxiu: cc_equipacio_rhs_usarmy_14.sqf                                                                 //
+// Arxiu: cc_equipacio_rhs_usarmy_d.sqf                                                                  //
 // Autor: CC_Magnetar                                                                                    //
 // Versió: 0.6                                                                                           //
 // Creació del Document: 2015/04/02                                                                      //
 // Descripció: Aquest document serveix per equipar els jugadors amb l'equipació dissenyada per la missió //
 //             sense fer servir els perfils estàndard del grup dels Cavallers del Cel. Requereix que el  //
-//             jugador formi part de la facció RHS: United States Army "rhs_faction_usarmy_14"           //
-//             http://class.rhsmods.org/rhsusaf/CfgGroups_West_rhs_faction_usarmy_wd.html                // 
+//             jugador formi part de la facció RHS: United States Army "rhs_faction_usarmy_d"            //
+//             http://class.rhsmods.org/rhsusaf/CfgGroups_West_rhs_faction_usarmy_d.html                 // 
 //             Cal afegir la següent línia al INIT de la unitat en l'editor:                             //
 //                                                                                                       //
 //                  ["ROL_JUGADOR",this] call cc_fnc_configEquipacio;                                    //
@@ -46,7 +46,7 @@
 //         0.3 (2015/05/17) Afegida l'equipació pel vehicle HMMWV.                                       //
 //         0.4 (2015/05/26) Canviat al sistema ACE3.                                                     //
 //         0.5 (2015/06/10) Afegit el cas default amb equipació de fuseller (rfl).                       //
-//         0.6 (2015/06/12) Canvis a la M249 degut a la versió 0.3.8 de RHS.                             //
+//         0.6 (2015/06/12) Canvis a la M249 i M240B degut a la versió 0.3.8 de RHS.                     //
 //=======================================================================================================//
 
 //=======================================================================================================//
@@ -101,8 +101,8 @@ _motxillaDIV = "B_AssaultPack_blk";
 _arma = "rhs_weap_m4a1";
 _arma320 = "rhs_weap_m4a1_m320";
 _armaAR = "rhs_weap_m249_pip_S";
-_armaMG = "rhs_weap_m240B";
-_armaDM = "rhs_weap_sr25_ec";
+_armaMG = "rhs_weap_m240B_CAP";
+_armaDM = "rhs_weap_m14ebrri";
 _armaSN = "rhs_weap_XM2010_sa";
 _armaDIV = "arifle_SDAR_F";
 
@@ -1091,7 +1091,7 @@ switch (_tipusUnitat) do
 	
 	default
 	{
-		_unitat sideChat format ["DEBUG (cc_equipacio_rhs_usarmy_14.sqf): el tipus d'unitat %1 no està definit. Utilitzant l'equipació de fuseller.", _tipusUnitat];
+		_unitat sideChat format ["DEBUG (cc_equipacio_rhs_usarmy_d.sqf): el tipus d'unitat %1 no està definit. Utilitzant l'equipació de fuseller.", _tipusUnitat];
 		
 		// Armilla i motxilla
 		_unitat addVest _armillaRFL;

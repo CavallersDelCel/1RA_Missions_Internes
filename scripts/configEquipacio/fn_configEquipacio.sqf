@@ -44,6 +44,7 @@
 //         0.3 (2015/05/17) Afegida l'equipació pel vehicle HMMWV, divsl i divme.                        //
 //         0.4 (2015/06/10) Afegit el cas default amb equipació de fuseller (rfl) i s'ha mogut la opció  //
 //                          d'utilitzar els perfils a init.sqf.                                          //
+//         0.5 (2015/06/12) Canvis als noms de les faccions deguts a la versió 0.3.8 de RHS.             //
 //=======================================================================================================//
 
 // Declaració de variables
@@ -98,13 +99,13 @@ if (_faccioUnitat == "civ_f") then {
 };
 
 // Equipació per la facció USA "United States Army"
-if (_faccioUnitat == "rhs_faction_usarmy_14") then {
-	#include "cc_equipacio_rhs_usarmy_14.sqf"
+if (_faccioUnitat == "rhs_faction_usarmy_d") then {
+	#include "cc_equipacio_rhs_usarmy_d.sqf"
 };
 
 // Equipació per la facció USA "United States Marine Corps"
-if (_faccioUnitat == "rhs_faction_usmc_14") then {
-	#include "cc_equipacio_rhs_usmc_14.sqf"
+if (_faccioUnitat == "rhs_faction_usmc_d") then {
+	#include "cc_equipacio_rhs_usmc_d.sqf"
 };
 
 // Equipació per la facció USA "United States Army"

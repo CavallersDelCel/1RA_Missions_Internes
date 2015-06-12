@@ -43,7 +43,7 @@
 //                                                                                                       //
 // Canvis: 0.1 (2015/06/04) Versió inicial.                                                              //
 //         0.2 (2015/06/10) Afegit el cas default amb equipació de fuseller (rfl).                       //
-//         0.3 (2015/06/12) Canvis a la M249 degut a la versió 0.3.8 de RHS.                             //
+//         0.3 (2015/06/12) Canvis a la M249 i M240B degut a la versió 0.3.8 de RHS.                     //
 //=======================================================================================================//
 
 //=======================================================================================================//
@@ -98,7 +98,7 @@ _motxillaDIV = "B_AssaultPack_blk";
 _arma = "rhs_weap_m4a1";
 _arma320 = "rhs_weap_m4a1_m320";
 _armaAR = "rhs_weap_m249_pip_S";
-_armaMG = "rhs_weap_m240B";
+_armaMG = "rhs_weap_m240B_CAP";
 _armaDM = "rhs_weap_m14ebrri";
 _armaSN = "rhs_weap_XM2010_sa";
 _armaDIV = "arifle_SDAR_F";

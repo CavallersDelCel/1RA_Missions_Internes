@@ -1,11 +1,11 @@
 //=======================================================================================================//
-// Arxiu: cc_briefing_rhs_usarmy_wd.sqf                                                                  //
+// Arxiu: cc_briefing_rhs_usarmy_d.sqf                                                                   //
 // Autor: CC_Magnetar                                                                                    //
 // Versió: 0.1                                                                                           //
-// Creació del Document: 22/02/2015                                                                      //
+// Creació del Document: 2015/02/22                                                                      //
 // Descripció: Aquest document serveix per oferir informació de la missió si la unitat forma part de     //
-//             la facció RHS: United States Army "rhs_faction_usarmy_wd".                                //
-//             http://doc.rhsmods.org/index.php/United_States_Army                                       //
+//             la facció RHS: United States Army "rhs_faction_usarmy_d".                                 //
+//             http://class.rhsmods.org/rhsusaf/CfgGroups_West_rhs_faction_usarmy_d.html                 //
 //=======================================================================================================//
 
 //=======================================================================================================//
