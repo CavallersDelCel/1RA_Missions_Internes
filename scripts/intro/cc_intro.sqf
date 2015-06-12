@@ -9,6 +9,8 @@
 //         0.2 (2015/04/26) Canviada la facció de les unitats RHS v0.3.7.                                //
 //         0.3 (2015/06/04) Afegida la facció RHS Insurgents.                                            //
 //         0.4 (2015/06/12) Canvis als noms de les faccions deguts a la versió 0.3.8 de RHS.             //
+//         0.5 (2015/06/12) Afegides les faccions "rhs_faction_usarmy_wd", "rhs_faction_usmc_wd",        //
+//                          "rhs_faction_usmc_d" i "blu_f".                                              //
 //=======================================================================================================//
 
 if (isDedicated) exitWith {};
@@ -28,12 +30,33 @@ if (_faccioUnitat != toLower (faction (leader group player))) then {
 if ( cc_param_debugOutput == 1 ) then {
 	player sideChat format ["DEBUG (cc_intro.sqf): facció del jugador: %1", _faccioUnitat];
 };
+
+// Introducció per la facció BLUFOR
+if (_faccioUnitat == "blu_f") exitWith {
+	#include "cc_intro_blu_f.sqf"
+};
 	
-// Briefing per la facció BLUFOR
+// Introducció per la facció RHS: USAF "United States Army"
 if (_faccioUnitat == "rhs_faction_usarmy_d") exitWith {
 	#include "cc_intro_rhs_faction_usarmy_d.sqf"
 };    
 
+// Introducció per la facció RHS: USAF "United States Army"
+if (_faccioUnitat == "rhs_faction_usarmy_wd") exitWith {
+	#include "cc_intro_rhs_faction_usarmy_wd.sqf"
+};
+
+// Introducció per la facció RHS: USAF "United States Marine Corps"
+if (_faccioUnitat == "rhs_faction_usmc_d") exitWith {
+	#include "cc_intro_rhs_faction_usmc_d.sqf"
+};    
+
+// Introducció per la facció RHS: USAF "United States Marine Corps"
+if (_faccioUnitat == "rhs_faction_usmc_wd") exitWith {
+	#include "cc_intro_rhs_faction_usmc_wd.sqf"
+};
+
+// Introducció per la facció RHS: Insurgents
 if (_faccioUnitat == "rhs_faction_insurgents") exitWith {
 	#include "cc_intro_rhs_faction_insurgents.sqf"
 };
