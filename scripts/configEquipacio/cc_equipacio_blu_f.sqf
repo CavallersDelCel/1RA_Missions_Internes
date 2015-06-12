@@ -58,7 +58,7 @@ private["_kitPrimersAuxilis", "_kitQuirurgic", "_torniquet"];
 private["_aprincipal"];
 
 //=======================================================================================================//
-// Resum d'equipació: Armes, accessoris, ulleres, armilles, ...                                          //
+// Obtenir el tipus d'unitat i si és un soldat d'infanteria                                              //
 //=======================================================================================================//
 
 _tipusUnitat = toLower (_this select 0);
