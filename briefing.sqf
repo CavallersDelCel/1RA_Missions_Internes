@@ -93,8 +93,8 @@ if (_faccioUnitat == "civ_f") exitWith {
 };
 
 // Briefing per la facció USA "United States Army"
-if (_faccioUnitat == "rhs_faction_usarmy_wd") exitWith {
-	#include "scripts\briefing\cc_briefing_rhs_usarmy_wd.sqf"
+if (_faccioUnitat == "rhs_faction_usarmy_d") exitWith {
+	#include "scripts\briefing\cc_briefing_rhs_usarmy_d.sqf"
 	
 	// DEBUG OUTPUT
 	if ( cc_param_debugOutput == 1 ) then {
@@ -103,8 +103,8 @@ if (_faccioUnitat == "rhs_faction_usarmy_wd") exitWith {
 };
 
 // Briefing per la facció USA "United States Marine Corps"
-if (_faccioUnitat == "rhs_faction_usmc_wd") exitWith {
-	#include "scripts\briefing\cc_briefing_rhs_usmc_wd.sqf"
+if (_faccioUnitat == "rhs_faction_usmc_d") exitWith {
+	#include "scripts\briefing\cc_briefing_rhs_usmc_d.sqf"
 	
 	// DEBUG OUTPUT
 	if ( cc_param_debugOutput == 1 ) then {

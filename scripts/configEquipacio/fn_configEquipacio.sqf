@@ -99,13 +99,13 @@ if (_faccioUnitat == "civ_f") then {
 };
 
 // Equipació per la facció USA "United States Army"
-if (_faccioUnitat == "rhs_faction_usarmy_wd") then {
-	#include "cc_equipacio_rhs_usarmy_wd.sqf"
+if (_faccioUnitat == "rhs_faction_usarmy_d") then {
+	#include "cc_equipacio_rhs_usarmy_d.sqf"
 };
 
 // Equipació per la facció USA "United States Marine Corps"
-if (_faccioUnitat == "rhs_faction_usmc_wd") then {
-	#include "cc_equipacio_rhs_usmc_wd.sqf"
+if (_faccioUnitat == "rhs_faction_usmc_d") then {
+	#include "cc_equipacio_rhs_usmc_d.sqf"
 };
 
 // Equipació per la facció USA "United States Army"

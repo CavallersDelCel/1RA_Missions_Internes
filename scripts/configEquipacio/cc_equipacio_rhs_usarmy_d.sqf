@@ -1,12 +1,12 @@
 //=======================================================================================================//
-// Arxiu: cc_equipacio_rhs_usarmy_wd.sqf                                                                 //
+// Arxiu: cc_equipacio_rhs_usarmy_d.sqf                                                                  //
 // Autor: CC_Magnetar                                                                                    //
 // Versió: 0.6                                                                                           //
 // Creació del Document: 2015/04/02                                                                      //
 // Descripció: Aquest document serveix per equipar els jugadors amb l'equipació dissenyada per la missió //
 //             sense fer servir els perfils estàndard del grup dels Cavallers del Cel. Requereix que el  //
-//             jugador formi part de la facció RHS: United States Army "rhs_faction_usarmy_wd"           //
-//             http://class.rhsmods.org/rhsusaf/CfgGroups_West_rhs_faction_usarmy_wd.html                // 
+//             jugador formi part de la facció RHS: United States Army "rhs_faction_usarmy_d"            //
+//             http://class.rhsmods.org/rhsusaf/CfgGroups_West_rhs_faction_usarmy_d.html                 // 
 //             Cal afegir la següent línia al INIT de la unitat en l'editor:                             //
 //                                                                                                       //
 //                  ["ROL_JUGADOR",this] call cc_fnc_configEquipacio;                                    //
@@ -1095,7 +1095,7 @@ switch (_tipusUnitat) do
 	
 	default
 	{
-		_unitat sideChat format ["DEBUG (cc_equipacio_rhs_usarmy_wd.sqf): el tipus d'unitat %1 no està definit. Utilitzant l'equipació de fuseller.", _tipusUnitat];
+		_unitat sideChat format ["DEBUG (cc_equipacio_rhs_usarmy_d.sqf): el tipus d'unitat %1 no està definit. Utilitzant l'equipació de fuseller.", _tipusUnitat];
 		
 		// Armilla i motxilla
 		_unitat addVest _armillaRFL;

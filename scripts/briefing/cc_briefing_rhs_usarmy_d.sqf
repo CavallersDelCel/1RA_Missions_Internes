@@ -1,11 +1,11 @@
 //=======================================================================================================//
-// Arxiu: cc_briefing_rhs_usmc_wd.sqf                                                                    //
+// Arxiu: cc_briefing_rhs_usarmy_d.sqf                                                                   //
 // Autor: CC_Magnetar                                                                                    //
 // Versió: 0.1                                                                                           //
 // Creació del Document: 2015/02/22                                                                      //
 // Descripció: Aquest document serveix per oferir informació de la missió si la unitat forma part de     //
-//             la facció RHS: United States Marine Corps "rhs_faction_usmc_wd"                           //
-//             http://doc.rhsmods.org/index.php/United_States_Marine_Corps                               //
+//             la facció RHS: United States Army "rhs_faction_usarmy_d".                                 //
+//             http://class.rhsmods.org/rhsusaf/CfgGroups_West_rhs_faction_usarmy_d.html                 //
 //=======================================================================================================//
 
 //=======================================================================================================//
@@ -19,11 +19,25 @@ Amb la col·laboració de CC_Magnetar (plantilla) i *** possibles col·laborador
 "]];
 
 //=======================================================================================================//
+// NOTES: RADIO                                                                                          //
+//=======================================================================================================//
+_admlog = player createDiaryRecord ["diary", ["Freqüències de Radio","
+<br/>
+*** Llistat de les freqüències de ràdio de les esquadres i equips ***
+"]];
+
+//=======================================================================================================//
 // NOTES: ADMINISTRACIÓ/LOGÍSTICA                                                                        //
 //=======================================================================================================//
 _admlog = player createDiaryRecord ["diary", ["Administració/Logística","
 <br/>
-*** Descripció de support aèri, evacuació mèdica, CAS etc en cas d'existir. ***
+<font color='#FF0000' size='18'>Suport</font>
+<br/>
+*** Descripció de les unitats de suport, evacuació mèdica, CAS etc. en cas d'existir.
+<br/><br/>
+<font color='#FF0000' size='18'>Abastiment</font>
+<br/>
+*** Abastiment de les tropes: munició addicional, ...
 "]];
 
 //=======================================================================================================//
@@ -31,15 +45,15 @@ _admlog = player createDiaryRecord ["diary", ["Administració/Logística","
 //=======================================================================================================//
 _execucio = player createDiaryRecord ["diary", ["Execució","
 <br/>
-<font size='18'>Ordres del general/Plà d'atac</font>
+<font color='#FF0000' size='18'>Ordres del general/Plà d'atac</font>
 <br/>
 *** Breu descripció del plà d'atac. ***
 <br/><br/>
-<font size='18'>RUTA D'ATAC</font>
+<font color='#FF0000' size='18'>Ruta d'atac</font>
 <br/>
 *** Instruccions d'inserció, atac i extracció. ***
 <br/><br/>
-<font size='18'>TASQUES ESPECIALS</font>
+<font color='#FF0000' size='18'>Tasques especials</font>
 <br/>
 *** Tasques especials. ***
 "]];
@@ -59,11 +73,11 @@ _intel = player createDiaryRecord ["diary", ["Intel·ligència","
 <br/>
 *** Informe d'intel·ligència. ***
 <br/><br/>
-<font size='18'>FORCES ENEMIGUES</font>
+<font color='#FF0000' size='18'>Forces enemigues</font>
 <br/>
 *** Descripció de les forces enemigues.***
 <br/><br/>
-<font size='18'>FORCES ALIADES</font>
+<font color='#FF0000' size='18'>Forces aliades</font>
 <br/>
 *** Breu descripció de les forces aliades.***
 "]];

@@ -30,8 +30,8 @@ if ( cc_param_debugOutput == 1 ) then {
 };
 	
 // Briefing per la facció BLUFOR
-if (_faccioUnitat == "rhs_faction_usarmy_wd") exitWith {
-	#include "cc_intro_rhs_faction_usarmy_wd.sqf"
+if (_faccioUnitat == "rhs_faction_usarmy_d") exitWith {
+	#include "cc_intro_rhs_faction_usarmy_d.sqf"
 };    
 
 if (_faccioUnitat == "rhs_faction_insurgents") exitWith {

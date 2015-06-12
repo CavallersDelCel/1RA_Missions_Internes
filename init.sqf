@@ -35,7 +35,7 @@ onPreloadFinished {
 };
 
 if (cc_param_utilitzarPerfils == 1 && !isDedicated) then {
-	cc_script_perfils = [] execVM "scripts\configEquipacio\cc_equipacio_rhs_usarmy_wd_perfils.sqf";
+	cc_script_perfils = [] execVM "scripts\configEquipacio\cc_equipacio_rhs_usarmy_d_perfils.sqf";
 };
 
 // Pantalla d'introducció
