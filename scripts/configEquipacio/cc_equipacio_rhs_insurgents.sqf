@@ -195,6 +195,7 @@ if (cc_mod_ace3) then {
 	// Objectes mèdics: Torniquets
 	_torniquet = "ACE_tourniquet";
 };
+
 if (cc_mod_agm) then {
 
 	//===================================================================================================//
@@ -369,6 +370,7 @@ switch (_tipusUnitat) do
 			(unitBackpack _unitat) addItemCargoGlobal [_kitPrimersAuxilis,2];
 			(unitBackpack _unitat) addItemCargoGlobal [_bossaSalina500,6];
 		};
+		
 		if( cc_mod_agm or (cc_mod_ace3 and cc_param_SistemaMedic == 0)) then {
 			(unitBackpack _unitat) addItemCargoGlobal [_benes,20];
 			(unitBackpack _unitat) addItemCargoGlobal [_bossaSang500,2];
@@ -692,7 +694,7 @@ switch (_tipusUnitat) do
 		_unitat addBackpack _motxilla;
 		(unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
 		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
-		if (cc_mod_ace3) then {
+		if (cc_mod_ace3 and cc_param_SistemaMedic == 1) then {
 			(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
@@ -739,7 +741,7 @@ switch (_tipusUnitat) do
 		
 		// Objectes a la motxilla
 		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
-		if (cc_mod_ace3) then {
+		if (cc_mod_ace3 and cc_param_SistemaMedic == 1) then {
 			(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
@@ -827,7 +829,7 @@ switch (_tipusUnitat) do
 		
 		// Objectes a la motxilla
 		(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
-		if (cc_mod_ace3) then {
+		if (cc_mod_ace3 and cc_param_SistemaMedic == 1) then {
 			(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
 			(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
@@ -1089,7 +1091,7 @@ switch (_tipusUnitat) do
 	
 	default
 	{
-		_unitat sideChat format ["DEBUG (cc_equipacio_rhs_insurgents.sqf): el tipus d'unitat %1 no està definit. Utilitzant l'equipació de fuseller.", _tipusUnitat];
+		_unitat sideChat format ["DEBUG (cc_equipacio_rhs_usarmy_14.sqf): el tipus d'unitat %1 no està definit. Utilitzant l'equipació de fuseller.", _tipusUnitat];
 		
 		// Armilla i motxilla
 		_unitat addVest _armillaRFL;
