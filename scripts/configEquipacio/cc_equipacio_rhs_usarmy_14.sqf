@@ -211,7 +211,7 @@ if (cc_mod_agm) then {
 	_bossaSang500 = "AGM_Bloodbag";
 	_cintaDentencio = "AGM_CableTie";
 	_vectorIV = "AGM_Vector";
-	_einesMapa = "AGM_MapToos";
+	_einesMapa = "AGM_MapTools";
 	_kestrel = "AGM_ItemKestrel";
 	_clacker = "AGM_Clacker";
 	_kitDesactivacio = "AGM_DefusalKit";
