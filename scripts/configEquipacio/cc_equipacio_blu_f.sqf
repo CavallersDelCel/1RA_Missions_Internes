@@ -39,10 +39,13 @@
 //                  div                 Bussejador                                                       //
 //                                                                                                       //
 //                  hmmwv               Equipació per HMMWVs                                             //
+//                  blx                 Equipació per els Rigback (depèn de mod BLX)                     //
+//                  sdv1                Equipació pel submarí 1                                          //
+//                  sdv2                Equipació pel submarí 2                                          //
 //                                                                                                       //
 // Canvis: 0.1 (2015/04/02) Versió inicial.                                                              //
 //         0.2 (2015/04/26) Canviat el nom del fitxer i dels uniformes (RHS v0.3.7).                     //
-//         0.3 (2015/05/17) Afegida l'equipació pel vehicle HMMWV, divsl i divme.                        //
+//         0.3 (2015/05/17) Afegida l'equipació per divsl, divme, hmmwv,  blx, sdv1 i sdv2.              //
 //         0.4 (2015/05/26) Canviat al sistema ACE3.                                                     // 
 //         0.5 (2015/06/10) Afegit el cas default amb equipació de fuseller (rfl).                       //
 //=======================================================================================================//
