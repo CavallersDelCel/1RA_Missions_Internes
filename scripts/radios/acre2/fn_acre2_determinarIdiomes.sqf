@@ -1,10 +1,12 @@
 //=======================================================================================================//
 // Arxiu: fn_acre2_determinarcc_acre2_determinarIdiomes.sqf                                              //
 // Autor: CC_Magnetar                                                                                    //
-// Versió: 0.1                                                                                           //
+// Versió: 0.2                                                                                           //
 // Creació del Document: 05/05/2015                                                                      //
 // Descripció: Configuració dels idiomes que parla cada unitat utilitzant el Advanced Combat Radio       //
 //             Environment 2 (ACRE2) http://gitlab.idi-systems.com/idi-systems/acre2-public/wikis/home   //
+// Canvis: 0.1 (2015/05/05) Versió inicial.                                                              //
+//         0.2 (2015/06/12) Canvis als noms de les faccions deguts a la versió 0.3.8 de RHS.             //
 //=======================================================================================================//
 
 // Declaració de variables
@@ -80,7 +82,7 @@ if (_faccioUnitat == "civ_f") exitWith {
 };
 
 // Idiomes per la facció RHS USAF "United States Armed Forces"
-if (_faccioUnitat in ["rhs_faction_usarmy_14","rhs_faction_usarmy_10","rhs_faction_usmc_14", "rhs_faction_usmc_10"] ) exitWith {
+if (_faccioUnitat in ["rhs_faction_usarmy_wd","rhs_faction_usarmy_d","rhs_faction_usmc_wd", "rhs_faction_usmc_d"] ) exitWith {
 
 	cc_acre2_config_idioma_rhsusaf call acre_api_fnc_babelSetSpokenLanguages;
 	[cc_acre2_config_idioma_rhsusaf select 0] call acre_api_fnc_babelSetSpeakingLanguage;

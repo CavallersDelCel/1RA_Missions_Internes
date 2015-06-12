@@ -1,13 +1,14 @@
 //=======================================================================================================//
 // Arxiu: briefing.sqf                                                                                   //
 // Autor: CC_Magnetar                                                                                    //
-// Versió: 0.1                                                                                           //
-// Creació del Document: 22/02/2015                                                                      //
+// Versió: 0.3                                                                                           //
+// Creació del Document: 2015/02/22                                                                      //
 // Descripció: Aquest document serveix per oferir diverses informacions de la missió depenent de la      //
 //             facció dels jugadors. Això només serà útil en el cas de que es vulgui més endavant fer    //
 //             partides TvT. De moment només està inclòs com a plantilla.                                //
 // Canvis: 0.1 (2015/02/22) Versió inicial.                                                              //
 //         0.2 (2015/04/26) Canviada la facció de les unitats RHS v0.3.7.                                //
+//         0.3 (2015/06/12) Canvis a les faccions degut a la versió 0.3.8 de RHS.                        //
 //=======================================================================================================//
 
 // Esperar una mica per tal de que el sistema de briefing s'inicialitzi correctament
@@ -92,8 +93,8 @@ if (_faccioUnitat == "civ_f") exitWith {
 };
 
 // Briefing per la facció USA "United States Army"
-if (_faccioUnitat == "rhs_faction_usarmy_14") exitWith {
-	#include "scripts\briefing\cc_briefing_rhs_usarmy_14.sqf"
+if (_faccioUnitat == "rhs_faction_usarmy_wd") exitWith {
+	#include "scripts\briefing\cc_briefing_rhs_usarmy_wd.sqf"
 	
 	// DEBUG OUTPUT
 	if ( cc_param_debugOutput == 1 ) then {
@@ -102,8 +103,8 @@ if (_faccioUnitat == "rhs_faction_usarmy_14") exitWith {
 };
 
 // Briefing per la facció USA "United States Marine Corps"
-if (_faccioUnitat == "rhs_faction_usmc_14") exitWith {
-	#include "scripts\briefing\cc_briefing_rhs_usmc_14.sqf"
+if (_faccioUnitat == "rhs_faction_usmc_wd") exitWith {
+	#include "scripts\briefing\cc_briefing_rhs_usmc_wd.sqf"
 	
 	// DEBUG OUTPUT
 	if ( cc_param_debugOutput == 1 ) then {

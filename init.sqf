@@ -1,7 +1,7 @@
 //=======================================================================================================//
 // Arxiu: init.sqf                                                                                       //
 // Autor: CC_Magnetar                                                                                    //
-// Versió: 0.3                                                                                           //
+// Versió: 0.4                                                                                           //
 // Creació del Document: 2015/02/22                                                                      //
 // Descripció: Fitxer init.sqf. Aquest fitxer inclou aquelles funcions que en MP s'executen al final de  //
 //             la cadena d'inicialització. Serveix per configurar mòduls, briefings, radios, etc.        //
@@ -9,6 +9,7 @@
 //         0.2 (2015/05/26) Afegit el suport per ACE 3.                                                  //
 //         0.3 (2015/06/10) Afegida la opció de carregar els perfils en cas de que es decideixi          //
 //                          utilitzar-los als paràmetres de la missió.                                   //
+//         0.4 (2015/06/12) Canvis deguts a les noves faccions a la versió 0.3.8 de RHS.                 //
 //=======================================================================================================//
 
 //=======================================================================================================//
@@ -34,7 +35,7 @@ onPreloadFinished {
 };
 
 if (cc_param_utilitzarPerfils == 1 && !isDedicated) then {
-	cc_script_perfils = [] execVM "scripts\configEquipacio\cc_equipacio_rhs_usarmy_14_perfils.sqf";
+	cc_script_perfils = [] execVM "scripts\configEquipacio\cc_equipacio_rhs_usarmy_wd_perfils.sqf";
 };
 
 // Pantalla d'introducció
