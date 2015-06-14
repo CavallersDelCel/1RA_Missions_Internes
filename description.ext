@@ -2,7 +2,7 @@
 // Arxiu: Description.ext                                                                                //
 // Autor: CC_Magnetar                                                                                    //
 // Versió: 0.1                                                                                           //
-// Creació del Document: 22/02/2015                                                                      //
+// Creació del Document: 2015/02/22                                                                      //
 //=======================================================================================================//
 
 //=======================================================================================================//
@@ -17,14 +17,19 @@ class Header
 };
 
 //=======================================================================================================//
-// Pantalla de càrrega https://community.bistudio.com/wiki/Description.ext                               //
+// Pantalla de càrrega: https://community.bistudio.com/wiki/Description.ext                              //
+//                                                                                                       //
+// Hi ha dues plantilles que són altament recomanables d'utilitzar a l'hora de crear les  imatges per    //
+// l'entrada "overviewPicture" (cc_plantilla_overviewPicture.psd) i pel post de la missió al fòrum       //
+// (cc_plantilla_forum.psd). Aquests fitxers Photoshop, cortesia de CC_Viper, són altament recomenables  //
+// però totalment opcionals al dependre de programes d'edició externs comercials.                        //
 //=======================================================================================================//
 
 onLoadName = "*** Nom de la missió. ***";              // Nom de la missió (apareix en gran)
 onLoadMission = "*** Descripció de la missió. ***";    // Descripció breu de la missió
 author = "CC_Magnetar";                                // Autor
 loadScreen = "imatges\loadLogo.jpg";                   // Imatge mentre es carrega la missió
-overviewPicture = "imatges\overviewLogo.jpg";          // Imatge que es mostra al seleccionar la missió.
+overviewPicture = "imatges\overviewPicture.jpg";       // Imatge que es mostra al seleccionar la missió.
                                                        // Ha d'estar en format .paa i aspecte 2:1
 overviewText = "*** Text a mostrar. ***";              // Text que es mostra al seleccionar la missó.
 
