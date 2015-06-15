@@ -7,7 +7,7 @@
 //             Task Force Arrowhead Radio (TFAR) i el Advanced Combat Radio Environment 2 (ACRE2) estan  //
 //             suportats.                                                                                //
 // Canvis: 0.1 (2015/02/22) Versió inicial.                                                              //
-//         0.2 (2015/06/09) Canviada la configuració de paràmetres de missió a mods carregats            //
+//         0.2 (2015/06/09) Canviada la configuració de paràmetres de missió a mods carregats.           //
 //=======================================================================================================//
 
 // Espera a que els paràmetres que controlen els sistemes de radio estigui ninicialitzats
