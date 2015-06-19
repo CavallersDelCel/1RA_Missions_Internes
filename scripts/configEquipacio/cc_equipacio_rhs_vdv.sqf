@@ -1449,13 +1449,11 @@ switch (_tipusUnitat) do
 			};
 		};
 		(unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
-		(unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",5];
-		(unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",2];
 		(unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_mk84",1];
 		(unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_an_m8hc",2];
 		(unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_m67",4];
-		(unitBackpack _unitat) addMagazineCargoGlobal ["30Rnd_556x45_Stanag",2];
-		(unitBackpack _unitat) addMagazineCargoGlobal ["20Rnd_556x45_UW_mag",2];
+		(unitBackpack _unitat) addMagazineCargoGlobal ["30Rnd_556x45_Stanag",7];
+		(unitBackpack _unitat) addMagazineCargoGlobal ["20Rnd_556x45_UW_mag",4];
 		
 		// Ulleres
 		_unitat addGoggles _ulleresDIV;
