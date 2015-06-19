@@ -3540,8 +3540,8 @@ class Mission
 					vehicle="rhsusf_army_ocp_engineer";
 					player="PLAY CDG";
 					skill=0.5;
-					text="Esq2_EN";
-					init="CC_EquipTerra = group this; (group this) setGroupID [""Gos de caça 2""]; this assignAsCargoIndex [HeliInsercio, 2]; this moveInCargo HeliInsercio; [""en"",this] call cc_fnc_configEquipacio;";
+					text="Esq2_EXP";
+					init="CC_EquipTerra = group this; (group this) setGroupID [""Gos de caça 2""]; this assignAsCargoIndex [HeliInsercio, 2]; this moveInCargo HeliInsercio; [""exp"",this] call cc_fnc_configEquipacio;";
 					description="Especialista en explosius";
 				};
 				class Item5
