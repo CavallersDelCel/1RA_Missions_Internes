@@ -4774,7 +4774,7 @@ class Mission
 			special="FLY";
 			id=202;
 			side="EMPTY";
-			vehicle="rhsusf_m1025_w_mk19";
+			vehicle="rhsusf_m1025_d_Mk19";
 			leader=1;
 			skill=0.5;
 			health=0.92538565;
