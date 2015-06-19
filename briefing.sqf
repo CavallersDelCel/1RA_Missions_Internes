@@ -9,6 +9,8 @@
 // Canvis: 0.1 (2015/02/22) Versió inicial.                                                              //
 //         0.2 (2015/04/26) Canviada la facció de les unitats RHS v0.3.7.                                //
 //         0.3 (2015/06/12) Canvis a les faccions degut a la versió 0.3.8 de RHS.                        //
+//         0.4 (2015/06/12) Afegits els briefings per les faccions "rhs_faction_usarmy_wd" i             //
+//                          "rhs_faction_usmc_wd".                                                       //
 //=======================================================================================================//
 
 // Esperar una mica per tal de que el sistema de briefing s'inicialitzi correctament
@@ -102,9 +104,29 @@ if (_faccioUnitat == "rhs_faction_usarmy_d") exitWith {
 	};
 };
 
+// Briefing per la facció USA "United States Army"
+if (_faccioUnitat == "rhs_faction_usarmy_wd") exitWith {
+	#include "scripts\briefing\cc_briefing_rhs_usarmy_wd.sqf"
+	
+	// DEBUG OUTPUT
+	if ( cc_param_debugOutput == 1 ) then {
+		player sideChat format ["DEBUG (briefing.sqf): Utilitzant briefing per la facció %1.", _faccioUnitat];
+	};
+};
+
 // Briefing per la facció USA "United States Marine Corps"
 if (_faccioUnitat == "rhs_faction_usmc_d") exitWith {
 	#include "scripts\briefing\cc_briefing_rhs_usmc_d.sqf"
+	
+	// DEBUG OUTPUT
+	if ( cc_param_debugOutput == 1 ) then {
+		player sideChat format ["DEBUG (briefing.sqf): Utilitzant briefing per la facció %1.", _faccioUnitat];
+	};
+};
+
+// Briefing per la facció USA "United States Marine Corps"
+if (_faccioUnitat == "rhs_faction_usmc_wd") exitWith {
+	#include "scripts\briefing\cc_briefing_rhs_usmc_wd.sqf"
 	
 	// DEBUG OUTPUT
 	if ( cc_param_debugOutput == 1 ) then {
