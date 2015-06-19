@@ -1,12 +1,12 @@
 //=======================================================================================================//
-// Arxiu: cc_equipacio_rhs_vpvo.sqf                                                                      //
+// Arxiu: cc_equipacio_rhs_vdv.sqf                                                                       //
 // Autor: CC_Magnetar                                                                                    //
 // Versió: 0.3                                                                                           //
 // Creació del Document: 2015/04/02                                                                      //
 // Descripció: Aquest document serveix per equipar els jugadors amb l'equipació dissenyada per la missió //
 //             sense fer servir els perfils estàndard del grup dels Cavallers del Cel. Requereix que el  //
-//             jugador formi part de la facció RHS: Soviet Air Defense Forces (voyska protivovozdushnoy  //
-//             oborony) http://class.rhsmods.org/rhsafrf/CfgFactionClasses_rhs_faction_vpvo.html         //
+//             jugador formi part de la facció RHS: Russian Airborne Troops (Vozdushno-desantnye voyska) //
+//             http://class.rhsmods.org/rhsafrf/CfgFactionClasses_rhs_faction_vdv.html                   //
 //             Cal afegir la següent línia al INIT de la unitat en l'editor:                             //
 //                                                                                                       //
 //                  ["ROL_JUGADOR",this] call cc_fnc_configEquipacio;                                    //
