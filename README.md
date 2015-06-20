@@ -48,14 +48,14 @@ La següent llista mostra els mods externs que actualment estan suportats i en n
 La següent llista mostra les faccions suportades per aquells scripts que permeten un major grau de control en equipacions, objectius etc: *briefing.sqf*, *fn_acre2_determinarIdiomes.sqf* (babel), *fn_configEquipacio.sqf* i *intro.sqf* . En negreta aquells mods a l'estàndard del grup 1RA:
 
 * **Blue Force**: blu_f
+* **Civils**: civ_f
 * **FIA**: blu_g_f, ind_g_f i _opf_g_f
-* **Opposing Force**: opf_f
 * **Independent Force**:  ind_f
-* **Facció civil**: civ_f
-* **RHS United States Army (Woodland)**: rhs_faction_usarmy_wd
-* **RHS United States Army (Desert)**: rhs_faction_usarmy_d
-* **RHS United States Marine Corps  (Woodland)**: rhs_faction_usmc_wd
-* **RHS United States Marine Corps (Desert)**: rhs_faction_usmc_d
+* **Opposing Force**: opf_f
 * RHS Insurgents: rhs_faction_insurgents
-* Soviet Air Defense Troops (Voyska protivovozdushnoy oborony): rhs_faction_vpvo
-* Russian Airborne Troops (Vozdushno-desantnye voyska): rhs_faction_vdv
+* RHS Russian Airborne Troops (Vozdushno-desantnye voyska): rhs_faction_vdv
+* RHS Soviet Air Defense Troops (Voyska protivovozdushnoy oborony): rhs_faction_vpvo
+* **RHS United States Army (Desert)**: rhs_faction_usarmy_d
+* **RHS United States Army (Woodland)**: rhs_faction_usarmy_wd
+* **RHS United States Marine Corps (Desert)**: rhs_faction_usmc_d
+* **RHS United States Marine Corps  (Woodland)**: rhs_faction_usmc_wd
