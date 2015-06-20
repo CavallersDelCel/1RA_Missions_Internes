@@ -1,9 +1,9 @@
 #Plantilla de Bàsica per Missions (PBM)
  
 **Autor**: CC_Magnetar
-**Contribuidors**:
+**Contribuidors**: CC_Viper (Plantilles d'imatges).
 **Versió**: 0.0
-**Darrera modificació**: 20/06/2015
+**Darrera modificació**: 2015/06/20
 **Descripció**: Plantilla bàsica per generar missions pel grup d'Arma 1er Regiment Aerotransportat (1RA) de la Comunitat Catalana de Simulació - Cavallers del Cel.
 
 ###Requeriments:
@@ -29,19 +29,25 @@ La plantilla té la següent estructura de carpetes.
   * "\scripts\radios": Scripts per configurar les ràdios. Inclou fitxers de configuració del TFAR i ACRE2.
   * "\scripts\zeus": Scripts i funcions per configurar el Zeus.
   
-###Mods externs actualment suportats (en negreta aquells mods a l'estàndard del grup 1RA)
+###Mods suportats
 
+La següent llista mostra els mods externs que actualment estan suportats i en negreta aquells mods que actualment estan a l'estàndard del grup 1RA.
+
+* Contingut:
+  * RHS Armed Forces of the Russian Federation (AFRF: http://www.rhsmods.org/mod/1
+  * **RHS United States Armed Forces (USAF)**: http://www.rhsmods.org/mod/2
 * Realisme:
   * Advanced Combat Environment (ACE3): https://github.com/acemod/ACE3 o bé http://ace3mod.com/
   * **Advanced Gameplay Modification (AGM)**: https://github.com/KoffeinFlummi/AGM
 * Sistema de ràdios:
   * Advanced Combat Radio Environment 2 (ACRE2): http://forums.bistudio.com/showthread.php?191848-ACRE2-Stable-Release
   * **Task Force Arrowhead Radio (TFAR)**: https://github.com/michail-nikolaev/task-force-arma-3-radio
-* Contingut:
-  * **RHS United States Armed Forces (USAF)**: http://www.rhsmods.org/mod/2
-  * RHS Armed Forces of the Russian Federation (AFRF: http://www.rhsmods.org/mod/1
+
   
-###Faccions actualment suportades per scripts que depenen de les faccions: *briefing*, *configEquipacio* i *intro* (en negreta aquells mods a l'estàndard del grup 1RA):
+###Faccions suportades
+
+La següent llista mostra les faccions suportades per aquells scripts que permeten un major grau de control en equipacions, objectius etc: *briefing.sqf*, *fn_acre2_determinarIdiomes.sqf* (babel), *fn_configEquipacio.sqf* i *intro.sqf* . En negreta aquells mods a l'estàndard del grup 1RA:
+
 * **Blue Force**: blu_f
 * **FIA**: blu_g_f, ind_g_f i _opf_g_f
 * **Opposing Force**: opf_f
