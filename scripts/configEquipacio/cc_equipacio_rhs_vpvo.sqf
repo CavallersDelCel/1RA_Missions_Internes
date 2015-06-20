@@ -5,7 +5,7 @@
 // Creació del Document: 2015/04/02                                                                      //
 // Descripció: Aquest document serveix per equipar els jugadors amb l'equipació dissenyada per la missió //
 //             sense fer servir els perfils estàndard del grup dels Cavallers del Cel. Requereix que el  //
-//             jugador formi part de la facció RHS: Soviet Air Defense Forces (voyska protivovozdushnoy  //
+//             jugador formi part de la facció RHS: Soviet Air Defense Forces (Voyska protivovozdushnoy  //
 //             oborony) http://class.rhsmods.org/rhsafrf/CfgFactionClasses_rhs_faction_vpvo.html         //
 //             Cal afegir la següent línia al INIT de la unitat en l'editor:                             //
 //                                                                                                       //
@@ -63,7 +63,7 @@
 //                  rhs_faction_usmc_wd     United States Marine Corps (Woodland)                        //
 //                  rhs_faction_usmc_d      United States Marine Corps (Desert)                          //
 //                  rhs_faction_insurgents  Insurgents                                                   //
-//                  rhs_faction_vpvo        Russian Air Defense Troops                                   //
+//                  rhs_faction_vpvo        Soviet Air Defense Troops (Voyska protivovozdushnoy oborony) //
 //                  rhs_faction_vdv         Russian Airborne Troops (Vozdushno-desantnye voyska)         //
 //                                                                                                       //
 // Canvis: 0.1 (2015/04/02) Versió inicial.                                                              //

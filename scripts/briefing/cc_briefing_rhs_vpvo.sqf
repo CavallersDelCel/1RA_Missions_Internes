@@ -4,7 +4,7 @@
 // Versió: 0.1                                                                                           //
 // Creació del Document: 2015/02/22                                                                      //
 // Descripció: Aquest document serveix per oferir informació de la missió si la unitat forma part de     //
-//             la facció RHS: Soviet Air Defense Forces (voyska protivovozdushnoy oborony)               //
+//             la facció RHS: Soviet Air Defense Forces (Voyska protivovozdushnoy oborony)               //
 //             http://class.rhsmods.org/rhsafrf/CfgFactionClasses_rhs_faction_vpvo.html                  //
 // Canvis: 0.1 (2015/02/22) Versió inicial                                                               //
 //=======================================================================================================//
