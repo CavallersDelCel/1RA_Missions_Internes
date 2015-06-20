@@ -1,9 +1,13 @@
 #Plantilla de Bàsica per Missions (PBM)
  
 **Autor**: CC_Magnetar
+
 **Contribuidors**: CC_Viper (Plantilles d'imatges).
+
 **Versió**: 0.0
+
 **Darrera modificació**: 2015/06/20
+
 **Descripció**: Plantilla bàsica per generar missions pel grup d'Arma 1er Regiment Aerotransportat (1RA) de la Comunitat Catalana de Simulació - Cavallers del Cel.
 
 ###Requeriments:
@@ -12,7 +16,8 @@ La Plantilla Bàsica per Missions (PBM) està pensada per ser flexible i no dep�
 
 * CC_Icona: Addon que afegeix la icona del grup 1er Regiment Aerotransportat (1RA).
 
-La resta de la missió es mantindrà, per una decisió de disseny, *independent de qualsevol addon extern*. Qualsevol col·laborador que vulgui afegir algun script en particular haurà d'afegir una opció per tal de que la funcionalitat es pugui desactivar.
+La resta de la missió es mantindrà, per una decisió de disseny, *independent de qualsevol addon extern*. Qualsevol col·laborador que vulgui afegir algun script en particular
+haurà d'afegir una opció per tal de que la funcionalitat es pugui desactivar.
 
 ###Estructura:
 
@@ -45,7 +50,8 @@ La següent llista mostra els mods externs que actualment estan suportats i en n
 
 ###Faccions suportades
 
-La següent llista mostra les faccions suportades per aquells scripts que permeten un major grau de control en equipacions, objectius etc: *briefing.sqf*, *fn_acre2_determinarIdiomes.sqf* (babel), *fn_configEquipacio.sqf* i *intro.sqf* . En negreta aquells mods a l'estàndard del grup 1RA:
+La següent llista mostra les faccions suportades per aquells scripts que permeten un major grau de control en equipacions, objectius etc: *briefing.sqf*,
+*fn_acre2_determinarIdiomes.sqf* (babel), *fn_configEquipacio.sqf* i *intro.sqf* . En negreta aquells mods a l'estàndard del grup 1RA:
 
 * **Blue Force**: blu_f
 * **Civils**: civ_f
