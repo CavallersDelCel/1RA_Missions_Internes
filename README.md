@@ -24,7 +24,7 @@ Missió generada amb la Plantilla Bàsica per Missions (PBM) del grup 1er Regime
 
 ### Descripció detallada de la missió
 
-
+Descripció detallada de la missió. Aquest text pot ser el mateix que el que es penja al fòrum.
 
 # Plantilla Bàsica per Missions (PBM)
  
@@ -67,13 +67,13 @@ La plantilla té la següent estructura de carpetes.
 La següent llista mostra els mods externs que actualment estan suportats i en negreta aquells mods que actualment estan a l'estàndard del grup 1RA.
 
 * Contingut:
-  * RHS Armed Forces of the Russian Federation (AFRF: http://www.rhsmods.org/mod/1
-  * **RHS United States Armed Forces (USAF)**: http://www.rhsmods.org/mod/2
+  * RHS Armed Forces of the Russian Federation (AFRF: http://www.rhsmods.org/mod/1.
+  * **RHS United States Armed Forces (USAF)**: http://www.rhsmods.org/mod/2.
 * Realisme:
-  * Advanced Combat Environment (ACE3): https://github.com/acemod/ACE3 o bé http://ace3mod.com/
-  * **Advanced Gameplay Modification (AGM)**: https://github.com/KoffeinFlummi/AGM
+  * Advanced Combat Environment (ACE3): https://github.com/acemod/ACE3 o bé http://ace3mod.com/.
+  * **Advanced Gameplay Modification (AGM)**: https://github.com/KoffeinFlummi/AGM.
 * Sistema de ràdios:
-  * Advanced Combat Radio Environment 2 (ACRE2): http://forums.bistudio.com/showthread.php?191848-ACRE2-Stable-Release
+  * Advanced Combat Radio Environment 2 (ACRE2): http://forums.bistudio.com/showthread.php?191848-ACRE2-Stable-Release.
   * **Task Force Arrowhead Radio (TFAR)**: https://github.com/michail-nikolaev/task-force-arma-3-radio.
 
 ### Faccions suportades
@@ -92,4 +92,4 @@ La següent llista mostra les faccions suportades per aquells scripts que permet
 * **RHS United States Army (Desert)**: rhs_faction_usarmy_d.
 * **RHS United States Army (Woodland)**: rhs_faction_usarmy_wd.
 * **RHS United States Marine Corps (Desert)**: rhs_faction_usmc_d.
-* **RHS United States Marine Corps  (Woodland)**: rhs_faction_usmc_wd.
+* **RHS United States Marine Corps (Woodland)**: rhs_faction_usmc_wd.
