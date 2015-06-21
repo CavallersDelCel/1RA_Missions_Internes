@@ -1,6 +1,8 @@
 # Operació Jagdtag: Dia de caça
 
-Imatge capçalera.
+<p align="center">
+    <img src="https://github.com/CavallersDelCel/CC_Plantilla_Missio/blob/Jagdtag/imatges/PortadaForum.jpg">
+</p>
 
 Missió generada amb la Plantilla Bàsica per Missions (PBM) del grup 1er Regiment Aerotransportat (1RA) de la Comunitat Catalana de Simulació - Cavallers del Cel.
 
@@ -68,7 +70,9 @@ L'objectiu **prioritari** d'ambdós equips és obtenir la localització del trai
 
 L'extracció es farà a càrrec de Falcó 1 sota el protocol de **radio Alfa** en cas de que s'hagi pogut reestablir la comunicació per ràdio. En cas contrari, les tropes es reagruparan a les cases abandonades a 053042 i adoptaràn un perfil baix fins que puguin ser rescatades.
 
-Imatge
+<p align="center">
+    <img src="https://github.com/CavallersDelCel/CC_Plantilla_Missio/blob/Jagdtag/imatges/BriefingForum.png">
+</p>
 
 **Tasques**
 * Inserció al punt LZ1 (Gos de Caça 1) i LZ2 (Gos de Caça 2).
