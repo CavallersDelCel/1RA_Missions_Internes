@@ -4,7 +4,7 @@
 
 **Contribuidors**: CC_Viper (Plantilles d'imatges).
 
-**Versió**: 0.0
+**Versió**: 0.1
 
 **Darrera modificació**: 2015/06/20
 
