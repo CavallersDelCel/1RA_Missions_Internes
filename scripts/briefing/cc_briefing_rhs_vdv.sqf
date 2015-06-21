@@ -1,12 +1,12 @@
 //=======================================================================================================//
-// Arxiu: cc_briefing_rhs_vpvo.sqf                                                                       //
+// Arxiu: cc_briefing_rhs_vdv.sqf                                                                        //
 // Autor: CC_Magnetar                                                                                    //
 // Versió: 0.1                                                                                           //
-// Creació del Document: 2015/02/22                                                                      //
+// Creació del Document: 2015/06/20                                                                      //
 // Descripció: Aquest document serveix per oferir informació de la missió si la unitat forma part de     //
-//             la facció RHS: Soviet Air Defense Forces (Voyska protivovozdushnoy oborony)               //
-//             http://class.rhsmods.org/rhsafrf/CfgFactionClasses_rhs_faction_vpvo.html                  //
-// Canvis: 0.1 (2015/02/22) Versió inicial                                                               //
+//             la facció RHS: Russian Airborne Troops (Vozdushno-desantnye voyska)                       //
+//             http://class.rhsmods.org/rhsafrf/CfgFactionClasses_rhs_faction_vdv.html                   //
+// Canvis: 0.1 (2015/06/20) Versió inicial.                                                              //
 //=======================================================================================================//
 
 //=======================================================================================================//

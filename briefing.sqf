@@ -144,7 +144,17 @@ if (_faccioUnitat == "rhs_faction_insurgents") exitWith {
 	};
 };
 
-// Briefing per la facció russa "Russian Air Defense Troops"
+// Briefing per la facció russa "Russian Airborne Troops"
+if (_faccioUnitat == "rhs_faction_vdv" ) exitWith {
+	#include "scripts\briefing\cc_briefing_rhs_vdv.sqf"
+	
+	// DEBUG OUTPUT
+	if ( cc_param_debugOutput == 1 ) then {
+		player sideChat format ["DEBUG (briefing.sqf): Utilitzant briefing per la facció %1.", _faccioUnitat];
+	};
+};
+
+// Briefing per la facció russa "Soviet Air Defense Forces"
 if (_faccioUnitat == "rhs_faction_vpvo" ) exitWith {
 	#include "scripts\briefing\cc_briefing_rhs_vpvo.sqf"
 	

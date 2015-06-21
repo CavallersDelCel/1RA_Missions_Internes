@@ -63,7 +63,7 @@
 //                  rhs_faction_usmc_wd     United States Marine Corps (Woodland)                        //
 //                  rhs_faction_usmc_d      United States Marine Corps (Desert)                          //
 //                  rhs_faction_insurgents  Insurgents                                                   //
-//                  rhs_faction_vpvo        Russian Air Defense Troops                                   //
+//                  rhs_faction_vpvo        Soviet Air Defense Troops (Voyska protivovozdushnoy oborony) //
 //                  rhs_faction_vdv         Russian Airborne Troops (Vozdushno-desantnye voyska)         //
 //                                                                                                       //
 // Canvis: 0.1 (2015/06/12) Versió inicial.                                                              //

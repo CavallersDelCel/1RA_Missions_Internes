@@ -32,7 +32,7 @@ cc_tfar_config_utilitzarRadiosPerDefecte = false;
 cc_tfar_config_distribuirRadios = true;
 
 // Llista d'unitats amb Rifleman Radio (fn_configEquipacio.sqf)
-cc_tfar_llistaRF = ["rfl", "rflat", "gr", "ar", "dm", "mg", "amg", "at", "aat", "aa", "aaa", "en", "divme","div"];
+cc_tfar_llistaRF = ["rfl", "rflat", "gr", "ar", "dm", "mg", "amg", "at", "aat", "aa", "aaa", "en", "exp", "divme", "div"];
 
 // Llista d'unitats amb Short Range Radio (fn_configEquipacio.sqf)
 cc_tfar_llistaSR = ["pl", "psg", "rto", "fo", "me", "sl", "tl", "sn", "sp", "divsl"];
