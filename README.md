@@ -1,5 +1,7 @@
 # Nom de la missió
 
+Imatge capçalera.
+
 Missió generada amb la Plantilla Bàsica per Missions (PBM) del grup 1er Regiment Aerotransportat (1RA) de la Comunitat Catalana de Simulació - Cavallers del Cel.
 
 **Nom de la missió**: Nom de la missió.
@@ -9,6 +11,8 @@ Missió generada amb la Plantilla Bàsica per Missions (PBM) del grup 1er Regime
 **Autor**: Nom de l'autor.
 
 **Contribuïdors**: Noms dels col·laboradors.
+
+**Tipus de missió**: Tipus de missió (Coop, TvT, PvP).
 
 **Nombre mínim de jugadors**: Nombre mínim de jugadors recomenats per l'autor.
 
