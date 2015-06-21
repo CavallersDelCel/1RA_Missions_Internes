@@ -1,5 +1,7 @@
 # Operació Jagdtag: Dia de caça
 
+Imatge capçalera.
+
 Missió generada amb la Plantilla Bàsica per Missions (PBM) del grup 1er Regiment Aerotransportat (1RA) de la Comunitat Catalana de Simulació - Cavallers del Cel.
 
 **Nom de la missió**: Operació Jagdtag: Dia de caça.
@@ -7,6 +9,8 @@ Missió generada amb la Plantilla Bàsica per Missions (PBM) del grup 1er Regime
 **Versió**: v1.1 (2015/06/21).
 
 **Autor**: CC_Magnetar.
+
+**Tipus de missió**: Tipus de missió (Coop, TvT, PvP).
 
 **Nombre mínim de jugadors**: 8.
 
