@@ -1714,7 +1714,7 @@ class Mission
 				class Item8
 				{
 					position[]={3901.1455,3.542483e-005,8134.3481};
-					expActiv="deleteVehicle Heli_Insercio2;";
+					expActiv="deleteVehicle HeliInsercio;";
 					class Effects
 					{
 					};
