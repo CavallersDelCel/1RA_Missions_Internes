@@ -12,7 +12,7 @@ Missió generada amb la Plantilla Bàsica per Missions (PBM) del grup 1er Regime
 
 **Autor**: CC_Magnetar.
 
-**Tipus de missió**: Tipus de missió (Coop, TvT, PvP).
+**Tipus de missió**: Coop.
 
 **Nombre mínim de jugadors**: 8.
 
