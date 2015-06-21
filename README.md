@@ -1,8 +1,27 @@
-#Plantilla de Bàsica per Missions (PBM)
+# Nom de la missió
+
+Missió generada amb la Plantilla Bàsica per Missions (PBM) del grup 1er Regiment Aerotransportat (1RA) de la Comunitat Catalana de Simulació - Cavallers del Cel.
+
+**Nom de la missió**: Nom de la missió.
+**Versió**: vx.x (data).
+**Autor**: Nom de l'autor.
+**Contribuïdors**: Noms dels col·laboradors.
+**Nombre mínim de jugadors**: Nombre mínim de jugadors recomenats per l'autor.
+**Nombre màxim de jugadors**: Nombre màxim de jugadors recomenats per l'autor.
+**Respawn**: Tipus de respawn.
+**Dificultat**: Dificultat de la missió.
+**Resum de la missió**: Breu descripció de la missió.
+**Plantilla Bàsica per Missions (PBM)**: v0.1 (https://github.com/CavallersDelCel/CC_Plantilla_Missio) per CC_Magnetar.
+
+### Descripció detallada de la missió
+
+
+
+#Plantilla Bàsica per Missions (PBM)
  
 **Autor**: CC_Magnetar
 
-**Contribuidors**: CC_Viper (Plantilles d'imatges).
+**Contribuïdors**: CC_Viper (Plantilles d'imatges).
 
 **Versió**: 0.1
 
