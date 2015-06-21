@@ -1,4 +1,4 @@
-# Nom de la missió
+# Operació Jagdtag: Dia de caça
 
 Missió generada amb la Plantilla Bàsica per Missions (PBM) del grup 1er Regiment Aerotransportat (1RA) de la Comunitat Catalana de Simulació - Cavallers del Cel.
 
@@ -8,8 +8,6 @@ Missió generada amb la Plantilla Bàsica per Missions (PBM) del grup 1er Regime
 
 **Autor**: CC_Magnetar.
 
-**Contribuïdors**: -.
-
 **Nombre mínim de jugadors**: 8.
 
 **Nombre màxim de jugadors**: 12.
@@ -18,7 +16,7 @@ Missió generada amb la Plantilla Bàsica per Missions (PBM) del grup 1er Regime
 
 **Dificultat**: Elevada.
 
-**Resum de la missió**: Operació Jagdtag: Dia de caça és una missió que divideix una esquadra en dos equips independents que no es podran comunicar per ràdio
+**Resum de la missió**: *Operació Jagdtag: Dia de caça* és una missió que divideix una esquadra en dos equips independents que no es podran comunicar per ràdio
 fins que les torres inhibidores de senyal siguin destruïdes. Partint d'escaça informació inicial els dos equips van obtenint més detalls dels objectius a mesura
 que s'avança en la missió a través d'informes d'inteligència. Per tal d'acomplir els objectius es requereixen entre 8 i 12 jugadors molt ben coordinats ja que es
 considera una missió difícil. Les tasques no s'actualitzen un cop completades i són els jugadors els qui decideixen si l'han completat o no.
@@ -56,7 +54,7 @@ Degut a la gravetat de la situació, dos equips altament especialitzats han sigu
 ##### MISSIÓ i EXECUCIÓ
 
 Dos equips d'intanteria seran desplegats al nord de Stratis per tal d'evaluar la situació i actuar amb la màxima velocitat possible. L'equip de bussejadors, Gos de Caça 1, intentarà
-localitzar les restes de l'helicòpter desaparegut per rescatar possibles supervivents i/o recuperar els informes d'inteligència abans de que ho faci l'enemic.L'última posició
+localitzar les restes de l'helicòpter desaparegut per rescatar possibles supervivents i/o recuperar els informes d'inteligència abans de que ho faci l'enemic. L'última posició
 confirmada es 070606.
 
 Per altra banda, l'equip de terra amb el nom en clau Gos de Caça 2, farà inserció al punt LZ2 per acte seguit es dirigir-se al punt de reagrupament (045068) i alertar l'esquadra
