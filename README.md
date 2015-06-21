@@ -86,7 +86,7 @@ La següent llista mostra les faccions suportades per aquells scripts que permet
 *fn_acre2_determinarIdiomes.sqf* (babel), *fn_configEquipacio.sqf* i *intro.sqf* . En cursiva aquells mods a l'estàndard del grup 1RA:
 
  | **Faccio**                                                       | **Codi**                      |
- |------------------------------------------------------------------|-------------------------------|
+ | ---------------------------------------------------------------- | ----------------------------- |
  | *Blue Force*                                                     | `blu_f`                       |
  | *Civils*                                                         | `civ_f`                       |
  | *FIA*                                                            | `blu_g_f, ind_g_f i _opf_g_f` |
