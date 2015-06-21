@@ -82,6 +82,9 @@ La següent llista mostra els mods externs que actualment estan suportats i en n
 
 ### Faccions suportades
 
+La següent llista mostra les faccions suportades per aquells scripts que permeten un major grau de control en equipacions, objectius etc: *briefing.sqf*,
+*fn_acre2_determinarIdiomes.sqf* (babel), *fn_configEquipacio.sqf* i *intro.sqf* . En cursiva aquells mods a l'estàndard del grup 1RA: 
+
 | **Faccio**        | **Codi**          | 
 | ------------- | ------------- |
 | *Blue Force*                                                     | `blu_f`                       |
@@ -96,6 +99,3 @@ La següent llista mostra els mods externs que actualment estan suportats i en n
 | *RHS United States Army (Woodland)*                              | `rhs_faction_usarmy_wd`       |
 | *RHS United States Marine Corps (Desert)*                        | `rhs_faction_usmc_d`          |
 | *RHS United States Marine Corps (Woodland)*                      | `rhs_faction_usmc_wd`         |
-
-La següent llista mostra les faccions suportades per aquells scripts que permeten un major grau de control en equipacions, objectius etc: *briefing.sqf*,
-*fn_acre2_determinarIdiomes.sqf* (babel), *fn_configEquipacio.sqf* i *intro.sqf* . En cursiva aquells mods a l'estàndard del grup 1RA: 
