@@ -76,7 +76,7 @@ class Mission
 			side="WEST";
 			class Vehicles
 			{
-				items=1;
+				items=2;
 				class Item0
 				{
 					position[]={1629.7225,5.5,5181.6387};
@@ -89,6 +89,16 @@ class Mission
 					text="LEsq";
 					init="[""sl"",this] call cc_fnc_configEquipacio;";
 					description="Lider d'Esquadra";
+				};
+				class Item1
+				{
+					position[]={1647.7552,5.5,5179.6934};
+					id=2;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_medic";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="[""me"",this] call cc_fnc_configEquipacio;";
 				};
 			};
 		};
@@ -129,7 +139,7 @@ class Mission
 							typeName="Forced";
 						};
 					};
-					id=2;
+					id=3;
 					side="LOGIC";
 					vehicle="ModuleCurator_F";
 					leader=1;
@@ -145,7 +155,7 @@ class Mission
 		class Item0
 		{
 			position[]={1621.6919,5.5,5181.668};
-			id=3;
+			id=4;
 			side="EMPTY";
 			vehicle="Box_NATO_Wps_F";
 			skill=0.60000002;

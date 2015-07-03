@@ -22,10 +22,6 @@ enableSaving [false, false];
 //=======================================================================================================//
 enableSentences false;
 
-if( cc_mod_ace3 ) then {
-	cc_script_ace3 = [] execVM "scripts\ace3\cc_ace3_config.sqf";
-};
-
 // Execució del script per generar els Briefings
 cc_script_briefing = [] execVM "briefing.sqf";
 

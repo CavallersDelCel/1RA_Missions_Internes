@@ -78,27 +78,27 @@ class Params
 	
 	//===================================================================================================//
 	// Sistema mèdic: Nivell de detall del sistema mèdic de ACE3.                                        //
-	// Opció per defecte: Avançat.                                                                        //
+	// Opció per defecte: Avançat.                                                                       //
 	//===================================================================================================//
-	class cc_param_SistemaMedic
+	class cc_param_sistemaMedic
 	{
 		title = "Sistema mèdic";
-		values[] = {0,1};
-		texts[] = {"ACE3 Bàsic","ACE3 Avançat"};
-		default = 1;
+		values[] = {0,1,2};
+		texts[] = {"Desactivat","ACE3 Bàsic","ACE3 Avançat"};
+		default = 2;
 	};
 	
 	//===================================================================================================//
 	// Sistema de balística: Nivell de detall del sistema de balística de ACE3.                          //
 	// Opció per defecte: Avançat.                                                                       //
 	//===================================================================================================//
-	//class cc_param_ace3Balistica
-	//{
-	//	title = "Sistema de balística de ACE3";
-	//	values[] = {0,1};
-	//	texts[] = {"Bàsic","Avançat"};
-	//	default = 1;
-	//};
+	class cc_param_ace3Balistica
+	{
+		title = "Sistema de balística de ACE3";
+		values[] = {0,1};
+		texts[] = {"Bàsic","Avançat"};
+		default = 1;
+	};
 };
 
 //=======================================================================================================//
@@ -212,11 +212,20 @@ class CfgFunctions
 			file = "scripts\zeus";
 			class zeus_eventHandlers
 			{
-				PostInit = 1;  // La funció s'executa al iniciar la missió, DESPRÉS d'inicialitzar objectes
+				PostInit = 1;  // La funció s'executa al iniciar la missió, DESPRÉS d'inicialitzar objectes.
 			};
 			class zeus_afegirGrups{};
 			class zeus_afegirObjectes{};
-		}
+		};
+		
+		class ace3
+		{
+			file = "scripts\ace3";
+			class ace3_config
+			{
+				PostInit = 1;  // La funció s'executa al iniciar la missió, DESPRÉS d'inicialitzar objectes.
+			};
+		};
 	};
 };
 
