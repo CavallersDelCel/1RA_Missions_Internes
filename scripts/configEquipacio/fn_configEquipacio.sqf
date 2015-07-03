@@ -1,7 +1,7 @@
 //=======================================================================================================//
 // Arxiu: configEquipacio.sqf                                                                            //
 // Autor: CC_Magnetar                                                                                    //
-// Versió: 0.8                                                                                           //
+// Versió: 0.9                                                                                           //
 // Creació del Document: 2015/04/02                                                                      //
 // Descripció: Aquest document serveix per equipar els jugadors depenent del rol i la facció. A l'hora   //
 //             de configurar l'equip de la unitat la següent línia s'ha d'afegir al INIT de la unitat en //
@@ -42,6 +42,8 @@
 //                  sp                      Observador (Spotter)                                         //
 //                  divsl                   Bussejador líder d'esquadra (Diver Squad Leader)             //
 //                  divme                   Bussejador metge (Diver Medic)                               //
+//                  divexp                  Bussejador especialista en explosius (Diver Specialist in    //
+//                                          Explosives)                                                  //
 //                  div                     Bussejador (Diver)                                           //
 //                                                                                                       //
 //                  hmmwv                   Equipació per HMMWVs                                         //
@@ -75,6 +77,7 @@
 //                          carregats el script no falla.                                                //
 //         0.8 (2015/06/19) Afegida l'explicació pel tercer paràmetre (opcional) i la facció russa       //
 //                          rhs_faction_vdv.                                                             //
+//         0.9 (2015/07/03) Afegit el rol de Bussejador especialista en explosius (divexp).              //
 //=======================================================================================================//
 
 // Declaració de variables

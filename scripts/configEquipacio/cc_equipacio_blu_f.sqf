@@ -1,7 +1,7 @@
 //=======================================================================================================//
 // Arxiu: cc_equipacio_blu_f.sqf                                                                         //
 // Autor: CC_Magnetar                                                                                    //
-// Versió: 0.6                                                                                           //
+// Versió: 0.7                                                                                           //
 // Creació del Document: 2015/04/02                                                                      //
 // Descripció: Aquest document serveix per equipar els jugadors amb l'equipació dissenyada per la missió //
 //             sense fer servir els perfils estàndard del grup dels Cavallers del Cel. Requereix que el  //
@@ -36,6 +36,8 @@
 //                  sp                  Observador (Spotter)                                             //
 //                  divsl               Bussejador líder d'esquadra (Diver Squad Leader)                 //
 //                  divme               Bussejador metge (Diver Medic)                                   //
+//                  divexp                  Bussejador especialista en explosius (Diver Specialist in    //
+//                                          Explosives)                                                  //
 //                  div                 Bussejador                                                       //
 //                                                                                                       //
 //                  hmmwv               Equipació per HMMWVs                                             //
@@ -48,6 +50,7 @@
 //         0.4 (2015/05/26) Canviat al sistema ACE3.                                                     // 
 //         0.5 (2015/06/10) Afegit el cas default amb equipació de fuseller (rfl).                       //
 //         0.6 (2015/06/12) Canvis a la M249 i M240B degut a la versió 0.3.8 de RHS.                     //
+//         0.7 (2015/07/03) Afegit el rol de Bussejador especialista en explosius (divexp).              //
 //=======================================================================================================//
 
 //=======================================================================================================//
@@ -1274,7 +1277,7 @@ switch (_tipusUnitat) do
 		//_unitat linkItem _gps;
 	};
 	
-	// Bussejador: Líder d'esquadra (divsl)
+	// Bussejador líder d'esquadra (Diver Squad Leader)
 	case "divsl":
 	{
 		// Treure l'uniforme, casc i armilla
@@ -1330,7 +1333,7 @@ switch (_tipusUnitat) do
 		_unitat addWeapon _vectorIV;
 	};
 	
-	// Bussejador metge (divme)
+	// Bussejador metge (Diver Medic)
 	case "divme":
 	{
 		// Treure l'uniforme, casc i armilla
@@ -1390,7 +1393,58 @@ switch (_tipusUnitat) do
 		_unitat addWeapon _armaDIV;
 	};
 	
-	// Bussejador (div)
+	// Bussejador especialista en explosius (divexp)
+	case "divexp":
+	{
+		// Treure l'uniforme, casc i armilla
+		removeUniform _unitat;
+		removeHeadgear _unitat;
+		removeGoggles _unitat;
+		
+		// Uniforme, armilla i motxilla
+		_unitat forceAddUniform _uniformeDIV;
+		_unitat addVest _armillaDIV;
+		_unitat addBackpack _motxillaDIV;
+		
+		// Objectes a l'uniforme
+		if (cc_mod_ace3 or cc_mod_agm) then {
+			(uniformContainer _unitat) addItemCargoGlobal [_taps,1];
+			(uniformContainer _unitat) addItemCargoGlobal [_morfina,1];
+			(uniformContainer _unitat) addItemCargoGlobal [_epinefrina,1];
+			(uniformContainer _unitat) addItemCargoGlobal [_benes,2];
+		};
+		(uniformContainer _unitat) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",4];
+		(uniformContainer _unitat) addMagazineCargoGlobal ["20Rnd_556x45_UW_mag",3];
+		
+		// Objectes a l'armilla
+		// No es poden posar objectes a l'armilla de bussejador
+		
+		// Objectes a la motxilla
+		if (cc_mod_ace3 or cc_mod_agm) then {
+			(unitBackpack _unitat) addItemCargoGlobal [_benes,2];
+			if (cc_mod_ace3 and cc_param_SistemaMedic == 1) then {
+				(unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
+				(unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
+				(unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
+				(unitBackpack _unitat) addItemCargoGlobal [_torniquet,1];
+			};
+		};
+		(unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
+		(unitBackpack _unitat) addMagazineCargoGlobal ["DemoCharge_Remote_Mag",3];
+		(unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_mk84",1];
+		(unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_an_m8hc",2];
+		(unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_m67",4];
+		(unitBackpack _unitat) addMagazineCargoGlobal ["30Rnd_556x45_Stanag",7];
+		(unitBackpack _unitat) addMagazineCargoGlobal ["20Rnd_556x45_UW_mag",4];
+		
+		// Ulleres
+		_unitat addGoggles _ulleresDIV;
+		
+		// Arma principal
+		_unitat addWeapon _armaDIV;
+	};
+	
+	// Bussejador (Diver)
 	case "div":
 	{
 		// Treure l'uniforme, casc i armilla
