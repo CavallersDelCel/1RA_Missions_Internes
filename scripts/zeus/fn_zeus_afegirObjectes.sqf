@@ -15,7 +15,7 @@ _zeus = _this select 0;
 _nousObjectes = _this select 1;
 
 {
-	_x addCuratorEditableObjects [[_nousObjectes],true]
+    _x addCuratorEditableObjects [[_nousObjectes],true]
 } forEach (allCurators - [_curator]);
 
 //============================================ FI DEL FITXER ============================================//

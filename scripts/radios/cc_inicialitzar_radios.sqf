@@ -16,13 +16,13 @@
 
 // Configurar el sistema de ràdio carregat.
 if (cc_mod_tfar) then {
-	// Configurar el Task Force Arrowhead Radio (TFAR)
-	[] execVM "scripts\radios\tfar\cc_inicialitzar_tfar.sqf";
+    // Configurar el Task Force Arrowhead Radio (TFAR)
+    [] execVM "scripts\radios\tfar\cc_inicialitzar_tfar.sqf";
 };
 
 if (cc_mod_acre2) then {
-	// Advanced Combat Radio Environment 2 (ACRE 2)
-	[] execVM "scripts\radios\acre2\cc_inicialitzar_acre2.sqf";
+    // Advanced Combat Radio Environment 2 (ACRE 2)
+    [] execVM "scripts\radios\acre2\cc_inicialitzar_acre2.sqf";
 };
 
 //============================================ FI DEL FITXER ============================================//

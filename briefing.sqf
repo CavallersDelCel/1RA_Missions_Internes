@@ -14,8 +14,7 @@
 //=======================================================================================================//
 
 // Esperar una mica per tal de que el sistema de briefing s'inicialitzi correctament
-if (!isDedicated && (isNull player)) then
-{
+if (!isDedicated && (isNull player)) then {
     waitUntil {sleep 0.1; !isNull player};
 };
 
@@ -31,137 +30,137 @@ _faccioUnitat = toLower (faction player);
 
 // Si la faccio de la unitat és different a la del líder, aquesta última es la que s'utilitzarà.
 if (_faccioUnitat != toLower (faction (leader group player))) then {
-	_faccioUnitat = toLower (faction (leader group player));
+    _faccioUnitat = toLower (faction (leader group player));
 };
 
 // Briefing per l'Administrador.
 if (serverCommandAvailable "#kick") then {
-	#include "scripts\briefing\cc_briefing_admin.sqf"
-	
-	// DEBUG OUTPUT
-	if ( cc_param_debugOutput == 1 ) then {
-		player sideChat format ["DEBUG (briefing.sqf): Utilitzant briefing per administrador.", _faccioUnitat];
-	};
+    #include "scripts\briefing\cc_briefing_admin.sqf"
+    
+    // DEBUG OUTPUT
+    if ( cc_param_debugOutput == 1 ) then {
+        player sideChat format ["DEBUG (briefing.sqf): Utilitzant briefing per administrador.", _faccioUnitat];
+    };
 };
 
 // Briefing per la facció BLUFOR
 if (_faccioUnitat == "blu_f") exitWith {
-	#include "scripts\briefing\cc_briefing_blu_f.sqf"
-	
-	// DEBUG OUTPUT
-	if ( cc_param_debugOutput == 1 ) then {
-		player sideChat format ["DEBUG (briefing.sqf): Utilitzant briefing per la facció %1.", _faccioUnitat];
-	};
+    #include "scripts\briefing\cc_briefing_blu_f.sqf"
+    
+    // DEBUG OUTPUT
+    if ( cc_param_debugOutput == 1 ) then {
+        player sideChat format ["DEBUG (briefing.sqf): Utilitzant briefing per la facció %1.", _faccioUnitat];
+    };
 };
 
 // Briefing per la facció FIA
 if (_faccioUnitat in ["blu_g_f","ind_g_f","opf_g_f"]) exitWith {
-	#include "scripts\briefing\cc_briefing_fia_f.sqf"
-	
-	// DEBUG OUTPUT
-	if ( cc_param_debugOutput == 1 ) then {
-		player sideChat format ["DEBUG (briefing.sqf): Utilitzant briefing per la facció %1.", _faccioUnitat];
-	};
+    #include "scripts\briefing\cc_briefing_fia_f.sqf"
+    
+    // DEBUG OUTPUT
+    if ( cc_param_debugOutput == 1 ) then {
+        player sideChat format ["DEBUG (briefing.sqf): Utilitzant briefing per la facció %1.", _faccioUnitat];
+    };
 };
 
 // Briefing per la facció OPFOR
 if (_faccioUnitat == "opf_f") exitWith {
-	#include "scripts\briefing\cc_briefing_opf_f.sqf"
-	
-	// DEBUG OUTPUT
-	if ( cc_param_debugOutput == 1 ) then {
-		player sideChat format ["DEBUG (briefing.sqf): Utilitzant briefing per la facció %1.", _faccioUnitat];
-	};
+    #include "scripts\briefing\cc_briefing_opf_f.sqf"
+    
+    // DEBUG OUTPUT
+    if ( cc_param_debugOutput == 1 ) then {
+        player sideChat format ["DEBUG (briefing.sqf): Utilitzant briefing per la facció %1.", _faccioUnitat];
+    };
 };
 
 // Briefing per la facció independent
 if (_faccioUnitat == "ind_f") exitWith {
-	#include "scripts\briefing\cc_briefing_ind_f.sqf"
-	
-	// DEBUG OUTPUT
-	if ( cc_param_debugOutput == 1 ) then {
-		player sideChat format ["DEBUG (briefing.sqf): Utilitzant briefing per la facció %1.", _faccioUnitat];
-	};
+    #include "scripts\briefing\cc_briefing_ind_f.sqf"
+    
+    // DEBUG OUTPUT
+    if ( cc_param_debugOutput == 1 ) then {
+        player sideChat format ["DEBUG (briefing.sqf): Utilitzant briefing per la facció %1.", _faccioUnitat];
+    };
 };
 
 // Briefing per la facció civil
 if (_faccioUnitat == "civ_f") exitWith {
-	#include "scripts\briefing\cc_briefing_civ_f.sqf"
-	
-	// DEBUG OUTPUT
-	if ( cc_param_debugOutput == 1 ) then {
-		player sideChat format ["DEBUG (briefing.sqf): Utilitzant briefing per la facció %1.", _faccioUnitat];
-	};
+    #include "scripts\briefing\cc_briefing_civ_f.sqf"
+    
+    // DEBUG OUTPUT
+    if ( cc_param_debugOutput == 1 ) then {
+        player sideChat format ["DEBUG (briefing.sqf): Utilitzant briefing per la facció %1.", _faccioUnitat];
+    };
 };
 
 // Briefing per la facció USA "United States Army"
 if (_faccioUnitat == "rhs_faction_usarmy_d") exitWith {
-	#include "scripts\briefing\cc_briefing_rhs_usarmy_d.sqf"
-	
-	// DEBUG OUTPUT
-	if ( cc_param_debugOutput == 1 ) then {
-		player sideChat format ["DEBUG (briefing.sqf): Utilitzant briefing per la facció %1.", _faccioUnitat];
-	};
+    #include "scripts\briefing\cc_briefing_rhs_usarmy_d.sqf"
+    
+    // DEBUG OUTPUT
+    if ( cc_param_debugOutput == 1 ) then {
+        player sideChat format ["DEBUG (briefing.sqf): Utilitzant briefing per la facció %1.", _faccioUnitat];
+    };
 };
 
 // Briefing per la facció USA "United States Army"
 if (_faccioUnitat == "rhs_faction_usarmy_wd") exitWith {
-	#include "scripts\briefing\cc_briefing_rhs_usarmy_wd.sqf"
-	
-	// DEBUG OUTPUT
-	if ( cc_param_debugOutput == 1 ) then {
-		player sideChat format ["DEBUG (briefing.sqf): Utilitzant briefing per la facció %1.", _faccioUnitat];
-	};
+    #include "scripts\briefing\cc_briefing_rhs_usarmy_wd.sqf"
+    
+    // DEBUG OUTPUT
+    if ( cc_param_debugOutput == 1 ) then {
+        player sideChat format ["DEBUG (briefing.sqf): Utilitzant briefing per la facció %1.", _faccioUnitat];
+    };
 };
 
 // Briefing per la facció USA "United States Marine Corps"
 if (_faccioUnitat == "rhs_faction_usmc_d") exitWith {
-	#include "scripts\briefing\cc_briefing_rhs_usmc_d.sqf"
-	
-	// DEBUG OUTPUT
-	if ( cc_param_debugOutput == 1 ) then {
-		player sideChat format ["DEBUG (briefing.sqf): Utilitzant briefing per la facció %1.", _faccioUnitat];
-	};
+    #include "scripts\briefing\cc_briefing_rhs_usmc_d.sqf"
+    
+    // DEBUG OUTPUT
+    if ( cc_param_debugOutput == 1 ) then {
+        player sideChat format ["DEBUG (briefing.sqf): Utilitzant briefing per la facció %1.", _faccioUnitat];
+    };
 };
 
 // Briefing per la facció USA "United States Marine Corps"
 if (_faccioUnitat == "rhs_faction_usmc_wd") exitWith {
-	#include "scripts\briefing\cc_briefing_rhs_usmc_wd.sqf"
-	
-	// DEBUG OUTPUT
-	if ( cc_param_debugOutput == 1 ) then {
-		player sideChat format ["DEBUG (briefing.sqf): Utilitzant briefing per la facció %1.", _faccioUnitat];
-	};
+    #include "scripts\briefing\cc_briefing_rhs_usmc_wd.sqf"
+    
+    // DEBUG OUTPUT
+    if ( cc_param_debugOutput == 1 ) then {
+        player sideChat format ["DEBUG (briefing.sqf): Utilitzant briefing per la facció %1.", _faccioUnitat];
+    };
 };
 
 // Briefing per la facció RHS "Insurgents"
 if (_faccioUnitat == "rhs_faction_insurgents") exitWith {
-	#include "scripts\briefing\cc_briefing_rhs_insurgents.sqf"
-	
-	// DEBUG OUTPUT
-	if ( cc_param_debugOutput == 1 ) then {
-		player sideChat format ["DEBUG (briefing.sqf): Utilitzant briefing per la facció %1.", _faccioUnitat];
-	};
+    #include "scripts\briefing\cc_briefing_rhs_insurgents.sqf"
+    
+    // DEBUG OUTPUT
+    if ( cc_param_debugOutput == 1 ) then {
+        player sideChat format ["DEBUG (briefing.sqf): Utilitzant briefing per la facció %1.", _faccioUnitat];
+    };
 };
 
 // Briefing per la facció russa "Russian Airborne Troops"
 if (_faccioUnitat == "rhs_faction_vdv" ) exitWith {
-	#include "scripts\briefing\cc_briefing_rhs_vdv.sqf"
-	
-	// DEBUG OUTPUT
-	if ( cc_param_debugOutput == 1 ) then {
-		player sideChat format ["DEBUG (briefing.sqf): Utilitzant briefing per la facció %1.", _faccioUnitat];
-	};
+    #include "scripts\briefing\cc_briefing_rhs_vdv.sqf"
+    
+    // DEBUG OUTPUT
+    if ( cc_param_debugOutput == 1 ) then {
+        player sideChat format ["DEBUG (briefing.sqf): Utilitzant briefing per la facció %1.", _faccioUnitat];
+    };
 };
 
 // Briefing per la facció russa "Soviet Air Defense Forces"
 if (_faccioUnitat == "rhs_faction_vpvo" ) exitWith {
-	#include "scripts\briefing\cc_briefing_rhs_vpvo.sqf"
-	
-	// DEBUG OUTPUT
-	if ( cc_param_debugOutput == 1 ) then {
-		player sideChat format ["DEBUG (briefing.sqf): Utilitzant briefing per la facció %1.", _faccioUnitat];
-	};
+    #include "scripts\briefing\cc_briefing_rhs_vpvo.sqf"
+    
+    // DEBUG OUTPUT
+    if ( cc_param_debugOutput == 1 ) then {
+        player sideChat format ["DEBUG (briefing.sqf): Utilitzant briefing per la facció %1.", _faccioUnitat];
+    };
 };
 
 // COMPROVACIÓ D'ERRORS: Si la facció de la unitat no està definida es mostra un missatge d'error.

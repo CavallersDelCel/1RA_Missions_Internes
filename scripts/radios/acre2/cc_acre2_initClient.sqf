@@ -16,14 +16,14 @@ _unitat = player;
 
 // Configurar els presets de radio depenent del bàndol
 if (cc_acre2_config_dividirFrequencies) then {
-	switch(side _unitat) do {
-		case blufor: {_nomPreset = "default2"};
-		case opfor: {_nomPreset = "default3"};
-		case independent: {_nomPreset = "default4"};
-		default {_nomPreset = "default"};
-	};
+    switch(side _unitat) do {
+        case blufor: {_nomPreset = "default2"};
+        case opfor: {_nomPreset = "default3"};
+        case independent: {_nomPreset = "default4"};
+        default {_nomPreset = "default"};
+    };
 } else {
-	_nomPreset = "default";
+    _nomPreset = "default";
 };
 
 ["ACRE_PRC343", _nomPreset] call acre_api_fnc_setPreset;
@@ -37,24 +37,24 @@ if (cc_acre2_config_dividirFrequencies) then {
 
 // Si el jugador està viu, procedir
 if(alive _unitat) then {
-	// Esperar fins que l'equipació estigui assignada
-	waitUntil{(_unitat getVariable ["cc_var_configEquipacio_Llesta", false])};
-	
-	// Definir els idiomes per cada bàndol
-	[] call cc_fnc_acre2_determinarIdiomes;
-	
-	// Treure totes les ràdios de l'inventari
-	[] call cc_fnc_acre2_treureRadios;
+    // Esperar fins que l'equipació estigui assignada
+    waitUntil{(_unitat getVariable ["cc_var_configEquipacio_Llesta", false])};
+    
+    // Definir els idiomes per cada bàndol
+    [] call cc_fnc_acre2_determinarIdiomes;
+    
+    // Treure totes les ràdios de l'inventari
+    [] call cc_fnc_acre2_treureRadios;
 
-	// Afegir les ràdios a cada unitat
-	[] call cc_fnc_acre2_afegirRadios;
-	
-	if ( cc_param_debugOutput == 1 ) then {
-		_unitat sideChat format ["DEBUG (fn_acre2_initClient.sqf): Radios configurades."];
-	};
+    // Afegir les ràdios a cada unitat
+    [] call cc_fnc_acre2_afegirRadios;
+    
+    if ( cc_param_debugOutput == 1 ) then {
+        _unitat sideChat format ["DEBUG (fn_acre2_initClient.sqf): Radios configurades."];
+    };
 } else {
-	// El jugador no està viu i per tant no cal configurar les ràdios.
-	[] call cc_fnc_acre2_configurarXatEspectador;
+    // El jugador no està viu i per tant no cal configurar les ràdios.
+    [] call cc_fnc_acre2_configurarXatEspectador;
 };
 
 //============================================ FI DEL FITXER ============================================//

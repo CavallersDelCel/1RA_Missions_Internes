@@ -16,11 +16,11 @@
 // Si el script s'està executant en un servidor
 if (hasInterface) then {
 
-	{
-		_x call acre_api_fnc_babelAddLanguageType;
-	} foreach cc_acre2_config_idomes;
-	
-	[] execVM "scripts\radios\acre2\cc_acre2_initClient.sqf";
+    {
+        _x call acre_api_fnc_babelAddLanguageType;
+    } foreach cc_acre2_config_idomes;
+    
+    [] execVM "scripts\radios\acre2\cc_acre2_initClient.sqf";
 };
 
 //============================================ FI DEL FITXER ============================================//

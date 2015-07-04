@@ -9,6 +9,6 @@
 //=======================================================================================================//
 
 {
-	_x addEventHandler ["CuratorGroupPlaced",{[_this,"cc_fnc_zeus_afegirGrups",false] spawn BIS_fnc_MP}];
+    _x addEventHandler ["CuratorGroupPlaced",{[_this,"cc_fnc_zeus_afegirGrups",false] spawn BIS_fnc_MP}];
     _x addEventHandler ["CuratorObjectPlaced",{[_this,"cc_fnc_zeus_afegirObjectes",false] spawn BIS_fnc_MP}];
 } forEach allCurators; 

@@ -13,7 +13,7 @@ _zeus = _this select 0;
 _nouGrup = _this select 1;
 
 {
-	_x addCuratorEditableObjects [(units _nouGrup),true]
+    _x addCuratorEditableObjects [(units _nouGrup),true]
 } forEach (allCurators - [_zeus]);
 
 //============================================ FI DEL FITXER ============================================//

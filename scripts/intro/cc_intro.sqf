@@ -17,48 +17,48 @@ if (isDedicated) exitWith {};
 
 // Esperar a que la variable que habilita/deshabilita el text de Debug estigui inicialitzada
 waitUntil {!isNil "cc_param_debugOutput"};
-	
+    
 // Identificar la facció de la unitat.
 _faccioUnitat = toLower (faction player);
 
 // Si la faccio de la unitat és different a la del líder, aquesta última es la que s'utilitzarà.
 if (_faccioUnitat != toLower (faction (leader group player))) then {
-	_faccioUnitat = toLower (faction (leader group player));
+    _faccioUnitat = toLower (faction (leader group player));
 };
-	
+    
 // DEBUG OUTPUT
 if ( cc_param_debugOutput == 1 ) then {
-	player sideChat format ["DEBUG (cc_intro.sqf): facció del jugador: %1", _faccioUnitat];
+    player sideChat format ["DEBUG (cc_intro.sqf): facció del jugador: %1", _faccioUnitat];
 };
 
 // Introducció per la facció BLUFOR
 if (_faccioUnitat == "blu_f") exitWith {
-	#include "cc_intro_blu_f.sqf"
+    #include "cc_intro_blu_f.sqf"
 };
-	
+    
 // Introducció per la facció RHS: USAF "United States Army"
 if (_faccioUnitat == "rhs_faction_usarmy_d") exitWith {
-	#include "cc_intro_rhs_faction_usarmy_d.sqf"
+    #include "cc_intro_rhs_faction_usarmy_d.sqf"
 };    
 
 // Introducció per la facció RHS: USAF "United States Army"
 if (_faccioUnitat == "rhs_faction_usarmy_wd") exitWith {
-	#include "cc_intro_rhs_faction_usarmy_wd.sqf"
+    #include "cc_intro_rhs_faction_usarmy_wd.sqf"
 };
 
 // Introducció per la facció RHS: USAF "United States Marine Corps"
 if (_faccioUnitat == "rhs_faction_usmc_d") exitWith {
-	#include "cc_intro_rhs_faction_usmc_d.sqf"
+    #include "cc_intro_rhs_faction_usmc_d.sqf"
 };    
 
 // Introducció per la facció RHS: USAF "United States Marine Corps"
 if (_faccioUnitat == "rhs_faction_usmc_wd") exitWith {
-	#include "cc_intro_rhs_faction_usmc_wd.sqf"
+    #include "cc_intro_rhs_faction_usmc_wd.sqf"
 };
 
 // Introducció per la facció RHS: Insurgents
 if (_faccioUnitat == "rhs_faction_insurgents") exitWith {
-	#include "cc_intro_rhs_faction_insurgents.sqf"
+    #include "cc_intro_rhs_faction_insurgents.sqf"
 };
 
 // COMPROVACIÓ D'ERRORS: Si la facció de la unitat no està definida es mostra un missatge d'error.
