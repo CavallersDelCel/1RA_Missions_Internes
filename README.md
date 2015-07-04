@@ -24,7 +24,7 @@ Missió generada amb la Plantilla Bàsica per Missions (PBM) del grup 1er Regime
 
 **Resum de la missió**: Breu descripció de la missió.
 
-**Plantilla Bàsica per Missions (PBM)**: v0.1 (https://github.com/CavallersDelCel/CC_Plantilla_Missio) per CC_Magnetar.
+**Plantilla Bàsica per Missions (PBM)**: v0.1 (https://github.com/CavallersDelCel/1RA_Plantilla_Missio) per CC_Magnetar.
 
 ### Descripció detallada de la missió
 
