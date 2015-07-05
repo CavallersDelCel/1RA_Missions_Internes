@@ -1,0 +1,88 @@
+author = "Viper"; // Author
+onLoadName = "[1RA] Academia General"; // Mission name (temporary solution; actual name set in editor will be used later in the alpha)
+onLoadMission = "Benvingut a l'Academia General del 1er Regiment Aerotransportat"; // Description
+loadScreen = "pics\portada.paa"; // Preview picture
+overviewText = "[1RA] Academia General del 1er Regiment Aerotransportat dels Cavallers del Cel.";
+overviewPicture = "pics\portada.paa";
+class Header
+{
+  gameType = Coop;
+  minPlayers = 1;
+  maxPlayers = 36;
+};
+
+enableDebugConsole = 1;
+
+ShowGPS = 1;
+
+class Params
+{
+
+		#include "ghst_params.hpp"
+		//// Respawn Script - Start ////
+		#include "INS_revive\params.hpp"
+		//// Respawn Script - End   ////
+
+};
+
+// description.ext settings for revive
+///////////////////////////////////////////////////////////////////////////////////////////
+Respawn = "INSTANT";
+RespawnDelay = 5;
+RespawnDialog = 0;
+disabledAI = 1;
+
+//// Respawn Script - Start ////
+#include "INS_revive\description.hpp"
+//// Respawn Script - End   ////
+
+class RscTitles
+{
+	//// Respawn Script - Start ////
+	#include "INS_revive\rsctitles.hpp"
+	//// Respawn Script - End   ////
+};
+
+#include "dlg\Spawnveh.hpp"
+
+#include "VAS\menu.hpp"
+
+class cfgFunctions {
+	
+	//ghst functions
+	#include "functions\cfgfunctions.hpp"
+	#include "VAS\cfgfunctions.hpp"
+	
+};
+
+// Comm Menu
+///////////////////////////////////////////////////////////////////////////////////////////
+#include "comm_menu.h"
+///////////////////////////////////////////////////////////////////////////////////////////
+//Debrief
+class CfgDebriefing
+{  
+	class End1
+	{
+		title = "Missió completada";
+		subtitle = "";
+		description = "Bona feina! Ho han aconsenguit sense morir!";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	class Fail
+	{
+		title = "Missió fallida";
+		subtitle = "";
+		description = "Heu mort tots";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+};
+
+
+
+
+

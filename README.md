@@ -21,3 +21,4 @@ on:
 | -------------------------------------- | -------------------------------------- | ------------- | ---------------------------- | ---------------- |
 | **Operació Jagdtag: Dia de Caça**      | 1RA_co@08-12_Jagdtag.Stratis           | CC_Magnetar   | -                            | Si               |
 | **Operació Escurçó: Primer contacte**  | 1RA_co@09-13_OpEPrimerContacte.Stratis | CC_Arnau002   | CC_Magnetar, CC_SilverArrow  | Si               |
+| **Academia General**                   | 1RA_co@x_AcademiaGeneral.Altsi         | CC_Viper      | -                            | No               |
