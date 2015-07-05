@@ -1,0 +1,2152 @@
+//=======================================================================================================//
+// Arxiu: Description.ext                                                                                //
+// Autor: CC_Magnetar                                                                                    //
+// Versió: 0.1                                                                                           //
+// Creació del Document: 22/02/2015                                                                      //
+//=======================================================================================================//
+
+//=======================================================================================================//
+// Header de la missió: - Definició del mode de joc, nombre mínim de jugadors i nombre màxim de jugadors //
+//=======================================================================================================//
+
+class Header
+{
+	gameType = Coop;     // Mode de joc: https://community.bistudio.com/wiki/Multiplayer_Game_Types
+	minPlayers = 1;      // Nombre mínim de jugadors
+	maxPlayers = 13;     // Nombre màxim de jugadors
+};
+
+//=======================================================================================================//
+// Pantalla de càrrega https://community.bistudio.com/wiki/Description.ext                               //
+//=======================================================================================================//
+
+onLoadName = "OpE: Primer Contacte";                                  // Nom de la missió (apareix en gran)
+onLoadMission = "Capturar Nord de Stratis i destruir Llançamíssils";  // Descripció breu de la missió
+author = "CC_Arnau002, CC_Magnetar";                                  // Autor
+loadScreen = "imatges\loadLogo.jpg";                                  // Imatge mentre es carrega la missió
+overviewPicture = "imatges\overviewLogo.jpg";                         // Imatge que es mostra al seleccionar la missió.
+                                                                      // Ha d'estar en format .paa i aspecte 2:1
+overviewText = "";                                                    // Text que es mostra al seleccionar la missó.
+
+//=======================================================================================================//
+// Consola de Debug de BIS: https://community.bistudio.com/wiki/Description.ext#enableDebugConsole       //
+//=======================================================================================================//
+enableDebugConsole = 1;  // Habilitada per SP i administradors en MP.
+
+//=======================================================================================================//
+// Respawn Settings: Definició del tipus de respawn. https://community.bistudio.com/wiki/Arma_3_Respawn  //
+//=======================================================================================================//
+
+respawn = "BIRD";        // Es fa un respawn com a ocell, fi de la partida pel jugador
+disabledAI = 1;          // Amaga les unitats amigues jugables que no són controlades per un jugador
+                         // (Playable Unit) https://community.bistudio.com/wiki/Description.ext#disabledAI
+respawnTemplates[] = {"Seagull","Spectator","EndMission"};
+
+//=======================================================================================================//
+// PARAMETRES DE LA MISSIÓ: RETOCS PER L'ADMINISTRADOR                                                   //
+//=======================================================================================================//
+class Params
+{
+	//===================================================================================================//
+	// Debug: Variable per controlar Debug.                                                              //
+	// Opció per defecte: Habilitat                                                                      //
+	//===================================================================================================//
+	class cc_param_debugOutput
+    {
+        title = "Mode Debug";
+        values[] = {0,1};
+        texts[] = {"Desactivat","Activat"};
+        default = 1;
+    };
+	
+	//===================================================================================================//
+	// Perfils: Utilitzar els perfils a l'hora d'equipar les unitats                                     //
+	// Opció per defecte: Els perfils no s'utilitzen.                                                    //
+	//===================================================================================================//
+	class cc_param_utilitzarPerfils
+	{
+		title = "Utilitzar perfils";
+		values[] = {0,1};
+		texts[] = {"No","Si"};
+		default = 0;
+	};
+	
+	//===================================================================================================//
+	// Sistema mèdic: Nivell de detall del sistema mèdic de ACE3.                                        //
+	// Opció per defecte: Avançat.                                                                        //
+	//===================================================================================================//
+	class cc_param_SistemaMedic
+	{
+		title = "Sistema mèdic";
+		values[] = {0,1};
+		texts[] = {"ACE3 Bàsic","ACE3 Avançat"};
+		default = 1;
+	};
+	
+	//===================================================================================================//
+	// Sistema de balística: Nivell de detall del sistema de balística de ACE3.                          //
+	// Opció per defecte: Avançat.                                                                       //
+	//===================================================================================================//
+	//class cc_param_ace3Balistica
+	//{
+	//	title = "Sistema de balística de ACE3";
+	//	values[] = {0,1};
+	//	texts[] = {"Bàsic","Avançat"};
+	//	default = 1;
+	//};
+};
+
+//=======================================================================================================//
+// DEBRIEFING: Informació per quan acaba la missió                                                       //
+//=======================================================================================================//
+// Finals Capturant Kill Farm Morint                                                                     //
+// Finals Capturant Kill Farm i Camp Rogain Morint                                                       //
+// Finals Capturant Kill Farm, Camp Rogain i Kamino Morint                                               //
+// Finals Capturant Kill Farm Sense Morir                                                                //
+// Finals Capturant Kill Farm i Camp Rogain Sense Morir                                                  //
+// Finals Capturant Kill Farm, Camp Rogain i Kamino Sense Morir                                          //
+// Finals Capturant Camp Rogain Morint                                                                   //
+// Finals Capturant Kamino Morint                                                                        //
+// Finals Capturant Kill Farm i Kamino Morint                                                            //
+// Finals Capturant Camp Rogain i Kamino  Morint                                                         //
+// Finals Capturant Camp Rogain Sense Morir                                                              //
+// Finals Capturant Kamino Sense Morir                                                                   //
+// Finals Capturant Kill Farm i Kamino Sense Morir                                                       //
+// Finals Capturant Camp Rogain i Kamino Sense Morir                                                     //
+// Finals Sense Capturar Objectius Rebels Morint                                                         //
+// Finals Sense Capturar Objectius Rebels Sense Morir                                                     //
+//=======================================================================================================//
+class CfgDebriefing
+{
+//=======================================================================================================//
+// Finals Capturant Kill Farm Morint                                                                     //
+//=======================================================================================================//
+	class KF_Fallit1
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades han capturat Kill Farm i han estat eliminades.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+	class KF_Fallit2
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Kill Farm i han estat eliminades.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_Fallit3
+	{
+		title = "Missió fallida";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Kill Farm i han estat eliminades.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_Fallit4
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades han capturat Kill Farm i les Antenes de Comunicació i han estat eliminades.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_Fallit5
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Kill Farm i les Antenes de Comunicació i han estat eliminades.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_Fallit6
+	{
+		title = "Missió fallida";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Kill Farm i les Antenes de Comunicació i han estat eliminades.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_Fallit7
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades han capturat Kill Farm i han estat eliminades. Tot i això han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_Fallit8
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Kill Farm i han estat eliminades. Tot i això han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_Fallit9
+	{
+		title = "Missió fallida";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Kill Farm i han estat eliminades. Tot i això han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_Fallit10
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades han capturat Kill Farm i les Antenes de Comunicació i han estat eliminades. Tot i això han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_Fallit11
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Kill Farm i les Antenes de Comunicació i han estat eliminades. Tot i això han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_Fallit12
+	{
+		title = "Missió fallida";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Kill Farm i les Antenes de Comunicació i han estat eliminades. Tot i això han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+//=======================================================================================================//
+// Finals Capturant Kill Farm i Camp Rogain Morint                                                       //
+//=======================================================================================================//
+class KF_CR_Fallit1
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades han capturat Kill Farm i Camp Rogain i han estat eliminades. ";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+	class KF_CR_Fallit2
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Kill Farm i Camp Rogain i han estat eliminades.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_CR_Fallit3
+	{
+		title = "Missió fallida";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Kill Farm i Camp Rogain i han estat eliminades.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_CR_Fallit4
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades han capturat Kill Farm, Camp Rogain i les Antenes de Comunicació i han estat eliminades.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_CR_Fallit5
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Kill Farm i Camp Rogain i les Antenes de Comunicació i han estat eliminades.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_CR_Fallit6
+	{
+		title = "Missió fallida";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Kill Farm i Camp Rogain i les Antenes de Comunicació i han estat eliminades. ";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_CR_Fallit7
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades han capturat Kill Farm i Camp Rogain i han estat eliminades.  Tot i això han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_CR_Fallit8
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Kill Farm i Camp Rogain i han estat eliminades. Tot i això han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_CR_Fallit9
+	{
+		title = "Missió fallida";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Kill Farm i Camp Rogain i han estat eliminades. Tot i això han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_CR_Fallit10
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades han capturat Kill Farm, Camp Rogain i les Antenes de Comunicació i han estat eliminades.  Tot i això han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_CR_Fallit11
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Kill Farm i Camp Rogain i les Antenes de Comunicació i han estat eliminades. Tot i això han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_CR_Fallit12
+	{
+		title = "Missió fallida";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Kill Farm i Camp Rogain i les Antenes de Comunicació i han estat eliminades. Tot i això han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+//=======================================================================================================//
+// Finals Capturant Kill Farm, Camp Rogain i Kamino Morint                                               //
+//=======================================================================================================//
+    class KF_CR_K_Fallit1
+	{
+		title = "Missió fallida";
+		subtitle = "Nord de Stratis Sota Control Aliat";
+		description = "Les forces aliades han capturat Kill Farm, Camp Rogain i Kamino i han estat eliminades.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+	class KF_CR_K_Fallit2
+	{
+		title = "Missió fallida";
+		subtitle = "Nord de Stratis Sota Control Aliat";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Kill Farm, Camp Rogain i Kamino i han estat eliminades.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_CR_K_Fallit3
+	{
+		title = "Missió fallida";
+		subtitle = "Objectius Principals Assolit";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Kill Farm, Camp Rogain i Kamino i han estat eliminades.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_CR_K_Fallit4
+	{
+		title = "Missió fallida";
+		subtitle = "Nord de Stratis Sota Control Aliat";
+		description = "Les forces aliades han capturat Kill Farm, Camp Rogain i Kamino i les Antenes de Comunicació i han estat eliminades.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_CR_K_Fallit5
+	{
+		title = "Missió fallida";
+		subtitle = "Nord de Stratis Sota Control Aliat";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Kill Farm, Camp Rogain i Kamino i les Antenes de Comunicació i han estat eliminades.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_CR_K_Fallit6
+	{
+		title = "Missió fallida";
+		subtitle = "Objectius Principals Assolit";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Kill Farm, Camp Rogain i Kamino i les Antenes de Comunicació i han estat eliminades.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_CR_K_Fallit7
+	{
+		title = "Missió fallida";
+		subtitle = "Nord de Stratis Sota Control Aliat";
+		description = "Les forces aliades han capturat Kill Farm, Camp Rogain i Kamino i han estat eliminades.  Tot i això han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_CR_K_Fallit8
+	{
+		title = "Missió fallida";
+		subtitle = "Nord de Stratis Sota Control Aliat";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Kill Farm, Camp Rogain i Kamino i han estat eliminades. Tot i això han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_CR_K_Fallit9
+	{
+		title = "Missió fallida";
+		subtitle = "Objectius Principals Assolit";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Kill Farm, Camp Rogain i Kamino i han estat eliminades. Tot i això han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_CR_K_Fallit10
+	{
+		title = "Missió fallida";
+		subtitle = "Nord de Stratis Sota Control Aliat";
+		description = "Les forces aliades han capturat Kill Farm, Camp Rogain i Kamino i les Antenes de Comunicació i han estat eliminades.  Tot i això han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_CR_K_Fallit11
+	{
+		title = "Missió fallida";
+		subtitle = "Nord de Stratis Sota Control Aliat";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Kill Farm, Camp Rogain i Kamino i les Antenes de Comunicació i han estat eliminades. Tot i això han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_CR_K_Fallit12
+	{
+		title = "Missió fallida";
+		subtitle = "Objectius Principals Assolit";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Kill Farm, Camp Rogain i Kamino i les Antenes de Comunicació i han estat eliminades. Tot i això han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+//=======================================================================================================//
+// Finals Capturant Kill Farm Sense Morir                                                                //
+//=======================================================================================================//
+    class KF_Exit1
+	{
+		title = "Desertors!";
+		subtitle = "";
+		description = "Les forces aliades han capturat Kill Farm. Els soldats Catalans han desertat.";
+		pictureBackground = "";
+		picture = "n_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+	class KF_Exit2
+	{
+		title = "Missió fallida";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Kill Farm.";
+		pictureBackground = "";
+		picture = "n_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_Exit3
+	{
+		title = "Missió fallida";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Kill Farm.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_Exit4
+	{
+		title = "Missió fallida";
+		subtitle = "";
+		description = "Les forces aliades han capturat Kill Farm i les Antenes de Comunicació.";
+		pictureBackground = "";
+		picture = "n_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_Exit5
+	{
+		title = "Missió fallida";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Kill Farm i les Antenes de Comunicació.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_Exit6
+	{
+		title = "Missió fallida";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Kill Farm i les Antenes de Comunicació.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_Exit7
+	{
+		title = "Missió fallida";
+		subtitle = "";
+		description = "Les forces aliades han capturat Kill Farm.  A més a més han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "n_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_Exit8
+	{
+		title = "Missió fallida";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Kill Farm. A més a més han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "n_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_Exit9
+	{
+		title = "Missió fallida";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Kill Farm. A més a més han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_Exit10
+	{
+		title = "Missió fallida";
+		subtitle = "";
+		description = "Les forces aliades han capturat Kill Farm i les Antenes de Comunicació. A més a més han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "n_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_Exit11
+	{
+		title = "Missió fallida";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Kill Farm i les Antenes de Comunicació. A més a més han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_Exit12
+	{
+		title = "Missió fallida";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Kill Farm i les Antenes de Comunicació. A més a més han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+//=======================================================================================================//
+// Finals Capturant Kill Farm i Camp Rogain Sense Morir                                                  //
+//=======================================================================================================//
+     class KF_CR_Exit1
+	{
+		title = "Desertors!";
+		subtitle = "";
+		description = "Les forces aliades han capturat Kill Farm i Camp Rogain. Els soldats Catalans han desertat.";
+		pictureBackground = "";
+		picture = "n_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+	class KF_CR_Exit2
+	{
+		title = "Missió fallida";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Kill Farm i Camp Rogain.";
+		pictureBackground = "";
+		picture = "n_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_CR_Exit3
+	{
+		title = "Missió acabada amb èxit";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Kill Farm i Camp Rogain.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_CR_Exit4
+	{
+		title = "Missió fallida";
+		subtitle = "";
+		description = "Les forces aliades han capturat Kill Farm, Camp Rogain i les Antenes de Comunicació.";
+		pictureBackground = "";
+		picture = "n_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_CR_Exit5
+	{
+		title = "Missió fallida";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Kill Farm i Camp Rogain i les Antenes de Comunicació.";
+		pictureBackground = "";
+		picture = "n_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_CR_Exit6
+	{
+		title = "Missió acabada amb èxit";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Kill Farm i Camp Rogain i les Antenes de Comunicació.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_CR_Exit7
+	{
+		title = "Missió fallida";
+		subtitle = "";
+		description = "Les forces aliades han capturat Kill Farm i Camp Rogain. A més a més han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "n_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_CR_Exit8
+	{
+		title = "Missió fallida";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Kill Farm i Camp Rogain. A més a més han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "n_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_CR_Exit9
+	{
+		title = "Missió acabada amb èxit";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Kill Farm i Camp Rogain. A més a més han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_CR_Exit10
+	{
+		title = "Missió fallida";
+		subtitle = "";
+		description = "Les forces aliades han capturat Kill Farm, Camp Rogain i les Antenes de Comunicació. A més a més han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "n_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_CR_Exit11
+	{
+		title = "Missió fallida";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Kill Farm i Camp Rogain i les Antenes de Comunicació. A més a més han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "n_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_CR_Exit12
+	{
+		title = "Missió acabada amb èxit";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Kill Farm i Camp Rogain i les Antenes de Comunicació. A més a més han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+//=======================================================================================================//
+// Finals Capturant Kill Farm, Camp Rogain i Kamino Sense Morir                                          //
+//=======================================================================================================//
+    class KF_CR_K_Exit1
+	{
+		title = "Desertors!";
+		subtitle = "Nord de Stratis Sota Control Aliat";
+		description = "Les forces aliades han capturat Kill Farm, Camp Rogain i Kamino. Els soldats Catalans han desertat.";
+		pictureBackground = "";
+		picture = "n_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+	class KF_CR_K_Exit2
+	{
+		title = "Missió fallida";
+		subtitle = "Nord de Stratis Sota Control Aliat";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Kill Farm, Camp Rogain i Kamino.";
+		pictureBackground = "";
+		picture = "n_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_CR_K_Exit3
+	{
+		title = "Èxit total";
+		subtitle = "Objectius Principals Assolit";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Kill Farm, Camp Rogain i Kamino.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_CR_K_Exit4
+	{
+		title = "Missió fallida";
+		subtitle = "Nord de Stratis Sota Control Aliat";
+		description = "Les forces aliades han capturat Kill Farm, Camp Rogain i Kamino i les Antenes de Comunicació.";
+		pictureBackground = "";
+		picture = "n_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_CR_K_Exit5
+	{
+		title = "Missió fallida";
+		subtitle = "Nord de Stratis Sota Control Aliat";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Kill Farm, Camp Rogain i Kamino i les Antenes de Comunicació.";
+		pictureBackground = "";
+		picture = "n_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_CR_K_Exit6
+	{
+		title = "Èxit total";
+		subtitle = "Objectius Principals Assolit";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Kill Farm, Camp Rogain i Kamino i les Antenes de Comunicació.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_CR_K_Exit7
+	{
+		title = "Missió fallida";
+		subtitle = "Nord de Stratis Sota Control Aliat";
+		description = "Les forces aliades han capturat Kill Farm, Camp Rogain i Kamino i han estat eliminades. A més a més han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "n_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_CR_K_Exit8
+	{
+		title = "Missió fallida";
+		subtitle = "Nord de Stratis Sota Control Aliat";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Kill Farm, Camp Rogain i Kamino i han estat eliminades. A més a més han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "n_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_CR_K_Exit9
+	{
+		title = "Èxit total";
+		subtitle = "Objectius Principals Assolit";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Kill Farm, Camp Rogain i Kamino i han estat eliminades. A més a més han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_CR_K_Exit10
+	{
+		title = "Missió fallida";
+		subtitle = "Nord de Stratis Sota Control Aliat";
+		description = "Les forces aliades han capturat Kill Farm, Camp Rogain i Kamino i les Antenes de Comunicació. A més a més han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "n_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_CR_K_Exit11
+	{
+		title = "Missió fallida";
+		subtitle = "Nord de Stratis Sota Control Aliat";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Kill Farm, Camp Rogain i Kamino i les Antenes de Comunicació. A més a més han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "n_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_CR_K_Exit12
+	{
+		title = "Èxit total";
+		subtitle = "Objectius Principals Assolit";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Kill Farm, Camp Rogain i Kamino i les Antenes de Comunicació. A més a més han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+//=======================================================================================================//
+// Finals Capturant Camp Rogain Morint                                                                   //
+//=======================================================================================================//
+    class CR_Fallit1
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades han capturat Camp Rogain i han estat eliminades.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+	class CR_Fallit2
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Camp Rogain i han estat eliminades.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class CR_Fallit3
+	{
+		title = "Missió fallida";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Camp Rogain i han estat eliminades.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class CR_Fallit4
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades han capturat Camp Rogain i les Antenes de Comunicació i han estat eliminades.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class CR_Fallit5
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Camp Rogain i les Antenes de Comunicació i han estat eliminades.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class CR_Fallit6
+	{
+		title = "Missió fallida";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Camp Rogain i les Antenes de Comunicació i han estat eliminades.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class CR_Fallit7
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades han capturat Camp Rogain i han estat eliminades. Tot i això han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class CR_Fallit8
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Camp Rogain i han estat eliminades. Tot i això han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class CR_Fallit9
+	{
+		title = "Missió fallida";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Camp Rogain i han estat eliminades. Tot i això han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class CR_Fallit10
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades han capturat Camp Rogain i les Antenes de Comunicació i han estat eliminades. Tot i això han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class CR_Fallit11
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Camp Rogain i les Antenes de Comunicació i han estat eliminades. Tot i això han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class CR_Fallit12
+	{
+		title = "Missió fallida";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Camp Rogain i les Antenes de Comunicació i han estat eliminades. Tot i això han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+//=======================================================================================================//
+// Finals Capturant Kamino Morint                                                                        //
+//=======================================================================================================//
+    class K_Fallit1
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades han capturat Kamino i han estat eliminades. ";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+	class K_Fallit2
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Kamino i han estat eliminades.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class K_Fallit3
+	{
+		title = "Missió fallida";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Kamino i han estat eliminades.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class K_Fallit4
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades han capturat Kamino i les Antenes de Comunicació i han estat eliminades.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class K_Fallit5
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han captura Kamino i les Antenes de Comunicació i han estat eliminades.  ";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class K_Fallit6
+	{
+		title = "Missió fallida";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Kamino i les Antenes de Comunicació i han estat eliminades.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class K_Fallit7
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades han capturat Kamino i han estat eliminades. Tot i això han matat un important oficial de l'enemic. ";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class K_Fallit8
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Kamino i han estat eliminades. Tot i això han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class K_Fallit9
+	{
+		title = "Missió fallida";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Kamino i han estat eliminades. Tot i això han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class K_Fallit10
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades han capturat Kamino i les Antenes de Comunicació i han estat eliminades. Tot i això han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class K_Fallit11
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Kamino i les Antenes de Comunicació i han estat eliminades. Tot i això han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class K_Fallit12
+	{
+		title = "Missió fallida";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Kamino i les Antenes de Comunicació i han estat eliminades. Tot i això han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+//=======================================================================================================//
+// Finals Capturant Kill Farm i Kamino Morint                                                            //
+//=======================================================================================================//
+    class KF_K_Fallit1
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades han capturat Kill Farm i Kamino i han estat eliminades. ";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+	class KF_K_Fallit2
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Kill Farm i Kamino i han estat eliminades.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_K_Fallit3
+	{
+		title = "Missió fallida";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Kill Farm i Kamino i han estat eliminades.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_K_Fallit4
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades han capturat Kill Farm, Kamino i les Antenes de Comunicació i han estat eliminades.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_K_Fallit5
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Kill Farm i Kamino i les Antenes de Comunicació i han estat eliminades.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_K_Fallit6
+	{
+		title = "Missió fallida";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Kill Farm i Kamino i les Antenes de Comunicació i han estat eliminades. ";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_K_Fallit7
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades han capturat Kill Farm i Kamino i han estat eliminades.  Tot i això han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_K_Fallit8
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Kill Farm i Kamino i han estat eliminades. Tot i això han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_K_Fallit9
+	{
+		title = "Missió fallida";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Kill Farm i Kamino i han estat eliminades. Tot i això han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_K_Fallit10
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades han capturat Kill Farm, Kamino i les Antenes de Comunicació i han estat eliminades.  Tot i això han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_K_Fallit11
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Kill Farm i Kamino i les Antenes de Comunicació i han estat eliminades. Tot i això han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_K_Fallit12
+	{
+		title = "Missió fallida";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Kill Farm i Kamino i les Antenes de Comunicació i han estat eliminades. Tot i això han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+//=======================================================================================================//
+// Finals Capturant Camp Rogain i Kamino  Morint                                                         //
+//=======================================================================================================//
+    class CR_K_Fallit1
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades han capturat Camp Rogain i Kamino i han estat eliminades. ";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+	class CR_K_Fallit2
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Camp Rogain i Kamino i han estat eliminades.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class CR_K_Fallit3
+	{
+		title = "Missió fallida";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Camp Rogain i Kamino i han estat eliminades.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class CR_K_Fallit4
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades han capturat Camp Rogain i Kamino i les Antenes de Comunicació i han estat eliminades.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class CR_K_Fallit5
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Camp Rogain i Kamino i les Antenes de Comunicació i han estat eliminades.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class CR_K_Fallit6
+	{
+		title = "Missió fallida";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Camp Rogain i Kamino i les Antenes de Comunicació i han estat eliminades.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class CR_K_Fallit7
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades han capturat Camp Rogain i Kamino i han estat eliminades.  Tot i això han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class CR_K_Fallit8
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Camp Rogain i Kamino i han estat eliminades. Tot i això han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class CR_K_Fallit9
+	{
+		title = "Missió fallida";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Camp Rogain i Kamino i han estat eliminades. Tot i això han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class CR_K_Fallit10
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades han capturat Camp Rogain i Kamino i les Antenes de Comunicació i han estat eliminades.  Tot i això han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class CR_K_Fallit11
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Camp Rogain i Kamino i les Antenes de Comunicació i han estat eliminades. Tot i això han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class CR_K_Fallit12
+	{
+		title = "Missió fallida";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Camp Rogain i Kamino i les Antenes de Comunicació i han estat eliminades. Tot i això han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+//=======================================================================================================//
+// Finals Capturant Camp Rogain Sense Morir                                                              //
+//=======================================================================================================//
+   class CR_Exit1
+	{
+		title = "Desertors!";
+		subtitle = "";
+		description = "Les forces aliades han capturat Camp Rogain. Els soldats Catalans han desertat.";
+		pictureBackground = "";
+		picture = "n_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+	class CR_Exit2
+	{
+		title = "Missió fallida";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Camp Rogain.";
+		pictureBackground = "";
+		picture = "n_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class CR_Exit3
+	{
+		title = "Missió fallida";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Camp Rogain.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class CR_Exit4
+	{
+		title = "Missió fallida";
+		subtitle = "";
+		description = "Les forces aliades han capturat Camp Rogain i les Antenes de Comunicació.";
+		pictureBackground = "";
+		picture = "n_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class CR_Exit5
+	{
+		title = "Missió fallida";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Camp Rogain i les Antenes de Comunicació.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class CR_Exit6
+	{
+		title = "Missió fallida";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Camp Rogain i les Antenes de Comunicació.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class CR_Exit7
+	{
+		title = "Missió fallida";
+		subtitle = "";
+		description = "Les forces aliades han capturat Camp Rogain.  A més a més han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "n_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class CR_Exit8
+	{
+		title = "Missió fallida";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Camp Rogain. A més a més han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "n_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class CR_Exit9
+	{
+		title = "Missió fallida";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Camp Rogain. A més a més han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class CR_Exit10
+	{
+		title = "Missió fallida";
+		subtitle = "";
+		description = "Les forces aliades han capturat Camp Rogain i les Antenes de Comunicació. A més a més han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "n_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class CR_Exit11
+	{
+		title = "Missió fallida";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Camp Rogain i les Antenes de Comunicació. A més a més han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class CR_Exit12
+	{
+		title = "Missió fallida";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Camp Rogain i les Antenes de Comunicació. A més a més han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+//=======================================================================================================//
+// Finals Capturant Kamino Sense Morir                                                                   //
+//=======================================================================================================//
+    class K_Exit1
+	{
+		title = "Desertors!";
+		subtitle = "";
+		description = "Les forces aliades han capturat Kamino. Els soldats Catalans han desertat.";
+		pictureBackground = "";
+		picture = "n_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+	class K_Exit2
+	{
+		title = "Missió fallida";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Kamino.";
+		pictureBackground = "";
+		picture = "n_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class K_Exit3
+	{
+		title = "Missió fallida";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Kamino.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class K_Exit4
+	{
+		title = "Missió fallida";
+		subtitle = "";
+		description = "Les forces aliades han capturat Kamino i les Antenes de Comunicació.";
+		pictureBackground = "";
+		picture = "n_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class K_Exit5
+	{
+		title = "Missió fallida";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Kamino i les Antenes de Comunicació.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class K_Exit6
+	{
+		title = "Missió fallida";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Kamino i les Antenes de Comunicació.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class K_Exit7
+	{
+		title = "Missió fallida";
+		subtitle = "";
+		description = "Les forces aliades han capturat Kamino.  A més a més han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "n_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class K_Exit8
+	{
+		title = "Missió fallida";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Kamino. A més a més han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "n_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class K_Exit9
+	{
+		title = "Missió fallida";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Kamino. A més a més han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class K_Exit10
+	{
+		title = "Missió fallida";
+		subtitle = "";
+		description = "Les forces aliades han capturat Kamino i les Antenes de Comunicació. A més a més han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "n_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class K_Exit11
+	{
+		title = "Missió fallida";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Kamino i les Antenes de Comunicació. A més a més han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class K_Exit12
+	{
+		title = "Missió fallida";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Kamino i les Antenes de Comunicació. A més a més han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+//=======================================================================================================//
+// Finals Capturant Kill Farm i Kamino Sense Morir                                                       //
+//=======================================================================================================//
+    class KF_K_Exit1
+	{
+		title = "Desertors!";
+		subtitle = "";
+		description = "Les forces aliades han capturat Kill Farm i Kamino. Els soldats Catalans han desertat.";
+		pictureBackground = "";
+		picture = "n_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+	class KF_K_Exit2
+	{
+		title = "Missió fallida";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Kill Farm i Kamino.";
+		pictureBackground = "";
+		picture = "n_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_K_Exit3
+	{
+		title = "Missió acabada amb èxit";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Kill Farm i Kamino.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_K_Exit4
+	{
+		title = "Missió fallida";
+		subtitle = "";
+		description = "Les forces aliades han capturat Kill Farm, Kamino i les Antenes de Comunicació.";
+		pictureBackground = "";
+		picture = "n_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_K_Exit5
+	{
+		title = "Missió fallida";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Kill Farm, Kamino i les Antenes de Comunicació.";
+		pictureBackground = "";
+		picture = "n_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_K_Exit6
+	{
+		title = "Missió acabada amb èxit";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Kill Farm, Kamino i les Antenes de Comunicació.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_K_Exit7
+	{
+		title = "Missió fallida";
+		subtitle = "";
+		description = "Les forces aliades han capturat Kill Farm i Kamino. A més a més han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "n_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_K_Exit8
+	{
+		title = "Missió fallida";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Kill Farm i Kamino. A més a més han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "n_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_K_Exit9
+	{
+		title = "Missió acabada amb èxit";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Kill Farm i Kamino. A més a més han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_K_Exit10
+	{
+		title = "Missió fallida";
+		subtitle = "";
+		description = "Les forces aliades han capturat Kill Farm, Kamino i les Antenes de Comunicació. A més a més han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "n_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_K_Exit11
+	{
+		title = "Missió fallida";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Kill Farm, Kamino i les Antenes de Comunicació. A més a més han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "n_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class KF_K_Exit12
+	{
+		title = "Missió acabada amb èxit";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Kill Farm, Kamino i les Antenes de Comunicació. A més a més han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+//=======================================================================================================//
+// Finals Capturant Camp Rogain i Kamino Sense Morir                                                     //
+//=======================================================================================================//
+    class CR_K_Exit1
+	{
+		title = "Desertors!";
+		subtitle = "";
+		description = "Les forces aliades han capturat Camp Rogain i Kamino. Els soldats Catalans han desertat.";
+		pictureBackground = "";
+		picture = "n_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+	class CR_K_Exit2
+	{
+		title = "Missió fallida";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Camp Rogain i Kamino.";
+		pictureBackground = "";
+		picture = "n_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class CR_K_Exit3
+	{
+		title = "Missió acabada amb èxit";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Camp Rogain i Kamino.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class CR_K_Exit4
+	{
+		title = "Missió fallida";
+		subtitle = "";
+		description = "Les forces aliades han capturat Camp Rogain i Kamino i les Antenes de Comunicació.";
+		pictureBackground = "";
+		picture = "n_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class CR_K_Exit5
+	{
+		title = "Missió fallida";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Camp Rogain i Kamino i les Antenes de Comunicació.";
+		pictureBackground = "";
+		picture = "n_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class CR_K_Exit6
+	{
+		title = "Missió acabada amb èxit";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Camp Rogain i Kamino i les Antenes de Comunicació.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class CR_K_Exit7
+	{
+		title = "Missió fallida";
+		subtitle = "";
+		description = "Les forces aliades han capturat Camp Rogain i Kamino i han estat eliminades. A més a més han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "n_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class CR_K_Exit8
+	{
+		title = "Missió fallida";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Camp Rogain i Kamino i han estat eliminades. A més a més han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "n_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class CR_K_Exit9
+	{
+		title = "Missió acabada amb èxit";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Camp Rogain i Kamino i han estat eliminades. A més a més han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class CR_K_Exit10
+	{
+		title = "Missió fallida";
+		subtitle = "";
+		description = "Les forces aliades han capturat Camp Rogain i Kamino i les Antenes de Comunicació. A més a més han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "n_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class CR_K_Exit11
+	{
+		title = "Missió fallida";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat Camp Rogain i Kamino i les Antenes de Comunicació. A més a més han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "n_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class CR_K_Exit12
+	{
+		title = "Missió acabada amb èxit";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat Camp Rogain i Kamino i les Antenes de Comunicació. A més a més han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+//=======================================================================================================//
+// Finals Sense Capturar Objectius Rebels Morint                                                         //
+//=======================================================================================================//
+    class EMP_Fallit1
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit assolir cap dels objectius i han estat eliminades.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+	class EMP_Fallit2
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils i han estat eliminades.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class EMP_Fallit3
+	{
+		title = "Missió fallida";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils i han estat eliminades.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class EMP_Fallit4
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades han capturat les Antenes de Comunicació i han estat eliminades.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class EMP_Fallit5
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat  les Antenes de Comunicació i han estat eliminades.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class EMP_Fallit6
+	{
+		title = "Missió fallida";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat les Antenes de Comunicació i han estat eliminades.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class EMP_Fallit7
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades han estat eliminades. Tot i això han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class EMP_Fallit8
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils i han estat eliminades. Tot i això han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class EMP_Fallit9
+	{
+		title = "Missió fallida";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils i han estat eliminades. Tot i això han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class EMP_Fallit10
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades han capturat les Antenes de Comunicació i han estat eliminades. Tot i això han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class EMP_Fallit11
+	{
+		title = "Fracàs absolut";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat les Antenes de Comunicació i han estat eliminades. Tot i això han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class EMP_Fallit12
+	{
+		title = "Missió fallida";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat les Antenes de Comunicació i han estat eliminades. Tot i això han matat un important oficial de l'enemic.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+//=======================================================================================================//
+// Finals Sense Capturar Objectius Rebels Sense Morir                                                    //
+//=======================================================================================================//
+    class EMP_Exit1
+	{
+		title = "Desertors!";
+		subtitle = "";
+		description = "Les forces aliades han desertat sense assolir cap objectiu.";
+		pictureBackground = "";
+		picture = "o_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+	class EMP_Exit2
+	{
+		title = "Desertors!";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils. Els soldats Rebels han desertat.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class EMP_Exit3
+	{
+		title = "Desertors!";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils. Els soldats Rebels han desertat.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class EMP_Exit4
+	{
+		title = "Desertors!";
+		subtitle = "";
+		description = "Les forces aliades han capturat les Antenes de Comunicació. Els soldats Rebels han desertat.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class EMP_Exit5
+	{
+		title = "Desertors!";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat les Antenes de Comunicació. Els soldats Rebels han desertat.  ";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class EMP_Exit6
+	{
+		title = "Desertors!";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat les Antenes de Comunicació. Els soldats Rebels han desertat.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class EMP_Exit7
+	{
+		title = "Desertors!";
+		subtitle = "";
+		description = "Les forces aliades s'han retirat. Tot i això han matat un important oficial de l'enemic. Els soldats Rebels han desertat.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class EMP_Exit8
+	{
+		title = "Desertors!";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils. Tot i això han matat un important oficial de l'enemic. Els soldats Rebels han desertat.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class EMP_Exit9
+	{
+		title = "Desertors!";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils. A més a més han matat un important oficial de l'enemic. Els soldats Rebels han desertat.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class EMP_Exit10
+	{
+		title = "Desertors!";
+		subtitle = "";
+		description = "Les forces aliades han capturat les Antenes de Comunicació. A més a més han matat un important oficial de l'enemic. Els soldats Rebels han desertat.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class EMP_Exit11
+	{
+		title = "Desertors!";
+		subtitle = "";
+		description = "Les forces aliades no han aconseguit destruir tots els llançamíssils, han capturat les Antenes de Comunicació. A més a més han matat un important oficial de l'enemic. Els soldats Rebels han desertat.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class EMP_Exit12
+	{
+		title = "Desertors!";
+		subtitle = "Llançamíssils Destruits";
+		description = "Les forces aliades han destruit tots els llançamíssils, han capturat les Antenes de Comunicació. A més a més han matat un important oficial de l'enemic. Els soldats Rebels han desertat. Els soldats Rebels han desertat.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+};
+//=======================================================================================================//
+//=======================================================================================================//
+
+// Funcions per les missions dels Cavallers del Cel
+class CfgFunctions
+{
+	class CC // Defines the "owner"
+	{
+		// Funcions comunes i essencials pel funcionament dels scripts
+		class comu
+		{
+			file = "scripts\comu";
+			class processarParamsArray
+			{
+				preInit = 1;   // La funció s'executa al iniciar la missió, ABANS d'inicialitzar objectes
+				// postInit = 1;  // La funció s'executa al iniciar la missió, DESPRÉS d'inicialitzar objectes
+			};
+			class processarMods
+			{
+				preInit = 1;  // La funció s'executa al iniciar la missió, ABANS d'inicialitzar objectes
+			};
+		};
+		
+		// Funcions per equipar els diferents rols amb els perfils dels Cavallers del Cel
+		class configEquipacio
+		{
+			file = "scripts\configEquipacio";
+			class configEquipacio{};
+		};
+		
+		// Funcions per inicialitzar el sistema de radio Task Force Arrowhead (TFAR)		
+		class tfar
+		{
+			file = "scripts\radios\tfar";
+			class tfar_treureRadios{};
+			class tfar_afegirRadios{};
+			class tfar_configurarFreqRadios{};
+			class tfar_configurarXatEspectador{};
+			class tfar_modificarSenyal{};
+		};
+		
+		class acre2
+		{
+			file = "scripts\radios\acre2";
+			class acre2_determinarIdiomes{};
+			class acre2_afegirRadios{};
+			class acre2_treureRadios{};
+			class acre2_configurarXatEspectador{};
+		};
+		
+		class zeus
+		{
+			file = "scripts\zeus";
+			class zeus_eventHandlers
+			{
+				PostInit = 1;  // La funció s'executa al iniciar la missió, DESPRÉS d'inicialitzar objectes
+			};
+			class zeus_afegirGrups{};
+			class zeus_afegirObjectes{};
+		}
+	};
+};
+
+//============================================ FI DEL FITXER ============================================//
