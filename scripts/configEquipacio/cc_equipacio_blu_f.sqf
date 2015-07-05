@@ -1366,7 +1366,7 @@ switch (_tipusUnitat) do
         _unitat addWeapon _armaDIV;
     };
     
-    // Bussejador especialista en explosius (divexp)
+    // Bussejador especialista en explosius (Diver Specialist in Explosives)
     case "divexp": {
         // Treure l'uniforme, casc i armilla
         removeUniform _unitat;

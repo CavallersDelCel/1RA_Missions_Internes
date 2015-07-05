@@ -21,7 +21,7 @@ titleCut ["", "BLACK FADED", 999];
     } forEach allUnits;
     
     // Mostrar una citació
-    titleText ["Relaxar-se mata\nViper - Capità dels cavallers del Cel","PLAIN"]; 
+    titleText ["Relaxar-se mata! Estigueu alerta!\nViper - Capità dels cavallers del Cel","PLAIN"]; 
     titleFadeOut 7;
     sleep 5;
 
