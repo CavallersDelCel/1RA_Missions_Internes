@@ -36,8 +36,8 @@
 //                  sp                  Observador (Spotter)                                             //
 //                  divsl               Bussejador líder d'esquadra (Diver Squad Leader)                 //
 //                  divme               Bussejador metge (Diver Medic)                                   //
-//                  divexp                  Bussejador especialista en explosius (Diver Specialist in    //
-//                                          Explosives)                                                  //
+//                  divexp              Bussejador especialista en explosius (Diver Specialist in        //
+//                                      Explosives)                                                      //
 //                  div                 Bussejador                                                       //
 //                                                                                                       //
 //                  hmmwv               Equipació per HMMWVs                                             //
@@ -1576,6 +1576,48 @@ switch (_tipusUnitat) do
                 _unitat addItemCargoGlobal [_kitPrimersAuxilis,3];
             };
         };
+    };
+    
+    default {
+        _unitat sideChat format ["DEBUG (cc_equipacio_rhs_usarmy_wd.sqf): el tipus d'unitat %1 no està definit. Utilitzant l'equipació de fuseller.", _tipusUnitat];
+        
+        // Armilla i motxilla
+        _unitat addVest _armillaRFL;
+        _unitat addBackpack _motxilla;
+        
+        // Objectes a l'uniforme
+        (uniformContainer _unitat) addItemCargoGlobal [_armaSilenciador,1];
+        (uniformContainer _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",1];
+        
+        // Objectes a l'armilla
+        if (cc_mod_ace3 or cc_mod_agm) then {
+            (vestContainer _unitat) addItemCargoGlobal [_benes,2];
+        };
+        (vestContainer _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",8];
+        (vestContainer _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",1];
+        (vestContainer _unitat) addMagazineCargoGlobal ["rhs_mag_m67",4];
+        
+        // Objectes a la motxilla
+        if (cc_mod_ace3 or cc_mod_agm) then {
+            (unitBackpack _unitat) addItemCargoGlobal [_benes,2];
+            if (cc_mod_ace3 and cc_param_sistemaMedic == 2) then {
+                (unitBackpack _unitat) addItemCargoGlobal [_benesElastiques,3];
+                (unitBackpack _unitat) addItemCargoGlobal [_benesRapides,3];
+                (unitBackpack _unitat) addItemCargoGlobal [_benesEmpaquetants,3];
+                (unitBackpack _unitat) addItemCargoGlobal [_torniquet,1];
+            };
+        };
+        (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
+        (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",5];
+        (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",2];
+        (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_mk84",2];
+        (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_an_m8hc",2];
+        
+        // Arma principal
+        _unitat addWeapon _arma;
+        _unitat addPrimaryWeaponItem _armaSurefire;
+        _unitat addPrimaryWeaponItem _armaLaserLlanterna;
+        _unitat addPrimaryWeaponItem _armaMira;    
     };
 };
 

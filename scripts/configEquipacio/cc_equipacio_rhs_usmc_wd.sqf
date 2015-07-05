@@ -1528,8 +1528,7 @@ switch (_tipusUnitat) do
         };
     };
     
-    default
-    {
+    default {
         _unitat sideChat format ["DEBUG (cc_equipacio_rhs_usmc_wd.sqf): el tipus d'unitat %1 no està definit. Utilitzant l'equipació de fuseller.", _tipusUnitat];
         
         // Armilla i motxilla
