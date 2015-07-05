@@ -702,7 +702,7 @@ switch (_tipusUnitat) do
         (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",5];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",2];
-        (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_m714_White",2];
+        (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_an_m8hc",2];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_mk84",2];
         (unitBackpack _unitat) addItemCargoGlobal ["rhs_m136_hedp_mag",1];
         
@@ -1391,7 +1391,7 @@ switch (_tipusUnitat) do
         _unitat addWeapon _armaDIV;
     };
     
-    // Bussejador especialista en explosius (divexp)
+    // Bussejador especialista en explosius (Diver Specialist in Explosives)
     case "divexp": {
         // Treure l'uniforme, casc i armilla
         removeUniform _unitat;

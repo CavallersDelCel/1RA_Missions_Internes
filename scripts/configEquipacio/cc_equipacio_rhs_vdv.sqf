@@ -72,7 +72,7 @@
 //         0.2 (2015/06/18) Afegit el rol d'explosius (exp). En cas de que ni AGM ni ACE3 estiguin       //
 //                          carregats el script no falla.                                                //
 //         0.3 (2015/06/19) Afegida l'explicació pel tercer paràmetre (opcional).                        //
-//         0.4 (2015/07/03) Afegit el rol de Bussejador especialista en explosius (divexp).              //
+//         0.4 (2015/07/03) Afegit el rol de Bussejador especialista en explosius (Diver Specialist in Explosives).              //
 //=======================================================================================================//
 
 //=======================================================================================================//
@@ -702,7 +702,7 @@ switch (_tipusUnitat) do
         (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",5];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",2];
-        (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_m714_White",2];
+        (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_an_m8hc",2];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_mk84",2];
         (unitBackpack _unitat) addItemCargoGlobal ["rhs_m136_hedp_mag",1];
         
@@ -1391,7 +1391,7 @@ switch (_tipusUnitat) do
         _unitat addWeapon _armaDIV;
     };
     
-    // Bussejador especialista en explosius (divexp)
+    // Bussejador especialista en explosius (Diver Specialist in Explosives)
     case "divexp": {
         // Treure l'uniforme, casc i armilla
         removeUniform _unitat;
