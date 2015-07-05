@@ -16,19 +16,19 @@ _unitat = player;
 
 // Esborrar totes les radios utilitzant les funcions del TFAR
 {
-	_isRadio = _x call TFAR_fnc_isRadio;
-	if(_isRadio) then
-	{
-		_unitat unlinkItem _x;
-	};
+    _isRadio = _x call TFAR_fnc_isRadio;
+    if(_isRadio) then
+    {
+        _unitat unlinkItem _x;
+    };
 } foreach items _unitat;
 
 {
-	_isRadio = _x call TFAR_fnc_isRadio;
-	if(_isRadio) then
-	{
-		_unitat unlinkItem _x;
-	};
+    _isRadio = _x call TFAR_fnc_isRadio;
+    if(_isRadio) then
+    {
+        _unitat unlinkItem _x;
+    };
 } foreach assignedItems _unitat;
 
 //============================================ FI DEL FITXER ============================================//

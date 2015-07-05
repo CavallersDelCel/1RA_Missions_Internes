@@ -27,7 +27,7 @@ fins que les torres inhibidores de senyal siguin destruïdes. Partint d'escaça 
 que s'avança en la missió a través d'informes d'inteligència. Per tal d'acomplir els objectius es requereixen entre 8 i 12 jugadors molt ben coordinats ja que es
 considera una missió difícil. Les tasques no s'actualitzen un cop completades i són els jugadors els qui decideixen si l'han completat o no.
 
-**Plantilla Bàsica per Missions (PBM)**: v0.1 (https://github.com/CavallersDelCel/CC_Plantilla_Missio) per CC_Magnetar.
+**Plantilla Bàsica per Missions (PBM)**: v0.1 (https://github.com/CavallersDelCel/1RA_Plantilla_Missio) per CC_Magnetar.
 
 ## Descripció detallada de la missió
 

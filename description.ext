@@ -9,11 +9,10 @@
 // Header de la missió: - Definició del mode de joc, nombre mínim de jugadors i nombre màxim de jugadors //
 //=======================================================================================================//
 
-class Header
-{
-	gameType = Coop;     // Mode de joc: https://community.bistudio.com/wiki/Multiplayer_Game_Types
-	minPlayers = 1;      // Nombre mínim de jugadors
-	maxPlayers = 12;     // Nombre màxim de jugadors
+class Header {
+    gameType = Coop;     // Mode de joc: https://community.bistudio.com/wiki/Multiplayer_Game_Types
+    minPlayers = 8;      // Nombre mínim de jugadors
+    maxPlayers = 14;     // Nombre màxim de jugadors
 };
 
 //=======================================================================================================//
@@ -51,241 +50,224 @@ respawnTemplates[] = {"Seagull","Spectator","EndMission"};
 //=======================================================================================================//
 // PARAMETRES DE LA MISSIÓ: RETOCS PER L'ADMINISTRADOR                                                   //
 //=======================================================================================================//
-class Params
-{
-	//===================================================================================================//
-	// Debug: Variable per controlar Debug.                                                              //
-	// Opció per defecte: Habilitat                                                                      //
-	//===================================================================================================//
-	class cc_param_debugOutput
-    {
+class Params {
+
+    //===================================================================================================//
+    // Debug: Variable per controlar Debug.                                                              //
+    // Opció per defecte: Habilitat                                                                      //
+    //===================================================================================================//
+    class cc_param_debugOutput {
         title = "Mode Debug";
         values[] = {0,1};
         texts[] = {"Desactivat","Activat"};
         default = 0;
     };
-	
-	//===================================================================================================//
-	// Perfils: Utilitzar els perfils a l'hora d'equipar les unitats                                     //
-	// Opció per defecte: Els perfils no s'utilitzen.                                                    //
-	//===================================================================================================//
-	class cc_param_utilitzarPerfils
-	{
-		title = "Utilitzar perfils";
-		values[] = {0,1};
-		texts[] = {"No","Si"};
-		default = 0;
-	};
-	
-	//===================================================================================================//
-	// Sistema mèdic: Nivell de detall del sistema mèdic de ACE3.                                        //
-	// Opció per defecte: Avançat.                                                                        //
-	//===================================================================================================//
-	class cc_param_SistemaMedic
-	{
-		title = "Sistema mèdic";
-		values[] = {0,1};
-		texts[] = {"ACE3 Bàsic","ACE3 Avançat"};
-		default = 1;
-	};
-	
-	//===================================================================================================//
-	// Sistema de balística: Nivell de detall del sistema de balística de ACE3.                          //
-	// Opció per defecte: Avançat.                                                                       //
-	//===================================================================================================//
-	//class cc_param_ace3Balistica
-	//{
-	//	title = "Sistema de balística de ACE3";
-	//	values[] = {0,1};
-	//	texts[] = {"Bàsic","Avançat"};
-	//	default = 1;
-	//};
+    
+    //===================================================================================================//
+    // Perfils: Utilitzar els perfils a l'hora d'equipar les unitats                                     //
+    // Opció per defecte: Els perfils no s'utilitzen.                                                    //
+    //===================================================================================================//
+    class cc_param_utilitzarPerfils {
+        title = "Utilitzar perfils";
+        values[] = {0,1};
+        texts[] = {"No","Si"};
+        default = 0;
+    };
+    
+    //===================================================================================================//
+    // Sistema mèdic: Nivell de detall del sistema mèdic de ACE3.                                        //
+    // Opció per defecte: Avançat.                                                                       //
+    //===================================================================================================//
+    class cc_param_sistemaMedic {
+        title = "Sistema mèdic";
+        values[] = {0,1,2};
+        texts[] = {"Desactivat","ACE3 Bàsic","ACE3 Avançat"};
+        default = 2;
+    };
+    
+    //===================================================================================================//
+    // Sistema de balística: Nivell de detall del sistema de balística de ACE3.                          //
+    // Opció per defecte: Avançat.                                                                       //
+    //===================================================================================================//
+    class cc_param_ace3Balistica {
+        title = "Sistema de balística de ACE3";
+        values[] = {0,1};
+        texts[] = {"Bàsic","Avançat"};
+        default = 1;
+    };
 };
 
 //=======================================================================================================//
 // DEBRIEFING: Informació per quan acaba la missió                                                       //
 //=======================================================================================================//
-class CfgDebriefing
-{
-	class FinalExit1
-	{
-		title = "Missió acabada amb èxit.";
-		subtitle = "";
-		description = "Les forces aliades han aconseguit eliminar el traidor i reestablir la comunicació per ràdio.";
-		pictureBackground = "";
-		picture = "b_inf";
-		pictureColor[] = {0.0,0.3,0.6,1};
-	};
-	
-	class FinalExit2
-	{
-		title = "Missió acabada amb èxit.";
-		subtitle = "";
-		description = "Les forces aliades han aconseguit eliminar el traidor sense reestablir la comunicació per ràdio.";
-		pictureBackground = "";
-		picture = "b_inf";
-		pictureColor[] = {0.0,0.3,0.6,1};
-	};
-	
-	class FinalExit3
-	{
-		title = "Missió acabada amb èxit.";
-		subtitle = "";
-		description = "Les forces aliades han aconseguit eliminar el traidor sense reestablir la comunicació per ràdio. A més a més han aconseguit informes d'inteligència que delaten moviments de tropes enemigues.";
-		pictureBackground = "";
-		picture = "b_inf";
-		pictureColor[] = {0.0,0.3,0.6,1};
-	};
-	
-	class FinalExit4
-	{
-		title = "Missió acabada amb èxit.";
-		subtitle = "";
-		description = "Les forces aliades han aconseguit reestablir la comunicació per ràdio però el traidor ha pogut escapar.";
-		pictureBackground = "";
-		picture = "b_inf";
-		pictureColor[] = {0.0,0.3,0.6,1};
-	};
-	
-	class FinalExit5
-	{
-		title = "Missió acabada amb èxit.";
-		subtitle = "";
-		description = "Les forces aliades han aconseguit reestablir la comunicació per ràdio i han aconseguit informes d'inteligència que delaten moviments de tropes enemigues. El traidor ha pogut escapar.";
-		pictureBackground = "";
-		picture = "b_inf";
-		pictureColor[] = {0.0,0.3,0.6,1};
-	};
-	
-	class FinalExit6
-	{
-		title = "Èxit total.";
-		subtitle = "";
-		description = "Les forces aliades han aconseguit eliminar el traidor i reestablir la comunicació per ràdio. A més a més han aconseguit informes d'inteligència que delaten moviments de tropes enemigues.";
-		pictureBackground = "";
-		picture = "b_inf";
-		pictureColor[] = {0.0,0.3,0.6,1};
-	};
-	
-	class FinalFallit1
-	{
-		title = "Missió fallida";
-		subtitle = "";
-		description = "Les forces aliades han sigut eliminades i han aconseguit reestablir la comunicació per ràdio. El traidor ha pogut escapar.";
-		pictureBackground = "";
-		picture = "KIA";
-		pictureColor[] = {0.0,0.3,0.6,1};
-	};
-	
-	class FinalFallit2
-	{
-		title = "Missió fallida";
-		subtitle = "";
-		description = "Les forces aliades han sigut eliminades però han aconseguit acabar amb el traidor sense reestablir la comunicació per ràdio.";
-		pictureBackground = "";
-		picture = "KIA";
-		pictureColor[] = {0.0,0.3,0.6,1};
-	};
-	
-	class FinalFallit3
-	{
-		title = "Missió fallida";
-		subtitle = "";
-		description = "Les forces aliades han sigut eliminades però han aconseguit acabar amb el traidor i reestablir la comunicació per ràdio.";
-		pictureBackground = "";
-		picture = "KIA";
-		pictureColor[] = {0.0,0.3,0.6,1};
-	};
-	
-	class FinalFallit4
-	{
-		title = "Desertors!";
-		subtitle = "";
-		description = "Les forces aliades han desertat sense assolir cap dels objectius.";
-		pictureBackground = "";
-		picture = "b_inf";
-		pictureColor[] = {0.0,0.3,0.6,1};
-	};
-	
-	class FinalFallit5
-	{
-		title = "Desertors!";
-		subtitle = "";
-		description = "Les forces aliades han desertat sense assolir cap dels objectius però com a mínim han tingut la decència de d";
-		pictureBackground = "";
-		picture = "b_inf";
-		pictureColor[] = {0.0,0.3,0.6,1};
-	};
+class CfgDebriefing {
+    class FinalExit1
+        title = "Missió acabada amb èxit.";
+        subtitle = "";
+        description = "Les forces aliades han aconseguit eliminar el traidor i reestablir la comunicació per ràdio.";
+        pictureBackground = "";
+        picture = "b_inf";
+        pictureColor[] = {0.0,0.3,0.6,1};
+    };
 
-	class FracasAbsolut
-	{
-		title = "Fracàs absolut";
-		subtitle = "";
-		description = "Les forces aliades han sigut eliminades sense assolir cap dels objectius.";
-		pictureBackground = "";
-		picture = "KIA";
-		pictureColor[] = {0.0,0.3,0.6,1};
-	};
+    class FinalExit2 {
+        title = "Missió acabada amb èxit.";
+        subtitle = "";
+        description = "Les forces aliades han aconseguit eliminar el traidor sense reestablir la comunicació per ràdio.";
+        pictureBackground = "";
+        picture = "b_inf";
+        pictureColor[] = {0.0,0.3,0.6,1};
+    };
+
+    class FinalExit3 {
+        title = "Missió acabada amb èxit.";
+        subtitle = "";
+        description = "Les forces aliades han aconseguit eliminar el traidor sense reestablir la comunicació per ràdio. A més a més han aconseguit informes d'inteligència que delaten moviments de tropes enemigues.";
+        pictureBackground = "";
+        picture = "b_inf";
+        pictureColor[] = {0.0,0.3,0.6,1};
+    };
+
+    class FinalExit4 {
+        title = "Missió acabada amb èxit.";
+        subtitle = "";
+        description = "Les forces aliades han aconseguit reestablir la comunicació per ràdio però el traidor ha pogut escapar.";
+        pictureBackground = "";
+        picture = "b_inf";
+        pictureColor[] = {0.0,0.3,0.6,1};
+    };
+
+    class FinalExit5 {
+        title = "Missió acabada amb èxit.";
+        subtitle = "";
+        description = "Les forces aliades han aconseguit reestablir la comunicació per ràdio i han aconseguit informes d'inteligència que delaten moviments de tropes enemigues. El traidor ha pogut escapar.";
+        pictureBackground = "";
+        picture = "b_inf";
+        pictureColor[] = {0.0,0.3,0.6,1};
+    };
+
+    class FinalExit6 {
+        title = "Èxit total.";
+        subtitle = "";
+        description = "Les forces aliades han aconseguit eliminar el traidor i reestablir la comunicació per ràdio. A més a més han aconseguit informes d'inteligència que delaten moviments de tropes enemigues.";
+        pictureBackground = "";
+        picture = "b_inf";
+        pictureColor[] = {0.0,0.3,0.6,1};
+    };
+
+    class FinalFallit1 {
+        title = "Missió fallida";
+        subtitle = "";
+        description = "Les forces aliades han sigut eliminades i han aconseguit reestablir la comunicació per ràdio. El traidor ha pogut escapar.";
+        pictureBackground = "";
+        picture = "KIA";
+        pictureColor[] = {0.0,0.3,0.6,1};
+    };
+
+    class FinalFallit2 {
+        title = "Missió fallida";
+        subtitle = "";
+        description = "Les forces aliades han sigut eliminades però han aconseguit acabar amb el traidor sense reestablir la comunicació per ràdio.";
+        pictureBackground = "";
+        picture = "KIA";
+        pictureColor[] = {0.0,0.3,0.6,1};
+    };
+
+    class FinalFallit3 {
+        title = "Missió fallida";
+        subtitle = "";
+        description = "Les forces aliades han sigut eliminades però han aconseguit acabar amb el traidor i reestablir la comunicació per ràdio.";
+        pictureBackground = "";
+        picture = "KIA";
+        pictureColor[] = {0.0,0.3,0.6,1};
+    };
+
+    class FinalFallit4 {
+        title = "Desertors!";
+        subtitle = "";
+        description = "Les forces aliades han desertat sense assolir cap dels objectius.";
+        pictureBackground = "";
+        picture = "b_inf";
+        pictureColor[] = {0.0,0.3,0.6,1};
+    };
+
+    class FinalFallit5 {
+        title = "Desertors!";
+        subtitle = "";
+        description = "Les forces aliades han desertat sense assolir cap dels objectius però com a mínim han tingut la decència de d";
+        pictureBackground = "";
+        picture = "b_inf";
+        pictureColor[] = {0.0,0.3,0.6,1};
+    };
+
+    class FracasAbsolut {
+        title = "Fracàs absolut";
+        subtitle = "";
+        description = "Les forces aliades han sigut eliminades sense assolir cap dels objectius.";
+        pictureBackground = "";
+        picture = "KIA";
+        pictureColor[] = {0.0,0.3,0.6,1};
+    };
 };
 
 // Funcions per les missions dels Cavallers del Cel
-class CfgFunctions
-{
-	class CC // Defines the "owner"
-	{
-		// Funcions comunes i essencials pel funcionament dels scripts
-		class comu
-		{
-			file = "scripts\comu";
-			class processarParamsArray
-			{
-				preInit = 1;   // La funció s'executa al iniciar la missió, ABANS d'inicialitzar objectes
-				// postInit = 1;  // La funció s'executa al iniciar la missió, DESPRÉS d'inicialitzar objectes
-			};
-			class processarMods
-			{
-				preInit = 1;  // La funció s'executa al iniciar la missió, ABANS d'inicialitzar objectes
-			};
-		};
-		
-		// Funcions per equipar els diferents rols amb els perfils dels Cavallers del Cel
-		class configEquipacio
-		{
-			file = "scripts\configEquipacio";
-			class configEquipacio{};
-		};
-		
-		// Funcions per inicialitzar el sistema de radio Task Force Arrowhead (TFAR)		
-		class tfar
-		{
-			file = "scripts\radios\tfar";
-			class tfar_treureRadios{};
-			class tfar_afegirRadios{};
-			class tfar_configurarFreqRadios{};
-			class tfar_configurarXatEspectador{};
-			class tfar_modificarSenyal{};
-		};
-		
-		class acre2
-		{
-			file = "scripts\radios\acre2";
-			class acre2_determinarIdiomes{};
-			class acre2_afegirRadios{};
-			class acre2_treureRadios{};
-			class acre2_configurarXatEspectador{};
-		};
-		
-		class zeus
-		{
-			file = "scripts\zeus";
-			class zeus_eventHandlers
-			{
-				PostInit = 1;  // La funció s'executa al iniciar la missió, DESPRÉS d'inicialitzar objectes
-			};
-			class zeus_afegirGrups{};
-			class zeus_afegirObjectes{};
-		}
-	};
+class CfgFunctions {
+    class CC {   
+        // Funcions per configurar ACE 3
+        class ace3 {
+            file = "scripts\ace3";
+            class ace3_config
+            {
+                PostInit = 1;  // La funció s'executa al iniciar la missió, DESPRÉS d'inicialitzar objectes.
+            };
+        };
+        
+        // Funcions per inicialitzar i configurar ACRE 2
+        class acre2 {
+            file = "scripts\radios\acre2";
+            class acre2_determinarIdiomes{};
+            class acre2_afegirRadios{};
+            class acre2_treureRadios{};
+            class acre2_configurarXatEspectador{};
+        };
+        
+        // Funcions comunes i essencials pel funcionament dels scripts
+        class comu {
+            file = "scripts\comu";
+            class processarParamsArray {
+                preInit = 1;   // La funció s'executa al iniciar la missió, ABANS d'inicialitzar objectes
+                // postInit = 1;  // La funció s'executa al iniciar la missió, DESPRÉS d'inicialitzar objectes
+            };
+            class processarMods {
+                preInit = 1;  // La funció s'executa al iniciar la missió, ABANS d'inicialitzar objectes
+            };
+        };
+        
+        // Funcions per equipar els diferents rols amb els perfils dels Cavallers del Cel
+        class configEquipacio {
+            file = "scripts\configEquipacio";
+            class configEquipacio{};
+        };
+        
+        // Funcions per inicialitzar el sistema de radio Task Force Arrowhead (TFAR)        
+        class tfar {
+            file = "scripts\radios\tfar";
+            class tfar_treureRadios{};
+            class tfar_afegirRadios{};
+            class tfar_configurarFreqRadios{};
+            class tfar_configurarXatEspectador{};
+            class tfar_modificarSenyal{};
+        };
+        
+        class zeus {
+            file = "scripts\zeus";
+            class zeus_eventHandlers {
+                PostInit = 1;  // La funció s'executa al iniciar la missió, DESPRÉS d'inicialitzar objectes.
+            };
+            class zeus_afegirGrups{};
+            class zeus_afegirObjectes{};
+        };
+    };
 };
 
 //============================================ FI DEL FITXER ============================================//

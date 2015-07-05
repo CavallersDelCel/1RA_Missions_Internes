@@ -16,12 +16,12 @@ _unitat = player;
 
 // Esperar a que l'ACRE2 estigui inicialitzat
 waitUntil{
-	[] call acre_api_fnc_isInitialized;
+    [] call acre_api_fnc_isInitialized;
 };
 
 // Treure totes les ràdios utilitzant les funcions de ACRE2
 {
-	_unitat removeItem _x;
+    _unitat removeItem _x;
 } forEach( [] call acre_api_fnc_getCurrentRadioList);
 
 //============================================ FI DEL FITXER ============================================//

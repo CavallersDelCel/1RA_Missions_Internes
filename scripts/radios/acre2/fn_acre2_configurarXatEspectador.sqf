@@ -15,11 +15,11 @@ _unitat = player;
 
 // Si la unitat està viva no cal forçar res.
 if(alive _unitat) then {
-	// Deshabilita el xat d'espectador
-	[false] call acre_api_fnc_setSpectator;
+    // Deshabilita el xat d'espectador
+    [false] call acre_api_fnc_setSpectator;
 } else {
-	// En cas de que la unitat no estigui viva, forçar el xat d'espectador de l'ACRE2
-	[true] call acre_api_fnc_setSpectator;
+    // En cas de que la unitat no estigui viva, forçar el xat d'espectador de l'ACRE2
+    [true] call acre_api_fnc_setSpectator;
 };
 
 
