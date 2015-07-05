@@ -303,7 +303,7 @@ if (isClass (configFile >> "CfgPatches" >> "ace_hitreactions")) then {
 
 if (isClass (configFile >> "CfgPatches" >> "ace_laserpointer")) then {
 
-    ["ace_laserpointer_enabled", true, true, true] call ACE_common_fnc_setSetting;                   // Scalar. 0.1 = Valor per defecte.
+    ["ace_laserpointer_enabled", true, true, true] call ACE_common_fnc_setSetting;                             // Scalar. 0.1 = Valor per defecte.
 } else {
     _ErrorModul = true;
     diag_log "No s'ha trobat el fitxer ace_laserpointer.pbo.";

@@ -215,8 +215,7 @@ switch (_tipusUnitat) do
         _loadout = [_unitat,[profileNamespace,_perfil]] call BIS_fnc_loadInventory;
     };
     
-    default
-    {
+    default {
         _perfil = "CC - Fuseller M4A1 OCP";
         _unitat sideChat format ["DEBUG (cc_equipacio_rhs_usarmy_d_perfils.sqf): El perfil pel tipus d'unitat %1 no està definit. Utilitzant el perfil de fuseller %2", _tipusUnitat, _perfil];
         _loadout = [_unitat,[profileNamespace,_perfil]] call BIS_fnc_loadInventory;
