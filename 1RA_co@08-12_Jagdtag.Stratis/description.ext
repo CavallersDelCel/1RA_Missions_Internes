@@ -101,7 +101,7 @@ class Params {
 // DEBRIEFING: Informació per quan acaba la missió                                                       //
 //=======================================================================================================//
 class CfgDebriefing {
-    class FinalExit1
+    class FinalExit1 {
         title = "Missió acabada amb èxit.";
         subtitle = "";
         description = "Les forces aliades han aconseguit eliminar el traidor i reestablir la comunicació per ràdio.";
