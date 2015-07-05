@@ -14,9 +14,9 @@ Missió generada amb la Plantilla Bàsica per Missions (PBM) del grup 1er Regime
 
 **Tipus de missió**: Tipus de missió (Coop, TvT, PvP).
 
-**Nombre mínim de jugadors**: Nombre mínim de jugadors recomenats per l'autor.
+**Nombre mínim de jugadors**: Nombre mínim de jugadors recomanats per l'autor.
 
-**Nombre màxim de jugadors**: Nombre màxim de jugadors recomenats per l'autor.
+**Nombre màxim de jugadors**: Nombre màxim de jugadors recomanats per l'autor.
 
 **Respawn**: Tipus de respawn.
 
@@ -59,7 +59,7 @@ La plantilla té la següent estructura de carpetes.
 * "\imatges": Carpeta on es guarden les diferents imatges. Conté plantilles per generar les imatges per la pròpia missió i pel fòrum.
 * "\scripts": Carpeta on es guarden els diferents scripts/funcions organitzats en subcarpetes.
   * "\sripts\ace3": Scripts i funcions per configurar el ACE3.
-  * "\scripts\briefing": Scripts per generar briefings per cada una de les faccions suportades. L'administrador de la partida té un briefing especial.
+  * "\scripts\briefing": Scripts per generar brífings per cada una de les faccions suportades. L'administrador de la partida té un briefing especial.
   * "\scripts\comu": Variables comunes.
   * "\scripts\configEquipacio": Scripts i funcions per equipar les unitats per cada una de les faccions suportades. Serveix per infanteria, vehicles i caixes.
   * "\scripts\intro": Introducció a la missió. Cada una de les faccions suportades té una introducció a la missió pròpia.
@@ -74,8 +74,8 @@ La següent llista mostra els mods externs que actualment estan suportats i en n
   * RHS Armed Forces of the Russian Federation (AFRF: http://www.rhsmods.org/mod/1.
   * **RHS United States Armed Forces (USAF)**: http://www.rhsmods.org/mod/2.
 * Realisme:
-  * Advanced Combat Environment (ACE3): https://github.com/acemod/ACE3 o bé http://ace3mod.com/.
-  * **Advanced Gameplay Modification (AGM)**: https://github.com/KoffeinFlummi/AGM.
+  * **Advanced Combat Environment (ACE3)**: https://github.com/acemod/ACE3 o bé http://ace3mod.com/.
+  * Advanced Gameplay Modification (AGM): https://github.com/KoffeinFlummi/AGM. **Obsolet**.
 * Sistema de ràdios:
   * Advanced Combat Radio Environment 2 (ACRE2): http://forums.bistudio.com/showthread.php?191848-ACRE2-Stable-Release.
   * **Task Force Arrowhead Radio (TFAR)**: https://github.com/michail-nikolaev/task-force-arma-3-radio.
