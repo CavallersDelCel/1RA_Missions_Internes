@@ -5,13 +5,13 @@ Cada missió ha d'estar emmagatzemada en una carpeta diferent i és recomenable,
 
 El conveni de noms que es fa servir per designar la missió és el següent:
 
-`1RA_xx@yy-zz_NomDeLaMissio.Illa`
+`1RA_aa@bb-cc_NomDeLaMissio.Illa` o bé `1RA_aa@x_NomDeLaMissio.Illa` en cas de nombre de jugadors variable.
 
 on:
 
-* `xx` és el tipus de missió: `co` (Cooperativa)
-* `yy` és el nombré mínim de jugadors.
-* `zz` és el nombre màxim de jugadors.
+* `aa` és el tipus de missió: `co` (Cooperativa). Si el nombre de jugadors és variable es pot substituir 
+* `bb` és el nombré mínim de jugadors.
+* `cc` és el nombre màxim de jugadors.
 * `NomDeLaMissio` és el nom abreujat de la missió *sense espais*.
 * `Illa` és l'identificador del mapa on transcorre la missió: Altis, Stratis.
 
