@@ -35,11 +35,13 @@ _briefingNotes = "
 <br/>
 <font color='#FF0000' size='18'>Notes del creador de la missió</font>
 <br/><br/>
-<font color='#00FFFF'>Nom de la Missió:</font> ""Operació Jagdtag: Dia de caça"".
+<font color='#00FFFF'>Nom de la missió:</font> ""*** Nom de la missió ***"".
 <br/>
 <font color='#00FFFF'>Versió:</font> 1.0.
 <br/>
 <font color='#00FFFF'>Autor:</font> CC Magnetar.
+<br/>
+<font color='#00FFFF'>Col·laboradors:</font> *** Listat de col·laboradors ***.
 <br/>
 <font color='#00FFFF'>Nombre mínim de jugadors:</font> 8.
 <br/>
@@ -65,6 +67,27 @@ _briefingFinals = "
 Selecciona un dels finals per activar-lo.
 <br/><br/>
 ";
+
+// Cada un dels finals a description.ext s'ha d'incloure.
+_briefingFinals = _briefingFinals + format [
+"<execute expression=""['Final1',true] call BIS_fnc_endMission;"">Final amb èxit 1</execute>: Breu descripció del final.<br/><br/>"
+];
+
+_briefingFinals = _briefingFinals + format [
+"<execute expression=""['Final2',true] call BIS_fnc_endMission;"">Final amb èxit 2</execute>: Breu descripció del final.<br/><br/>"
+];
+
+_briefingFinals = _briefingFinals + format [
+"<execute expression=""['FinalFallit1',false] call BIS_fnc_endMission;"">Final fallit 1</execute>: Breu descripció del final.<br/><br/>"
+];
+
+_briefingFinals = _briefingFinals + format [
+"<execute expression=""['FinalFallit2',false] call BIS_fnc_endMission;"">Final fallit 2</execute>: Breu descripció del final.<br/><br/>"
+];
+
+_briefingFinals = _briefingFinals + format [
+"<execute expression=""['FracasAbsolut',false] call BIS_fnc_endMission;"">Fracàs Absolut</execute>: Breu descripció del final.<br/><br/>"
+];
 
 _briefing = _briefingAdmin + _briefingNotes + _briefingFinals;
 _briefing = _briefing + "<br/><br/>";

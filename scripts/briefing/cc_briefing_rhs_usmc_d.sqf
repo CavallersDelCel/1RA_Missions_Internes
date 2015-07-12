@@ -19,11 +19,49 @@ Amb la col·laboració de CC_Magnetar (plantilla) i *** possibles col·laborador
 "]];
 
 //=======================================================================================================//
+// NOTES: RADIO                                                                                          //
+//=======================================================================================================//
+_admlog = player createDiaryRecord ["diary", ["Freqüències de Radio","
+<br/>
+<font color='#FF0000' size='18'>Comandament</font>: 41 kHz.
+<br/><br/>
+<font color='#FF0000' size='18'>Suport</font>: 51 kHz.
+<br/><br/>
+<font color='#FF0000' size='18'>Artilleria</font>: 61 kHz.
+<br/><br/>
+<font color='#FF0000' size='18'>Alfa</font>
+<br/>
+- Esquadra ""Alfa"": 200 kHz.
+<br/>
+- Equip de foc ""Alfa 1-1"": 201 kHz.
+<br/>
+- Equip de foc ""Alfa 1-2"": 202 kHz.
+<br/>
+- Equip de foc ""Alfa 1-3"": 203 kHz.
+<br/><br/>
+<font color='#FF0000' size='18'>Bravo</font>
+<br/>
+- Esquadra ""Bravo"": 210 kHz.
+<br/>
+- Equip de foc ""Bravo 1-1"": 211 kHz.
+<br/>
+- Equip de foc ""Bravo 1-2"": 212 kHz.
+<br/>
+- Equip de foc ""Bravo 1-3"": 213 kHz.
+"]];
+
+//=======================================================================================================//
 // NOTES: ADMINISTRACIÓ/LOGÍSTICA                                                                        //
 //=======================================================================================================//
 _admlog = player createDiaryRecord ["diary", ["Administració/Logística","
 <br/>
-*** Descripció de support aèri, evacuació mèdica, CAS etc en cas d'existir. ***
+<font color='#FF0000' size='18'>Suport</font>
+<br/>
+*** Descripció de les unitats de suport, evacuació mèdica, CAS etc. en cas d'existir.
+<br/><br/>
+<font color='#FF0000' size='18'>Abastiment</font>
+<br/>
+*** Abastiment de les tropes: munició addicional, ...
 "]];
 
 //=======================================================================================================//
@@ -31,17 +69,21 @@ _admlog = player createDiaryRecord ["diary", ["Administració/Logística","
 //=======================================================================================================//
 _execucio = player createDiaryRecord ["diary", ["Execució","
 <br/>
-<font size='18'>Ordres del general/Plà d'atac</font>
+<font color='#FF0000' size='18'>Tasques principals</font>
 <br/>
-*** Breu descripció del plà d'atac. ***
+- <font color='#00FFFF'>Tasca principal 1</font>: *** Breu descripció ***.
+<br/>
+- <font color='#00FFFF'>Tasca principal 2</font>: *** Breu descripció ***.
 <br/><br/>
-<font size='18'>RUTA D'ATAC</font>
+<font color='#FF0000' size='18'>Tasques secundària</font>
 <br/>
-*** Instruccions d'inserció, atac i extracció. ***
+- <font color='#00FFFF'>Tasca secundària 1</font>: *** Breu descripció ***.
+<br/>
+- <font color='#00FFFF'>Tasca secundària 2</font>: *** Breu descripció ***.
 <br/><br/>
-<font size='18'>TASQUES ESPECIALS</font>
+<font color='#FF0000' size='18'>Execució</font>
 <br/>
-*** Tasques especials. ***
+*** Descripció, per punts, de com executar la missió. ***
 "]];
 
 //=======================================================================================================//
@@ -59,11 +101,11 @@ _intel = player createDiaryRecord ["diary", ["Intel·ligència","
 <br/>
 *** Informe d'intel·ligència. ***
 <br/><br/>
-<font size='18'>FORCES ENEMIGUES</font>
+<font color='#FF0000' size='18'>Forces enemigues</font>
 <br/>
 *** Descripció de les forces enemigues.***
 <br/><br/>
-<font size='18'>FORCES ALIADES</font>
+<font color='#FF0000' size='18'>Forces aliades</font>
 <br/>
 *** Breu descripció de les forces aliades.***
 "]];

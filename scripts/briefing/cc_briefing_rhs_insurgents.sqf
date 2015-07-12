@@ -23,7 +23,31 @@ Amb la col·laboració de CC_Magnetar (plantilla) i *** possibles col·laborador
 //=======================================================================================================//
 _admlog = player createDiaryRecord ["diary", ["Freqüències de Radio","
 <br/>
-*** Llistat de les freqüències de ràdio de les esquadres i equips ***
+<font color='#FF0000' size='18'>Comandament</font>: 41 kHz.
+<br/><br/>
+<font color='#FF0000' size='18'>Suport</font>: 51 kHz.
+<br/><br/>
+<font color='#FF0000' size='18'>Artilleria</font>: 61 kHz.
+<br/><br/>
+<font color='#FF0000' size='18'>Alfa</font>
+<br/>
+- Esquadra ""Alfa"": 200 kHz.
+<br/>
+- Equip de foc ""Alfa 1-1"": 201 kHz.
+<br/>
+- Equip de foc ""Alfa 1-2"": 202 kHz.
+<br/>
+- Equip de foc ""Alfa 1-3"": 203 kHz.
+<br/><br/>
+<font color='#FF0000' size='18'>Bravo</font>
+<br/>
+- Esquadra ""Bravo"": 210 kHz.
+<br/>
+- Equip de foc ""Bravo 1-1"": 211 kHz.
+<br/>
+- Equip de foc ""Bravo 1-2"": 212 kHz.
+<br/>
+- Equip de foc ""Bravo 1-3"": 213 kHz.
 "]];
 
 //=======================================================================================================//
@@ -45,17 +69,21 @@ _admlog = player createDiaryRecord ["diary", ["Administració/Logística","
 //=======================================================================================================//
 _execucio = player createDiaryRecord ["diary", ["Execució","
 <br/>
-<font color='#FF0000' size='18'>Ordres del general/Plà d'atac</font>
+<font color='#FF0000' size='18'>Tasques principals</font>
 <br/>
-*** Breu descripció del plà d'atac. ***
+- <font color='#00FFFF'>Tasca principal 1</font>: *** Breu descripció ***.
+<br/>
+- <font color='#00FFFF'>Tasca principal 2</font>: *** Breu descripció ***.
 <br/><br/>
-<font color='#FF0000' size='18'>Ruta d'atac</font>
+<font color='#FF0000' size='18'>Tasques secundària</font>
 <br/>
-*** Instruccions d'inserció, atac i extracció. ***
+- <font color='#00FFFF'>Tasca secundària 1</font>: *** Breu descripció ***.
+<br/>
+- <font color='#00FFFF'>Tasca secundària 2</font>: *** Breu descripció ***.
 <br/><br/>
-<font color='#FF0000' size='18'>Tasques especials</font>
+<font color='#FF0000' size='18'>Execució</font>
 <br/>
-*** Tasques especials. ***
+*** Descripció, per punts, de com executar la missió. ***
 "]];
 
 //=======================================================================================================//
