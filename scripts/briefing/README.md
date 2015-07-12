@@ -1,6 +1,6 @@
 ## scripts/briefing
 
-En aquesta carpeta es troben els diferents fitxers per escriure el briefing a les diverses faccions suportades a la Plantilla Bàsica per Missions (PBM) i un especial per l'administrador. Cadascun dels fitxers de té la següent estructura a excepció de `cc_briefing_admin.sqf`:
+En aquesta carpeta es troben els diferents fitxers per escriure el briefing a les diverses faccions suportades a la Plantilla Bàsica per Missions (PBM) i un especial per l'administrador. Cadascun dels fitxers de té la següent estructura a excepció de `cc_briefing_admin.sqf`. Cal destacar que els apartats apareixen en ordre invers a Arma 3: la secció que primer s'introdueix apareix en última posició al llistat.
 
 #### Admin
 
