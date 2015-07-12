@@ -22,6 +22,7 @@ Missió generada per <font color='#00FFFF'>CC_Magnetar</font> per a la <font col
 //=======================================================================================================//
 _admlog = player createDiaryRecord ["diary", ["Freqüències de Radio","
 <br/>
+<<<<<<< HEAD
 <font color='#FF0000' size='18'>Gos de Caça</font>
 <br/>
 - Esquadra ""Gos de Caça"": 51 kHz.
@@ -33,6 +34,33 @@ _admlog = player createDiaryRecord ["diary", ["Freqüències de Radio","
 <font color='#FF0000' size='18'>Extracció</font>
 <br/>
 - Falcó 1: Protocol de ràdio alfa.
+=======
+<font color='#FF0000' size='18'>Comandament</font>: 41 kHz.
+<br/><br/>
+<font color='#FF0000' size='18'>Suport</font>: 51 kHz.
+<br/><br/>
+<font color='#FF0000' size='18'>Artilleria</font>: 61 kHz.
+<br/><br/>
+<font color='#FF0000' size='18'>Alfa</font>
+<br/>
+- Esquadra ""Alfa"": 200 kHz.
+<br/>
+- Equip de foc ""Alfa 1-1"": 201 kHz.
+<br/>
+- Equip de foc ""Alfa 1-2"": 202 kHz.
+<br/>
+- Equip de foc ""Alfa 1-3"": 203 kHz.
+<br/><br/>
+<font color='#FF0000' size='18'>Bravo</font>
+<br/>
+- Esquadra ""Bravo"": 210 kHz.
+<br/>
+- Equip de foc ""Bravo 1-1"": 211 kHz.
+<br/>
+- Equip de foc ""Bravo 1-2"": 212 kHz.
+<br/>
+- Equip de foc ""Bravo 1-3"": 213 kHz.
+>>>>>>> d877950227dfa200fe02bce225917545f03741d1
 "]];
 
 //=======================================================================================================//
@@ -52,8 +80,9 @@ Sense abastiment, les tropes s'hauran d'espavilar amb el que tenen.
 //=======================================================================================================//
 // NOTES: EXECUCIÓ                                                                                       //
 //=======================================================================================================//
-_execucio = player createDiaryRecord ["diary", ["Execució","
+_execucio = player createDiaryRecord ["diary", ["Execució i tasques","
 <br/>
+<<<<<<< HEAD
 <font color='#FF0000' size='18'>Tasca principal</font>
 <br/>
 Eliminar el traidor a qualsevol preu.
@@ -75,10 +104,27 @@ Reestablir la comunicació per ràdio destruint els inhibidors de senyal.
 - Extracció per helicòpter a càrrec de Falcó 1 sempre i quan s'hagi pogut reestablir la comunicació per ràdio. En cas contrari els diversos grups es reagruparan a les cases abandonades a <marker name=""PRetirada"">(053,042)</marker> per assolir un perfil baix.
 <br/>
 - Degut a l'escassa informació l'esquadra haurà d'improvitzar sobre el terreny i prioritzar objectius.
+=======
+<font color='#FF0000' size='18'>Tasques principals</font>
+<br/>
+- <font color='#00FFFF'>Tasca principal 1</font>: *** Breu descripció ***.
+<br/>
+- <font color='#00FFFF'>Tasca principal 2</font>: *** Breu descripció ***.
+<br/><br/>
+<font color='#FF0000' size='18'>Tasques secundària</font>
+<br/>
+- <font color='#00FFFF'>Tasca secundària 1</font>: *** Breu descripció ***.
+<br/>
+- <font color='#00FFFF'>Tasca secundària 2</font>: *** Breu descripció ***.
+<br/><br/>
+<font color='#FF0000' size='18'>Execució</font>
+<br/>
+*** Descripció, per punts, de com executar la missió. ***
+>>>>>>> d877950227dfa200fe02bce225917545f03741d1
 "]];
 
 //=======================================================================================================//
-// NOTES: MISSIÓ                                                                                         //
+// NOTES: MISSIÓ i EXECUCIÓ                                                                              //
 //=======================================================================================================//
 _missio = player createDiaryRecord ["diary", ["Missió","
 <br/>

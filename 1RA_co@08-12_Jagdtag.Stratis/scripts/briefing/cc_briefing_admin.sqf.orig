@@ -72,7 +72,7 @@ Selecciona un dels finals per activar-lo.
 <br/><br/>
 ";
 
-// Cada un dels finals a description.ext s'ha d'incloure.
+<<<<<<< HEAD
 _briefingFinals = _briefingFinals + format [
 "<execute expression=""['FinalExit1',true] call BIS_fnc_endMission;"">Final amb èxit 1</execute>: Torres destruides. Traidor mort. Sense documents d'intel·ligència.<br/><br/>"
 ];
@@ -108,6 +108,27 @@ _briefingFinals = _briefingFinals + format [
 ];
 _briefingFinals = _briefingFinals + format [
 "<execute expression=""['FracasAbsolut',false] call BIS_fnc_endMission;"">Fracàs Absolut</execute>: Tots morts. Torres no destruides. Traidor viu. Sense documents d'intel·ligència.<br/><br/>"
+=======
+// Cada un dels finals a description.ext s'ha d'incloure.
+_briefingFinals = _briefingFinals + format [
+"<execute expression=""['Final1',true] call BIS_fnc_endMission;"">Final amb èxit 1</execute>: Breu descripció del final.<br/><br/>"
+];
+
+_briefingFinals = _briefingFinals + format [
+"<execute expression=""['Final2',true] call BIS_fnc_endMission;"">Final amb èxit 2</execute>: Breu descripció del final.<br/><br/>"
+];
+
+_briefingFinals = _briefingFinals + format [
+"<execute expression=""['FinalFallit1',false] call BIS_fnc_endMission;"">Final fallit 1</execute>: Breu descripció del final.<br/><br/>"
+];
+
+_briefingFinals = _briefingFinals + format [
+"<execute expression=""['FinalFallit2',false] call BIS_fnc_endMission;"">Final fallit 2</execute>: Breu descripció del final.<br/><br/>"
+];
+
+_briefingFinals = _briefingFinals + format [
+"<execute expression=""['FracasAbsolut',false] call BIS_fnc_endMission;"">Fracàs Absolut</execute>: Breu descripció del final.<br/><br/>"
+>>>>>>> d877950227dfa200fe02bce225917545f03741d1
 ];
 
 _briefing = _briefingAdmin + _briefingNotes + _briefingFinals;

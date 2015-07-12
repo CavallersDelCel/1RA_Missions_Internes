@@ -90,8 +90,8 @@ cc_acre2_radioOficials = "ACRE_PRC152";
 cc_acre2_radioRTO = "ACRE_PRC117F";
 
 // Noms dels canals a les radios AN/PRC 148, AN/PRC 152 i AN/PRC 117F
-cc_acre2_config_llistaCanals = ["ALFA 1","ALFA 2","ALFA 3","COMANDAMENT","SUPORT","ARTILLERIA"];
-cc_acre2_config_FreqCanals = [201, 202, 203, 41, 51, 61];
+cc_acre2_config_llistaCanals = ["ALFA","ALFA 1","ALFA 2","ALFA 3","COMANDAMENT","SUPORT","ARTILLERIA"];
+cc_acre2_config_FreqCanals = [200, 201, 202, 203, 41, 51, 61];
 
 // Llista d'unitats amb Rifleman Radio (fn_configEquipacio.sqf)
 cc_acre2_llistaRadioSoldats = ["rfl", "rflat", "gr", "ar", "dm", "mg", "amg", "at", "aat", "aa", "aaa", "en", "exp", "divme", "div"];
