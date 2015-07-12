@@ -24,7 +24,7 @@ _admlog = player createDiaryRecord ["diary", ["Freqüències de Radio","
 <br/>
 <font color='#FF0000' size='18'>Gos de Caça</font>
 <br/>
-- Esquadra ""Gos de Caça"": 51 kHz.
+- Esquadra ""Gos de Caça"": 41 kHz.
 <br/>
 - Equip ""Gos de Caça 1"": 201 kHz.
 <br/>
