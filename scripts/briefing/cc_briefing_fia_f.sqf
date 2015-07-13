@@ -4,7 +4,7 @@
 // Versió: 0.1                                                                                           //
 // Creació del Document: 22/02/2015                                                                      //
 // Descripció: Aquest document serveix per oferir informació de la missió si la unitat forma part de     //
-//             la facció FIA ("blu_g_f", "ind_g_f" o bé "opf_g_f").                                                                  //
+//             la facció FIA ("blu_g_f", "ind_g_f" o bé "opf_g_f").                                      //
 //=======================================================================================================//
 
 //=======================================================================================================//
