@@ -72,7 +72,7 @@ switch (_TypNumber) do
             "O_spotter_F",                                 // Observador (Spotter)
             "O_sniper_F",                                  // Franctirador (Sniper)
             "O_medic_F"                                    // Metge
-            ];
+        ];
         _Unit_Pool_V = [
             "O_Quadbike_01_F",                             // Quad
             "O_MRAP_02_F",                                 // Ifrit
@@ -84,20 +84,20 @@ switch (_TypNumber) do
             "O_Truck_02_box_F",                            // Camió Kamaz amb kit de reparació
             "O_Truck_02_fuel_F",                           // Camió Kamaz cisterna
             "O_Truck_02_medical_F"                         // Camió Kamaz mèdic
-            ];
+        ];
         _Unit_Pool_T = [
             "O_APC_Tracked_02_cannon_F",                   // BTR-K Kamysh
             "O_APC_Tracked_02_AA_F",                       // ZSU-39 Tigris
             "O_APC_Wheeled_02_rcws_F",                     // MSE-3 Marid
             "O_MBT_02_arty_F",                             // 2S9 Sochor
             "O_MBT_02_cannon_F"                            // T-100 Varsuk
-            ];
+        ];
         _Unit_Pool_A = [
             "O_Heli_Attack_02_F",                          // Mi-48 Kajman
             "O_Heli_Attack_02_black_F",                    // Mi-48 Kajman Negre
             "O_Heli_Light_02_F",                           // PO-30 Orca
             "O_Heli_Light_02_unarmed_F"                    // PO-30 Orca (sense armament)
-            ];
+        ];
     };
 
     //===================================================================================================//
@@ -112,16 +112,16 @@ switch (_TypNumber) do
             "O_recon_medic_F",                             // Metge (Recon Paramedic)
             "O_recon_exp_F",                               // Explosius (Recon Demo Specialist)
             "O_recon_JTAC_F"                               // JTAC (Recon JTAC)
-            ];
+        ];
         _Unit_Pool_V = [
             "O_Quadbike_01_F",                             // Quad
             "O_MRAP_02_F"                                  // Ifrit
-            ];
+        ];
         _Unit_Pool_T = [];
         _Unit_Pool_A = [
             "O_Heli_Light_02_F",                           // PO-30 Orca
             "O_Heli_Light_02_unarmed_F"                    // PO-30 Orca (sense armament)
-            ];
+        ];
     };
     
     //===================================================================================================//
@@ -146,15 +146,15 @@ switch (_TypNumber) do
             "O_soldierU_repair_F",                         // Mecànic (Repair Specialist)
             "O_soldierU_M_F",                              // Tirador (Marksman)
             "O_medicU_F"                                   // Metge
-            ];
+        ];
         _Unit_Pool_V = [
             "O_MRAP_02_F",                                 // Ifrit
             "O_MRAP_02_hmg_F"                              // Ifrit HMG
-            ];
+        ];
         _Unit_Pool_T = [
             "O_APC_Tracked_02_cannon_F",                   // BTR-K Kamysh
             "O_APC_Wheeled_02_rcws_F"                      // MSE-3 Marid
-            ];
+        ];
         _Unit_Pool_A = ["O_Heli_Light_02_F"];              // PO-30 Orca
     };
     
@@ -167,18 +167,17 @@ switch (_TypNumber) do
             "O_diver_F",                                   // Bussejador (Diver)
             "O_diver_F",                                   // Bussejador (Diver)
             "O_diver_exp_F"                                // Bussejador especialista en explosius (Diver Explosive Specialist)
-            ];
+        ];
         _Unit_Pool_V = [
             "O_SDV_01_F",                                  // SDV
             "O_Boat_Transport_01_F",                       // Bot inflable d'assalt (Assault Boat)
             "O_Boat_Armed_01_hmg_F"                        // Bot HMG (Speedboat HMG)
-            ];
+        ];
         _Unit_Pool_T = [
             "O_SDV_01_F",                                  // SDV
             "O_Boat_Transport_01_F",                       // Bot inflable d'assalt (Assault Boat)
             "O_Boat_Armed_01_hmg_F"                        // Bot HMG (Speedboat HMG)
-            ];
-        
+        ];
         _Unit_Pool_A = [];
     };
     
@@ -206,7 +205,7 @@ switch (_TypNumber) do
             "B_spotter_F",                                 // Observador (Spotter)
             "B_sniper_F",                                  // Franctirador (Sniper)
             "B_medic_F"                                    // Metge
-            ];
+        ];
         _Unit_Pool_V = [
             "B_Quadbike_01_F",                             // Quad
             "B_MRAP_01_F",                                 // Hunter
@@ -218,7 +217,7 @@ switch (_TypNumber) do
             "B_Truck_01_repair_F",                         // HEMTT amb kit de reparació
             "B_Truck_01_fuel_F",                           // HEMTT cisterna
             "B_Truck_01_medical_F"                         // HEMTT mèdic
-            ];
+        ];
         _Unit_Pool_T = [
             "B_APC_Wheeled_01_cannon_F",                   // AMV-7 Marshall
             "B_APC_Tracked_01_AA_F",                       // IFV-6a Cheetah
@@ -227,14 +226,14 @@ switch (_TypNumber) do
             "B_MBT_01_cannon_F",                           // M2A1 Slammer
             "B_MBT_01_mlrs_F",                             // M5 Sandstorm MLRS
             "B_MBT_01_TUSK_F"                              // M2A4 Slammer UP
-            ];
+        ];
         _Unit_Pool_A = [
             "B_Heli_Attack_01_F",                          // AH-99 Blackfoot
             "B_Heli_Transport_01_F",                       // UH-80 Ghost Hawk
             "B_Heli_Transport_01_camo_F",                  // UH-80 Ghost Hawk (Camo)
             "B_Heli_Light_01_F",                           // AH-9 Pawnee
             "B_Heli_Light_01_unarmed_F"                    // MH-9 Hummingbird
-            ];
+        ];
     };
 
     //===================================================================================================//
@@ -249,16 +248,16 @@ switch (_TypNumber) do
             "B_recon_medic_F",                             // Metge (Recon Paramedic)
             "B_recon_exp_F",                               // Explosius (Recon Demo Specialist)
             "B_recon_JTAC_F"                               // JTAC (Recon JTAC)
-            ];
+        ];
         _Unit_Pool_V = [
             "B_Quadbike_01_F",                             // Quad
             "B_MRAP_01_F"                                  // Hunter
-            ];
+        ];
         _Unit_Pool_T = [];
         _Unit_Pool_A = [
             "B_Heli_Light_01_F",                           // AH-9 Pawnee
             "B_Heli_Light_01_unarmed_F"                    // MH-9 Hummingbird
-            ];
+        ];
     };
     
     //===================================================================================================//
@@ -270,17 +269,17 @@ switch (_TypNumber) do
             "B_diver_F",                                   // Bussejador (Diver)
             "B_diver_F",                                   // Bussejador (Diver)
             "B_diver_exp_F"                                // Bussejador especialista en explosius (Diver Explosive Specialist)
-            ];
+        ];
         _Unit_Pool_V = [
             "B_SDV_01_F",                                  // SDV
             "B_Boat_Transport_01_F",                       // Bot inflable d'assalt (Assault Boat)
             "B_Boat_Armed_01_minigun_F"                    // Bot amb metralladora (Speedboat Minigum)
-            ];
+        ];
         _Unit_Pool_T = [
             "B_SDV_01_F",                                  // SDV
             "B_Boat_Transport_01_F",                       // Bot inflable d'assalt (Assault Boat)
             "B_Boat_Armed_01_minigun_F"                    // Bot amb metralladora (Speedboat Minigum)
-            ];
+        ];
         _Unit_Pool_A = [];
     };
     
@@ -308,7 +307,7 @@ switch (_TypNumber) do
             "I_spotter_F",                                 // Observador (Spotter)
             "I_sniper_F",                                  // Franctirador (Sniper)
             "I_medic_F"                                    // Metge
-            ];
+        ];
         _Unit_Pool_V = [
             "I_Quadbike_01_F",                             // Quad
             "I_MRAP_03_F",                                 // Strider
@@ -320,16 +319,16 @@ switch (_TypNumber) do
             "I_Truck_02_box_F",                            // Zamak amb kit de reparació
             "I_Truck_02_fuel_F",                           // Zamak cisterna
             "I_Truck_02_medical_F"                         // Zamak mèdic
-            ];
+        ];
         _Unit_Pool_T = [
             "I_APC_Wheeled_03_cannon_F",                   // AFV-4 Gorgon
             "I_APC_Tracked_03_cannon_F",                   // FV-720 Mora
             "I_MBT_03_cannon_F"                            // MBT-52 Kuma
-            ];
+        ];
         _Unit_Pool_A = [
             "I_Heli_Light_03_F",                           // WY-55 Helicat
             "I_Heli_Light_03_unarmed_F"                    // WY-55 Helicat (sense armament)
-            ];
+        ];
     };
 
     //===================================================================================================//
@@ -344,16 +343,16 @@ switch (_TypNumber) do
             "I_recon_medic_F",                             // Metge (Recon Paramedic)
             "I_recon_exp_F",                               // Explosius (Recon Demo Specialist)
             "I_recon_JTAC_F"                               // JTAC (Recon JTAC)
-            ];
+        ];
         _Unit_Pool_V = [
             "I_Quadbike_01_F",                             // Quad
-            "I_MRAP_03_F",                                 // Hunter
-            ];
+            "I_MRAP_03_F"                                  // Hunter
+        ];
         _Unit_Pool_T = [];
         _Unit_Pool_A = [
             "I_Heli_Light_03_F",                           // WY-55 Helicat
             "I_Heli_Light_03_unarmed_F"                    // WY-55 Helicat (sense armament)
-            ];
+        ];
     };
     
     //===================================================================================================//
@@ -365,17 +364,17 @@ switch (_TypNumber) do
             "I_diver_F",                                   // Bussejador (Diver)
             "I_diver_F",                                   // Bussejador (Diver)
             "I_diver_exp_F"                                // Bussejador especialista en explosius (Diver Explosive Specialist)
-            ];
+        ];
         _Unit_Pool_V = [
             "I_SDV_01_F",                                  // SDV
             "I_Boat_Transport_01_F",                       // Bot inflable d'assalt (Assault Boat)
             "I_Boat_Armed_01_minigun_F"                    // Bot amb metralladora (Speedboat Minigum)
-            ];
+        ];
         _Unit_Pool_T = [
             "I_SDV_01_F",                                  // SDV
             "I_Boat_Transport_01_F",                       // Bot inflable d'assalt (Assault Boat)
             "I_Boat_Armed_01_minigun_F"                    // Bot amb metralladora (Speedboat Minigum)
-            ];
+        ];
         _Unit_Pool_A = [];
     };
 
@@ -411,7 +410,7 @@ switch (_TypNumber) do
             "C_Quadbike_01_F",                             // Quad
             "C_Offroad_01_F",                              // 4x4
             "C_SUV_01_F"                                   // VW
-            ];
+        ];
         _Unit_Pool_T = [
             "C_Van_01_box_F",                              // Furgoneta amb caixa
             "C_Van_01_transport_F",                        // Furgoneta de transport
@@ -421,7 +420,7 @@ switch (_TypNumber) do
             "C_Quadbike_01_F",                             // Quad
             "C_Offroad_01_F",                              // 4x4
             "C_SUV_01_F"                                   // VW
-            ];
+        ];
         _Unit_Pool_A = [];
     };
     
@@ -493,7 +492,7 @@ switch (_TypNumber) do
             "C_Quadbike_01_F",                             // Quad
             "C_Offroad_01_F",                              // 4x4
             "C_SUV_01_F"                                   // VW
-            ];
+        ];
         _Unit_Pool_T = [
             "C_Van_01_box_F",                              // Furgoneta amb caixa
             "C_Van_01_transport_F",                        // Furgoneta de transport
@@ -503,7 +502,7 @@ switch (_TypNumber) do
             "C_Quadbike_01_F",                             // Quad
             "C_Offroad_01_F",                              // 4x4
             "C_SUV_01_F"                                   // VW
-            ];
+        ];
         _Unit_Pool_A = [
             "C_Heli_Light_01_civil_F",                     // M900
             "C_Heli_Light_01_blue_F"                       // M900 (blau)
@@ -527,7 +526,7 @@ switch (_TypNumber) do
             "C_man_shorts_3_F_afro",                       // Civil amb shorts
             "C_man_p_shorts_1_F_afro",                     // Fugitiu amb shorts
             "C_man_p_beggar_F_afro",                       // Pidolaire
-            "C_man_p_fugitive_F_afro",                     // Fugitiu
+            "C_man_p_fugitive_F_afro"                      // Fugitiu
         ];
         _Unit_Pool_V = [
             "C_Van_01_box_F",                              // Furgoneta amb caixa
@@ -538,7 +537,7 @@ switch (_TypNumber) do
             "C_Quadbike_01_F",                             // Quad
             "C_Offroad_01_F",                              // 4x4
             "C_SUV_01_F"                                   // VW
-            ];
+        ];
         _Unit_Pool_T = [
             "C_Van_01_box_F",                              // Furgoneta amb caixa
             "C_Van_01_transport_F",                        // Furgoneta de transport
@@ -548,7 +547,7 @@ switch (_TypNumber) do
             "C_Quadbike_01_F",                             // Quad
             "C_Offroad_01_F",                              // 4x4
             "C_SUV_01_F"                                   // VW
-            ];
+        ];
         _Unit_Pool_A = [
             "C_Heli_Light_01_civil_F",                     // M900
             "C_Heli_Light_01_blue_F"                       // M900 (blau)
@@ -572,7 +571,7 @@ switch (_TypNumber) do
             "C_man_shorts_3_F_asia",                       // Civil amb shorts
             "C_man_p_shorts_1_F_asia",                     // Fugitiu amb shorts
             "C_man_p_beggar_F_asia",                       // Pidolaire
-            "C_man_p_fugitive_F_asia",                     // Fugitiu
+            "C_man_p_fugitive_F_asia"                      // Fugitiu
         ];
         _Unit_Pool_V = [
             "C_Van_01_box_F",                              // Furgoneta amb caixa
@@ -583,7 +582,7 @@ switch (_TypNumber) do
             "C_Quadbike_01_F",                             // Quad
             "C_Offroad_01_F",                              // 4x4
             "C_SUV_01_F"                                   // VW
-            ];
+        ];
         _Unit_Pool_T = [
             "C_Van_01_box_F",                              // Furgoneta amb caixa
             "C_Van_01_transport_F",                        // Furgoneta de transport
@@ -632,7 +631,7 @@ switch (_TypNumber) do
             "C_Quadbike_01_F",                             // Quad
             "C_Offroad_01_F",                              // 4x4
             "C_SUV_01_F"                                   // VW
-            ];
+        ];
         _Unit_Pool_T = [
             "C_Van_01_box_F",                              // Furgoneta amb caixa
             "C_Van_01_transport_F",                        // Furgoneta de transport
@@ -642,7 +641,7 @@ switch (_TypNumber) do
             "C_Quadbike_01_F",                             // Quad
             "C_Offroad_01_F",                              // 4x4
             "C_SUV_01_F"                                   // VW
-            ];
+        ];
         _Unit_Pool_A = [
             "C_Heli_Light_01_civil_F",                     // M900
             "C_Heli_Light_01_blue_F"                       // M900 (blau)
@@ -666,13 +665,13 @@ switch (_TypNumber) do
             "O_G_engineer_F",                                    // Enginyer (Engineer)
             "O_G_soldier_M_F",                                   // Tirador (Marksman)
             "O_G_medic_F"                                        // Metge
-            ];
+        ];
         _Unit_Pool_V = [
             "O_G_Quadbike_01_F",                                 // Quad
             "O_G_Offroad_01_F",                                  // 4x4
             "O_G_Offroad_01_armed_F",                            // 4x4 HMG
             "B_G_Offroad_01_repair_F"                            // 4x4 reparació
-            ];
+        ];
         _Unit_Pool_T = [];
         _Unit_Pool_A = [];
     };
@@ -694,13 +693,13 @@ switch (_TypNumber) do
             "B_G_engineer_F",                                    // Enginyer (Engineer)
             "B_G_soldier_M_F",                                   // Tirador (Marksman)
             "B_G_medic_F"                                        // Metge
-            ];
+        ];
         _Unit_Pool_V = [
             "B_G_Quadbike_01_F",                                 // Quad
             "B_G_Offroad_01_F",                                  // 4x4
             "B_G_Offroad_01_armed_F",                            // 4x4 HMG
             "B_G_Offroad_01_repair_F"                            // 4x4 reparació
-            ];
+        ];
         _Unit_Pool_T = [];
         _Unit_Pool_A = [];
     };
@@ -722,13 +721,13 @@ switch (_TypNumber) do
             "I_G_engineer_F",                                    // Enginyer (Engineer)
             "I_G_soldier_M_F",                                   // Tirador (Marksman)
             "I_G_medic_F"                                        // Metge
-            ];
+        ];
         _Unit_Pool_V = [
             "I_G_Quadbike_01_F",                                 // Quad
             "I_G_Offroad_01_F",                                  // 4x4
             "I_G_Offroad_01_armed_F",                            // 4x4 HMG
             "I_G_Offroad_01_repair_F"                            // 4x4 reparació
-            ];
+        ];
         _Unit_Pool_T = [];
         _Unit_Pool_A = [];
     };
@@ -754,12 +753,12 @@ switch (_TypNumber) do
             "rhs_vdv_efreitor",
             "rhs_vdv_marksman",                            // Tirador (Marksman)
             "rhs_vdv_medic"                                // Metge
-            ];
+        ];
         _Unit_Pool_V = [
             "rhs_tigr_ffv_vdv",
             "rhs_uaz_vdv",
             "RHS_Ural_Open_VDV_01"
-            ];
+        ];
         _Unit_Pool_T = [
             "rhs_sprut_vdv",                               // Tanc
             "rhs_bmd1p",
@@ -770,13 +769,13 @@ switch (_TypNumber) do
             "rhs_bmp2k_vdv",
             "rhs_btr80_vdv",
             "rhs_btr80a_vdv"
-            ];
+        ];
         _Unit_Pool_A = [
             "RHS_Mi8MTV3_vdv",
             "RHS_Mi8MTV3_vdv",
             "RHS_Mi8MTV3_UPK23_vdv",
             "RHS_Mi24V_UPK23_vdv"
-            ];
+        ];
     };
     
     //===================================================================================================//
@@ -785,7 +784,7 @@ switch (_TypNumber) do
     case 18: {
         _Unit_Pool_S = [
             "rhs_msv_combatcrew","rhs_pilot","rhs_msv_sergeant",   // Tripulació, Pilot d'helicòpter i líder d'esquadra
-        "rhs_msv_junior_sergeant",                     // Líder d'equip de foc (Fire Team Leader)
+            "rhs_msv_junior_sergeant",                     // Líder d'equip de foc (Fire Team Leader)
             "rhs_msv_rifleman",                            // Fuseller (Rifleman)
             "rhs_msv_grenadier",                           // Granader (Grenadier)
             "rhs_msv_grenadier_rpg",                       // Granader RPG (Grenadier RPG)
@@ -800,12 +799,12 @@ switch (_TypNumber) do
             "rhs_msv_efreitor",
             "rhs_msv_marksman",                            // Tirador (Marksman)
             "rhs_msv_medic"                                // Metge
-            ];
+        ];
         _Unit_Pool_V = [
             "rhs_tigr_msv",
             "RHS_UAZ_MSV_01",
             "rhs_uaz_open_MSV_01",
-            "RHS_BM21_MSV_01"
+            "RHS_BM21_MSV_01",
             "rhs_gaz66_msv",
             "rhs_gaz66o_msv",
             "rhs_gaz66_r142_msv",
@@ -813,7 +812,7 @@ switch (_TypNumber) do
             "RHS_Ural_MSV_01",
             "rhs_gaz66_repair_msv",
             "RHS_Ural_Fuel_MSV_01"
-            ];
+        ];
         _Unit_Pool_T = [
             "rhs_btr60_msv",
             "rhs_btr70_msv",
@@ -829,7 +828,7 @@ switch (_TypNumber) do
             "rhs_bmp2d_msv",
             "rhs_bmp2k_msv",
             "rhs_prp3_msv"
-            ];
+        ];
         _Unit_Pool_A = [];
     };
     
@@ -855,7 +854,7 @@ switch (_TypNumber) do
             "rhsusf_army_ocp_marksman",                    // Tirador (Marksman)
             "rhsusf_army_ocp_sniper",                      // Franctirador (Sniper)
             "rhsusf_army_ocp_medic"                        // Metge
-            ];
+        ];
         _Unit_Pool_V = [
             "rhsusf_m1025_w",                              // HMMWV sense armament
             "rhsusf_m1025_w_mk19",                         // HMMWV amb mk19
@@ -866,7 +865,7 @@ switch (_TypNumber) do
             "rhsusf_m998_w_4dr",
             "rhsusf_m998_w_4dr_fulltop",
             "rhsusf_m998_w_4dr_halftop"
-            ];
+        ];
         _Unit_Pool_T = [
             "rhs_m113_usarmy",                             // APC M113A3
             "rhs_m2a2_wd",                                 // IPC
@@ -879,7 +878,7 @@ switch (_TypNumber) do
             "rhsusf_m1a2sep1wd_usarmy",                    // Tanc
             "rhsusf_m1a2sep1tuskiwd_usarmy",               // Tanc
             "rhsusf_m109_usarmy"                           // Artilleria
-            ];
+        ];
         _Unit_Pool_A = [
             "RHS_AH64D_wd",                                // Boeing AH-64 Apache Longbow (Multi-Role)
             "RHS_AH64D_wd_GS",                             // Boeing AH-64 Apache Longbow (Ground-Supresion)
@@ -888,7 +887,7 @@ switch (_TypNumber) do
             "RHS_UH60M",                                   // Sikorsky UH-60 Black Hawk
             "RHS_UH60M_MEV2",                              // Sikorsky UH-60 Black Hawk MEV
             "RHS_UH60M_MEV"                                // Sikorsky UH-60 Black Hawk MEV (ESSS)
-            ];
+        ];
     };
     
     //===================================================================================================//
@@ -913,7 +912,7 @@ switch (_TypNumber) do
             "rhsusf_army_ucp_marksman",                    // Tirador (Marksman)
             "rhsusf_army_ucp_sniper",                      // Franctirador (Sniper)
             "rhsusf_army_ucp_medic"                        // Metge
-            ];
+        ];
         _Unit_Pool_V = [
             "rhsusf_m1025_d",                              // HMMWV sense armament
             "rhsusf_m1025_d_Mk19",                         // HMMWV amb mk19
@@ -924,7 +923,7 @@ switch (_TypNumber) do
             "rhsusf_m998_d_4dr",
             "rhsusf_m998_d_4dr_fulltop",
             "rhsusf_m998_d_4dr_halftop"
-            ];
+        ];
         _Unit_Pool_T = [
             "rhs_m113d_usarmy",                            // APC M113A3
             "rhs_m2a2",                                    // IPC
@@ -937,7 +936,7 @@ switch (_TypNumber) do
             "rhsusf_m1a2sep1d_usarmy",                     // Tanc
             "rhsusf_m1a2sep1tuskid_usarmy",                // Tanc
             "rhsusf_m109_usarmy"                           // Artilleria
-            ];
+        ];
         _Unit_Pool_A = [
             "RHS_AH64D",                                   // Boeing AH-64 Apache Longbow (Multi-Role)
             "RHS_AH64D_GS",                                // Boeing AH-64 Apache Longbow (Ground-Supresion)
@@ -946,7 +945,7 @@ switch (_TypNumber) do
             "RHS_UH60M_d",                                 // Sikorsky UH-60 Black Hawk
             "RHS_UH60M_MEV2_d",                            // Sikorsky UH-60 Black Hawk MEV
             "RHS_UH60M_MEV_d"                              // Sikorsky UH-60 Black Hawk MEV (ESSS)
-            ];
+        ];
     };
     
     //===================================================================================================//
@@ -972,7 +971,7 @@ switch (_TypNumber) do
             "rhsusf_usmc_marpat_wd_sniper",                // Franctirador (Sniper)
             "rhsusf_usmc_marpat_wd_spotter",               // Observador (Spotter)
             "rhsusf_usmc_marpat_wd_medic"                  // Metge
-            ];
+        ];
         _Unit_Pool_V = [
             "rhsusf_m1025_w_s",                            // HMMWV sense armament
             "rhsusf_m1025_w_s_Mk19",                       // HMMWV amb mk19
@@ -985,11 +984,11 @@ switch (_TypNumber) do
             "rhsusf_m998_w_s_4dr_halftop",
             "rhsusf_rg33_usmc_wd",
             "rhsusf_rg33_m2_usmc_wd"
-            ];
+        ];
         _Unit_Pool_T = [
             "rhsusf_m1a1fep_wd",
             "rhsusf_m1a1fep_od"
-            ];
+        ];
         _Unit_Pool_A = [
             "RHS_AH1Z_wd",                                 // Bell AH-1Z Viper (Multi-Role)
             "RHS_AH1Z_wd_GS",                              // Bell AH-1Z Viper (Ground-Suppression)
@@ -997,7 +996,7 @@ switch (_TypNumber) do
             "RHS_UH1Y_UNARMED",                            // UH1Y (Unarmed)
             "RHS_UH1Y_FFAR",                               // UH1Y FFAR
             "RHS_UH1Y"                                     // UH1Y FFAR/MG
-            ];
+        ];
     };
     
     //===================================================================================================//
@@ -1023,7 +1022,7 @@ switch (_TypNumber) do
             "rhsusf_usmc_marpat_d_sniper",                 // Franctirador (Sniper)
             "rhsusf_usmc_marpat_d_spotter",                // Observador (Spotter)
             "rhsusf_usmc_marpat_d_medic"                   // Metge
-            ];
+        ];
         _Unit_Pool_V = [
             "rhsusf_m1025_d_s",                            // HMMWV sense armament
             "rhsusf_m1025_d_s_Mk19",                       // HMMWV amb mk19
@@ -1036,7 +1035,7 @@ switch (_TypNumber) do
             "rhsusf_m998_d_s_4dr_halftop",
             "rhsusf_rg33_usmc_d",
             "rhsusf_rg33_m2_usmc_d"
-            ];
+        ];
         _Unit_Pool_T = ["rhsusf_m1a1fep_d"];
         _Unit_Pool_A = [
             "RHS_AH1Z",                                    // Bell AH-1Z Viper (Multi-Role)
@@ -1045,7 +1044,7 @@ switch (_TypNumber) do
             "RHS_UH1Y_UNARMED_d",                          // UH1Y (Unarmed)
             "RHS_UH1Y_FFAR_d",                             // UH1Y FFAR
             "RHS_UH1Y_d"                                   // UH1Y FFAR/MG
-            ];
+        ];
     };
   
     //===================================================================================================//
