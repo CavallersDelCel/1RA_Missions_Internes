@@ -130,7 +130,7 @@ if (_faccioUnitat == "rhs_faction_insurgents") exitWith {
 
 // Briefing per la facció russa "Russian Airborne Troops"
 if (_faccioUnitat == "rhs_faction_vdv" ) exitWith {
-    #include "cc_intro_rhs_vdv.sqf"
+    #include "cc_intro_rhs_faction_vdv.sqf"
   
       // DEBUG OUTPUT
     if ( cc_param_debugOutput == 1 ) then {
@@ -140,7 +140,7 @@ if (_faccioUnitat == "rhs_faction_vdv" ) exitWith {
 
 // Briefing per la facció russa "Soviet Air Defense Forces"
 if (_faccioUnitat == "rhs_faction_vpvo" ) exitWith {
-    #include "cc_intro_rhs_vpvo.sqf"
+    #include "cc_intro_rhs_faction_vpvo.sqf"
     
     // DEBUG OUTPUT
     if ( cc_param_debugOutput == 1 ) then {
