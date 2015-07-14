@@ -739,7 +739,7 @@ switch (_TypNumber) do
     case 17: {
         _Unit_Pool_S = [
             "rhs_vdv_combatcrew","rhs_pilot","rhs_vdv_sergeant",   // Tripulació, Pilot d'helicòpter i líder d'esquadra
-	    "rhs_vdv_junior_sergeant",                     // Líder d'equip de foc (Fire Team Leader)
+        "rhs_vdv_junior_sergeant",                     // Líder d'equip de foc (Fire Team Leader)
             "rhs_vdv_rifleman",                            // Fuseller (Rifleman)
             "rhs_vdv_grenadier",                           // Granader (Grenadier)
             "rhs_vdv_grenadier_rpg",                       // Granader RPG (Grenadier RPG)
@@ -791,7 +791,7 @@ switch (_TypNumber) do
     case 18: {
         _Unit_Pool_S = [
             "rhs_msv_combatcrew","rhs_pilot","rhs_msv_sergeant",   // Tripulació, Pilot d'helicòpter i líder d'esquadra
-	    "rhs_msv_junior_sergeant",                     // Líder d'equip de foc (Fire Team Leader)
+        "rhs_msv_junior_sergeant",                     // Líder d'equip de foc (Fire Team Leader)
             "rhs_msv_rifleman",                            // Fuseller (Rifleman)
             "rhs_msv_grenadier",                           // Granader (Grenadier)
             "rhs_msv_grenadier_rpg",                       // Granader RPG (Grenadier RPG)
@@ -861,32 +861,37 @@ switch (_TypNumber) do
             "rhsusf_army_ocp_medic"                        // Metge
             ];
         _Unit_Pool_V = [
-            "B_Quadbike_01_F",                             // Quad
-            "B_MRAP_01_F",                                 // Hunter
-            "B_MRAP_01_gmg_F",                             // Hunter GMG
-            "B_MRAP_01_hmg_F",                             // Hunter HMG
-            "B_Truck_01_covered_F",                        // HEMTT covert
-            "B_Truck_01_Ammo_F",                           // HEMTT amb munició
-            "B_Truck_01_transport_F",                      // HEMTT transport
-            "B_Truck_01_repair_F",                         // HEMTT amb kit de reparació
-            "B_Truck_01_fuel_F",                           // HEMTT cisterna
-            "B_Truck_01_medical_F"                         // HEMTT mèdic
+            "rhsusf_m1025_w",                              // HMMWV sense armament
+            "rhsusf_m1025_w_mk19",                         // HMMWV amb mk19
+            "rhsusf_m1025_w_m2",                           // HMMWV amb m2
+            "rhsusf_m998_w_2dr",
+            "rhsusf_m998_w_2dr_fulltop",
+            "rhsusf_m998_w_2dr_halftop",
+            "rhsusf_m998_w_4dr",
+            "rhsusf_m998_w_4dr_fulltop",
+            "rhsusf_m998_w_4dr_halftop"
             ];
         _Unit_Pool_T = [
-            "B_APC_Wheeled_01_cannon_F",                   // AMV-7 Marshall
-            "B_APC_Tracked_01_AA_F",                       // IFV-6a Cheetah
-            "B_APC_Tracked_01_rcws_F",                     // IFV-6c Panther
-            "B_MBT_01_arty_F",                             // M4 Scorche
-            "B_MBT_01_cannon_F",                           // M2A1 Slammer
-            "B_MBT_01_mlrs_F",                             // M5 Sandstorm MLRS
-            "B_MBT_01_TUSK_F"                              // M2A4 Slammer UP
+            "rhs_m113_usarmy",                             // APC M113A3
+            "rhs_m2a2_wd",                                 // IPC
+            "rhs_m2a2_buski_wd",                           // IPC
+            "rhs_m2a3_buski_wd",                           // IPC
+            "rhs_m2a3_wd",                                 // IPC
+            "rhs_m6_wd",                                   // IPC
+            "rhsusf_m1a1aimwd_usarmy",                     // Tanc
+            "rhsusf_m1a1aim_tuski_wd",                     // Tanc
+            "rhsusf_m1a2sep1wd_usarmy",                    // Tanc
+            "rhsusf_m1a2sep1tuskiwd_usarmy",               // Tanc
+            "rhsusf_m109_usarmy"                           // Artilleria
             ];
         _Unit_Pool_A = [
-            "B_Heli_Attack_01_F",                          // AH-99 Blackfoot
-            "B_Heli_Transport_01_F",                       // UH-80 Ghost Hawk
-            "B_Heli_Transport_01_camo_F",                  // UH-80 Ghost Hawk (Camo)
-            "B_Heli_Light_01_F",                           // AH-9 Pawnee
-            "B_Heli_Light_01_unarmed_F"                    // MH-9 Hummingbird
+            "RHS_AH64D_wd",                                // Boeing AH-64 Apache Longbow (Multi-Role)
+            "RHS_AH64D_wd_GS",                             // Boeing AH-64 Apache Longbow (Ground-Supresion)
+            "RHS_AH64D_wd_CS",                             // Boeing AH-64 Apache Longbow (Close-Support)
+            "RHS_AH64D_wd_AA",                             // Boeing AH-64 Apache Longbow (AA)
+            "RHS_UH60M",                                   // Sikorsky UH-60 Black Hawk
+            "RHS_UH60M_MEV2",                              // Sikorsky UH-60 Black Hawk MEV
+            "RHS_UH60M_MEV"                                // Sikorsky UH-60 Black Hawk MEV (ESSS)
             ];
     };
     
@@ -914,32 +919,37 @@ switch (_TypNumber) do
             "rhsusf_army_ucp_medic"                        // Metge
             ];
         _Unit_Pool_V = [
-            "B_Quadbike_01_F",                             // Quad
-            "B_MRAP_01_F",                                 // Hunter
-            "B_MRAP_01_gmg_F",                             // Hunter GMG
-            "B_MRAP_01_hmg_F",                             // Hunter HMG
-            "B_Truck_01_covered_F",                        // HEMTT covert
-            "B_Truck_01_Ammo_F",                           // HEMTT amb munició
-            "B_Truck_01_transport_F",                      // HEMTT transport
-            "B_Truck_01_repair_F",                         // HEMTT amb kit de reparació
-            "B_Truck_01_fuel_F",                           // HEMTT cisterna
-            "B_Truck_01_medical_F"                         // HEMTT mèdic
+            "rhsusf_m1025_d",                              // HMMWV sense armament
+            "rhsusf_m1025_d_Mk19",                         // HMMWV amb mk19
+            "rhsusf_m1025_d_m2",                           // HMMWV amb m2
+            "rhsusf_m998_d_2dr",
+            "rhsusf_m998_d_2dr_fulltop",
+            "rhsusf_m998_d_2dr_halftop",
+            "rhsusf_m998_d_4dr",
+            "rhsusf_m998_d_4dr_fulltop",
+            "rhsusf_m998_d_4dr_halftop"
             ];
         _Unit_Pool_T = [
-            "B_APC_Wheeled_01_cannon_F",                   // AMV-7 Marshall
-            "B_APC_Tracked_01_AA_F",                       // IFV-6a Cheetah
-            "B_APC_Tracked_01_rcws_F",                     // IFV-6c Panther
-            "B_MBT_01_arty_F",                             // M4 Scorche
-            "B_MBT_01_cannon_F",                           // M2A1 Slammer
-            "B_MBT_01_mlrs_F",                             // M5 Sandstorm MLRS
-            "B_MBT_01_TUSK_F"                              // M2A4 Slammer UP
+            "rhs_m113d_usarmy",                            // APC M113A3
+            "rhs_m2a2",                                    // IPC
+            "rhs_m2a2_buski",                              // IPC
+            "rhs_m2a3_buski",                              // IPC
+            "rhs_m2a3",                                    // IPC
+            "rhs_m6",                                      // IPC
+            "rhsusf_m1a1aimd_usarmy",                      // Tanc
+            "rhsusf_m1a1aim_tuski_d",                      // Tanc
+            "rhsusf_m1a2sep1d_usarmy",                     // Tanc
+            "rhsusf_m1a2sep1tuskid_usarmy",                // Tanc
+            "rhsusf_m109_usarmy"                           // Artilleria
             ];
         _Unit_Pool_A = [
-            "B_Heli_Attack_01_F",                          // AH-99 Blackfoot
-            "B_Heli_Transport_01_F",                       // UH-80 Ghost Hawk
-            "B_Heli_Transport_01_camo_F",                  // UH-80 Ghost Hawk (Camo)
-            "B_Heli_Light_01_F",                           // AH-9 Pawnee
-            "B_Heli_Light_01_unarmed_F"                    // MH-9 Hummingbird
+            "RHS_AH64D",                                   // Boeing AH-64 Apache Longbow (Multi-Role)
+            "RHS_AH64D_GS",                                // Boeing AH-64 Apache Longbow (Ground-Supresion)
+            "RHS_AH64D_CS",                                // Boeing AH-64 Apache Longbow (Close-Support)
+            "RHS_AH64d_AA",                                // Boeing AH-64 Apache Longbow (AA)
+            "RHS_UH60M_d",                                 // Sikorsky UH-60 Black Hawk
+            "RHS_UH60M_MEV2_d",                            // Sikorsky UH-60 Black Hawk MEV
+            "RHS_UH60M_MEV_d"                              // Sikorsky UH-60 Black Hawk MEV (ESSS)
             ];
     };
     
@@ -968,32 +978,29 @@ switch (_TypNumber) do
             "rhsusf_usmc_marpat_wd_medic"                  // Metge
             ];
         _Unit_Pool_V = [
-            "B_Quadbike_01_F",                             // Quad
-            "B_MRAP_01_F",                                 // Hunter
-            "B_MRAP_01_gmg_F",                             // Hunter GMG
-            "B_MRAP_01_hmg_F",                             // Hunter HMG
-            "B_Truck_01_covered_F",                        // HEMTT covert
-            "B_Truck_01_Ammo_F",                           // HEMTT amb munició
-            "B_Truck_01_transport_F",                      // HEMTT transport
-            "B_Truck_01_repair_F",                         // HEMTT amb kit de reparació
-            "B_Truck_01_fuel_F",                           // HEMTT cisterna
-            "B_Truck_01_medical_F"                         // HEMTT mèdic
+            "rhsusf_m1025_w_s",                            // HMMWV sense armament
+            "rhsusf_m1025_w_s_Mk19",                       // HMMWV amb mk19
+            "rhsusf_m1025_w_s_m2",                         // HMMWV amb m2
+            "rhsusf_m998_w_s_2dr",
+            "rhsusf_m998_w_s_2dr_fulltop",
+            "rhsusf_m998_w_s_2dr_halftop",
+            "rhsusf_m998_w_s_4dr",
+            "rhsusf_m998_w_s_4dr_fulltop",
+            "rhsusf_m998_w_s_4dr_halftop",
+            "rhsusf_rg33_usmc_wd",
+            "rhsusf_rg33_m2_usmc_wd"
             ];
         _Unit_Pool_T = [
-            "B_APC_Wheeled_01_cannon_F",                   // AMV-7 Marshall
-            "B_APC_Tracked_01_AA_F",                       // IFV-6a Cheetah
-            "B_APC_Tracked_01_rcws_F",                     // IFV-6c Panther
-            "B_MBT_01_arty_F",                             // M4 Scorche
-            "B_MBT_01_cannon_F",                           // M2A1 Slammer
-            "B_MBT_01_mlrs_F",                             // M5 Sandstorm MLRS
-            "B_MBT_01_TUSK_F"                              // M2A4 Slammer UP
+            "rhsusf_m1a1fep_wd",
+            "rhsusf_m1a1fep_od"
             ];
         _Unit_Pool_A = [
-            "B_Heli_Attack_01_F",                          // AH-99 Blackfoot
-            "B_Heli_Transport_01_F",                       // UH-80 Ghost Hawk
-            "B_Heli_Transport_01_camo_F",                  // UH-80 Ghost Hawk (Camo)
-            "B_Heli_Light_01_F",                           // AH-9 Pawnee
-            "B_Heli_Light_01_unarmed_F"                    // MH-9 Hummingbird
+            "RHS_AH1Z_wd",                                 // Bell AH-1Z Viper (Multi-Role)
+            "RHS_AH1Z_wd_GS",                              // Bell AH-1Z Viper (Ground-Suppression)
+            "RHS_AH1Z_wd_CS",                              // Bell AH-1Z Viper (Close-Support)
+            "RHS_UH1Y_UNARMED",                            // UH1Y (Unarmed)
+            "RHS_UH1Y_FFAR",                               // UH1Y FFAR
+            "RHS_UH1Y"                                     // UH1Y FFAR/MG
             ];
     };
     
@@ -1022,32 +1029,26 @@ switch (_TypNumber) do
             "rhsusf_usmc_marpat_d_medic"                   // Metge
             ];
         _Unit_Pool_V = [
-            "B_Quadbike_01_F",                             // Quad
-            "B_MRAP_01_F",                                 // Hunter
-            "B_MRAP_01_gmg_F",                             // Hunter GMG
-            "B_MRAP_01_hmg_F",                             // Hunter HMG
-            "B_Truck_01_covered_F",                        // HEMTT covert
-            "B_Truck_01_Ammo_F",                           // HEMTT amb munició
-            "B_Truck_01_transport_F",                      // HEMTT transport
-            "B_Truck_01_repair_F",                         // HEMTT amb kit de reparació
-            "B_Truck_01_fuel_F",                           // HEMTT cisterna
-            "B_Truck_01_medical_F"                         // HEMTT mèdic
+            "rhsusf_m1025_d_s",                            // HMMWV sense armament
+            "rhsusf_m1025_d_s_Mk19",                       // HMMWV amb mk19
+            "rhsusf_m1025_d_s_m2",                         // HMMWV amb m2
+            "rhsusf_m998_d_s_2dr",
+            "rhsusf_m998_d_s_2dr_fulltop",
+            "rhsusf_m998_d_s_2dr_halftop",
+            "rhsusf_m998_d_s_4dr",
+            "rhsusf_m998_d_s_4dr_fulltop",
+            "rhsusf_m998_d_s_4dr_halftop",
+            "rhsusf_rg33_usmc_d",
+            "rhsusf_rg33_m2_usmc_d"
             ];
-        _Unit_Pool_T = [
-            "B_APC_Wheeled_01_cannon_F",                   // AMV-7 Marshall
-            "B_APC_Tracked_01_AA_F",                       // IFV-6a Cheetah
-            "B_APC_Tracked_01_rcws_F",                     // IFV-6c Panther
-            "B_MBT_01_arty_F",                             // M4 Scorche
-            "B_MBT_01_cannon_F",                           // M2A1 Slammer
-            "B_MBT_01_mlrs_F",                             // M5 Sandstorm MLRS
-            "B_MBT_01_TUSK_F"                              // M2A4 Slammer UP
-            ];
+        _Unit_Pool_T = ["rhsusf_m1a1fep_d"];
         _Unit_Pool_A = [
-            "B_Heli_Attack_01_F",                          // AH-99 Blackfoot
-            "B_Heli_Transport_01_F",                       // UH-80 Ghost Hawk
-            "B_Heli_Transport_01_camo_F",                  // UH-80 Ghost Hawk (Camo)
-            "B_Heli_Light_01_F",                           // AH-9 Pawnee
-            "B_Heli_Light_01_unarmed_F"                    // MH-9 Hummingbird
+            "RHS_AH1Z",                                    // Bell AH-1Z Viper (Multi-Role)
+            "RHS_AH1Z_GS",                                 // Bell AH-1Z Viper (Ground-Suppression)
+            "RHS_AH1Z_CS",                                 // Bell AH-1Z Viper (Close-Support)
+            "RHS_UH1Y_UNARMED_d",                          // UH1Y (Unarmed)
+            "RHS_UH1Y_FFAR_d",                             // UH1Y FFAR
+            "RHS_UH1Y_d"                                   // UH1Y FFAR/MG
             ];
     };
   
