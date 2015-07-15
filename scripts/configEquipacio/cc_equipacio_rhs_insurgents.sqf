@@ -1,7 +1,7 @@
 //=======================================================================================================//
 // Arxiu: cc_equipacio_rhs_insurgents.sqf                                                                //
 // Autor: CC_Magnetar                                                                                    //
-// Versió: 0.5                                                                                           //
+// Versió: 0.6                                                                                           //
 // Creació del Document: 2015/06/04                                                                      //
 // Descripció: Aquest document serveix per equipar els jugadors amb l'equipació dissenyada per la missió //
 //             sense fer servir els perfils estàndard del grup dels Cavallers del Cel. Requereix que el  //
@@ -73,12 +73,14 @@
 //         0.3 (2015/06/12) Canvis a la M249 i M240B degut a la versió 0.3.8 de RHS.                     //
 //         0.4 (2015/06/19) Afegida l'explicació pel tercer paràmetre (opcional).                        //
 //         0.5 (2015/07/03) Afegit el rol de Bussejador especialista en explosius (divexp).              //
+//         0.6 (2015/07/15) Canvi a Params (Arma v1.48).                                                 //
 //=======================================================================================================//
 
 //=======================================================================================================//
 // Declaració de variables                                                                               //
 //=======================================================================================================//
 
+private["_esInfanteria"];
 private["_bateriaUAV", "_cintaDentencio", "_einesMapa", "_microDAGR", "_taps", "_vectorIV", "_atragmx", "_kestrel", "_clacker", "_clackerm26", "_kitDesactivacio", "_telefon"];
 private["_atropina", "_epinefrina", "_morfina", "_benes", "_benesElastiques", "_benesRapides", "_benesEmpaquetants"];
 private["_bossaSang250", "_bossaSang500", "_bossaSang1000", "_bossaPlasma250", "_bossaPlasma500", "_bossPlasma1000", "_bossaSalina250", "_bossaSalina500", "_bossaSalina1000"];
@@ -89,9 +91,9 @@ private["_aprincipal"];
 // Obtenir el tipus d'unitat i si és un soldat d'infanteria                                              //
 //=======================================================================================================//
 
-_tipusUnitat = toLower (_this select 0);
-_unitat = _this select 1;
-_esInfanteria = _unitat isKindOf "CAManBase"; 
+params ["_tipusUnitat", "_unitat"];
+_tipusUnitat = toLower _tipusUnitat;
+_esInfanteria = _unitat isKindOf "CAManBase";  
 
 //=======================================================================================================//
 // Resum d'equipació: Armes, accessoris, ulleres, armilles, ...                                          //

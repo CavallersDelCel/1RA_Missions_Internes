@@ -1,7 +1,7 @@
 //=======================================================================================================//
 // Arxiu: cc_equipacio_rhs_usarmy_d.sqf                                                                  //
 // Autor: CC_Magnetar                                                                                    //
-// Versió: 0.9                                                                                           //
+// Versió: 0.10                                                                                          //
 // Creació del Document: 2015/04/02                                                                      //
 // Descripció: Aquest document serveix per equipar els jugadors amb l'equipació dissenyada per la missió //
 //             sense fer servir els perfils estàndard del grup dels Cavallers del Cel. Requereix que el  //
@@ -68,22 +68,24 @@
 //                  rhs_faction_vpvo        Soviet Air Defense Troops (Voyska protivovozdushnoy oborony) //
 //                  rhs_faction_vdv         Russian Airborne Troops (Vozdushno-desantnye voyska)         //
 //                                                                                                       //
-// Canvis: 0.1 (2015/04/02) Versió inicial.                                                              //
-//         0.2 (2015/04/26) Canviat el nom del fitxer i dels uniformes (RHS v0.3.7).                     //
-//         0.3 (2015/05/17) Afegida l'equipació pel vehicle HMMWV.                                       //
-//         0.4 (2015/05/26) Canviat al sistema ACE3.                                                     //
-//         0.5 (2015/06/10) Afegit el cas default amb equipació de fuseller (rfl).                       //
-//         0.6 (2015/06/12) Canvis a la M249 i M240B degut a la versió 0.3.8 de RHS.                     //
-//         0.7 (2015/06/18) Afegit el rol d'explosius (exp). En cas de que ni AGM ni ACE3 estiguin       //
-//                          carregats el script no falla.                                                //
-//         0.8 (2015/06/19) Afegida l'explicació pel tercer paràmetre (opcional).                        //
-//         0.9 (2015/07/03) Afegit el rol de Bussejador especialista en explosius (divexp).              //
+// Canvis: 0.1  (2015/04/02) Versió inicial.                                                             //
+//         0.2  (2015/04/26) Canviat el nom del fitxer i dels uniformes (RHS v0.3.7).                    //
+//         0.3  (2015/05/17) Afegida l'equipació pel vehicle HMMWV.                                      //
+//         0.4  (2015/05/26) Canviat al sistema ACE3.                                                    //
+//         0.5  (2015/06/10) Afegit el cas default amb equipació de fuseller (rfl).                      //
+//         0.6  (2015/06/12) Canvis a la M249 i M240B degut a la versió 0.3.8 de RHS.                    //
+//         0.7  (2015/06/18) Afegit el rol d'explosius (exp). En cas de que ni AGM ni ACE3 estiguin      //
+//                           carregats el script no falla.                                               //
+//         0.8  (2015/06/19) Afegida l'explicació pel tercer paràmetre (opcional).                       //
+//         0.9  (2015/07/03) Afegit el rol de Bussejador especialista en explosius (divexp).             //
+//         0.10 (2015/07/15) Canvi a Params (Arma v1.48).                                                //
 //=======================================================================================================//
 
 //=======================================================================================================//
 // Declaració de variables                                                                               //
 //=======================================================================================================//
 
+private["_esInfanteria"];
 private["_bateriaUAV", "_cintaDentencio", "_einesMapa", "_microDAGR", "_taps", "_vectorIV", "_atragmx", "_kestrel", "_clacker", "_clackerm26", "_kitDesactivacio", "_telefon"];
 private["_atropina", "_epinefrina", "_morfina", "_benes", "_benesElastiques", "_benesRapides", "_benesEmpaquetants"];
 private["_bossaSang250", "_bossaSang500", "_bossaSang1000", "_bossaPlasma250", "_bossaPlasma500", "_bossPlasma1000", "_bossaSalina250", "_bossaSalina500", "_bossaSalina1000"];
@@ -94,8 +96,8 @@ private["_aprincipal"];
 // Obtenir el tipus d'unitat i si és un soldat d'infanteria                                              //
 //=======================================================================================================//
 
-_tipusUnitat = toLower (_this select 0);
-_unitat = _this select 1;
+params ["_tipusUnitat", "_unitat"];
+_tipusUnitat = toLower _tipusUnitat;
 _esInfanteria = _unitat isKindOf "CAManBase"; 
 
 //=======================================================================================================//

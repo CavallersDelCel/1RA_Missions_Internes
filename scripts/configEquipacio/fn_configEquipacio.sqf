@@ -1,7 +1,7 @@
 //=======================================================================================================//
 // Arxiu: configEquipacio.sqf                                                                            //
 // Autor: CC_Magnetar                                                                                    //
-// Versió: 0.9                                                                                           //
+// Versió: 0.10                                                                                          //
 // Creació del Document: 2015/04/02                                                                      //
 // Descripció: Aquest document serveix per equipar els jugadors depenent del rol i la facció. A l'hora   //
 //             de configurar l'equip de la unitat la següent línia s'ha d'afegir al INIT de la unitat en //
@@ -66,32 +66,33 @@
 //                  rhs_faction_vpvo        Soviet Air Defense Forces (Voyska protivovozdushnoy oborony) //
 //                  rhs_faction_vdv         Russian Airborne Troops (Vozdushno-desantnye voyska)         //
 //                                                                                                       //
-// Canvis: 0.1 (2015/04/02) Versió inicial.                                                              //
-//         0.2 (2015/04/26) Canviada la facció de les unitats RHS v0.3.7.                                //
-//         0.3 (2015/05/17) Afegida l'equipació pel vehicle HMMWV, divsl i divme.                        //
-//         0.4 (2015/06/10) Afegit el cas default amb equipació de fuseller (rfl) i s'ha mogut la opció  //
-//                          d'utilitzar els perfils a init.sqf.                                          //
-//         0.5 (2015/06/12) Canvis als noms de les faccions deguts a la versió 0.3.8 de RHS.             //
-//         0.6 (2015/06/12) Afegides les faccions rhs_faction_usarmy_wd, rhs_faction_usmc_wd.            //
-//         0.7 (2015/06/18) Afegit el rol d'explosius (exp). En cas de que ni AGM ni ACE3 estiguin       //
-//                          carregats el script no falla.                                                //
-//         0.8 (2015/06/19) Afegida l'explicació pel tercer paràmetre (opcional) i la facció russa       //
-//                          rhs_faction_vdv.                                                             //
-//         0.9 (2015/07/03) Afegit el rol de Bussejador especialista en explosius (divexp).              //
+// Canvis: 0.1  (2015/04/02) Versió inicial.                                                             //
+//         0.2  (2015/04/26) Canviada la facció de les unitats RHS v0.3.7.                               //
+//         0.3  (2015/05/17) Afegida l'equipació pel vehicle HMMWV, divsl i divme.                       //
+//         0.4  (2015/06/10) Afegit el cas default amb equipació de fuseller (rfl) i s'ha mogut la opció //
+//                           d'utilitzar els perfils a init.sqf.                                         //
+//         0.5  (2015/06/12) Canvis als noms de les faccions deguts a la versió 0.3.8 de RHS.            //
+//         0.6  (2015/06/12) Afegides les faccions rhs_faction_usarmy_wd, rhs_faction_usmc_wd.           //
+//         0.7  (2015/06/18) Afegit el rol d'explosius (exp). En cas de que ni AGM ni ACE3 estiguin      //
+//                           carregats el script no falla.                                               //
+//         0.8  (2015/06/19) Afegida l'explicació pel tercer paràmetre (opcional) i la facció russa      //
+//                           rhs_faction_vdv.                                                            //
+//         0.9  (2015/07/03) Afegit el rol de Bussejador especialista en explosius (divexp).             //
+//         0.10 (2015/07/15) Canvi a Params (Arma v1.48).                                                //
 //=======================================================================================================//
 
 // Declaració de variables
-private ["_faccioUnitat", "_tipusUnitat", "_unitat"];
+params ["_tipusUnitat", "_unitat", "_faccioUnitat"];
 
-_tipusUnitat = toLower (_this select 0);
-_unitat = _this select 1;
+_tipusUnitat = toLower _tipusUnitat;
 
 // Depenent d'on s'executi el script, averiguar si cal executar-lo o no
 if !(local _unitat) exitWith {};
 
-_faccioUnitat = toLower (faction _unitat);
-if(count _this > 2) then {
-    _faccioUnitat = toLower (_this select 2);
+if ( isNil "_faccioUnitat") then {
+    _faccioUnitat = toLower (faction _unitat);
+} else {
+    _faccioUnitat = toLower _faccioUnitat;
 };
 
 // Guarda en una variable pública el tipus d'unitat

@@ -8,9 +8,7 @@
 // Canvis: 0.1 (2015/06/04) Versió inicial.                                                              //
 //=======================================================================================================//
 
-
-_zeus = _this select 0;
-_nouGrup = _this select 1;
+params["_zeus", "_nouGrup"];
 
 {
     _x addCuratorEditableObjects [(units _nouGrup),true]
