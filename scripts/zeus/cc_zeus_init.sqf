@@ -1,22 +1,22 @@
 //=======================================================================================================//
 // Arxiu: cc_zeus_init.sqf                                                                               //
 // Autor: CC_Magnetar                                                                                    //
-// Versió: 0.1                                                                                           //
-// Creació del Document: 04/06/2015                                                                      //
-// Descripció: Aquest document serveix per afegir al Zeus els diferents objectes, vehicles, i unitats    //
-//             que s'han posat utilitzant l'editor. Els jugadors també estan inclosos. D'aquesta manera  //
+// VersiÃ³: 0.1                                                                                           //
+// CreaciÃ³ del Document: 04/06/2015                                                                      //
+// DescripciÃ³: Aquest document serveix per afegir al Zeus els diferents objectes, vehicles, i unitats    //
+//             que s'han posat utilitzant l'editor. Els jugadors tambÃ© estan inclosos. D'aquesta manera  //
 //             tots aquests els objectes seran editables.                                                //
-// Canvis: 0.1 (2015/06/04) Versió inicial.                                                              //
+// Canvis: 0.1 (2015/06/04) VersiÃ³ inicial.                                                              //
 //=======================================================================================================//
 
-// Surt si no és un servidor
+// Surt si no Ã©s un servidor
 if( !isServer ) exitWith{}; 
 
 // Afegir les unitats, vehicles i objectes a tots els zeus. 
 {
-    _x addCuratorEditableObjects [vehicles,true];                     // Afegeix els vehicles amb la tripulació
+    _x addCuratorEditableObjects [vehicles,true];                     // Afegeix els vehicles amb la tripulaciÃ³
     _x addCuratorEditableObjects [(allMissionObjects "Man"),false];   // Afegeix les unitats d'infanteria
-    _x addCuratorEditableObjects [(allMissionObjects "Air"),true];    // Afegeix les unitats aèries amb la tripulació
+    _x addCuratorEditableObjects [(allMissionObjects "Air"),true];    // Afegeix les unitats aÃ¨ries amb la tripulaciÃ³
     _x addCuratorEditableObjects [(allMissionObjects "Ammo"),false];  // Afegeix els objectes de tipus "Ammo"
     _x addCuratorEditableObjects [[player], true];                    // Afegeix el jugador en si.
 } forEach allCurators;
