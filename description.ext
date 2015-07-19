@@ -38,6 +38,15 @@ overviewText = "*** Text a mostrar. ***";              // Text que es mostra al 
 enableDebugConsole = 1;  // Habilitada per SP i administradors en MP.
 
 //=======================================================================================================//
+// Forçar la llibreria de model de vol avançat.                                                          //
+//  - 0: Valor per defecte (la llibreria s'activa/desactiva depenent de les opcions del client).         //
+//  - 1: Forçar l'activació de la llibreria.                                                             //
+//  - 2: Forçar la desactivació de la llibreria.                                                         //
+// BIS: https://community.bistudio.com/wiki/Description.ext#forceRotorLibSimulation                      //
+//=======================================================================================================//
+forceRotorLibSimulation = 1;
+
+//=======================================================================================================//
 // Respawn Settings: Definició del tipus de respawn. https://community.bistudio.com/wiki/Arma_3_Respawn  //
 //=======================================================================================================//
 
