@@ -7,17 +7,17 @@
 //             https://github.com/michail-nikolaev/task-force-arma-3-radio/wiki                          //
 //=======================================================================================================//
 
-// Incloure el fitxer de configuració
+// Incloure el fitxer de configuració.
 #include "cc_tfar_configuracio.sqf"
 
-// Si el script s'està executant en un servidor
+// Si el script s'està executant en un servidor.
 if(isDedicated) then {
     [] execVM "scripts\radios\tfar\cc_tfar_initServidor.sqf";
 } else {
     [] execVM "scripts\radios\tfar\cc_tfar_initClient.sqf";
     
     // Si no s'utilitza un servidor dedicat però un jugador fa de host, s'ha d'executar també el script
-    // de servidor
+    // de servidor.
     if((!isDedicated) && (isServer)) then {
         [] execVM "scripts\radios\tfar\cc_tfar_initServidor.sqf";
     };

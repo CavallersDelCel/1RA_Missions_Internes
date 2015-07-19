@@ -11,7 +11,7 @@
 //                                                                                                       //
 //             o bé:                                                                                     //
 //                                                                                                       //
-//                  ["ROL_JUGADOR",this,"FACCIO"] call cc_fnc_configEquipacio;                           //
+//                  ["ROL_JUGADOR",this,"FACCIÓ"] call cc_fnc_configEquipacio;                           //
 //                                                                                                       //
 //             per forçar una facció específica a la unitat.                                             //
 //                                                                                                       //
@@ -19,8 +19,8 @@
 //                                                                                                       //
 //                  ROL_JUGADOR             Rol assignat                                                 //
 //                  pl                      Cap de secció (Platoon Leader)                               //
-//                  psg                     Sergent (Platoon Sergeant)                                   //
-//                  rto                     Operador de Radio (Platoon Radiotelephone Operator)          //
+//                  psg                     Sergent de secció (Platoon Sergeant)                         //
+//                  rto                     Operador de ràdio (Platoon Radiotelephone Operator)          //
 //                  fo                      Observador avançat (Forward Observer)                        //
 //                  me                      Metge (Platoon Medic)                                        //
 //                  sl                      Líder d'esquadra (Squad Leader)                              //
@@ -48,9 +48,9 @@
 //                                                                                                       //
 //                  hmmwv                   Equipació per HMMWVs                                         //
 //                                                                                                       //
-//             i "FACCIO" una de les següents entrades:                                                  //
+//             i "FACCIÓ" una de les següents entrades:                                                  //
 //                                                                                                       //
-//                  FACCIO                  Facció forçada de la unitat en termes d'equipació            //
+//                  FACCIÓ                  Facció forçada de la unitat en termes d'equipació            //
 //                  blu_f                   Blue Force                                                   //
 //                  blu_g_f                 FIA                                                          //
 //                  ind_g_f                 FIA                                                          //
@@ -81,12 +81,12 @@
 //         0.10 (2015/07/15) Canvi a Params (Arma v1.48).                                                //
 //=======================================================================================================//
 
-// Declaració de variables
+// Declaració de variables.
 params ["_tipusUnitat", "_unitat", "_faccioUnitat"];
 
 _tipusUnitat = toLower _tipusUnitat;
 
-// Depenent d'on s'executi el script, averiguar si cal executar-lo o no
+// Depenent d'on s'executi el script, averiguar si cal executar-lo o no.
 if !(local _unitat) exitWith {};
 
 if ( isNil "_faccioUnitat") then {
@@ -95,78 +95,78 @@ if ( isNil "_faccioUnitat") then {
     _faccioUnitat = toLower _faccioUnitat;
 };
 
-// Guarda en una variable pública el tipus d'unitat
+// Guarda en una variable pública el tipus d'unitat.
 _unitat setVariable ["cc_var_configEquipacio",_tipusUnitat,true];
 
-// Començar a assignar l'equip als diferents rols
+// Començar a assignar l'equip als diferents rols.
 _unitat setVariable ["cc_var_configEquipacio_Llesta",false,true];
 
-// DEBUG OUTPUT
+// DEBUG OUTPUT.
 if (cc_param_debugOutput == 1) then {
     _unitat sideChat format ["DEBUG (configEquipacio.sqf): facció de la unitat: %1", _faccioUnitat];
 };
 
-// Equipació per la facció BLUFOR
+// Equipació per la facció BLUFOR.
 if (_faccioUnitat == "blu_f") then {
     #include "cc_equipacio_blu_f.sqf"
 };
 
-// Equipació per la facció FIA
+// Equipació per la facció FIA.
 if (_faccioUnitat in ["blu_g_f","ind_g_f","opf_g_f"]) then {
     #include "cc_equipacio_fia_f.sqf"
 };
 
-// Equipació per la facció OPFOR
+// Equipació per la facció OPFOR.
 if (_faccioUnitat == "opf_f") then {
     #include "cc_equipacio_opf_f.sqf"
 };
 
-// Equipació per la facció independent
+// Equipació per la facció independent.
 if (_faccioUnitat == "ind_f") then {
     #include "cc_equipacio_ind_f.sqf"
 };
 
-// Equipació per la facció civil
+// Equipació per la facció civil.
 if (_faccioUnitat == "civ_f") then {
     #include "cc_equipacio_civ_f.sqf"
 };
 
-// Equipació per la facció USA "United States Army" 
+// Equipació per la facció USA "United States Army".
 if (_faccioUnitat == "rhs_faction_usarmy_d") then {
     #include "cc_equipacio_rhs_usarmy_d.sqf"
 };
 
-// Equipació per la facció USA "United States Army" 
+// Equipació per la facció USA "United States Army".
 if (_faccioUnitat == "rhs_faction_usarmy_wd") then {
     #include "cc_equipacio_rhs_usarmy_wd.sqf"
 };
 
-// Equipació per la facció USA "United States Marine Corps"
+// Equipació per la facció USA "United States Marine Corps".
 if (_faccioUnitat == "rhs_faction_usmc_d") then {
     #include "cc_equipacio_rhs_usmc_d.sqf"
 };
 
-// Equipació per la facció USA "United States Marine Corps"
+// Equipació per la facció USA "United States Marine Corps".
 if (_faccioUnitat == "rhs_faction_usmc_wd") then {
     #include "cc_equipacio_rhs_usmc_wd.sqf"
 };
 
-// Equipació per la facció USA "United States Army"
+// Equipació per la facció USA "United States Army".
 if (_faccioUnitat == "rhs_faction_insurgents") then {
     #include "cc_equipacio_rhs_insurgents.sqf"
 };
 
-// Equipació per la facció russa "Russian Airborne Troops"
+// Equipació per la facció russa "Russian Airborne Troops".
 if (_faccioUnitat == "rhs_faction_vdv" ) then {
     #include "cc_equipacio_rhs_vdv.sqf"
 };
 
-// Equipació per la facció russa "Soviet Air Defense Forces"
+// Equipació per la facció russa "Soviet Air Defense Forces".
 if (_faccioUnitat == "rhs_faction_vpvo" ) then {
     #include "cc_equipacio_rhs_vpvo.sqf"
 };
 
-// S'ha acabat l'assignació de l'Equipacio
+// S'ha acabat l'assignació de l'equipació
 _unitat setVariable ["cc_var_configEquipacio_Llesta",true,true];
 
 //============================================ FI DEL FITXER ============================================//

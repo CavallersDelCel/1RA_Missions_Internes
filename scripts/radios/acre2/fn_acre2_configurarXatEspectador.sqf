@@ -8,17 +8,17 @@
 //             http://gitlab.idi-systems.com/idi-systems/acre2-public/wikis/home                         //
 //=======================================================================================================//
 
-// Declaració de variables
+// Declaració de variables.
 private["_unitat"];
 
 _unitat = player;
 
 // Si la unitat està viva no cal forçar res.
 if(alive _unitat) then {
-    // Deshabilita el xat d'espectador
+    // Deshabilita el xat d'espectador.
     [false] call acre_api_fnc_setSpectator;
 } else {
-    // En cas de que la unitat no estigui viva, forçar el xat d'espectador de l'ACRE2
+    // En cas de que la unitat no estigui viva, forçar el xat d'espectador de l'ACRE2.
     [true] call acre_api_fnc_setSpectator;
 };
 

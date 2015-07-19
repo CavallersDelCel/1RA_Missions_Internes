@@ -7,25 +7,25 @@
 //             (https://github.com/michail-nikolaev/task-force-arma-3-radio/wiki) en el client.          //
 //=======================================================================================================//
 
-// Donar temps a TFAR per inicialitzar-se
+// Donar temps a TFAR per inicialitzar-se.
 sleep 3;
 
 // Configurar el TFAR. Si el jugador està viu, les ràdios que venen per defecte es treuran i s'assinaran
 // les radios que es desitgin utilitzant depenent del rol tal i com s'ha especificat al fitxer
 // "cc_tfar_configuracio.sqf". El xat d'espectador es configurarà depenent de si el jugador està viu o no.
 
-// Si el jugador està viu, procedir
+// Si el jugador està viu, procedir.
 if(alive player) then {
-    // Treure totes les ràdios de l'inventari
+    // Treure totes les ràdios de l'inventari.
     [] call cc_fnc_tfar_treureRadios;
 
-    // Esperar fins que l'equipació estigui assignada
+    // Esperar fins que l'equipació estigui assignada.
     waitUntil{(player getVariable ["cc_var_configEquipacio_Llesta", false])};
 
-    // Afegir les ràdios a cada unitat
+    // Afegir les ràdios a cada unitat.
     [] call cc_fnc_tfar_afegirRadios;
 
-    // Configurar el xat d'espectador
+    // Configurar el xat d'espectador.
     //[] call cc_fnc_tfar_configurarXatEspectador;
     
     // DEBUG OUTPUT

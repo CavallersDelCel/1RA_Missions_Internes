@@ -22,7 +22,7 @@ enableSaving [false, false];
 //=======================================================================================================//
 enableSentences false;
 
-// Execució del script per generar els Briefings
+// Execució del script per generar els Briefings.
 cc_script_briefing = [] execVM "briefing.sqf";
 
 onPreloadFinished {
@@ -34,10 +34,10 @@ if (cc_param_utilitzarPerfils == 1 && !isDedicated) then {
     cc_script_perfils = [] execVM "scripts\configEquipacio\cc_equipacio_rhs_usarmy_d_perfils.sqf";
 };
 
-// Pantalla d'introducció
+// Pantalla d'introducció.
 cc_script_intro = [] execVM "scripts\intro\cc_intro.sqf";
 
-// Inicialitzar el sistema de radios
+// Inicialitzar el sistema de radios.
 cc_script_radio = [] execVM "scripts\radios\cc_inicialitzar_radios.sqf";
 
 if ( isServer ) then {

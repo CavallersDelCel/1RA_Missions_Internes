@@ -9,15 +9,15 @@
 // Canvis: 0.1 (2015/06/04) Versió inicial.                                                              //
 //=======================================================================================================//
 
-// Surt si no és un servidor
+// Surt si no és un servidor.
 if( !isServer ) exitWith{}; 
 
 // Afegir les unitats, vehicles i objectes a tots els zeus. 
 {
-    _x addCuratorEditableObjects [vehicles,true];                     // Afegeix els vehicles amb la tripulació
-    _x addCuratorEditableObjects [(allMissionObjects "Man"),false];   // Afegeix les unitats d'infanteria
-    _x addCuratorEditableObjects [(allMissionObjects "Air"),true];    // Afegeix les unitats aèries amb la tripulació
-    _x addCuratorEditableObjects [(allMissionObjects "Ammo"),false];  // Afegeix els objectes de tipus "Ammo"
+    _x addCuratorEditableObjects [vehicles,true];                     // Afegeix els vehicles amb la tripulació.
+    _x addCuratorEditableObjects [(allMissionObjects "Man"),false];   // Afegeix les unitats d'infanteria.
+    _x addCuratorEditableObjects [(allMissionObjects "Air"),true];    // Afegeix les unitats aèries amb la tripulació.
+    _x addCuratorEditableObjects [(allMissionObjects "Ammo"),false];  // Afegeix els objectes de tipus "Ammo".
     _x addCuratorEditableObjects [[player], true];                    // Afegeix el jugador en si.
 } forEach allCurators;
 
