@@ -36,9 +36,9 @@ Descripció detallada de la missió. Aquest text pot ser el mateix que el que es
 
 **Contribuïdors**: CC_Viper (Plantilles d'imatges).
 
-**Versió**: 0.2.1.
+**Versió**: 0.3.0.
 
-**Darrera modificació**: 2015/07/16.
+**Darrera modificació**: 2015/07/22.
 
 **Descripció**: Plantilla bàsica per generar missions pel grup d'Arma 1er Regiment Aerotransportat (1RA) de la Comunitat Catalana de Simulació - Cavallers del Cel.
 
@@ -56,6 +56,7 @@ haurà d'afegir una opció per tal de que la funcionalitat es pugui desactivar.
 La plantilla té la següent estructura de carpetes.
 
 * "\" (Carpeta arrel): En aquesta carpeta es troben els fitxers essencials de la missió: description.ext, init.sqf, mission.sqm i briefing.sqf així com aquest fitxer de documentació.
+* "\DAC": Aquesta carpeta conté la versió script del Dynamic-AI-Creator v3.1b. És una eina, creada per Silola, per generar AI de forma dinàmica i que permet conservar recursos. Es pot trobar més informació a http://forums.bistudio.com/showthread.php?176926-DAC-V3-1-(Dynamic-AI-Creator)-released.
 * "\imatges": Carpeta on es guarden les diferents imatges. Conté plantilles per generar les imatges per la pròpia missió i pel fòrum.
 * "\scripts": Carpeta on es guarden els diferents scripts/funcions organitzats en subcarpetes.
   * "\sripts\ace3": Scripts i funcions per configurar el ACE3.
@@ -87,15 +88,15 @@ La següent llista mostra les faccions suportades per aquells scripts que permet
 
 | **Faccio**        | **Codi**          | 
 | ------------- | ------------- |
-| **Blue Force**                                                     | `blu_f`                       |
-| **Civils**                                                         | `civ_f`                       |
+| **Blue Force**                                                     | `blu_f`                          |
+| **Civils**                                                         | `civ_f`                          |
 | **FIA**                                                            | `blu_g_f`, `ind_g_f` i `opf_g_f` |
-| **Independent Force**                                              | `ind_f`                       |
-| **Opposing Force**                                                 | `opf_f`                       |
-| RHS Insurgents                                                   | `rhs_faction_insurgents`      |
-| RHS Russian Airborne Troops (Vozdushno-desantnye voyska)         | `rhs_faction_vdv`             |
-| RHS Soviet Air Defense Troops (Voyska protivovozdushnoy oborony) | `rhs_faction_vpvo`            |
-| **RHS United States Army (Desert)**                                | `rhs_faction_usarmy_d`        |
-| **RHS United States Army (Woodland)**                              | `rhs_faction_usarmy_wd`       |
-| **RHS United States Marine Corps (Desert)**                        | `rhs_faction_usmc_d`          |
-| **RHS United States Marine Corps (Woodland)**                      | `rhs_faction_usmc_wd`         |
+| **Independent Force**                                              | `ind_f`                          |
+| **Opposing Force**                                                 | `opf_f`                          |
+| RHS Insurgents                                                     | `rhs_faction_insurgents`         |
+| RHS Russian Airborne Troops (Vozdushno-desantnye voyska)           | `rhs_faction_vdv`                |
+| RHS Soviet Air Defense Troops (Voyska protivovozdushnoy oborony)   | `rhs_faction_vpvo`               |
+| **RHS United States Army (Desert)**                                | `rhs_faction_usarmy_d`           |
+| **RHS United States Army (Woodland)**                              | `rhs_faction_usarmy_wd`          |
+| **RHS United States Marine Corps (Desert)**                        | `rhs_faction_usmc_d`             |
+| **RHS United States Marine Corps (Woodland)**                      | `rhs_faction_usmc_wd`            |
