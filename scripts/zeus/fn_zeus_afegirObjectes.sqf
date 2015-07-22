@@ -11,10 +11,10 @@
 // Surt si no és un servidor
 if( !isServer ) exitWith{}; 
 
-params["_zeus", "_nouGrup"];
+params["_zeus", "_nouObjecte"];
 
 {
-    _x addCuratorEditableObjects [[_nousObjectes],true]
+    _x addCuratorEditableObjects [[_nouObjecte],true]
 } forEach (allCurators - [_zeus]);
 
 //============================================ FI DEL FITXER ============================================//
