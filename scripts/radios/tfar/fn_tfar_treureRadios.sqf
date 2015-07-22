@@ -9,12 +9,12 @@
 //             https://github.com/michail-nikolaev/task-force-arma-3-radio/wiki                          //
 //=======================================================================================================//
 
-// Declaració de variables
+// Declaració de variables.
 private["_unitat","_isRadio"];
 
 _unitat = player;
 
-// Esborrar totes les radios utilitzant les funcions del TFAR
+// Esborrar totes les radios utilitzant les funcions del TFAR.
 {
     _isRadio = _x call TFAR_fnc_isRadio;
     if(_isRadio) then

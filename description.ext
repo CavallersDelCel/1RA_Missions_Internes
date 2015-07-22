@@ -6,7 +6,7 @@
 //=======================================================================================================//
 
 //=======================================================================================================//
-// Header de la missió: - Definició del mode de joc, nombre mínim de jugadors i nombre màxim de jugadors //
+// Header de la missió: - Definició del mode de joc, nombre mínim de jugadors i nombre màxim de jugadors.//
 //=======================================================================================================//
 
 class Header {
@@ -24,18 +24,27 @@ class Header {
 // però totalment opcionals al dependre de programes d'edició externs comercials.                        //
 //=======================================================================================================//
 
-onLoadName = "*** Nom de la missió. ***";              // Nom de la missió (apareix en gran)
-onLoadMission = "*** Descripció de la missió. ***";    // Descripció breu de la missió
-author = "CC_Magnetar";                                // Autor
-loadScreen = "imatges\loadLogo.jpg";                   // Imatge mentre es carrega la missió
+onLoadName = "*** Nom de la missió. ***";              // Nom de la missió (apareix en gran).
+onLoadMission = "*** Descripció de la missió. ***";    // Descripció breu de la missió.
+author = "CC_Magnetar";                                // Autor.
+loadScreen = "imatges\loadLogo.jpg";                   // Imatge mentre es carrega la missió.
 overviewPicture = "imatges\overviewPicture.jpg";       // Imatge que es mostra al seleccionar la missió.
-                                                       // Ha d'estar en format .paa i aspecte 2:1
+                                                       // Ha d'estar en format .paa i aspecte 2:1.
 overviewText = "*** Text a mostrar. ***";              // Text que es mostra al seleccionar la missó.
 
 //=======================================================================================================//
 // Consola de Debug de BIS: https://community.bistudio.com/wiki/Description.ext#enableDebugConsole       //
 //=======================================================================================================//
 enableDebugConsole = 1;  // Habilitada per SP i administradors en MP.
+
+//=======================================================================================================//
+// Forçar la llibreria de model de vol avançat.                                                          //
+//  - 0: Valor per defecte (la llibreria s'activa/desactiva depenent de les opcions del client).         //
+//  - 1: Forçar l'activació de la llibreria.                                                             //
+//  - 2: Forçar la desactivació de la llibreria.                                                         //
+// BIS: https://community.bistudio.com/wiki/Description.ext#forceRotorLibSimulation                      //
+//=======================================================================================================//
+forceRotorLibSimulation = 1;
 
 //=======================================================================================================//
 // Respawn Settings: Definició del tipus de respawn. https://community.bistudio.com/wiki/Arma_3_Respawn  //
@@ -97,7 +106,7 @@ class Params {
 };
 
 //=======================================================================================================//
-// DEBRIEFING: Informació per quan acaba la missió                                                       //
+// DEBRIEFING: Informació per quan acaba la missió.                                                      //
 //=======================================================================================================//
 class CfgDebriefing {
     class Final1 {
@@ -149,7 +158,7 @@ class CfgDebriefing {
     
 };
 
-// Funcions per les missions dels Cavallers del Cel
+// Funcions per les missions dels Cavallers del Cel.
 class CfgFunctions {
     class CC {   
         // Funcions per configurar ACE 3
@@ -161,7 +170,7 @@ class CfgFunctions {
             };
         };
         
-        // Funcions per inicialitzar i configurar ACRE 2
+        // Funcions per inicialitzar i configurar ACRE 2.
         class acre2 {
             file = "scripts\radios\acre2";
             class acre2_determinarIdiomes{};
@@ -170,25 +179,25 @@ class CfgFunctions {
             class acre2_configurarXatEspectador{};
         };
         
-        // Funcions comunes i essencials pel funcionament dels scripts
+        // Funcions comunes i essencials pel funcionament dels scripts.
         class comu {
             file = "scripts\comu";
             class processarParamsArray {
-                preInit = 1;   // La funció s'executa al iniciar la missió, ABANS d'inicialitzar objectes
-                // postInit = 1;  // La funció s'executa al iniciar la missió, DESPRÉS d'inicialitzar objectes
+                preInit = 1;   // La funció s'executa al iniciar la missió, ABANS d'inicialitzar objectes.
+                // postInit = 1;  // La funció s'executa al iniciar la missió, DESPRÉS d'inicialitzar objectes.
             };
             class processarMods {
-                preInit = 1;  // La funció s'executa al iniciar la missió, ABANS d'inicialitzar objectes
+                preInit = 1;  // La funció s'executa al iniciar la missió, ABANS d'inicialitzar objectes.
             };
         };
         
-        // Funcions per equipar els diferents rols amb els perfils dels Cavallers del Cel
+        // Funcions per equipar els diferents rols amb els perfils dels Cavallers del Cel.
         class configEquipacio {
             file = "scripts\configEquipacio";
             class configEquipacio{};
         };
         
-        // Funcions per inicialitzar el sistema de radio Task Force Arrowhead (TFAR)        
+        // Funcions per inicialitzar el sistema de radio Task Force Arrowhead (TFAR).
         class tfar {
             file = "scripts\radios\tfar";
             class tfar_treureRadios{};

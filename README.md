@@ -36,9 +36,9 @@ Descripció detallada de la missió. Aquest text pot ser el mateix que el que es
 
 **Contribuïdors**: CC_Viper (Plantilles d'imatges).
 
-**Versió**: 0.1.
+**Versió**: 0.2.1.
 
-**Darrera modificació**: 2015/06/20.
+**Darrera modificació**: 2015/07/16.
 
 **Descripció**: Plantilla bàsica per generar missions pel grup d'Arma 1er Regiment Aerotransportat (1RA) de la Comunitat Catalana de Simulació - Cavallers del Cel.
 

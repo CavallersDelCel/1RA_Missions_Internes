@@ -9,21 +9,21 @@
 //             http://gitlab.idi-systems.com/idi-systems/acre2-public/wikis/home                         //
 //=======================================================================================================//
 
-// Declaració de variables
+// Declaració de variables.
 private["_unitat", "_tipusUnitat"];
 
 _unitat = player;
 
 _tipusUnitat = _unitat getVariable ["cc_var_configEquipacio", "NIL"];
 
-// Assignar radios depenent del tipus d'unitat (fn_configEquipacio)
+// Assignar radios depenent del tipus d'unitat (fn_configEquipacio).
 if(_tipusUnitat != "nil") then {
 
     // Si les radios estan habilitades, cal assignar-les depenent del rol
     if(cc_acre2_config_distribuirRadios) then {
     
         // Comprova si cal assignar la radio definida a "cc_acre2_radioSoldats" per defecte a totes les
-        // unitats
+        // unitats.
         if(cc_acre2_config_tothomRadioSoldats) then {
             
             if( _unitat canAdd cc_acre2_radioSoldats ) then {

@@ -7,17 +7,17 @@
 //             Arrowhead Radio (TFAR) https://github.com/michail-nikolaev/task-force-arma-3-radio/wiki   //
 //=======================================================================================================//
 
-// Declaració de variables
+// Declaració de variables.
 private["_unitat"];
 
 _unitat = player;
 
 // Si la unitat està viva no cal forçar res.
 if(alive _unitat) then {
-    // Deshabilita el xat d'espectador
+    // Deshabilita el xat d'espectador.
     [_unitat, false] call TFAR_fnc_forceSpectator;
 } else {
-    // En cas de que la unitat no estigui viva, forçar el xat d'espectador del TFAR
+    // En cas de que la unitat no estigui viva, forçar el xat d'espectador del TFAR.
     [_unitat, true] call TFAR_fnc_forceSpectator;
 };
 

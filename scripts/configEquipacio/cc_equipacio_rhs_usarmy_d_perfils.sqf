@@ -50,10 +50,10 @@ private["_unitat","_tipusUnitat","_loadout", "_perfil"];
 _unitat = player;
 _tipusUnitat = _unitat getVariable ["cc_var_configEquipacio", "NIL"];
 
-// Configurar l'equip per cada unitat
+// Configurar l'equip per cada unitat.
 switch (_tipusUnitat) do
 {
-    // Líder d'Esquadra (Squad Leader)
+    // Líder d'esquadra (Squad Leader).
     case "sl": {
         _perfil = "CC - Lider d'esquadra M4A1+M320 OCP";
         if (cc_param_debugOutput == 1) then {
@@ -62,7 +62,7 @@ switch (_tipusUnitat) do
         _loadout = [_unitat,[profileNamespace,_perfil]] call BIS_fnc_loadInventory;
     };
     
-    // Líder d'Equip (Team Leader)
+    // Líder d'equip (Team leader).
     case "tl": {
         _perfil = "CC - Lider d'equip M4A1+M320 OCP";
         if (cc_param_debugOutput == 1) then {
@@ -71,7 +71,7 @@ switch (_tipusUnitat) do
         _loadout = [_unitat,[profileNamespace,_perfil]] call BIS_fnc_loadInventory;
     };
     
-    // Fuseller (Rifleman)
+    // Fuseller (Rifleman).
     case "rfl": {
         _perfil = "CC - Fuseller M4A1 OCP";
         if (cc_param_debugOutput == 1) then {
@@ -89,7 +89,7 @@ switch (_tipusUnitat) do
         _loadout = [_unitat,[profileNamespace,_perfil]] call BIS_fnc_loadInventory;
     };
     
-    // Granader (Grenadier)
+    // Granader (Grenadier).
     case "gr": {
         _perfil = "CC - Granader M4A1+M320 OCP";
         if (cc_param_debugOutput == 1) then {
@@ -98,7 +98,7 @@ switch (_tipusUnitat) do
         _loadout = [_unitat,[profileNamespace,_perfil]] call BIS_fnc_loadInventory;
     };
     
-    // Fuseller automàtic (Automatic Rifleman)
+    // Fuseller automàtic (Automatic Rifleman).
     case "ar": {
         _perfil = "CC - FA M249 OCP";
         if (cc_param_debugOutput == 1) then {
@@ -107,7 +107,7 @@ switch (_tipusUnitat) do
         _loadout = [_unitat,[profileNamespace,_perfil]] call BIS_fnc_loadInventory;
     };
     
-    // Metrallador (Machine Gunner)
+    // Metrallador (Machine Gunner).
     case "mg": {
         _perfil = "CC - Metrallador M240B OCP";
         if (cc_param_debugOutput == 1) then {
@@ -116,7 +116,7 @@ switch (_tipusUnitat) do
         _loadout = [_unitat,[profileNamespace,_perfil]] call BIS_fnc_loadInventory;
     };
     
-    // Antitanc (Antitank)
+    // Antitanc (Antitank).
     case "at": {
         _perfil = "CC - AT M4A1+Javelin OCP";
         if (cc_param_debugOutput == 1) then {
@@ -134,7 +134,7 @@ switch (_tipusUnitat) do
         _loadout = [_unitat,[profileNamespace,_perfil]] call BIS_fnc_loadInventory;
     };
     
-    // Tirador designat (Designated Marksman)
+    // Tirador designat (Designated Marksman).
     case "dm": {
         _perfil = "CC - Tirador SR-25EC OCP";
         if (cc_param_debugOutput == 1) then {
@@ -143,7 +143,7 @@ switch (_tipusUnitat) do
         _loadout = [_unitat,[profileNamespace,_perfil]] call BIS_fnc_loadInventory;
     };
     
-    // Metge (Platoon Medic)
+    // Metge (Platoon Medic).
     case "me": {
         _perfil = "CC - Metge M4A1 OCP";
         if (cc_param_debugOutput == 1) then {
@@ -152,7 +152,7 @@ switch (_tipusUnitat) do
         _loadout = [_unitat,[profileNamespace,_perfil]] call BIS_fnc_loadInventory;
     };
     
-    // Enginyer (Engineer)
+    // Enginyer (Engineer).
     case "en": {
         _perfil = "CC - Explosius M4A1 OCP";
         if (cc_param_debugOutput == 1) then {
@@ -161,7 +161,7 @@ switch (_tipusUnitat) do
         _loadout = [_unitat,[profileNamespace,_perfil]] call BIS_fnc_loadInventory;
     };
     
-    // Franctirador (Sniper)
+    // Franctirador (Sniper).
     case "sn": {
         _perfil = "CC - Franctirador M2010ESR OCP";
         if (cc_param_debugOutput == 1) then {
@@ -170,7 +170,7 @@ switch (_tipusUnitat) do
         _loadout = [_unitat,[profileNamespace,_perfil]] call BIS_fnc_loadInventory;
     };
     
-    // Observador (Spotter)
+    // Observador (Spotter).
     case "sp": {
         _perfil = "CC - Observador M4A1 OCP";
         if (cc_param_debugOutput == 1) then {
@@ -197,7 +197,7 @@ switch (_tipusUnitat) do
         _loadout = [_unitat,[profileNamespace,_perfil]] call BIS_fnc_loadInventory;
     };
     
-    // Bussejador especialista en explosius (Diver Specialist in Explosives)
+    // Bussejador especialista en explosius (Diver Specialist in Explosives).
     case "divexp": {
         _perfil = "CC - Bussejador explosius M4A1";
         if (cc_param_debugOutput == 1) then {
@@ -206,7 +206,7 @@ switch (_tipusUnitat) do
         _loadout = [_unitat,[profileNamespace,_perfil]] call BIS_fnc_loadInventory;
     };
     
-    // Bussejador (Diver)
+    // Bussejador (Diver).
     case "div": {
         _perfil = "CC - Bussejador M4A1";
         if (cc_param_debugOutput == 1) then {

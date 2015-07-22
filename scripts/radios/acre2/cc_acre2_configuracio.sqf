@@ -9,7 +9,7 @@
 //=======================================================================================================//
 
 //=======================================================================================================//
-// Configuració de la missió                                                                             //
+// Configuració de la missió.                                                                            //
 //=======================================================================================================//
 
 // ACRE2: funció per configurar la missió.
@@ -23,11 +23,11 @@
 
 // ACRE2: Permetre que la IA detecti els jugadors quan parlen.
 //        - false: La IA no pot escoltar els jugadors.
-//        - true: La IA pot escoltar els jugadors segons un model un model quadràtic invertit
+//        - true: La IA pot escoltar els jugadors segons un model un model quadràtic invertit.
 [true] call acre_api_fnc_setRevealToAI;
 
 //=======================================================================================================//
-// Configuració de les funcionalitats de BABEL                                                           //
+// Configuració de les funcionalitats de BABEL.                                                          //
 //=======================================================================================================//
 
 cc_acre2_config_idomes = [["angles","Anglès"],["rus","Rus"],["persa","Persa"],["grec","Grec"]];
@@ -41,10 +41,10 @@ cc_acre2_config_idioma_fia = ["angles","grec"];
 cc_acre2_config_idioma_civ = ["grec"];
 
 //=======================================================================================================//
-// Configuració de la dificultat                                                                         //
+// Configuració de la dificultat.                                                                        //
 //=======================================================================================================//
 
-// ACRE2: Modelat de la pèrdua de senyal degut al terreny. Valor entre 0 i 1
+// ACRE2: Modelat de la pèrdua de senyal degut al terreny. Valor entre 0 i 1.
 //        - 0: Pèrdua de senyal degut al terreny desactivada.
 //        - 1: Pèrdua de senyal degut al terreny totalment simulada.
 [1] call acre_api_fnc_setLossModelScale;
@@ -60,18 +60,18 @@ cc_acre2_config_idioma_civ = ["grec"];
 [true] call acre_api_fnc_setInterference;
 
 //=======================================================================================================//
-// Configuració de l'assignació de ràdios en funció del rol                                              //
+// Configuració de l'assignació de ràdios en funció del rol.                                             //
 //=======================================================================================================//
 
 // Variable per controlar si es distribueixen radios a la partida. Pot ser útil en cas de missions
 // de supervivència.
-//   - false: no es distribueixen radios
-//   - true: es distribueixen radios
+//   - false: no es distribueixen radios.
+//   - true: es distribueixen radios.
 cc_acre2_config_distribuirRadios = true;
 
-// Variable per controlar si les freqüències s'han de dividir per bàndol
-//   - false: els bàndols comparteixen freqüències
-//   - true: les freqüències es divideixen per bàndols
+// Variable per controlar si les freqüències s'han de dividir per bàndol.
+//   - false: els bàndols comparteixen freqüències.
+//   - true: les freqüències es divideixen per bàndols.
 cc_acre2_config_dividirFrequencies = true;
 
 // Variable per controlar si es distribueix la radio definida a la variable "cc_acre2_radioSoldats", per
@@ -89,17 +89,17 @@ cc_acre2_radioOficials = "ACRE_PRC152";
 // Radio extra
 cc_acre2_radioRTO = "ACRE_PRC117F";
 
-// Noms dels canals a les radios AN/PRC 148, AN/PRC 152 i AN/PRC 117F
+// Noms dels canals a les radios AN/PRC 148, AN/PRC 152 i AN/PRC 117F.
 cc_acre2_config_llistaCanals = ["ALFA","ALFA 1","ALFA 2","ALFA 3","COMANDAMENT","SUPORT","ARTILLERIA"];
 cc_acre2_config_FreqCanals = [200, 201, 202, 203, 41, 51, 61];
 
-// Llista d'unitats amb Rifleman Radio (fn_configEquipacio.sqf)
+// Llista d'unitats amb Rifleman Radio (fn_configEquipacio.sqf).
 cc_acre2_llistaRadioSoldats = ["rfl", "rflat", "gr", "ar", "dm", "mg", "amg", "at", "aat", "aa", "aaa", "en", "exp", "divme", "div"];
 
-// Llista d'unitats amb Short Range Radio (fn_configEquipacio.sqf)
+// Llista d'unitats amb Short Range Radio (fn_configEquipacio.sqf).
 cc_acre2_llistaRadioOficials = ["pl", "psg", "rto", "fo", "me", "sl", "tl", "sn", "sp", "divsl"];
 
-// Llista d'unitats amb Long Range Radio (fn_configEquipacio.sqf)
+// Llista d'unitats amb Long Range Radio (fn_configEquipacio.sqf).
 cc_acre2_llistaRadioRTO = ["rto", "fo"];
 
 //============================================ FI DEL FITXER ============================================//

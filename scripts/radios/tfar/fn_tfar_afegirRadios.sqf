@@ -9,7 +9,7 @@
 //             https://github.com/michail-nikolaev/task-force-arma-3-radio/wiki                          //
 //=======================================================================================================//
 
-// Declaració de variables
+// Declaració de variables.
 private["_unitat", "_tipusUnitat", "_radioLR","_radioSR","_radioRF", "_radioActiva" ,"_objectesMotxilla"];
 
 _unitat = player;
@@ -17,9 +17,9 @@ _unitat = player;
 _tipusUnitat = _unitat getVariable ["cc_var_configEquipacio", "NIL"];
 
 // Definir les radios que s'assignaran.
-//   - radioLR: Long Range Radio
-//   - radioSR: Short Range Radio
-//   - radioRF: Rifleman Radio
+//   - radioLR: Long Range Radio.
+//   - radioSR: Short Range Radio.
+//   - radioRF: Rifleman Radio.
 
 if (cc_tfar_config_utilitzarRadiosPerDefecte) then {
     switch ((side player)) do {
@@ -63,10 +63,10 @@ if (cc_tfar_config_utilitzarRadiosPerDefecte) then {
     };
 };
 
-// Assignar radios depenent del tipus d'unitat (fn_configEquipacio)
+// Assignar radios depenent del tipus d'unitat (fn_configEquipacio).
 if(_tipusUnitat != "nil") then {
 
-    // Si les radios estan habilitades, cal assignar-les depenent del rol
+    // Si les radios estan habilitades, cal assignar-les depenent del rol.
     if(cc_tfar_config_distribuirRadios) then {
     
         if( !tf_give_microdagr_to_soldier) then {
@@ -74,7 +74,7 @@ if(_tipusUnitat != "nil") then {
             _unitat linkItem "ItemWatch";
         };
                 
-        // Assignar radios de Rifleman i curt abast (Short range)
+        // Assignar radios de Rifleman i curt abast (Short range).
         if(_tipusUnitat in cc_tfar_llistaRF ) then {
             _unitat linkItem _radioRF;
         } else {
@@ -83,7 +83,7 @@ if(_tipusUnitat != "nil") then {
             };
         };
         
-        // Assignar les radios de llarg abast i tot el material que originariament
+        // Assignar les radios de llarg abast i tot el material que originariament.
         // hi havia a la motxila
         if( _tipusUnitat in cc_tfar_llistaLR ) then {
             _objectesMotxilla = backpackItems player;

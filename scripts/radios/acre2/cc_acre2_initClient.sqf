@@ -9,12 +9,12 @@
 
 private["_unitat","_nomPreset"];
 
-// Donar temps a ACRE2 per inicialitzar-se
+// Donar temps a ACRE2 per inicialitzar-se.
 sleep 3;
 
 _unitat = player;
 
-// Configurar els presets de radio depenent del bàndol
+// Configurar els presets de radio depenent del bàndol.
 if (cc_acre2_config_dividirFrequencies) then {
     switch(side _unitat) do {
         case blufor: {_nomPreset = "default2"};
@@ -35,18 +35,18 @@ if (cc_acre2_config_dividirFrequencies) then {
 // les radios que es desitgin utilitzant depenent del rol tal i com s'ha especificat al fitxer
 // "cc_acre2_configuracio.sqf". El xat d'espectador es configurarà depenent de si el jugador està viu o no.
 
-// Si el jugador està viu, procedir
+// Si el jugador està viu, procedir.
 if(alive _unitat) then {
-    // Esperar fins que l'equipació estigui assignada
+    // Esperar fins que l'equipació estigui assignada.
     waitUntil{(_unitat getVariable ["cc_var_configEquipacio_Llesta", false])};
     
-    // Definir els idiomes per cada bàndol
+    // Definir els idiomes per cada bàndol.
     [] call cc_fnc_acre2_determinarIdiomes;
     
-    // Treure totes les ràdios de l'inventari
+    // Treure totes les ràdios de l'inventari.
     [] call cc_fnc_acre2_treureRadios;
 
-    // Afegir les ràdios a cada unitat
+    // Afegir les ràdios a cada unitat.
     [] call cc_fnc_acre2_afegirRadios;
     
     if ( cc_param_debugOutput == 1 ) then {

@@ -11,28 +11,28 @@
 //         0.2 (2015/06/12) Canvis deguts a la versió 0.3.8 de RHS.                                      //
 //=======================================================================================================//
 
-// Mostrar una pantalla negra
+// Mostrar una pantalla negra.
 titleCut ["", "BLACK FADED", 999];
 
 [] Spawn {
     waitUntil{!(isNil "cc_preload_completat")};
     
-    // Deshabilitar la simulació a totes les unitats durant la pantalla negra
+    // Deshabilitar la simulació a totes les unitats durant la pantalla negra.
     {
         _x enableSimulation false;
     } forEach allUnits;
     
-    // Mostrar una citació
+    // Mostrar una citació.
     titleText ["Relaxar-se mata! Estigueu alerta!\nViper - Capità dels cavallers del Cel","PLAIN"];
     titleFadeOut 7;
     sleep 5;
 
-    // Rehabilitar la simulació a totes les unitats durant la pantalla negra
+    // Rehabilitar la simulació a totes les unitats durant la pantalla negra.
     {
         _x enableSimulation true;
     } forEach allUnits;
     
-    // Nom de la missió, dia i localització
+    // Nom de la missió, dia i localització.
     [
         [
             ["Nom de la missió","<t color = '#F70D1A' align = 'right' shadow = '1' size = '1.2'>%1</t><br/>"],

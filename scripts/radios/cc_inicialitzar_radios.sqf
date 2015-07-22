@@ -10,10 +10,6 @@
 //         0.2 (2015/06/09) Canviada la configuració de paràmetres de missió a mods carregats.           //
 //=======================================================================================================//
 
-// Espera a que els paràmetres que controlen els sistemes de radio estigui ninicialitzats
-//waitUntil(!isNil "cc_mod_tfar");
-//waitUntil(!isNil "cc_mod_acre2");
-
 // Configurar el sistema de ràdio carregat.
 if (cc_mod_tfar) then {
     // Configurar el Task Force Arrowhead Radio (TFAR)

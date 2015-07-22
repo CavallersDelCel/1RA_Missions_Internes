@@ -7,8 +7,7 @@
 //             https://github.com/michail-nikolaev/task-force-arma-3-radio/wiki                          //
 //=======================================================================================================//
 
-
-// Assignar les frequències de ràdio
+// Assignar les frequències de ràdio.
 [] call cc_fnc_tfar_configurarFreqRadios;
 
 //============================================ FI DEL FITXER ============================================//

@@ -7,13 +7,13 @@
 //             http://gitlab.idi-systems.com/idi-systems/acre2-public/wikis/home                         //
 //=======================================================================================================//
 
-// Incloure el fitxer de configuració
+// Incloure el fitxer de configuració.
 #include "cc_acre2_configuracio.sqf"
 
-// Configurar els presets per cada radio
+// Configurar els presets per cada radio.
 [] execVM "scripts\radios\acre2\cc_acre2_confCanals.sqf";
 
-// Si el script s'està executant en un servidor
+// Si el script s'està executant en un servidor.
 if (hasInterface) then {
 
     {
