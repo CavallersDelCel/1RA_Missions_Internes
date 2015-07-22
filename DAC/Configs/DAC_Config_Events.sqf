@@ -23,51 +23,51 @@ switch (_TypNumber) do
 	case 1:
 	{
 		_Events_Unit_S =	[
-								[],
-								[],
-								[],
-								[],
-								[],
-								[],
-								[]
+								["{_x addCuratorEditableObjects [(units _group),true]} forEach allCurators"],  // S'executa durant la creacció.
+								[],  // S'executa al arribar al waypoint.
+								[],  // S'executa quan el grup està eliminat.
+								[],  // S'executa quan s'elimina la unitat.
+								[],  // S'executa abans de que es redueixi el grup per guardar recursos.
+								["{_x addCuratorEditableObjects [[_unit],true]} forEach allCurators"],  // S'executa després de que es redueixi el grup per guardar recursos.
+								[]   // S'executa al detectar enemics.
 							];
 		_Events_Unit_V = 	[
+								["{vehicleGen = vehicle _x} forEach units _group; {_x addCuratorEditableObjects [[vehicleGen],true]} forEach allCurators; {_x addCuratorEditableObjects [(units _group),true]} forEach allCurators"],
 								[],
 								[],
 								[],
 								[],
-								[],
-								[],
+								["{_x addCuratorEditableObjects [[_unit],true]} forEach allCurators"],
 								[]
 							];
 		_Events_Unit_T = 	[
-								[],
+								["{vehicleGen = vehicle _x} forEach units _group; {_x addCuratorEditableObjects [[vehicleGen],true]} forEach allCurators; {_x addCuratorEditableObjects [(units _group),true]} forEach allCurators"],
 								[],
 								[],
 								[]
 							];
 		_Events_Unit_A = 	[
-								[],
+								["{vehicleGen = vehicle _x} forEach units _group; {_x addCuratorEditableObjects [[vehicleGen],true]} forEach allCurators; {_x addCuratorEditableObjects [(units _group),true]} forEach allCurators"],
 								[],
 								[],
 								[]
 							];
 		_Events_Unit_C = 	[
+								["{_x addCuratorEditableObjects [(units _group),true]} forEach allCurators"],
 								[],
 								[],
 								[],
 								[],
-								[],
-								[]
+								["{_x addCuratorEditableObjects [[_unit],true]} forEach allCurators"]
 							];
 		_Events_Unit_H = 	[
-								[],
+								["{_x addCuratorEditableObjects [(units _group),true]} forEach allCurators"],
 								[],
 								[],
 								[]
 							];
 		_Events_Vehicle =	[
-								[],
+								["{_x addCuratorEditableObjects [[_vehc],true]} forEach allCurators"],
 								[],
 								[]
 							];
