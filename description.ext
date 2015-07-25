@@ -50,10 +50,12 @@ forceRotorLibSimulation = 1;
 // Respawn Settings: Definició del tipus de respawn. https://community.bistudio.com/wiki/Arma_3_Respawn  //
 //=======================================================================================================//
 
-respawn = "BIRD";        // Es fa un respawn com a ocell, fi de la partida pel jugador
+respawn = "BIRD";        // Es fa un respawn com a ocell, fi de la partida pel jugador.
+respawndelay = 3;        // Temps que es tarda en fer respawn (en segons).
+respawnOnStart = 0;
 disabledAI = 1;          // Amaga les unitats amigues jugables que no són controlades per un jugador
                          // (Playable Unit) https://community.bistudio.com/wiki/Description.ext#disabledAI
-respawnTemplates[] = {"Seagull","Spectator","EndMission"};
+respawnTemplates[] = {"Spectator","EndMission"};
 
 //=======================================================================================================//
 // PARAMETRES DE LA MISSIÓ: RETOCS PER L'ADMINISTRADOR                                                   //
