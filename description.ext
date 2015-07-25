@@ -205,6 +205,8 @@ class CfgFunctions {
             class tfar_configurarFreqRadios{};
             class tfar_configurarXatEspectador{};
             class tfar_modificarSenyal{};
+            class tfar_configurarCanals{};
+            class tfar_configurarEstereo{};
         };
         
         class zeus {

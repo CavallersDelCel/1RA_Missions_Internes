@@ -31,6 +31,17 @@ cc_tfar_config_utilitzarRadiosPerDefecte = false;
 //   - true: es distribueixen radios.
 cc_tfar_config_distribuirRadios = true;
 
+// Variable per controlar si es configuren les freqüències de les ràdios per esquadra i equip o es deixen
+// a les que venen per defecte al fitxer fn_tfar_configurarFreqRadios.sqf.
+//   - false: s'utilitzen les freqüències especificades a fn_tfar_configurarFreqRadios.sqf.
+//   - true: s'utilitzen les freqüències per esquadra i equip tal i com es descriu a "/scripts/comu/cc_variables_comunes.sqf".
+cc_tfar_config_configurarFreqPerEquip = true;
+
+// Variable per configurar el estèreo de les ràdios.
+//   - false: no es configura el estèreo.
+//   - true: el estèreo es configura en cas de tenir una ràdio que ho suporti.
+cc_tfar_config_configurarEstereo = true;
+
 // Llista d'unitats amb Rifleman Radio (fn_configEquipacio.sqf).
 cc_tfar_llistaRF = ["rfl", "rflat", "gr", "ar", "dm", "mg", "amg", "at", "aat", "aa", "aaa", "en", "exp", "divme", "div"];
 

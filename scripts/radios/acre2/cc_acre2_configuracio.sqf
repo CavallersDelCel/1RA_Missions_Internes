@@ -63,7 +63,7 @@ cc_acre2_config_idioma_civ = ["grec"];
 // Configuració de l'assignació de ràdios en funció del rol.                                             //
 //=======================================================================================================//
 
-// Variable per controlar si es distribueixen radios a la partida. Pot ser útil en cas de missions
+// Variable per controlar si es distribueixen ràdios a la partida. Pot ser útil en cas de missions
 // de supervivència.
 //   - false: no es distribueixen radios.
 //   - true: es distribueixen radios.
@@ -74,32 +74,32 @@ cc_acre2_config_distribuirRadios = true;
 //   - true: les freqüències es divideixen per bàndols.
 cc_acre2_config_dividirFrequencies = true;
 
-// Variable per controlar si es distribueix la radio definida a la variable "cc_acre2_radioSoldats", per
+// Variable per controlar si es distribueix la ràdio definida a la variable "cc_acre2_radioSoldats", per
 // defecte una AN/PRC 343, a totes les unitats.
 //    - false: només les unitats a la llista "cc_acre2_llistaRadioSoldats" rebran aquesta ràdio.
 //    - true: totes les unitats rebran la ràdio definida a "cc_acre2_radioSoldats".
 cc_acre2_config_tothomRadioSoldats = true;
 
-// Radio assignada als soldats
+// Ràdio assignada als soldats.
 cc_acre2_radioSoldats = "ACRE_PRC343";
 
-// Radio assignada als oficials
+// Ràdio assignada als oficials.
 cc_acre2_radioOficials = "ACRE_PRC152";
 
-// Radio extra
+// Ràdio extra.
 cc_acre2_radioRTO = "ACRE_PRC117F";
 
-// Noms dels canals a les radios AN/PRC 148, AN/PRC 152 i AN/PRC 117F.
+// Noms dels canals a les ràdios AN/PRC 148, AN/PRC 152 i AN/PRC 117F.
 cc_acre2_config_llistaCanals = ["ALFA","ALFA 1","ALFA 2","ALFA 3","COMANDAMENT","SUPORT","ARTILLERIA"];
 cc_acre2_config_FreqCanals = [200, 201, 202, 203, 41, 51, 61];
 
-// Llista d'unitats amb Rifleman Radio (fn_configEquipacio.sqf).
+// Llista d'unitats amb "Rifleman Radio" (fn_configEquipacio.sqf).
 cc_acre2_llistaRadioSoldats = ["rfl", "rflat", "gr", "ar", "dm", "mg", "amg", "at", "aat", "aa", "aaa", "en", "exp", "divme", "div"];
 
-// Llista d'unitats amb Short Range Radio (fn_configEquipacio.sqf).
+// Llista d'unitats amb "Short Range Radio ""(fn_configEquipacio.sqf).
 cc_acre2_llistaRadioOficials = ["pl", "psg", "rto", "fo", "me", "sl", "tl", "sn", "sp", "divsl"];
 
-// Llista d'unitats amb Long Range Radio (fn_configEquipacio.sqf).
+// Llista d'unitats amb "Long Range Radio" (fn_configEquipacio.sqf).
 cc_acre2_llistaRadioRTO = ["rto", "fo"];
 
 //============================================ FI DEL FITXER ============================================//

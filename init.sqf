@@ -28,6 +28,8 @@ enableSaving [false, false];
 //=======================================================================================================//
 enableSentences false;
 
+cc_script_comu = [] execVM "scripts\comu\cc_variables_comunes.sqf";
+
 // Execució del script per generar els Briefings.
 cc_script_briefing = [] execVM "briefing.sqf";
 
@@ -40,11 +42,11 @@ if (cc_param_utilitzarPerfils == 1 && !isDedicated) then {
     cc_script_perfils = [] execVM "scripts\configEquipacio\cc_equipacio_rhs_usarmy_d_perfils.sqf";
 };
 
-// Pantalla d'introducció.
-cc_script_intro = [] execVM "scripts\intro\cc_intro.sqf";
-
 // Inicialitzar el sistema de radios.
 cc_script_radio = [] execVM "scripts\radios\cc_inicialitzar_radios.sqf";
+
+// Pantalla d'introducció.
+cc_script_intro = [] execVM "scripts\intro\cc_intro.sqf";
 
 if ( isServer ) then {
     cc_script_zeus = [] execVM "scripts\zeus\cc_zeus_init.sqf"

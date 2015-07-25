@@ -87,7 +87,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="LEsq";
-					init="[""sl"",this] call cc_fnc_configEquipacio;";
+					init="[""sl"",this] call cc_fnc_configEquipacio; this setVariable[""cc_var_grupUnitat"",[""Bravo"",1],true];";
 					description="Lider d'Esquadra";
 				};
 				class Item1
