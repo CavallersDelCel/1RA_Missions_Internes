@@ -16,6 +16,13 @@
 // Activar el Dynamic AI Creator 3 (DAC3): http://www.armaholic.com/page.php?id=25550                    //
 //=======================================================================================================//
 DAC_Basic_Value = 0;
+if (isServer) then{
+    DAC_STRPlayers = []; 
+    {
+        DAC_STRPlayers pushBack (name vehicle _x);
+    } forEach playableUnits;
+    publicVariable "DAC_STRPlayers";
+}
 execVM "DAC\DAC_Config_Creator.sqf";
 
 //=======================================================================================================//

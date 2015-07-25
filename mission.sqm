@@ -86,7 +86,7 @@ class Mission
 					player="PLAYER COMMANDER";
 					leader=1;
 					skill=0.60000002;
-					text="LEsq";
+					text="CC_A1_SL";
 					init="[""sl"",this] call cc_fnc_configEquipacio; this setVariable[""cc_var_grupUnitat"",[""Bravo"",1],true];";
 					description="Lider d'Esquadra";
 				};
@@ -98,6 +98,7 @@ class Mission
 					vehicle="rhsusf_army_ocp_medic";
 					player="PLAY CDG";
 					skill=0.60000002;
+					text="CC_A1_ME";
 					init="[""me"",this] call cc_fnc_configEquipacio;";
 				};
 			};
