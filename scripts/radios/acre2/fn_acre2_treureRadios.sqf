@@ -2,7 +2,7 @@
 // Arxiu: fn_acre2_treureRadios.sqf                                                                      //
 // Autor: CC_Magnetar                                                                                    //
 // Versió: 0.1                                                                                           //
-// Creació del Document: 28/04/2015                                                                      //
+// Creació del Document: 2015/04/28                                                                      //
 // Descripció: Aquest document serveix per esborrar les radios a l'inventari de forma que es pugui       //
 //             decidir quines radios es fan servir durant la partida en cas de que no es vulguin fer     //
 //             servir les que van per defecte als perfils. Advanced Combat Radio Environment 2 (ACRE2)   //

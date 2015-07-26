@@ -178,6 +178,7 @@ class CfgFunctions {
             class acre2_determinarIdiomes{};
             class acre2_afegirRadios{};
             class acre2_treureRadios{};
+            class acre2_configurarCanals{};
             class acre2_configurarXatEspectador{};
         };
         

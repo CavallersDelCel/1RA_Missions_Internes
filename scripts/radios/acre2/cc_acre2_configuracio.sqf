@@ -2,7 +2,7 @@
 // Arxiu: cc_acre2_configuracio.sqf                                                                      //
 // Autor: CC_Magnetar                                                                                    //
 // Versió: 0.1                                                                                           //
-// Creació del Document: 27/04/2015                                                                      //
+// Creació del Document: 2015/04/27                                                                      //
 // Descripció: Aquest document serveix per definir parmàmetres bàsics per la configuració del Advanced   //
 //             Combat Radio Environment 2 (ACRE2)                                                        //
 //             http://gitlab.idi-systems.com/idi-systems/acre2-public/wikis/home                         //
@@ -80,6 +80,12 @@ cc_acre2_config_dividirFrequencies = true;
 //    - true: totes les unitats rebran la ràdio definida a "cc_acre2_radioSoldats".
 cc_acre2_config_tothomRadioSoldats = true;
 
+// Variable per controlar si es configuren els canals de les ràdios per esquadra i equip. Les freqüències utilitzades
+// són les que venen per defecte al fitxer "/scripts/comu/cc_variables_comunes.sqf".
+//   - false: els canals es deixen sense configurar.
+//   - true: els canals es configuren depenent de l'esquadra, de l'equip de foc i del tipus de ràdio.
+cc_acre2_config_configurarCanalsPerEquip = true;
+
 // Ràdio assignada als soldats.
 cc_acre2_radioSoldats = "ACRE_PRC343";
 
@@ -100,6 +106,6 @@ cc_acre2_llistaRadioSoldats = ["rfl", "rflat", "gr", "ar", "dm", "mg", "amg", "a
 cc_acre2_llistaRadioOficials = ["pl", "psg", "rto", "fo", "me", "sl", "tl", "sn", "sp", "divsl"];
 
 // Llista d'unitats amb "Long Range Radio" (fn_configEquipacio.sqf).
-cc_acre2_llistaRadioRTO = ["rto", "fo"];
+cc_acre2_llistaRadioRTO = ["rto", "fo","sl"];
 
 //============================================ FI DEL FITXER ============================================//

@@ -2,7 +2,7 @@
 // Arxiu: cc_inicialitzar_acre2.sqf                                                                       //
 // Autor: CC_Magnetar                                                                                    //
 // Versió: 0.1                                                                                           //
-// Creació del Document: 27/04/2015                                                                      //
+// Creació del Document: 2015/04/27                                                                      //
 // Descripció: Aquest document serveix per configurar el Advanced Combat Radio Environment 2 (ACRE2)     //
 //             http://gitlab.idi-systems.com/idi-systems/acre2-public/wikis/home                         //
 //=======================================================================================================//
@@ -11,7 +11,7 @@
 #include "cc_acre2_configuracio.sqf"
 
 // Configurar els presets per cada radio.
-[] execVM "scripts\radios\acre2\cc_acre2_confCanals.sqf";
+[] execVM "scripts\radios\acre2\cc_acre2_configurarPresets.sqf";
 
 // Si el script s'està executant en un servidor.
 if (hasInterface) then {

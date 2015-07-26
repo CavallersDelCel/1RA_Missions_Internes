@@ -2,7 +2,7 @@
 // Arxiu: cc_acre2_initClient.sqf                                                                        //
 // Autor: CC_Magnetar                                                                                    //
 // Versió: 0.1                                                                                           //
-// Creació del Document: 28/04/2015                                                                      //
+// Creació del Document: 2015/04/28                                                                      //
 // Descripció: Aquest document serveix per configurar el Advanced Combat Radio Environment 2 (ACRE2)     //
 //             http://gitlab.idi-systems.com/idi-systems/acre2-public/wikis/home                         //
 //=======================================================================================================//
@@ -48,6 +48,11 @@ if(alive _unitat) then {
 
     // Afegir les ràdios a cada unitat.
     [] call cc_fnc_acre2_afegirRadios;
+    
+    if (cc_acre2_config_configurarCanalsPerEquip) then {
+        // Configurar els canals actius.
+        [] call cc_fnc_acre2_configurarCanals;
+    };
     
     if ( cc_param_debugOutput == 1 ) then {
         _unitat sideChat format ["DEBUG (fn_acre2_initClient.sqf): Radios configurades."];
