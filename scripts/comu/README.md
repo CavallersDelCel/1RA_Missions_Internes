@@ -5,11 +5,11 @@ d'addons externs:
 
 * *`cc_variables_comunes.sqf`*: és l'únic fitxer que pot ser d'interès per el creador de la missió. En aquest fitxer es defineixen les variables `cc_var_grups1RA`
   i `cc_var_frequencies1RA`. Aquestes variables són importants a l'hora de configurar, si es vol, els canals i les freqüències de les ràdios del Task Force
-  Arrowhead Radio (TFAR) o del Advanced Combat Radio Environment 2. És important que aquestes dues variables tinguin la mateixa mida.
+  Arrowhead Radio (TFAR) o del Advanced Combat Radio Environment 2 (ACRE2). És important que aquestes dues variables tinguin la mateixa mida.
 * *`fn_processarMods`*: Aquest fitxer no s'hauria de modificar a menys que es vulgui afegir un mod que es vulgui detectar de forma automàtica per després
   configurar-lo mitjançant scripts. Actualment els següents mods estan suportats:
   * Advanced Combat Environment 3 (ACE 3). A l'estàndard.
-  * Advanced Combat Radio Enviroment 2. 
+  * Advanced Combat Radio Enviroment 2 (ACRE2). 
   * Advanced Gameplay Modification (AGM). Obsolet.
   * Task Force Arrowhead Radio (TFAR). A l'estàndard.
 * *`fn_processarParamsArray`*: Aquest fitxer no s'ha de modificar ja que processa els diferents paràmetres de la missió (`class Params` al fitxer `description.ext`)
