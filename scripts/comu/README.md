@@ -7,10 +7,11 @@ d'addons externs:
   i `cc_var_frequencies1RA`. Aquestes variables són importants a l'hora de configurar, si es vol, els canals i les freqüències de les ràdios del Task Force
   Arrowhead Radio (TFAR) o del Advanced Combat Radio Environment 2 (ACRE2). És important que aquestes dues variables tinguin la mateixa mida.
 * *`fn_processarMods`*: Aquest fitxer no s'hauria de modificar a menys que es vulgui afegir un mod que es vulgui detectar de forma automàtica per després
-  configurar-lo mitjançant scripts. Actualment els següents mods estan suportats:
+  configurar-lo mitjançant scripts. S'executa durant la fase de `PostInit`. Actualment els següents mods estan suportats:
   * Advanced Combat Environment 3 (ACE 3). A l'estàndard.
   * Advanced Combat Radio Enviroment 2 (ACRE2). 
   * Advanced Gameplay Modification (AGM). Obsolet.
   * Task Force Arrowhead Radio (TFAR). A l'estàndard.
-* *`fn_processarParamsArray`*: Aquest fitxer no s'ha de modificar ja que processa els diferents paràmetres de la missió (`class Params` al fitxer `description.ext`)
-  per tal de que les variables definides siguin accessibles a tots els clients i siguin compatibles amb l'ús de servidors dedicats.
+* *`fn_processarParamsArray`*: Aquest fitxer, que s'executa durant la fase de `PreInit`, no s'ha de modificar ja que processa els diferents paràmetres de la missió
+  (`class Params` al fitxer `description.ext`) per tal de que les variables definides siguin accessibles a tots els clients i siguin compatibles amb l'ús de
+  servidors dedicats.
