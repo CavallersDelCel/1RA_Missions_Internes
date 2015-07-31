@@ -6,7 +6,7 @@ Addicionalment, el fitxer 'cc_configEquipacio_perfils.sqf` equipa la unitat amb 
 
 #### Els fitxers `cc_configEquipacio_*.sqf`
 
-Per tal d'equipar una de les unitats jugables o vehicle que pertanyin a una facció cal posar la següent entrada a la línia d'init de la unitat.
+Per tal d'equipar, depenent de mods de realisme com ACE3 i/o del sistema mèdic que s'utilitzi de forma automàtica, una de les unitats jugables o vehicle que pertanyin a una facció cal posar la següent entrada a la línia d'init de la unitat.
 
 `["ROL_JUGADOR",this] call cc_fnc_configEquipacio;`
 
@@ -19,6 +19,8 @@ En cas de caixes de munició, que no tenen cap facció assignada, cal modificar 
 
 Aquest tercer paràmetre, `FACCIO`, s'utilitza per forçar una certa facció a la unitat i també es podria fer servir per sobreescriure la facció de la unitat. Això dóna la possibilitat d'equipar
 unitats militars amb robes civils que estiguin definides a `cc_configEquipacio_civ_f.sqf` per exemple.
+
+Els fitxers `cc_configEquipacio_rhs*.sqf` depenen del mod RHS.
 
 #### La carpeta 1RA_Perfils
 
