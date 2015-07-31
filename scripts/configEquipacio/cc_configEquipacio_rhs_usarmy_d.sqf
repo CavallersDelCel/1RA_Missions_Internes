@@ -1,13 +1,13 @@
 //=======================================================================================================//
-// Arxiu: cc_equipacio_rhs_insurgents.sqf                                                                //
+// Arxiu: cc_configEquipacio_rhs_usarmy_d.sqf                                                            //
 // Autor: CC_Magnetar                                                                                    //
-// Versió: 0.6                                                                                           //
-// Creació del Document: 2015/06/04                                                                      //
+// Versió: 0.10                                                                                          //
+// Creació del Document: 2015/04/02                                                                      //
 // Descripció: Aquest document serveix per equipar els jugadors amb l'equipació dissenyada per la missió //
 //             sense fer servir els perfils estàndard del grup dels Cavallers del Cel. Requereix que el  //
-//             jugador formi part de la facció RHS: Insurgents "rhs_faction_insurgents"                  //
-//             http://class.rhsmods.org/rhsafrf/CfgGroups_Indep_rhs_faction_insurgents.html              //
-//             Cal afegirla següent línia al INIT de la unitat en l'editor:                              //
+//             jugador formi part de la facció RHS: United States Army "rhs_faction_usarmy_d"            //
+//             http://class.rhsmods.org/rhsusaf/CfgGroups_West_rhs_faction_usarmy_d.html                 //
+//             Cal afegir la següent línia al INIT de la unitat en l'editor:                             //
 //                                                                                                       //
 //                  ["ROL_JUGADOR",this] call cc_fnc_configEquipacio;                                    //
 //                                                                                                       //
@@ -68,12 +68,17 @@
 //                  rhs_faction_vpvo        Soviet Air Defense Troops (Voyska protivovozdushnoy oborony) //
 //                  rhs_faction_vdv         Russian Airborne Troops (Vozdushno-desantnye voyska)         //
 //                                                                                                       //
-// Canvis: 0.1 (2015/06/04) Versió inicial.                                                              //
-//         0.2 (2015/06/10) Afegit el cas default amb equipació de fuseller (rfl).                       //
-//         0.3 (2015/06/12) Canvis a la M249 i M240B degut a la versió 0.3.8 de RHS.                     //
-//         0.4 (2015/06/19) Afegida l'explicació pel tercer paràmetre (opcional).                        //
-//         0.5 (2015/07/03) Afegit el rol de Bussejador especialista en explosius (divexp).              //
-//         0.6 (2015/07/15) Canvi a Params (Arma v1.48).                                                 //
+// Canvis: 0.1  (2015/04/02) Versió inicial.                                                             //
+//         0.2  (2015/04/26) Canviat el nom del fitxer i dels uniformes (RHS v0.3.7).                    //
+//         0.3  (2015/05/17) Afegida l'equipació pel vehicle HMMWV.                                      //
+//         0.4  (2015/05/26) Canviat al sistema ACE3.                                                    //
+//         0.5  (2015/06/10) Afegit el cas default amb equipació de fuseller (rfl).                      //
+//         0.6  (2015/06/12) Canvis a la M249 i M240B degut a la versió 0.3.8 de RHS.                    //
+//         0.7  (2015/06/18) Afegit el rol d'explosius (exp). En cas de que ni AGM ni ACE3 estiguin      //
+//                           carregats el script no falla.                                               //
+//         0.8  (2015/06/19) Afegida l'explicació pel tercer paràmetre (opcional).                       //
+//         0.9  (2015/07/03) Afegit el rol de Bussejador especialista en explosius (divexp).             //
+//         0.10 (2015/07/15) Canvi a Params (Arma v1.48).                                                //
 //=======================================================================================================//
 
 //=======================================================================================================//
@@ -93,36 +98,36 @@ private["_aprincipal"];
 
 params ["_tipusUnitat", "_unitat"];
 _tipusUnitat = toLower _tipusUnitat;
-_esInfanteria = _unitat isKindOf "CAManBase";  
+_esInfanteria = _unitat isKindOf "CAManBase"; 
 
 //=======================================================================================================//
 // Resum d'equipació: Armes, accessoris, ulleres, armilles, ...                                          //
 //=======================================================================================================//
 
 // Uniformes
-_uniforme = "rhs_uniform_cu_ucp";
+_uniforme = "rhs_uniform_cu_ocp";
 _uniformeSN = "U_B_GhillieSuit";
 _uniformeDIV = "U_B_Wetsuit";
 
 // Armilles.
-_armillaSQ = "rhsusf_iotv_ucp_squadleader";
-_armillaTL = "rhsusf_iotv_ucp_teamleader";
-_armillaRFL = "rhsusf_iotv_ucp_rifleman";
-_armillaGR = "rhsusf_iotv_ucp_grenadier";
-_armillaME = "rhsusf_iotv_ucp_medic";
-_armillaSAW = "rhsusf_iotv_ucp_SAW";
+_armillaSQ = "rhsusf_iotv_ocp_squadleader";
+_armillaTL = "rhsusf_iotv_ocp_teamleader";
+_armillaRFL = "rhsusf_iotv_ocp_rifleman";
+_armillaGR = "rhsusf_iotv_ocp_grenadier";
+_armillaME = "rhsusf_iotv_ocp_medic";
+_armillaSAW = "rhsusf_iotv_ocp_SAW";
 _armillaDIV = "V_RebreatherB";
 
 // Cascs.
-_casc = "rhsusf_ach_helmet_headset_ucp";
-_cascSN = "rhs_Booniehat_ucp";
+_casc = "rhsusf_ach_helmet_headset_ocp";
+_cascSN = "rhs_Booniehat_ocp";
 
 // Ulleres.
 _ulleres = "G_Tactical_Clear";
 _ulleresDIV = "G_Diving";
 
 // Motxilla.
-_motxilla = "rhsusf_assault_eagleaiii_ucp";
+_motxilla = "rhsusf_assault_eagleaiii_ocp";
 _motxillaDIV = "B_AssaultPack_blk";
 
 // Armes principals.
@@ -1531,7 +1536,7 @@ switch (_tipusUnitat) do
     };
     
     default {
-        _unitat sideChat format ["DEBUG (cc_equipacio_rhs_insurgents.sqf): el tipus d'unitat %1 no està definit. Utilitzant l'equipació de fuseller.", _tipusUnitat];
+        _unitat sideChat format ["DEBUG (cc_configEquipacio_rhs_usarmy_d.sqf): el tipus d'unitat %1 no està definit. Utilitzant l'equipació de fuseller.", _tipusUnitat];
         
         // Armilla i motxilla.
         _unitat addVest _armillaRFL;

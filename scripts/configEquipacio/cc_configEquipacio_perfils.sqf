@@ -1,5 +1,5 @@
 //=======================================================================================================//
-// Arxiu: cc_equipacio_rhs_usarmy_d_perfils.sqf                                                          //
+// Arxiu: cc_configEquipacio_perfils.sqf                                                                 //
 // Autor: CC_Magnetar                                                                                    //
 // Versió: 0.4                                                                                           //
 // Creació del Document: 2015/04/02                                                                      //
@@ -57,7 +57,7 @@ switch (_tipusUnitat) do
     case "sl": {
         _perfil = "CC - Lider d'esquadra M4A1+M320 OCP";
         if (cc_param_debugOutput == 1) then {
-            _unitat sideChat format ["DEBUG (cc_equipacio_rhs_usarmy_d_perfils.sqf): Utilitzant el perfil %1 pel tipus d'unitat %2.", _perfil, _tipusUnitat];
+            _unitat sideChat format ["DEBUG (cc_configEquipacio_perfils.sqf): Utilitzant el perfil %1 pel tipus d'unitat %2.", _perfil, _tipusUnitat];
         };
         _loadout = [_unitat,[profileNamespace,_perfil]] call BIS_fnc_loadInventory;
     };
@@ -66,7 +66,7 @@ switch (_tipusUnitat) do
     case "tl": {
         _perfil = "CC - Lider d'equip M4A1+M320 OCP";
         if (cc_param_debugOutput == 1) then {
-            _unitat sideChat format ["DEBUG (cc_equipacio_rhs_usarmy_d_perfils.sqf): Utilitzant el perfil %1 pel tipus d'unitat %2.", _perfil, _tipusUnitat];
+            _unitat sideChat format ["DEBUG (cc_configEquipacio_perfils.sqf): Utilitzant el perfil %1 pel tipus d'unitat %2.", _perfil, _tipusUnitat];
         };
         _loadout = [_unitat,[profileNamespace,_perfil]] call BIS_fnc_loadInventory;
     };
@@ -75,7 +75,7 @@ switch (_tipusUnitat) do
     case "rfl": {
         _perfil = "CC - Fuseller M4A1 OCP";
         if (cc_param_debugOutput == 1) then {
-            _unitat sideChat format ["DEBUG (cc_equipacio_rhs_usarmy_d_perfils.sqf): Utilitzant el perfil %1 pel tipus d'unitat %2.", _perfil, _tipusUnitat];
+            _unitat sideChat format ["DEBUG (cc_configEquipacio_perfils.sqf): Utilitzant el perfil %1 pel tipus d'unitat %2.", _perfil, _tipusUnitat];
         };
         _loadout = [_unitat,[profileNamespace,_perfil]] call BIS_fnc_loadInventory;
     };
@@ -84,7 +84,7 @@ switch (_tipusUnitat) do
     case "rflat": {
         _perfil = "CC - AT M4A1+AT4 OCP";
         if (cc_param_debugOutput == 1) then {
-            _unitat sideChat format ["DEBUG (cc_equipacio_rhs_usarmy_d_perfils.sqf): Utilitzant el perfil %1 pel tipus d'unitat %2.", _perfil, _tipusUnitat];
+            _unitat sideChat format ["DEBUG (cc_configEquipacio_perfils.sqf): Utilitzant el perfil %1 pel tipus d'unitat %2.", _perfil, _tipusUnitat];
         };
         _loadout = [_unitat,[profileNamespace,_perfil]] call BIS_fnc_loadInventory;
     };
@@ -93,7 +93,7 @@ switch (_tipusUnitat) do
     case "gr": {
         _perfil = "CC - Granader M4A1+M320 OCP";
         if (cc_param_debugOutput == 1) then {
-            _unitat sideChat format ["DEBUG (cc_equipacio_rhs_usarmy_d_perfils.sqf): Utilitzant el perfil %1 pel tipus d'unitat %2.", _perfil, _tipusUnitat];
+            _unitat sideChat format ["DEBUG (cc_configEquipacio_perfils.sqf): Utilitzant el perfil %1 pel tipus d'unitat %2.", _perfil, _tipusUnitat];
         };
         _loadout = [_unitat,[profileNamespace,_perfil]] call BIS_fnc_loadInventory;
     };
@@ -102,7 +102,7 @@ switch (_tipusUnitat) do
     case "ar": {
         _perfil = "CC - FA M249 OCP";
         if (cc_param_debugOutput == 1) then {
-            _unitat sideChat format ["DEBUG (cc_equipacio_rhs_usarmy_d_perfils.sqf): Utilitzant el perfil %1 pel tipus d'unitat %2.", _perfil, _tipusUnitat];
+            _unitat sideChat format ["DEBUG (cc_configEquipacio_perfils.sqf): Utilitzant el perfil %1 pel tipus d'unitat %2.", _perfil, _tipusUnitat];
         };
         _loadout = [_unitat,[profileNamespace,_perfil]] call BIS_fnc_loadInventory;
     };
@@ -111,7 +111,7 @@ switch (_tipusUnitat) do
     case "mg": {
         _perfil = "CC - Metrallador M240B OCP";
         if (cc_param_debugOutput == 1) then {
-            _unitat sideChat format ["DEBUG (cc_equipacio_rhs_usarmy_d_perfils.sqf): Utilitzant el perfil %1 pel tipus d'unitat %2.", _perfil, _tipusUnitat];
+            _unitat sideChat format ["DEBUG (cc_configEquipacio_perfils.sqf): Utilitzant el perfil %1 pel tipus d'unitat %2.", _perfil, _tipusUnitat];
         };
         _loadout = [_unitat,[profileNamespace,_perfil]] call BIS_fnc_loadInventory;
     };
@@ -120,7 +120,7 @@ switch (_tipusUnitat) do
     case "at": {
         _perfil = "CC - AT M4A1+Javelin OCP";
         if (cc_param_debugOutput == 1) then {
-            _unitat sideChat format ["DEBUG (cc_equipacio_rhs_usarmy_d_perfils.sqf): Utilitzant el perfil %1 pel tipus d'unitat %2.", _perfil, _tipusUnitat];
+            _unitat sideChat format ["DEBUG (cc_configEquipacio_perfils.sqf): Utilitzant el perfil %1 pel tipus d'unitat %2.", _perfil, _tipusUnitat];
         };
         _loadout = [_unitat,[profileNamespace,_perfil]] call BIS_fnc_loadInventory;
     };
@@ -129,7 +129,7 @@ switch (_tipusUnitat) do
     case "aa": {
         _perfil = "CC - AT M4A1+Stinger OCP";
         if (cc_param_debugOutput == 1) then {
-            _unitat sideChat format ["DEBUG (cc_equipacio_rhs_usarmy_d_perfils.sqf): Utilitzant el perfil %1 pel tipus d'unitat %2.", _perfil, _tipusUnitat];
+            _unitat sideChat format ["DEBUG (cc_configEquipacio_perfils.sqf): Utilitzant el perfil %1 pel tipus d'unitat %2.", _perfil, _tipusUnitat];
         };
         _loadout = [_unitat,[profileNamespace,_perfil]] call BIS_fnc_loadInventory;
     };
@@ -138,7 +138,7 @@ switch (_tipusUnitat) do
     case "dm": {
         _perfil = "CC - Tirador SR-25EC OCP";
         if (cc_param_debugOutput == 1) then {
-            _unitat sideChat format ["DEBUG (cc_equipacio_rhs_usarmy_d_perfils.sqf): Utilitzant el perfil %1 pel tipus d'unitat %2.", _perfil, _tipusUnitat];
+            _unitat sideChat format ["DEBUG (cc_configEquipacio_perfils.sqf): Utilitzant el perfil %1 pel tipus d'unitat %2.", _perfil, _tipusUnitat];
         };
         _loadout = [_unitat,[profileNamespace,_perfil]] call BIS_fnc_loadInventory;
     };
@@ -147,7 +147,7 @@ switch (_tipusUnitat) do
     case "me": {
         _perfil = "CC - Metge M4A1 OCP";
         if (cc_param_debugOutput == 1) then {
-            _unitat sideChat format ["DEBUG (cc_equipacio_rhs_usarmy_d_perfils.sqf): Utilitzant el perfil %1 pel tipus d'unitat %2.", _perfil, _tipusUnitat];
+            _unitat sideChat format ["DEBUG (cc_configEquipacio_perfils.sqf): Utilitzant el perfil %1 pel tipus d'unitat %2.", _perfil, _tipusUnitat];
         };
         _loadout = [_unitat,[profileNamespace,_perfil]] call BIS_fnc_loadInventory;
     };
@@ -156,7 +156,7 @@ switch (_tipusUnitat) do
     case "en": {
         _perfil = "CC - Explosius M4A1 OCP";
         if (cc_param_debugOutput == 1) then {
-            _unitat sideChat format ["DEBUG (cc_equipacio_rhs_usarmy_d_perfils.sqf): Utilitzant el perfil %1 pel tipus d'unitat %2.", _perfil, _tipusUnitat];
+            _unitat sideChat format ["DEBUG (cc_configEquipacio_perfils.sqf): Utilitzant el perfil %1 pel tipus d'unitat %2.", _perfil, _tipusUnitat];
         };
         _loadout = [_unitat,[profileNamespace,_perfil]] call BIS_fnc_loadInventory;
     };
@@ -165,7 +165,7 @@ switch (_tipusUnitat) do
     case "sn": {
         _perfil = "CC - Franctirador M2010ESR OCP";
         if (cc_param_debugOutput == 1) then {
-            _unitat sideChat format ["DEBUG (cc_equipacio_rhs_usarmy_d_perfils.sqf): Utilitzant el perfil %1 pel tipus d'unitat %2.", _perfil, _tipusUnitat];
+            _unitat sideChat format ["DEBUG (cc_configEquipacio_perfils.sqf): Utilitzant el perfil %1 pel tipus d'unitat %2.", _perfil, _tipusUnitat];
         };
         _loadout = [_unitat,[profileNamespace,_perfil]] call BIS_fnc_loadInventory;
     };
@@ -174,7 +174,7 @@ switch (_tipusUnitat) do
     case "sp": {
         _perfil = "CC - Observador M4A1 OCP";
         if (cc_param_debugOutput == 1) then {
-            _unitat sideChat format ["DEBUG (cc_equipacio_rhs_usarmy_d_perfils.sqf): Utilitzant el perfil %1 pel tipus d'unitat %2.", _perfil, _tipusUnitat];
+            _unitat sideChat format ["DEBUG (cc_configEquipacio_perfils.sqf): Utilitzant el perfil %1 pel tipus d'unitat %2.", _perfil, _tipusUnitat];
         };
         _loadout = [_unitat,[profileNamespace,_perfil]] call BIS_fnc_loadInventory;
     };
@@ -183,7 +183,7 @@ switch (_tipusUnitat) do
     case "divsl": {
         _perfil = "CC - Bussejador lider M4A1";
         if (cc_param_debugOutput == 1) then {
-            _unitat sideChat format ["DEBUG (cc_equipacio_rhs_usarmy_d_perfils.sqf): Utilitzant el perfil %1 pel tipus d'unitat %2.", _perfil, _tipusUnitat];
+            _unitat sideChat format ["DEBUG (cc_configEquipacio_perfils.sqf): Utilitzant el perfil %1 pel tipus d'unitat %2.", _perfil, _tipusUnitat];
         };
         _loadout = [_unitat,[profileNamespace,_perfil]] call BIS_fnc_loadInventory;
     };
@@ -192,7 +192,7 @@ switch (_tipusUnitat) do
     case "divme": {
         _perfil = "CC - Bussejador metge M4A1";
         if (cc_param_debugOutput == 1) then {
-            _unitat sideChat format ["DEBUG (cc_equipacio_rhs_usarmy_d_perfils.sqf): Utilitzant el perfil %1 pel tipus d'unitat %2.", _perfil, _tipusUnitat];
+            _unitat sideChat format ["DEBUG (cc_configEquipacio_perfils.sqf): Utilitzant el perfil %1 pel tipus d'unitat %2.", _perfil, _tipusUnitat];
         };
         _loadout = [_unitat,[profileNamespace,_perfil]] call BIS_fnc_loadInventory;
     };
@@ -201,7 +201,7 @@ switch (_tipusUnitat) do
     case "divexp": {
         _perfil = "CC - Bussejador explosius M4A1";
         if (cc_param_debugOutput == 1) then {
-            _unitat sideChat format ["DEBUG (cc_equipacio_rhs_usarmy_d_perfils.sqf): Utilitzant el perfil %1 pel tipus d'unitat %2.", _perfil, _tipusUnitat];
+            _unitat sideChat format ["DEBUG (cc_configEquipacio_perfils.sqf): Utilitzant el perfil %1 pel tipus d'unitat %2.", _perfil, _tipusUnitat];
         };
         _loadout = [_unitat,[profileNamespace,_perfil]] call BIS_fnc_loadInventory;
     };
@@ -210,14 +210,14 @@ switch (_tipusUnitat) do
     case "div": {
         _perfil = "CC - Bussejador M4A1";
         if (cc_param_debugOutput == 1) then {
-            _unitat sideChat format ["DEBUG (cc_equipacio_rhs_usarmy_d_perfils.sqf): Utilitzant el perfil %1 pel tipus d'unitat %2.", _perfil, _tipusUnitat];
+            _unitat sideChat format ["DEBUG (cc_configEquipacio_perfils.sqf): Utilitzant el perfil %1 pel tipus d'unitat %2.", _perfil, _tipusUnitat];
         };
         _loadout = [_unitat,[profileNamespace,_perfil]] call BIS_fnc_loadInventory;
     };
     
     default {
         _perfil = "CC - Fuseller M4A1 OCP";
-        _unitat sideChat format ["DEBUG (cc_equipacio_rhs_usarmy_d_perfils.sqf): El perfil pel tipus d'unitat %1 no està definit. Utilitzant el perfil de fuseller %2", _tipusUnitat, _perfil];
+        _unitat sideChat format ["DEBUG (cc_configEquipacio_perfils.sqf): El perfil pel tipus d'unitat %1 no està definit. Utilitzant el perfil de fuseller %2", _tipusUnitat, _perfil];
         _loadout = [_unitat,[profileNamespace,_perfil]] call BIS_fnc_loadInventory;
     };
 };

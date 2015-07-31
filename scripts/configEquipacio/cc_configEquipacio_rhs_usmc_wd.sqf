@@ -1,12 +1,12 @@
 //=======================================================================================================//
-// Arxiu: cc_equipacio_rhs_usarmy_wd.sqf                                                                 //
+// Arxiu: cc_configEquipacio_rhs_usmc_wd.sqf                                                             //
 // Autor: CC_Magnetar                                                                                    //
 // Versió: 0.5                                                                                           //
 // Creació del Document: 2015/06/12                                                                      //
 // Descripció: Aquest document serveix per equipar els jugadors amb l'equipació dissenyada per la missió //
 //             sense fer servir els perfils estàndard del grup dels Cavallers del Cel. Requereix que el  //
-//             jugador formi part de la facció RHS: United States Army "rhs_faction_usarmy_wd"           //
-//             http://class.rhsmods.org/rhsusaf/CfgGroups_West_rhs_faction_usarmy_wd.html                // 
+//             jugador formi part de la facció RHS: United States Army "rhs_faction_usmc_wd"             //
+//             http://class.rhsmods.org/rhsusaf/CfgGroups_West_rhs_faction_usmc_wd.html                  //
 //             Cal afegir la següent línia al INIT de la unitat en l'editor:                             //
 //                                                                                                       //
 //                  ["ROL_JUGADOR",this] call cc_fnc_configEquipacio;                                    //
@@ -100,17 +100,17 @@ _esInfanteria = _unitat isKindOf "CAManBase";
 //=======================================================================================================//
 
 // Uniformes
-_uniforme = "rhs_uniform_cu_ucp";
+_uniforme = "rhs_uniform_FROG01_wd";
 _uniformeSN = "U_B_GhillieSuit";
 _uniformeDIV = "U_B_Wetsuit";
 
 // Armilles.
-_armillaSQ = "rhsusf_iotv_ucp_squadleader";
-_armillaTL = "rhsusf_iotv_ucp_teamleader";
-_armillaRFL = "rhsusf_iotv_ucp_rifleman";
-_armillaGR = "rhsusf_iotv_ucp_grenadier";
-_armillaME = "rhsusf_iotv_ucp_medic";
-_armillaSAW = "rhsusf_iotv_ucp_SAW";
+_armillaSQ = "rhsusf_spc_rifleman";
+_armillaTL = "rhsusf_spc_rifleman";
+_armillaRFL = "rhsusf_spc_rifleman";
+_armillaGR = "rhsusf_spc_rifleman";
+_armillaME = "rhsusf_spc_rifleman";
+_armillaSAW = "rhsusf_spc_rifleman";
 _armillaDIV = "V_RebreatherB";
 
 // Cascs.
@@ -1531,7 +1531,7 @@ switch (_tipusUnitat) do
     };
     
     default {
-        _unitat sideChat format ["DEBUG (cc_equipacio_rhs_usarmy_wd.sqf): el tipus d'unitat %1 no està definit. Utilitzant l'equipació de fuseller.", _tipusUnitat];
+        _unitat sideChat format ["DEBUG (cc_configEquipacio_rhs_usmc_wd.sqf): el tipus d'unitat %1 no està definit. Utilitzant l'equipació de fuseller.", _tipusUnitat];
         
         // Armilla i motxilla.
         _unitat addVest _armillaRFL;

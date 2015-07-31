@@ -1,12 +1,12 @@
 //=======================================================================================================//
-// Arxiu: cc_equipacio_rhs_vdv.sqf                                                                       //
+// Arxiu: cc_configEquipacio_rhs_usarmy_wd.sqf                                                           //
 // Autor: CC_Magnetar                                                                                    //
 // Versió: 0.5                                                                                           //
-// Creació del Document: 2015/04/02                                                                      //
+// Creació del Document: 2015/06/12                                                                      //
 // Descripció: Aquest document serveix per equipar els jugadors amb l'equipació dissenyada per la missió //
 //             sense fer servir els perfils estàndard del grup dels Cavallers del Cel. Requereix que el  //
-//             jugador formi part de la facció RHS: Russian Airborne Troops (Vozdushno-desantnye voyska) //
-//             http://class.rhsmods.org/rhsafrf/CfgFactionClasses_rhs_faction_vdv.html                   //
+//             jugador formi part de la facció RHS: United States Army "rhs_faction_usarmy_wd"           //
+//             http://class.rhsmods.org/rhsusaf/CfgGroups_West_rhs_faction_usarmy_wd.html                // 
 //             Cal afegir la següent línia al INIT de la unitat en l'editor:                             //
 //                                                                                                       //
 //                  ["ROL_JUGADOR",this] call cc_fnc_configEquipacio;                                    //
@@ -68,11 +68,11 @@
 //                  rhs_faction_vpvo        Soviet Air Defense Troops (Voyska protivovozdushnoy oborony) //
 //                  rhs_faction_vdv         Russian Airborne Troops (Vozdushno-desantnye voyska)         //
 //                                                                                                       //
-// Canvis: 0.1 (2015/04/02) Versió inicial.                                                              //
+// Canvis: 0.1 (2015/06/12) Versió inicial.                                                              //
 //         0.2 (2015/06/18) Afegit el rol d'explosius (exp). En cas de que ni AGM ni ACE3 estiguin       //
 //                          carregats el script no falla.                                                //
 //         0.3 (2015/06/19) Afegida l'explicació pel tercer paràmetre (opcional).                        //
-//         0.4 (2015/07/03) Afegit el rol de Bussejador especialista en explosius (divexp)               //
+//         0.4 (2015/07/03) Afegit el rol de Bussejador especialista en explosius (divexp).              //
 //         0.5 (2015/07/15) Canvi a Params (Arma v1.48).                                                 //
 //=======================================================================================================//
 
@@ -1531,7 +1531,7 @@ switch (_tipusUnitat) do
     };
     
     default {
-        _unitat sideChat format ["DEBUG (cc_equipacio_rhs_vdv.sqf): el tipus d'unitat %1 no està definit. Utilitzant l'equipació de fuseller.", _tipusUnitat];
+        _unitat sideChat format ["DEBUG (cc_configEquipacio_rhs_usarmy_wd.sqf): el tipus d'unitat %1 no està definit. Utilitzant l'equipació de fuseller.", _tipusUnitat];
         
         // Armilla i motxilla.
         _unitat addVest _armillaRFL;

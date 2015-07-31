@@ -103,67 +103,67 @@ _unitat setVariable ["cc_var_configEquipacio_Llesta",false,true];
 
 // DEBUG OUTPUT.
 if (cc_param_debugOutput == 1) then {
-    _unitat sideChat format ["DEBUG (configEquipacio.sqf): facció de la unitat: %1", _faccioUnitat];
+    _unitat sideChat format ["DEBUG (fn_configEquipacio.sqf): facció de la unitat: %1", _faccioUnitat];
 };
 
 // Equipació per la facció BLUFOR.
 if (_faccioUnitat == "blu_f") then {
-    #include "cc_equipacio_blu_f.sqf"
+    #include "cc_configEquipacio_blu_f.sqf"
 };
 
 // Equipació per la facció FIA.
 if (_faccioUnitat in ["blu_g_f","ind_g_f","opf_g_f"]) then {
-    #include "cc_equipacio_fia_f.sqf"
+    #include "cc_configEquipacio_fia_f.sqf"
 };
 
 // Equipació per la facció OPFOR.
 if (_faccioUnitat == "opf_f") then {
-    #include "cc_equipacio_opf_f.sqf"
+    #include "cc_configEquipacio_opf_f.sqf"
 };
 
 // Equipació per la facció independent.
 if (_faccioUnitat == "ind_f") then {
-    #include "cc_equipacio_ind_f.sqf"
+    #include "cc_configEquipacio_ind_f.sqf"
 };
 
 // Equipació per la facció civil.
 if (_faccioUnitat == "civ_f") then {
-    #include "cc_equipacio_civ_f.sqf"
+    #include "cc_configEquipacio_civ_f.sqf"
 };
 
 // Equipació per la facció USA "United States Army".
 if (_faccioUnitat == "rhs_faction_usarmy_d") then {
-    #include "cc_equipacio_rhs_usarmy_d.sqf"
+    #include "cc_configEquipacio_rhs_usarmy_d.sqf"
 };
 
 // Equipació per la facció USA "United States Army".
 if (_faccioUnitat == "rhs_faction_usarmy_wd") then {
-    #include "cc_equipacio_rhs_usarmy_wd.sqf"
+    #include "cc_configEquipacio_rhs_usarmy_wd.sqf"
 };
 
 // Equipació per la facció USA "United States Marine Corps".
 if (_faccioUnitat == "rhs_faction_usmc_d") then {
-    #include "cc_equipacio_rhs_usmc_d.sqf"
+    #include "cc_configEquipacio_rhs_usmc_d.sqf"
 };
 
 // Equipació per la facció USA "United States Marine Corps".
 if (_faccioUnitat == "rhs_faction_usmc_wd") then {
-    #include "cc_equipacio_rhs_usmc_wd.sqf"
+    #include "cc_configEquipacio_rhs_usmc_wd.sqf"
 };
 
 // Equipació per la facció USA "United States Army".
 if (_faccioUnitat == "rhs_faction_insurgents") then {
-    #include "cc_equipacio_rhs_insurgents.sqf"
+    #include "cc_configEquipacio_rhs_insurgents.sqf"
 };
 
 // Equipació per la facció russa "Russian Airborne Troops".
 if (_faccioUnitat == "rhs_faction_vdv" ) then {
-    #include "cc_equipacio_rhs_vdv.sqf"
+    #include "cc_configEquipacio_rhs_vdv.sqf"
 };
 
 // Equipació per la facció russa "Soviet Air Defense Forces".
 if (_faccioUnitat == "rhs_faction_vpvo" ) then {
-    #include "cc_equipacio_rhs_vpvo.sqf"
+    #include "cc_configEquipacio_rhs_vpvo.sqf"
 };
 
 // S'ha acabat l'assignació de l'equipació

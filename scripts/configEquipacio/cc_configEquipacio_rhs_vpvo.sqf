@@ -1,5 +1,5 @@
 //=======================================================================================================//
-// Arxiu: cc_equipacio_rhs_vpvo.sqf                                                                      //
+// Arxiu: cc_configEquipacio_rhs_vpvo.sqf                                                                //
 // Autor: CC_Magnetar                                                                                    //
 // Versió: 0.5                                                                                           //
 // Creació del Document: 2015/04/02                                                                      //
@@ -1531,7 +1531,7 @@ switch (_tipusUnitat) do
     };
     
     default {
-        _unitat sideChat format ["DEBUG (cc_equipacio_rhs_vpvo.sqf): el tipus d'unitat %1 no està definit. Utilitzant l'equipació de fuseller.", _tipusUnitat];
+        _unitat sideChat format ["DEBUG (cc_configEquipacio_rhs_vpvo.sqf): el tipus d'unitat %1 no està definit. Utilitzant l'equipació de fuseller.", _tipusUnitat];
         
         // Armilla i motxilla.
         _unitat addVest _armillaRFL;
