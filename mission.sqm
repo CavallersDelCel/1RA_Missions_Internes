@@ -99,7 +99,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="CC_A1_ME";
-					init="[""me"",this] call cc_fnc_configEquipacio;";
+					init="[""me"",this] call cc_fnc_configEquipacio; this setVariable[""cc_var_grupUnitat"",[""Alfa"",1], true];";
 				};
 			};
 		};
