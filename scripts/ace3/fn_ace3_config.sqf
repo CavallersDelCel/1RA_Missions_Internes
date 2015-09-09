@@ -8,14 +8,18 @@
 //             http://ace3mod.com/wiki/missionmaker/modules.html                                         //
 // Canvis: 0.1 (2015/05/28) Versió inicial.                                                              //
 //         0.2 (2015/07/03) Canvis en l'estructura del document. Versió 3.1.1 de ACE3.                   //
+//         0.3 (2015/09/09) Versió 3.2.3 de ACE3.                                                        //
 //=======================================================================================================//
 
-private["_metges", "_vehiclesMedics", "_edificisMedics", "_unitatsRendeixen","_unitat", "_ErrorModul"];
+private["_metges", "_vehiclesMedics", "_edificisMedics", "_enginyers", "_vehiclesReparacio", "_tallers", "_unitatsRendeixen","_unitat", "_ErrorModul"];
 
 _ErrorModul = false;
 _metges = [];
 _vehiclesMedics = [];
 _edificisMedics = [];
+_enginyers = [];
+_vehiclesReparacio = [];
+_tallers = [];
 _unitatsRendeixen = [];
 
 // Definir les variables manualment utilitzant la funció de ACE 3 ACE_common_fnc_setSetting:
@@ -247,6 +251,19 @@ if (isClass (configFile >> "CfgPatches" >> "ace_repair")) then {
     ["ace_repair_consumeItem_ToolKit", true, true, true] call ACE_common_fnc_setSetting;                       // 0 = No, 1* = Si.
     ["ace_repair_fullRepairLocation", 2, true, true] call ACE_common_fnc_setSetting;                           // 0 = Qualsevol lloc, 1 = Vehicle de reparació, 2* = Tallers, 3 = Vehicles de reparació i tallers, 4 = Deshabilitat.
     ["ace_repair_engineerSetting_fullRepair", 3, true, true] call ACE_common_fnc_setSetting;                   // 0 = Qualsevol, 1 = Només enginyers, 2 = Tallers, 3 = Vehicles de reparació i tallers, 4 = Deshabilitat.
+    
+    // Assignar rols d'enginyer, vehicle de reparació i tallers.
+    {
+        _x setVariable ["ACE_IsEngineer", 1, true];
+    } foreach _enginyers;
+
+    {
+        _x setVariable ["ACE_isRepairVehicle", 1, true];
+    } foreach _vehiclesReparacio;
+
+    {
+        _x setVariable ["ACE_isRepairFacility", true, true];
+    } foreach _tallers;
 } else {
     _ErrorModul = true;
     diag_log "No s'ha trobat el fitxer ace_repair.pbo.";
@@ -446,7 +463,7 @@ if (isClass (configFile >> "CfgPatches" >> "ace_advanced_ballistics")) then {
     diag_log "No s'ha trobat el fitxer ace_advanced_ballistics.pbo.";
 };
 
-if ( cc_param_debugOutput == 1) then{
+if ( cc_param_debugOutput == 1) then {
 
     if (_ErrorModul) then {
         player sideChat format ["DEBUG (fn_ace3_config.sqf): ACE 3 no es pot configurar completament ja que hi ha fitxers que no estan carregats."];
