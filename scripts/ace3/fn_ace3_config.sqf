@@ -36,6 +36,18 @@ if (isClass (configFile >> "CfgPatches" >> "ace_common")) then {
     diag_log "No s'ha trobat el fitxer ace_common.pbo.";
 };
 
+if (isClass (configFile >> "CfgPatches" >> "ace_finger")) then {
+    //====================================================================================================//
+    // Finger: http://ace3mod.com/wiki/missionmaker/modules.html#1-7-finger-settings                      //
+    //====================================================================================================//
+
+    ["ace_finger_enabled", true, true, true] call ACE_common_fnc_setSetting;                                   // 0 = No, 1* = Si.
+    ["ace_finger_maxRange", 4.0, true, true] call ACE_common_fnc_setSetting;                                   // Scalar. 4 = Valor per defecte.
+} else {
+    _ErrorModul = true;
+    diag_log "No s'ha trobat el fitxer ace_finger.pbo.";
+};
+
 if (isClass (configFile >> "CfgPatches" >> "ace_frag")) then {
     ["ace_frag_enabled", true, true, true] call ACE_common_fnc_setSetting;                                     // 0 = Deshabilitat, 1* = Habilitat.
     ["ace_frag_SpallEnabled", false, true, true] call ACE_common_fnc_setSetting;                               // 0* = Deshabilitat, 1 = Habilitat.
@@ -47,6 +59,14 @@ if (isClass (configFile >> "CfgPatches" >> "ace_frag")) then {
     diag_log "No s'ha trobat el fitxer ace_frag.pbo.";
 };
 
+if (isClass (configFile >> "CfgPatches" >> "ace_hitreactions")) then {
+
+    ["ace_hitreactions_minDamageToTrigger", 0.1, true, true] call ACE_common_fnc_setSetting;                   // 0 = Deshabilitat, 1* = Habilitat.
+} else {
+    _ErrorModul = true;
+    diag_log "No s'ha trobat el fitxer ace_hitreactions.pbo.";
+};
+
 if (isClass (configFile >> "CfgPatches" >> "ace_interaction")) then {
     //====================================================================================================//
     // Interaction System: http://ace3mod.com/wiki/missionmaker/modules.html#1.8-interaction-system       //
@@ -56,6 +76,14 @@ if (isClass (configFile >> "CfgPatches" >> "ace_interaction")) then {
 } else {
     _ErrorModul = true;
     diag_log "No s'ha trobat el fitxer ace_interaction.pbo.";
+};
+
+if (isClass (configFile >> "CfgPatches" >> "ace_laserpointer")) then {
+
+    ["ace_laserpointer_enabled", true, true, true] call ACE_common_fnc_setSetting;                             // Scalar. 0.1 = Valor per defecte.
+} else {
+    _ErrorModul = true;
+    diag_log "No s'ha trobat el fitxer ace_laserpointer.pbo.";
 };
 
 if (isClass (configFile >> "CfgPatches" >> "ace_magazinerepack")) then {
@@ -82,6 +110,7 @@ if (isClass (configFile >> "CfgPatches" >> "ace_map")) then {
     
     ["ace_map_mapIllumination", true, true, true] call ACE_common_fnc_setSetting;                              // 0 = Deshabilitat, 1* = Habilitat.
     ["ace_map_mapShake", true, true, true] call ACE_common_fnc_setSetting;                                     // 0 = Deshabilitat, 1* = Habilitat.
+    ["ace_map_mapGlow", true, true, true] call ACE_common_fnc_setSetting;                                      // 0 = Deshabilitat, 1* = Habilitat.
     ["ace_map_mapLimitZoom", false, true, true] call ACE_common_fnc_setSetting;                                // 0* = Deshabilitat, 1 = Habilitat.
     ["ace_map_mapShowCursorCoordinates", false, true, true] call ACE_common_fnc_setSetting;                    // 0* = Deshabilitat, 1 = Habilitat.
 } else {
@@ -90,10 +119,79 @@ if (isClass (configFile >> "CfgPatches" >> "ace_map")) then {
 };
 
 if (isClass (configFile >> "CfgPatches" >> "ace_maptools")) then {
-    ["ace_maptools_EveryoneCanDrawOnBriefing", true, true, true] call ACE_common_fnc_setSetting;               // 0 = Deshabilitat, 1* = Habilitat.
+    ["ace_maptools_EveryoneCanDrawOnBriefing", true, true, true] call ACE_common_fnc_setSetting;               // 0* = Deshabilitat, 1 = Habilitat.
 } else {
     _ErrorModul = true;
     diag_log "No s'ha trobat el fitxer ace_maptools.pbo.";
+};
+
+if (isClass (configFile >> "CfgPatches" >> "ace_medical")) then {
+
+    //====================================================================================================//
+    // ACE3 Medical: http://ace3mod.com/wiki/missionmaker/modules.html#2.-ace3-medical                    //
+    //====================================================================================================//
+    ["ace_medical_level", cc_param_sistemaMedic, true, true] call ACE_common_fnc_setSetting;                   // 0 = Deshabilitat, 1* = Bàsic, 2 = Avançat.
+    ["ace_medical_medicSetting", cc_param_sistemaMedic, true, true] call ACE_common_fnc_setSetting;            // 0 = Deshabilitat, 1* = Bàsic, 2 = Avançat.
+    ["ace_medical_enableFor", 1, true, true] call ACE_common_fnc_setSetting;                                   // 0* = Només Jugadors, 1 = Jugadors i IA.
+    ["ace_medical_enableOverdosing", true, true, true] call ACE_common_fnc_setSetting;                         // 0 = Deshabilitat, 1* = Habilitat.
+    ["ace_medical_bleedingCoefficient", 1, true, true] call ACE_common_fnc_setSetting;                         // Scalar. 1 = Valor per defecte.
+    ["ace_medical_painCoefficient", 1, true, true] call ACE_common_fnc_setSetting;                             // Scalar. 1 = Valor per defecte.
+    ["ace_medical_enableAirway", false, true, true] call ACE_common_fnc_setSetting;                            // 0* = Deshabilitat, 1 = Habilitat.
+    ["ace_medical_enableFractures", false, true, true] call ACE_common_fnc_setSetting;                         // 0* = Deshabilitat, 1 = Habilitat.
+    ["ace_medical_enableAdvancedWounds", true, true, true] call ACE_common_fnc_setSetting;                     // 0* = Deshabilitat, 1 = Habilitat.
+    ["ace_medical_enableVehicleCrashes", true, true, true] call ACE_common_fnc_setSetting;                     // 0 = Deshabilitat, 1* = Habilitat.
+    ["ace_medical_enableScreams", true, true, true] call ACE_common_fnc_setSetting;                            // 0 = Deshabilitat, 1* = Habilitat.
+    ["ace_medical_playerDamageThreshold", 1, true, true] call ACE_common_fnc_setSetting;                       // Scalar. 1 = Valor per defecte.
+    ["ace_medical_AIDamageThreshold", 1, true, true] call ACE_common_fnc_setSetting;                           // Scalar. 1 = Valor per defecte.
+    ["ace_medical_enableUnconsciousnessAI", 1, true, true] call ACE_common_fnc_setSetting;                     // 0 = Deshabilitat, 1* = 50/50, 2 = Habilitat.
+    ["ace_medical_remoteControlledAI", true, true, true] call ACE_common_fnc_setSetting;                       // 0 = Deshabilitat, 1* = Habilitat.
+    ["ace_medical_preventInstaDeath", false, true, true] call ACE_common_fnc_setSetting;                       // 0* = Deshabilitat, 1 = Habilitat.
+    ["ace_medical_enableRevive", 0, true, true] call ACE_common_fnc_setSetting;                                // 0* = Deshabilitat, 1 = Només jugadors, 2 = Jugadors i IA.
+    ["ace_medical_maxReviveTime", 120, true, true] call ACE_common_fnc_setSetting;                             // Scalar. 120 = Valor per defecte.
+    ["ace_medical_amountOfReviveLives", -1, true, true] call ACE_common_fnc_setSetting;                        // Scalar. -1 = Valor per defecte.
+    ["ace_medical_allowDeadBodyMovement", false, true, true] call ACE_common_fnc_setSetting;                   // 0* = Deshabilitat, 1 = Habilitat.
+    ["ace_medical_allowLitterCreation", true, true, true] call ACE_common_fnc_setSetting;                      // 0 = Deshabilitat, 1* = Habilitat.
+    // ["ace_medical_litterSimulationDetail", 3, false, false] call ACE_common_fnc_setSetting;                 // Client. 0 = Deshabilitat (0), 1 = Baix(50), 2 = Mitjà (100), 3* = Alt (1000), 4 = Ultra (5000).
+    ["ace_medical_litterCleanUpDelay", 1800, true, true] call ACE_common_fnc_setSetting;                       // Scalar. 1800 = Valor per defecte.
+    ["ace_medical_medicSetting_PAK", 1, true, true] call ACE_common_fnc_setSetting;                            // 0 = Qualsevol, 1* = Només metges, 2 = Només doctors.
+    ["ace_medical_medicSetting_SurgicalKit", 1, true, true] call ACE_common_fnc_setSetting;                    // 0 = Qualsevol, 1* = Només metges, 2 = Només doctors.
+    ["ace_medical_consumeItem_PAK", 1, true, true] call ACE_common_fnc_setSetting;                             // 0* = No, 1 = Si.
+    ["ace_medical_consumeItem_SurgicalKit", 1, true, true] call ACE_common_fnc_setSetting;                     // 0* = No, 1 = Si.
+    ["ace_medical_useLocation_PAK", 3, true, true] call ACE_common_fnc_setSetting;                             // 0 = A qualsevol lloc, 1 = Vehicles mèdics, 2 = Edificis mèdics, 3* = Vehicles i edificis mèdics, 4 = Deshabilitat.
+    ["ace_medical_useLocation_SurgicalKit", 2, true, true] call ACE_common_fnc_setSetting;                     // 0 = A qualsevol lloc, 1 = Vehicles mèdics, 2* = Edificis mèdics, 3 = Vehicles i edificis mèdics, 4 = Deshabilitat.
+    ["ace_medical_useConditionPAK", 1, true, true] call ACE_common_fnc_setSetting;                             // 0* = En qualsevol moment, 1 = Estable.
+    ["ace_medical_useConditionSurgicalKit", 1, true, true] call ACE_common_fnc_setSetting;                     // 0* = En qualsevol moment, 1 = Estable.
+    ["ace_medical_keepLocalSettingsSynced", true, true, true] call ACE_common_fnc_setSetting;                  // 0 = Deshabilitat, 1* = Habilitat.
+    ["ace_medical_healHitPointAfterAdvBandage", false, true, true] call ACE_common_fnc_setSetting;             // 0* = Deshabilitat, 1 = Habilitat.
+    ["ace_medical_painIsOnlySuppressed", true, true, true] call ACE_common_fnc_setSetting;                     // 0 = No, 1* = Si.
+    // ["ace_medical_painEffectType", 0, true, true] call ACE_common_fnc_setSetting;                           // Client. 0 = Pain effect flash, 1 = Pain effect chroma.
+    ["ace_medical_allowUnconsciousAnimationOnTreatment", false, true, true] call ACE_common_fnc_setSetting;    // 0* = No, 1 = Si.
+    ["ace_medical_moveUnitsFromGroupOnUnconscious", false, true, true] call ACE_common_fnc_setSetting;         // 0* = No, 1 = Si.
+    ["ace_medical_menuTypeStyle", 0, true, true] call ACE_common_fnc_setSetting;                               // 0* = Seleccio, 1 = Radial.
+    
+    // Assignar rols de metge, vehicle mèdic i edificis mèdics.
+    {
+        _x setVariable ["ace_medical_medicClass", 1, true];
+    } foreach _metges;
+
+    {
+        _x setVariable ["ace_medical_medicClass", 1, true];
+    } foreach _vehiclesMedics;
+
+    {
+        _x setVariable ["ace_medical_isMedicalFacility", true, true];
+    } foreach _edificisMedics;
+    
+} else {
+    _ErrorModul = true;
+    diag_log "No s'ha trobat el fitxer ace_medical.pbo.";
+};
+
+if (isClass (configFile >> "CfgPatches" >> "ace_medical_menu")) then {
+    ["ace_medical_menu_allow", 2, true, true] call ACE_common_fnc_setSetting;                                  // 0 = Deshabilitat, 1* = Habilitat, 2 = Només vehicles.
+} else {
+    _ErrorModul = true;
+    diag_log "No s'ha trobat el fitxer ace_medical_menu.pbo.";
 };
 
 if (isClass (configFile >> "CfgPatches" >> "ace_microdagr")) then {
@@ -141,6 +239,19 @@ if (isClass (configFile >> "CfgPatches" >> "ace_nametags")) then {
     diag_log "No s'ha trobat el fitxer ace_nametags.pbo.";
 };
 
+if (isClass (configFile >> "CfgPatches" >> "ace_repair")) then {
+    ["ace_ace_repair_engineerSetting_Repair", 1, true, true] call ACE_common_fnc_setSetting;                   // 0 = Qualsevol, 1* = Només enginyers, 2 = Només especialistes.
+    ["ace_repair_engineerSetting_Wheel", 0, true, true] call ACE_common_fnc_setSetting;                        // 0* = Qualsevol, 1 = Només enginyers, 2 = Només especialistes.
+    ["ace_repair_repairDamageThreshold", 0.6, true, true] call ACE_common_fnc_setSetting;                      // Scalar. 0.6 = Valor per defecte.
+    ["ace_repair_repairDamageThreshold", 0.4, true, true] call ACE_common_fnc_setSetting;                      // Scalar. 0.4 = Valor per defecte.
+    ["ace_repair_consumeItem_ToolKit", true, true, true] call ACE_common_fnc_setSetting;                       // 0 = No, 1* = Si.
+    ["ace_repair_fullRepairLocation", 2, true, true] call ACE_common_fnc_setSetting;                           // 0 = Qualsevol lloc, 1 = Vehicle de reparació, 2* = Tallers, 3 = Vehicles de reparació i tallers, 4 = Deshabilitat.
+    ["ace_repair_engineerSetting_fullRepair", 3, true, true] call ACE_common_fnc_setSetting;                   // 0 = Qualsevol, 1 = Només enginyers, 2 = Tallers, 3 = Vehicles de reparació i tallers, 4 = Deshabilitat.
+} else {
+    _ErrorModul = true;
+    diag_log "No s'ha trobat el fitxer ace_repair.pbo.";
+};
+
 if (isClass (configFile >> "CfgPatches" >> "ace_respawn")) then {
     //====================================================================================================//
     // Respawn System: http://ace3mod.com/wiki/missionmaker/modules.html#1.15-respawn-system              //
@@ -168,6 +279,17 @@ if (isClass (configFile >> "CfgPatches" >> "ace_sitting")) then {
     diag_log "No s'ha trobat el fitxer ace_sitting.pbo.";
 };
 
+if (isClass (configFile >> "CfgPatches" >> "ace_spectator")) then {
+    ["ace_spectator_filterUnits", 2, true, true] call ACE_common_fnc_setSetting;                               // 0 = Cap, 1 = Jugadors, 2* = Unitats jugables, 3 = Totes les unitats.
+    ["ace_spectator_filterSides", 0, true, true] call ACE_common_fnc_setSetting;                               // 0* = Cap, 1 = Bàndols amics, 2 = Bàndols enemics, 3 = Tots els bàndols.
+    ["ace_spectator_restrictModes", 0, true, true] call ACE_common_fnc_setSetting;                             // 0* = Tots, 1 = Modes d'unitat, 2 = Lliure, 3 = Modes interns, 4 = Modes externs.
+    ["ace_spectator_restrictVisions", 0, true, true] call ACE_common_fnc_setSetting;                           // 0* = Tots, 1 = Visió nocturna, 2 = Visió tèrmica.
+    
+} else {
+    _ErrorModul = true;
+    diag_log "No s'ha trobat el fitxer ace_spectator.pbo.";
+};
+
 if (isClass (configFile >> "CfgPatches" >> "ace_switchunits")) then {
     //====================================================================================================//
     // SwitchUnits System: http://ace3mod.com/wiki/missionmaker/modules.html#1.16-switchunits-system      //
@@ -191,8 +313,8 @@ if (isClass (configFile >> "CfgPatches" >> "ace_vehiclelock")) then {
     //====================================================================================================//
     
     ["ace_vehiclelock_DefaultLockpickStrength", 10, true, true] call ACE_common_fnc_setSetting;                // Scalar. 10 = Valor per defecte.
-    ["ace_vehiclelock_LockVehicleInventory", false, true, true] call ACE_common_fnc_setSetting;                // 0* = No, 1 = Si.
-    ["ace_vehiclelock_VehicleStartingLockState", 0, true, true] call ACE_common_fnc_setSetting;               // Scalar. 0 = Valor per defecte.
+    ["ace_vehiclelock_LockVehicleInventory", true, true, true] call ACE_common_fnc_setSetting;                 // 0* = No, 1 = Si.
+    ["ace_vehiclelock_VehicleStartingLockState", 0, true, true] call ACE_common_fnc_setSetting;                // Scalar. 0 = Valor per defecte.
 } else {
     _ErrorModul = true;
     diag_log "No s'ha trobat el fitxer ace_vehiclelock.pbo.";
@@ -247,6 +369,7 @@ if (isClass (configFile >> "CfgPatches" >> "ace_zeus")) then {
     ["ace_zeus_remoteWind", false, true, true] call ACE_common_fnc_setSetting;                                 // 0* = No, 1 = Si.
     ["ace_zeus_radioOrdnance", false, true, true] call ACE_common_fnc_setSetting;                              // 0* = No, 1 = Si.
     ["ace_zeus_revealMines", false, true, true] call ACE_common_fnc_setSetting;                                // 0* = No, 1 = Si.
+    ["ace_zeus_autoAddObjects", false, true, true] call ACE_common_fnc_setSetting;                             // 0* = No, 1 = Si.
 } else {
     _ErrorModul = true;
     diag_log "No s'ha trobat el fitxer ace_zeus.pbo.";
@@ -258,6 +381,7 @@ if (isClass (configFile >> "CfgPatches" >> "ace_captives")) then {
     //====================================================================================================//
     
     ["ace_captives_allowHandcuffOwnSide", true, true, true] call ACE_common_fnc_setSetting;                    // 0 = No, 1* = Si.
+    ["ace_captives_requireSurrender", 1, true, true] call ACE_common_fnc_setSetting;                           // 0 = Deshabilitat, 1* = Rendir únicament, 2 = Rendir o sense arma.
     ["ace_captives_allowSurrender", true, true, true] call ACE_common_fnc_setSetting;                          // 0 = No, 1* = Si.
     
     //{
@@ -268,6 +392,13 @@ if (isClass (configFile >> "CfgPatches" >> "ace_captives")) then {
     diag_log "No s'ha trobat el fitxer ace_captives.pbo.";
 };
 
+if (isClass (configFile >> "CfgPatches" >> "ace_cargo")) then {
+    ["ace_cargo_enable", true, true, true] call ACE_common_fnc_setSetting;                                     // 0 = No, 1* = Si.
+} else {
+    _ErrorModul = true;
+    diag_log "No s'ha trobat el fitxer ace_cargo.pbo.";
+};
+
 if (isClass (configFile >> "CfgPatches" >> "ace_explosives")) then {
     //====================================================================================================//
     // Explosive System: http://ace3mod.com/wiki/missionmaker/modules.html#1.5-explosive-system           //
@@ -275,6 +406,7 @@ if (isClass (configFile >> "CfgPatches" >> "ace_explosives")) then {
     
     ["ace_explosives_RequireSpecialist", false, true, true] call ACE_common_fnc_setSetting;                    // 0* = No, 1 = Si.
     ["ace_explosives_PunishNonSpecialists", true, true, true] call ACE_common_fnc_setSetting;                  // 0 = No, 1* = Si.
+    ["ace_explosives_ExplodeOnDefuse", true, true, true] call ACE_common_fnc_setSetting;                       // 0 = No, 1* = Si.
 } else {
     _ErrorModul = true;
     diag_log "No s'ha trobat el fitxer ace_explosives.pbo.";
@@ -288,85 +420,10 @@ if (isClass (configFile >> "CfgPatches" >> "ace_hearing")) then {
     ["ace_hearing_EnableCombatDeafness", true, true, true] call ACE_common_fnc_setSetting;                     // 0* = Deshabilitat, 1 = Habilitat.
     ["ace_hearing_EarplugsVolume", 0.5, true, true] call ACE_common_fnc_setSetting;                            // Scalar. 0.5 = Valor per defecte.
     ["ace_hearing_UnconsciousnessVolume", 0.4, true, true] call ACE_common_fnc_setSetting;                     // Scalar. 0.4 = Valor per defecte.
+    ["ace_hearing_enabledForZeusUnits", true, true, true] call ACE_common_fnc_setSetting;                      // 0 = Deshabilitat, 1* = Habilitat.
 } else {
     _ErrorModul = true;
     diag_log "No s'ha trobat el fitxer ace_hearing.pbo.";
-};
-
-if (isClass (configFile >> "CfgPatches" >> "ace_hitreactions")) then {
-
-    ["ace_hitreactions_minDamageToTrigger", 0.1, true, true] call ACE_common_fnc_setSetting;                   // 0 = Deshabilitat, 1* = Habilitat.
-} else {
-    _ErrorModul = true;
-    diag_log "No s'ha trobat el fitxer ace_hitreactions.pbo.";
-};
-
-if (isClass (configFile >> "CfgPatches" >> "ace_laserpointer")) then {
-
-    ["ace_laserpointer_enabled", true, true, true] call ACE_common_fnc_setSetting;                             // Scalar. 0.1 = Valor per defecte.
-} else {
-    _ErrorModul = true;
-    diag_log "No s'ha trobat el fitxer ace_laserpointer.pbo.";
-};
-
-if (isClass (configFile >> "CfgPatches" >> "ace_medical")) then {
-
-    //====================================================================================================//
-    // ACE3 Medical: http://ace3mod.com/wiki/missionmaker/modules.html#2.-ace3-medical                    //
-    //====================================================================================================//
-    ["ace_medical_level", cc_param_sistemaMedic, true, true] call ACE_common_fnc_setSetting;                   // 0 = Deshabilitat, 1* = Bàsic, 2 = Avançat.
-    ["ace_medical_medicSetting", cc_param_sistemaMedic, true, true] call ACE_common_fnc_setSetting;            // 0 = Deshabilitat, 1* = Bàsic, 2 = Avançat.
-    ["ace_medical_enableFor", 1, true, true] call ACE_common_fnc_setSetting;                                   // 0* = Només Jugadors, 1 = Jugadors i IA.
-    ["ace_medical_enableOverdosing", true, true, true] call ACE_common_fnc_setSetting;                         // 0 = Deshabilitat, 1* = Habilitat.
-    ["ace_medical_bleedingCoefficient", 1, true, true] call ACE_common_fnc_setSetting;                         // Scalar. 1 = Valor per defecte.
-    ["ace_medical_painCoefficient", 1, true, true] call ACE_common_fnc_setSetting;                             // Scalar. 1 = Valor per defecte.
-    ["ace_medical_enableAirway", false, true, true] call ACE_common_fnc_setSetting;                            // 0* = Deshabilitat, 1 = Habilitat.
-    ["ace_medical_enableFractures", false, true, true] call ACE_common_fnc_setSetting;                         // 0* = Deshabilitat, 1 = Habilitat.
-    ["ace_medical_enableAdvancedWounds", true, true, true] call ACE_common_fnc_setSetting;                     // 0* = Deshabilitat, 1 = Habilitat.
-    ["ace_medical_enableVehicleCrashes", true, true, true] call ACE_common_fnc_setSetting;                     // 0 = Deshabilitat, 1* = Habilitat.
-    ["ace_medical_enableScreams", true, true, true] call ACE_common_fnc_setSetting;                            // 0 = Deshabilitat, 1* = Habilitat.
-    ["ace_medical_playerDamageThreshold", 1, true, true] call ACE_common_fnc_setSetting;                       // Scalar. 1 = Valor per defecte.
-    ["ace_medical_AIDamageThreshold", 1, true, true] call ACE_common_fnc_setSetting;                           // Scalar. 1 = Valor per defecte.
-    ["ace_medical_enableUnconsciousnessAI", 1, true, true] call ACE_common_fnc_setSetting;                     // 0 = Deshabilitat, 1* = 50/50, 2 = Habilitat.
-    ["ace_medical_remoteControlledAI", true, true, true] call ACE_common_fnc_setSetting;                       // 0 = Deshabilitat, 1* = Habilitat.
-    ["ace_medical_preventInstaDeath", false, true, true] call ACE_common_fnc_setSetting;                       // 0* = Deshabilitat, 1 = Habilitat.
-    ["ace_medical_enableRevive", 0, true, true] call ACE_common_fnc_setSetting;                                // 0* = Deshabilitat, 1 = Només jugadors, 2 = Jugadors i IA.
-    ["ace_medical_maxReviveTime", 120, true, true] call ACE_common_fnc_setSetting;                             // Scalar. 120 = Valor per defecte.
-    ["ace_medical_amountOfReviveLives", -1, true, true] call ACE_common_fnc_setSetting;                        // Scalar. -1 = Valor per defecte.
-    ["ace_medical_allowDeadBodyMovement", false, true, true] call ACE_common_fnc_setSetting;                   // 0* = Deshabilitat, 1 = Habilitat.
-    ["ace_medical_allowLitterCreation", true, true, true] call ACE_common_fnc_setSetting;                      // 0 = Deshabilitat, 1* = Habilitat.
-    // ["ace_medical_litterSimulationDetail", 3, false, false] call ACE_common_fnc_setSetting;                 // Client. 0 = Deshabilitat (0), 1 = Baix(50), 2 = Mitjà (100), 3* = Alt (1000), 4 = Ultra (5000).
-    ["ace_medical_litterCleanUpDelay", 1800, true, true] call ACE_common_fnc_setSetting;                       // Scalar. 1800 = Valor per defecte.
-    ["ace_medical_medicSetting_PAK", 1, true, true] call ACE_common_fnc_setSetting;                            // 0 = Qualsevol, 1* = Només metges, 2 = Només doctors.
-    ["ace_medical_medicSetting_SurgicalKit", 1, true, true] call ACE_common_fnc_setSetting;                    // 0 = Qualsevol, 1* = Només metges, 2 = Només doctors.
-    ["ace_medical_consumeItem_PAK", 1, true, true] call ACE_common_fnc_setSetting;                             // 0* = No, 1 = Si.
-    ["ace_medical_consumeItem_SurgicalKit", 1, true, true] call ACE_common_fnc_setSetting;                     // 0* = No, 1 = Si.
-    ["ace_medical_useLocation_PAK", 3, true, true] call ACE_common_fnc_setSetting;                             // 0 = A qualsevol lloc, 1 = Vehicles mèdics, 2 = Edificis mèdics, 3* = Vehicles i edificis mèdics, 4 = Deshabilitat.
-    ["ace_medical_useLocation_SurgicalKit", 2, true, true] call ACE_common_fnc_setSetting;                     // 0 = A qualsevol lloc, 1 = Vehicles mèdics, 2* = Edificis mèdics, 3 = Vehicles i edificis mèdics, 4 = Deshabilitat.
-    ["ace_medical_keepLocalSettingsSynced", true, true, true] call ACE_common_fnc_setSetting;                  // 0 = Deshabilitat, 1* = Habilitat.
-    ["ace_medical_healHitPointAfterAdvBandage", false, true, true] call ACE_common_fnc_setSetting;             // 0* = Deshabilitat, 1 = Habilitat.
-    ["ace_medical_painIsOnlySuppressed", true, true, true] call ACE_common_fnc_setSetting;                     // 0 = No, 1* = Si.
-    // ["ace_medical_painEffectType", 0, true, true] call ACE_common_fnc_setSetting;                           // Client. 0 = Pain effect flash, 1 = Pain effect chroma.
-    ["ace_medical_allowUnconsciousAnimationOnTreatment", false, true, true] call ACE_common_fnc_setSetting;    // 0* = No, 1 = Si.
-    ["ace_medical_moveUnitsFromGroupOnUnconscious", false, true, true] call ACE_common_fnc_setSetting;         // 0* = No, 1 = Si.
-    ["ace_medical_menuTypeStyle", 0, true, true] call ACE_common_fnc_setSetting;                               // 0* = Seleccio, 1 = Radial.
-    
-    // Assignar rols de metge, vehicle mèdic i edificis mèdics.
-    {
-        _x setVariable ["ace_medical_medicClass", 1, true];
-    } foreach _metges;
-
-    {
-        _x setVariable ["ace_medical_medicClass", 1, true];
-    } foreach _vehiclesMedics;
-
-    {
-        _x setVariable ["ace_medical_isMedicalFacility", true, true];
-    } foreach _edificisMedics;
-    
-} else {
-    _ErrorModul = true;
-    diag_log "No s'ha trobat el fitxer ace_medical.pbo.";
 };
 
 if (isClass (configFile >> "CfgPatches" >> "ace_advanced_ballistics")) then {
@@ -377,8 +434,8 @@ if (isClass (configFile >> "CfgPatches" >> "ace_advanced_ballistics")) then {
     ["ace_advanced_ballistics_enabled", cc_param_ace3Balistica, true, true] call ACE_common_fnc_setSetting;    // 0* = No, 1 = Si.
     ["ace_advanced_ballistics_simulateForSnipers", true, true, true] call ACE_common_fnc_setSetting;           // 0 = No, 1* = Si.
     ["ace_advanced_ballistics_simulateForGroupMembers", true, true, true] call ACE_common_fnc_setSetting;      // 0* = No, 1 = Si.
-    ["ace_advanced_ballistics_disabledInFullAutoMode", true, true, true] call ACE_common_fnc_setSetting;       // 0* = No, 1 = Si.
     ["ace_advanced_ballistics_simulateForEveryone", false, true, true] call ACE_common_fnc_setSetting;         // 0* = No, 1 = Si.
+    ["ace_advanced_ballistics_disabledInFullAutoMode", false, true, true] call ACE_common_fnc_setSetting;      // 0* = No, 1 = Si.
     ["ace_advanced_ballistics_ammoTemperatureEnabled", true, true, true] call ACE_common_fnc_setSetting;       // 0 = No, 1* = Si.
     ["ace_advanced_ballistics_barrelLengthInfluenceEnabled", true, true, true] call ACE_common_fnc_setSetting; // 0 = No, 1* = Si.
     ["ace_advanced_ballistics_bulletTraceEnabled", true, true, true] call ACE_common_fnc_setSetting;           // 0 = No, 1* = Si.
@@ -388,7 +445,7 @@ if (isClass (configFile >> "CfgPatches" >> "ace_advanced_ballistics")) then {
     _ErrorModul = true;
     diag_log "No s'ha trobat el fitxer ace_advanced_ballistics.pbo.";
 };
-    
+
 if ( cc_param_debugOutput == 1) then{
 
     if (_ErrorModul) then {
