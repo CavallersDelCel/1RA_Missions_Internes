@@ -44,8 +44,7 @@
 //                  sp                      Observador (Spotter)                                         //
 //                  divsl                   Bussejador líder d'esquadra (Diver Squad Leader)             //
 //                  divme                   Bussejador metge (Diver Medic)                               //
-//                  divexp                  Bussejador especialista en explosius (Diver Specialist in    //
-//                                          Explosives)                                                  //
+//                  divexp                  Bussejador especialista en explosius (Diver Explosive        //
 //                  div                     Bussejador (Diver)                                           //
 //                                                                                                       //
 //                  hmmwv                   Equipació per HMMWVs                                         //
@@ -1135,7 +1134,7 @@ switch (_tipusUnitat) do
         _unitat addPrimaryWeaponItem _armaMira;
     };
     
-    // Explosius (Explosives).
+    // Especialista en explosius (Explosive Specialist).
     case "exp": {
         // Armilla i motxilla.
         _unitat addVest _armillaRFL;
@@ -1398,7 +1397,7 @@ switch (_tipusUnitat) do
         _unitat addWeapon _armaDIV;
     };
     
-    // Bussejador especialista en explosius (Diver Specialist in Explosives).
+    // Bussejador especialista en explosius (Diver Explosive Specialist).
     case "divexp": {
         // Treure l'uniforme, casc i armilla
         removeUniform _unitat;

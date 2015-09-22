@@ -42,8 +42,7 @@
 //                  sp                      Observador (Spotter)                                         //
 //                  divsl                   Bussejador líder d'esquadra (Diver Squad Leader)             //
 //                  divme                   Bussejador metge (Diver Medic)                               //
-//                  divexp                  Bussejador especialista en explosius (Diver Specialist in    //
-//                                          Explosives)                                                  //
+//                  divexp                  Bussejador especialista en explosius (Diver Explosive        //
 //                  div                     Bussejador (Diver)                                           //
 //                                                                                                       //
 //                  hmmwv                   Equipació per HMMWVs                                         //

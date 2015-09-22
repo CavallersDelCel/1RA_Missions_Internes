@@ -27,7 +27,7 @@
 //                  aa                  CC - AT M4A1+Stinger OCP                                         //
 //                  dm                  CC - Tirador SR-25EC OCP                                         //
 //                  me                  CC - Metge M4A1 OCP                                              //
-//                  en                  CC - Explosius M4A1 OCP                                          //                 
+//                  exp                 CC - Explosius M4A1 OCP                                          //                 
 //                  sn                  CC - Franctirador M2010ESR OCP                                   //
 //                  sp                  CC - Observador M4A1 OCP                                         //
 //                  divsl               CC - Bussejador lider M4A1                                       //
@@ -152,8 +152,8 @@ switch (_tipusUnitat) do
         _loadout = [_unitat,[profileNamespace,_perfil]] call BIS_fnc_loadInventory;
     };
     
-    // Enginyer (Engineer).
-    case "en": {
+    // Especialista en explosius (Explosive Specialist).
+    case "exp": {
         _perfil = "CC - Explosius M4A1 OCP";
         if (cc_param_debugOutput == 1) then {
             _unitat sideChat format ["DEBUG (cc_configEquipacio_perfils.sqf): Utilitzant el perfil %1 pel tipus d'unitat %2.", _perfil, _tipusUnitat];
@@ -197,7 +197,7 @@ switch (_tipusUnitat) do
         _loadout = [_unitat,[profileNamespace,_perfil]] call BIS_fnc_loadInventory;
     };
     
-    // Bussejador especialista en explosius (Diver Specialist in Explosives).
+    // Bussejador especialista en explosius (Diver Explosive Specialist).
     case "divexp": {
         _perfil = "CC - Bussejador explosius M4A1";
         if (cc_param_debugOutput == 1) then {
