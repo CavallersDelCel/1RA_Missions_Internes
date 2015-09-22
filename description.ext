@@ -55,7 +55,7 @@ respawndelay = 3;        // Temps que es tarda en fer respawn (en segons).
 respawnOnStart = 0;
 disabledAI = 1;          // Amaga les unitats amigues jugables que no són controlades per un jugador
                          // (Playable Unit) https://community.bistudio.com/wiki/Description.ext#disabledAI
-respawnTemplates[] = {"Spectator","EndMission"};
+respawnTemplates[] = {"cc_respawn_espectador", "EndMission"};
 
 //=======================================================================================================//
 // PARAMETRES DE LA MISSIÓ: RETOCS PER L'ADMINISTRADOR                                                   //
@@ -221,6 +221,12 @@ class CfgFunctions {
             class zeus_afegirGrups{};
             class zeus_afegirObjectes{};
         };
+    };
+};
+
+class CfgRespawnTemplates {
+    class cc_respawn_espectador {
+        onPlayerRespawn = "scripts\respawn\cc_respawn_espectador.sqf";
     };
 };
 
