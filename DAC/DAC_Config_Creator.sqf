@@ -30,7 +30,7 @@ if(isServer) then {if(local player) then {DAC_Code = 1} else {DAC_Code = 0}} els
 	if(isNil "DAC_Del_PlayerBody") 	then {		DAC_Del_PlayerBody	= [0,0]										};
 	if(isNil "DAC_Com_Values") 		then {		DAC_Com_Values		= [1,2,0,0]									};
 	if(isNil "DAC_AI_AddOn") 		then {		DAC_AI_AddOn		= 1											};
-	if(isNil "DAC_AI_Level") 		then {		DAC_AI_Level		= 3											};
+	if(isNil "DAC_AI_Level") 		then {		DAC_AI_Level		= 4											};
 	if(isNil "DAC_Res_Side") 		then {		DAC_Res_Side		= 0											};
 	if(isNil "DAC_Marker") 			then {		DAC_Marker			= 2											};
 	if(isNil "DAC_WP_Speed") 		then {		DAC_WP_Speed		= 0.01										};
