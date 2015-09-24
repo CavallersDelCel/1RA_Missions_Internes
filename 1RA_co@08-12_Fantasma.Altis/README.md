@@ -94,19 +94,19 @@ Cavallers del Cel SOP "Standard Operating Procedure"
 ##### ROLS
 
 * **ESQUADRA ALFA - Canal alternatiu 1 - Freqüència 200**
-  * **ALFA 1** - Equip de foc en vehicle HMMWV amb metralladora - Canal 1 - Freqüència 201**
+  * **ALFA 1 - Equip de foc en vehicle HMMWV amb metralladora - Canal 1 - Freqüència 201**
     * Líder d'esquadra.
     * Fuseller AT4.
     * Fuseller automàtic M249.
     * Granader.
     * Metge.
-  * **ALFA 2** - Equip de foc en vehicle HMMWV amb llançagranades - Canal 2 - Freqüència 202**
+  * **ALFA 2 - Equip de foc en vehicle HMMWV amb llançagranades - Canal 2 - Freqüència 202**
     * Líder d'equip.
     * Antitanc (Javelin).
     * Metrallador.
     * Fuseller AT4.
     * Metge.
-  * **ALFA 3** - Equip de tiradors en vehicle HMMWV amb metralladora - Canal 2 - Freqüència 203**
+  * **ALFA 3 - Equip de tiradors en vehicle HMMWV amb metralladora - Canal 2 - Freqüència 203**
     * Franctirador.
     * Observador.
 
