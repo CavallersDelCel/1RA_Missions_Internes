@@ -156,7 +156,7 @@ class CfgDebriefing {
     };
 
     class FinalFallit1 {
-        title = "Missió fallida";
+        title = "Missió fallida.";
         subtitle = "";
         description = "Les forces aliades han sigut eliminades i han aconseguit reestablir la comunicació per ràdio. El traidor ha pogut escapar.";
         pictureBackground = "";
@@ -165,7 +165,7 @@ class CfgDebriefing {
     };
 
     class FinalFallit2 {
-        title = "Missió fallida";
+        title = "Missió fallida.";
         subtitle = "";
         description = "Les forces aliades han sigut eliminades però han aconseguit acabar amb el traidor sense reestablir la comunicació per ràdio.";
         pictureBackground = "";
@@ -174,7 +174,7 @@ class CfgDebriefing {
     };
 
     class FinalFallit3 {
-        title = "Missió fallida";
+        title = "Missió fallida.";
         subtitle = "";
         description = "Les forces aliades han sigut eliminades però han aconseguit acabar amb el traidor i reestablir la comunicació per ràdio.";
         pictureBackground = "";
