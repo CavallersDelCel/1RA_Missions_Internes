@@ -106,7 +106,7 @@ Cavallers del Cel SOP "Standard Operating Procedure"
     * Metrallador.
     * Fuseller AT4.
     * Metge.
-  * **ALFA 3 - Equip de tiradors en vehicle HMMWV amb metralladora - Canal 2 - Freqüència 203**
+  * **ALFA 3 - Equip de tiradors en vehicle HMMWV amb metralladora - Canal 3 - Freqüència 203**
     * Franctirador.
     * Observador.
 
