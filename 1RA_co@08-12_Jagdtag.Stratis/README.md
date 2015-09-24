@@ -25,7 +25,7 @@ Missió generada amb la Plantilla Bàsica per Missions (PBM) del grup 1er Regime
 **Resum de la missió**: *Operació Jagdtag: Dia de caça* és una missió que divideix una esquadra en dos equips independents que no es podran comunicar per ràdio
 fins que les torres inhibidores de senyal siguin destruïdes. Partint d'escaça informació inicial els dos equips van obtenint més detalls dels objectius a mesura
 que s'avança en la missió a través d'informes d'inteligència. Per tal d'acomplir els objectius es requereixen entre 8 i 12 jugadors molt ben coordinats ja que es
-considera una missió difícil. Les tasques no s'actualitzen un cop completades i són els jugadors els qui decideixen si l'han completat o no.
+considera una missió difícil. Les tasques no s'actualitzen un cop completades i són els jugadors els qui decideixen si les han completat o no.
 
 **Plantilla Bàsica per Missions (PBM)**: v0.1 (https://github.com/CavallersDelCel/1RA_Plantilla_Missio) per CC_Magnetar.
 
