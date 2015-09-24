@@ -1,34 +1,83 @@
 # Nom de la missió
 
-Imatge capçalera.
+<p align="center">
+    <img src="https://github.com/CavallersDelCel/1RA_Missions_Internes/blob/master/1RA_co%4008-12_Fantasma.Altis/imatges/cc_op_fantasma.jpg">
+</p>
 
 Missió generada amb la Plantilla Bàsica per Missions (PBM) del grup 1er Regiment Aerotransportat (1RA) de la Comunitat Catalana de Simulació - Cavallers del Cel.
 
-**Nom de la missió**: Nom de la missió.
+**Nom de la missió**: Operació Fantasma.
 
-**Versió**: vx.x (data).
+**Versió**: v1.0 (2015/09/25).
 
-**Autor**: Nom de l'autor.
+**Autor**: CC_Magnetar.
 
-**Contribuïdors**: Noms dels col·laboradors.
+**Tipus de missió**: Coop.
 
-**Tipus de missió**: Tipus de missió (Coop, TvT, PvP).
+**Nombre mínim de jugadors**: 8.
 
-**Nombre mínim de jugadors**: Nombre mínim de jugadors recomanats per l'autor.
+**Nombre màxim de jugadors**: 12.
 
-**Nombre màxim de jugadors**: Nombre màxim de jugadors recomanats per l'autor.
+**Respawn**: Deshabilitat (Espectador).
 
-**Respawn**: Tipus de respawn.
+**Dificultat**: Elevada.
 
-**Dificultat**: Dificultat de la missió.
-
-**Resum de la missió**: Breu descripció de la missió.
+**Resum de la missió**: *Operació Fantasma* és una missió en el que dos equips de foc i un de tiradors han d'eliminar un oficial enemic en una zona amb força presència civil.
+Per tal d'acomplir els objectius es requereixen entre 8 i 12 jugadors molt ben coordinats ja que es considera una missió difícil. La tasca no s'actualitza un cop completada
+i són els jugadors els qui decideixen si l'han completat o no..
 
 **Plantilla Bàsica per Missions (PBM)**: v0.1 (https://github.com/CavallersDelCel/1RA_Plantilla_Missio) per CC_Magnetar.
 
 ### Descripció detallada de la missió
 
-Descripció detallada de la missió. Aquest text pot ser el mateix que el que es penja al fòrum.
+##### REQUISITS
+
+Aquesta missió s'ha comprovat que funciona amb el següent:
+
+* Community Base Addons (CBA) v2.0.
+* RHS United States Army Forces (RHS USAF) v0.3.9.1.
+* Task Force Arrowhead Radio (TFAR) v0.9.7.3.
+* Advanced Combat Environment 3 (ACE3) v3.3.2.
+* Dynamic-AI-Creator (DAC) v3.1b (versió en script).
+
+##### SITUACIÓ
+
+L'avanç inexorable de les forces del CSAT han obligat als països aliats a intervenir per tal d'aturar l'annexió constant de territori utilitzant la força bruta. L'illa d'Altis,
+ha sigut considerada com un punt estratègic clau a l'hora de mantenir el control del Mediterrani. Després de diversos intents, s'ha aconseguit establir una zona d'operacions al
+nord d'aquesta illa però la situació no està gens resolta.
+
+A través d'intervencions telefòniques, el servei d'intel·ligència ha pogut saber que les últimes derrotes del CSAT al Mediterrani han fet que un dels seus dirigents més carismàtics,
+el coronel Ohmid Raheem, comenci a ser àmpliament criticat. La presència de les dues faccions, la lleial al coronel i aquells que creuen que la seva època daurada s'ha acabat, obren
+la porta a un possible conflicte intern si cau en combat que podria facilitar futures operacions militars a l'illa.
+
+Conscient de la precarietat de la seva situació, el coronel Ohmid Raheem s'ha rodejat de les tropes més lleials i s'ha desplaçat al nord d'Altis per dirigir personalment el que es
+creu un atac a gran escala per tal de recuperar el control total de l'illa, establint la seva base d'operacions en un complexe turístic amb forta presència civil. Aquesta no és la
+primera vegada que Ohmid Raheem utilitza civils com escuts humans.
+
+##### FORCES AMIGUES
+
+* Degut a un possible atac enemic, no es poden desplegar més tropes i la presència de civils a la zona fa inviable el suport aèri o artillat.
+
+##### FORCES ENEMIGUES
+
+* S'espera una forta presència d'unitats enemigues a la zona. Blindats han sigut avistats.
+
+##### MISSIÓ i EXECUCIÓ
+
+Dos equips d'infanteria i un de tiradors seran desplegats al nord-oest de Sofia, Altis, amb l'objectiu d'**eliminar el coronel Ohmid Raheem**, que coordina les operacions militars
+al nord d'Altis des de la costa.
+
+Un cop completada la tasca, els efectius es dirigiran a Sofia per reagrupar-se amb les forces aliades i preparar l'ofensiva al nord d'Altis.
+
+<p align="center">
+    <img src="https://github.com/CavallersDelCel/1RA_Missions_Internes/blob/master/1RA_co%4008-12_Fantasma.Altis/imatges/Mapa.png">
+</p>
+
+**Tasques**
+* Inserció al punt LZ1.
+* Acostar-se a l'àrea d'operacions i eliminar l'objectiu.
+* Minimitzar les baixes civils per tal de guanyar-se el seu respecte i col·laboració.
+* Reagrupar-se a Sofia.
 
 # Plantilla Bàsica per Missions (PBM)
  

@@ -57,7 +57,8 @@ _briefingNotes = "
 <br/>
 <font color='#00FFFF'>Dificultat:</font> Elevada.
 <br/>
-<font color='#00FFFF'>Resum de la missió: Operació ""Fantasma"" és una missió en el que dos equips de foc i un de tiradors han d'eliminar un oficial enemic en una zona amb força presència civil.</font>
+<font color='#00FFFF'>Resum de la missió: Operació ""Fantasma"" és una missió en el que dos equips de foc i un de tiradors han d'eliminar un oficial enemic en una zona amb força presència civil. Per tal d'acomplir els objectius es requereixen entre 8 i 12 jugadors molt ben coordinats ja que es
+considera una missió difícil. La tasca no s'actualitza un cop completada i són els jugadors els qui decideixen si l'han completat o no.</font>
 <br/><br/>
 ";
 
