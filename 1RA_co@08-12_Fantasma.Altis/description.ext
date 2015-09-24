@@ -1,0 +1,221 @@
+//=======================================================================================================//
+// Arxiu: Description.ext                                                                                //
+// Autor: CC_Magnetar                                                                                    //
+// Versió: 0.1                                                                                           //
+// Creació del Document: 2015/02/22                                                                      //
+//=======================================================================================================//
+
+//=======================================================================================================//
+// Header de la missió: - Definició del mode de joc, nombre mínim de jugadors i nombre màxim de jugadors.//
+//=======================================================================================================//
+
+class Header {
+    gameType = Coop;     // Mode de joc: https://community.bistudio.com/wiki/Multiplayer_Game_Types
+    minPlayers = 1;      // Nombre mínim de jugadors
+    maxPlayers = 14;     // Nombre màxim de jugadors
+};
+
+//=======================================================================================================//
+// Pantalla de càrrega: https://community.bistudio.com/wiki/Description.ext                              //
+//                                                                                                       //
+// Hi ha dues plantilles que són altament recomanables d'utilitzar a l'hora de crear les  imatges per    //
+// l'entrada "overviewPicture" (cc_plantilla_overviewPicture.psd) i pel post de la missió al fòrum       //
+// (cc_plantilla_forum.psd). Aquests fitxers Photoshop, cortesia de CC_Viper, són altament recomenables  //
+// però totalment opcionals al dependre de programes d'edició externs comercials.                        //
+//=======================================================================================================//
+
+onLoadName = "Operació Fantasma";                      // Nom de la missió (apareix en gran).
+onLoadMission = "Abatre el comandament local per desestabilitzar l'estructura militar a la regió.";    // Descripció breu de la missió.
+author = "CC_Magnetar";                                // Autor.
+loadScreen = "imatges\loadLogo.jpg";                   // Imatge mentre es carrega la missió.
+overviewPicture = "imatges\overviewPicture.jpg";       // Imatge que es mostra al seleccionar la missió.
+                                                       // Ha d'estar en format .paa i aspecte 2:1.
+overviewText = "Inteligència informa de tensions internes en l'estructura militar del CSAT a la regió d'Altis. Si s'aconsegueix eliminar l'actual dirigent, les disputes internes debilitaran el control militar a la regió, facilitant les operacions militarsa per recuperar territori. Cal acabar amb el coronel enemic, a ser possible utilitzant les seves pròpies armes per tal de sembrar més el caos i simular un assassinat d'una de les faccions internes.";              // Text que es mostra al seleccionar la missó.
+
+//=======================================================================================================//
+// Consola de Debug de BIS: https://community.bistudio.com/wiki/Description.ext#enableDebugConsole       //
+//=======================================================================================================//
+enableDebugConsole = 1;  // Habilitada per SP i administradors en MP.
+
+//=======================================================================================================//
+// Forçar la llibreria de model de vol avançat.                                                          //
+//  - 0: Valor per defecte (la llibreria s'activa/desactiva depenent de les opcions del client).         //
+//  - 1: Forçar l'activació de la llibreria.                                                             //
+//  - 2: Forçar la desactivació de la llibreria.                                                         //
+// BIS: https://community.bistudio.com/wiki/Description.ext#forceRotorLibSimulation                      //
+//=======================================================================================================//
+forceRotorLibSimulation = 1;
+
+//=======================================================================================================//
+// Respawn Settings: Definició del tipus de respawn. https://community.bistudio.com/wiki/Arma_3_Respawn  //
+//=======================================================================================================//
+
+respawn = "BIRD";        // Es fa un respawn com a ocell, fi de la partida pel jugador.
+respawndelay = 3;        // Temps que es tarda en fer respawn (en segons).
+respawnOnStart = 0;
+disabledAI = 1;          // Amaga les unitats amigues jugables que no són controlades per un jugador
+                         // (Playable Unit) https://community.bistudio.com/wiki/Description.ext#disabledAI
+respawnTemplates[] = {"cc_respawn_espectador", "EndMission"};
+
+//=======================================================================================================//
+// PARAMETRES DE LA MISSIÓ: RETOCS PER L'ADMINISTRADOR                                                   //
+//=======================================================================================================//
+class Params {
+
+    //===================================================================================================//
+    // Debug: Variable per controlar Debug.                                                              //
+    // Opció per defecte: Habilitat                                                                      //
+    //===================================================================================================//
+    class cc_param_debugOutput {
+        title = "Mode Debug";
+        values[] = {0,1};
+        texts[] = {"Desactivat","Activat"};
+        default = 1;
+    };
+    
+    //===================================================================================================//
+    // Perfils: Utilitzar els perfils a l'hora d'equipar les unitats                                     //
+    // Opció per defecte: Els perfils no s'utilitzen.                                                    //
+    //===================================================================================================//
+    class cc_param_utilitzarPerfils {
+        title = "Utilitzar perfils";
+        values[] = {0,1};
+        texts[] = {"No","Si"};
+        default = 0;
+    };
+    
+    //===================================================================================================//
+    // Sistema mèdic: Nivell de detall del sistema mèdic de ACE3.                                        //
+    // Opció per defecte: Avançat.                                                                       //
+    //===================================================================================================//
+    class cc_param_sistemaMedic {
+        title = "Sistema mèdic";
+        values[] = {0,1,2};
+        texts[] = {"Desactivat","ACE3 Bàsic","ACE3 Avançat"};
+        default = 2;
+    };
+    
+    //===================================================================================================//
+    // Sistema de balística: Nivell de detall del sistema de balística de ACE3.                          //
+    // Opció per defecte: Avançat.                                                                       //
+    //===================================================================================================//
+    class cc_param_ace3Balistica {
+        title = "Sistema de balística de ACE3";
+        values[] = {0,1};
+        texts[] = {"Bàsic","Avançat"};
+        default = 1;
+    };
+};
+
+//=======================================================================================================//
+// DEBRIEFING: Informació per quan acaba la missió.                                                      //
+//=======================================================================================================//
+class CfgDebriefing {
+    class Final1Exit {
+        title = "Missió acabada amb èxit.";
+        subtitle = "";
+        description = "Les forces aliades han aconseguit acabar amb el coronel enemic i sembrar el caos en l'estructura de comandament enemiga.";
+        pictureBackground = "";
+        picture = "b_inf";
+        pictureColor[] = {0.0,0.3,0.6,1};
+    };
+
+    class FracasAbsolut {
+        title = "Fracàs Absolut.";
+        subtitle = "";
+        description = "Les forces aliades han sigut eliminades sense acabar amb l'estructura de comandament enemiga.";
+        pictureBackground = "";
+        picture = "b_inf";
+        pictureColor[] = {0.0,0.3,0.6,1};
+    };
+
+    class FinalFallit1 {
+        title = "Missió fallida.";
+        subtitle = "";
+        description = "Les forces aliades han sigut eliminades després d'acabar amb el coronel enemic. Les disputes internes a l'estructura de comandament han començat.";
+        pictureBackground = "";
+        picture = "b_inf";
+        pictureColor[] = {0.0,0.3,0.6,1};
+    };
+    
+    class FinalFallit2 {
+        title = "Missió fallida.";
+        subtitle = "";
+        description = "Les forces aliades han abortat la missió.";
+        pictureBackground = "";
+        picture = "b_inf";
+        pictureColor[] = {0.0,0.3,0.6,1};
+    };   
+};
+
+// Funcions per les missions dels Cavallers del Cel.
+class CfgFunctions {
+    class CC {   
+        // Funcions per configurar ACE 3
+        class ace3 {
+            file = "scripts\ace3";
+            class ace3_config
+            {
+                PreInit = 1;
+                PostInit = 1;  // La funció s'executa al iniciar la missió, DESPRÉS d'inicialitzar objectes.
+            };
+        };
+        
+        // Funcions per inicialitzar i configurar ACRE 2.
+        class acre2 {
+            file = "scripts\radios\acre2";
+            class acre2_determinarIdiomes{};
+            class acre2_afegirRadios{};
+            class acre2_treureRadios{};
+            class acre2_configurarCanals{};
+            class acre2_configurarXatEspectador{};
+        };
+        
+        // Funcions comunes i essencials pel funcionament dels scripts.
+        class comu {
+            file = "scripts\comu";
+            class processarParamsArray {
+                preInit = 1;   // La funció s'executa al iniciar la missió, ABANS d'inicialitzar objectes.
+                // postInit = 1;  // La funció s'executa al iniciar la missió, DESPRÉS d'inicialitzar objectes.
+            };
+            class processarMods {
+                preInit = 1;  // La funció s'executa al iniciar la missió, ABANS d'inicialitzar objectes.
+            };
+        };
+        
+        // Funcions per equipar els diferents rols amb els perfils dels Cavallers del Cel.
+        class configEquipacio {
+            file = "scripts\configEquipacio";
+            class configEquipacio{};
+        };
+        
+        // Funcions per inicialitzar el sistema de radio Task Force Arrowhead (TFAR).
+        class tfar {
+            file = "scripts\radios\tfar";
+            class tfar_treureRadios{};
+            class tfar_afegirRadios{};
+            class tfar_configurarFreqRadios{};
+            class tfar_configurarXatEspectador{};
+            class tfar_modificarSenyal{};
+            class tfar_configurarCanals{};
+            class tfar_configurarEstereo{};
+        };
+        
+        class zeus {
+            file = "scripts\zeus";
+            class zeus_eventHandlers {
+                PostInit = 1;  // La funció s'executa al iniciar la missió, DESPRÉS d'inicialitzar objectes.
+            };
+            class zeus_afegirGrups{};
+            class zeus_afegirObjectes{};
+        };
+    };
+};
+
+class CfgRespawnTemplates {
+    class cc_respawn_espectador {
+        onPlayerRespawn = "scripts\respawn\cc_respawn_espectador.sqf";
+    };
+};
+
+//============================================ FI DEL FITXER ============================================//
