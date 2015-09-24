@@ -79,6 +79,37 @@ Un cop completada la tasca, els efectius es dirigiran a Sofia per reagrupar-se a
 * Minimitzar les baixes civils per tal de guanyar-se el seu respecte i col·laboració.
 * Reagrupar-se a Sofia.
 
+##### ADMINISTRACIÓ/LOGÍSTICA
+
+**Suport**
+* Sense suport.
+
+**Abastiment**
+* Sense abastiment.
+
+##### COMANDAMENT/SENYAL
+
+Cavallers del Cel SOP "Standard Operating Procedure"
+
+##### ROLS
+
+* **ESQUADRA ALFA - Canal alternatiu 1 - Freqüència 200**
+  * **ALFA 1** - Equip de foc en vehicle HMMWV amb metralladora - Canal 1 - Freqüència 201**
+    * Líder d'esquadra.
+    * Fuseller AT4.
+    * Fuseller automàtic M249.
+    * Granader.
+    * Metge.
+  * **ALFA 2** - Equip de foc en vehicle HMMWV amb llançagranades - Canal 2 - Freqüència 202**
+    * Líder d'equip.
+    * Antitanc (Javelin).
+    * Metrallador.
+    * Fuseller AT4.
+    * Metge.
+  * **ALFA 3** - Equip de tiradors en vehicle HMMWV amb metralladora - Canal 2 - Freqüència 203**
+    * Franctirador.
+    * Observador.
+
 # Plantilla Bàsica per Missions (PBM)
  
 **Autor**: CC_Magnetar.
