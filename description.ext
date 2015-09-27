@@ -27,7 +27,7 @@ class Header {
 onLoadName = "*** Nom de la missió. ***";              // Nom de la missió (apareix en gran).
 onLoadMission = "*** Descripció de la missió. ***";    // Descripció breu de la missió.
 author = "CC_Magnetar";                                // Autor.
-loadScreen = "imatges\loadLogo.jpg";                   // Imatge mentre es carrega la missió.
+loadScreen = "imatges\loadScreen.jpg";                 // Imatge mentre es carrega la missió.
 overviewPicture = "imatges\overviewPicture.jpg";       // Imatge que es mostra al seleccionar la missió.
                                                        // Ha d'estar en format .paa i aspecte 2:1.
 overviewText = "*** Text a mostrar. ***";              // Text que es mostra al seleccionar la missó.
@@ -55,7 +55,7 @@ respawndelay = 3;        // Temps que es tarda en fer respawn (en segons).
 respawnOnStart = 0;
 disabledAI = 1;          // Amaga les unitats amigues jugables que no són controlades per un jugador
                          // (Playable Unit) https://community.bistudio.com/wiki/Description.ext#disabledAI
-respawnTemplates[] = {"cc_respawn_espectador", "EndMission"};
+respawnTemplates[] = {"Seagull","cc_respawn_espectador"};
 
 //=======================================================================================================//
 // PARAMETRES DE LA MISSIÓ: RETOCS PER L'ADMINISTRADOR                                                   //
@@ -227,6 +227,11 @@ class CfgFunctions {
 class CfgRespawnTemplates {
     class cc_respawn_espectador {
         onPlayerRespawn = "scripts\respawn\cc_respawn_espectador.sqf";
+    };
+    
+    // Sobreescriure la classe Seagull de arma 3.
+    class Seagull {
+        onPlayerRespawn = "";
     };
 };
 

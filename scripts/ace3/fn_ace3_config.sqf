@@ -174,19 +174,25 @@ if (cc_mod_ace3) then {
         // ["ace_medical_painEffectType", 0, true, true] call ACE_common_fnc_setSetting;                           // Client. 0 = Pain effect flash, 1 = Pain effect chroma.
         ["ace_medical_allowUnconsciousAnimationOnTreatment", false, true, true] call ACE_common_fnc_setSetting;    // 0* = No, 1 = Si.
         ["ace_medical_moveUnitsFromGroupOnUnconscious", false, true, true] call ACE_common_fnc_setSetting;         // 0* = No, 1 = Si.
-        ["ace_medical_menuTypeStyle", 0, true, true] call ACE_common_fnc_setSetting;                               // 0* = Seleccio, 1 = Radial.
+        //["ace_medical_menuTypeStyle", 0, true, true] call ACE_common_fnc_setSetting;                               // 0* = Seleccio, 1 = Radial.
         
         // Assignar rols de metge, vehicle mèdic i edificis mèdics.
         {
-            _x setVariable ["ace_medical_medicClass", 1, true];
+            if (!isNil format["s%1",_x]) then {
+                _x setVariable ["ace_medical_medicClass", 1, true];
+            };
         } foreach _metges;
 
         {
-            _x setVariable ["ace_medical_medicClass", 1, true];
+            if (!isNil format["s%1",_x]) then {
+                _x setVariable ["ace_medical_medicClass", 1, true];
+            };
         } foreach _vehiclesMedics;
 
         {
-            _x setVariable ["ace_medical_isMedicalFacility", true, true];
+            if (!isNil format["s%1",_x]) then {
+                _x setVariable ["ace_medical_isMedicalFacility", true, true];
+            };
         } foreach _edificisMedics;
         
     } else {
@@ -250,22 +256,29 @@ if (cc_mod_ace3) then {
         ["ace_ace_repair_engineerSetting_Repair", 1, true, true] call ACE_common_fnc_setSetting;                   // 0 = Qualsevol, 1* = Només enginyers, 2 = Només especialistes.
         ["ace_repair_engineerSetting_Wheel", 0, true, true] call ACE_common_fnc_setSetting;                        // 0* = Qualsevol, 1 = Només enginyers, 2 = Només especialistes.
         ["ace_repair_repairDamageThreshold", 0.6, true, true] call ACE_common_fnc_setSetting;                      // Scalar. 0.6 = Valor per defecte.
-        ["ace_repair_repairDamageThreshold", 0.4, true, true] call ACE_common_fnc_setSetting;                      // Scalar. 0.4 = Valor per defecte.
-        ["ace_repair_consumeItem_ToolKit", true, true, true] call ACE_common_fnc_setSetting;                       // 0 = No, 1* = Si.
+        ["ace_repair_repairDamageThreshold_Engineer", 0.4, true, true] call ACE_common_fnc_setSetting;             // Scalar. 0.4 = Valor per defecte.
+        ["ace_repair_consumeItem_ToolKit", false, true, true] call ACE_common_fnc_setSetting;                      // 0* = No, 1 = Si.
         ["ace_repair_fullRepairLocation", 2, true, true] call ACE_common_fnc_setSetting;                           // 0 = Qualsevol lloc, 1 = Vehicle de reparació, 2* = Tallers, 3 = Vehicles de reparació i tallers, 4 = Deshabilitat.
-        ["ace_repair_engineerSetting_fullRepair", 3, true, true] call ACE_common_fnc_setSetting;                   // 0 = Qualsevol, 1 = Només enginyers, 2 = Tallers, 3 = Vehicles de reparació i tallers, 4 = Deshabilitat.
-        
+        ["ace_repair_engineerSetting_fullRepair", 2, true, true] call ACE_common_fnc_setSetting;                   // 0 = Qualsevol, 1 = Només enginyers, 2 = Tallers, 3 = Vehicles de reparació i tallers, 4 = Deshabilitat.
+        ["ace_repair_addSpareParts", true, true, true] call ACE_common_fnc_setSetting;                             // 0 = No, 1* = Si.
+        ["ace_repair_wheelRepairRequiredItems", 1, true, true] call ACE_common_fnc_setSetting;                     // 0* = No es requereixen eines, 1 = Es requereixen eines.
         // Assignar rols d'enginyer, vehicle de reparació i tallers.
         {
-            _x setVariable ["ACE_IsEngineer", 1, true];
+            if (!isNil format["s%1",_x]) then {
+                _x setVariable ["ACE_IsEngineer", 1, true];
+            };
         } foreach _enginyers;
 
         {
-            _x setVariable ["ACE_isRepairVehicle", 1, true];
+            if (!isNil format["s%1",_x]) then {
+                _x setVariable ["ACE_isRepairVehicle", 1, true];
+            };
         } foreach _vehiclesReparacio;
 
         {
-            _x setVariable ["ACE_isRepairFacility", true, true];
+            if (!isNil format["s%1",_x]) then {
+                _x setVariable ["ACE_isRepairFacility", true, true];
+            };
         } foreach _tallers;
     } else {
         _ErrorModul = true;
@@ -300,8 +313,8 @@ if (cc_mod_ace3) then {
     };
 
     if (isClass (configFile >> "CfgPatches" >> "ace_spectator")) then {
-        ["ace_spectator_filterUnits", 2, true, true] call ACE_common_fnc_setSetting;                               // 0 = Cap, 1 = Jugadors, 2* = Unitats jugables, 3 = Totes les unitats.
-        ["ace_spectator_filterSides", 0, true, true] call ACE_common_fnc_setSetting;                               // 0* = Cap, 1 = Bàndols amics, 2 = Bàndols enemics, 3 = Tots els bàndols.
+        ["ace_spectator_filterUnits", 1, true, true] call ACE_common_fnc_setSetting;                               // 0 = Cap, 1 = Jugadors, 2* = Unitats jugables, 3 = Totes les unitats.
+        ["ace_spectator_filterSides", 0, true, true] call ACE_common_fnc_setSetting;                               // 0* = Bàndol del jugador, 1 = Bàndols amics, 2 = Bàndols enemics, 3 = Tots els bàndols.
         ["ace_spectator_restrictModes", 0, true, true] call ACE_common_fnc_setSetting;                             // 0* = Tots, 1 = Modes d'unitat, 2 = Lliure, 3 = Modes interns, 4 = Modes externs.
         ["ace_spectator_restrictVisions", 0, true, true] call ACE_common_fnc_setSetting;                           // 0* = Tots, 1 = Visió nocturna, 2 = Visió tèrmica.
         
@@ -424,7 +437,7 @@ if (cc_mod_ace3) then {
         // Explosive System: http://ace3mod.com/wiki/missionmaker/modules.html#1.5-explosive-system           //
         //====================================================================================================//    
         
-        ["ace_explosives_RequireSpecialist", false, true, true] call ACE_common_fnc_setSetting;                    // 0* = No, 1 = Si.
+        ["ace_explosives_RequireSpecialist", true, true, true] call ACE_common_fnc_setSetting;                     // 0* = No, 1 = Si.
         ["ace_explosives_PunishNonSpecialists", true, true, true] call ACE_common_fnc_setSetting;                  // 0 = No, 1* = Si.
         ["ace_explosives_ExplodeOnDefuse", true, true, true] call ACE_common_fnc_setSetting;                       // 0 = No, 1* = Si.
     } else {
