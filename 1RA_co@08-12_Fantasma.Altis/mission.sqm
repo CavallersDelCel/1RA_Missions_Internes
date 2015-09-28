@@ -16,7 +16,8 @@ class Mission
 		"A3_Air_F_Beta_Heli_Attack_02",
 		"A3_Soft_F_MRAP_02",
 		"rhsusf_c_hmmwv",
-		"rhsusf_vehicles"
+		"rhsusf_vehicles",
+		"A3_Weapons_F_Ammoboxes"
 	};
 	addOnsAuto[]=
 	{
@@ -33,12 +34,13 @@ class Mission
 		"A3_Soft_F_MRAP_02",
 		"rhsusf_c_hmmwv",
 		"rhsusf_vehicles",
+		"A3_Weapons_F_Ammoboxes",
 		"a3_map_altis"
 	};
 	randomSeed=11578151;
 	class Intel
 	{
-		briefingName="Operació fantasma";
+		briefingName="[1RA - CC] Operació fantasma v1.00";
 		startFog=0.69;
 		startWind=0.34999999;
 		startWindDir=25;
@@ -494,7 +496,6 @@ class Mission
 					id=14;
 					side="EAST";
 					vehicle="O_SoldierU_GL_F";
-					player="PLAY CDG";
 					leader=1;
 					rank="CORPORAL";
 					skill=0.44999999;
@@ -893,7 +894,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="CC_Alfa2_1";
-					init="CC_Alfa2 = group this; (group this) setGroupID [""Alfa 2""]; [""tl"",this] call cc_fnc_configEquipacio; this setVariable[""cc_var_grupUnitat"",[""Alfa"",2],true]; this assignAsCargoIndex [Cotxe1, 1]; this moveInCargo Cotxe1;";
+					init="CC_Alfa2 = group this; (group this) setGroupID [""Alfa 2""]; [""tl"",this] call cc_fnc_configEquipacio; this setVariable[""cc_var_grupUnitat"",[""Alfa"",2],true]; this moveInCargo Cotxe1;";
 					description="Líder d'equip";
 				};
 				class Item1
@@ -989,7 +990,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=6;
+		items=7;
 		class Item0
 		{
 			position[]={23482.904,90.440002,21144.445};
@@ -1030,8 +1031,8 @@ class Mission
 		};
 		class Item4
 		{
-			position[]={24166.486,37.083088,22082.361};
-			azimut=-116.245;
+			position[]={24166.412,37.085663,22081.549};
+			azimut=-110.15118;
 			id=34;
 			side="EMPTY";
 			vehicle="rhsusf_m1025_d_m2";
@@ -1041,7 +1042,7 @@ class Mission
 		};
 		class Item5
 		{
-			position[]={24147.16,37.170826,22074.561};
+			position[]={24149.705,37.090595,22075.514};
 			azimut=-109.066;
 			id=35;
 			side="EMPTY";
@@ -1049,6 +1050,15 @@ class Mission
 			skill=0.60000002;
 			text="Cotxe2";
 			init="[""hmmwv2"",this] call cc_fnc_configEquipacio; this engineOn true;";
+		};
+		class Item6
+		{
+			position[]={24175.441,37.447929,22085.672};
+			id=36;
+			side="EMPTY";
+			vehicle="Box_NATO_Ammo_F";
+			skill=0.60000002;
+			init="0 = [""AmmoboxInit"",[this,true]] spawn BIS_fnc_arsenal;";
 		};
 	};
 	class Markers

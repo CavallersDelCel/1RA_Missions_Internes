@@ -11,8 +11,8 @@
 
 class Header {
     gameType = Coop;     // Mode de joc: https://community.bistudio.com/wiki/Multiplayer_Game_Types
-    minPlayers = 1;      // Nombre mínim de jugadors
-    maxPlayers = 14;     // Nombre màxim de jugadors
+    minPlayers = 8;      // Nombre mínim de jugadors
+    maxPlayers = 12;     // Nombre màxim de jugadors
 };
 
 //=======================================================================================================//
@@ -27,7 +27,7 @@ class Header {
 onLoadName = "Operació Fantasma";                      // Nom de la missió (apareix en gran).
 onLoadMission = "Abatre el comandament local per desestabilitzar l'estructura militar a la regió.";    // Descripció breu de la missió.
 author = "CC_Magnetar";                                // Autor.
-loadScreen = "imatges\loadLogo.jpg";                   // Imatge mentre es carrega la missió.
+loadScreen = "imatges\loadScreen.jpg";                 // Imatge mentre es carrega la missió.
 overviewPicture = "imatges\overviewPicture.jpg";       // Imatge que es mostra al seleccionar la missió.
                                                        // Ha d'estar en format .paa i aspecte 2:1.
 overviewText = "Inteligència informa de tensions internes en l'estructura militar del CSAT a la regió d'Altis. Si s'aconsegueix eliminar l'actual dirigent, les disputes internes debilitaran el control militar a la regió, facilitant les operacions militarsa per recuperar territori. Cal acabar amb el coronel enemic, a ser possible utilitzant les seves pròpies armes per tal de sembrar més el caos i simular un assassinat d'una de les faccions internes.";              // Text que es mostra al seleccionar la missó.
@@ -55,7 +55,7 @@ respawndelay = 3;        // Temps que es tarda en fer respawn (en segons).
 respawnOnStart = 0;
 disabledAI = 1;          // Amaga les unitats amigues jugables que no són controlades per un jugador
                          // (Playable Unit) https://community.bistudio.com/wiki/Description.ext#disabledAI
-respawnTemplates[] = {"cc_respawn_espectador", "EndMission"};
+respawnTemplates[] = {"Seagull", "cc_respawn_espectador"};
 
 //=======================================================================================================//
 // PARAMETRES DE LA MISSIÓ: RETOCS PER L'ADMINISTRADOR                                                   //
@@ -70,7 +70,7 @@ class Params {
         title = "Mode Debug";
         values[] = {0,1};
         texts[] = {"Desactivat","Activat"};
-        default = 1;
+        default = 0;
     };
     
     //===================================================================================================//
@@ -125,7 +125,7 @@ class CfgDebriefing {
         subtitle = "";
         description = "Les forces aliades han sigut eliminades sense acabar amb l'estructura de comandament enemiga.";
         pictureBackground = "";
-        picture = "b_inf";
+        picture = "KIA";
         pictureColor[] = {0.0,0.3,0.6,1};
     };
 
@@ -134,7 +134,7 @@ class CfgDebriefing {
         subtitle = "";
         description = "Les forces aliades han sigut eliminades després d'acabar amb el coronel enemic. Les disputes internes a l'estructura de comandament han començat.";
         pictureBackground = "";
-        picture = "b_inf";
+        picture = "KIA";
         pictureColor[] = {0.0,0.3,0.6,1};
     };
     
@@ -215,6 +215,11 @@ class CfgFunctions {
 class CfgRespawnTemplates {
     class cc_respawn_espectador {
         onPlayerRespawn = "scripts\respawn\cc_respawn_espectador.sqf";
+    };
+    
+    // Sobreescriure la classe Seagull de arma 3.
+    class Seagull {
+        onPlayerRespawn = "";
     };
 };
 

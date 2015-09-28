@@ -26,7 +26,7 @@ if (isServer) then {
         DAC_STRPlayers pushBack format ["%1",_x];
     } forEach playableUnits;
     publicVariable "DAC_STRPlayers";
-    player sideChat format ["DEBUG (init.sqf): %1", DAC_STRPlayers];
+    //player sideChat format ["DEBUG (init.sqf): %1", DAC_STRPlayers];
 };
 execVM "DAC\DAC_Config_Creator.sqf";
 

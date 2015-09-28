@@ -13,7 +13,7 @@ private ["_RscLayer"];
 
 if (cc_mod_ace3) then {
     [true] call ace_spectator_fnc_setSpectator;
-    
+        
     if ( cc_param_debugOutput == 1) then {
         player sideChat format ["DEBUG (cc_respawn_espectador.sqf): Utilitzant el mode espectador de ACE."];
     };
@@ -22,6 +22,14 @@ if (cc_mod_ace3) then {
     RscSpectator_allowFreeCam = false;
     _RscLayer = "BIS_fnc_respawnSpectator" call bis_fnc_rscLayer;
     _RscLayer cutrsc ["RscSpectator","plain"];
+    
+    if (coronelMort == 0 && {alive _x} count playableUnits == 0) then {
+        ["FracasAbsolut",false] call BIS_fnc_endMission;
+    };
+    
+    if (coronelMort == 1 && {alive _x} count playableUnits == 0) then {
+        ["FinalFallit1",false] call BIS_fnc_endMission;
+    };
     
     if ( cc_param_debugOutput == 1) then {
         player sideChat format ["DEBUG (cc_respawn_espectador.sqf): Utilitzant el mode espectador de BI."];

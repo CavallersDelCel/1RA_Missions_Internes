@@ -24,7 +24,7 @@ Missió generada amb la Plantilla Bàsica per Missions (PBM) del grup 1er Regime
 
 **Resum de la missió**: *Operació Fantasma* és una missió en el que dos equips de foc i un de tiradors han d'eliminar un oficial enemic en una zona amb força presència civil.
 Per tal d'acomplir els objectius es requereixen entre 8 i 12 jugadors molt ben coordinats ja que es considera una missió difícil. La tasca no s'actualitza un cop completada
-i són els jugadors els qui decideixen si l'han completat o no..
+i són els jugadors els qui decideixen si l'han completat o no.
 
 **Plantilla Bàsica per Missions (PBM)**: v0.1 (https://github.com/CavallersDelCel/1RA_Plantilla_Missio) per CC_Magnetar.
 
@@ -61,6 +61,10 @@ primera vegada que Ohmid Raheem utilitza civils com escuts humans.
 ##### FORCES ENEMIGUES
 
 * S'espera una forta presència d'unitats enemigues a la zona. Blindats han sigut avistats.
+
+##### CIVILS
+
+* Forta presència civil a l'àrea d'operacions.
 
 ##### MISSIÓ i EXECUCIÓ
 

@@ -16,9 +16,8 @@
 // NOTES: ADMINISTRADOR.                                                                                 //
 //=======================================================================================================//
 _briefingAdmin = "
-<br/>
 <font color='#FF0000' size='18'>Informació per l'administrador</font>
-<br/><br/>
+<br/>
 Aquesta missió s'ha comprovat que funciona amb el següent:
 <br/><br/>
 - Community Base Addons (CBA) v2.0.
@@ -32,7 +31,7 @@ Aquesta missió s'ha comprovat que funciona amb el següent:
 - Dynamic-AI-Creator (DAC) v3.1b (versió en script).
 <br/><br/>
 Si els requisits no es compleixen o les versions són diferents cal comprovar prèviament que tot funcioni correctament.
-<br/><br/>
+<br/>
 ";
 
 //=======================================================================================================//
@@ -42,12 +41,12 @@ Si els requisits no es compleixen o les versions són diferents cal comprovar pr
 _briefingNotes = "
 <br/>
 <font color='#FF0000' size='18'>Notes del creador de la missió</font>
-<br/><br/>
+<br/>
 <font color='#00FFFF'>Nom de la missió:</font> ""Operació Fantasma"".
 <br/>
 <font color='#00FFFF'>Versió:</font> 1.0.
 <br/>
-<font color='#00FFFF'>Autor:</font> CC Magnetar.
+<font color='#00FFFF'>Autor:</font> CC_Magnetar.
 <br/>
 <font color='#00FFFF'>Nombre mínim de jugadors:</font> 8.
 <br/>
@@ -57,9 +56,9 @@ _briefingNotes = "
 <br/>
 <font color='#00FFFF'>Dificultat:</font> Elevada.
 <br/>
-<font color='#00FFFF'>Resum de la missió: Operació ""Fantasma"" és una missió en el que dos equips de foc i un de tiradors han d'eliminar un oficial enemic en una zona amb força presència civil. Per tal d'acomplir els objectius es requereixen entre 8 i 12 jugadors molt ben coordinats ja que es
-considera una missió difícil. La tasca no s'actualitza un cop completada i són els jugadors els qui decideixen si l'han completat o no.</font>
-<br/><br/>
+<font color='#00FFFF'>Resum de la missió:</font> Operació ""Fantasma"" és una missió en el que dos equips de foc i un de tiradors han d'eliminar un oficial enemic en una zona amb força presència civil. Per tal d'acomplir els objectius es requereixen entre 8 i 12 jugadors molt ben coordinats ja que es
+considera una missió difícil. La tasca no s'actualitza un cop completada i són els jugadors els qui decideixen si l'han completat o no.
+<br/>
 ";
 
 //=======================================================================================================//
@@ -76,23 +75,22 @@ Selecciona un dels finals per activar-lo.
 
 // Cada un dels finals a description.ext s'ha d'incloure.
 _briefingFinals = _briefingFinals + format [
-"<execute expression=""['Final1',true] call BIS_fnc_endMission;"">Final amb èxit 1</execute>: Coronel eliminat.<br/><br/>"
+"<execute expression=""['Final1',true] call BIS_fnc_endMission;"">- Final amb èxit 1</execute>: Coronel eliminat.<br/>"
 ];
 
 _briefingFinals = _briefingFinals + format [
-"<execute expression=""['FinalFallit1',false] call BIS_fnc_endMission;"">Final fallit 1</execute>: Tots morts. Coronel eliminat.<br/><br/>"
+"<execute expression=""['FinalFallit1',false] call BIS_fnc_endMission;"">- Final fallit 1</execute>: Tots morts. Coronel eliminat.<br/>"
 ];
 
 _briefingFinals = _briefingFinals + format [
-"<execute expression=""['FinalFallit2',false] call BIS_fnc_endMission;"">Final fallit 2</execute>: Missió abortada.<br/><br/>"
+"<execute expression=""['FinalFallit2',false] call BIS_fnc_endMission;"">- Final fallit 2</execute>: Missió abortada.<br/>"
 ];
 
 _briefingFinals = _briefingFinals + format [
-"<execute expression=""['FracasAbsolut',false] call BIS_fnc_endMission;"">Fracàs Absolut</execute>: Tots morts. Coronel no eliminat.<br/><br/>"
+"<execute expression=""['FracasAbsolut',false] call BIS_fnc_endMission;"">- Fracàs Absolut</execute>: Tots morts. Coronel no eliminat."
 ];
 
 _briefing = _briefingAdmin + _briefingNotes + _briefingFinals;
-_briefing = _briefing + "<br/><br/>";
 
 //=======================================================================================================//
 // CREACIÓ DE L'ENTRADA.                                                                                 //
