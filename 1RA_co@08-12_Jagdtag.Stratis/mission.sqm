@@ -87,7 +87,7 @@ class Mission
 	randomSeed=6790155;
 	class Intel
 	{
-		briefingName="[1RA] Jagdtag [CC] v1.1";
+		briefingName="[1RA - CC] Jagdtag v1.1";
 		resistanceWest=0;
 		startWeather=0.70999998;
 		startFog=0.11;
