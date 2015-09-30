@@ -16,15 +16,14 @@
 // NOTES: ADMINISTRADOR.                                                                                 //
 //=======================================================================================================//
 _briefingAdmin = "
-<br/>
 <font color='#FF0000' size='18'>Informació per l'administrador</font>
-<br/><br/>
+<br/>
 Aquesta missió s'ha comprovat que funciona amb el següent:
 <br/><br/>
 *** Llistat d'addons i les seves versions. ***
 <br/><br/>
 Si els requisits no es compleixen o les versions són diferents cal comprovar prèviament que tot funcioni correctament.
-<br/><br/>
+<br/>
 ";
 
 //=======================================================================================================//
@@ -34,12 +33,12 @@ Si els requisits no es compleixen o les versions són diferents cal comprovar pr
 _briefingNotes = "
 <br/>
 <font color='#FF0000' size='18'>Notes del creador de la missió</font>
-<br/><br/>
+<br/>
 <font color='#00FFFF'>Nom de la missió:</font> ""*** Nom de la missió ***"".
 <br/>
 <font color='#00FFFF'>Versió:</font> 1.0.
 <br/>
-<font color='#00FFFF'>Autor:</font> CC Magnetar.
+<font color='#00FFFF'>Autor:</font> CC_Magnetar.
 <br/>
 <font color='#00FFFF'>Col·laboradors:</font> *** Listat de col·laboradors ***.
 <br/>
@@ -70,27 +69,26 @@ Selecciona un dels finals per activar-lo.
 
 // Cada un dels finals a description.ext s'ha d'incloure.
 _briefingFinals = _briefingFinals + format [
-"<execute expression=""['Final1',true] call BIS_fnc_endMission;"">Final amb èxit 1</execute>: Breu descripció del final.<br/><br/>"
+"<execute expression=""['Final1',true] call BIS_fnc_endMission;"">- Final amb èxit 1</execute>: Breu descripció del final.<br/>"
 ];
 
 _briefingFinals = _briefingFinals + format [
-"<execute expression=""['Final2',true] call BIS_fnc_endMission;"">Final amb èxit 2</execute>: Breu descripció del final.<br/><br/>"
+"<execute expression=""['Final2',true] call BIS_fnc_endMission;"">- Final amb èxit 2</execute>: Breu descripció del final.<br/>"
 ];
 
 _briefingFinals = _briefingFinals + format [
-"<execute expression=""['FinalFallit1',false] call BIS_fnc_endMission;"">Final fallit 1</execute>: Breu descripció del final.<br/><br/>"
+"<execute expression=""['FinalFallit1',false] call BIS_fnc_endMission;"">- Final fallit 1</execute>: Breu descripció del final.<br/>"
 ];
 
 _briefingFinals = _briefingFinals + format [
-"<execute expression=""['FinalFallit2',false] call BIS_fnc_endMission;"">Final fallit 2</execute>: Breu descripció del final.<br/><br/>"
+"<execute expression=""['FinalFallit2',false] call BIS_fnc_endMission;"">- Final fallit 2</execute>: Breu descripció del final.<br/>"
 ];
 
 _briefingFinals = _briefingFinals + format [
-"<execute expression=""['FracasAbsolut',false] call BIS_fnc_endMission;"">Fracàs Absolut</execute>: Breu descripció del final.<br/><br/>"
+"<execute expression=""['FracasAbsolut',false] call BIS_fnc_endMission;"">- Fracàs Absolut</execute>: Breu descripció del final."
 ];
 
 _briefing = _briefingAdmin + _briefingNotes + _briefingFinals;
-_briefing = _briefing + "<br/><br/>";
 
 //=======================================================================================================//
 // CREACIÓ DE L'ENTRADA.                                                                                 //
