@@ -21,24 +21,30 @@ if (cc_requereix_DAC != 2) then {
     };
 };
 
+if ((cc_param_utilitzarDAC == 0) and (cc_param_debugDAC == 1)) then {
+    player sideChat format ["AVÍS (cc_comprovar_configuracio.sqf): El debug del DAC està activat però el DAC no ho està."];
+}
+
 // ASR AI 3.
 if (cc_requereix_ASRAI != 2) then {
     if (cc_requereix_ASRAI != cc_param_utilitzarASRAI) then {
         if (cc_param_utilitzarASRAI == 1) then {
-            if (!cc_mod_asrai) then {
-                player sideChat format ["ERROR (cc_comprovar_configuracio.sqf): El mod ASR AI 3 es necessari per aquesta missió però no està carregat."];
-            } else {
-                player sideChat format ["ERROR (cc_comprovar_configuracio.sqf): El ASR AI 3 està activat però s'ha de desactivar per aquesta missió."];
-            };
+            player sideChat format ["ERROR (cc_comprovar_configuracio.sqf): El mod ASR AI 3 es necessari per aquesta missió però no està carregat."];
         } else {
-            player sideChat format ["ERROR (cc_comprovar_configuracio.sqf): El ASR AI 3 està desactivat però s'ha d'activar per aquesta missió."];
+            player sideChat format ["ERROR (cc_comprovar_configuracio.sqf): El ASR AI 3 està activat però s'ha de desactivar per aquesta missió."];
         };
     } else {
-        if (cc_param_utilitzarASRAI == 1) then {
-            if (!cc_mod_asrai) then {
-                player sideChat format ["ERROR (cc_comprovar_configuracio.sqf): El mod ASR AI 3 es necessari per aquesta missió però no està carregat."];
-            };
+        if ((cc_param_utilitzarASRAI == 1) and !cc_mod_asrai) then {
+            player sideChat format ["ERROR (cc_comprovar_configuracio.sqf): El mod ASR AI 3 es necessari per aquesta missió però el fitxer asr_ai3_main.pbo no està carregat."];
         };
+    };
+} else {
+    if ((cc_param_utilitzarASRAI == 1) and !cc_mod_asrai) then {
+        player sideChat format ["ERROR (cc_comprovar_configuracio.sqf): El mod ASR AI 3 s'utilitza en aquesta missió però el fitxer asr_ai3_main.pbo no està carregat."];
+    };
+
+    if ((cc_param_utilitzarASRAI == 0) and cc_mod_asrai) then {
+        player sideChat format ["AVÍS (cc_comprovar_configuracio.sqf): El mod ASR AI 3 no s'utilitza en aquesta missió però el fitxer asr_ai3_main.pbo està carregat."];
     };
 };
 
@@ -59,45 +65,70 @@ if ((cc_requereix_ACE3_BasMed == 0) and (cc_requereix_ACE3_AdvMed == 0) and cc_m
 
 // Advanced Combat Environment 3 (ACE3): Sistema mèdic bàsic.
 if (cc_requereix_ACE3_BasMed != 2) then {
-    if ((cc_requereix_ACE3_BasMed == 1) and (cc_param_sistemaMedic != 1)) then {
-        player sideChat format ["ERROR (cc_comprovar_configuracio.sqf): El sistema mèdic bàsic de ACE3 està desactivat però s'ha d'activar per aquesta missió."];
+    if (cc_mod_ace3medical) then {
+        if ((cc_requereix_ACE3_BasMed == 1) and (cc_param_sistemaMedic != 1)) then {
+            player sideChat format ["ERROR (cc_comprovar_configuracio.sqf): El sistema mèdic bàsic de ACE3 està desactivat però s'ha d'activar per aquesta missió."];
+        };
+
+        if ((cc_requereix_ACE3_BasMed == 0) and (cc_param_sistemaMedic == 1)) then {
+            player sideChat format ["ERROR (cc_comprovar_configuracio.sqf): El sistema mèdic avançat de ACE3 està activat però s'ha de desactivar per aquesta missió."];
+        };
+    } else {
+        player sideChat format ["ERROR (cc_comprovar_configuracio.sqf): Es requereix el sistema mèdic bàsic de ACE3 però el fitxer ace_medical.pbo no està carregat."];
+    };
+} else {
+    if ((cc_param_sistemaMedic == 1) and !cc_mod_ace3medical) then {
+        player sideChat format ["ERROR (cc_comprovar_configuracio.sqf): El sistema mèdic bàsic de ACE3 està activat però el fitxer ace_medical.pbo no està carregat."];
     };
 
-    if ((cc_requereix_ACE3_BasMed == 0) and (cc_param_sistemaMedic == 1)) then {
-        player sideChat format ["ERROR (cc_comprovar_configuracio.sqf): El sistema mèdic avançat de ACE3 està activat però s'ha de desactivar per aquesta missió."];
-    };
-};
-
-// Advanced Combat Environment 3 (ACE3): Sistema mèdic bàsic.
-if (cc_requereix_ACE3_BasMed != 2) then {
-    if ((cc_requereix_ACE3_BasMed == 1) and (cc_param_sistemaMedic != 1)) then {
-        player sideChat format ["ERROR (cc_comprovar_configuracio.sqf): El sistema mèdic bàsic de ACE3 està desactivat però s'ha d'activar per aquesta missió."];
-    };
-
-    if ((cc_requereix_ACE3_BasMed == 0) and (cc_param_sistemaMedic == 1)) then {
-        player sideChat format ["ERROR (cc_comprovar_configuracio.sqf): El sistema mèdic avançat de ACE3 està activat però s'ha de desactivar per aquesta missió."];
+    if ((cc_param_sistemaMedic != 1) and cc_mod_ace3medical) then {
+        player sideChat format ["ERROR (cc_comprovar_configuracio.sqf): El sistema mèdic bàsic de ACE3 està desactivat però el fitxer ace_medical.pbo està carregat."];
     };
 };
 
 // Advanced Combat Environment 3 (ACE3): Sistema mèdic avançat.
 if (cc_requereix_ACE3_AdvMed != 2) then {
-    if ((cc_requereix_ACE3_AdvMed == 1) and (cc_param_sistemaMedic != 2)) then {
-        player sideChat format ["ERROR (cc_comprovar_configuracio.sqf): El sistema mèdic avançat de ACE3 està desactivat però s'ha d'activar per aquesta missió."];
+    if (cc_mod_ace3medical) then {
+        if ((cc_requereix_ACE3_AdvMed == 1) and (cc_param_sistemaMedic != 2)) then {
+            player sideChat format ["ERROR (cc_comprovar_configuracio.sqf): El sistema mèdic avançat de ACE3 està desactivat però s'ha d'activar per aquesta missió."];
+        };
+
+        if ((cc_requereix_ACE3_AdvMed == 0) and (cc_param_sistemaMedic == 2)) then {
+            player sideChat format ["ERROR (cc_comprovar_configuracio.sqf): El sistema mèdic avançat de ACE3 està activat però s'ha de desactivar per aquesta missió."];
+        };
+    } else {
+        player sideChat format ["ERROR (cc_comprovar_configuracio.sqf): Es requereix el sistema mèdic avançat de ACE3 però el fitxer ace_medical.pbo no està carregat."];
+    };
+} else {
+    if ((cc_param_sistemaMedic == 2) and !cc_mod_ace3medical) then {
+        player sideChat format ["ERROR (cc_comprovar_configuracio.sqf): El sistema mèdic avançat de ACE3 està activat però el fitxer ace_medical.pbo no està carregat."];
     };
 
-    if ((cc_requereix_ACE3_AdvMed == 0) and (cc_param_sistemaMedic == 2)) then {
-        player sideChat format ["ERROR (cc_comprovar_configuracio.sqf): El sistema mèdic avançat de ACE3 està activat però s'ha de desactivar per aquesta missió."];
+    if ((cc_param_sistemaMedic != 2) and cc_mod_ace3medical) then {
+        player sideChat format ["ERROR (cc_comprovar_configuracio.sqf): El sistema mèdic avançat de ACE3 està desactivat però el fitxer ace_medical.pbo està carregat."];
     };
 };
 
 // Advanced Combat Environment 3 (ACE3): Balística avançada.
 if (cc_requereix_ACE3_AdvBal != 2) then {
-    if (cc_requereix_ACE3_AdvBal != cc_param_ace3Balistica) then {
-        if (cc_param_ace3Balistica == 1) then {
-            player sideChat format ["ERROR (cc_comprovar_configuracio.sqf): La balísica avançada de ACE3 està activada però s'ha de desactivar per aquesta missió."];
-        } else {
-            player sideChat format ["ERROR (cc_comprovar_configuracio.sqf): La balísica avançada de ACE3 està desactivada però s'ha d'activar per aquesta missió."];
+    if (cc_mod_ace3advbal) then {
+        if (cc_requereix_ACE3_AdvBal != cc_param_ace3Balistica) then {
+            if (cc_param_ace3Balistica == 1) then {
+                player sideChat format ["ERROR (cc_comprovar_configuracio.sqf): La balísica avançada de ACE3 està activada però s'ha de desactivar per aquesta missió."];
+            } else {
+                player sideChat format ["ERROR (cc_comprovar_configuracio.sqf): La balísica avançada de ACE3 està desactivada però s'ha d'activar per aquesta missió."];
+            };
         };
+    } else {
+        player sideChat format ["ERROR (cc_comprovar_configuracio.sqf): Es requereix la balística avançada de ACE3 però el fitxer ace_advanced_ballistics.pbo no està carregat."];
+    };
+} else {
+    if ((cc_param_ace3Balistica == 1) and !cc_mod_ace3advbal) then {
+        player sideChat format ["ERROR (cc_comprovar_configuracio.sqf): La balística avançada de ACE3 està activada però el fitxer ace_advanced_ballistics.pbo no està carregat."];
+    };
+
+    if ((cc_param_ace3Balistica == 0) and cc_mod_ace3medical) then {
+        player sideChat format ["AVÍS (cc_comprovar_configuracio.sqf): La balística avançada de ACE3 està desactivada però el fitxer ace_advanced_ballistics.pbo està carregat."];
     };
 };
 
