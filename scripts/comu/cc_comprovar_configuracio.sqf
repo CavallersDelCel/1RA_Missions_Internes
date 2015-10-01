@@ -23,7 +23,7 @@ if (cc_requereix_DAC != 2) then {
 
 if ((cc_param_utilitzarDAC == 0) and (cc_param_debugDAC == 1)) then {
     player sideChat format ["AVÍS (cc_comprovar_configuracio.sqf): El debug del DAC està activat però el DAC no ho està."];
-}
+};
 
 // ASR AI 3.
 if (cc_requereix_ASRAI != 2) then {
