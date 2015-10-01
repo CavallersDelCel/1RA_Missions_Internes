@@ -130,27 +130,12 @@ if (_faccioUnitat == "civ_f") then {
     #include "cc_configEquipacio_civ_f.sqf"
 };
 
-// Equipació per la facció USA "United States Army".
-if (_faccioUnitat == "rhs_faction_usarmy_d") then {
-    #include "cc_configEquipacio_rhs_usarmy_d.sqf"
+// Equipació per la facció RHS USA "United States Army" i "United States Marine Corps".
+if ((_faccioUnitat == "rhs_faction_usarmy_d") or (_faccioUnitat == "rhs_faction_usarmy_wd") or (_faccioUnitat == "rhs_faction_usmc_d") or (_faccioUnitat == "rhs_faction_usmc_wd")) then {
+    #include "cc_configEquipacio_rhs_usaf.sqf"
 };
 
-// Equipació per la facció USA "United States Army".
-if (_faccioUnitat == "rhs_faction_usarmy_wd") then {
-    #include "cc_configEquipacio_rhs_usarmy_wd.sqf"
-};
-
-// Equipació per la facció USA "United States Marine Corps".
-if (_faccioUnitat == "rhs_faction_usmc_d") then {
-    #include "cc_configEquipacio_rhs_usmc_d.sqf"
-};
-
-// Equipació per la facció USA "United States Marine Corps".
-if (_faccioUnitat == "rhs_faction_usmc_wd") then {
-    #include "cc_configEquipacio_rhs_usmc_wd.sqf"
-};
-
-// Equipació per la facció USA "United States Army".
+// Equipació per la facció RHS "Insurgents".
 if (_faccioUnitat == "rhs_faction_insurgents") then {
     #include "cc_configEquipacio_rhs_insurgents.sqf"
 };
