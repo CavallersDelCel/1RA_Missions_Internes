@@ -15,11 +15,15 @@
 //                          "opf_f", "rhs_faction_vdv" i "rhs_faction_vpvo".                             //
 //=======================================================================================================//
 
+private ["_faccioUnitat"];
+
 if (isDedicated) exitWith {};
 
 // Esperar a que la variable que habilita/deshabilita el text de Debug estigui inicialitzada.
 waitUntil {!isNil "cc_param_debugOutput"};
-    
+
+#define nomMissio  "Nom de la missió"
+
 // Identificar la facció de la unitat.
 _faccioUnitat = toLower (faction player);
 
@@ -30,120 +34,156 @@ if (_faccioUnitat != toLower (faction (leader group player))) then {
 
 // Introducció per la facció BLUFOR.
 if (_faccioUnitat == "blu_f") exitWith {
-    #include "cc_intro_blu_f.sqf"
-  
+    #define introText "Relaxar-se mata! Estigueu alerta!\nViper - Capità dels cavallers del Cel"
+    #define llocMissio "Localització"
+
+    #include "cc_intro_pantallaNegre_typeText.sqf"
+
       // DEBUG OUTPUT.
-    if ( cc_param_debugOutput == 1 ) then {
+    if (cc_param_debugOutput == 1) then {
         player sideChat format ["DEBUG (intro.sqf): Utilitzant text introductori per la facció %1.", _faccioUnitat];
     };
 };
 
 // Introducció per la facció civil.
 if (_faccioUnitat == "civ_f") exitWith {
-    #include "cc_intro_civ_f.sqf"
-  
+    #define introText "Relaxar-se mata! Estigueu alerta!\nViper - Capità dels cavallers del Cel"
+    #define llocMissio "Localització"
+
+    #include "cc_intro_pantallaNegre_typeText.sqf"
+
       // DEBUG OUTPUT.
-    if ( cc_param_debugOutput == 1 ) then {
+    if (cc_param_debugOutput == 1) then {
         player sideChat format ["DEBUG (intro.sqf): Utilitzant text introductori per la facció %1.", _faccioUnitat];
     };
 };
 
 // Introducció per la facció FIA.
 if (_faccioUnitat in ["blu_g_f","ind_g_f","opf_g_f"]) exitWith {
-    #include "cc_intro_fia_f.sqf"
-  
+    #define introText "Relaxar-se mata! Estigueu alerta!\nViper - Capità dels cavallers del Cel"
+    #define llocMissio "Localització"
+
+    #include "cc_intro_pantallaNegre_typeText.sqf"
+
       // DEBUG OUTPUT.
-    if ( cc_param_debugOutput == 1 ) then {
+    if (cc_param_debugOutput == 1) then {
         player sideChat format ["DEBUG (intro.sqf): Utilitzant text introductori per la facció %1.", _faccioUnitat];
     };
 };
 
 // Introducció per la facció independent.
 if (_faccioUnitat == "ind_f") exitWith {
-    #include "cc_intro_ind_f.sqf"
-  
+    #define introText "Relaxar-se mata! Estigueu alerta!\nViper - Capità dels cavallers del Cel"
+    #define llocMissio "Localització"
+
+    #include "cc_intro_pantallaNegre_typeText.sqf"
+
       // DEBUG OUTPUT.
-    if ( cc_param_debugOutput == 1 ) then {
+    if (cc_param_debugOutput == 1) then {
         player sideChat format ["DEBUG (intro.sqf): Utilitzant text introductori per la facció %1.", _faccioUnitat];
     };
 };
-  
+
 // Introducció per la facció OPFOR.
 if (_faccioUnitat == "opf_f") exitWith {
-    #include "cc_intro_ind_f.sqf"
-  
+    #define introText "Relaxar-se mata! Estigueu alerta!\nViper - Capità dels cavallers del Cel"
+    #define llocMissio "Localització"
+
+    #include "cc_intro_pantallaNegre_typeText.sqf"
+
       // DEBUG OUTPUT.
-    if ( cc_param_debugOutput == 1 ) then {
+    if (cc_param_debugOutput == 1) then {
         player sideChat format ["DEBUG (intro.sqf): Utilitzant text introductori per la facció %1.", _faccioUnitat];
     };
 };
 
 // Introducció per la facció RHS: USAF "United States Army".
 if (_faccioUnitat == "rhs_faction_usarmy_d") exitWith {
-    #include "cc_intro_rhs_faction_usarmy_d.sqf"
-  
+    #define introText "Relaxar-se mata! Estigueu alerta!\nViper - Capità dels cavallers del Cel"
+    #define llocMissio "Localització"
+
+    #include "cc_intro_pantallaNegre_typeText.sqf"
+
       // DEBUG OUTPUT.
-    if ( cc_param_debugOutput == 1 ) then {
+    if (cc_param_debugOutput == 1) then {
         player sideChat format ["DEBUG (intro.sqf): Utilitzant text introductori per la facció %1.", _faccioUnitat];
     };
-};    
+};
 
 // Introducció per la facció RHS: USAF "United States Army".
 if (_faccioUnitat == "rhs_faction_usarmy_wd") exitWith {
-    #include "cc_intro_rhs_faction_usarmy_wd.sqf"
-  
+    #define introText "Relaxar-se mata! Estigueu alerta!\nViper - Capità dels cavallers del Cel"
+    #define llocMissio "Localització"
+
+    #include "cc_intro_pantallaNegre_typeText.sqf"
+
       // DEBUG OUTPUT.
-    if ( cc_param_debugOutput == 1 ) then {
+    if (cc_param_debugOutput == 1) then {
         player sideChat format ["DEBUG (intro.sqf): Utilitzant text introductori per la facció %1.", _faccioUnitat];
     };
 };
 
 // Introducció per la facció RHS: USAF "United States Marine Corps".
 if (_faccioUnitat == "rhs_faction_usmc_d") exitWith {
-    #include "cc_intro_rhs_faction_usmc_d.sqf"
-  
+    #define introText "Relaxar-se mata! Estigueu alerta!\nViper - Capità dels cavallers del Cel"
+    #define llocMissio "Localització"
+
+    #include "cc_intro_pantallaNegre_typeText.sqf"
+
       // DEBUG OUTPUT.
-    if ( cc_param_debugOutput == 1 ) then {
+    if (cc_param_debugOutput == 1) then {
         player sideChat format ["DEBUG (intro.sqf): Utilitzant text introductori per la facció %1.", _faccioUnitat];
     };
-};    
+};
 
 // Introducció per la facció RHS: USAF "United States Marine Corps".
 if (_faccioUnitat == "rhs_faction_usmc_wd") exitWith {
-    #include "cc_intro_rhs_faction_usmc_wd.sqf"
-  
+    #define introText "Relaxar-se mata! Estigueu alerta!\nViper - Capità dels cavallers del Cel"
+    #define llocMissio "Localització"
+
+    #include "cc_intro_pantallaNegre_typeText.sqf"
+
       // DEBUG OUTPUT.
-    if ( cc_param_debugOutput == 1 ) then {
+    if (cc_param_debugOutput == 1) then {
         player sideChat format ["DEBUG (intro.sqf): Utilitzant text introductori per la facció %1.", _faccioUnitat];
     };
 };
 
 // Introducció per la facció RHS: Insurgents.
 if (_faccioUnitat == "rhs_faction_insurgents") exitWith {
-    #include "cc_intro_rhs_faction_insurgents.sqf"
-  
+    #define introText "Relaxar-se mata! Estigueu alerta!\nViper - Capità dels cavallers del Cel"
+    #define llocMissio "Localització"
+
+    #include "cc_intro_pantallaNegre_typeText.sqf"
+
       // DEBUG OUTPUT.
-    if ( cc_param_debugOutput == 1 ) then {
+    if (cc_param_debugOutput == 1) then {
         player sideChat format ["DEBUG (intro.sqf): Utilitzant text introductori per la facció %1.", _faccioUnitat];
     };
 };
 
 // Briefing per la facció russa "Russian Airborne Troops".
 if (_faccioUnitat == "rhs_faction_vdv" ) exitWith {
-    #include "cc_intro_rhs_faction_vdv.sqf"
-  
+    #define introText "Relaxar-se mata! Estigueu alerta!\nViper - Capità dels cavallers del Cel"
+    #define llocMissio "Localització"
+
+    #include "cc_intro_pantallaNegre_typeText.sqf"
+
       // DEBUG OUTPUT.
-    if ( cc_param_debugOutput == 1 ) then {
+    if (cc_param_debugOutput == 1) then {
         player sideChat format ["DEBUG (intro.sqf): Utilitzant text introductori per la facció %1.", _faccioUnitat];
     };
 };
 
 // Briefing per la facció russa "Soviet Air Defense Forces".
 if (_faccioUnitat == "rhs_faction_vpvo" ) exitWith {
-    #include "cc_intro_rhs_faction_vpvo.sqf"
-    
+    #define introText "Relaxar-se mata! Estigueu alerta!\nViper - Capità dels cavallers del Cel"
+    #define llocMissio "Localització"
+
+    #include "cc_intro_pantallaNegre_typeText.sqf"
+
     // DEBUG OUTPUT.
-    if ( cc_param_debugOutput == 1 ) then {
+    if (cc_param_debugOutput == 1) then {
         player sideChat format ["DEBUG (intro.sqf): Utilitzant text introductori per la facció %1.", _faccioUnitat];
     };
 };
