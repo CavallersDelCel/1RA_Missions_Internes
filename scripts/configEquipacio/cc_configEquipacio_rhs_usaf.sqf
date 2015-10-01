@@ -77,9 +77,9 @@
 //         0.8  (2015/06/19) Afegida l'explicació pel tercer paràmetre (opcional).                       //
 //         0.9  (2015/07/03) Afegit el rol de Bussejador especialista en explosius (divexp).             //
 //         0.10 (2015/07/15) Canvi a Params (Arma v1.48).                                                //
-//         0.11 (2015/01/30) S'han ajuntat els fitxers per les faccions de RSH "rhs_faction_usarmy_d" i  //
+//         0.11 (2015/10/01) S'han ajuntat els fitxers per les faccions de RSH "rhs_faction_usarmy_d" i  //
 //                           "rhs_faction_usarmy_wd".                                                    //
-//         0.11 (2015/01/30) S'han ajuntat els fitxers per les faccions de RSH "rhs_faction_usmcy_d" i   //
+//         0.11 (2015/10/01) S'han ajuntat els fitxers per les faccions de RSH "rhs_faction_usmcy_d" i   //
 //                           "rhs_faction_usmc_wd".                                                      //
 //=======================================================================================================//
 

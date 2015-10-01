@@ -1,7 +1,7 @@
 //=======================================================================================================//
 // Arxiu: cc_intro.sqf                                                                                   //
 // Autor: CC_Magnetar                                                                                    //
-// Versió: 0.6                                                                                           //
+// Versió: 0.7                                                                                           //
 // Creació del Document: 2015/04/03                                                                      //
 // Descripció: Aquest document serveix crear una pantalla d'introducció i mostrar el nom de la missió    //
 //             així com la data i la localització                                                        //
@@ -13,6 +13,7 @@
 //                          "rhs_faction_usmc_d" i "blu_f".                                              //
 //         0.6 (2015/07/13) Afegides les faccions "civ_f", "blu_g_f", "ind_g_f", "opf_g_f", "ind_f",     //
 //                          "opf_f", "rhs_faction_vdv" i "rhs_faction_vpvo".                             //
+//         0.7 (2015/10/30) Unificació de l'efecte a un sol fitxer.                                      //
 //=======================================================================================================//
 
 private ["_faccioUnitat"];
