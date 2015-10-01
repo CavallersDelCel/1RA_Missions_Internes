@@ -6,6 +6,9 @@
 // Descripció: Aquest document serveix per declarar variables comunes als scripts.                       //
 //=======================================================================================================//
 
+// Variables privades.
+private ["_llargada_grups1RA", "_llargada_frequencies1RA"];
+
 //=======================================================================================================//
 // Configuració dels mods i scripts necessaris per la missió. Cada una de les següents variables pot     //
 // tenir els següents valors:                                                                            //
@@ -91,4 +94,18 @@ cc_var_frequencies1RA = [
     [51],
     [61]
 ];
+
+// Comprova que les dues variables tinguin la mateixa llargada.
+_llargada_grups1RA = count cc_var_grups1RA;
+_llargada_frequencies1RA = count cc_var_frequencies1RA;
+
+if (_llargada_grups1RA != _llargada_frequencies1RA) then {
+    player sideChat format ["ERROR (cc_variables_comunes.sqf): Les varibles ""_llargada_grups1RA"" i ""_llargada_frequencies1RA"" no tenen la mateixa mida."];
+} else {
+    {
+        if ( count _x != count (cc_var_frequencies1RA select _forEachIndex) ) then {
+            player sideChat format ["ERROR (cc_variables_comunes.sqf): El subgrup %1 de les varibles ""_llargada_grups1RA"" i ""_llargada_frequencies1RA"" no té la mateixa mida.", _forEachIndex];
+        };
+    } forEach cc_var_grups1RA;
+}
 //============================================ FI DEL FITXER ============================================//
