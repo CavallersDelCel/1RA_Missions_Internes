@@ -81,7 +81,7 @@ if (cc_requereix_ACE3_BasMed != 2) then {
         player sideChat format ["ERROR (cc_comprovar_configuracio.sqf): El sistema mèdic bàsic de ACE3 està activat però el fitxer ace_medical.pbo no està carregat."];
     };
 
-    if ((cc_param_sistemaMedic != 1) and cc_mod_ace3medical) then {
+    if ((cc_param_sistemaMedic != 1) and (cc_param_sistemaMedic != 2) and cc_mod_ace3medical) then {
         player sideChat format ["ERROR (cc_comprovar_configuracio.sqf): El sistema mèdic bàsic de ACE3 està desactivat però el fitxer ace_medical.pbo està carregat."];
     };
 };
@@ -104,7 +104,7 @@ if (cc_requereix_ACE3_AdvMed != 2) then {
         player sideChat format ["ERROR (cc_comprovar_configuracio.sqf): El sistema mèdic avançat de ACE3 està activat però el fitxer ace_medical.pbo no està carregat."];
     };
 
-    if ((cc_param_sistemaMedic != 2) and cc_mod_ace3medical) then {
+    if ((cc_param_sistemaMedic != 1) and (cc_param_sistemaMedic != 2) and cc_mod_ace3medical) then {
         player sideChat format ["ERROR (cc_comprovar_configuracio.sqf): El sistema mèdic avançat de ACE3 està desactivat però el fitxer ace_medical.pbo està carregat."];
     };
 };
