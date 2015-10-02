@@ -24,20 +24,20 @@ if(alive player) then {
 
     // Afegir les ràdios a cada unitat.
     [] call cc_fnc_tfar_afegirRadios;
-    
+
     sleep 10;
     if (cc_tfar_config_configurarFreqPerEquip) then {
         // Configurar els canals.
         [] call cc_fnc_tfar_configurarCanals;
     };
-    
+
     if (cc_tfar_config_configurarEstereo) then {
         [] call cc_fnc_tfar_configurarEstereo;
     };
-    
-    // Configurar el xat d'espectador.
-    //[] call cc_fnc_tfar_configurarXatEspectador;
-    
+
+    //Configurar el xat d'espectador.
+    [] call cc_fnc_tfar_configurarXatEspectador;
+
     // DEBUG OUTPUT
     if (cc_param_debugOutput == 1) then {
         player sideChat format ["DEBUG (fn_tfar_initClient.sqf): Radios configurades."];

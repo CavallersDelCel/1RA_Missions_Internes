@@ -39,21 +39,24 @@ if (cc_acre2_config_dividirFrequencies) then {
 if(alive _unitat) then {
     // Esperar fins que l'equipació estigui assignada.
     waitUntil{(_unitat getVariable ["cc_var_configEquipacio_Llesta", false])};
-    
+
     // Definir els idiomes per cada bàndol.
     [] call cc_fnc_acre2_determinarIdiomes;
-    
+
     // Treure totes les ràdios de l'inventari.
     [] call cc_fnc_acre2_treureRadios;
 
     // Afegir les ràdios a cada unitat.
     [] call cc_fnc_acre2_afegirRadios;
-    
+
+    // Configurar els canals actius.
     if (cc_acre2_config_configurarCanalsPerEquip) then {
-        // Configurar els canals actius.
         [] call cc_fnc_acre2_configurarCanals;
     };
-    
+
+    // Configurar el xat d'espectador.
+    [] call cc_fnc_acre2_configurarXatEspectador;
+
     if ( cc_param_debugOutput == 1 ) then {
         _unitat sideChat format ["DEBUG (fn_acre2_initClient.sqf): Radios configurades."];
     };

@@ -22,10 +22,4 @@ if(alive _unitat) then {
     [true] call acre_api_fnc_setSpectator;
 };
 
-
-//if (local player) then {
- //   [false] call acre_api_fnc_setSpectator;
- //   player addEventHandler ["Killed", {[true] call acre_api_fnc_setSpectator;}];
- //   player addEventHandler ["Respawn", {[false] call acre_api_fnc_setSpectator;}];
-//};
 //============================================ FI DEL FITXER ============================================//
