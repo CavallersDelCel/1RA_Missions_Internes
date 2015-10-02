@@ -71,7 +71,7 @@ joinUnassigned      = 1;       // 0: força el jugador al primer lloc lliure, 1:
 disabledAI          = 1;       // Amaga les unitats amigues jugables que no són controlades per un jugador.
 aiKills             = 0;       // Puntuació dels jugadors: 0 = deshabilitat, 1 = habilitat.
 
-respawnTemplates[]     = {"Seagull","cc_respawn_espectador"};
+respawnTemplates[]         = {"Seagull","cc_respawn"};
 //respawnTemplatesWest[] = {"Seagull","cc_respawn_espectador"};
 //respawnTemplatesEast[] = {"Seagull","cc_respawn_espectador"};
 //respawnTemplatesCiv[]  = {"Seagull","cc_respawn_espectador"};
@@ -286,13 +286,14 @@ class CfgFunctions {
 };
 
 class CfgRespawnTemplates {
-    class cc_respawn_espectador {
-        onPlayerRespawn = "scripts\respawn\cc_respawn_espectador.sqf";
-    };
-
     // Sobreescriure la classe Seagull de arma 3.
     class Seagull {
         onPlayerRespawn = "";
+    };
+
+    class cc_respawn {
+        onPlayerKilled = "scripts\respawn\cc_respawn.sqf";
+        onPlayerRespawn = "scripts\respawn\cc_respawn.sqf";
     };
 };
 
