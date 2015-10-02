@@ -69,7 +69,7 @@ Selecciona un dels finals per activar-lo.
 
 // Fes una llista de tots els finals inclosos a desctiption.ext de forma automàtica.
 _tipusFinals = (missionConfigFile >> "CfgDebriefing");
-for [{ _x = 0 },{_x < count _tipusFinals},{ _x = _x +1 }] do {
+for [{ _x = 0 }, {_x < count _tipusFinals}, { _x = _x + 1}] do {
     _nomFinal = (configName ((missionConfigFile >> "CfgDebriefing") select _x));
     _titol = getText (missionConfigFile >> "CfgDebriefing" >> format["%1",_nomFinal] >> "title");
     _descripcio = getText (missionConfigFile >> "CfgDebriefing" >> format["%1",_nomFinal] >> "description");
