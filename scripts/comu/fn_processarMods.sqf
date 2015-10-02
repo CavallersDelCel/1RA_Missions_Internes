@@ -16,7 +16,7 @@ cc_mod_ace3advbal = isClass (configFile >> "CfgPatches" >> "ace_advanced_ballist
 cc_mod_agm = isClass (configFile >> "CfgPatches" >> "agm_core");            // Comprovar si AGM està carregat.
 cc_mod_asrai = isClass (configFile >> "CfgPatches" >> "asr_ai3_main");      // Comprovar si ASR AI està carregat.
 
-if ( isServer ) then {
+if (isServer) then {
     publicVariable "cc_mod_acre2";
     publicVariable "cc_mod_tfar";
     publicVariable "cc_mod_ace3";
