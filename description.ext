@@ -184,7 +184,7 @@ class CfgDebriefing {
     };
 
     class Final2 {
-        title = "Ending #2";
+        title = "Final #2";
         subtitle = "";
         description = "*** Debriefing del final #2. ***";
         pictureBackground = "";
