@@ -19,6 +19,10 @@ if (isNull _assassi) then {
     _assassi = _unitat;
 };
 
+if ((_respawn == 0) or (_respawn == 1)) exitWith {
+    [[],"cc_fnc_finalitzarMissio",true] spawn BIS_fnc_MP;
+};
+
 if (alive _unitat) then {
     // Si hi ha respawn de tipus BIRD.
     if (_respawn == 1) then {

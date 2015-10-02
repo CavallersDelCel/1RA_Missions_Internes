@@ -72,9 +72,9 @@ disabledAI          = 1;       // Amaga les unitats amigues jugables que no són
 aiKills             = 0;       // Puntuació dels jugadors: 0 = deshabilitat, 1 = habilitat.
 
 respawnTemplates[]         = {"Seagull","cc_respawn"};
-//respawnTemplatesWest[] = {"Seagull","cc_respawn_espectador"};
-//respawnTemplatesEast[] = {"Seagull","cc_respawn_espectador"};
-//respawnTemplatesCiv[]  = {"Seagull","cc_respawn_espectador"};
+//respawnTemplatesWest[] = {"Seagull","cc_respawn"};
+//respawnTemplatesEast[] = {"Seagull","cc_respawn"};
+//respawnTemplatesCiv[]  = {"Seagull","cc_respawn"};
 //respawnTemplatesVirtual[] = {}; // Jugadors virtuals.
 
 //=======================================================================================================//
@@ -174,7 +174,7 @@ class Params {
 // DEBRIEFING: Informació per quan acaba la missió.                                                      //
 //=======================================================================================================//
 class CfgDebriefing {
-    class Final1 {
+    class FinalExit1 {
         title = "Final #1";
         subtitle = "";
         description = "*** Debriefing del final #1. ***";
@@ -183,7 +183,7 @@ class CfgDebriefing {
         pictureColor[] = {0.0,0.3,0.6,1};
     };
 
-    class Final2 {
+    class FinalExit2 {
         title = "Final #2";
         subtitle = "";
         description = "*** Debriefing del final #2. ***";
@@ -192,7 +192,7 @@ class CfgDebriefing {
         pictureColor[] = {0.0,0.3,0.6,1};
     };
 
-    //class Final3, Final4, ....
+    //class FinalExit3, FinalExit4, ....
 
     class FinalFallit1 {
         title = "Missió fallida #1";
@@ -212,12 +212,14 @@ class CfgDebriefing {
         pictureColor[] = {0.0,0.3,0.6,1};
     };
 
+    //class FinalFallit3, FinalFallit4, ....
+
     class FracasAbsolut {
         title = "Fracàs absolut";
         subtitle = "";
         description = "*** Descripció de què és fracàs absolut. ***";
         pictureBackground = "";
-        picture = "b_inf";
+        picture = "KIA";
         pictureColor[] = {0.0,0.3,0.6,1};
     };
 };
@@ -262,6 +264,11 @@ class CfgFunctions {
             class configEquipacio{};
         };
 
+        class finalitzarMissio {
+            file = "scripts\finalitzarMissio";
+            class finalitzarMissio{};
+        };
+
         // Funcions per inicialitzar el sistema de radio Task Force Arrowhead (TFAR).
         class tfar {
             file = "scripts\radios\tfar";
@@ -286,11 +293,6 @@ class CfgFunctions {
 };
 
 class CfgRespawnTemplates {
-    // Sobreescriure la classe Seagull de arma 3.
-    class Seagull {
-        onPlayerRespawn = "";
-    };
-
     class cc_respawn {
         onPlayerKilled = "scripts\respawn\cc_respawn.sqf";
         onPlayerRespawn = "scripts\respawn\cc_respawn.sqf";
