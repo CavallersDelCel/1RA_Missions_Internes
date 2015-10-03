@@ -9,14 +9,14 @@ class Mission
 		"A3_Characters_F_BLUFOR",
 		"rhsusf_c_troops",
 		"A3_Weapons_F_Ammoboxes",
-		"A3_Modules_F_Curator_Curator"
+		"A3_Modules_F_Curator_Curator",
+		"3DEN"
 	};
 	addOnsAuto[]=
 	{
-		"A3_Characters_F_OPFOR",
-		"a3_characters_f",
 		"rhsusf_c_troops",
-		"A3_Modules_F_Curator_Curator",
+		"3DEN",
+		"a3_modules_f_curator_curator",
 		"A3_Weapons_F_Ammoboxes",
 		"a3_map_stratis"
 	};
@@ -53,57 +53,51 @@ class Mission
 	};
 	class Groups
 	{
-		items=3;
+		items=2;
 		class Item0
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={5196.2627,223.38852,5030.8428};
-					id=0;
-					side="EAST";
-					vehicle="O_officer_F";
-					leader=1;
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item1
 		{
 			side="WEST";
 			class Vehicles
 			{
-				items=2;
+				items=3;
 				class Item0
 				{
 					position[]={1629.7225,5.5,5181.6387};
-					id=1;
+					id=0;
 					side="WEST";
 					vehicle="rhsusf_army_ocp_rifleman_m4";
 					player="PLAYER COMMANDER";
 					leader=1;
 					skill=0.60000002;
 					text="CC_A1_SL";
-					init="[""sl"",this] call cc_fnc_configEquipacio; this setVariable[""cc_var_grupUnitat"",[""Bravo"",1],true];";
+					init="[""Bravo"", 3,""sl"",this] call cc_fnc_configUnitat;";
 					description="Lider d'Esquadra";
 				};
 				class Item1
 				{
 					position[]={1647.7552,5.5,5179.6934};
-					id=2;
+					id=1;
 					side="WEST";
 					vehicle="rhsusf_army_ocp_medic";
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="CC_A1_ME";
-					init="[""me"",this] call cc_fnc_configEquipacio; this setVariable[""cc_var_grupUnitat"",[""Alfa"",1], true];";
+					init="[""Alfa"", 1,""me"",this] call cc_fnc_configUnitat;";
+				};
+				class Item2
+				{
+					position[]={1648.3851,5.5,5199.2813};
+					id=2;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_engineer";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="CC_A1_EN";
+					init="[""Alfa"", 1,""en"",this] call cc_fnc_configUnitat;";
 				};
 			};
 		};
-		class Item2
+		class Item1
 		{
 			side="LOGIC";
 			class Vehicles

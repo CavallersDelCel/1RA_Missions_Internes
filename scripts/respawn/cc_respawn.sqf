@@ -19,7 +19,7 @@ if (isNull _assassi) then {
     _assassi = _unitat;
 };
 
-if ((_respawn == 0) or (_respawn == 1)) exitWith {
+if ((_respawn == 0) or (_respawn == 1) and ({alive _x} count allPlayers <= 0)) exitWith {
     [[],"cc_fnc_finalitzarMissio",true] spawn BIS_fnc_MP;
 };
 
@@ -28,10 +28,8 @@ if (alive _unitat) then {
     if (_respawn == 1) then {
 
         // Amaga el cos en cas de que sigui una gavina.
-        if (typeof _unitat == "seagull") then {
-            if (isServer) then {
-                _unitat hideObjectGlobal true;
-            };
+        if (_unitat isKindOf "seagull") then {
+            [[],"{_unitat hideObjectGlobal true;}",false,true] call BIS_fnc_MP;
         };
 
         // Si hi ha ACE3 carregat utilitza el mode espectador de ACE 3. En cas contrari s'utilitza el mode
@@ -82,6 +80,7 @@ if (alive _unitat) then {
             };
 
             RscSpectator_allowFreeCam = false;
+            BIS_fnc_feedback_allowPP = true;
             _rscLayer cuttext ["","plain"];
         };
 
@@ -121,6 +120,7 @@ if (alive _unitat) then {
         };
 
         RscSpectator_allowFreeCam = true;
+        BIS_fnc_feedback_allowPP = false;   // Deshabilita els effectes de morir.
         _rscLayer cutrsc ["RscSpectator","plain"];
     };
 };
