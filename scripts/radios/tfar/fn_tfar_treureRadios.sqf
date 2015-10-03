@@ -7,6 +7,7 @@
 //             decidir quines radios es fan servir durant la partida en cas de que no es vulguin fer     //
 //             servir les que van per defecte als perfils. Task Force Arrowhead Radio (TFAR)             //
 //             https://github.com/michail-nikolaev/task-force-arma-3-radio/wiki                          //
+// Canvis: 0.1 (2015/03/09) Versió inicial.                                                              //
 //=======================================================================================================//
 
 // Declaració de variables.

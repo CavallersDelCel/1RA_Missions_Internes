@@ -6,6 +6,7 @@
 // Descripció: Aquest document serveix per configurar els canals en actiu de les diferents radios del    //
 //             Advanced Combat Radio Environment 2 (ACRE2)                                               //
 //             http://gitlab.idi-systems.com/idi-systems/acre2-public/wikis/home                         //
+// Canvis: 0.1 (2015/07/26) Versió inicial.                                                              //
 //=======================================================================================================//
 
 // Declaració de variables.
@@ -35,8 +36,8 @@ _canal = 1;
 
     if ("Comandament" in _x) then {
         _canalComandament = _canal;
-    };            
-    _canal = _canal + (count _x);    
+    };
+    _canal = _canal + (count _x);
 } forEach cc_var_grups1RA;
 
 // Obtenir la llista de radios de la unitat.
@@ -47,17 +48,17 @@ _llistaRadios = call acre_api_fnc_getCurrentRadioList;
     if ([_x, "ACRE_PRC343"] call acre_api_fnc_isKindOf) then {
         [_x, _canalEquipFoc] call acre_api_fnc_setRadioChannel;
     };
-    
+
     // Les ràdios PRC148 utilitzaran com a canal actiu el de la malla de l'esquadra.
     if ([_x, "ACRE_PRC148"] call acre_api_fnc_isKindOf) then {
         [_x, _canalEsquadra] call acre_api_fnc_setRadioChannel;
     };
-    
+
     // Les ràdios PRC148 utilitzaran com a canal actiu el de la malla de l'esquadra.
     if ([_x, "ACRE_PRC152"] call acre_api_fnc_isKindOf) then {
         [_x, _canalEsquadra] call acre_api_fnc_setRadioChannel;
     };
-    
+
     // Les ràdios PRC117F utilitzaran com a canal actiu el de comandament.
     if ([_x, "ACRE_PRC117F"] call acre_api_fnc_isKindOf) then {
         [_x, _canalComandament] call acre_api_fnc_setRadioChannel;

@@ -7,6 +7,7 @@
 //             decidir quines radios es fan servir durant la partida en cas de que no es vulguin fer     //
 //             servir les que van per defecte als perfils. Advanced Combat Radio Environment 2 (ACRE2)   //
 //             http://gitlab.idi-systems.com/idi-systems/acre2-public/wikis/home                         //
+// Canvis: 0.1 (2015/04/28) Versió inicial.                                                              //
 //=======================================================================================================//
 
 // Declaració de variables.

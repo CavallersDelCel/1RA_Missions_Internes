@@ -16,7 +16,7 @@
 //                                   "correctament". Contra més gran és aquest número la qualitat baixa. //
 //                 factorTransmetre: És un factor que multiplica la força de la senyal enviada per la    //
 //                                   radio. Contra més alt, a més distància arribarà la senyal.          //
-// Canvis: 0.1 (2015/05/26) Versió inicial.
+// Canvis: 0.1 (2015/05/26) Versió inicial.                                                              //
 //=======================================================================================================//
 
 private["_factorRebre","_factorTransmetre", "_unitat"];

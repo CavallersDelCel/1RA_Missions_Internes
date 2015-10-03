@@ -5,6 +5,7 @@
 // Creació del Document: 2015/04/28                                                                      //
 // Descripció: Aquest document serveix per configurar el Advanced Combat Radio Environment 2 (ACRE2)     //
 //             http://gitlab.idi-systems.com/idi-systems/acre2-public/wikis/home                         //
+// Canvis: 0.1 (2015/04/28) Versió inicial.                                                              //
 //=======================================================================================================//
 
 private["_unitat","_nomPreset"];

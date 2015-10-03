@@ -6,6 +6,7 @@
 // Descripció: Aquest document serveix per definir parmàmetres bàsics per la configuració del Advanced   //
 //             Combat Radio Environment 2 (ACRE2)                                                        //
 //             http://gitlab.idi-systems.com/idi-systems/acre2-public/wikis/home                         //
+// Canvis: 0.1 (2015/04/27) Versió inicial.                                                              //
 //=======================================================================================================//
 
 //=======================================================================================================//
