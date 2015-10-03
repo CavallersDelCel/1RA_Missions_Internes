@@ -258,6 +258,17 @@ class CfgFunctions {
             };
         };
 
+        // Funció per configurar les unitats.
+        class configUnitat {
+            file = "scripts\configUnitat";
+            class configUnitat{};
+        };
+
+        // Funcio per configurar els grups de les unitats i el seu identificador.
+        class  configGrup {
+            file = "scripts\configGrup";
+            class configGrup{};
+        };
         // Funcions per equipar els diferents rols amb els perfils dels Cavallers del Cel.
         class configEquipacio {
             file = "scripts\configEquipacio";

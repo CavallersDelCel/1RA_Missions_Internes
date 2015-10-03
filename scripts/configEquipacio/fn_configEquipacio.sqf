@@ -81,7 +81,7 @@
 //=======================================================================================================//
 
 // Declaració de variables.
-params ["_tipusUnitat", "_unitat", "_faccioUnitat"];
+params ["_tipusUnitat", "_unitat", ["_faccioUnitat", nil]];
 
 _tipusUnitat = toLower _tipusUnitat;
 
