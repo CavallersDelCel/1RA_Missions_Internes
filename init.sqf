@@ -36,13 +36,13 @@ cc_comprovar_configuracio = [] execVM "scripts\comu\cc_comprovar_configuracio.sq
 // Inicialitzar el Dynamic AI Creator 3.1b (DAC 3.1b): http://www.armaholic.com/page.php?id=25550        //
 //=======================================================================================================//
 if (cc_param_utilitzarDAC == 1) then {
-    cc_inicialitzar_DAC = [] execVM "cc_inicialitzar_DAC.sqf";
+    cc_inicialitzar_DAC = [] execVM "scripts\DAC\cc_inicialitzar_DAC.sqf";
 };
 
 //=======================================================================================================//
 // Configurar de forma més específica el ASR AI: https://forums.bistudio.com/topic/163742-asr-ai-3/      //
 //=======================================================================================================//
-cc_configurar_ASRAI = [] execVM "cc_configurar_ASRAI.sqf";
+cc_configurar_ASRAI = [] execVM "scripts\asrai3\cc_configurar_ASRAI.sqf";
 
 // Execució del script per generar els Briefings.
 cc_script_briefing = [] execVM "briefing.sqf";
