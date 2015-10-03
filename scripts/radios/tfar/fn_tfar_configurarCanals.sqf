@@ -59,7 +59,7 @@ if ((_grupUnitat select 0 != "nil") and (_grupUnitat select 1 != -1)) then {
 
         _canal = 0;
         {
-            _frequencies = cc_var_frequencies1RA select _forEachIndex;
+            _frequencies = cc_var_frequencies1RALR select _forEachIndex;
             [(call TFAR_fnc_activeLrRadio), _canal + 1, format ["%1",_frequencies select 0]] call TFAR_fnc_SetChannelFrequency;
             if ("Comandament" in _x) then {
                 _canalComandament = _canal;

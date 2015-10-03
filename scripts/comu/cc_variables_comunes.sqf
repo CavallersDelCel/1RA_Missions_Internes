@@ -1,13 +1,13 @@
 //=======================================================================================================//
 // Arxiu: cc_variables_comunes.sqf                                                                       //
 // Autor: CC_Magnetar                                                                                    //
-// Versió: 0.1                                                                                           //
-// Creació del Document: 01/04/2015                                                                      //
+// Versió: 0.3                                                                                           //
+// Creació del Document: 2015/04/01                                                                      //
 // Descripció: Aquest document serveix per declarar variables comunes als scripts.                       //
 //=======================================================================================================//
 
 // Variables privades.
-private ["_llargada_grups1RA", "_llargada_frequencies1RA"];
+private ["_llargada_grups1RA", "_llargada_frequencies1RA", "_llargada_frequencies1RALR"];
 
 //=======================================================================================================//
 // Configuració dels mods i scripts necessaris per la missió. Cada una de les següents variables pot     //
@@ -95,9 +95,19 @@ cc_var_frequencies1RA = [
     [61]
 ];
 
+cc_var_frequencies1RALR = [
+    [41],
+    [42],
+    [43],
+    [40],
+    [30],
+    [50]
+];
+
 // Comprova que les dues variables tinguin la mateixa llargada.
 _llargada_grups1RA = count cc_var_grups1RA;
 _llargada_frequencies1RA = count cc_var_frequencies1RA;
+_llargada_frequencies1RALR = count cc_var_frequencies1RALR;
 
 if (_llargada_grups1RA != _llargada_frequencies1RA) then {
     player sideChat format ["ERROR (cc_variables_comunes.sqf): Les varibles ""_llargada_grups1RA"" i ""_llargada_frequencies1RA"" no tenen la mateixa mida."];
@@ -107,5 +117,9 @@ if (_llargada_grups1RA != _llargada_frequencies1RA) then {
             player sideChat format ["ERROR (cc_variables_comunes.sqf): El subgrup %1 de les varibles ""_llargada_grups1RA"" i ""_llargada_frequencies1RA"" no té la mateixa mida.", _forEachIndex];
         };
     } forEach cc_var_grups1RA;
-}
+};
+
+if (_llargada_grups1RA != _llargada_frequencies1RALR) then {
+    player sideChat format ["ERROR (cc_variables_comunes.sqf): Les varibles ""_llargada_grups1RA"" i ""_llargada_frequencies1RALR"" no tenen la mateixa mida."];
+};
 //============================================ FI DEL FITXER ============================================//
