@@ -1221,7 +1221,8 @@ switch (_tipusUnitat) do
         (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna, 1];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_mk84", 1];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag", 4];
-
+        (unitBackpack _unitat) addItemCargoGlobal ["ToolKit", 1];
+        
         // Arma principal.
         _unitat addWeapon _arma;
         _unitat addPrimaryWeaponItem _armaSurefire;
