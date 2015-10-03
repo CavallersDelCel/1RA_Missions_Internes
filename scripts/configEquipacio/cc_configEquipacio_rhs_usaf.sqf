@@ -86,7 +86,6 @@
 //=======================================================================================================//
 // Declaració de variables.                                                                              //
 //=======================================================================================================//
-
 private["_esInfanteria"];
 private["_uniforme", "_armillaSQ", "_armillaTL", "_armillaRFL", "_armillaGR", "_armillaDM", "_armillaME", "_armillaAR", "_armillaMG", "_armillaCREW", "_casc", "_cascSN", "_motxilla"];
 private["_bateriaUAV", "_cintaDentencio", "_einesMapa", "_microDAGR", "_taps", "_vectorIV", "_atragmx", "_kestrel", "_clacker", "_clackerm26", "_kitDesactivacio", "_telefon"];
@@ -412,7 +411,6 @@ switch (_tipusUnitat) do
                 (unitBackpack _unitat) addItemCargoGlobal [_torniquet,1];
             };
         };
-        (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",5];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",2];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_m714_White",2];
@@ -426,6 +424,15 @@ switch (_tipusUnitat) do
 
         // Objectes.
         //_unitat linkItem _gps;
+
+        // Visió nocturna.
+        if ((cc_var_equiparVisioNocturna == 1) or (cc_var_equiparVisioNocturna == 2)) then {
+            if (cc_var_equiparVisioNocturna == 1) then {
+                (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
+            } else {
+                _unitat linkItem _visioNocturna;
+            };
+        };
 
         // Binocles.
         _unitat addWeapon _vectorIV;
@@ -465,7 +472,6 @@ switch (_tipusUnitat) do
                 (unitBackpack _unitat) addItemCargoGlobal [_torniquet,1];
             };
         };
-        (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",5];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",2];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_m714_White",2];
@@ -476,6 +482,15 @@ switch (_tipusUnitat) do
         _unitat addPrimaryWeaponItem _armaSurefire;
         _unitat addPrimaryWeaponItem _armaLaserLlanterna;
         _unitat addPrimaryWeaponItem _armaMira;
+
+        // Visió nocturna.
+        if ((cc_var_equiparVisioNocturna == 1) or (cc_var_equiparVisioNocturna == 2)) then {
+            if (cc_var_equiparVisioNocturna == 1) then {
+                (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
+            } else {
+                _unitat linkItem _visioNocturna;
+            };
+        };
 
         // Binocles.
         _unitat addWeapon _vectorIV;
@@ -515,7 +530,6 @@ switch (_tipusUnitat) do
                 (unitBackpack _unitat) addItemCargoGlobal [_torniquet,1];
             };
         };
-        (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",5];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",2];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_m714_White",2];
@@ -526,6 +540,15 @@ switch (_tipusUnitat) do
         _unitat addPrimaryWeaponItem _armaSurefire;
         _unitat addPrimaryWeaponItem _armaLaserLlanterna;
         _unitat addPrimaryWeaponItem _armaMira;
+
+        // Visió nocturna.
+        if ((cc_var_equiparVisioNocturna == 1) or (cc_var_equiparVisioNocturna == 2)) then {
+            if (cc_var_equiparVisioNocturna == 1) then {
+                (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
+            } else {
+                _unitat linkItem _visioNocturna;
+            };
+        };
     };
 
     // Observador avançat (Forward Observer).
@@ -562,7 +585,6 @@ switch (_tipusUnitat) do
                 (unitBackpack _unitat) addItemCargoGlobal [_torniquet,1];
             };
         };
-        (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",5];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",2];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_m714_White",2];
@@ -573,6 +595,15 @@ switch (_tipusUnitat) do
         _unitat addPrimaryWeaponItem _armaSurefire;
         _unitat addPrimaryWeaponItem _armaLaserLlanterna;
         _unitat addPrimaryWeaponItem _armaMira;
+
+        // Visió nocturna.
+        if ((cc_var_equiparVisioNocturna == 1) or (cc_var_equiparVisioNocturna == 2)) then {
+            if (cc_var_equiparVisioNocturna == 1) then {
+                (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
+            } else {
+                _unitat linkItem _visioNocturna;
+            };
+        };
 
         // Objectes.
         _unitat linkItem _terminalUAV;
@@ -619,7 +650,6 @@ switch (_tipusUnitat) do
                 (unitBackpack _unitat) addItemCargoGlobal [_bossaSang500,2];
             };
         };
-        (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",2];
 
         // Arma principal.
@@ -627,6 +657,15 @@ switch (_tipusUnitat) do
         _unitat addPrimaryWeaponItem _armaSurefire;
         _unitat addPrimaryWeaponItem _armaLaserLlanterna;
         _unitat addPrimaryWeaponItem _armaMira;
+
+        // Visió nocturna.
+        if ((cc_var_equiparVisioNocturna == 1) or (cc_var_equiparVisioNocturna == 2)) then {
+            if (cc_var_equiparVisioNocturna == 1) then {
+                (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
+            } else {
+                _unitat linkItem _visioNocturna;
+            };
+        };
     };
 
     // Líder d'esquadra (Squad Leader).
@@ -663,7 +702,6 @@ switch (_tipusUnitat) do
                 (unitBackpack _unitat) addItemCargoGlobal [_torniquet,1];
             };
         };
-        (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",5];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",2];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_m714_White",2];
@@ -677,6 +715,15 @@ switch (_tipusUnitat) do
 
         // Objectes.
         //_unitat linkItem _gps;
+
+        // Visió nocturna.
+        if ((cc_var_equiparVisioNocturna == 1) or (cc_var_equiparVisioNocturna == 2)) then {
+            if (cc_var_equiparVisioNocturna == 1) then {
+                (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
+            } else {
+                _unitat linkItem _visioNocturna;
+            };
+        };
 
         // Binocles.
         _unitat addWeapon _vectorIV;
@@ -713,7 +760,6 @@ switch (_tipusUnitat) do
                 (unitBackpack _unitat) addItemCargoGlobal [_torniquet,1];
             };
         };
-        (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",5];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",2];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_m714_White",2];
@@ -724,6 +770,15 @@ switch (_tipusUnitat) do
         _unitat addPrimaryWeaponItem _armaSurefire;
         _unitat addPrimaryWeaponItem _armaLaserLlanterna;
         _unitat addPrimaryWeaponItem _armaMira;
+
+        // Visió nocturna.
+        if ((cc_var_equiparVisioNocturna == 1) or (cc_var_equiparVisioNocturna == 2)) then {
+            if (cc_var_equiparVisioNocturna == 1) then {
+                (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
+            } else {
+                _unitat linkItem _visioNocturna;
+            };
+        };
 
         // Binocles.
         _unitat addWeapon _vectorIV;
@@ -757,11 +812,19 @@ switch (_tipusUnitat) do
                 (unitBackpack _unitat) addItemCargoGlobal [_torniquet,1];
             };
         };
-        (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",5];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",2];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_mk84",2];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_an_m8hc",2];
+
+        // Visió nocturna.
+        if ((cc_var_equiparVisioNocturna == 1) or (cc_var_equiparVisioNocturna == 2)) then {
+            if (cc_var_equiparVisioNocturna == 1) then {
+                (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
+            } else {
+                _unitat linkItem _visioNocturna;
+            };
+        };
 
         // Arma principal.
         _unitat addWeapon _arma;
@@ -798,7 +861,6 @@ switch (_tipusUnitat) do
                 (unitBackpack _unitat) addItemCargoGlobal [_torniquet,1];
             };
         };
-        (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",5];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",2];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_an_m8hc",2];
@@ -813,6 +875,15 @@ switch (_tipusUnitat) do
 
         // Llençador AT4
         _unitat addWeapon _armaLlencadorRF;
+
+        // Visió nocturna.
+        if ((cc_var_equiparVisioNocturna == 1) or (cc_var_equiparVisioNocturna == 2)) then {
+            if (cc_var_equiparVisioNocturna == 1) then {
+                (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
+            } else {
+                _unitat linkItem _visioNocturna;
+            };
+        };
     };
 
     // Granader (Grenadier).
@@ -845,7 +916,6 @@ switch (_tipusUnitat) do
                 (unitBackpack _unitat) addItemCargoGlobal [_torniquet,1];
             };
         };
-        (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",5];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",1];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_m714_White",2];
@@ -858,6 +928,15 @@ switch (_tipusUnitat) do
         _unitat addPrimaryWeaponItem _armaSurefire;
         _unitat addPrimaryWeaponItem _armaLaserLlanterna;
         _unitat addPrimaryWeaponItem _armaMira;
+
+        // Visió nocturna.
+        if ((cc_var_equiparVisioNocturna == 1) or (cc_var_equiparVisioNocturna == 2)) then {
+            if (cc_var_equiparVisioNocturna == 1) then {
+                (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
+            } else {
+                _unitat linkItem _visioNocturna;
+            };
+        };
     };
 
     // Fuseller automàtic (Automatic Rifleman).
@@ -886,7 +965,6 @@ switch (_tipusUnitat) do
                 (unitBackpack _unitat) addItemCargoGlobal [_torniquet,1];
             };
         };
-        (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhsusf_200Rnd_556x45_soft_pouch",1];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_mk84",2];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_an_m8hc",1];
@@ -895,6 +973,15 @@ switch (_tipusUnitat) do
         _unitat addWeapon _armaAR;
         _unitat addPrimaryWeaponItem _armaLaserLlanternaAR;
         _unitat addPrimaryWeaponItem _armaMiraAR;
+
+        // Visió nocturna.
+        if ((cc_var_equiparVisioNocturna == 1) or (cc_var_equiparVisioNocturna == 2)) then {
+            if (cc_var_equiparVisioNocturna == 1) then {
+                (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
+            } else {
+                _unitat linkItem _visioNocturna;
+            };
+        };
     };
 
     // Tirador designat (Designated Marksman).
@@ -927,7 +1014,6 @@ switch (_tipusUnitat) do
                 (unitBackpack _unitat) addItemCargoGlobal [_torniquet,1];
             };
         };
-        (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_mk84",2];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_an_m8hc",1];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhsusf_20Rnd_762x51_m118_special_Mag",5];
@@ -938,6 +1024,15 @@ switch (_tipusUnitat) do
         _unitat addPrimaryWeaponItem _armaLaserLlanternaSN;
         _unitat addPrimaryWeaponItem _armaMiraDM;
         _unitat addPrimaryWeaponItem _armabipodeDM;
+
+        // Visió nocturna.
+        if ((cc_var_equiparVisioNocturna == 1) or (cc_var_equiparVisioNocturna == 2)) then {
+            if (cc_var_equiparVisioNocturna == 1) then {
+                (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
+            } else {
+                _unitat linkItem _visioNocturna;
+            };
+        };
     };
 
 
@@ -967,10 +1062,18 @@ switch (_tipusUnitat) do
                 (unitBackpack _unitat) addItemCargoGlobal [_torniquet,1];
             };
         };
-        (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_mk84",1];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_an_m8hc",2];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhsusf_100Rnd_762x51",2];
+
+        // Visió nocturna.
+        if ((cc_var_equiparVisioNocturna == 1) or (cc_var_equiparVisioNocturna == 2)) then {
+            if (cc_var_equiparVisioNocturna == 1) then {
+                (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
+            } else {
+                _unitat linkItem _visioNocturna;
+            };
+        };
 
         // Arma principal.
         _unitat addWeapon _armaMG;
@@ -1005,7 +1108,6 @@ switch (_tipusUnitat) do
                 (unitBackpack _unitat) addItemCargoGlobal [_torniquet,1];
             };
         };
-        (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_mk84",1];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_an_m8hc",2];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhsusf_100Rnd_762x51",2];
@@ -1015,6 +1117,15 @@ switch (_tipusUnitat) do
         _unitat addPrimaryWeaponItem _armaSurefire;
         _unitat addPrimaryWeaponItem _armaLaserLlanterna;
         _unitat addPrimaryWeaponItem _armaMira;
+
+        // Visió nocturna.
+        if ((cc_var_equiparVisioNocturna == 1) or (cc_var_equiparVisioNocturna == 2)) then {
+            if (cc_var_equiparVisioNocturna == 1) then {
+                (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
+            } else {
+                _unitat linkItem _visioNocturna;
+            };
+        };
 
         // Prismàtics.
         _unitat addWeapon _prismatic;
@@ -1048,7 +1159,6 @@ switch (_tipusUnitat) do
                 (unitBackpack _unitat) addItemCargoGlobal [_torniquet,1];
             };
         };
-        (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",5];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",2];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_mk84",1];
@@ -1063,6 +1173,15 @@ switch (_tipusUnitat) do
 
         // Javelin.
         _unitat addWeapon _armaLlencadorAT;
+
+        // Visió nocturna.
+        if ((cc_var_equiparVisioNocturna == 1) or (cc_var_equiparVisioNocturna == 2)) then {
+            if (cc_var_equiparVisioNocturna == 1) then {
+                (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
+            } else {
+                _unitat linkItem _visioNocturna;
+            };
+        };
     };
 
     // Assistent d'antitanc (AT Ammo handler).
@@ -1093,7 +1212,6 @@ switch (_tipusUnitat) do
                 (unitBackpack _unitat) addItemCargoGlobal [_torniquet,1];
             };
         };
-        (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_fgm148_magazine_AT",1];
 
         // Arma principal.
@@ -1101,6 +1219,15 @@ switch (_tipusUnitat) do
         _unitat addPrimaryWeaponItem _armaSurefire;
         _unitat addPrimaryWeaponItem _armaLaserLlanterna;
         _unitat addPrimaryWeaponItem _armaMira;
+
+        // Visió nocturna.
+        if ((cc_var_equiparVisioNocturna == 1) or (cc_var_equiparVisioNocturna == 2)) then {
+            if (cc_var_equiparVisioNocturna == 1) then {
+                (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
+            } else {
+                _unitat linkItem _visioNocturna;
+            };
+        };
     };
 
     // Anti aèri (Anti Air gunner).
@@ -1131,7 +1258,6 @@ switch (_tipusUnitat) do
                 (unitBackpack _unitat) addItemCargoGlobal [_torniquet,1];
             };
         };
-        (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",5];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",2];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_mk84",1];
@@ -1146,6 +1272,15 @@ switch (_tipusUnitat) do
 
         // Stinger.
         _unitat addWeapon _armaLlencadorAA;
+
+        // Visió nocturna.
+        if ((cc_var_equiparVisioNocturna == 1) or (cc_var_equiparVisioNocturna == 2)) then {
+            if (cc_var_equiparVisioNocturna == 1) then {
+                (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
+            } else {
+                _unitat linkItem _visioNocturna;
+            };
+        };
     };
 
     // Assistent d'anti aèri (Anti Air Assitant).
@@ -1176,15 +1311,22 @@ switch (_tipusUnitat) do
                 (unitBackpack _unitat) addItemCargoGlobal [_torniquet,1];
             };
         };
-        (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_fim92_mag",1];
-
 
         // Arma principal.
         _unitat addWeapon _arma;
         _unitat addPrimaryWeaponItem _armaSurefire;
         _unitat addPrimaryWeaponItem _armaLaserLlanterna;
         _unitat addPrimaryWeaponItem _armaMira;
+
+        // Visió nocturna.
+        if ((cc_var_equiparVisioNocturna == 1) or (cc_var_equiparVisioNocturna == 2)) then {
+            if (cc_var_equiparVisioNocturna == 1) then {
+                (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
+            } else {
+                _unitat linkItem _visioNocturna;
+            };
+        };
     };
 
     // Enginyer (Engineer).
@@ -1218,16 +1360,24 @@ switch (_tipusUnitat) do
                 (unitBackpack _unitat) addItemCargoGlobal [_torniquet,1];
             };
         };
-        (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna, 1];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_mk84", 1];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag", 4];
         (unitBackpack _unitat) addItemCargoGlobal ["ToolKit", 1];
-        
+
         // Arma principal.
         _unitat addWeapon _arma;
         _unitat addPrimaryWeaponItem _armaSurefire;
         _unitat addPrimaryWeaponItem _armaLaserLlanterna;
         _unitat addPrimaryWeaponItem _armaMira;
+
+        // Visió nocturna.
+        if ((cc_var_equiparVisioNocturna == 1) or (cc_var_equiparVisioNocturna == 2)) then {
+            if (cc_var_equiparVisioNocturna == 1) then {
+                (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
+            } else {
+                _unitat linkItem _visioNocturna;
+            };
+        };
     };
 
     // Especialista en explosius (Explosive Specialist).
@@ -1262,7 +1412,6 @@ switch (_tipusUnitat) do
                 (unitBackpack _unitat) addItemCargoGlobal [_torniquet, 1];
             };
         };
-        (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna, 1];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_mk84", 1];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag", 4];
         (unitBackpack _unitat) addMagazineCargoGlobal ["DemoCharge_Remote_Mag", 3];
@@ -1273,6 +1422,15 @@ switch (_tipusUnitat) do
         _unitat addPrimaryWeaponItem _armaSurefire;
         _unitat addPrimaryWeaponItem _armaLaserLlanterna;
         _unitat addPrimaryWeaponItem _armaMira;
+
+        // Visió nocturna.
+        if ((cc_var_equiparVisioNocturna == 1) or (cc_var_equiparVisioNocturna == 2)) then {
+            if (cc_var_equiparVisioNocturna == 1) then {
+                (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
+            } else {
+                _unitat linkItem _visioNocturna;
+            };
+        };
     };
 
     // Franctirador (Sniper).
@@ -1319,7 +1477,6 @@ switch (_tipusUnitat) do
                 (unitBackpack _unitat) addItemCargoGlobal [_torniquet,1];
             };
         };
-        (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_an_m8hc",1];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_mk84",1];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhsusf_5Rnd_300winmag_xm2010",5];
@@ -1328,6 +1485,15 @@ switch (_tipusUnitat) do
         _unitat addWeapon _armaSN;
         _unitat addPrimaryWeaponItem _armaLaserLlanternaSN;
         _unitat addPrimaryWeaponItem _armaMiraSN;
+
+        // Visió nocturna.
+        if ((cc_var_equiparVisioNocturna == 1) or (cc_var_equiparVisioNocturna == 2)) then {
+            if (cc_var_equiparVisioNocturna == 1) then {
+                (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
+            } else {
+                _unitat linkItem _visioNocturna;
+            };
+        };
     };
 
     // Observador (Spotter).
@@ -1373,7 +1539,6 @@ switch (_tipusUnitat) do
                 (unitBackpack _unitat) addItemCargoGlobal [_torniquet,1];
             };
         };
-        (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",5];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",2];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_mk84",2];
@@ -1384,11 +1549,22 @@ switch (_tipusUnitat) do
         _unitat addPrimaryWeaponItem _armaLaserLlanterna;
         _unitat addPrimaryWeaponItem _armaMira;
 
+        // Objectes.
+        //_unitat linkItem _gps;
+
+        // Visió nocturna.
+        if ((cc_var_equiparVisioNocturna == 1) or (cc_var_equiparVisioNocturna == 2)) then {
+            if (cc_var_equiparVisioNocturna == 1) then {
+                (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
+            } else {
+                _unitat linkItem _visioNocturna;
+            };
+        };
+
         // Binocles.
         _unitat addWeapon _vectorIV;
 
-        // Objectes.
-        //_unitat linkItem _gps;
+
     };
 
     // Bussejador líder d'esquadra (Diver Squad Leader)
@@ -1426,12 +1602,17 @@ switch (_tipusUnitat) do
                 (unitBackpack _unitat) addItemCargoGlobal [_torniquet,1];
             };
         };
-        (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_mk84",1];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_an_m8hc",2];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_m67",4];
         (unitBackpack _unitat) addMagazineCargoGlobal ["30Rnd_556x45_Stanag",7];
         (unitBackpack _unitat) addMagazineCargoGlobal ["20Rnd_556x45_UW_mag",4];
+        // Visió nocturna.
+        if ((cc_var_equiparVisioNocturna == 1) or (cc_var_equiparVisioNocturna == 2)) then {
+            if (cc_var_equiparVisioNocturna == 1) then {
+                (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
+            };
+        };
 
         // Ulleres.
         _unitat addGoggles _ulleresDIV;
@@ -1440,7 +1621,7 @@ switch (_tipusUnitat) do
         _unitat addWeapon _armaDIV;
 
         // Objectes.
-        _unitat linkItem _gps;
+        // _unitat linkItem _gps;
 
         // Binocles.
         _unitat addWeapon _vectorIV;
@@ -1491,12 +1672,17 @@ switch (_tipusUnitat) do
                 (unitBackpack _unitat) addItemCargoGlobal [_bossaSang500,2];
             };
         };
-        (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_mk84",1];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_an_m8hc",2];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_m67",1];
         (unitBackpack _unitat) addMagazineCargoGlobal ["30Rnd_556x45_Stanag",3];
         (unitBackpack _unitat) addMagazineCargoGlobal ["20Rnd_556x45_UW_mag",3];
+        // Visió nocturna.
+        if ((cc_var_equiparVisioNocturna == 1) or (cc_var_equiparVisioNocturna == 2)) then {
+            if (cc_var_equiparVisioNocturna == 1) then {
+                (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
+            };
+        };
 
         // Ulleres.
         _unitat addGoggles _ulleresDIV;
@@ -1540,13 +1726,18 @@ switch (_tipusUnitat) do
                 (unitBackpack _unitat) addItemCargoGlobal [_torniquet,1];
             };
         };
-        (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
         (unitBackpack _unitat) addMagazineCargoGlobal ["DemoCharge_Remote_Mag",3];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_mk84",1];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_an_m8hc",2];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_m67",4];
         (unitBackpack _unitat) addMagazineCargoGlobal ["30Rnd_556x45_Stanag",7];
         (unitBackpack _unitat) addMagazineCargoGlobal ["20Rnd_556x45_UW_mag",4];
+        // Visió nocturna.
+        if ((cc_var_equiparVisioNocturna == 1) or (cc_var_equiparVisioNocturna == 2)) then {
+            if (cc_var_equiparVisioNocturna == 1) then {
+                (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
+            };
+        };
 
         // Ulleres.
         _unitat addGoggles _ulleresDIV;
@@ -1590,12 +1781,17 @@ switch (_tipusUnitat) do
                 (unitBackpack _unitat) addItemCargoGlobal [_torniquet,1];
             };
         };
-        (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_mk84",1];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_an_m8hc",2];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_m67",4];
         (unitBackpack _unitat) addMagazineCargoGlobal ["30Rnd_556x45_Stanag",7];
         (unitBackpack _unitat) addMagazineCargoGlobal ["20Rnd_556x45_UW_mag",4];
+        // Visió nocturna.
+        if ((cc_var_equiparVisioNocturna == 1) or (cc_var_equiparVisioNocturna == 2)) then {
+            if (cc_var_equiparVisioNocturna == 1) then {
+                (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
+            };
+        };
 
         // Ulleres.
         _unitat addGoggles _ulleresDIV;
@@ -1671,7 +1867,6 @@ switch (_tipusUnitat) do
                 (unitBackpack _unitat) addItemCargoGlobal [_torniquet,1];
             };
         };
-        (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",5];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",2];
         (unitBackpack _unitat) addMagazineCargoGlobal ["rhs_mag_mk84",2];
@@ -1682,6 +1877,15 @@ switch (_tipusUnitat) do
         _unitat addPrimaryWeaponItem _armaSurefire;
         _unitat addPrimaryWeaponItem _armaLaserLlanterna;
         _unitat addPrimaryWeaponItem _armaMira;
+
+        // Visió nocturna.
+        if ((cc_var_equiparVisioNocturna == 1) or (cc_var_equiparVisioNocturna == 2)) then {
+            if (cc_var_equiparVisioNocturna == 1) then {
+                (unitBackpack _unitat) addItemCargoGlobal [_visioNocturna,1];
+            } else {
+                _unitat linkItem _visioNocturna;
+            };
+        };
     };
 };
 

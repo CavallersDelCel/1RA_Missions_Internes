@@ -105,6 +105,9 @@ if (cc_param_debugOutput == 1) then {
     _unitat sideChat format ["DEBUG (fn_configEquipacio.sqf): facció de la unitat: %1", _faccioUnitat];
 };
 
+// Inclou el fitxer de configuració d'equipacions
+#include "cc_configEquipacio_opcions.sqf";
+
 // Equipació per la facció BLUFOR.
 if (_faccioUnitat == "blu_f") then {
     #include "cc_configEquipacio_blu_f.sqf"
