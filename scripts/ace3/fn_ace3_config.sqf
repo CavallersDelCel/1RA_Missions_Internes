@@ -313,8 +313,8 @@ if (cc_mod_ace3) then {
     };
 
     if (isClass (configFile >> "CfgPatches" >> "ace_spectator")) then {
-        ["ace_spectator_filterUnits", 1, true, true] call ACE_common_fnc_setSetting;                               // 0 = Cap, 1 = Jugadors, 2* = Unitats jugables, 3 = Totes les unitats.
-        ["ace_spectator_filterSides", 1, true, true] call ACE_common_fnc_setSetting;                               // 0* = Bàndol del jugador, 1 = Bàndols amics, 2 = Bàndols enemics, 3 = Tots els bàndols.
+        ["ace_spectator_filterUnits", 3, true, true] call ACE_common_fnc_setSetting;                               // 0 = Cap, 1 = Jugadors, 2* = Unitats jugables, 3 = Totes les unitats.
+        ["ace_spectator_filterSides", 0, true, true] call ACE_common_fnc_setSetting;                               // 0* = Bàndol del jugador, 1 = Bàndols amics, 2 = Bàndols enemics, 3 = Tots els bàndols.
         ["ace_spectator_restrictModes", 0, true, true] call ACE_common_fnc_setSetting;                             // 0* = Tots, 1 = Modes d'unitat, 2 = Lliure, 3 = Modes interns, 4 = Modes externs.
         ["ace_spectator_restrictVisions", 0, true, true] call ACE_common_fnc_setSetting;                           // 0* = Tots, 1 = Visió nocturna, 2 = Visió tèrmica.
 

@@ -28,9 +28,9 @@ if (alive _unitat) then {
     if (_respawn == 1) then {
 
         // Amaga el cos en cas de que sigui una gavina.
-        if (_unitat isKindOf "seagull") then {
-            [[],"{_unitat hideObjectGlobal true;}",false,true] call BIS_fnc_MP;
-        };
+       if (_unitat isKindOf "seagull") then {
+           hideBody _unitat;
+       };
 
         // Si hi ha ACE3 carregat utilitza el mode espectador de ACE 3. En cas contrari s'utilitza el mode
         // per defecte de Bohemia.
@@ -40,9 +40,8 @@ if (alive _unitat) then {
             };
 
             // Configura la càmera de l'espectador de ACE3.
-            [2, _assassi] call ace_spectator_fnc_setCameraAttributes;
+            [0, _assassi] call ace_spectator_fnc_setCameraAttributes;
             [true] call ace_spectator_fnc_setSpectator;
-
         } else {
             if ( cc_param_debugOutput == 1) then {
                 player sideChat format ["DEBUG (cc_respawn_espectador.sqf): Utilitzant el mode espectador de BI."];
@@ -101,7 +100,7 @@ if (alive _unitat) then {
         };
 
         // Configura la càmera de l'espectador de ACE3.
-        [2, _assassi] call ace_spectator_fnc_setCameraAttributes;
+        [0, _assassi] call ace_spectator_fnc_setCameraAttributes;
         [true] call ace_spectator_fnc_setSpectator;
     } else {
         if ( cc_param_debugOutput == 1) then {

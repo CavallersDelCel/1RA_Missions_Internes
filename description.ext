@@ -71,7 +71,7 @@ joinUnassigned      = 1;       // 0: força el jugador al primer lloc lliure, 1:
 disabledAI          = 1;       // Amaga les unitats amigues jugables que no són controlades per un jugador.
 aiKills             = 0;       // Puntuació dels jugadors: 0 = deshabilitat, 1 = habilitat.
 
-respawnTemplates[]         = {"Seagull","cc_respawn"};
+respawnTemplates[]         = {"cc_respawn"};
 //respawnTemplatesWest[] = {"Seagull","cc_respawn"};
 //respawnTemplatesEast[] = {"Seagull","cc_respawn"};
 //respawnTemplatesCiv[]  = {"Seagull","cc_respawn"};
