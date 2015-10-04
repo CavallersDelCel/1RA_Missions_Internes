@@ -30,11 +30,11 @@ if (cc_mod_ace3) then {
 
     if (isClass (configFile >> "CfgPatches" >> "ace_common")) then {
         ["ace_common_forceAllSettings", false, true, true] call ACE_common_fnc_setSetting;                         // 0* = Deshabilitat, 1 = Habilitat.
-        
+
         //====================================================================================================//
         // Check PBOs: http://ace3mod.com/wiki/missionmaker/modules.html#1.4-check-pbos                       //
         //====================================================================================================//
-        
+
         ["ace_common_checkPBOsAction", false, true, true] call ACE_common_fnc_setSetting;                          // Scalar 0 = Valor per defecte.
         ["ace_common_checkPBOsCheckAll", false, true, true] call ACE_common_fnc_setSetting;                        // 0* = Deshabilitat, 1 = Habilitat.
         ["ace_common_checkPBOsWhitelist", "[]", true, true] call ACE_common_fnc_setSetting;                        // String.
@@ -105,16 +105,16 @@ if (cc_mod_ace3) then {
     if (isClass (configFile >> "CfgPatches" >> "ace_map")) then {
         //====================================================================================================//
         // BlueForce Tracking: http://ace3mod.com/wiki/missionmaker/modules.html#1.3-blueforcetracking        //
-        //====================================================================================================//    
-        
+        //====================================================================================================//
+
         ["ace_map_BFT_Interval", 1.0, true, true] call ACE_common_fnc_setSetting;                                  // Scalar. 1 = Valor per defecte.
         ["ace_map_BFT_Enabled", false, true, true] call ACE_common_fnc_setSetting;                                 // 0* = Deshabilitat, 1 = Habilitat.
         ["ace_map_BFT_HideAiGroups", false, true, true] call ACE_common_fnc_setSetting;                            // 0* = Deshabilitat, 1 = Habilitat.
-        
+
         //====================================================================================================//
         // Map: http://ace3mod.com/wiki/missionmaker/modules.html#1.10-map                                    //
         //====================================================================================================//
-        
+
         ["ace_map_mapIllumination", true, true, true] call ACE_common_fnc_setSetting;                              // 0 = Deshabilitat, 1* = Habilitat.
         ["ace_map_mapShake", true, true, true] call ACE_common_fnc_setSetting;                                     // 0 = Deshabilitat, 1* = Habilitat.
         ["ace_map_mapGlow", true, true, true] call ACE_common_fnc_setSetting;                                      // 0 = Deshabilitat, 1* = Habilitat.
@@ -175,7 +175,7 @@ if (cc_mod_ace3) then {
         ["ace_medical_allowUnconsciousAnimationOnTreatment", false, true, true] call ACE_common_fnc_setSetting;    // 0* = No, 1 = Si.
         ["ace_medical_moveUnitsFromGroupOnUnconscious", false, true, true] call ACE_common_fnc_setSetting;         // 0* = No, 1 = Si.
         //["ace_medical_menuTypeStyle", 0, true, true] call ACE_common_fnc_setSetting;                               // 0* = Seleccio, 1 = Radial.
-        
+
         // Assignar rols de metge, vehicle mèdic i edificis mèdics.
         {
             if (!isNil format["s%1",_x]) then {
@@ -194,7 +194,7 @@ if (cc_mod_ace3) then {
                 _x setVariable ["ace_medical_isMedicalFacility", true, true];
             };
         } foreach _edificisMedics;
-        
+
     } else {
         _ErrorModul = true;
         diag_log "No s'ha trobat el fitxer ace_medical.pbo.";
@@ -212,7 +212,7 @@ if (cc_mod_ace3) then {
         // MicroDAGR Map Fill: http://ace3mod.com/wiki/missionmaker/modules.html#1.11-microdagr-map-fill      //
         //                     - 2: Full Satellite + Buildings                                                //
         //====================================================================================================//
-        
+
         ["ace_microdagr_MapDataAvailable", 2, true, true] call ACE_common_fnc_setSetting;                          // 0 = Sense mapa, 1 = Carreteres/Topografia, 2* = Sense limitacions.
     } else {
         _ErrorModul = true;
@@ -223,8 +223,8 @@ if (cc_mod_ace3) then {
         //====================================================================================================//
         // MK6 Settings: http://ace3mod.com/wiki/missionmaker/modules.html#1.12-mk6-settings                  //
         //====================================================================================================//
-        
-        ["ace_mk6mortar_airResistanceEnabled", true, true, true] call ACE_common_fnc_setSetting;                   // 0* = Deshabilitat, 1 = Habilitat. Simula la resistència de l'aire per dispars dels jugadors. 
+
+        ["ace_mk6mortar_airResistanceEnabled", true, true, true] call ACE_common_fnc_setSetting;                   // 0* = Deshabilitat, 1 = Habilitat. Simula la resistència de l'aire per dispars dels jugadors.
         ["ace_mk6mortar_allowComputerRangefinder", false, true, true] call ACE_common_fnc_setSetting;              // 0 = Deshabilitat, 1* = Habilitat. Monstra l'ordinador i el Rangefinder (s'ha de deshabilitar si es modela la resistència de l'aire.
         ["ace_mk6mortar_allowCompass", true, true, true] call ACE_common_fnc_setSetting;                           // 0 = Deshabilitat, 1* = Habilitat. Mostra la brújula digital del morter MK6.
     } else {
@@ -236,7 +236,7 @@ if (cc_mod_ace3) then {
         //====================================================================================================//
         // Name Tags: http://ace3mod.com/wiki/missionmaker/modules.html#1.13-name-tags                        //
         //====================================================================================================//
-        
+
         // ["ace_nametags_defaultNametagColor", [0.77, 0.51, 0.08, 1], true, true] call ACE_common_fnc_setSetting; // Client.
         // ["ace_nametags_showPlayerNames", true, true, true] call ACE_common_fnc_setSetting;                      // Client.
         // ["ace_nametags_showPlayerRanks", true, true, true] call ACE_common_fnc_setSetting;                      // Client.
@@ -289,16 +289,16 @@ if (cc_mod_ace3) then {
         //====================================================================================================//
         // Respawn System: http://ace3mod.com/wiki/missionmaker/modules.html#1.15-respawn-system              //
         //====================================================================================================//
-        
+
         ["ace_respawn_SavePreDeathGear", false, true, true] call ACE_common_fnc_setSetting;                        // 0* = No, 1 = Si.
         ["ace_respawn_RemoveDeadBodiesDisconnected", false, true, true] call ACE_common_fnc_setSetting;            // 0 = No, 1* = Si.
         ["ace_respawn_BodyRemoveTimer", 0, true, true] call ACE_common_fnc_setSetting;                             // Scalar. 0 = Valor per defecte.
-        
+
         //====================================================================================================//
         // Friendly Fire Messages:                                                                            //
         //          http://ace3mod.com/wiki/missionmaker/modules.html#1.6-friendly-fire-messages              //
         //====================================================================================================//
-        
+
         //["ace_respawn_showFriendlyFireMessage", false, true, true] call ACE_common_fnc_setSetting;
     } else {
         _ErrorModul = true;
@@ -313,11 +313,11 @@ if (cc_mod_ace3) then {
     };
 
     if (isClass (configFile >> "CfgPatches" >> "ace_spectator")) then {
-        ["ace_spectator_filterUnits", 1, true, true] call ACE_common_fnc_setSetting;                               // 0 = Cap, 1 = Jugadors, 2* = Unitats jugables, 3 = Totes les unitats.
-        ["ace_spectator_filterSides", 0, true, true] call ACE_common_fnc_setSetting;                               // 0* = Cap, 1 = Bàndols amics, 2 = Bàndols enemics, 3 = Tots els bàndols.
+        ["ace_spectator_filterUnits", 3, true, true] call ACE_common_fnc_setSetting;                               // 0 = Cap, 1 = Jugadors, 2* = Unitats jugables, 3 = Totes les unitats.
+        ["ace_spectator_filterSides", 0, true, true] call ACE_common_fnc_setSetting;                               // 0* = Bàndol del jugador, 1 = Bàndols amics, 2 = Bàndols enemics, 3 = Tots els bàndols.
         ["ace_spectator_restrictModes", 0, true, true] call ACE_common_fnc_setSetting;                             // 0* = Tots, 1 = Modes d'unitat, 2 = Lliure, 3 = Modes interns, 4 = Modes externs.
         ["ace_spectator_restrictVisions", 0, true, true] call ACE_common_fnc_setSetting;                           // 0* = Tots, 1 = Visió nocturna, 2 = Visió tèrmica.
-        
+
     } else {
         _ErrorModul = true;
         diag_log "No s'ha trobat el fitxer ace_spectator.pbo.";
@@ -327,7 +327,7 @@ if (cc_mod_ace3) then {
         //====================================================================================================//
         // SwitchUnits System: http://ace3mod.com/wiki/missionmaker/modules.html#1.16-switchunits-system      //
         //====================================================================================================//
-        
+
         ["ace_switchunits_EnableSwitchUnits", false, true, true] call ACE_common_fnc_setSetting;                   // 0* = No, 1 = Si.
         ["ace_switchunits_SwitchToWest", false, true, true] call ACE_common_fnc_setSetting;                        // 0* = No, 1 = Si.
         ["ace_switchunits_SwitchToEast", false, true, true] call ACE_common_fnc_setSetting;                        // 0* = No, 1 = Si.
@@ -344,7 +344,7 @@ if (cc_mod_ace3) then {
         //====================================================================================================//
         // Vehicle Lock: http://ace3mod.com/wiki/missionmaker/modules.html#1.17-vehicle-lock                  //
         //====================================================================================================//
-        
+
         ["ace_vehiclelock_DefaultLockpickStrength", 10, true, true] call ACE_common_fnc_setSetting;                // Scalar. 10 = Valor per defecte.
         ["ace_vehiclelock_LockVehicleInventory", true, true, true] call ACE_common_fnc_setSetting;                 // 0* = No, 1 = Si.
         ["ace_vehiclelock_VehicleStartingLockState", 0, true, true] call ACE_common_fnc_setSetting;                // Scalar. 0 = Valor per defecte.
@@ -357,7 +357,7 @@ if (cc_mod_ace3) then {
         //====================================================================================================//
         // View Distance Limiter: http://ace3mod.com/wiki/missionmaker/modules.html#1.18-view-distance-limiter//
         //====================================================================================================//
-        
+
         ["ace_viewdistance_enabled", true, true, true] call ACE_common_fnc_setSetting;                             // 0 = No, 1* = Si.
         ["ace_viewdistance_limitViewDistance", 10000, true, true] call ACE_common_fnc_setSetting;                  // Scalar. 10000 = Valor per defectre.
     } else {
@@ -369,7 +369,7 @@ if (cc_mod_ace3) then {
         //====================================================================================================//
         // Weather: http://ace3mod.com/wiki/missionmaker/modules.html#1.19-weather                            //
         //====================================================================================================//
-        
+
         ["ace_weather_enableServerController", true, true, true] call ACE_common_fnc_setSetting;                   // 0 = No, 1* = Si.
         ["ace_weather_useACEWeather", true, true, true] call ACE_common_fnc_setSetting;                            // 0 = No, 1* = Si.
         ["ace_weather_syncRain", true, true, true] call ACE_common_fnc_setSetting;                                 // 0 = No, 1* = Si.
@@ -385,7 +385,7 @@ if (cc_mod_ace3) then {
         //====================================================================================================//
         // Wind Deflection: http://ace3mod.com/wiki/missionmaker/modules.html#1.20-wind-deflection            //
         //====================================================================================================//
-        
+
         ["ace_winddeflection_enable", true, true, true] call ACE_common_fnc_setSetting;                            // 0 = No, 1* = Si.
         ["ace_winddeflection_vehicleEnabled", true, true, true] call ACE_common_fnc_setSetting;                    // 0 = No, 1* = Si.
         ["ace_winddeflection_simulationInterval", 0.05, true, true] call ACE_common_fnc_setSetting;                // Scalar. 0.05 = Valor per defecte.
@@ -412,11 +412,11 @@ if (cc_mod_ace3) then {
         //====================================================================================================//
         // Make Unit Surrender: http://ace3mod.com/wiki/missionmaker/modules.html#1.9-make-unit-surrender     //
         //====================================================================================================//
-        
+
         ["ace_captives_allowHandcuffOwnSide", true, true, true] call ACE_common_fnc_setSetting;                    // 0 = No, 1* = Si.
         ["ace_captives_requireSurrender", 1, true, true] call ACE_common_fnc_setSetting;                           // 0 = Deshabilitat, 1* = Rendir únicament, 2 = Rendir o sense arma.
         ["ace_captives_allowSurrender", true, true, true] call ACE_common_fnc_setSetting;                          // 0 = No, 1* = Si.
-        
+
         //{
         //    _x setVariable ["XXXXX", true, true];
         //} foreach _unitatsRendeixen;
@@ -435,8 +435,8 @@ if (cc_mod_ace3) then {
     if (isClass (configFile >> "CfgPatches" >> "ace_explosives")) then {
         //====================================================================================================//
         // Explosive System: http://ace3mod.com/wiki/missionmaker/modules.html#1.5-explosive-system           //
-        //====================================================================================================//    
-        
+        //====================================================================================================//
+
         ["ace_explosives_RequireSpecialist", true, true, true] call ACE_common_fnc_setSetting;                     // 0* = No, 1 = Si.
         ["ace_explosives_PunishNonSpecialists", true, true, true] call ACE_common_fnc_setSetting;                  // 0 = No, 1* = Si.
         ["ace_explosives_ExplodeOnDefuse", true, true, true] call ACE_common_fnc_setSetting;                       // 0 = No, 1* = Si.
@@ -449,7 +449,7 @@ if (cc_mod_ace3) then {
         //====================================================================================================//
         // Hearing: http://ace3mod.com/wiki/missionmaker/modules.html#1.7-hearing                             //
         //====================================================================================================//
-        
+
         ["ace_hearing_EnableCombatDeafness", true, true, true] call ACE_common_fnc_setSetting;                     // 0* = Deshabilitat, 1 = Habilitat.
         ["ace_hearing_EarplugsVolume", 0.5, true, true] call ACE_common_fnc_setSetting;                            // Scalar. 0.5 = Valor per defecte.
         ["ace_hearing_UnconsciousnessVolume", 0.4, true, true] call ACE_common_fnc_setSetting;                     // Scalar. 0.4 = Valor per defecte.
@@ -460,7 +460,7 @@ if (cc_mod_ace3) then {
     };
 
     if (isClass (configFile >> "CfgPatches" >> "ace_advanced_ballistics")) then {
-        
+
         //====================================================================================================//
         // Advanced ballistics: http://ace3mod.com/wiki/missionmaker/modules.html#1.1-advanced-ballistics     //
         //====================================================================================================//

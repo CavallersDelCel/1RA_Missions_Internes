@@ -6,6 +6,7 @@
 // Descripció: Aquest document serveix per configurar els presets de les diferents radios del Advanced   //
 //             Combat Radio Environment 2 (ACRE2)                                                        //
 //             http://gitlab.idi-systems.com/idi-systems/acre2-public/wikis/home                         //
+// Canvis: 0.1 (2015/05/10) Versió inicial.                                                              //
 //=======================================================================================================//
 
 private["_llistaRadios", "_llistaPreset", "_radio", "_presetName", "_nomCanals", "_canal", "_presetData"];
@@ -27,7 +28,7 @@ _llistaPreset = ["default2","default3","default4"];
                 (_presetData select 1) set [0, _frequencies select _forEachIndex];
                 (_presetData select 1) set [1, _frequencies select _forEachIndex];
                 (_presetData select 1) set [5, toUpper (_nomCanals select _forEachIndex)];
-                [_radio, _presetName, _canal, _presetData] call acre_api_fnc_setPresetChannelData;             
+                [_radio, _presetName, _canal, _presetData] call acre_api_fnc_setPresetChannelData;
                 _canal = _canal + 1;
             } forEach _nomCanals;
         } forEach cc_var_grups1RA;

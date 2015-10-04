@@ -13,6 +13,7 @@
 //                   s'escoltarà per la dreta.                                                           //
 //             Task Force Arrowhead Radio (TFAR)                                                         //
 //             https://github.com/michail-nikolaev/task-force-arma-3-radio/wiki                          //
+// Canvis: 0.1 (2015/07/25) Versió inicial.                                                              //
 //=======================================================================================================//
 
 // Declaració de variables.
@@ -27,7 +28,7 @@ if (_tipusUnitat != "nil") then {
     if ((_tipusUnitat in cc_tfar_llistaSR) and !(_tipusUnitat in cc_tfar_llistaLR)) then {
         // Canal actiu per l'esquerra.
         [(call TFAR_fnc_ActiveSWRadio), 1] call TFAR_fnc_setSwStereo;
-        
+
         // Canal addicional per la dreta.
         [(call TFAR_fnc_ActiveSWRadio), 2] call TFAR_fnc_setAdditionalSwStereo;
     };
@@ -36,17 +37,17 @@ if (_tipusUnitat != "nil") then {
     if (!(_tipusUnitat in cc_tfar_llistaSR) and (_tipusUnitat in cc_tfar_llistaLR)) then {
         // Canal actiu per l'esquerra.
         [(call TFAR_fnc_activeLrRadio) select 0, (call TFAR_fnc_activeLrRadio) select 1, 1] call TFAR_fnc_setLrStereo;
-        
+
         // Canal addicional per la dreta.
         [(call TFAR_fnc_activeLrRadio) select 0, (call TFAR_fnc_activeLrRadio) select 1, 2] call TFAR_fnc_setAdditionalLrStereo;
     };
-    
+
     // La unitat està equipada amb una ràdio d'ona curta i una de llarg abast.
     if ((_tipusUnitat in cc_tfar_llistaSR) and (_tipusUnitat in cc_tfar_llistaLR)) then {
         // Els canals de la ràdio de curt abast s'escoltaran per l'esquerra.
         [(call TFAR_fnc_ActiveSWRadio), 1] call TFAR_fnc_setSwStereo;
         [(call TFAR_fnc_ActiveSWRadio), 1] call TFAR_fnc_setAdditionalSwStereo;
-    
+
         // Els canals de la ràdio de llarg abast s'escoltaran per la dreta.
         [(call TFAR_fnc_activeLrRadio) select 0, (call TFAR_fnc_activeLrRadio) select 1, 2] call TFAR_fnc_setLrStereo;
         [(call TFAR_fnc_activeLrRadio) select 0, (call TFAR_fnc_activeLrRadio) select 1, 2] call TFAR_fnc_setAdditionalLrStereo;

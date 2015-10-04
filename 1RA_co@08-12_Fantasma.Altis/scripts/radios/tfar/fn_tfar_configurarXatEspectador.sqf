@@ -2,9 +2,10 @@
 // Arxiu: fn_tfar_configurarXatEspectador.sqf                                                            //
 // Autor: CC_Magnetar                                                                                    //
 // Versió: 0.1                                                                                           //
-// Creació del Document: 06/03/2015                                                                      //
+// Creació del Document: 2015/03/06                                                                      //
 // Descripció: Configuració d'el xat d'espectador i deshabilitar la veu al morir utilitzant el Task Force//
 //             Arrowhead Radio (TFAR) https://github.com/michail-nikolaev/task-force-arma-3-radio/wiki   //
+// Canvis: 0.1 (2015/03/06) Versió inicial.                                                              //
 //=======================================================================================================//
 
 // Declaració de variables.

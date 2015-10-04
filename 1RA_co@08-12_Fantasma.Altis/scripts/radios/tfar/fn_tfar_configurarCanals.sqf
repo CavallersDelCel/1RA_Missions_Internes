@@ -6,6 +6,7 @@
 // Descripció: Aquest document serveix per configurar els canals i les freqüències de les radios en      //
 //             funció del grup on estigui assignada la unitat. Task Force Arrowhead Radio (TFAR)         //
 //             https://github.com/michail-nikolaev/task-force-arma-3-radio/wiki                          //
+// Canvis: 0.1 (2015/07/25) Versió inicial.                                                              //
 //=======================================================================================================//
 
 // Declaració de variables.
@@ -25,7 +26,7 @@ if ((_grupUnitat select 0 != "nil") and (_grupUnitat select 1 != -1)) then {
             if (_grupUnitat select 0 in _x) then {
                 _canalEsquadra = _canal;
                 _canalEquipFoc = _canalEsquadra + (_grupUnitat select 1);
-                
+
                 if (_grupUnitat select 1 >= count _x) exitWith {
                    _unitat sideChat format ["ERROR (fn_tfar_configurarCanals.sqf): L'equip %1-%2 no està definit.", _x select 0, _grupUnitat select 1];
                 };
@@ -34,13 +35,13 @@ if ((_grupUnitat select 0 != "nil") and (_grupUnitat select 1 != -1)) then {
                     [(call TFAR_fnc_activeSwRadio), _canal + 1, format ["%1",_x]] call TFAR_fnc_SetChannelFrequency;
                     _canal = _canal + 1;
                 } forEach _frequencies;
-                
+
             } else {
                 [(call TFAR_fnc_activeSwRadio), _canal + 1, format ["%1",_frequencies select 0]] call TFAR_fnc_SetChannelFrequency;
                 _canal = _canal + 1;
             };
         } forEach cc_var_grups1RA;
-        
+
         // Seleccionar el canal de ràdio depenent de l'equip de foc
         [(call TFAR_fnc_activeSwRadio), _canalEquipFoc ] call TFAR_fnc_setSwChannel;
 
@@ -50,22 +51,22 @@ if ((_grupUnitat select 0 != "nil") and (_grupUnitat select 1 != -1)) then {
             [(call TFAR_fnc_activeSwRadio), _canalEsquadra] call TFAR_fnc_setAdditionalSwChannel;
         };
     };
-    
+
     // Configurar les freqüències de les ràdios de llarg abast.
     // Les unitats amb ràdio de llarg abast tenen la ràdio configurada per contactar amb l'esquadra on estan
     // assignats i amb comandament al canal alternatiu.
     if (_tipusUnitat in cc_tfar_llistaLR) then {
-        
+
         _canal = 0;
         {
-            _frequencies = cc_var_frequencies1RA select _forEachIndex;
+            _frequencies = cc_var_frequencies1RALR select _forEachIndex;
             [(call TFAR_fnc_activeLrRadio), _canal + 1, format ["%1",_frequencies select 0]] call TFAR_fnc_SetChannelFrequency;
             if ("Comandament" in _x) then {
                 _canalComandament = _canal;
-            };            
-            _canal = _canal + 1;    
+            };
+            _canal = _canal + 1;
         } forEach cc_var_grups1RA;
-        
+
         [(call TFAR_fnc_activeLrRadio) select 0, (call TFAR_fnc_activeLrRadio) select 1, _canalEsquadra] call TFAR_fnc_setLrChannel;
         [(call TFAR_fnc_activeLrRadio) select 0, (call TFAR_fnc_activeLrRadio) select 1, _canalComandament] call TFAR_fnc_setAdditionalLrChannel;
     };

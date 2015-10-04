@@ -90,9 +90,9 @@ switch (_TypNumber) do
         ];
         _Unit_Pool_T = [
             "O_APC_Tracked_02_cannon_F",                   // BTR-K Kamysh
-//            "O_APC_Tracked_02_AA_F",                       // ZSU-39 Tigris
+//            "O_APC_Tracked_02_AA_F",                     // ZSU-39 Tigris
             "O_APC_Wheeled_02_rcws_F",                     // MSE-3 Marid
-//            "O_MBT_02_arty_F",                             // 2S9 Sochor
+//            "O_MBT_02_arty_F",                           // 2S9 Sochor
             "O_MBT_02_cannon_F"                            // T-100 Varsuk
         ];
         _Unit_Pool_A = [
@@ -126,7 +126,7 @@ switch (_TypNumber) do
             "O_Heli_Light_02_unarmed_F"                    // PO-30 Orca (sense armament)
         ];
     };
-    
+
     //===================================================================================================//
     // OPFOR CSAT: Urban                                                                                 //
     //===================================================================================================//
@@ -160,7 +160,7 @@ switch (_TypNumber) do
         ];
         _Unit_Pool_A = ["O_Heli_Light_02_F"];              // PO-30 Orca
     };
-    
+
     //===================================================================================================//
     // OPFOR CSAT: Diver                                                                                 //
     //===================================================================================================//
@@ -183,7 +183,7 @@ switch (_TypNumber) do
         ];
         _Unit_Pool_A = [];
     };
-    
+
     //===================================================================================================//
     // BLUFOR NATO                                                                                       //
     //===================================================================================================//
@@ -262,12 +262,12 @@ switch (_TypNumber) do
             "B_Heli_Light_01_unarmed_F"                    // MH-9 Hummingbird
         ];
     };
-    
+
     //===================================================================================================//
     // BLUFOR NATO: Diver                                                                                //
     //===================================================================================================//
     case 6: {
-        _Unit_Pool_S = [ 
+        _Unit_Pool_S = [
             "B_diver_F","B_Helipilot_F","B_diver_TL_F",    // Tripulació, Pilot d'helicòpter i líder d'equip
             "B_diver_F",                                   // Bussejador (Diver)
             "B_diver_F",                                   // Bussejador (Diver)
@@ -285,7 +285,7 @@ switch (_TypNumber) do
         ];
         _Unit_Pool_A = [];
     };
-    
+
     //===================================================================================================//
     // INDEPENDENT                                                                                       //
     //===================================================================================================//
@@ -357,7 +357,7 @@ switch (_TypNumber) do
             "I_Heli_Light_03_unarmed_F"                    // WY-55 Helicat (sense armament)
         ];
     };
-    
+
     //===================================================================================================//
     // INDEPENDENT: Diver                                                                                //
     //===================================================================================================//
@@ -386,7 +386,7 @@ switch (_TypNumber) do
     //===================================================================================================//
     case 10: {
         _Unit_Pool_S = [
-            "C_man_w_worker_F", "C_man_pilot_F", "C_man_1",// Tripulació, pilot d'helicopter, cap dels civils 
+            "C_man_w_worker_F", "C_man_pilot_F", "C_man_1",// Tripulació, pilot d'helicopter, cap dels civils
             "C_man_1_1_F",                                 // Civil
             "C_man_1_2_F",                                 // Civil
             "C_man_1_3_F",                                 // Civil
@@ -426,13 +426,13 @@ switch (_TypNumber) do
         ];
         _Unit_Pool_A = [];
     };
-    
+
     //===================================================================================================//
     // CIVILS                                                                                            //
     //===================================================================================================//
     case 10: {
         _Unit_Pool_S = [
-            "C_man_w_worker_F", "C_man_pilot_F", "C_man_1",// Tripulació, pilot d'helicopter, cap dels civils 
+            "C_man_w_worker_F", "C_man_pilot_F", "C_man_1",// Tripulació, pilot d'helicopter, cap dels civils
             "C_man_1_1_F",                                 // Civil
             "C_man_1_2_F",                                 // Civil
             "C_man_1_3_F",                                 // Civil
@@ -511,13 +511,13 @@ switch (_TypNumber) do
             "C_Heli_Light_01_blue_F"                       // M900 (blau)
         ];
     };
-  
+
     //===================================================================================================//
     // CIVILS: AFRO                                                                                            //
     //===================================================================================================//
     case 11: {
         _Unit_Pool_S = [
-            "C_man_w_worker_F", "C_man_pilot_F", "C_man_1",// Tripulació, pilot d'helicopter, cap dels civils 
+            "C_man_w_worker_F", "C_man_pilot_F", "C_man_1",// Tripulació, pilot d'helicopter, cap dels civils
             "C_man_polo_1_F_afro",                         // Civil amb polo
             "C_man_polo_2_F_afro",                         // Civil amb polo
             "C_man_polo_3_F_afro",                         // Civil amb polo
@@ -556,13 +556,13 @@ switch (_TypNumber) do
             "C_Heli_Light_01_blue_F"                       // M900 (blau)
         ];
     };
-    
+
     //===================================================================================================//
     // CIVILS: ASIÀTICS                                                                                  //
     //===================================================================================================//
     case 12: {
         _Unit_Pool_S = [
-            "C_man_w_worker_F", "C_man_pilot_F", "C_man_1",// Tripulació, pilot d'helicopter, cap dels civils 
+            "C_man_w_worker_F", "C_man_pilot_F", "C_man_1",// Tripulació, pilot d'helicopter, cap dels civils
             "C_man_polo_1_F_asia",                         // Civil amb polo
             "C_man_polo_2_F_asia",                         // Civil amb polo
             "C_man_polo_3_F_asia",                         // Civil amb polo
@@ -601,13 +601,13 @@ switch (_TypNumber) do
             "C_Heli_Light_01_blue_F"                       // M900 (blau)
         ];
     };
-    
+
     //===================================================================================================//
     // CIVILS: EUROPEU                                                                                   //
     //===================================================================================================//
     case 13: {
         _Unit_Pool_S = [
-            "C_man_w_worker_F", "C_man_pilot_F", "C_man_1",// Tripulació, pilot d'helicopter, cap dels civils 
+            "C_man_w_worker_F", "C_man_pilot_F", "C_man_1",// Tripulació, pilot d'helicopter, cap dels civils
             "C_man_1_1_F",                                 // Civil
             "C_man_1_2_F",                                 // Civil
             "C_man_1_3_F",                                 // Civil
@@ -650,7 +650,7 @@ switch (_TypNumber) do
             "C_Heli_Light_01_blue_F"                       // M900 (blau)
         ];
     };
-    
+
     //===================================================================================================//
     // FIA OPFOR                                                                                         //
     //===================================================================================================//
@@ -678,7 +678,7 @@ switch (_TypNumber) do
         _Unit_Pool_T = [];
         _Unit_Pool_A = [];
     };
-    
+
     //===================================================================================================//
     // FIA BLUFOR                                                                                        //
     //===================================================================================================//
@@ -706,7 +706,7 @@ switch (_TypNumber) do
         _Unit_Pool_T = [];
         _Unit_Pool_A = [];
     };
- 
+
     //===================================================================================================//
     // FIA INDEPENDENT                                                                                   //
     //===================================================================================================//
@@ -734,7 +734,7 @@ switch (_TypNumber) do
         _Unit_Pool_T = [];
         _Unit_Pool_A = [];
     };
-    
+
     //===================================================================================================//
     // RHS RUSSIAN AIRBONE TROOPS (VDV) (Vozdushno-desantnye voyska)                                     //
     //===================================================================================================//
@@ -780,7 +780,7 @@ switch (_TypNumber) do
             "RHS_Mi24V_UPK23_vdv"
         ];
     };
-    
+
     //===================================================================================================//
     // RHS RUSSIAN MOTOR RIFLE TROOPS (MSV)                                                              //
     //===================================================================================================//
@@ -834,7 +834,7 @@ switch (_TypNumber) do
         ];
         _Unit_Pool_A = [];
     };
-    
+
     //===================================================================================================//
     // RHS UNITED STATES ARMY WOODLAND                                                                   //
     //===================================================================================================//
@@ -892,7 +892,7 @@ switch (_TypNumber) do
             "RHS_UH60M_MEV"                                // Sikorsky UH-60 Black Hawk MEV (ESSS)
         ];
     };
-    
+
     //===================================================================================================//
     // RHS UNITED STATES ARMY DESERT                                                                   //
     //===================================================================================================//
@@ -950,7 +950,7 @@ switch (_TypNumber) do
             "RHS_UH60M_MEV_d"                              // Sikorsky UH-60 Black Hawk MEV (ESSS)
         ];
     };
-    
+
     //===================================================================================================//
     // RHS UNITED STATES MARINE CORPS WOODLAND                                                           //
     //===================================================================================================//
@@ -1001,7 +1001,7 @@ switch (_TypNumber) do
             "RHS_UH1Y"                                     // UH1Y FFAR/MG
         ];
     };
-    
+
     //===================================================================================================//
     // RHS UNITED STATES MARINE CORPS DESERT                                                             //
     //===================================================================================================//
@@ -1049,20 +1049,20 @@ switch (_TypNumber) do
             "RHS_UH1Y_d"                                   // UH1Y FFAR/MG
         ];
     };
-  
+
     //===================================================================================================//
     // DEFAULT                                                                                           //
-    //===================================================================================================// 
+    //===================================================================================================//
     Default {
-        If (DAC_Basic_Value != 5) Then {
+        if (DAC_Basic_Value != 5) then {
             DAC_Basic_Value = 5;publicvariable "DAC_Basic_Value",
             hintc "Error: DAC_Config_Units > No valid config number";
         };
-        If (true) exitwith {};
+        if (true) exitwith {};
     };
 };
 
-If (count _this == 2) Then {
+if (count _this == 2) then {
     _TempArray = _TempArray + [_Unit_Pool_S,_Unit_Pool_V,_Unit_Pool_T,_Unit_Pool_A];
 } else {
     _TempArray = _Unit_Pool_V + _Unit_Pool_T + _Unit_Pool_A;

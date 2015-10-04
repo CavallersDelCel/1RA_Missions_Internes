@@ -136,6 +136,7 @@ _armaDIV = "arifle_SDAR_F";
 // Silenciadors.
 _armaSilenciador = "rhsusf_acc_rotex5_grey";
 _armaSurefire = "rhsusf_acc_SF3P556";
+_armaSilenciadorSN = "rhsusf_acc_M2010S";
 
 // Accessoris.
 _armaLaserLlanterna = "rhsusf_acc_anpeq15";
@@ -1186,7 +1187,7 @@ switch (_tipusUnitat) do
             (uniformContainer _unitat) addItemCargoGlobal [_morfina,1];
             (uniformContainer _unitat) addItemCargoGlobal [_epinefrina,1];
         };
-        (uniformContainer _unitat) addItemCargoGlobal ["rhsusf_acc_M2010S",1];
+        (uniformContainer _unitat) addItemCargoGlobal [_armaSilenciadorSN,1];
         (uniformContainer _unitat) addMagazineCargoGlobal ["rhsusf_5Rnd_300winmag_xm2010",2];
         (uniformContainer _unitat) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",2];
         

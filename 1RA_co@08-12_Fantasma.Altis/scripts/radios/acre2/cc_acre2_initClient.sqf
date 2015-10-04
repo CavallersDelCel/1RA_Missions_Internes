@@ -5,6 +5,7 @@
 // Creació del Document: 2015/04/28                                                                      //
 // Descripció: Aquest document serveix per configurar el Advanced Combat Radio Environment 2 (ACRE2)     //
 //             http://gitlab.idi-systems.com/idi-systems/acre2-public/wikis/home                         //
+// Canvis: 0.1 (2015/04/28) Versió inicial.                                                              //
 //=======================================================================================================//
 
 private["_unitat","_nomPreset"];
@@ -39,10 +40,10 @@ if (cc_acre2_config_dividirFrequencies) then {
 if(alive _unitat) then {
     // Esperar fins que l'equipació estigui assignada.
     waitUntil{(_unitat getVariable ["cc_var_configEquipacio_Llesta", false])};
-    
+
     // Definir els idiomes per cada bàndol.
     [] call cc_fnc_acre2_determinarIdiomes;
-    
+
     // Treure totes les ràdios de l'inventari.
     [] call cc_fnc_acre2_treureRadios;
 
@@ -53,7 +54,15 @@ if(alive _unitat) then {
         // Configurar els canals actius.
         [] call cc_fnc_acre2_configurarCanals;
     };
-    
+
+    // Configurar els canals actius.
+    if (cc_acre2_config_configurarCanalsPerEquip) then {
+        [] call cc_fnc_acre2_configurarCanals;
+    };
+
+    // Configurar el xat d'espectador.
+    [] call cc_fnc_acre2_configurarXatEspectador;
+
     if ( cc_param_debugOutput == 1 ) then {
         _unitat sideChat format ["DEBUG (fn_acre2_initClient.sqf): Radios configurades."];
     };

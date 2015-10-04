@@ -7,6 +7,7 @@
 //             decidir quines ràdios es fan servir durant la partida en cas de que no es vulguin fer     //
 //             servir les que van per defecte als perfils. Advanced Combat Radio Environment 2 (ACRE2)   //
 //             http://gitlab.idi-systems.com/idi-systems/acre2-public/wikis/home                         //
+// Canvis: 0.1 (2015/04/28) Versió inicial.                                                              //
 //=======================================================================================================//
 
 // Declaració de variables.
@@ -21,11 +22,11 @@ if(_tipusUnitat != "nil") then {
 
     // Si les ràdios estan habilitades, cal assignar-les depenent del rol
     if(cc_acre2_config_distribuirRadios) then {
-    
+
         // Comprova si cal assignar la ràdio definida a "cc_acre2_radioSoldats" per defecte a totes les
         // unitats.
         if(cc_acre2_config_tothomRadioSoldats) then {
-            
+
             if( _unitat canAdd cc_acre2_radioSoldats ) then {
                 _unitat addItem cc_acre2_radioSoldats;
             } else {
@@ -40,7 +41,7 @@ if(_tipusUnitat != "nil") then {
                 };
             };
         };
-        
+
         if (_tipusUnitat in cc_acre2_llistaRadioOficials) then {
             if( _unitat canAdd cc_acre2_radioOficials ) then {
                 _unitat addItem cc_acre2_radioOficials;
@@ -48,7 +49,7 @@ if(_tipusUnitat != "nil") then {
                 player sideChat format ["ERROR (fn_acre2_afegirRadios.sqf): No es pot afegir la ràdio %1.", cc_acre2_radioOficials];
             };
         };
-        
+
         if (_tipusUnitat in cc_acre2_llistaRadioRTO) then {
             if( _unitat canAdd cc_acre2_radioRTO ) then {
                 _unitat addItemToBackPack cc_acre2_radioRTO;

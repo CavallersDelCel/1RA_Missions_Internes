@@ -2,9 +2,10 @@
 // Arxiu: cc_tfar_initClient.sqf                                                                         //
 // Autor: CC_Magnetar                                                                                    //
 // Versió: 0.1                                                                                           //
-// Creació del Document: 06/03/2015                                                                      //
+// Creació del Document: 2015/03/06                                                                      //
 // Descripció: Aquest document serveix per configurar les radios del Task Force Arrowhead Radio (TFAR)   //
 //             (https://github.com/michail-nikolaev/task-force-arma-3-radio/wiki) en el client.          //
+// Canvis: 0.1 (2015/03/06) Versió inicial.                                                              //
 //=======================================================================================================//
 
 // Donar temps a TFAR per inicialitzar-se.
@@ -24,20 +25,20 @@ if(alive player) then {
 
     // Afegir les ràdios a cada unitat.
     [] call cc_fnc_tfar_afegirRadios;
-    
+
     sleep 10;
     if (cc_tfar_config_configurarFreqPerEquip) then {
         // Configurar els canals.
         [] call cc_fnc_tfar_configurarCanals;
     };
-    
+
     if (cc_tfar_config_configurarEstereo) then {
         [] call cc_fnc_tfar_configurarEstereo;
     };
-    
-    // Configurar el xat d'espectador.
-    //[] call cc_fnc_tfar_configurarXatEspectador;
-    
+
+    //Configurar el xat d'espectador.
+    [] call cc_fnc_tfar_configurarXatEspectador;
+
     // DEBUG OUTPUT
     if (cc_param_debugOutput == 1) then {
         player sideChat format ["DEBUG (fn_tfar_initClient.sqf): Radios configurades."];

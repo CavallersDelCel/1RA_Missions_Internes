@@ -2,9 +2,10 @@
 // Arxiu: cc_tfar_configuracio.sqf                                                                       //
 // Autor: CC_Magnetar                                                                                    //
 // Versió: 0.1                                                                                           //
-// Creació del Document: 09/03/2015                                                                      //
+// Creació del Document: 2015/03/09                                                                      //
 // Descripció: Aquest document serveix per definir parmàmetres bàsics per la configuració del Task Force //
 //             Arrowhead Radio (TFAR) https://github.com/michail-nikolaev/task-force-arma-3-radio/wiki   //
+// Canvis: 0.1 (2015/03/09) Versió inicial.                                                              //
 //=======================================================================================================//
 
 // Deshabilita la distribució automàtica de radios de llarg abast als líders de grup.

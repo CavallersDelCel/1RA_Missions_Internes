@@ -2,11 +2,12 @@
 // Arxiu: fn_tfar_afegirRadios.sqf                                                                       //
 // Autor: CC_Magnetar                                                                                    //
 // Versió: 0.1                                                                                           //
-// Creació del Document: 09/03/2015                                                                      //
+// Creació del Document: 2015/03/09                                                                      //
 // Descripció: Aquest document serveix per afegir les radios a l'inventari de forma que es pugui         //
 //             decidir quines radios es fan servir durant la partida en cas de que no es vulguin fer     //
 //             servir les que van per defecte als perfils. Task Force Arrowhead Radio (TFAR)             //
 //             https://github.com/michail-nikolaev/task-force-arma-3-radio/wiki                          //
+// Canvis: 0.1 (2015/03/09) Versió inicial.                                                              //
 //=======================================================================================================//
 
 // Declaració de variables.
@@ -68,12 +69,12 @@ if(_tipusUnitat != "nil") then {
 
     // Si les radios estan habilitades, cal assignar-les depenent del rol.
     if(cc_tfar_config_distribuirRadios) then {
-    
+
         if( !tf_give_microdagr_to_soldier) then {
             _unitat unlinkItem "ItemWatch";
             _unitat linkItem "ItemWatch";
         };
-                
+
         // Assignar radios de Rifleman i curt abast (Short range).
         if(_tipusUnitat in cc_tfar_llistaRF ) then {
             _unitat linkItem _radioRF;
@@ -82,7 +83,7 @@ if(_tipusUnitat != "nil") then {
                 _unitat linkItem _radioSR;
             };
         };
-        
+
         // Assignar les radios de llarg abast i tot el material que originariament.
         // hi havia a la motxila
         if( _tipusUnitat in cc_tfar_llistaLR ) then {
@@ -92,7 +93,7 @@ if(_tipusUnitat != "nil") then {
             {
                 _unitat addItemToBackpack _x
             } forEach _objectesMotxilla;
-        };    
+        };
     };
 };
 
