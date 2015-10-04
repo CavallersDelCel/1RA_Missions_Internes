@@ -114,7 +114,7 @@ player addVest "rhsusf_iotv_ocp_squadleader";
 (vestContainer player) addMagazineCargoGlobal ["rhs_mag_M433_HEDP",7];
 (vestContainer player) addMagazineCargoGlobal ["rhs_mag_m714_White",1];
 
-// Motxilla
+// Motxilla.
 player addBackpack "tf_rt1523g_big_rhs";
 (unitBackpack player) addItemCargoGlobal ["rhsusf_ANPVS_14",1];
 (unitBackpack player) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",5];
@@ -140,7 +140,7 @@ player addPrimaryWeaponItem "rhsusf_acc_ACOG";
 player addWeapon "rhsusf_weap_m1911a1";
 player addWeapon "ACE_Vector";
 
-// Objectes
+// Objectes.
 player linkItem "ItemMap";
 player linkItem "ItemCompass";
 player linkItem "tf_microdagr";
@@ -197,7 +197,7 @@ player addVest "rhsusf_iotv_ocp_teamleader";
 (vestContainer player) addMagazineCargoGlobal ["rhs_mag_M433_HEDP",2];
 (vestContainer player) addMagazineCargoGlobal ["rhs_mag_m714_White",1];
 
-// Motxilla
+// Motxilla.
 player addBackpack "tf_rt1523g_big_rhs";
 (unitBackpack player) addItemCargoGlobal ["rhsusf_ANPVS_14",1];
 (unitBackpack player) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",5];
@@ -225,7 +225,7 @@ player addPrimaryWeaponItem "rhsusf_acc_ACOG";
 player addWeapon "rhsusf_weap_m1911a1";
 player addWeapon "ACE_Vector";
 
-// Objectes
+// Objectes.
 player linkItem "ItemMap";
 player linkItem "ItemCompass";
 player linkItem "tf_microdagr";
@@ -279,7 +279,7 @@ player addVest "rhsusf_iotv_ocp_rifleman";
 (vestContainer player) addMagazineCargoGlobal ["rhs_mag_m67",3];
 (vestContainer player) addMagazineCargoGlobal ["rhs_mag_an_m8hc",1];
 
-// Motxilla
+// Motxilla.
 player addBackpack "rhsusf_assault_eagleaiii_ocp";
 (unitBackpack player) addItemCargoGlobal ["rhsusf_ANPVS_14",1];
 (unitBackpack player) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",6];
@@ -300,7 +300,7 @@ player addPrimaryWeaponItem "rhsusf_acc_ACOG";
 player addWeapon "rhsusf_weap_m1911a1";
 player addWeapon "lerca_1200_tan";
 
-// Objectes
+// Objectes.
 player linkItem "ItemMap";
 player linkItem "ItemCompass";
 player linkItem "tf_microdagr";
@@ -355,7 +355,7 @@ player addVest "rhsusf_iotv_ocp_grenadier";
 (vestContainer player) addMagazineCargoGlobal ["rhs_mag_an_m8hc",1];
 (vestContainer player) addMagazineCargoGlobal ["rhs_mag_M433_HEDP",7];
 
-// Motxilla
+// Motxilla.
 player addBackpack "rhsusf_assault_eagleaiii_ocp";
 (unitBackpack player) addItemCargoGlobal ["rhsusf_ANPVS_14",1];
 (unitBackpack player) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",7];
@@ -377,7 +377,7 @@ player addPrimaryWeaponItem "rhsusf_acc_ACOG";
 player addWeapon "rhsusf_weap_m1911a1";
 player addWeapon "lerca_1200_tan";
 
-// Objectes
+// Objectes.
 player linkItem "ItemMap";
 player linkItem "ItemCompass";
 player linkItem "tf_microdagr";
@@ -432,7 +432,7 @@ player addVest "rhsusf_iotv_ocp_SAW";
 (vestContainer player) addMagazineCargoGlobal ["rhsusf_100Rnd_556x45_soft_pouch",1];
 (vestContainer player) addMagazineCargoGlobal ["rhs_mag_mk84",1];
 
-// Motxilla
+// Motxilla.
 player addBackpack "rhsusf_assault_eagleaiii_ocp";
 (unitBackpack player) addItemCargoGlobal ["rhsusf_ANPVS_14",1];
 (unitBackpack player) addMagazineCargoGlobal ["rhs_mag_an_m8hc",2];
@@ -448,7 +448,7 @@ player addPrimaryWeaponItem "rhsusf_acc_ELCAN";
 player addWeapon "rhsusf_weap_m1911a1";
 player addWeapon "lerca_1200_tan";
 
-// Objectes
+// Objectes.
 player linkItem "ItemMap";
 player linkItem "ItemCompass";
 player linkItem "tf_microdagr";
@@ -502,7 +502,7 @@ player addVest "rhsusf_iotv_ocp_SAW";
 (vestContainer player) addMagazineCargoGlobal ["rhs_mag_an_m8hc",1];
 (vestContainer player) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",1];
 
-// Motxilla		
+// Motxilla.		
 player addBackpack "rhsusf_assault_eagleaiii_ocp";
 (unitBackpack player) addItemCargoGlobal ["rhsusf_ANPVS_14",1];
 (unitBackpack player) addMagazineCargoGlobal ["rhs_mag_an_m8hc",2];
@@ -517,7 +517,7 @@ player addPrimaryWeaponItem "rhsusf_acc_ELCAN";
 player addWeapon "rhsusf_weap_m1911a1";
 player addWeapon "lerca_1200_tan";
 
-// Objectes
+// Objectes.
 player linkItem "ItemMap";
 player linkItem "ItemCompass";
 player linkItem "tf_microdagr";
@@ -571,7 +571,7 @@ player addVest "rhsusf_iotv_ocp_rifleman";
 (vestContainer player) addMagazineCargoGlobal ["rhs_mag_an_m8hc",1];
 (vestContainer player) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",10];
 
-// Motxilla
+// Motxilla.
 player addBackpack "rhsusf_assault_eagleaiii_ocp";
 (unitBackpack player) addItemCargoGlobal ["rhsusf_ANPVS_14",1];
 (unitBackpack player) addMagazineCargoGlobal ["rhs_mag_an_m8hc",4];
@@ -594,7 +594,7 @@ player addWeapon "rhsusf_weap_m1911a1";
 player addWeapon "rhs_weap_M136_hedp";
 player addWeapon "lerca_1200_tan";
 
-// Objectes
+// Objectes.
 player linkItem "ItemMap";
 player linkItem "ItemCompass";
 player linkItem "tf_microdagr";
@@ -647,7 +647,7 @@ player addVest "rhsusf_iotv_ocp_rifleman";
 (vestContainer player) addMagazineCargoGlobal ["rhs_mag_an_m8hc",1];
 (vestContainer player) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",10];
 
-// Motxilla
+// Motxilla.
 player addBackpack "rhsusf_assault_eagleaiii_ocp";
 (unitBackpack player) addItemCargoGlobal ["rhsusf_ANPVS_14",1];
 (unitBackpack player) addMagazineCargoGlobal ["rhs_mag_an_m8hc",4];
@@ -670,7 +670,7 @@ player addWeapon "rhs_weap_fgm148";
 player addWeapon "lerca_1200_tan";
 player addWeapon "rhsusf_weap_m1911a1";
 
-// Objectes
+// Objectes.
 player linkItem "ItemMap";
 player linkItem "ItemCompass";
 player linkItem "tf_microdagr";
@@ -723,7 +723,7 @@ player addVest "rhsusf_iotv_ocp_rifleman";
 (vestContainer player) addMagazineCargoGlobal ["rhs_mag_an_m8hc",1];
 (vestContainer player) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",10];
 
-// Motxilla
+// Motxilla.
 player addBackpack "rhsusf_assault_eagleaiii_ocp";
 (unitBackpack player) addItemCargoGlobal ["rhsusf_ANPVS_14",1];
 (unitBackpack player) addMagazineCargoGlobal ["rhs_mag_an_m8hc",4];
@@ -746,7 +746,7 @@ player addWeapon "rhs_weap_fim92";
 player addWeapon "lerca_1200_tan";
 player addWeapon "rhsusf_weap_m1911a1";
 
-// Objectes
+// Objectes.
 player linkItem "ItemMap";
 player linkItem "ItemCompass";
 player linkItem "tf_microdagr";
@@ -803,7 +803,7 @@ player addVest "rhsusf_iotv_ocp_rifleman";
 (vestContainer player) addMagazineCargoGlobal ["rhsusf_20Rnd_762x51_m118_special_Mag",6];
 (vestContainer player) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",2];
 
-// Motxilla
+// Motxilla.
 player addBackpack "rhsusf_assault_eagleaiii_ocp";
 (unitBackpack player) addItemCargoGlobal ["rhsusf_ANPVS_14",1];
 (unitBackpack player) addItemCargoGlobal ["rhsusf_acc_SR25S",1];
@@ -824,7 +824,7 @@ player addPrimaryWeaponItem "rhsusf_acc_harris_bipod";
 player addWeapon "rhsusf_weap_m1911a1";
 player addWeapon "lerca_1200_tan";
 
-// Objectes
+// Objectes.
 player linkItem "ItemMap";
 player linkItem "ItemCompass";
 player linkItem "tf_microdagr";
@@ -876,7 +876,7 @@ player addVest "rhsusf_iotv_ocp_Medic";
 (vestContainer player) addItemCargoGlobal ["ACE_personalAidKit",1];
 (vestContainer player) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",1];
 
-// Motxilla
+// Motxilla.
 player addBackpack "rhsusf_assault_eagleaiii_ocp";
 (unitBackpack player) addItemCargoGlobal ["rhsusf_ANPVS_14",1];
 (unitBackpack player) addItemCargoGlobal ["ACE_fieldDressing",15];
@@ -900,7 +900,7 @@ player addPrimaryWeaponItem "rhsusf_acc_ACOG";
 player addWeapon "rhsusf_weap_m1911a1";
 player addWeapon "lerca_1200_tan";
 
-// Objectes
+// Objectes.
 player linkItem "ItemMap";
 player linkItem "ItemCompass";
 player linkItem "tf_microdagr";
@@ -956,7 +956,7 @@ player addVest "rhsusf_iotv_ocp_squadleader";
 (vestContainer player) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",10];
 (vestContainer player) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",1];
 
-// Motxilla
+// Motxilla.
 player addBackpack "rhsusf_assault_eagleaiii_ocp";
 (unitBackpack player) addItemCargoGlobal ["rhsusf_ANPVS_14",1];
 (unitBackpack player) addItemCargoGlobal ["ACE_Clacker",1];
@@ -977,7 +977,7 @@ player addPrimaryWeaponItem "rhsusf_acc_ACOG";
 player addWeapon "rhsusf_weap_m1911a1";
 player addWeapon "lerca_1200_tan";
 
-// Objectes
+// Objectes.
 player linkItem "ItemMap";
 player linkItem "ItemCompass";
 player linkItem "tf_microdagr";
@@ -1036,7 +1036,7 @@ player addVest "rhsusf_iotv_ocp_rifleman";
 (vestContainer player) addMagazineCargoGlobal ["rhsusf_5Rnd_300winmag_xm2010",6];
 (vestContainer player) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",2];
 
-// Motxilla
+// Motxilla.
 player addBackpack "rhsusf_assault_eagleaiii_ocp";
 (unitBackpack player) addItemCargoGlobal ["rhsusf_ANPVS_14",1];
 (unitBackpack player) addMagazineCargoGlobal ["rhs_mag_an_m8hc",4];
@@ -1056,7 +1056,7 @@ player addPrimaryWeaponItem "rhsusf_acc_harris_bipod";
 player addWeapon "rhsusf_weap_m1911a1";
 player addWeapon "ACE_Vector";
 
-// Objectes
+// Objectes.
 player linkItem "ItemMap";
 player linkItem "ItemCompass";
 player linkItem "tf_microdagr";
@@ -1116,7 +1116,7 @@ player addVest "rhsusf_iotv_ocp_rifleman";
 (vestContainer player) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",6];
 (vestContainer player) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",2];
 
-// Motxilla
+// Motxilla.
 player addBackpack "rhsusf_assault_eagleaiii_ocp";
 (unitBackpack player) addItemCargoGlobal ["rhsusf_ANPVS_14",1];
 (unitBackpack player) addItemCargoGlobal ["ACE_SpottingScope",1];
@@ -1138,7 +1138,7 @@ player addPrimaryWeaponItem "rhsusf_acc_harris_bipod";
 player addWeapon "rhsusf_weap_m1911a1";
 player addWeapon "ACE_Vector";
 
-// Objectes
+// Objectes.
 player linkItem "ItemMap";
 player linkItem "ItemCompass";
 player linkItem "tf_microdagr";
@@ -1189,7 +1189,7 @@ player forceAddUniform "U_B_Wetsuit";
 player addVest "V_RebreatherB";
 // No es permeten objectes en aquesta armilla
 
-// Motxilla
+// Motxilla.
 player addBackpack "tf_rt1523g_big_rhs";
 (unitBackpack player) addItemCargoGlobal ["ACE_fieldDressing",4];
 (unitBackpack player) addItemCargoGlobal ["ACE_packingBandage",3];
@@ -1205,7 +1205,7 @@ player addBackpack "tf_rt1523g_big_rhs";
 // Casc
 player addHeadgear "rhs_Booniehat_ocp";
 
-// Ulleres
+// Ulleres.
 player addGoggles "G_Diving";
 
 // Armes
@@ -1216,7 +1216,7 @@ player addPrimaryWeaponItem "rhsusf_acc_ACOG";
 player addWeapon "rhsusf_weap_m1911a1";
 player addWeapon "ACE_Vector";
 
-// Objectes
+// Objectes.
 player linkItem "ItemMap";
 player linkItem "ItemCompass";
 player linkItem "tf_microdagr";
@@ -1264,7 +1264,7 @@ player forceAddUniform "U_B_Wetsuit";
 player addVest "V_RebreatherB";
 // No es permeten objectes en aquesta armilla
 
-// Motxilla
+// Motxilla.
 player addBackpack "B_AssaultPack_blk";
 (unitBackpack player) addItemCargoGlobal ["ACE_fieldDressing",4];
 (unitBackpack player) addItemCargoGlobal ["ACE_packingBandage",3];
@@ -1279,7 +1279,7 @@ player addBackpack "B_AssaultPack_blk";
 // Casc
 player addHeadgear "rhs_Booniehat_ocp";
 
-// Ulleres
+// Ulleres.
 player addGoggles "G_Diving";
 
 // Armes
@@ -1290,7 +1290,7 @@ player addPrimaryWeaponItem "rhsusf_acc_ACOG";
 player addWeapon "rhsusf_weap_m1911a1";
 player addWeapon "lerca_1200_tan";
 
-// Objectes
+// Objectes.
 player linkItem "ItemMap";
 player linkItem "ItemCompass";
 player linkItem "tf_microdagr";
@@ -1337,7 +1337,7 @@ player forceAddUniform "U_B_Wetsuit";
 player addVest "V_RebreatherB";
 // No es permeten objectes en aquesta armilla
 
-// Motxilla
+// Motxilla.
 player addBackpack "B_AssaultPack_blk";
 (unitBackpack player) addItemCargoGlobal ["rhsusf_ANPVS_14",1];
 (unitBackpack player) addItemCargoGlobal ["ACE_fieldDressing",10];
@@ -1354,7 +1354,7 @@ player addBackpack "B_AssaultPack_blk";
 // Casc
 player addHeadgear "rhs_Booniehat_ocp";
 
-// Ulleres
+// Ulleres.
 player addGoggles "G_Diving";
 
 // Armes
@@ -1365,7 +1365,7 @@ player addPrimaryWeaponItem "rhsusf_acc_ACOG";
 player addWeapon "rhsusf_weap_m1911a1";
 player addWeapon "lerca_1200_tan";
 
-// Objectes
+// Objectes.
 player linkItem "ItemMap";
 player linkItem "ItemCompass";
 player linkItem "tf_microdagr";
@@ -1415,7 +1415,7 @@ player forceAddUniform "U_B_Wetsuit";
 player addVest "V_RebreatherB";
 // No es permeten objectes en aquesta armilla
 
-// Motxilla
+// Motxilla.
 player addBackpack "B_AssaultPack_blk";
 (unitBackpack player) addItemCargoGlobal ["ACE_fieldDressing",4];
 (unitBackpack player) addItemCargoGlobal ["ACE_packingBandage",3];
@@ -1430,7 +1430,7 @@ player addBackpack "B_AssaultPack_blk";
 // Casc
 player addHeadgear "rhs_Booniehat_ocp";
 
-// Ulleres
+// Ulleres.
 player addGoggles "G_Diving";
 
 // Armes
@@ -1441,7 +1441,7 @@ player addPrimaryWeaponItem "rhsusf_acc_ACOG";
 player addWeapon "rhsusf_weap_m1911a1";
 player addWeapon "lerca_1200_tan";
 
-// Objectes
+// Objectes.
 player linkItem "ItemMap";
 player linkItem "ItemCompass";
 player linkItem "tf_microdagr";

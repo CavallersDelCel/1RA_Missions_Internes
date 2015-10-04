@@ -8,7 +8,7 @@ Missió generada amb la Plantilla Bàsica per Missions (PBM) del grup 1er Regime
 
 **Nom de la missió**: Operació Jagdtag: Dia de caça.
 
-**Versió**: v1.1 (2015/06/21).
+**Versió**: v1.2 (2015/10/04).
 
 **Autor**: CC_Magnetar.
 
@@ -27,13 +27,9 @@ fins que les torres inhibidores de senyal siguin destruïdes. Partint d'escaça 
 que s'avança en la missió a través d'informes d'inteligència. Per tal d'acomplir els objectius es requereixen entre 8 i 12 jugadors molt ben coordinats ja que es
 considera una missió difícil. Les tasques no s'actualitzen un cop completades i són els jugadors els qui decideixen si les han completat o no.
 
-**Plantilla Bàsica per Missions (PBM)**: v0.1 (https://github.com/CavallersDelCel/1RA_Plantilla_Missio) per CC_Magnetar.
+**Plantilla Bàsica per Missions (PBM)**: v0.4.1 (https://github.com/CavallersDelCel/1RA_Plantilla_Missio) per CC_Magnetar.
 
-## Descripció detallada de la missió
-
-##### REQUISITS
-
-ArmA3 + Estàndard CC
+### Descripció detallada de la missió
 
 ##### SITUACIÓ
 
@@ -113,14 +109,14 @@ Cavallers del Cel SOP "Standard Operating Procedure"
     * Metge.
 
 # Plantilla Bàsica per Missions (PBM)
- 
+
 **Autor**: CC_Magnetar.
 
 **Contribuïdors**: CC_Viper (Plantilles d'imatges).
 
-**Versió**: 0.1.
+**Versió**: 0.4.1.
 
-**Darrera modificació**: 2015/06/20.
+**Darrera modificació**: 2015/10/04.
 
 **Descripció**: Plantilla bàsica per generar missions pel grup d'Arma 1er Regiment Aerotransportat (1RA) de la Comunitat Catalana de Simulació - Cavallers del Cel.
 
@@ -138,6 +134,7 @@ haurà d'afegir una opció per tal de que la funcionalitat es pugui desactivar.
 La plantilla té la següent estructura de carpetes.
 
 * "\" (Carpeta arrel): En aquesta carpeta es troben els fitxers essencials de la missió: description.ext, init.sqf, mission.sqm i briefing.sqf així com aquest fitxer de documentació.
+* "\DAC": Aquesta carpeta conté la versió script del Dynamic-AI-Creator v3.1b. És una eina, creada per Silola, per generar AI de forma dinàmica i que permet conservar recursos. Es pot trobar més informació a http://forums.bistudio.com/showthread.php?176926-DAC-V3-1-(Dynamic-AI-Creator)-released.
 * "\imatges": Carpeta on es guarden les diferents imatges. Conté plantilles per generar les imatges per la pròpia missió i pel fòrum.
 * "\scripts": Carpeta on es guarden els diferents scripts/funcions organitzats en subcarpetes.
   * "\sripts\ace3": Scripts i funcions per configurar el ACE3.
@@ -165,19 +162,19 @@ La següent llista mostra els mods externs que actualment estan suportats i en n
 ### Faccions suportades
 
 La següent llista mostra les faccions suportades per aquells scripts que permeten un major grau de control en equipacions, objectius etc: *briefing.sqf*,
-*fn_acre2_determinarIdiomes.sqf* (babel), *fn_configEquipacio.sqf* i *intro.sqf* . En negreta aquells mods a l'estàndard del grup 1RA: 
+*fn_acre2_determinarIdiomes.sqf* (babel), *fn_configEquipacio.sqf* i *intro.sqf* . En negreta aquells mods a l'estàndard del grup 1RA:
 
-| **Faccio**        | **Codi**          | 
+| **Faccio**        | **Codi**          |
 | ------------- | ------------- |
-| **Blue Force**                                                     | `blu_f`                       |
-| **Civils**                                                         | `civ_f`                       |
+| **Blue Force**                                                     | `blu_f`                          |
+| **Civils**                                                         | `civ_f`                          |
 | **FIA**                                                            | `blu_g_f`, `ind_g_f` i `opf_g_f` |
-| **Independent Force**                                              | `ind_f`                       |
-| **Opposing Force**                                                 | `opf_f`                       |
-| RHS Insurgents                                                   | `rhs_faction_insurgents`      |
-| RHS Russian Airborne Troops (Vozdushno-desantnye voyska)         | `rhs_faction_vdv`             |
-| RHS Soviet Air Defense Troops (Voyska protivovozdushnoy oborony) | `rhs_faction_vpvo`            |
-| **RHS United States Army (Desert)**                                | `rhs_faction_usarmy_d`        |
-| **RHS United States Army (Woodland)**                              | `rhs_faction_usarmy_wd`       |
-| **RHS United States Marine Corps (Desert)**                        | `rhs_faction_usmc_d`          |
-| **RHS United States Marine Corps (Woodland)**                      | `rhs_faction_usmc_wd`         |
+| **Independent Force**                                              | `ind_f`                          |
+| **Opposing Force**                                                 | `opf_f`                          |
+| RHS Insurgents                                                     | `rhs_faction_insurgents`         |
+| RHS Russian Airborne Troops (Vozdushno-desantnye voyska)           | `rhs_faction_vdv`                |
+| RHS Soviet Air Defense Troops (Voyska protivovozdushnoy oborony)   | `rhs_faction_vpvo`               |
+| **RHS United States Army (Desert)**                                | `rhs_faction_usarmy_d`           |
+| **RHS United States Army (Woodland)**                              | `rhs_faction_usarmy_wd`          |
+| **RHS United States Marine Corps (Desert)**                        | `rhs_faction_usmc_d`             |
+| **RHS United States Marine Corps (Woodland)**                      | `rhs_faction_usmc_wd`            |
