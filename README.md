@@ -24,19 +24,19 @@ Missió generada amb la Plantilla Bàsica per Missions (PBM) del grup 1er Regime
 
 **Resum de la missió**: Breu descripció de la missió.
 
-**Plantilla Bàsica per Missions (PBM)**: v0.1 (https://github.com/CavallersDelCel/1RA_Plantilla_Missio) per CC_Magnetar.
+**Plantilla Bàsica per Missions (PBM)**: v0.4.0 (https://github.com/CavallersDelCel/1RA_Plantilla_Missio) per CC_Magnetar.
 
 ### Descripció detallada de la missió
 
 Descripció detallada de la missió. Aquest text pot ser el mateix que el que es penja al fòrum.
 
 # Plantilla Bàsica per Missions (PBM)
- 
+
 **Autor**: CC_Magnetar.
 
 **Contribuïdors**: CC_Viper (Plantilles d'imatges).
 
-**Versió**: 0.3.0.
+**Versió**: 0.4.0.
 
 **Darrera modificació**: 2015/07/22.
 
@@ -84,9 +84,9 @@ La següent llista mostra els mods externs que actualment estan suportats i en n
 ### Faccions suportades
 
 La següent llista mostra les faccions suportades per aquells scripts que permeten un major grau de control en equipacions, objectius etc: *briefing.sqf*,
-*fn_acre2_determinarIdiomes.sqf* (babel), *fn_configEquipacio.sqf* i *intro.sqf* . En negreta aquells mods a l'estàndard del grup 1RA: 
+*fn_acre2_determinarIdiomes.sqf* (babel), *fn_configEquipacio.sqf* i *intro.sqf* . En negreta aquells mods a l'estàndard del grup 1RA:
 
-| **Faccio**        | **Codi**          | 
+| **Faccio**        | **Codi**          |
 | ------------- | ------------- |
 | **Blue Force**                                                     | `blu_f`                          |
 | **Civils**                                                         | `civ_f`                          |
