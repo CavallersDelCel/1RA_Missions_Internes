@@ -40,7 +40,7 @@ class Mission
 	randomSeed=11578151;
 	class Intel
 	{
-		briefingName="[1RA - CC] Operació fantasma v1.00";
+		briefingName="[1RA - CC] Operació fantasma v1.01";
 		startFog=0.69;
 		startWind=0.34999999;
 		startWindDir=25;
@@ -81,7 +81,7 @@ class Mission
 					rank="SERGEANT";
 					skill=0.60000002;
 					text="CC_Alfa1_1";
-					init="CC_Alfa1 = group this; (group this) setGroupID [""Alfa 1""]; [""sl"",this] call cc_fnc_configEquipacio; this setVariable[""cc_var_grupUnitat"",[""Alfa"",1],true]; this assignAsCargoIndex [Cotxe2, 1]; this moveInCargo Cotxe2;";
+					init="[""Alfa"", 1, ""sl"", this] call cc_fnc_configUnitat; this assignAsCargoIndex [Cotxe2, 1]; this moveInCargo Cotxe2;";
 					description="Líder d'esquadra";
 				};
 				class Item1
@@ -94,7 +94,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="CC_Alfa1_2";
-					init="CC_Alfa1 = group this; (group this) setGroupID [""Alfa 1""]; [""me"",this] call cc_fnc_configEquipacio; this setVariable[""cc_var_grupUnitat"",[""Alfa"",1],true]; this assignAsCargoIndex [Cotxe2, 2]; this moveInCargo [Cotxe2,2];";
+					init="[""Alfa"", 1, ""me"", this] call cc_fnc_configUnitat; this assignAsCargoIndex [Cotxe2, 2]; this moveInCargo [Cotxe2,2];";
 					description="Metge";
 				};
 				class Item2
@@ -107,7 +107,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="CC_Alfa1_3";
-					init="CC_Alfa1 = group this; (group this) setGroupID [""Alfa 1""]; [""rflat"",this] call cc_fnc_configEquipacio; this setVariable[""cc_var_grupUnitat"",[""Alfa"",1],true]; this moveinDriver Cotxe2;";
+					init="[""Alfa"", 1, ""rflat"", this] call cc_fnc_configUnitat; this moveinDriver Cotxe2;";
 					description="Fuseller (AT4)";
 				};
 				class Item3
@@ -120,7 +120,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="CC_Alfa1_4";
-					init="CC_Alfa1 = group this; (group this) setGroupID [""Alfa 1""]; [""ar"",this] call cc_fnc_configEquipacio; this setVariable[""cc_var_grupUnitat"",[""Alfa"",1],true]; this assignAsCargoIndex [Cotxe2, 3]; this moveInCargo [Cotxe2, 3];";
+					init="[""Alfa"", 1, ""ar"", this] call cc_fnc_configUnitat; this assignAsCargoIndex [Cotxe2, 3]; this moveInCargo [Cotxe2, 3];";
 					description="Fuseller automàtic";
 				};
 				class Item4
@@ -133,7 +133,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="CC_Alfa1_5";
-					init="CC_Alfa1 = group this; (group this) setGroupID [""Alfa 1""]; [""gr"",this] call cc_fnc_configEquipacio; this setVariable[""cc_var_grupUnitat"",[""Alfa"",1],true]; this moveInGunner Cotxe2;";
+					init="[""Alfa"", 1, ""gr"", this] call cc_fnc_configUnitat; this moveInGunner Cotxe2;";
 					description="Granader";
 				};
 			};
@@ -894,7 +894,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="CC_Alfa2_1";
-					init="CC_Alfa2 = group this; (group this) setGroupID [""Alfa 2""]; [""tl"",this] call cc_fnc_configEquipacio; this setVariable[""cc_var_grupUnitat"",[""Alfa"",2],true]; this moveInCargo Cotxe1;";
+					init="[""Alfa"", 2, ""tl"", this] call cc_fnc_configUnitat; this moveInCargo Cotxe1;";
 					description="Líder d'equip";
 				};
 				class Item1
@@ -907,7 +907,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="CC_Alfa2_2";
-					init="CC_Alfa2 = group this; (group this) setGroupID [""Alfa 2""]; [""at"",this] call cc_fnc_configEquipacio; this setVariable[""cc_var_grupUnitat"",[""Alfa"",2],true]; this moveInGunner Cotxe1;";
+					init="[""Alfa"", 2, ""at"", this] call cc_fnc_configUnitat; this moveInGunner Cotxe1;";
 					description="Antitanc (Javelin)";
 				};
 				class Item2
@@ -920,7 +920,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="CC_Alfa2_3";
-					init="CC_Alfa2 = group this; (group this) setGroupID [""Alfa 2""]; [""mg"",this] call cc_fnc_configEquipacio; this setVariable[""cc_var_grupUnitat"",[""Alfa"",2],true]; this assignAsCargoIndex [Cotxe1, 3]; this moveInCargo [Cotxe1, 3];";
+					init="[""Alfa"", 2, ""mg"", this] call cc_fnc_configUnitat; this assignAsCargoIndex [Cotxe1, 3]; this moveInCargo [Cotxe1, 3];";
 					description="Metrallador";
 				};
 				class Item3
@@ -933,7 +933,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="CC_Alfa2_4";
-					init="CC_Alfa2 = group this; (group this) setGroupID [""Alfa 2""]; [""rflat"",this] call cc_fnc_configEquipacio; this setVariable[""cc_var_grupUnitat"",[""Alfa"",2],true]; this moveinDriver Cotxe1;";
+					init="[""Alfa"", 2, ""rflat"", this] call cc_fnc_configUnitat; this moveinDriver Cotxe1;";
 					description="Fuseller (AT4)";
 				};
 				class Item4
@@ -946,7 +946,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="CC_Alfa2_5";
-					init="CC_Alfa2 = group this; (group this) setGroupID [""Alfa 2""]; [""me"",this] call cc_fnc_configEquipacio; this setVariable[""cc_var_grupUnitat"",[""Alfa"",2],true]; this assignAsCargoIndex [Cotxe1, 2]; this moveInCargo [Cotxe1, 2];";
+					init="[""Alfa"", 2, ""me"", this] call cc_fnc_configUnitat; this assignAsCargoIndex [Cotxe1, 2]; this moveInCargo [Cotxe1, 2];";
 					description="Metge";
 				};
 			};
@@ -969,7 +969,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="CC_Alfa3_1";
-					init="CC_Alfa3 = group this; (group this) setGroupID [""Alfa 3""]; [""sn"",this] call cc_fnc_configEquipacio; this setVariable[""cc_var_grupUnitat"",[""Alfa"",3],true]; this assignAsCargoIndex [Cotxe3, 1]; this moveInCargo [Cotxe3, 1];";
+					init="[""Alfa"", 3, ""sn"", this] call cc_fnc_configUnitat; this assignAsCargoIndex [Cotxe3, 1]; this moveInCargo [Cotxe3, 1];";
 					description="Franctirador";
 				};
 				class Item1
@@ -982,7 +982,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="CC_Alfa3_2";
-					init="CC_Alfa3 = group this; (group this) setGroupID [""Alfa 3""]; [""sp"",this] call cc_fnc_configEquipacio; this setVariable[""cc_var_grupUnitat"",[""Alfa"",3],true]; this moveinDriver Cotxe3;";
+					init="[""Alfa"", 3, ""sp"", this] call cc_fnc_configUnitat; this moveinDriver Cotxe3;";
 					description="Observador";
 				};
 			};
@@ -1124,7 +1124,7 @@ class Mission
 	};
 	class Sensors
 	{
-		items=9;
+		items=7;
 		class Item0
 		{
 			position[]={21787.705,32.571262,21017.357};
@@ -1236,31 +1236,7 @@ class Mission
 			age="UNKNOWN";
 			name="Extraccio";
 			expCond="{_x in thisList} count playableUnits == {alive _x} count playableUnits";
-			expActiv="call compile preprocessFileLineNumbers ""scripts\finalitzarMissio\cc_finalitzarMissio.sqf"";";
-			class Effects
-			{
-			};
-		};
-		class Item7
-		{
-			position[]={24093.627,46.669868,21929.744};
-			interruptable=1;
-			age="UNKNOWN";
-			name="trigFracasAbsolut";
-			expCond="coronelMort == 0 && {alive _x} count playableUnits == 0";
-			expActiv="[""FracasAbsolut"",false] call BIS_fnc_endMission;";
-			class Effects
-			{
-			};
-		};
-		class Item8
-		{
-			position[]={24188.986,56.591309,21821.232};
-			interruptable=1;
-			age="UNKNOWN";
-			name="trigFinalFallit";
-			expCond="coronelMort == 1 && ({alive _x} count playableUnits == 0)";
-			expActiv="[""FinalFallit1"",false] call BIS_fnc_endMission;";
+			expActiv="0 = [[],""cc_fnc_finalitzarMissio"",true] spawn BIS_fnc_MP;";
 			class Effects
 			{
 			};

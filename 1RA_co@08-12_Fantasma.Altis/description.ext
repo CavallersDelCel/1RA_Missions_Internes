@@ -121,7 +121,7 @@ class Params {
         title = "Debug DAC";
         values[] = {0,1,2};
         texts[] = {"Desactivat", "Simplificat", "Complert"};
-        default = 2;
+        default = 1;
     };
 
     //===================================================================================================//
@@ -174,7 +174,7 @@ class Params {
 // DEBRIEFING: Informació per quan acaba la missió.                                                      //
 //=======================================================================================================//
 class CfgDebriefing {
-    class Final1Exit {
+    class FinalExit1 {
         title = "Missió acabada amb èxit.";
         subtitle = "";
         description = "Les forces aliades han aconseguit acabar amb el coronel enemic i sembrar el caos en l'estructura de comandament enemiga.";

@@ -362,6 +362,7 @@ if (_esInfanteria) then {
         (uniformContainer _unitat) addItemCargoGlobal [_epinefrina,1];
     };
     (uniformContainer _unitat) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",2];
+    (uniformContainer _unitat) addItemCargoGlobal ["rhsusf_acc_eotech_552",1];
 
     // Arma secundària.
     _unitat addWeapon _pistola;
@@ -1517,6 +1518,7 @@ switch (_tipusUnitat) do
         (uniformContainer _unitat) addItemCargoGlobal [_armaSilenciador,1];
         (uniformContainer _unitat) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",2];
         (uniformContainer _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",1];
+        (uniformContainer _unitat) addItemCargoGlobal ["rhsusf_acc_eotech_552",1];
 
         // Objectes a l'armilla.
         if (cc_mod_ace3 or cc_mod_agm) then {

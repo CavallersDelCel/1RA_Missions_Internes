@@ -17,22 +17,6 @@
 coronelMort = 0;
 
 //=======================================================================================================//
-// Activar el Dynamic AI Creator 3 (DAC3): http://www.armaholic.com/page.php?id=25550                    //
-//=======================================================================================================//
-DAC_Basic_Value = 0;
-// Formar la variable necessària pel DAC amb les unitats a l'editor. Cal que totes les unitats jugables
-// tinguin un nom assignat.
-if (isServer) then {
-    DAC_STRPlayers = [];
-    {
-        DAC_STRPlayers pushBack format ["%1",_x];
-    } forEach playableUnits;
-    publicVariable "DAC_STRPlayers";
-    //player sideChat format ["DEBUG (init.sqf): %1", DAC_STRPlayers];
-};
-execVM "DAC\DAC_Config_Creator.sqf";
-
-//=======================================================================================================//
 // Desactivar guardar i guardar automàticament: https://community.bistudio.com/wiki/enableSaving         //
 //=======================================================================================================//
 enableSaving [false, false];
