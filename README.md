@@ -24,7 +24,7 @@ Missió generada amb la Plantilla Bàsica per Missions (PBM) del grup 1er Regime
 
 **Resum de la missió**: Breu descripció de la missió.
 
-**Plantilla Bàsica per Missions (PBM)**: v0.4.0 (https://github.com/CavallersDelCel/1RA_Plantilla_Missio) per CC_Magnetar.
+**Plantilla Bàsica per Missions (PBM)**: v0.4.1 (https://github.com/CavallersDelCel/1RA_Plantilla_Missio) per CC_Magnetar.
 
 ### Descripció detallada de la missió
 
@@ -36,9 +36,9 @@ Descripció detallada de la missió. Aquest text pot ser el mateix que el que es
 
 **Contribuïdors**: CC_Viper (Plantilles d'imatges).
 
-**Versió**: 0.4.0.
+**Versió**: 0.4.1.
 
-**Darrera modificació**: 2015/07/22.
+**Darrera modificació**: 2015/10/04.
 
 **Descripció**: Plantilla bàsica per generar missions pel grup d'Arma 1er Regiment Aerotransportat (1RA) de la Comunitat Catalana de Simulació - Cavallers del Cel.
 
