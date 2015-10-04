@@ -8,7 +8,7 @@ Missió generada amb la Plantilla Bàsica per Missions (PBM) del grup 1er Regime
 
 **Nom de la missió**: Operació Fantasma.
 
-**Versió**: v1.0 (2015/09/25).
+**Versió**: v1.01 (2015/10/04).
 
 **Autor**: CC_Magnetar.
 
