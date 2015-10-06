@@ -20,15 +20,22 @@ Missió generada amb la Plantilla Bàsica per Missions (PBM) del grup 1er Regime
 
 **Dificultat**: Baixa.
 
-**Resum de la missió**: *DCS i Arma 3* és una missió de pràctiques de coordinació entre els grups d'infanteria i d'aviació. La missió no té objectius en si però en canvi permet l'activació/desactivació de varies zones DAC a través d'accions assignades al líder d'esquadra. El respawn és de tipus `BASE` i força a tots els clients el model de vol avançat
-de l'Arma 3.
+**Resum de la missió**: *DCS i Arma 3* és una missió de pràctiques de coordinació entre els grups d'infanteria i d'aviació. La missió no té objectius en si però en canvi permet l'activació/desactivació de varies zones DAC a través d'accions assignades al líder d'esquadra. El respawn és de tipus `BASE` tan per jugadors com per vehicles i força a tots els
+clients el model de vol avançat de l'Arma 3.
 
 **Plantilla Bàsica per Missions (PBM)**: v0.4.1 (https://github.com/CavallersDelCel/1RA_Plantilla_Missio) per CC_Magnetar.
 
 ### Descripció detallada de la missió
 
-Aquesta missió de pràctiques no té objectius. En canvi diverses zones DAC, inicialment desactivades, es poden activar i descactivar en qualsevol moment pel jugador amb el rol de
-líder d'esquadra. Cada una de les zones DAC està poblada de la següent manera:
+##### SITUACIÓ
+
+La zona d'Altis ha sigut invaïda per les forces del mal del CSAT. Els Cavallers del Cel han de destruïr aquesta amenaça que creix com a bolets...
+
+##### FORCES AMIGUES
+
+* Esquadra Alfa amb suport aeri.
+
+##### FORCES ENEMIGUES
 
 * **Zona 1**: Zona poblada en la seva totalitat per unitats d'infanteria.
 * **Zona 2**: Zona poblada per unitats d'infanteria i vehicles lleugers.
@@ -36,8 +43,40 @@ líder d'esquadra. Cada una de les zones DAC està poblada de la següent manera
 * **Zona 4**: Zona poblada per unitats d'infanteria, vehicles lleugers, blindats i helicòpters.
 * **Zona 5**: Zona poblada per unitats d'infanteria, vehicles lleugers i helicòpters.
 
-El model de vol avançat està activat per aquesta missió i és un paràmetre forçat a tots els jugadors. A més a més té el respawn de tipus `BASE` configurat (10 segons) que s'aplica
-tan a jugadors com a vehicles.
+##### MISSIÓ i EXECUCIÓ
+
+Coordinar correctament l'assalt a una posició amb unitats d'infanteria i d'aviació per tal d'eliminar les forces enemigues a la zona.
+
+##### ADMINISTRACIÓ/LOGÍSTICA
+
+**Suport**
+* Sense suport.
+
+**Abastiment**
+* Sense abastiment.
+
+##### COMANDAMENT/SENYAL
+
+Cavallers del Cel SOP "Standard Operating Procedure"
+
+##### ROLS
+
+* **ESQUADRA ALFA - Canal alternatiu 1 - Freqüència 200**
+  * **ALFA 1 - Equip de foc - Canal 1 - Freqüència 201**
+    * Líder d'esquadra.
+    * Fuseller.
+    * Fuseller automàtic M249.
+    * Granader.
+    * Metge.
+  * **ALFA 2 - Equip de foc - Canal 2 - Freqüència 202**
+    * Líder d'equip.
+    * Fuseller.
+    * Fuseller automàtic  M249.
+    * Granader.
+    * Metge.
+  * **ALFA 3 - Pilots - Canal 3 - Freqüència 203**
+    * Pilot.
+    * Pilot.
 
 # Plantilla Bàsica per Missions (PBM)
 
