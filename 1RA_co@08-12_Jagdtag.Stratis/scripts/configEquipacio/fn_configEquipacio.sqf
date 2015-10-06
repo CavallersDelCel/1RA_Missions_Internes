@@ -1,7 +1,7 @@
 //=======================================================================================================//
 // Arxiu: configEquipacio.sqf                                                                            //
 // Autor: CC_Magnetar                                                                                    //
-// Versió: 0.9                                                                                           //
+// Versió: 0.10                                                                                          //
 // Creació del Document: 2015/04/02                                                                      //
 // Descripció: Aquest document serveix per equipar els jugadors depenent del rol i la facció. A l'hora   //
 //             de configurar l'equip de la unitat la següent línia s'ha d'afegir al INIT de la unitat en //
@@ -11,7 +11,7 @@
 //                                                                                                       //
 //             o bé:                                                                                     //
 //                                                                                                       //
-//                  ["ROL_JUGADOR",this,"FACCIO"] call cc_fnc_configEquipacio;                           //
+//                  ["ROL_JUGADOR",this,"FACCIÓ"] call cc_fnc_configEquipacio;                           //
 //                                                                                                       //
 //             per forçar una facció específica a la unitat.                                             //
 //                                                                                                       //
@@ -19,8 +19,8 @@
 //                                                                                                       //
 //                  ROL_JUGADOR             Rol assignat                                                 //
 //                  pl                      Cap de secció (Platoon Leader)                               //
-//                  psg                     Sergent (Platoon Sergeant)                                   //
-//                  rto                     Operador de Radio (Platoon Radiotelephone Operator)          //
+//                  psg                     Sergent de secció (Platoon Sergeant)                         //
+//                  rto                     Operador de ràdio (Platoon Radiotelephone Operator)          //
 //                  fo                      Observador avançat (Forward Observer)                        //
 //                  me                      Metge (Platoon Medic)                                        //
 //                  sl                      Líder d'esquadra (Squad Leader)                              //
@@ -42,15 +42,14 @@
 //                  sp                      Observador (Spotter)                                         //
 //                  divsl                   Bussejador líder d'esquadra (Diver Squad Leader)             //
 //                  divme                   Bussejador metge (Diver Medic)                               //
-//                  divexp                  Bussejador especialista en explosius (Diver Specialist in    //
-//                                          Explosives)                                                  //
+//                  divexp                  Bussejador especialista en explosius (Diver Explosive        //
 //                  div                     Bussejador (Diver)                                           //
 //                                                                                                       //
 //                  hmmwv                   Equipació per HMMWVs                                         //
 //                                                                                                       //
-//             i "FACCIO" una de les següents entrades:                                                  //
+//             i "FACCIÓ" una de les següents entrades:                                                  //
 //                                                                                                       //
-//                  FACCIO                  Facció forçada de la unitat en termes d'equipació            //
+//                  FACCIÓ                  Facció forçada de la unitat en termes d'equipació            //
 //                  blu_f                   Blue Force                                                   //
 //                  blu_g_f                 FIA                                                          //
 //                  ind_g_f                 FIA                                                          //
@@ -66,106 +65,95 @@
 //                  rhs_faction_vpvo        Soviet Air Defense Forces (Voyska protivovozdushnoy oborony) //
 //                  rhs_faction_vdv         Russian Airborne Troops (Vozdushno-desantnye voyska)         //
 //                                                                                                       //
-// Canvis: 0.1 (2015/04/02) Versió inicial.                                                              //
-//         0.2 (2015/04/26) Canviada la facció de les unitats RHS v0.3.7.                                //
-//         0.3 (2015/05/17) Afegida l'equipació pel vehicle HMMWV, divsl i divme.                        //
-//         0.4 (2015/06/10) Afegit el cas default amb equipació de fuseller (rfl) i s'ha mogut la opció  //
-//                          d'utilitzar els perfils a init.sqf.                                          //
-//         0.5 (2015/06/12) Canvis als noms de les faccions deguts a la versió 0.3.8 de RHS.             //
-//         0.6 (2015/06/12) Afegides les faccions rhs_faction_usarmy_wd, rhs_faction_usmc_wd.            //
-//         0.7 (2015/06/18) Afegit el rol d'explosius (exp). En cas de que ni AGM ni ACE3 estiguin       //
-//                          carregats el script no falla.                                                //
-//         0.8 (2015/06/19) Afegida l'explicació pel tercer paràmetre (opcional) i la facció russa       //
-//                          rhs_faction_vdv.                                                             //
-//         0.9 (2015/07/03) Afegit el rol de Bussejador especialista en explosius (divexp).              //
+// Canvis: 0.1  (2015/04/02) Versió inicial.                                                             //
+//         0.2  (2015/04/26) Canviada la facció de les unitats RHS v0.3.7.                               //
+//         0.3  (2015/05/17) Afegida l'equipació pel vehicle HMMWV, divsl i divme.                       //
+//         0.4  (2015/06/10) Afegit el cas default amb equipació de fuseller (rfl) i s'ha mogut la opció //
+//                           d'utilitzar els perfils a init.sqf.                                         //
+//         0.5  (2015/06/12) Canvis als noms de les faccions deguts a la versió 0.3.8 de RHS.            //
+//         0.6  (2015/06/12) Afegides les faccions rhs_faction_usarmy_wd, rhs_faction_usmc_wd.           //
+//         0.7  (2015/06/18) Afegit el rol d'explosius (exp). En cas de que ni AGM ni ACE3 estiguin      //
+//                           carregats el script no falla.                                               //
+//         0.8  (2015/06/19) Afegida l'explicació pel tercer paràmetre (opcional) i la facció russa      //
+//                           rhs_faction_vdv.                                                            //
+//         0.9  (2015/07/03) Afegit el rol de Bussejador especialista en explosius (divexp).             //
+//         0.10 (2015/07/15) Canvi a Params (Arma v1.48).                                                //
 //=======================================================================================================//
 
-// Declaració de variables
-private ["_faccioUnitat", "_tipusUnitat", "_unitat"];
+// Declaració de variables.
+params ["_tipusUnitat", "_unitat", ["_faccioUnitat", nil]];
 
-_tipusUnitat = toLower (_this select 0);
-_unitat = _this select 1;
+_tipusUnitat = toLower _tipusUnitat;
 
-// Depenent d'on s'executi el script, averiguar si cal executar-lo o no
+// Depenent d'on s'executi el script, averiguar si cal executar-lo o no.
 if !(local _unitat) exitWith {};
 
-_faccioUnitat = toLower (faction _unitat);
-if(count _this > 2) then {
-    _faccioUnitat = toLower (_this select 2);
+if ( isNil "_faccioUnitat") then {
+    _faccioUnitat = toLower (faction _unitat);
+} else {
+    _faccioUnitat = toLower _faccioUnitat;
 };
 
-// Guarda en una variable pública el tipus d'unitat
+// Guarda en una variable pública el tipus d'unitat.
 _unitat setVariable ["cc_var_configEquipacio",_tipusUnitat,true];
 
-// Començar a assignar l'equip als diferents rols
+// Començar a assignar l'equip als diferents rols.
 _unitat setVariable ["cc_var_configEquipacio_Llesta",false,true];
 
-// DEBUG OUTPUT
+// DEBUG OUTPUT.
 if (cc_param_debugOutput == 1) then {
-    _unitat sideChat format ["DEBUG (configEquipacio.sqf): facció de la unitat: %1", _faccioUnitat];
+    _unitat sideChat format ["DEBUG (fn_configEquipacio.sqf): facció de la unitat: %1", _faccioUnitat];
 };
 
-// Equipació per la facció BLUFOR
+// Inclou el fitxer de configuració d'equipacions
+#include "cc_configEquipacio_opcions.sqf";
+
+// Equipació per la facció BLUFOR.
 if (_faccioUnitat == "blu_f") then {
-    #include "cc_equipacio_blu_f.sqf"
+    #include "cc_configEquipacio_blu_f.sqf"
 };
 
-// Equipació per la facció FIA
+// Equipació per la facció FIA.
 if (_faccioUnitat in ["blu_g_f","ind_g_f","opf_g_f"]) then {
-    #include "cc_equipacio_fia_f.sqf"
+    #include "cc_configEquipacio_fia_f.sqf"
 };
 
-// Equipació per la facció OPFOR
+// Equipació per la facció OPFOR.
 if (_faccioUnitat == "opf_f") then {
-    #include "cc_equipacio_opf_f.sqf"
+    #include "cc_configEquipacio_opf_f.sqf"
 };
 
-// Equipació per la facció independent
+// Equipació per la facció independent.
 if (_faccioUnitat == "ind_f") then {
-    #include "cc_equipacio_ind_f.sqf"
+    #include "cc_configEquipacio_ind_f.sqf"
 };
 
-// Equipació per la facció civil
+// Equipació per la facció civil.
 if (_faccioUnitat == "civ_f") then {
-    #include "cc_equipacio_civ_f.sqf"
+    #include "cc_configEquipacio_civ_f.sqf"
 };
 
-// Equipació per la facció USA "United States Army" 
-if (_faccioUnitat == "rhs_faction_usarmy_d") then {
-    #include "cc_equipacio_rhs_usarmy_d.sqf"
+// Equipació per la facció RHS USA "United States Army" i "United States Marine Corps".
+if ((_faccioUnitat == "rhs_faction_usarmy_d") or (_faccioUnitat == "rhs_faction_usarmy_wd") or (_faccioUnitat == "rhs_faction_usmc_d") or (_faccioUnitat == "rhs_faction_usmc_wd")) then {
+    #include "cc_configEquipacio_rhs_usaf.sqf"
 };
 
-// Equipació per la facció USA "United States Army" 
-if (_faccioUnitat == "rhs_faction_usarmy_wd") then {
-    #include "cc_equipacio_rhs_usarmy_wd.sqf"
-};
-
-// Equipació per la facció USA "United States Marine Corps"
-if (_faccioUnitat == "rhs_faction_usmc_d") then {
-    #include "cc_equipacio_rhs_usmc_d.sqf"
-};
-
-// Equipació per la facció USA "United States Marine Corps"
-if (_faccioUnitat == "rhs_faction_usmc_wd") then {
-    #include "cc_equipacio_rhs_usmc_wd.sqf"
-};
-
-// Equipació per la facció USA "United States Army"
+// Equipació per la facció RHS "Insurgents".
 if (_faccioUnitat == "rhs_faction_insurgents") then {
-    #include "cc_equipacio_rhs_insurgents.sqf"
+    #include "cc_configEquipacio_rhs_insurgents.sqf"
 };
 
-// Equipació per la facció russa "Russian Airborne Troops"
+// Equipació per la facció russa "Russian Airborne Troops".
 if (_faccioUnitat == "rhs_faction_vdv" ) then {
-    #include "cc_equipacio_rhs_vdv.sqf"
+    #include "cc_configEquipacio_rhs_vdv.sqf"
 };
 
-// Equipació per la facció russa "Soviet Air Defense Forces"
+// Equipació per la facció russa "Soviet Air Defense Forces".
 if (_faccioUnitat == "rhs_faction_vpvo" ) then {
-    #include "cc_equipacio_rhs_vpvo.sqf"
+    #include "cc_configEquipacio_rhs_vpvo.sqf"
 };
 
-// S'ha acabat l'assignació de l'Equipacio
+// S'ha acabat l'assignació de l'equipació
 _unitat setVariable ["cc_var_configEquipacio_Llesta",true,true];
 
 //============================================ FI DEL FITXER ============================================//

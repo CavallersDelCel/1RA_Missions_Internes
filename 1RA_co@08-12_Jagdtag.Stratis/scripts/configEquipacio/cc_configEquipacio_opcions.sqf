@@ -1,0 +1,17 @@
+//=======================================================================================================//
+// Arxiu: cc_configEquipacio_opcions.sqf                                                                 //
+// Autor: CC_Magnetar                                                                                    //
+// Versió: 0.1                                                                                           //
+// Creació del Document: 2015/10/03                                                                      //
+// Descripció: Aquest document serveix configurar les diverses opcions de les equipacions. Els canvis    //
+//             que es fagin aquí afecten a totes les unitats jugables, independentment de la seva        //
+//             facció.                                                                                   //
+// Canvis: 0.1 (2015/10/03) Versió inicial.                                                              //
+//=======================================================================================================//
+
+cc_var_equiparVisioNocturna = 2; // Global. Equipa la unitat amb visió nocturna:
+                                 // 0 = No s'equipa visió nocturna.
+                                 // 1 = Visió nocturna a la motxilla.
+                                 // 2 = Visió nocturna equipada (deshabilitat per bussejadors).
+
+//============================================ FI DEL FITXER ============================================//

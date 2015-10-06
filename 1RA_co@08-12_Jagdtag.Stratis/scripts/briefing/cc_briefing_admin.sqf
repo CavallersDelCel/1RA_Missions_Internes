@@ -9,46 +9,44 @@
 //=======================================================================================================//
 
 //=======================================================================================================//
-// MISSATGES QUE NOMÉS VEURÀ L'ADMINISTRADOR                                                             //
+// MISSATGES QUE NOMÉS VEURÀ L'ADMINISTRADOR.                                                            //
 //=======================================================================================================//
 
 //=======================================================================================================//
-// NOTES: ADMINISTRADOR                                                                                  //
+// NOTES: ADMINISTRADOR.                                                                                 //
 //=======================================================================================================//
-
 _briefingAdmin = "
-<br/>
 <font color='#FF0000' size='18'>Informació per l'administrador</font>
-<br/><br/>
+<br/>
 Aquesta missió s'ha comprovat que funciona amb el següent:
 <br/><br/>
-- Community Base Addons (CBA) v1.1.20.150416.
+- Community Base Addons (CBA) v2.0.
 <br/>
-- RHS United States Army Forces (RHS USAF) v0.3.7.
-<br/>
-- British Ridgback PPV (BFX) v3.0.
+- RHS United States Army Forces (RHS USAF) v0.3.9.1.
 <br/>
 - Task Force Arrowhead Radio (TFAR) v0.9.7.3.
 <br/>
-- Authentic Gameplay Modification (AGM) v0.95.3.
+- Advanced Combat Environment 3 (ACE3) v3.3.2.
 <br/><br/>
 Si els requisits no es compleixen o les versions són diferents cal comprovar prèviament que tot funcioni correctament.
-<br/><br/>
+<br/>
 ";
 
 //=======================================================================================================//
-// NOTES: CREADOR DE LA MISSIÓ                                                                           //
+// NOTES: CREADOR DE LA MISSIÓ.                                                                          //
 //=======================================================================================================//
 
 _briefingNotes = "
 <br/>
 <font color='#FF0000' size='18'>Notes del creador de la missió</font>
-<br/><br/>
-<font color='#00FFFF'>Nom de la Missió:</font> ""Operació Jagdtag: Dia de caça"".
 <br/>
-<font color='#00FFFF'>Versió:</font> 1.0.
+<font color='#00FFFF'>Nom de la missió:</font> ""Operació Jagdtag: Dia de caça"".
 <br/>
-<font color='#00FFFF'>Autor:</font> CC Magnetar.
+<font color='#00FFFF'>Versió:</font> 1.2.
+<br/>
+<font color='#00FFFF'>Autor:</font> CC_Magnetar.
+<br/>
+<font color='#00FFFF'>Col·laboradors:</font> *** Listat de col·laboradors ***.
 <br/>
 <font color='#00FFFF'>Nombre mínim de jugadors:</font> 8.
 <br/>
@@ -59,8 +57,12 @@ _briefingNotes = "
 <font color='#00FFFF'>Dificultat:</font> Elevada.
 <br/>
 <font color='#00FFFF'>Resum de la missió:</font> Operació ""Jagdtag: Dia de caça"" és una missió que divideix una esquadra en dos equips independents que no es podran comunicar per ràdio fins que les torres inhibidores de senyal siguin destruïdes. Partint d'escaça informació inicial els dos equips van obtenint més detalls dels objectius a mesura que s'avança en la missió a través d'informes d'inteligència. Per tal d'acomplir els objectius es requereixen entre 8 i 12 jugadors molt ben coordinats ja que es considera una missió difícil. Les tasques no s'actualitzen un cop completades i són els jugadors els qui decideixen si l'han completat o no.
-<br/><br/>
+<br/>
 ";
+
+//=======================================================================================================//
+// NOTES: FINALS DE LA MISSIÓ.                                                                           //
+//=======================================================================================================//
 
 _briefingFinals = "
 <br/>
@@ -70,48 +72,21 @@ Selecciona un dels finals per activar-lo.
 <br/><br/>
 ";
 
-_briefingFinals = _briefingFinals + format [
-"<execute expression=""['FinalExit1',true] call BIS_fnc_endMission;"">Final amb èxit 1</execute>: Torres destruides. Traidor mort. Sense documents d'intel·ligència.<br/><br/>"
-];
-_briefingFinals = _briefingFinals + format [
-"<execute expression=""['FinalExit2',true] call BIS_fnc_endMission;"">Final amb èxit 2</execute>: Torres no destruides. Traidor mort. Sense documents d'intel·ligència.<br/><br/>"
-];
-_briefingFinals = _briefingFinals + format [
-"<execute expression=""['FinalExit3',true] call BIS_fnc_endMission;"">Final amb èxit 3</execute>: Torres no destruides. Traidor mort. Amb documents d'intel·ligència.<br/><br/>"
-];
-_briefingFinals = _briefingFinals + format [
-"<execute expression=""['FinalExit4',true] call BIS_fnc_endMission;"">Final amb èxit 4</execute>: Torres destruides. Traidor viu. Sense documents d'intel·ligència.<br/><br/>"
-];
-_briefingFinals = _briefingFinals + format [
-"<execute expression=""['FinalExit5',true] call BIS_fnc_endMission;"">Final amb èxit 5</execute>: Torres destruides. Traidor viu. Amb documents d'intel·ligència.<br/><br/>"
-];
-_briefingFinals = _briefingFinals + format [
-"<execute expression=""['FinalExit6',true] call BIS_fnc_endMission;"">Final amb èxit 6</execute>: Torres destruides. Traidor mort. Amb documents d'intel·ligència.<br/><br/>"
-];
-_briefingFinals = _briefingFinals + format [
-"<execute expression=""['FinalFallit1',false] call BIS_fnc_endMission;"">Fracàs 1</execute>: Tots morts. Torres destruides. Traidor viu. Sense documents d'intel·ligència.<br/><br/>"
-];
-_briefingFinals = _briefingFinals + format [
-"<execute expression=""['FinalFallit2',false] call BIS_fnc_endMission;"">Fracàs 2</execute>: Tots morts. Torres no destruides. Traidor mort. Sense documents d'intel·ligència.<br/><br/>"
-];
-_briefingFinals = _briefingFinals + format [
-"<execute expression=""['FinalFallit3',false] call BIS_fnc_endMission;"">Fracàs 3</execute>: Tots morts. Torres destruides. Traidor mort. Sense documents d'intel·ligència.<br/><br/>"
-];
-_briefingFinals = _briefingFinals + format [
-"<execute expression=""['FinalFallit4',false] call BIS_fnc_endMission;"">Fracàs 4</execute>: Deserció. Torres no destruides. Traidor viu. Sense documents d'intel·ligència.<br/><br/>"
-];
-_briefingFinals = _briefingFinals + format [
-"<execute expression=""['FinalFallit5',false] call BIS_fnc_endMission;"">Fracàs 5</execute>: Deserció. Torres no destruides. Traidor viu. Amb documents d'intel·ligència.<br/><br/>"
-];
-_briefingFinals = _briefingFinals + format [
-"<execute expression=""['FracasAbsolut',false] call BIS_fnc_endMission;"">Fracàs Absolut</execute>: Tots morts. Torres no destruides. Traidor viu. Sense documents d'intel·ligència.<br/><br/>"
-];
+// Fes una llista de tots els finals inclosos a desctiption.ext de forma automàtica.
+_tipusFinals = (missionConfigFile >> "CfgDebriefing");
+for [{ _x = 0 }, {_x < count _tipusFinals}, { _x = _x + 1}] do {
+    _nomFinal = (configName ((missionConfigFile >> "CfgDebriefing") select _x));
+    _titol = getText (missionConfigFile >> "CfgDebriefing" >> format["%1",_nomFinal] >> "title");
+    _descripcio = getText (missionConfigFile >> "CfgDebriefing" >> format["%1",_nomFinal] >> "description");
+    _briefingFinals = _briefingFinals + format [
+    "<execute expression=""[[%1],true] call BIS_fnc_endMission;"">- %2</execute>: %3.<br/>", _nomFinal, _titol, _descripcio
+    ];
+};
 
 _briefing = _briefingAdmin + _briefingNotes + _briefingFinals;
-_briefing = _briefing + "<br/><br/>";
 
 //=======================================================================================================//
-// CREACIÓ DE L'ENTRADA                                                                                  //
+// CREACIÓ DE L'ENTRADA.                                                                                 //
 //=======================================================================================================//
 player createDiaryRecord ["diary", ["Admin",_briefing]];
 

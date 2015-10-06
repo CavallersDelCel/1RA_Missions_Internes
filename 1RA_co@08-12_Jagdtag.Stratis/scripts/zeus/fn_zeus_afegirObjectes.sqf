@@ -11,11 +11,10 @@
 // Surt si no és un servidor
 if( !isServer ) exitWith{}; 
 
-_zeus = _this select 0;
-_nousObjectes = _this select 1;
+params["_zeus", "_nouObjecte"];
 
 {
-    _x addCuratorEditableObjects [[_nousObjectes],true]
-} forEach (allCurators - [_curator]);
+    _x addCuratorEditableObjects [[_nouObjecte],true]
+} forEach (allCurators - [_zeus]);
 
 //============================================ FI DEL FITXER ============================================//

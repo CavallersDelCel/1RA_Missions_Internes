@@ -9,7 +9,7 @@
 //         0.2 (2015/06/12) Canvis als noms de les faccions deguts a la versió 0.3.8 de RHS.             //
 //=======================================================================================================//
 
-// Declaració de variables
+// Declaració de variables.
 private["_faccioUnitat"];
 
 // Identificar la facció de la unitat.
@@ -20,13 +20,13 @@ if (_faccioUnitat != toLower (faction (leader group player))) then {
     _faccioUnitat = toLower (faction (leader group player));
 };
 
-// DEBUG OUTPUT
+// DEBUG OUTPUT.
 if ( cc_param_debugOutput == 1 ) then {
     player sideChat format ["DEBUG (fn_acre2_determinarcc_acre2_determinarIdiomes.sqf): facció del jugador: %1", _faccioUnitat];
 };
 
 
-// Idiomes per la facció BLUFOR
+// Idiomes per la facció BLUFOR.
 if (_faccioUnitat == "blu_f") exitWith {
         
     cc_acre2_config_idioma_blufor call acre_api_fnc_babelSetSpokenLanguages;
@@ -37,7 +37,7 @@ if (_faccioUnitat == "blu_f") exitWith {
     };
 };
 
-// Idiomes per la facció FIA
+// Idiomes per la facció FIA.
 if (_faccioUnitat in ["blu_g_f","ind_g_f","opf_g_f"]) exitWith {
 
     cc_acre2_config_idioma_fia call acre_api_fnc_babelSetSpokenLanguages;
@@ -48,7 +48,7 @@ if (_faccioUnitat in ["blu_g_f","ind_g_f","opf_g_f"]) exitWith {
     };
 };
 
-// Idiomes per la facció OPFOR
+// Idiomes per la facció OPFOR.
 if (_faccioUnitat == "opf_f") exitWith {
 
     cc_acre2_config_idioma_opfor call acre_api_fnc_babelSetSpokenLanguages;
@@ -59,7 +59,7 @@ if (_faccioUnitat == "opf_f") exitWith {
     };
 };
 
-// Idiomes per la facció independent
+// Idiomes per la facció independent.
 if (_faccioUnitat == "ind_f") exitWith {
 
     cc_acre2_config_idioma_indfor call acre_api_fnc_babelSetSpokenLanguages;
@@ -70,7 +70,7 @@ if (_faccioUnitat == "ind_f") exitWith {
     };
 };
 
-// Idiomes per la facció civil
+// Idiomes per la facció civil.
 if (_faccioUnitat == "civ_f") exitWith {
 
     cc_acre2_config_idioma_civ call acre_api_fnc_babelSetSpokenLanguages;
@@ -81,7 +81,7 @@ if (_faccioUnitat == "civ_f") exitWith {
     };
 };
 
-// Idiomes per la facció RHS USAF "United States Armed Forces"
+// Idiomes per la facció RHS USAF "United States Armed Forces".
 if (_faccioUnitat in ["rhs_faction_usarmy_wd","rhs_faction_usarmy_d","rhs_faction_usmc_wd", "rhs_faction_usmc_d"] ) exitWith {
 
     cc_acre2_config_idioma_rhsusaf call acre_api_fnc_babelSetSpokenLanguages;
@@ -92,7 +92,7 @@ if (_faccioUnitat in ["rhs_faction_usarmy_wd","rhs_faction_usarmy_d","rhs_factio
     };
 };
 
-// Idiomes per la facció RHS: AFRF "Armed Forces of the Russian Federation"
+// Idiomes per la facció RHS: AFRF "Armed Forces of the Russian Federation".
 if (_faccioUnitat == "rhs_faction_vpvo" ) exitWith {
 
     cc_acre2_config_idioma_rhsusaf call acre_api_fnc_babelSetSpokenLanguages;
