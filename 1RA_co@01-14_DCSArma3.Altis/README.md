@@ -4,31 +4,40 @@ Imatge capçalera.
 
 Missió generada amb la Plantilla Bàsica per Missions (PBM) del grup 1er Regiment Aerotransportat (1RA) de la Comunitat Catalana de Simulació - Cavallers del Cel.
 
-**Nom de la missió**: Nom de la missió.
+**Nom de la missió**: DCS i Arma 3.
 
-**Versió**: vx.x (data).
+**Versió**: v1.0 (2015/10/08).
 
-**Autor**: Nom de l'autor.
+**Autor**: CC_Magnetar.
 
-**Contribuïdors**: Noms dels col·laboradors.
+**Tipus de missió**: Coop.
 
-**Tipus de missió**: Tipus de missió (Coop, TvT, PvP).
+**Nombre mínim de jugadors**: 1.
 
-**Nombre mínim de jugadors**: Nombre mínim de jugadors recomanats per l'autor.
+**Nombre màxim de jugadors**: 14.
 
-**Nombre màxim de jugadors**: Nombre màxim de jugadors recomanats per l'autor.
+**Respawn**: Base (10s).
 
-**Respawn**: Tipus de respawn.
+**Dificultat**: Baixa.
 
-**Dificultat**: Dificultat de la missió.
-
-**Resum de la missió**: Breu descripció de la missió.
+**Resum de la missió**: *DCS i Arma 3* és una missió de pràctiques de coordinació entre els grups d'infanteria i d'aviació. La missió no té objectius en si però en canvi permet l'activació/desactivació de varies zones DAC a través d'accions assignades al líder d'esquadra. El respawn és de tipus `BASE` i força a tots els clients el model de vol avançat
+de l'Arma 3.
 
 **Plantilla Bàsica per Missions (PBM)**: v0.4.1 (https://github.com/CavallersDelCel/1RA_Plantilla_Missio) per CC_Magnetar.
 
 ### Descripció detallada de la missió
 
-Descripció detallada de la missió. Aquest text pot ser el mateix que el que es penja al fòrum.
+Aquesta missió de pràctiques no té objectius. En canvi diverses zones DAC, inicialment desactivades, es poden activar i descactivar en qualsevol moment pel jugador amb el rol de
+líder d'esquadra. Cada una de les zones DAC està poblada de la següent manera:
+
+* **Zona 1**: Zona poblada en la seva totalitat per unitats d'infanteria.
+* **Zona 2**: Zona poblada per unitats d'infanteria i vehicles lleugers.
+* **Zona 3**: Zona poblada per unitats d'infanteria, vehicles lleugers i blindats.
+* **Zona 4**: Zona poblada per unitats d'infanteria, vehicles lleugers, blindats i helicòpters.
+* **Zona 5**: Zona poblada per unitats d'infanteria, vehicles lleugers i helicòpters.
+
+El model de vol avançat està activat per aquesta missió i és un paràmetre forçat a tots els jugadors. A més a més té el respawn de tipus `BASE` configurat (10 segons) que s'aplica
+tan a jugadors com a vehicles.
 
 # Plantilla Bàsica per Missions (PBM)
 

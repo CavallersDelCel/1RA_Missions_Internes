@@ -20,7 +20,15 @@ _briefingAdmin = "
 <br/>
 Aquesta missió s'ha comprovat que funciona amb el següent:
 <br/><br/>
-*** Llistat d'addons i les seves versions. ***
+- Community Base Addons (CBA) v2.0.
+<br/>
+- RHS United States Army Forces (RHS USAF) v0.3.9.1.
+<br/>
+- Task Force Arrowhead Radio (TFAR) v0.9.7.3.
+<br/>
+- Advanced Combat Environment 3 (ACE3) v3.3.2.
+<br/>
+- Dynamic-AI-Creator (DAC) v3.1b (versió en script).
 <br/><br/>
 Si els requisits no es compleixen o les versions són diferents cal comprovar prèviament que tot funcioni correctament.
 <br/>
