@@ -12,7 +12,9 @@ class Mission
 		"a3_map_altis",
 		"3DEN",
 		"a3_modules_f_curator_curator",
-		"A3_Air_F_Beta_Heli_Transport_01"
+		"A3_Air_F_Beta_Heli_Transport_01",
+		"A3_Weapons_F_Ammoboxes",
+		"rhsusf_c_troops"
 	};
 	addOnsAuto[]=
 	{
@@ -25,12 +27,13 @@ class Mission
 		"A3_Air_F_Beta_Heli_Attack_01",
 		"A3_Air_F_Heli_Light_01",
 		"A3_Air_F_Beta_Heli_Transport_01",
+		"A3_Weapons_F_Ammoboxes",
 		"a3_map_altis"
 	};
 	randomSeed=16353279;
 	class Intel
 	{
-		briefingName="[1RA - CC] DCS i Arma 3";
+		briefingName="[1RA - CC] DCS i Arma 3 v1.0";
 		startWeather=0.29999998;
 		startWind=0.099999994;
 		startWaves=0.099999994;
@@ -129,10 +132,10 @@ class Mission
 			side="WEST";
 			class Vehicles
 			{
-				items=4;
+				items=5;
 				class Item0
 				{
-					position[]={15087.436,18.354454,16726.736};
+					position[]={15079.083,18.138403,16727.949};
 					azimut=122.094;
 					id=5;
 					side="WEST";
@@ -147,7 +150,7 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={15080.545,18.22744,16725.162};
+					position[]={15072.192,18.028358,16726.375};
 					azimut=122.094;
 					id=6;
 					side="WEST";
@@ -160,7 +163,7 @@ class Mission
 				};
 				class Item2
 				{
-					position[]={15073.654,18.083862,16723.584};
+					position[]={15065.302,17.933897,16724.797};
 					azimut=122.094;
 					id=7;
 					side="WEST";
@@ -173,7 +176,7 @@ class Mission
 				};
 				class Item3
 				{
-					position[]={15066.763,17.97707,16721.998};
+					position[]={15058.41,17.915037,16723.211};
 					azimut=122.094;
 					id=8;
 					side="WEST";
@@ -185,6 +188,19 @@ class Mission
 					init="[""Alfa"", 1, ""gr"", this] call cc_fnc_configUnitat;";
 					description="Grenader";
 				};
+				class Item4
+				{
+					position[]={15049.84,17.9,16721.525};
+					azimut=136.409;
+					id=9;
+					side="WEST";
+					vehicle="B_medic_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="CC_Alfa2_5";
+					init="[""Alfa"", 2, ""me"", this] call cc_fnc_configUnitat;";
+					description="Metge";
+				};
 			};
 		};
 		class Item2
@@ -192,31 +208,59 @@ class Mission
 			side="WEST";
 			class Vehicles
 			{
-				items=2;
+				items=4;
 				class Item0
 				{
-					position[]={15104.463,17.91,16757.428};
+					position[]={15058.8,17.91,16739.998};
 					azimut=122.094;
-					id=9;
+					id=10;
 					side="WEST";
 					vehicle="B_Pilot_F";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.40000001;
 					text="CC_Alfa3_1";
-					description="Pilot";
+					init="[""Alfa"", 3, ""hplt"", this] call cc_fnc_configUnitat;";
+					description="Pilot d'helicòpter";
 				};
 				class Item1
 				{
-					position[]={15109.601,17.91,16762.908};
+					position[]={15063.938,17.91,16745.479};
 					azimut=122.094;
-					id=10;
+					id=11;
 					side="WEST";
 					vehicle="B_Pilot_F";
 					player="PLAY CDG";
 					skill=0.40000001;
 					text="CC_Alfa3_2";
-					description="Pilot";
+					init="[""Alfa"", 3, ""hplt"", this] call cc_fnc_configUnitat;";
+					description="Pilot d'helicòpter";
+				};
+				class Item2
+				{
+					position[]={15067.907,17.91,16750.311};
+					azimut=136.409;
+					id=12;
+					side="WEST";
+					vehicle="B_Pilot_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="CC_Alfa3_3";
+					init="[""Alfa"", 3, ""jplt"", this] call cc_fnc_configUnitat;";
+					description="Pilot d'avió de combat";
+				};
+				class Item3
+				{
+					position[]={15071.616,17.91,16754.443};
+					azimut=136.409;
+					id=13;
+					side="WEST";
+					vehicle="B_Pilot_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="CC_Alfa3_4";
+					init="[""Alfa"", 3, ""jplt"", this] call cc_fnc_configUnitat;";
+					description="Pilot d'avió de combat";
 				};
 			};
 		};
@@ -257,7 +301,7 @@ class Mission
 							typeName="Forced";
 						};
 					};
-					id=11;
+					id=14;
 					side="LOGIC";
 					vehicle="ModuleCurator_F";
 					leader=1;
@@ -339,7 +383,7 @@ class Mission
 							typeName="RespawnWhenDisabled";
 						};
 					};
-					id=12;
+					id=15;
 					side="LOGIC";
 					vehicle="ModuleRespawnVehicle_F";
 					leader=1;
@@ -355,12 +399,12 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=8;
+		items=9;
 		class Item0
 		{
 			position[]={15100.708,17.958549,16690.189};
 			azimut=219.31679;
-			id=13;
+			id=16;
 			side="EMPTY";
 			vehicle="B_Plane_CAS_01_F";
 			skill=0.40000001;
@@ -372,7 +416,7 @@ class Mission
 		{
 			position[]={15121.511,17.967983,16671.811};
 			azimut=219.31679;
-			id=14;
+			id=17;
 			side="EMPTY";
 			vehicle="B_Plane_CAS_01_F";
 			skill=0.40000001;
@@ -384,7 +428,7 @@ class Mission
 		{
 			position[]={15140.857,17.926062,16727.953};
 			azimut=220.49414;
-			id=15;
+			id=18;
 			side="EMPTY";
 			vehicle="B_Heli_Attack_01_F";
 			skill=0.40000001;
@@ -396,7 +440,7 @@ class Mission
 		{
 			position[]={15160.651,17.92,16712.264};
 			azimut=220.49414;
-			id=16;
+			id=19;
 			side="EMPTY";
 			vehicle="B_Heli_Attack_01_F";
 			skill=0.40000001;
@@ -408,7 +452,7 @@ class Mission
 		{
 			position[]={15171.895,17.909195,16760.887};
 			azimut=222.45325;
-			id=17;
+			id=20;
 			side="EMPTY";
 			vehicle="B_Heli_Light_01_F";
 			skill=0.40000001;
@@ -420,7 +464,7 @@ class Mission
 		{
 			position[]={15190.848,17.91,16744.797};
 			azimut=222.453;
-			id=18;
+			id=21;
 			side="EMPTY";
 			vehicle="B_Heli_Light_01_armed_F";
 			skill=0.40000001;
@@ -432,7 +476,7 @@ class Mission
 		{
 			position[]={15195.471,17.91,16784.625};
 			azimut=222.453;
-			id=19;
+			id=22;
 			side="EMPTY";
 			vehicle="B_Heli_Transport_01_camo_F";
 			skill=0.40000001;
@@ -444,13 +488,24 @@ class Mission
 		{
 			position[]={15212.446,17.91,16767.244};
 			azimut=222.453;
-			id=20;
+			id=23;
 			side="EMPTY";
 			vehicle="B_Heli_Transport_01_camo_F";
 			skill=0.40000001;
 			description="Pilot";
 			syncId=8;
 			synchronizations[]={0};
+		};
+		class Item8
+		{
+			position[]={15090.168,18.46084,16724.934};
+			azimut=-53.618507;
+			id=24;
+			side="EMPTY";
+			vehicle="Box_NATO_Wps_F";
+			skill=0.60000002;
+			text="Armament";
+			init="0 = [""AmmoboxInit"",[this,true]] spawn BIS_fnc_arsenal;";
 		};
 	};
 	class Markers

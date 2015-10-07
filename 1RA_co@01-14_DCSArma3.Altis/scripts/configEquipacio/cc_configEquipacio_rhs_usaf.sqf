@@ -1,7 +1,7 @@
 //=======================================================================================================//
 // Arxiu: cc_configEquipacio_rhs_usaf.sqf                                                                //
 // Autor: CC_Magnetar                                                                                    //
-// Versió: 0.12                                                                                          //
+// Versió: 0.13                                                                                          //
 // Creació del Document: 2015/04/02                                                                      //
 // Descripció: Aquest document serveix per equipar els jugadors amb l'equipació dissenyada per la missió //
 //             sense fer servir els perfils estàndard del grup dels Cavallers del Cel. Requereix que el  //
@@ -45,6 +45,8 @@
 //                  divme                   Bussejador metge (Diver Medic)                               //
 //                  divexp                  Bussejador especialista en explosius (Diver Explosive        //
 //                  div                     Bussejador (Diver)                                           //
+//                  hplt                Pilot d'helicòpter (Helicopter pilot)                            //
+//                  jplt                Pilot d'avió de combat (Jet pilot)                               //
 //                                                                                                       //
 //                  hmmwv                   Equipació per HMMWVs                                         //
 //                                                                                                       //
@@ -79,8 +81,9 @@
 //         0.10 (2015/07/15) Canvi a Params (Arma v1.48).                                                //
 //         0.11 (2015/10/01) S'han ajuntat els fitxers per les faccions de RSH "rhs_faction_usarmy_d" i  //
 //                           "rhs_faction_usarmy_wd".                                                    //
-//         0.11 (2015/10/01) S'han ajuntat els fitxers per les faccions de RSH "rhs_faction_usmcy_d" i   //
+//         0.12 (2015/10/01) S'han ajuntat els fitxers per les faccions de RSH "rhs_faction_usmcy_d" i   //
 //                           "rhs_faction_usmc_wd".                                                      //
+//         0.13 (2015/10/07) Afegit els rols de pilot d'helicòpter (hplt) i d'avió de combat (jplt).     //
 //=======================================================================================================//
 
 //=======================================================================================================//
@@ -209,9 +212,15 @@ if (_faccioUnitat == "rhs_faction_usmc_wd") then {
 // Uniformes universals.
 _uniformeSN = "U_B_GhillieSuit";
 _uniformeDIV = "U_B_Wetsuit";
+_uniformeHPLT = "U_B_HeliPilotCoveralls";
+_uniformeJPLT = "U_B_HeliPilotCoveralls";
 
 // Armilles universals.
 _armillaDIV = "V_RebreatherB";
+
+// Cascs universals.
+_cascHPLT = "rhsusf_hgu56p_mask";
+_cascJPLT = "rhs_jetpilot_usaf";
 
 // Ulleres.
 _ulleres = "G_Tactical_Clear";
@@ -219,6 +228,8 @@ _ulleresDIV = "G_Diving";
 
 // Motxilles universals.
 _motxillaDIV = "B_AssaultPack_blk";
+_paracaigudesHPLT = "B_Parachute";
+_paracaigudesJPLT = "B_Parachute";
 
 // Armes principals.
 _arma = "rhs_weap_m4a1";
@@ -322,6 +333,9 @@ if (cc_mod_ace3) then {
 
     // Objectes mèdics: Torniquets.
     _torniquet = "ACE_tourniquet";
+    
+    // Paracaigudes
+    _paracaigudesJPLT = "ACE_NonSteerableParachute";
 };
 
 if (cc_mod_agm) then {
@@ -1443,7 +1457,7 @@ switch (_tipusUnitat) do
 
         // Casc
         removeHeadgear _unitat;
-        _unitat addHeadgear _casc;
+        _unitat addHeadgear _cascSN;
 
         // Objectes a l'uniforme.
         if (cc_mod_ace3 or cc_mod_agm) then {
@@ -1506,7 +1520,7 @@ switch (_tipusUnitat) do
 
         // Casc
         removeHeadgear _unitat;
-        _unitat addHeadgear _casc;
+        _unitat addHeadgear _cascSN;
 
         // Objectes a l'uniforme.
         if (cc_mod_ace3 or cc_mod_agm) then {
@@ -1800,6 +1814,65 @@ switch (_tipusUnitat) do
         _unitat addWeapon _armaDIV;
     };
 
+    // Pilot d'helicòpter (Helicopter pilot)
+    case "hplt": {
+        // Treure l'uniforme, casc i armilla
+        removeUniform _unitat;
+        removeHeadgear _unitat;
+        removeGoggles _unitat;
+
+        // Uniforme i paracaigudes.
+        _unitat forceAddUniform _uniformeHPLT;
+        _unitat addBackpack _paracaigudesHPLT;
+        _unitat addHeadgear _cascHPLT;
+
+        // Objectes a l'uniforme.
+        if (cc_mod_ace3 or cc_mod_agm) then {
+            (uniformContainer _unitat) addItemCargoGlobal [_taps,1];
+            (uniformContainer _unitat) addItemCargoGlobal [_morfina,1];
+            (uniformContainer _unitat) addItemCargoGlobal [_epinefrina,1];
+        };
+        (uniformContainer _unitat) addItemCargoGlobal [_armaSilenciador,1];
+        (uniformContainer _unitat) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",2];
+        (uniformContainer _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",4];
+
+        // Arma principal.
+        _unitat addWeapon _arma;
+        _unitat addPrimaryWeaponItem _armaSurefire;
+        _unitat addPrimaryWeaponItem _armaLaserLlanterna;
+        _unitat addPrimaryWeaponItem _armaMira;
+
+    };
+
+    // Pilot d'avió de combat (Jet pilot)
+    case "jplt": {
+        // Treure l'uniforme, casc i armilla
+        removeUniform _unitat;
+        removeHeadgear _unitat;
+        removeGoggles _unitat;
+
+        // Uniforme i paracaigudes.
+        _unitat forceAddUniform _uniformeJPLT;
+        _unitat addBackpack _paracaigudesJPLT;
+        _unitat addHeadgear _cascJPLT;
+
+        // Objectes a l'uniforme.
+        if (cc_mod_ace3 or cc_mod_agm) then {
+            (uniformContainer _unitat) addItemCargoGlobal [_taps,1];
+            (uniformContainer _unitat) addItemCargoGlobal [_morfina,1];
+            (uniformContainer _unitat) addItemCargoGlobal [_epinefrina,1];
+        };
+        (uniformContainer _unitat) addItemCargoGlobal [_armaSilenciador,1];
+        (uniformContainer _unitat) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",2];
+        (uniformContainer _unitat) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",4];
+
+        // Arma principal.
+        _unitat addWeapon _arma;
+        _unitat addPrimaryWeaponItem _armaSurefire;
+        _unitat addPrimaryWeaponItem _armaLaserLlanterna;
+        _unitat addPrimaryWeaponItem _armaMira;
+    };
+
     case "hmmwv": {
         clearWeaponCargoGlobal _unitat;
         clearMagazineCargoGlobal _unitat;
@@ -1839,7 +1912,7 @@ switch (_tipusUnitat) do
     };
 
     default {
-        _unitat sideChat format ["DEBUG (cc_configEquipacio_rhs_usarmy_d.sqf): el tipus d'unitat %1 no està definit. Utilitzant l'equipació de fuseller.", _tipusUnitat];
+        _unitat sideChat format ["DEBUG (cc_configEquipacio_rhs_usaf.sqf): el tipus d'unitat %1 no està definit. Utilitzant l'equipació de fuseller.", _tipusUnitat];
 
         // Armilla i motxilla.
         _unitat addVest _armillaRFL;

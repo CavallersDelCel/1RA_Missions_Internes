@@ -1,4 +1,4 @@
-# Nom de la missió
+# DCS i Arma 3
 
 Imatge capçalera.
 
@@ -36,6 +36,8 @@ La zona d'Altis ha sigut invaïda per les forces del mal del CSAT. Els Cavallers
 * Esquadra Alfa amb suport aeri.
 
 ##### FORCES ENEMIGUES
+
+Les forces enemigues estan repartides a la zona de la següent manera:
 
 * **Zona 1**: Zona poblada en la seva totalitat per unitats d'infanteria.
 * **Zona 2**: Zona poblada per unitats d'infanteria i vehicles lleugers.
@@ -75,8 +77,10 @@ Cavallers del Cel SOP "Standard Operating Procedure"
     * Granader.
     * Metge.
   * **ALFA 3 - Pilots - Canal 3 - Freqüència 203**
-    * Pilot.
-    * Pilot.
+    * Pilot d'helicòpter.
+    * Pilot d'helicòpter.
+    * Pilot d'avió de combat.
+    * Pilot d'avió de combat.
 
 # Plantilla Bàsica per Missions (PBM)
 

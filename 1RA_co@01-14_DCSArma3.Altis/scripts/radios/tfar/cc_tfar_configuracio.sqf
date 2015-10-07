@@ -44,10 +44,10 @@ cc_tfar_config_configurarFreqPerEquip = true;
 cc_tfar_config_configurarEstereo = true;
 
 // Llista d'unitats amb Rifleman Radio (fn_configEquipacio.sqf).
-cc_tfar_llistaRF = ["rfl", "rflat", "gr", "ar", "dm", "mg", "amg", "at", "aat", "aa", "aaa", "en", "exp", "divme", "div"];
+cc_tfar_llistaRF = ["rfl", "rflat", "gr", "ar", "dm", "mg", "amg", "at", "aat", "aa", "aaa", "en", "exp", "div", "hplt", "jplt"];
 
 // Llista d'unitats amb Short Range Radio (fn_configEquipacio.sqf).
-cc_tfar_llistaSR = ["pl", "psg", "rto", "fo", "me", "sl", "tl", "sn", "sp", "divsl"];
+cc_tfar_llistaSR = ["pl", "psg", "rto", "fo", "me", "sl", "tl", "sn", "sp", "divsl", "divme"];
 
 // Llista d'unitats amb Long Range Radio (fn_configEquipacio.sqf).
 cc_tfar_llistaLR = ["rto", "fo"];
