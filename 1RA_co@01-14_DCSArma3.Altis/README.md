@@ -1,6 +1,8 @@
 # DCS i Arma 3
 
-Imatge capçalera.
+<p align="center">
+    <img src="https://github.com/CavallersDelCel/1RA_Missions_Internes/blob/master/1RA_co%4001-14_DCSArma3.Altis/imatges/cc_dcs_arma3.jpg">
+</p>
 
 Missió generada amb la Plantilla Bàsica per Missions (PBM) del grup 1er Regiment Aerotransportat (1RA) de la Comunitat Catalana de Simulació - Cavallers del Cel.
 

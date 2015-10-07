@@ -90,7 +90,7 @@ class Params {
         title = "Mode Debug";
         values[] = {0,1};
         texts[] = {"Desactivat","Activat"};
-        default = 1;
+        default = 0;
     };
 
     //===================================================================================================//
@@ -121,7 +121,7 @@ class Params {
         title = "Debug DAC";
         values[] = {0,1,2};
         texts[] = {"Desactivat", "Simplificat", "Complert"};
-        default = 2;
+        default = 1;
     };
 
     //===================================================================================================//
