@@ -51,6 +51,10 @@ Les forces enemigues estan repartides a la zona de la següent manera:
 
 Coordinar correctament l'assalt a una posició amb unitats d'infanteria i d'aviació per tal d'eliminar les forces enemigues a la zona.
 
+<p align="center">
+    <img src="https://github.com/CavallersDelCel/1RA_Missions_Internes/blob/master/1RA_co%4001-14_DCSArma3.Altis/imatges/mapa.png">
+</p>
+
 ##### ADMINISTRACIÓ/LOGÍSTICA
 
 **Suport**
