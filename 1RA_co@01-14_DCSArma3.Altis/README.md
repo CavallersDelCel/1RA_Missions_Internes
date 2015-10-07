@@ -68,7 +68,14 @@ Coordinar correctament l'assalt a una posició amb unitats d'infanteria i d'avia
 Cavallers del Cel SOP "Standard Operating Procedure"
 
 ##### ROLS
-
+* **COMANDAMENT - Freqüència 40 kHz**
+* **BLINDATS - Freqüència 50 kHz**
+* **ARTILLERIA - Freqüència 60 kHz**
+* **AVIACIÓ - Canal alternatiu - Freqüència 70 kHz**
+  * **FALCÓ 1 - Freqüència 71 kHz**
+  * **FALCÓ 2 - Freqüència 72 kHz**
+  * **FALCÓ 3 - Freqüència 73 kHz**
+  * **FALCÓ 4 - Freqüència 74 kHz**
 * **ESQUADRA ALFA - Canal alternatiu 1 - Freqüència 200**
   * **ALFA 1 - Equip de foc - Canal 1 - Freqüència 201**
     * Líder d'esquadra.
@@ -87,6 +94,7 @@ Cavallers del Cel SOP "Standard Operating Procedure"
     * Pilot d'helicòpter.
     * Pilot d'avió de combat.
     * Pilot d'avió de combat.
+    <font color='#FF0000' size='18'>Aviació</font>: 71 kHz.
 
 # Plantilla Bàsica per Missions (PBM)
 
