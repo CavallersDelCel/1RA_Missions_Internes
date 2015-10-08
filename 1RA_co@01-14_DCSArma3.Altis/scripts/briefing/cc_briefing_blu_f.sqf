@@ -18,7 +18,9 @@ Missió generada per <font color='#00FFFF'>Magnetar</font> per a la <font color=
 // NOTES: RADIO.                                                                                         //
 //=======================================================================================================//
 _admlog = player createDiaryRecord ["diary", ["Freqüències de Radio","
-<font color='#FF0000' size='18'>Comandament</font>: 40 kHz.
+<font color='#FF0000' size='18'>Comandament</font>: 30 kHz.
+<br/><br/>
+<font color='#FF0000' size='18'>Infanteria</font>: 40 kHz.
 <br/><br/>
 <font color='#FF0000' size='18'>Blindats</font>: 50 kHz.
 <br/><br/>

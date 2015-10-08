@@ -68,7 +68,8 @@ Coordinar correctament l'assalt a una posició amb unitats d'infanteria i d'avia
 Cavallers del Cel SOP "Standard Operating Procedure"
 
 ##### ROLS
-* **COMANDAMENT - Freqüència 40 kHz**
+* **COMANDAMENT - Freqüència 30 kHz**
+* **INFANTERIA - Freqüència 40 kHz**
 * **BLINDATS - Freqüència 50 kHz**
 * **ARTILLERIA - Freqüència 60 kHz**
 * **AVIACIÓ - Canal alternatiu - Freqüència 70 kHz**
