@@ -1,0 +1,258 @@
+version=12;
+class Mission
+{
+	addOns[]=
+	{
+		"a3_map_stratis",
+		"A3_Characters_F_OPFOR",
+		"a3_characters_f",
+		"A3_Characters_F_BLUFOR",
+		"rhsusf_c_troops",
+		"A3_Weapons_F_Ammoboxes",
+		"A3_Modules_F_Curator_Curator",
+		"3DEN"
+	};
+	addOnsAuto[]=
+	{
+		"rhsusf_c_troops",
+		"3DEN",
+		"a3_modules_f_curator_curator",
+		"A3_Weapons_F_Ammoboxes",
+		"a3_map_stratis"
+	};
+	randomSeed=14184066;
+	class Intel
+	{
+		briefingName="[1RA - CC] Vergeltung v0.98";
+		startWeather=0.84999996;
+		startFog=0.34999999;
+		startWind=0.079999998;
+		startWindDir=15;
+		startRain=0.31999999;
+		startLightnings=0.029999999;
+		startWaves=0.099999994;
+		startGust=0.28;
+		forecastWeather=0.84999996;
+		forecastWind=0.039999999;
+		forecastWaves=0.099999994;
+		forecastLightnings=0.099999994;
+		forecastGust=0.81;
+		forecastWindDir=305;
+		rainForced=1;
+		lightningsForced=1;
+		wavesForced=1;
+		windForced=1;
+		year=2035;
+		month=7;
+		day=6;
+		hour=12;
+		minute=0;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+	class Groups
+	{
+		items=2;
+		class Item0
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={1629.7225,5.5,5181.6387};
+					id=0;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman_m4";
+					player="PLAYER COMMANDER";
+					leader=1;
+					skill=0.60000002;
+					text="CC_A1_SL";
+					init="[""Bravo"", 3,""sl"",this] call cc_fnc_configUnitat;";
+					description="Lider d'Esquadra";
+				};
+				class Item1
+				{
+					position[]={1647.7552,5.5,5179.6934};
+					id=1;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_medic";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="CC_A1_ME";
+					init="[""Alfa"", 1,""me"",this] call cc_fnc_configUnitat;";
+				};
+				class Item2
+				{
+					position[]={1648.3851,5.5,5199.2813};
+					id=2;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_engineer";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="CC_A1_EN";
+					init="[""Alfa"", 1,""en"",this] call cc_fnc_configUnitat;";
+				};
+			};
+		};
+		class Item1
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1489.6227,-8.1954565,5340.9521};
+					class args
+					{
+						items=4;
+						class Item0
+						{
+							value="#adminLogged";
+							parentCls="ModuleCurator_F";
+							typeName="Owner";
+						};
+						class Item1
+						{
+							value="";
+							parentCls="ModuleCurator_F";
+							typeName="Name";
+						};
+						class Item2
+						{
+							value="3";
+							parentCls="ModuleCurator_F";
+							typeName="Addons";
+						};
+						class Item3
+						{
+							value="0";
+							parentCls="ModuleCurator_F";
+							typeName="Forced";
+						};
+					};
+					id=3;
+					side="LOGIC";
+					vehicle="ModuleCurator_F";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+			};
+		};
+	};
+	class Vehicles
+	{
+		items=2;
+		class Item0
+		{
+			position[]={1621.6919,5.5,5181.668};
+			id=4;
+			side="EMPTY";
+			vehicle="Box_NATO_Wps_F";
+			skill=0.60000002;
+			init="0 = [""AmmoboxInit"",[this,true]] spawn BIS_fnc_arsenal;";
+		};
+		class Item1
+		{
+			position[]={1629.6613,5.5,5187.8447};
+			id=5;
+			side="EMPTY";
+			vehicle="Box_NATO_Wps_F";
+			skill=0.60000002;
+			init="[""blx"",this,""blu_f""] call cc_fnc_configEquipacio;";
+		};
+	};
+};
+class Intro
+{
+	addOns[]=
+	{
+		"a3_map_stratis"
+	};
+	addOnsAuto[]=
+	{
+		"a3_map_stratis"
+	};
+	randomSeed=10568725;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=7;
+		day=6;
+		hour=12;
+		minute=0;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};
+class OutroWin
+{
+	addOns[]=
+	{
+		"a3_map_stratis"
+	};
+	addOnsAuto[]=
+	{
+		"a3_map_stratis"
+	};
+	randomSeed=10834966;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=7;
+		day=6;
+		hour=12;
+		minute=0;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};
+class OutroLoose
+{
+	addOns[]=
+	{
+		"a3_map_stratis"
+	};
+	addOnsAuto[]=
+	{
+		"a3_map_stratis"
+	};
+	randomSeed=6222819;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=7;
+		day=6;
+		hour=12;
+		minute=0;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};
