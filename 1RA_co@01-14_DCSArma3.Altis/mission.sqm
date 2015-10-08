@@ -1,0 +1,735 @@
+version=12;
+class Mission
+{
+	addOns[]=
+	{
+		"A3_Characters_F_BLUFOR",
+		"a3_characters_f",
+		"A3_Modules_F_Multiplayer",
+		"A3_Air_F_EPC_Plane_CAS_01",
+		"A3_Air_F_Beta_Heli_Attack_01",
+		"A3_Air_F_Heli_Light_01",
+		"a3_map_altis",
+		"3DEN",
+		"a3_modules_f_curator_curator",
+		"A3_Air_F_Beta_Heli_Transport_01",
+		"A3_Weapons_F_Ammoboxes",
+		"rhsusf_c_troops"
+	};
+	addOnsAuto[]=
+	{
+		"A3_Characters_F_BLUFOR",
+		"a3_characters_f",
+		"3DEN",
+		"a3_modules_f_curator_curator",
+		"A3_Modules_F_Multiplayer",
+		"A3_Air_F_EPC_Plane_CAS_01",
+		"A3_Air_F_Beta_Heli_Attack_01",
+		"A3_Air_F_Heli_Light_01",
+		"A3_Air_F_Beta_Heli_Transport_01",
+		"A3_Weapons_F_Ammoboxes",
+		"a3_map_altis"
+	};
+	randomSeed=16353279;
+	class Intel
+	{
+		briefingName="[1RA - CC] DCS i Arma 3 v1.0";
+		startWeather=0.29999998;
+		startWind=0.099999994;
+		startWaves=0.099999994;
+		forecastWeather=0.29999998;
+		forecastWind=0.099999994;
+		forecastWaves=0.099999994;
+		forecastLightnings=0.099999994;
+		year=2035;
+		month=6;
+		day=24;
+		hour=12;
+		minute=0;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+	class Groups
+	{
+		items=5;
+		class Item0
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=5;
+				class Item0
+				{
+					position[]={15085.861,18.201752,16733.633};
+					azimut=122.094;
+					id=0;
+					side="WEST";
+					vehicle="B_Soldier_TL_F";
+					player="PLAYER COMMANDER";
+					leader=1;
+					rank="CORPORAL";
+					skill=0.44999999;
+					text="CC_Alfa2_1";
+					init="[""Alfa"", 1, ""sl"", this] call cc_fnc_configUnitat; pAction1 = this addaction [""Activar Inf"",""ActionInf.sqf"",[1]]; pAction2 = this addaction [""Activar Inf. + Veh."",""ActionInfVeh.sqf"",[1]]; pAction3 = this addaction [""Activar Inf. + Veh. + Bli."",""ActionInfVehBli.sqf"",[1]]; pAction4 = this addaction [""Activar Inf. + Veh. + Bli. + Heli"",""ActionInfVehBliHeli.sqf"",[1]]; pAction5 = this addaction [""Activar Inf. + Veh. + Heli"",""ActionInfVehHeli.sqf"",[1]];";
+					description="Líder d'Esquadra";
+				};
+				class Item1
+				{
+					position[]={15084.281,17.952759,16740.529};
+					azimut=122.094;
+					id=1;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					text="CC_Alfa2_2";
+					init="[""Alfa"", 1, ""rfl"", this] call cc_fnc_configUnitat;";
+					description="Fuseller";
+				};
+				class Item2
+				{
+					position[]={15082.702,17.912796,16747.426};
+					azimut=122.094;
+					id=2;
+					side="WEST";
+					vehicle="B_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					text="CC_Alfa2_3";
+					init="[""Alfa"", 1, ""rfl"", this] call cc_fnc_configUnitat;";
+					description="Granader";
+				};
+				class Item3
+				{
+					position[]={15080.95,17.91,16754.117};
+					azimut=122.094;
+					id=3;
+					side="WEST";
+					vehicle="B_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					text="CC_Alfa2_4";
+					init="[""Alfa"", 1, ""ar"", this] call cc_fnc_configUnitat;";
+					description="Fuseller automàtic";
+				};
+				class Item4
+				{
+					position[]={15078.791,17.91,16762.713};
+					azimut=122.094;
+					id=4;
+					side="WEST";
+					vehicle="B_medic_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					text="CC_Alfa1_5";
+					init="[""Alfa"", 1, ""me"", this] call cc_fnc_configUnitat;";
+					description="Metge";
+				};
+			};
+		};
+		class Item1
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=5;
+				class Item0
+				{
+					position[]={15079.083,18.138403,16727.949};
+					azimut=122.094;
+					id=5;
+					side="WEST";
+					vehicle="B_Soldier_SL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					text="CC_Alfa1_1";
+					init="[""Alfa"", 1, ""tl"", this] call cc_fnc_configUnitat;";
+					description="Líder d'equip";
+				};
+				class Item1
+				{
+					position[]={15072.192,18.028358,16726.375};
+					azimut=122.094;
+					id=6;
+					side="WEST";
+					vehicle="B_soldier_AR_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					text="CC_Alfa1_2";
+					init="[""Alfa"", 1, ""ar"", this] call cc_fnc_configUnitat;";
+					description="Fuseller automàtic";
+				};
+				class Item2
+				{
+					position[]={15065.302,17.933897,16724.797};
+					azimut=122.094;
+					id=7;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					text="CC_Alfa1_3";
+					init="[""Alfa"", 1, ""rfl"", this] call cc_fnc_configUnitat;";
+					description="Fuseller";
+				};
+				class Item3
+				{
+					position[]={15058.41,17.915037,16723.211};
+					azimut=122.094;
+					id=8;
+					side="WEST";
+					vehicle="B_Soldier_GL_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.44999999;
+					text="CC_Alfa1_4";
+					init="[""Alfa"", 1, ""gr"", this] call cc_fnc_configUnitat;";
+					description="Grenader";
+				};
+				class Item4
+				{
+					position[]={15049.84,17.9,16721.525};
+					azimut=136.409;
+					id=9;
+					side="WEST";
+					vehicle="B_medic_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="CC_Alfa2_5";
+					init="[""Alfa"", 2, ""me"", this] call cc_fnc_configUnitat;";
+					description="Metge";
+				};
+			};
+		};
+		class Item2
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={15058.8,17.91,16739.998};
+					azimut=122.094;
+					id=10;
+					side="WEST";
+					vehicle="B_Pilot_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.40000001;
+					text="CC_Alfa3_1";
+					init="[""Alfa"", 3, ""hplt"", this] call cc_fnc_configUnitat;";
+					description="Pilot d'helicòpter";
+				};
+				class Item1
+				{
+					position[]={15063.938,17.91,16745.479};
+					azimut=122.094;
+					id=11;
+					side="WEST";
+					vehicle="B_Pilot_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					text="CC_Alfa3_2";
+					init="[""Alfa"", 3, ""hplt"", this] call cc_fnc_configUnitat;";
+					description="Pilot d'helicòpter";
+				};
+				class Item2
+				{
+					position[]={15067.907,17.91,16750.311};
+					azimut=136.409;
+					id=12;
+					side="WEST";
+					vehicle="B_Pilot_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="CC_Alfa3_3";
+					init="[""Alfa"", 3, ""jplt"", this] call cc_fnc_configUnitat;";
+					description="Pilot d'avió de combat";
+				};
+				class Item3
+				{
+					position[]={15071.616,17.91,16754.443};
+					azimut=136.409;
+					id=13;
+					side="WEST";
+					vehicle="B_Pilot_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="CC_Alfa3_4";
+					init="[""Alfa"", 3, ""jplt"", this] call cc_fnc_configUnitat;";
+					description="Pilot d'avió de combat";
+				};
+			};
+		};
+		class Item3
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15056.769,17.91,16894.631};
+					class args
+					{
+						items=4;
+						class Item0
+						{
+							value="#adminLogged";
+							parentCls="ModuleCurator_F";
+							typeName="Owner";
+						};
+						class Item1
+						{
+							value="";
+							parentCls="ModuleCurator_F";
+							typeName="Name";
+						};
+						class Item2
+						{
+							value="2";
+							parentCls="ModuleCurator_F";
+							typeName="Addons";
+						};
+						class Item3
+						{
+							value="0";
+							parentCls="ModuleCurator_F";
+							typeName="Forced";
+						};
+					};
+					id=14;
+					side="LOGIC";
+					vehicle="ModuleCurator_F";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item4
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15144.679,17.91,16818.354};
+					class args
+					{
+						items=10;
+						class Item0
+						{
+							value="";
+							parentCls="ModuleRespawnVehicle_F";
+							typeName="Delay";
+						};
+						class Item1
+						{
+							value="";
+							parentCls="ModuleRespawnVehicle_F";
+							typeName="DesertedDistance";
+						};
+						class Item2
+						{
+							value="";
+							parentCls="ModuleRespawnVehicle_F";
+							typeName="RespawnCount";
+						};
+						class Item3
+						{
+							value="";
+							parentCls="ModuleRespawnVehicle_F";
+							typeName="Init";
+						};
+						class Item4
+						{
+							value="0";
+							parentCls="ModuleRespawnVehicle_F";
+							typeName="Position";
+						};
+						class Item5
+						{
+							value="0";
+							parentCls="ModuleRespawnVehicle_F";
+							typeName="PositionType";
+						};
+						class Item6
+						{
+							value="2";
+							parentCls="ModuleRespawnVehicle_F";
+							typeName="Wreck";
+						};
+						class Item7
+						{
+							value="0";
+							parentCls="ModuleRespawnVehicle_F";
+							typeName="ShowNotification";
+						};
+						class Item8
+						{
+							value="0";
+							parentCls="ModuleRespawnVehicle_F";
+							typeName="ForcedRespawn";
+						};
+						class Item9
+						{
+							value="0";
+							parentCls="ModuleRespawnVehicle_F";
+							typeName="RespawnWhenDisabled";
+						};
+					};
+					id=15;
+					side="LOGIC";
+					vehicle="ModuleRespawnVehicle_F";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="respawn_vehicles_west";
+					description="Respawn de vehicles";
+					syncId=0;
+					synchronizations[]={5,6,3,4,2,1,7,8};
+				};
+			};
+		};
+	};
+	class Vehicles
+	{
+		items=9;
+		class Item0
+		{
+			position[]={15100.708,17.958549,16690.189};
+			azimut=219.31679;
+			id=16;
+			side="EMPTY";
+			vehicle="B_Plane_CAS_01_F";
+			skill=0.40000001;
+			description="Pilot";
+			syncId=1;
+			synchronizations[]={0};
+		};
+		class Item1
+		{
+			position[]={15121.511,17.967983,16671.811};
+			azimut=219.31679;
+			id=17;
+			side="EMPTY";
+			vehicle="B_Plane_CAS_01_F";
+			skill=0.40000001;
+			description="Pilot";
+			syncId=2;
+			synchronizations[]={0};
+		};
+		class Item2
+		{
+			position[]={15140.857,17.926062,16727.953};
+			azimut=220.49414;
+			id=18;
+			side="EMPTY";
+			vehicle="B_Heli_Attack_01_F";
+			skill=0.40000001;
+			description="Pilot";
+			syncId=3;
+			synchronizations[]={0};
+		};
+		class Item3
+		{
+			position[]={15160.651,17.92,16712.264};
+			azimut=220.49414;
+			id=19;
+			side="EMPTY";
+			vehicle="B_Heli_Attack_01_F";
+			skill=0.40000001;
+			description="Pilot";
+			syncId=4;
+			synchronizations[]={0};
+		};
+		class Item4
+		{
+			position[]={15171.895,17.909195,16760.887};
+			azimut=222.45325;
+			id=20;
+			side="EMPTY";
+			vehicle="B_Heli_Light_01_F";
+			skill=0.40000001;
+			description="Pilot";
+			syncId=5;
+			synchronizations[]={0};
+		};
+		class Item5
+		{
+			position[]={15190.848,17.91,16744.797};
+			azimut=222.453;
+			id=21;
+			side="EMPTY";
+			vehicle="B_Heli_Light_01_armed_F";
+			skill=0.40000001;
+			description="Pilot";
+			syncId=6;
+			synchronizations[]={0};
+		};
+		class Item6
+		{
+			position[]={15195.471,17.91,16784.625};
+			azimut=222.453;
+			id=22;
+			side="EMPTY";
+			vehicle="B_Heli_Transport_01_camo_F";
+			skill=0.40000001;
+			description="Pilot";
+			syncId=7;
+			synchronizations[]={0};
+		};
+		class Item7
+		{
+			position[]={15212.446,17.91,16767.244};
+			azimut=222.453;
+			id=23;
+			side="EMPTY";
+			vehicle="B_Heli_Transport_01_camo_F";
+			skill=0.40000001;
+			description="Pilot";
+			syncId=8;
+			synchronizations[]={0};
+		};
+		class Item8
+		{
+			position[]={15090.168,18.46084,16724.934};
+			azimut=-53.618507;
+			id=24;
+			side="EMPTY";
+			vehicle="Box_NATO_Wps_F";
+			skill=0.60000002;
+			text="Armament";
+			init="0 = [""AmmoboxInit"",[this,true]] spawn BIS_fnc_arsenal;";
+		};
+	};
+	class Markers
+	{
+		items=6;
+		class Item0
+		{
+			position[]={15049.158,17.91,16742.918};
+			name="respawn_west";
+			type="flag_NATO";
+		};
+		class Item1
+		{
+			position[]={18997.291,32.581882,17529.555};
+			name="Inf";
+			text="Infanteria";
+			type="mil_objective";
+			colorName="ColorBlue";
+		};
+		class Item2
+		{
+			position[]={17572.262,31.113846,16252.449};
+			name="InfVeh";
+			text="Infanteria + Vehicles";
+			type="mil_objective";
+			colorName="ColorBlue";
+		};
+		class Item3
+		{
+			position[]={13902.937,41.620892,20349.016};
+			name="InfVehBli";
+			text="Inf + Veh + Blindats";
+			type="mil_objective";
+			colorName="ColorBlue";
+		};
+		class Item4
+		{
+			position[]={15770.951,23.693878,19733.227};
+			name="InfVehBliHeli";
+			text="Inf + Veh + Bli + Heli";
+			type="mil_objective";
+			colorName="ColorBlue";
+		};
+		class Item5
+		{
+			position[]={12105.073,39.000999,18200.197};
+			name="InfVehHeli_1";
+			text="Inf + Veh + Heli";
+			type="mil_objective";
+			colorName="ColorBlue";
+		};
+	};
+	class Sensors
+	{
+		items=5;
+		class Item0
+		{
+			position[]={19000.102,32.499317,17530.404};
+			a=350;
+			b=350;
+			activationBy="LOGIC";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="z1";
+			expCond="time > 1";
+			expActiv="fun = [""z1"",[1,1,1],[6,2,50,6],[],[],[],[0,0,0,0]] spawn DAC_Zone;";
+			class Effects
+			{
+			};
+		};
+		class Item1
+		{
+			position[]={17572.428,27.88493,16223.136};
+			a=350;
+			b=350;
+			activationBy="LOGIC";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="z2";
+			expCond="time > 1";
+			expActiv="fun = [""z2"",[2,1,1],[3,2,50,6],[3,3,30,5],[],[],[0,0,0,0]] spawn DAC_Zone;";
+			class Effects
+			{
+			};
+		};
+		class Item2
+		{
+			position[]={13913.189,42.557285,20332.428};
+			a=350;
+			b=350;
+			activationBy="LOGIC";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="z3";
+			expCond="time > 1";
+			expActiv="fun = [""z3"",[3,1,1],[3,2,50,6],[3,2,30,5],[3,2,25,5],[],[0,0,0,0]] spawn DAC_Zone;";
+			class Effects
+			{
+			};
+		};
+		class Item3
+		{
+			position[]={15779.09,23.63092,19738.875};
+			a=450;
+			b=450;
+			activationBy="LOGIC";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="z4";
+			expCond="time > 1";
+			expActiv="fun = [""z4"",[4,1,1],[3,2,50,6],[3,2,30,5],[3,2,25,5],[2,2,4],[0,0,0,0]] spawn DAC_Zone;";
+			class Effects
+			{
+			};
+		};
+		class Item4
+		{
+			position[]={12123.532,38.410782,18192.088};
+			a=450;
+			b=450;
+			activationBy="LOGIC";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="z5";
+			expCond="time > 1";
+			expActiv="fun = [""z5"",[5,1,1],[3,2,50,6],[3,2,30,5],[],[2,2,4],[0,0,0,0]] spawn DAC_Zone;";
+			class Effects
+			{
+			};
+		};
+	};
+};
+class Intro
+{
+	addOns[]=
+	{
+		"a3_map_altis"
+	};
+	addOnsAuto[]=
+	{
+		"a3_map_altis"
+	};
+	randomSeed=15421767;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=6;
+		day=24;
+		hour=12;
+		minute=0;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};
+class OutroWin
+{
+	addOns[]=
+	{
+		"a3_map_altis"
+	};
+	addOnsAuto[]=
+	{
+		"a3_map_altis"
+	};
+	randomSeed=4791461;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=6;
+		day=24;
+		hour=12;
+		minute=0;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};
+class OutroLoose
+{
+	addOns[]=
+	{
+		"a3_map_altis"
+	};
+	addOnsAuto[]=
+	{
+		"a3_map_altis"
+	};
+	randomSeed=7673531;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=6;
+		day=24;
+		hour=12;
+		minute=0;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};
