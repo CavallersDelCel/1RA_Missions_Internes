@@ -30,16 +30,6 @@ i són els jugadors els qui decideixen si l'han completat o no.
 
 ### Descripció detallada de la missió
 
-##### REQUISITS
-
-Aquesta missió s'ha comprovat que funciona amb el següent:
-
-* Community Base Addons (CBA) v2.0.
-* RHS United States Army Forces (RHS USAF) v0.3.9.1.
-* Task Force Arrowhead Radio (TFAR) v0.9.7.3.
-* Advanced Combat Environment 3 (ACE3) v3.3.2.
-* Dynamic-AI-Creator (DAC) v3.1b (versió en script).
-
 ##### SITUACIÓ
 
 L'avanç inexorable de les forces del CSAT han obligat als països aliats a intervenir per tal d'aturar l'annexió constant de territori utilitzant la força bruta. L'illa d'Altis,
@@ -113,6 +103,16 @@ Cavallers del Cel SOP "Standard Operating Procedure"
   * **ALFA 3 - Equip de tiradors en vehicle HMMWV amb metralladora - Canal 3 - Freqüència 203**
     * Franctirador.
     * Observador.
+
+##### REQUISITS
+
+Aquesta missió s'ha comprovat que funciona amb el següent:
+
+* Dynamic-AI-Creator (DAC) v3.1b (versió en script). **Necessari**.
+* RHS United States Armed Forces (RHS USAF) v0.3.9.1. **Necessari**.
+* Community Base Addons (CBA) v2.0.
+* Advanced Combat Environment 3 (ACE3) v3.3.2.
+* Task Force Arrowhead Radio (TFAR) v0.9.7.3.
 
 # Plantilla Bàsica per Missions (PBM)
 
