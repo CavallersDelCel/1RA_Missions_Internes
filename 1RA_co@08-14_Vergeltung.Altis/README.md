@@ -58,10 +58,10 @@ l'operació de rescat depenent dels efectius disponibles a última hora.
 
 ##### FORCES AMIGUES
 
-* Companyia *Freiheit*.
-  * *Freiheit 1*: Equip
-  * *Freiheit 2*:
-  * *Freiheit 3*:
+* Esquadra d'Infanteria *Freiheit*.
+* Esquadra mecanitzada *Eisenfaust*.
+* Suport aèri *Himmelsaugen*.
+* Secció *Vergeltung* (Nord d'Altis: Molos).
 
 ##### FORCES ENEMIGUES
 
