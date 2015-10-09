@@ -115,7 +115,7 @@ Cavallers del Cel SOP "Standard Operating Procedure"
 * **HIMMELSAUGEN - Suport i evacuació aèrea - Canal alternatiu 1 - Freqüència 600**
   * **HIMMELSHILFE - Evacuació mèdica - Canal 1 - Freqüència 601**
     * Pilot.
-  * **HIMMELSFAUST - (Helicòpter de combat) - Canal 2 - Freqüència 602**
+  * **HIMMELSFAUST - Helicòpter de combat - Canal 2 - Freqüència 602**
     * Pilot.
 
 ##### REQUISITS
