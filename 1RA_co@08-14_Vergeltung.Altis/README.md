@@ -1,7 +1,7 @@
 # Nom de la missió
 
 <p align="center">
-    <img src="https://github.com/CavallersDelCel/1RA_Missions_Internes/blob/master/1RA_co%4008-12_Vergeltung.Altis/imatges/cc_vergeltung.jpg">
+    <img src="https://github.com/CavallersDelCel/1RA_Missions_Internes/blob/master/1RA_co%4008-14_Vergeltung.Altis/imatges/cc_vergeltung.jpg">
 </p>
 
 Missió generada amb la Plantilla Bàsica per Missions (PBM) del grup 1er Regiment Aerotransportat (1RA) de la Comunitat Catalana de Simulació - Cavallers del Cel.
