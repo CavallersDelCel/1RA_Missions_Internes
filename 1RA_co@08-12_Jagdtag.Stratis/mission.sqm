@@ -41,11 +41,13 @@ class Mission
 		"A3_Boat_F_Boat_Armed_01",
 		"A3_armor_f_beta_APC_Tracked_02",
 		"blx_ridgback",
-		"A3_Structures_F_EPC_Items_Documents"
+		"A3_Structures_F_EPC_Items_Documents",
+		"3DEN"
 	};
 	addOnsAuto[]=
 	{
-		"A3_Modules_F_Curator_Curator",
+		"3DEN",
+		"a3_modules_f_curator_curator",
 		"A3_Characters_F_OPFOR",
 		"a3_characters_f",
 		"A3_Static_F_Gamma",
@@ -87,7 +89,7 @@ class Mission
 	randomSeed=6790155;
 	class Intel
 	{
-		briefingName="[1RA - CC] Jagdtag v1.1";
+		briefingName="[1RA - CC] Jagdtag v1.2";
 		resistanceWest=0;
 		startWeather=0.70999998;
 		startFog=0.11;
@@ -3383,7 +3385,7 @@ class Mission
 					rank="LIEUTENANT";
 					skill=0.5;
 					text="Esq1_SL";
-					init="CC_GrupMaritim = group this; (group this) setGroupID [""Gos de caça 1""]; this moveinDriver Submari1; [""divsl"",this] call cc_fnc_configEquipacio;";
+					init="[""Alfa"", 1, ""divsl"", this] call cc_fnc_configUnitat; this moveinDriver Submari1;";
 					description="Líder d'Esquadra";
 				};
 				class Item1
@@ -3396,7 +3398,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.5;
 					text="Esq1_RFL";
-					init="CC_GrupMaritim = group this; (group this) setGroupID [""Gos de caça 1""]; this assignAsCargoIndex [Submari1, 1]; this moveInCargo Submari1; [""div"",this] call cc_fnc_configEquipacio;";
+					init="[""Alfa"", 1, ""div"", this] call cc_fnc_configUnitat; this assignAsCargoIndex [Submari1, 1]; this moveInCargo Submari1;";
 					description="Fuseller";
 				};
 				class Item2
@@ -3409,7 +3411,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.5;
 					text="Esq1_GR";
-					init="CC_GrupMaritim = group this; (group this) setGroupID [""Gos de caça 1""]; this assignAsCargoIndex [Submari2, 1]; this moveInCargo Submari2; [""div"",this] call cc_fnc_configEquipacio;";
+					init="[""Alfa"", 1, ""div"", this] call cc_fnc_configUnitat; this assignAsCargoIndex [Submari2, 1]; this moveInCargo Submari2;";
 					description="Granader";
 				};
 				class Item3
@@ -3422,7 +3424,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.5;
 					text="Esq1_AR";
-					init="CC_GrupMaritim = group this; (group this) setGroupID [""Gos de caça 1""]; this moveInGunner Submari1; [""div"",this] call cc_fnc_configEquipacio;";
+					init="[""Alfa"", 1, ""div"", this] call cc_fnc_configUnitat; this moveInGunner Submari1;";
 					description="Fuseller Automàtic";
 				};
 				class Item4
@@ -3435,7 +3437,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.5;
 					text="Esq1_DM";
-					init="CC_GrupMaritim = group this; (group this) setGroupID [""Gos de caça 1""]; this moveinDriver Submari2; [""div"",this] call cc_fnc_configEquipacio;";
+					init="[""Alfa"", 1, ""div"", this] call cc_fnc_configUnitat; this moveinDriver Submari2;";
 					description="Tirador";
 				};
 				class Item5
@@ -3448,7 +3450,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.5;
 					text="Esq1_ME";
-					init="CC_GrupMaritim = group this; (group this) setGroupID [""Gos de caça 1""]; this moveInGunner Submari2; [""divme"",this] call cc_fnc_configEquipacio;";
+					init="[""Alfa"", 1, ""divme"", this] call cc_fnc_configUnitat; this moveInGunner Submari2;";
 					description="Metge";
 				};
 			};
@@ -3489,7 +3491,7 @@ class Mission
 					rank="SERGEANT";
 					skill=0.5;
 					text="Esq2_TL";
-					init="CC_EquipTerra = group this; (group this) setGroupID [""Gos de caça 2""]; this assignAsCargoIndex [HeliInsercio, 10]; this moveInCargo HeliInsercio; [""tl"",this] call cc_fnc_configEquipacio;";
+					init="[""Alfa"", 2, ""tl"", this] call cc_fnc_configUnitat; this assignAsCargoIndex [HeliInsercio, 10]; this moveInCargo HeliInsercio;";
 					description="Líder d'Equip";
 				};
 				class Item1
@@ -3502,7 +3504,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.5;
 					text="Esq2_ME";
-					init="CC_EquipTerra = group this; (group this) setGroupID [""Gos de caça 2""]; this assignAsCargoIndex [HeliInsercio, 11]; this moveInCargo HeliInsercio; [""me"",this] call cc_fnc_configEquipacio;";
+					init="[""Alfa"", 2, ""me"", this] call cc_fnc_configUnitat; this assignAsCargoIndex [HeliInsercio, 11]; this moveInCargo HeliInsercio;";
 					description="Metge";
 				};
 				class Item2
@@ -3515,7 +3517,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.40000001;
 					text="Esq2_RFL";
-					init="CC_EquipTerra = group this; (group this) setGroupID [""Gos de caça 2""]; this assignAsCargoIndex [HeliInsercio, 4]; this moveInCargo HeliInsercio; [""at"",this] call cc_fnc_configEquipacio;";
+					init="[""Alfa"", 2, ""at"", this] call cc_fnc_configUnitat; this assignAsCargoIndex [HeliInsercio, 4]; this moveInCargo HeliInsercio;";
 					description="Antitanc (Javelin)";
 				};
 				class Item3
@@ -3528,7 +3530,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.40000001;
 					text="Esq2_GR";
-					init="CC_EquipTerra = group this; (group this) setGroupID [""Gos de caça 2""]; this assignAsCargoIndex [HeliInsercio, 3]; this moveInCargo HeliInsercio; [""gr"",this] call cc_fnc_configEquipacio;";
+					init="[""Alfa"", 2, ""gr"", this] call cc_fnc_configUnitat; this assignAsCargoIndex [HeliInsercio, 3]; this moveInCargo HeliInsercio;";
 					description="Granader";
 				};
 				class Item4
@@ -3541,7 +3543,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.5;
 					text="Esq2_EXP";
-					init="CC_EquipTerra = group this; (group this) setGroupID [""Gos de caça 2""]; this assignAsCargoIndex [HeliInsercio, 2]; this moveInCargo HeliInsercio; [""exp"",this] call cc_fnc_configEquipacio;";
+					init="[""Alfa"", 2, ""exp"", this] call cc_fnc_configUnitat; this assignAsCargoIndex [HeliInsercio, 2]; this moveInCargo HeliInsercio;";
 					description="Especialista en explosius";
 				};
 				class Item5
@@ -3554,7 +3556,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.40000001;
 					text="Esq2_AR";
-					init="CC_EquipTerra = group this; (group this) setGroupID [""Gos de caça 2""]; this assignAsCargoIndex [HeliInsercio, 1]; this moveInCargo HeliInsercio; [""ar"",this] call cc_fnc_configEquipacio;";
+					init="[""Alfa"", 2, ""ar"", this] call cc_fnc_configUnitat; this assignAsCargoIndex [HeliInsercio, 1]; this moveInCargo HeliInsercio;";
 					description="Fuseller automàtic";
 				};
 			};
@@ -5737,7 +5739,7 @@ class Mission
 	};
 	class Sensors
 	{
-		items=21;
+		items=16;
 		class Item0
 		{
 			position[]={4478.9771,114.75451,6763.4429};
@@ -5835,7 +5837,6 @@ class Mission
 			interruptable=1;
 			age="UNKNOWN";
 			expCond="!alive trigTR1 or !alive trigTR2 or !alive trigTR3;";
-			expActiv="hint format [""Unitats en marxa.""];";
 			class Effects
 			{
 			};
@@ -5874,32 +5875,6 @@ class Mission
 		};
 		class Item9
 		{
-			position[]={5129.0337,193.11926,5097.104};
-			a=20;
-			b=20;
-			interruptable=1;
-			age="UNKNOWN";
-			expCond="torresDestruides == 3 && traidorMort == 0 && {alive _x} count playableUnits == 0";
-			expActiv="[""FinalFallit1"",false] call BIS_fnc_endMission;";
-			class Effects
-			{
-			};
-		};
-		class Item10
-		{
-			position[]={5171.0166,201.87491,5097.0825};
-			a=20;
-			b=20;
-			interruptable=1;
-			age="UNKNOWN";
-			expCond="torresDestruides < 3 && traidorMort == 1 && {alive _x} count playableUnits == 0";
-			expActiv="[""FinalFallit2"",false] call BIS_fnc_endMission;";
-			class Effects
-			{
-			};
-		};
-		class Item11
-		{
 			position[]={6451.6777,7.9724169,5388.4419};
 			a=1;
 			b=1;
@@ -5912,35 +5887,9 @@ class Mission
 			{
 			};
 		};
-		class Item12
+		class Item10
 		{
-			position[]={5211.6318,208.69928,5096.3486};
-			a=20;
-			b=20;
-			interruptable=1;
-			age="UNKNOWN";
-			expCond="torresDestruides == 3 && traidorMort == 1 && ({alive _x} count playableUnits == 0)";
-			expActiv="[""FinalFallit3"",false] call BIS_fnc_endMission;";
-			class Effects
-			{
-			};
-		};
-		class Item13
-		{
-			position[]={5252.25,216.50839,5097.4531};
-			a=20;
-			b=20;
-			interruptable=1;
-			age="UNKNOWN";
-			expCond="torresDestruides < 3 && traidorMort == 0 && {alive _x} count playableUnits == 0";
-			expActiv="[""FracasAbsolut"",false] call BIS_fnc_endMission;";
-			class Effects
-			{
-			};
-		};
-		class Item14
-		{
-			position[]={6499.7686,0.052165058,7593.1738};
+			position[]={6539.2227,-0.0010826234,7595.606};
 			a=600;
 			b=500;
 			angle=-449.74399;
@@ -5951,12 +5900,12 @@ class Mission
 			age="UNKNOWN";
 			name="TrigExtraccio";
 			expCond="{_x in thisList} count playableUnits == {alive _x} count playableUnits";
-			expActiv="call compile preprocessFileLineNumbers ""scripts\finalitzarMissio\cc_finalitzarMissio.sqf"";";
+			expActiv="call cc_fnc_finalitzarMissio;";
 			class Effects
 			{
 			};
 		};
-		class Item15
+		class Item11
 		{
 			position[]={4989.9902,208.44102,5921.2124};
 			a=1;
@@ -5971,7 +5920,7 @@ class Mission
 			{
 			};
 		};
-		class Item16
+		class Item12
 		{
 			position[]={6842.4375,-0.0067139738,7677.4341};
 			a=0;
@@ -5986,20 +5935,7 @@ class Mission
 			{
 			};
 		};
-		class Item17
-		{
-			position[]={5123.356,203.47983,5047.793};
-			a=0;
-			b=0;
-			interruptable=1;
-			age="UNKNOWN";
-			name="trigTorres";
-			expCond="torresDestruides == 3";
-			class Effects
-			{
-			};
-		};
-		class Item18
+		class Item13
 		{
 			position[]={5309.8555,94.140717,4188.1294};
 			a=100;
@@ -6011,14 +5947,14 @@ class Mission
 			interruptable=1;
 			age="UNKNOWN";
 			expCond="{_x in thisList} count playableUnits == {alive _x} count playableUnits";
-			expActiv="call compile preprocessFileLineNumbers ""scripts\finalitzarMissio\cc_finalitzarMissio.sqf"";";
+			expActiv="call cc_fnc_finalitzarMissio;";
 			class Effects
 			{
 			};
 		};
-		class Item19
+		class Item14
 		{
-			position[]={6948.0576,-0.043723445,7684.5435};
+			position[]={6934.9609,0.00031764153,7680.1777};
 			a=0;
 			b=0;
 			activationBy="ALPHA";
@@ -6030,7 +5966,7 @@ class Mission
 			{
 			};
 		};
-		class Item20
+		class Item15
 		{
 			position[]={6592.8008,24.403225,5346.3447};
 			a=1;

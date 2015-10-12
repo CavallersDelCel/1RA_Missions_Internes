@@ -39,11 +39,6 @@ Si els requisits no es compleixen o les versions són diferents cal comprovar pr
 _briefingNotes = "
 <br/>
 <font color='#FF0000' size='18'>Notes del creador de la missió</font>
-<<<<<<< HEAD
-<br/><br/>
-<font color='#00FFFF'>Nom de la missió:</font> ""*** Nom de la missió ***"".
-=======
->>>>>>> 4dd9bedd64e5e33de7f8073a81e37cbdeedc4c05
 <br/>
 <font color='#00FFFF'>Nom de la missió:</font> ""Operació Jagdtag: Dia de caça"".
 <br/>
@@ -79,45 +74,6 @@ Selecciona un dels finals per activar-lo.
 <br/><br/>
 ";
 
-<<<<<<< HEAD
-// Cada un dels finals a description.ext s'ha d'incloure.
-_briefingFinals = _briefingFinals + format [
-"<execute expression=""['FinalExit1',true] call BIS_fnc_endMission;"">Final amb èxit 1</execute>: Torres destruides. Traidor mort. Sense documents d'intel·ligència.<br/><br/>"
-];
-_briefingFinals = _briefingFinals + format [
-"<execute expression=""['FinalExit2',true] call BIS_fnc_endMission;"">Final amb èxit 2</execute>: Torres no destruides. Traidor mort. Sense documents d'intel·ligència.<br/><br/>"
-];
-_briefingFinals = _briefingFinals + format [
-"<execute expression=""['FinalExit3',true] call BIS_fnc_endMission;"">Final amb èxit 3</execute>: Torres no destruides. Traidor mort. Amb documents d'intel·ligència.<br/><br/>"
-];
-_briefingFinals = _briefingFinals + format [
-"<execute expression=""['FinalExit4',true] call BIS_fnc_endMission;"">Final amb èxit 4</execute>: Torres destruides. Traidor viu. Sense documents d'intel·ligència.<br/><br/>"
-];
-_briefingFinals = _briefingFinals + format [
-"<execute expression=""['FinalExit5',true] call BIS_fnc_endMission;"">Final amb èxit 5</execute>: Torres destruides. Traidor viu. Amb documents d'intel·ligència.<br/><br/>"
-];
-_briefingFinals = _briefingFinals + format [
-"<execute expression=""['FinalExit6',true] call BIS_fnc_endMission;"">Final amb èxit 6</execute>: Torres destruides. Traidor mort. Amb documents d'intel·ligència.<br/><br/>"
-];
-_briefingFinals = _briefingFinals + format [
-"<execute expression=""['FinalFallit1',false] call BIS_fnc_endMission;"">Fracàs 1</execute>: Tots morts. Torres destruides. Traidor viu. Sense documents d'intel·ligència.<br/><br/>"
-];
-_briefingFinals = _briefingFinals + format [
-"<execute expression=""['FinalFallit2',false] call BIS_fnc_endMission;"">Fracàs 2</execute>: Tots morts. Torres no destruides. Traidor mort. Sense documents d'intel·ligència.<br/><br/>"
-];
-_briefingFinals = _briefingFinals + format [
-"<execute expression=""['FinalFallit3',false] call BIS_fnc_endMission;"">Fracàs 3</execute>: Tots morts. Torres destruides. Traidor mort. Sense documents d'intel·ligència.<br/><br/>"
-];
-_briefingFinals = _briefingFinals + format [
-"<execute expression=""['FinalFallit4',false] call BIS_fnc_endMission;"">Fracàs 4</execute>: Deserció. Torres no destruides. Traidor viu. Sense documents d'intel·ligència.<br/><br/>"
-];
-_briefingFinals = _briefingFinals + format [
-"<execute expression=""['FinalFallit5',false] call BIS_fnc_endMission;"">Fracàs 5</execute>: Deserció. Torres no destruides. Traidor viu. Amb documents d'intel·ligència.<br/><br/>"
-];
-_briefingFinals = _briefingFinals + format [
-"<execute expression=""['FracasAbsolut',false] call BIS_fnc_endMission;"">Fracàs Absolut</execute>: Tots morts. Torres no destruides. Traidor viu. Sense documents d'intel·ligència.<br/><br/>"
-];
-=======
 // Fes una llista de tots els finals inclosos a desctiption.ext de forma automàtica.
 _tipusFinals = (missionConfigFile >> "CfgDebriefing");
 for [{ _x = 0 }, {_x < count _tipusFinals}, { _x = _x + 1}] do {
@@ -128,7 +84,6 @@ for [{ _x = 0 }, {_x < count _tipusFinals}, { _x = _x + 1}] do {
     "<execute expression=""[[%1],true] call BIS_fnc_endMission;"">- %2</execute>: %3.<br/>", _nomFinal, _titol, _descripcio
     ];
 };
->>>>>>> 4dd9bedd64e5e33de7f8073a81e37cbdeedc4c05
 
 _briefing = _briefingAdmin + _briefingNotes + _briefingFinals;
 

@@ -55,11 +55,11 @@ Degut a la gravetat de la situació, dos equips altament especialitzats han sigu
 
 ##### MISSIÓ i EXECUCIÓ
 
-Dos equips d'intanteria seran desplegats al nord de Stratis per tal d'evaluar la situació i actuar amb la màxima velocitat possible. L'equip de bussejadors, Gos de Caça 1, intentarà
+Dos equips d'intanteria seran desplegats al nord de Stratis per tal d'evaluar la situació i actuar amb la màxima velocitat possible. L'equip de bussejadors, Alfa 1, intentarà
 localitzar les restes de l'helicòpter desaparegut per rescatar possibles supervivents i/o recuperar els informes d'inteligència abans de que ho faci l'enemic. L'última posició
 confirmada es 070606.
 
-Per altra banda, l'equip de terra amb el nom en clau Gos de Caça 2, farà inserció al punt LZ2 per acte seguit es dirigir-se al punt de reagrupament (045068) i alertar l'esquadra
+Per altra banda, l'equip de terra amb el nom en clau Alfa 2, farà inserció al punt LZ2 per acte seguit es dirigir-se al punt de reagrupament (045068) i alertar l'esquadra
 Gossos d'Acer del perill. Junts inentaran destruir els possibles inhibidors de la senyal de ràdio.
 
 L'objectiu **prioritari** d'ambdós equips és obtenir la localització del traidor i eliminar-lo.
@@ -71,9 +71,9 @@ L'extracció es farà a càrrec de Falcó 1 sota el protocol de **radio Alfa** e
 </p>
 
 **Tasques**
-* Inserció al punt LZ1 (Gos de Caça 1) i LZ2 (Gos de Caça 2).
-* Gos de Caça 1 buscarà els supervivents de la tripulació de l'helicòpter desaparegut per tal d'obtenir els informes de situació.
-* Gos de Caça 2 es reagruparà amb l'esquadra d'infanteria mecanitzada Gossos d'Acer per alertar-los del perill i a ser possible destruïr els inhibidors de senyal de ràdio.
+* Inserció al punt LZ1 (Alfa 1) i LZ2 (Alfa 2).
+* Alfa 1 buscarà els supervivents de la tripulació de l'helicòpter desaparegut per tal d'obtenir els informes de situació.
+* Alfa 2 es reagruparà amb l'esquadra d'infanteria mecanitzada Gossos d'Acer per alertar-los del perill i a ser possible destruïr els inhibidors de senyal de ràdio.
 * Tasca prioritaria: localitzar i eliminar el traidor.
 * Extracció per helicòpter a càrrec de Falcó 1 sempre i quan s'hagi pogut reestablir la comunicació per ràdio. En cas contrari els diversos grups es reagruparan a les cases abandonades a "053042" per assolir un perfil baix.
 * Degut a l'escassa informació l'esquadra haurà d'improvitzar sobre el terreny i prioritzar objectius.
@@ -92,15 +92,15 @@ Cavallers del Cel SOP "Standard Operating Procedure"
 
 ##### ROLS
 
-* **GOS DE CAÇA - Canal alternatiu 5 - Freqüència 51**
-  * **GOS DE CAÇA 1 - Equip de bussejadors - Canal 1 - Freqüència 201**
+* **Alfa - Canal alternatiu 5 - Freqüència 51**
+  * **Alfa 1 - Equip de bussejadors - Canal 1 - Freqüència 201**
     * Líder d'esquadra.
     * Fuseller AT4.
     * Fuseller automàtic M249.
     * Granader.
     * Tirador.
     * Metge.
-  * **GOS DE CAÇA 2 - Equip de terra - Canal 2 - Freqüència 202**
+  * **Alfa 2 - Equip de terra - Canal 2 - Freqüència 202**
     * Líder d'equip.
     * Antitanc (Javelin).
     * Especialista en explosius.
@@ -114,15 +114,9 @@ Cavallers del Cel SOP "Standard Operating Procedure"
 
 **Contribuïdors**: CC_Viper (Plantilles d'imatges).
 
-<<<<<<< HEAD
-**Versió**: 0.2.1.
-
-**Darrera modificació**: 2015/07/16.
-=======
 **Versió**: 0.4.1.
 
 **Darrera modificació**: 2015/10/04.
->>>>>>> 4dd9bedd64e5e33de7f8073a81e37cbdeedc4c05
 
 **Descripció**: Plantilla bàsica per generar missions pel grup d'Arma 1er Regiment Aerotransportat (1RA) de la Comunitat Catalana de Simulació - Cavallers del Cel.
 

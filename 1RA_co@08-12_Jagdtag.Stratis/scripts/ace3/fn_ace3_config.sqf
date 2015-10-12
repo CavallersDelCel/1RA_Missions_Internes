@@ -17,7 +17,7 @@ cc_mod_ace3 = isClass (configFile >> "CfgPatches" >> "ace_common");        // Co
 
 if (cc_mod_ace3) then {
     _ErrorModul = false;
-    _metges = [];
+    _metges = ["Esq1_ME", "Esq2_ME"];
     _vehiclesMedics = [];
     _edificisMedics = [];
     _enginyers = [];
