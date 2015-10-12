@@ -11,16 +11,17 @@
 //         0.3 (2015/09/09) Versió 3.2.3 de ACE3.                                                        //
 //=======================================================================================================//
 
-private["_metges", "_vehiclesMedics", "_edificisMedics", "_enginyers", "_vehiclesReparacio", "_tallers", "_unitatsRendeixen","_unitat", "_ErrorModul"];
+private["_metges", "_vehiclesMedics", "_edificisMedics", "_espExplosius", "_enginyers", "_vehiclesReparacio", "_tallers", "_unitatsRendeixen","_unitat", "_ErrorModul"];
 
 cc_mod_ace3 = isClass (configFile >> "CfgPatches" >> "ace_common");        // Comprovar si ACE 3 està carregat.
 
 if (cc_mod_ace3) then {
     _ErrorModul = false;
-    _metges = [];
-    _vehiclesMedics = [];
-    _edificisMedics = [];
-    _enginyers = [];
+    _metges = ["CC_Alfa1_5","CC_Alfa2_5"];
+    _vehiclesMedics = ["CC_HeliMedic"];
+    _edificisMedics = ["CC_Hospital"];
+    _espExplosius = ["CC_Alfa2_4","CC_Alfa2_5"];
+    _enginyers = ["CC_Alfa1_6"];
     _vehiclesReparacio = [];
     _tallers = [];
     _unitatsRendeixen = [];
@@ -440,6 +441,13 @@ if (cc_mod_ace3) then {
         ["ace_explosives_RequireSpecialist", true, true, true] call ACE_common_fnc_setSetting;                     // 0* = No, 1 = Si.
         ["ace_explosives_PunishNonSpecialists", true, true, true] call ACE_common_fnc_setSetting;                  // 0 = No, 1* = Si.
         ["ace_explosives_ExplodeOnDefuse", true, true, true] call ACE_common_fnc_setSetting;                       // 0 = No, 1* = Si.
+
+        // Assignar rols d'especialista en explosius.
+        {
+            if (!isNil format["s%1",_x]) then {
+                _x setVariable ["ACE_IsEOD", true, true];
+            };
+        } foreach _espExplosius;
     } else {
         _ErrorModul = true;
         diag_log "No s'ha trobat el fitxer ace_explosives.pbo.";

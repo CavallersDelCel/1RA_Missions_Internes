@@ -175,49 +175,18 @@ class Params {
 //=======================================================================================================//
 class CfgDebriefing {
     class FinalExit1 {
-        title = "Final #1";
+        title = "Victòria!";
         subtitle = "";
-        description = "*** Debriefing del final #1. ***";
+        description = "Les forces aliades han aconseguit aturar l'avanç del CSAT. És hora de prendre l'ofensiva.";
         pictureBackground = "";
         picture = "b_inf";
         pictureColor[] = {0.0,0.3,0.6,1};
     };
-
-    class FinalExit2 {
-        title = "Final #2";
-        subtitle = "";
-        description = "*** Debriefing del final #2. ***";
-        pictureBackground = "";
-        picture = "b_inf";
-        pictureColor[] = {0.0,0.3,0.6,1};
-    };
-
-    //class FinalExit3, FinalExit4, ....
-
-    class FinalFallit1 {
-        title = "Missió fallida #1";
-        subtitle = "";
-        description = "*** Debriefing del final fallit #1. ***";
-        pictureBackground = "";
-        picture = "b_inf";
-        pictureColor[] = {0.0,0.3,0.6,1};
-    };
-
-    class FinalFallit2 {
-        title = "Missió fallida #2";
-        subtitle = "";
-        description = "*** Debriefing final fallit #2. ***";
-        pictureBackground = "";
-        picture = "b_inf";
-        pictureColor[] = {0.0,0.3,0.6,1};
-    };
-
-    //class FinalFallit3, FinalFallit4, ....
 
     class FracasAbsolut {
         title = "Fracàs absolut";
         subtitle = "";
-        description = "*** Descripció de què és fracàs absolut. ***";
+        description = "Les tropes aliades han perdut el nord d'Altis. Una contraofensiva és necessaria.";
         pictureBackground = "";
         picture = "KIA";
         pictureColor[] = {0.0,0.3,0.6,1};

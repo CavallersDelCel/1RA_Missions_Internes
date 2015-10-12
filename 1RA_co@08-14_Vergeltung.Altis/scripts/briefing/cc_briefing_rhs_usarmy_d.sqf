@@ -25,7 +25,7 @@ _admlog = player createDiaryRecord ["diary", ["Freqüències de Ràdio","
 <br/><br/>
 <font color='#FF0000' size='18'>Himmelsaugen (Aeronaus)</font>: 60 kHz.
 - Himmelshilfe (Evacuació mèdica): 61 kHz.
-- Himmelsfaust (Helicòpter de combat): 62 kHz
+- Himmelsfaust (Helicòpter de combat): 62 kHz.
 <br/><br/>
 <font color='#FF0000' size='18'>Freiheit</font>
 <br/>
@@ -55,7 +55,7 @@ _admlog = player createDiaryRecord ["diary", ["Administració/Logística","
 <br/><br/>
 <font color='#FF0000' size='18'>Abastiment</font>
 <br/>
-Avastiment depenent d'efectius d'última hora.
+Abastiment depenent d'efectius d'última hora.
 "]];
 
 //=======================================================================================================//
@@ -72,7 +72,9 @@ _execucio = player createDiaryRecord ["diary", ["Execució","
 // NOTES: MISSIÓ.                                                                                        //
 //=======================================================================================================//
 _missio = player createDiaryRecord ["diary", ["Missió","
-Dos equips d'infanteria, amb un possible suport aèri són les peces clau de la defensa del campament aliat al nord d'Altis. Mentres Freiheit 1 investiga la pèrdua de contacte per ràdio amb Eisenfaust, Freiheit 2 montarà un perímetre de defensa amb explosius a Sofia per després fer una retirada estratègica cap al HQ.
+Dos equips d'infanteria, amb un possible suport aèri són les peces clau de la defensa del campament aliat al nord d'Altis.
+<br/><br/>
+Mentres Freiheit 1 investiga la pèrdua de contacte per ràdio amb Eisenfaust, Freiheit 2 montarà un perímetre de defensa amb explosius a Sofia per després fer una retirada estratègica cap al HQ.
 "]];
 
 //=======================================================================================================//
@@ -99,12 +101,12 @@ Presència civil baixa a l'àrea d'operacions. És possible que siguin simpatitz
 // NOTES: SITUACIÓ.                                                                                      //
 //=======================================================================================================//
 _situacio = player createDiaryRecord ["diary", ["SITREP","
-L'avanç inexorable de les forces del CSAT han obligat als països aliats a intervenir per tal d'aturar l'annexió constant de territori utilitzant la força bruta. L'illa d'Altis, ha sigut considerada com un punt estratègic clau a l'hora de mantenir el control del Mediterrani. Després de diversos intents, s'ha aconseguit establir una zona d'operacions al nord d'aquesta illa però la situació no està gens resolta.<br/>
-
-Després de l'operació fallida per acabar amb el coronel enemic Ohmid Raheem es preveu un atac de represàlia contra les forces aliades estacionades al nord d'Altis. L'atac es creu inminent i es preveu que començarà, en un acte d'arrogància, per la ciutat recentment alliberada de Sofia i de pas acabar amb brots d'insurgència entre la població civil. Per aquest motiu, Sofia ha sigut evacuada però algunes families no han volgut abandonar la seva llar malgrat l'amenaça i es creu que alguns d'ells poden ser simpatitzants de la nació del CSAT. <br/>
-
-L'atac inicial a Sofia permetrâ a les forces aliades crear un punt de defensa avançat des del que mermar l'efectivitat dels blindats enemics. A tal efecte l'equip de sabotejadors Freiheit 2 es dirigirà amb tota celeritat a la ciutat de Sofia per plantar un perímetre defensiu amb explosius i dur a terme una retirada estratègica fins al camp base. La resta de la companyia Freiheit intentarà donar suport durant la retirada.<br/>
-
+L'avanç inexorable de les forces del CSAT han obligat als països aliats a intervenir per tal d'aturar l'annexió constant de territori utilitzant la força bruta. L'illa d'Altis, ha sigut considerada com un punt estratègic clau a l'hora de mantenir el control del Mediterrani. Després de diversos intents, s'ha aconseguit establir una zona d'operacions al nord d'aquesta illa però la situació no està gens resolta.
+<br/><br/>
+Després de l'operació fallida per acabar amb el coronel enemic Ohmid Raheem es preveu un atac de represàlia contra les forces aliades estacionades al nord d'Altis. L'atac es creu inminent i es preveu que començarà, en un acte d'arrogància, per la ciutat recentment alliberada de Sofia i de pas acabar amb brots d'insurgència entre la població civil. Per aquest motiu, Sofia ha sigut evacuada però algunes families no han volgut abandonar la seva llar malgrat l'amenaça i es creu que alguns d'ells poden ser simpatitzants de la nació del CSAT.
+<br/><br/>
+L'atac inicial a Sofia permetrâ a les forces aliades crear un punt de defensa avançat des del que mermar l'efectivitat dels blindats enemics. A tal efecte l'equip de sabotejadors Freiheit 2 es dirigirà amb tota celeritat a la ciutat de Sofia per plantar un perímetre defensiu amb explosius i dur a terme una retirada estratègica fins al camp base. La resta de la companyia Freiheit intentarà donar suport durant la retirada.
+<br/><br/>
 Mentrestant Freiheit 1 investigarà la pèrdua de contacte per ràdio amb la columna de blindats *Eisenfaust* per tal de reforçar la defensa. S'intentarà donar suport aèri durant l'operació de rescat depenent dels efectius disponibles a última hora.
 "]];
 

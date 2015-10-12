@@ -47,8 +47,8 @@ if(isServer) then {if(local player) then {DAC_Code = 1} else {DAC_Code = 0}} els
 	DAC_BadBuildings 	= 	[];
 	DAC_GunNotAllowed	= 	[];
 	DAC_VehNotAllowed	= 	[];
-	DAC_Locked_Veh		=	[];
-	DAC_SP_Soldiers     =   ["B_soldier_AR_F","B_G_soldier_AR_F","O_soldier_AR_F","O_soldierU_AR_F","O_G_soldier_AR_F","I_soldier_AR_F","I_G_soldier_AR_F"];
+	DAC_Locked_Veh		=	[CC_HeliMedic, CC_HeliCombat];
+	DAC_SP_Soldiers     =   ["B_soldier_AR_F","B_G_soldier_AR_F","O_soldier_AR_F","O_soldierU_AR_F","O_G_soldier_AR_F","I_soldier_AR_F","I_G_soldier_AR_F","rhsusf_army_ocp_autorifleman","rhsusf_army_ocp_machinegunner"];
 	DAC_Data_Array 		= 	[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,[]];
 	DAC_Marker_Val		= 	[];
 	DAC_Zones			=	[];

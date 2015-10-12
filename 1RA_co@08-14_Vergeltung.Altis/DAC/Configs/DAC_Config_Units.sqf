@@ -59,44 +59,44 @@ switch (_TypNumber) do
             "O_soldier_lite_F",                            // Fuseller lleuger (Light Rifleman)
             "O_soldier_GL_F",                              // Granader (Grenadier)
             "O_soldier_AR_F",                              // Fuseller automàtic (Automatic Rifleman)
-            "O_soldier_AAR_F",                             // Assistent de fuseller automàtic (Assistant Automatic Rifleman)
+            //"O_soldier_AAR_F",                             // Assistent de fuseller automàtic (Assistant Automatic Rifleman)
             "O_soldier_LAT_F",                             // Fuseller amb AT4 (Rifleman AT)
             "O_soldier_AT_F",                              // Antitanc (Antitank)
-            "O_soldier_AAT_F",                             // Assitent d'antitanc (Antitank Assistant)
+            //"O_soldier_AAT_F",                             // Assitent d'antitanc (Antitank Assistant)
             "O_soldier_AA_F",                              // Antiaèri (Antiair)
-            "O_soldier_AAA_F",                             // Assistent d'antiaèri (Antiair Assistant)
+            //"O_soldier_AAA_F",                             // Assistent d'antiaèri (Antiair Assistant)
             "O_soldier_exp_F",                             // Explosius (Explosives)
             "O_engineer_F",                                // Enginyer (Engineer)
-            "O_soldier_repair_F",                          // Mecànic (Repair Specialist)
+            //"O_soldier_repair_F",                          // Mecànic (Repair Specialist)
             "O_soldier_M_F",                               // Tirador (Marksman)
             "O_spotter_F",                                 // Observador (Spotter)
             "O_sniper_F",                                  // Franctirador (Sniper)
             "O_medic_F"                                    // Metge
         ];
         _Unit_Pool_V = [
-            "O_Quadbike_01_F",                             // Quad
-            "O_MRAP_02_F",                                 // Ifrit
+            //"O_Quadbike_01_F",                           // Quad
+            //"O_MRAP_02_F",                               // Ifrit
             "O_MRAP_02_gmg_F",                             // Ifrit GMG
-            "O_MRAP_02_hmg_F",                             // Ifrit HMG
-            "O_Truck_02_covered_F",                        // Camió Kamaz covert
-            "O_Truck_02_Ammo_F",                           // Camió Kamaz amb munició
-            "O_Truck_02_transport_F",                      // Camió Kamaz de transport
-            "O_Truck_02_box_F",                            // Camió Kamaz amb kit de reparació
-            "O_Truck_02_fuel_F",                           // Camió Kamaz cisterna
-            "O_Truck_02_medical_F"                         // Camió Kamaz mèdic
+            "O_MRAP_02_hmg_F"                              // Ifrit HMG
+            //"O_Truck_02_covered_F",                      // Camió Kamaz covert
+            //"O_Truck_02_Ammo_F",                         // Camió Kamaz amb munició
+            //"O_Truck_02_transport_F"                       // Camió Kamaz de transport
+            //"O_Truck_02_box_F",                          // Camió Kamaz amb kit de reparació
+            //"O_Truck_02_fuel_F",                         // Camió Kamaz cisterna
+            //"O_Truck_02_medical_F"                       // Camió Kamaz mèdic
         ];
         _Unit_Pool_T = [
-            "O_APC_Tracked_02_cannon_F",                   // BTR-K Kamysh
+            //"O_APC_Tracked_02_cannon_F",                   // BTR-K Kamysh
             "O_APC_Tracked_02_AA_F",                       // ZSU-39 Tigris
-            "O_APC_Wheeled_02_rcws_F",                     // MSE-3 Marid
-            "O_MBT_02_arty_F",                             // 2S9 Sochor
+            //"O_APC_Wheeled_02_rcws_F",                     // MSE-3 Marid
+            //"O_MBT_02_arty_F",                           // 2S9 Sochor
             "O_MBT_02_cannon_F"                            // T-100 Varsuk
         ];
         _Unit_Pool_A = [
             "O_Heli_Attack_02_F",                          // Mi-48 Kajman
-            "O_Heli_Attack_02_black_F",                    // Mi-48 Kajman Negre
-            "O_Heli_Light_02_F",                           // PO-30 Orca
-            "O_Heli_Light_02_unarmed_F"                    // PO-30 Orca (sense armament)
+            "O_Heli_Attack_02_black_F"                     // Mi-48 Kajman Negre
+            //"O_Heli_Light_02_F",                         // PO-30 Orca
+            //"O_Heli_Light_02_unarmed_F"                  // PO-30 Orca (sense armament)
         ];
     };
 
@@ -843,41 +843,41 @@ switch (_TypNumber) do
             "rhsusf_army_ocp_riflemanl",                   // Fuseller lleuger (Light Rifleman)
             "rhsusf_army_ocp_grenadier",                   // Granader (Grenadier)
             "rhsusf_army_ocp_autorifleman",                // Fuseller automàtic (Automatic Rifleman)
-            "rhsusf_army_ocp_autoriflemana",               // Assistent de fuseller automàtic (Assistant Automatic Rifleman)
+            //"rhsusf_army_ocp_autoriflemana",               // Assistent de fuseller automàtic (Assistant Automatic Rifleman)
             "rhsusf_army_ocp_riflemanat",                  // Fuseller amb M136 (Rifleman AT)
             "rhsusf_army_ocp_javelin",                     // Antitanc amb Javelin (Antitank with Javelin)
             "rhsusf_army_ocp_aa",                          // Antiaèri amb Stinger (Antiair with Stinger)
             "rhsusf_army_ocp_explosives",                  // Explosius (Explosives)
             "rhsusf_army_ocp_engineer",                    // Enginyer (Engineer)
             "rhsusf_army_ocp_machinegunner",               // Metrallador (Machinegunner)
-            "rhsusf_army_ocp_machinegunnera",              // Assistent de metrallador (Assistant Machinegunner)
+            //"rhsusf_army_ocp_machinegunnera",              // Assistent de metrallador (Assistant Machinegunner)
             "rhsusf_army_ocp_marksman",                    // Tirador (Marksman)
             "rhsusf_army_ocp_sniper",                      // Franctirador (Sniper)
             "rhsusf_army_ocp_medic"                        // Metge
         ];
         _Unit_Pool_V = [
-            "rhsusf_m1025_w",                              // HMMWV sense armament
-            "rhsusf_m1025_w_mk19",                         // HMMWV amb mk19
-            "rhsusf_m1025_w_m2",                           // HMMWV amb m2
-            "rhsusf_m998_w_2dr",
-            "rhsusf_m998_w_2dr_fulltop",
-            "rhsusf_m998_w_2dr_halftop",
-            "rhsusf_m998_w_4dr",
-            "rhsusf_m998_w_4dr_fulltop",
-            "rhsusf_m998_w_4dr_halftop"
+            //"rhsusf_m1025_d",                            // HMMWV sense armament
+            "rhsusf_m1025_d_Mk19",                         // HMMWV amb mk19
+            "rhsusf_m1025_d_m2"                            // HMMWV amb m2
+            //"rhsusf_m998_d_2dr",
+            //"rhsusf_m998_d_2dr_fulltop",
+            //"rhsusf_m998_d_2dr_halftop",
+            //"rhsusf_m998_d_4dr",
+            //"rhsusf_m998_d_4dr_fulltop",
+            //"rhsusf_m998_d_4dr_halftop"
         ];
         _Unit_Pool_T = [
-            "rhs_m113_usarmy",                             // APC M113A3
-            "rhs_m2a2_wd",                                 // IPC
-            "rhs_m2a2_buski_wd",                           // IPC
-            "rhs_m2a3_buski_wd",                           // IPC
-            "rhs_m2a3_wd",                                 // IPC
-            "rhs_m6_wd",                                   // IPC
-            "rhsusf_m1a1aimwd_usarmy",                     // Tanc
-            "rhsusf_m1a1aim_tuski_wd",                     // Tanc
-            "rhsusf_m1a2sep1wd_usarmy",                    // Tanc
-            "rhsusf_m1a2sep1tuskiwd_usarmy",               // Tanc
-            "rhsusf_m109_usarmy"                           // Artilleria
+            "rhs_m113d_usarmy",                            // APC M113A3
+            "rhs_m2a2",                                    // IPC
+            "rhs_m2a2_buski",                              // IPC
+            "rhs_m2a3_buski",                              // IPC
+            "rhs_m2a3",                                    // IPC
+            "rhs_m6",                                      // IPC
+            "rhsusf_m1a1aimd_usarmy",                      // Tanc
+            "rhsusf_m1a1aim_tuski_d",                      // Tanc
+            "rhsusf_m1a2sep1d_usarmy",                     // Tanc
+            "rhsusf_m1a2sep1tuskid_usarmy"                 // Tanc
+            //"rhsusf_m109_usarmy"                           // Artilleria
         ];
         _Unit_Pool_A = [
             "RHS_AH64D_wd",                                // Boeing AH-64 Apache Longbow (Multi-Role)
@@ -914,28 +914,28 @@ switch (_TypNumber) do
             "rhsusf_army_ucp_medic"                        // Metge
         ];
         _Unit_Pool_V = [
-            "rhsusf_m1025_d",                              // HMMWV sense armament
-            "rhsusf_m1025_d_Mk19",                         // HMMWV amb mk19
-            "rhsusf_m1025_d_m2",                           // HMMWV amb m2
-            "rhsusf_m998_d_2dr",
-            "rhsusf_m998_d_2dr_fulltop",
-            "rhsusf_m998_d_2dr_halftop",
-            "rhsusf_m998_d_4dr",
-            "rhsusf_m998_d_4dr_fulltop",
-            "rhsusf_m998_d_4dr_halftop"
+            //"rhsusf_m1025_w",                            // HMMWV sense armament
+            "rhsusf_m1025_w_mk19",                         // HMMWV amb mk19
+            "rhsusf_m1025_w_m2"                            // HMMWV amb m2
+            //"rhsusf_m998_w_2dr",
+            //"rhsusf_m998_w_2dr_fulltop",
+            //"rhsusf_m998_w_2dr_halftop",
+            //"rhsusf_m998_w_4dr",
+            //"rhsusf_m998_w_4dr_fulltop",
+            //"rhsusf_m998_w_4dr_halftop"
         ];
         _Unit_Pool_T = [
-            "rhs_m113d_usarmy",                            // APC M113A3
-            "rhs_m2a2",                                    // IPC
-            "rhs_m2a2_buski",                              // IPC
-            "rhs_m2a3_buski",                              // IPC
-            "rhs_m2a3",                                    // IPC
-            "rhs_m6",                                      // IPC
-            "rhsusf_m1a1aimd_usarmy",                      // Tanc
-            "rhsusf_m1a1aim_tuski_d",                      // Tanc
-            "rhsusf_m1a2sep1d_usarmy",                     // Tanc
-            "rhsusf_m1a2sep1tuskid_usarmy",                // Tanc
-            "rhsusf_m109_usarmy"                           // Artilleria
+            "rhs_m113_usarmy",                             // APC M113A3
+            "rhs_m2a2_wd",                                 // IPC
+            "rhs_m2a2_buski_wd",                           // IPC
+            "rhs_m2a3_buski_wd",                           // IPC
+            "rhs_m2a3_wd",                                 // IPC
+            "rhs_m6_wd",                                   // IPC
+            "rhsusf_m1a1aimwd_usarmy",                     // Tanc
+            "rhsusf_m1a1aim_tuski_wd",                     // Tanc
+            "rhsusf_m1a2sep1wd_usarmy",                    // Tanc
+            "rhsusf_m1a2sep1tuskiwd_usarmy"                // Tanc
+            //"rhsusf_m109_usarmy"                         // Artilleria
         ];
         _Unit_Pool_A = [
             "RHS_AH64D",                                   // Boeing AH-64 Apache Longbow (Multi-Role)
