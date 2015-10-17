@@ -31,7 +31,7 @@ if (alive _unitat) then {
            if (cc_mod_ace3) then {
               [true] call ace_spectator_fnc_stageSpectator;
            } else {
-               hideBody _unitat;
+               [[_unitat], "hideBody", true, true] call BIS_fnc_MP;
            };
        };
 

@@ -49,11 +49,6 @@ if(alive _unitat) then {
 
     // Afegir les ràdios a cada unitat.
     [] call cc_fnc_acre2_afegirRadios;
-    
-    if (cc_acre2_config_configurarCanalsPerEquip) then {
-        // Configurar els canals actius.
-        [] call cc_fnc_acre2_configurarCanals;
-    };
 
     // Configurar els canals actius.
     if (cc_acre2_config_configurarCanalsPerEquip) then {

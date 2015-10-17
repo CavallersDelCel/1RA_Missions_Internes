@@ -25,7 +25,17 @@ Missió generada amb la Plantilla Bàsica per Missions (PBM) del grup 1er Regime
 **Resum de la missió**: *DCS i Arma 3* és una missió de pràctiques de coordinació entre els grups d'infanteria i d'aviació. La missió no té objectius en si però en canvi permet l'activació/desactivació de varies zones DAC a través d'accions assignades al líder d'esquadra. El respawn és de tipus `BASE` tan per jugadors com per vehicles i força a tots els
 clients el model de vol avançat de l'Arma 3.
 
-**Plantilla Bàsica per Missions (PBM)**: v0.4.1 (https://github.com/CavallersDelCel/1RA_Plantilla_Missio) per CC_Magnetar.
+**Plantilla Bàsica per Missions (PBM)**: v0.4.2 (https://github.com/CavallersDelCel/1RA_Plantilla_Missio) per CC_Magnetar.
+
+**Mods necessàris o recomenats**: 
+
+Aquesta missió s'ha comprovat que funciona amb el següent:
+
+* Dynamic-AI-Creator (DAC) v3.1b (versió en script). **Necessari**.
+* RHS United States Armed Forces (RHS USAF) v0.3.9.1. **Necessari**.
+* Community Base Addons (CBA) v2.0.
+* Advanced Combat Environment 3 (ACE3) v3.3.2.
+* Task Force Arrowhead Radio (TFAR) v0.9.7.3.
 
 ### Descripció detallada de la missió
 
@@ -103,9 +113,9 @@ Cavallers del Cel SOP "Standard Operating Procedure"
 
 **Contribuïdors**: CC_Viper (Plantilles d'imatges).
 
-**Versió**: 0.4.1.
+**Versió**: 0.4.2.
 
-**Darrera modificació**: 2015/10/04.
+**Darrera modificació**: 2015/10/17.
 
 **Descripció**: Plantilla bàsica per generar missions pel grup d'Arma 1er Regiment Aerotransportat (1RA) de la Comunitat Catalana de Simulació - Cavallers del Cel.
 

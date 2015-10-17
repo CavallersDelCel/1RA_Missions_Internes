@@ -43,7 +43,7 @@ if(isServer) then {if(local player) then {DAC_Code = 1} else {DAC_Code = 0}} els
 	if(isNil "DAC_Player_Support")	then {		DAC_Player_Support	= [10,[4,2000,3,1000]]						};
 	if(isNil "DAC_SaveDistance")	then {		DAC_SaveDistance	= [500,["DAC_Save_Pos"]]					};
 	if(isNil "DAC_Radio_Max")		then {		DAC_Radio_Max		= DAC_AI_Level								};
-		
+
 	DAC_BadBuildings 	= 	[];
 	DAC_GunNotAllowed	= 	[];
 	DAC_VehNotAllowed	= 	[];
@@ -54,12 +54,12 @@ if(isServer) then {if(local player) then {DAC_Code = 1} else {DAC_Code = 0}} els
 	DAC_Zones			=	[];
 
 	//=============================================================================================================|
-	
+
 	_scr = [] spawn (compile preprocessFile "DAC\Scripts\DAC_Start_Creator.sqf");
 	waituntil {scriptdone _scr};
 	sleep 0.1;
 	waituntil {(DAC_Basic_Value > 0)};
-	
+
 if(DAC_Code < 2) then
 {
 	//===========================================|

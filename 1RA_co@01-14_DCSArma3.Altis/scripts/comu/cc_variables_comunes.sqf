@@ -16,7 +16,7 @@ private ["_llargada_grups1RA", "_llargada_frequencies1RA", "_llargada_frequencie
 //   - 1: El mod o script ha d'estar activat.                                                            //
 //   - 2: No importa si el mod o script està activat o desactivat per la missió.                         //
 //=======================================================================================================//
-cc_requereix_DAC         = 1;  // Variable per controlar l'ús del Dynamic-AI-Creator (DAC).
+cc_requereix_DAC         = 2;  // Variable per controlar l'ús del Dynamic-AI-Creator (DAC).
 cc_requereix_ASRAI       = 2;  // Variable per controlar l'ús del ASR AI 3.
 cc_requereix_ACE3        = 2;  // Variable per controlar l'ús del Advanced Combat Environment 3.
 cc_requereix_ACE3_BasMed = 2;  // Variable per controlar l'ús del sistema mèdic bàsic de ACE 3.
@@ -82,9 +82,7 @@ cc_var_grups1RA = [
     ["Bravo", "Bravo 1", "Bravo 2", "Bravo 3"],
     ["Charlie", "Charlie 1", "Charlie 2", "Charlie  3"],
     ["Comandament"],
-    ["Infanteria"],
-    ["Blindats"],
-    ["Aeronaus"],
+    ["Suport"],
     ["Artilleria"]
 ];
 
@@ -92,11 +90,9 @@ cc_var_frequencies1RA = [
     [200, 201, 202, 203],
     [210, 211, 212, 213],
     [220, 221, 222, 223],
-    [30],
-    [40],
-    [50],
-    [60],
-    [70]
+    [41],
+    [51],
+    [61]
 ];
 
 cc_var_frequencies1RALR = [
@@ -105,9 +101,7 @@ cc_var_frequencies1RALR = [
     [43],
     [40],
     [30],
-    [50],
-    [60],
-    [70]
+    [50]
 ];
 
 // Comprova que les dues variables tinguin la mateixa llargada.

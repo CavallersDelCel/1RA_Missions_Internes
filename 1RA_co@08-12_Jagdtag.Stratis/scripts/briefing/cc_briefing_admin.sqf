@@ -46,10 +46,6 @@ _briefingNotes = "
 <br/>
 <font color='#00FFFF'>Autor:</font> CC_Magnetar.
 <br/>
-<font color='#00FFFF'>Col·laboradors:</font> *** Listat de col·laboradors ***.
-<br/>
-<font color='#00FFFF'>Col·laboradors:</font> *** Listat de col·laboradors ***.
-<br/>
 <font color='#00FFFF'>Nombre mínim de jugadors:</font> 8.
 <br/>
 <font color='#00FFFF'>Nombre màxim de jugadors:</font> 12.

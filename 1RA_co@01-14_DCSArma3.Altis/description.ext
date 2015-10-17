@@ -200,7 +200,6 @@ class CfgFunctions {
         class ace3 {
             file = "scripts\ace3";
             class ace3_config {
-                PreInit = 1;
                 PostInit = 1;  // La funció s'executa al iniciar la missió, DESPRÉS d'inicialitzar objectes.
             };
         };

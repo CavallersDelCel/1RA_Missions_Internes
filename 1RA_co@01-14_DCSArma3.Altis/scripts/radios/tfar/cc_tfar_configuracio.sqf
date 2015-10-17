@@ -50,6 +50,6 @@ cc_tfar_llistaRF = ["rfl", "rflat", "gr", "ar", "dm", "mg", "amg", "at", "aat", 
 cc_tfar_llistaSR = ["pl", "psg", "rto", "fo", "me", "sl", "tl", "sn", "sp", "divsl", "divme"];
 
 // Llista d'unitats amb Long Range Radio (fn_configEquipacio.sqf).
-cc_tfar_llistaLR = ["rto", "fo", "sl", "tl"];
+cc_tfar_llistaLR = ["rto", "fo"];
 
 //============================================ FI DEL FITXER ============================================//

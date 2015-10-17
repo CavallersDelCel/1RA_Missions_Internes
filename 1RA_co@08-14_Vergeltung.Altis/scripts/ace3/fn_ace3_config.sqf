@@ -13,8 +13,6 @@
 
 private["_metges", "_vehiclesMedics", "_edificisMedics", "_espExplosius", "_enginyers", "_vehiclesReparacio", "_tallers", "_unitatsRendeixen","_unitat", "_ErrorModul"];
 
-cc_mod_ace3 = isClass (configFile >> "CfgPatches" >> "ace_common");        // Comprovar si ACE 3 està carregat.
-
 if (cc_mod_ace3) then {
     _ErrorModul = false;
     _metges = ["CC_Alfa1_5","CC_Alfa2_5"];

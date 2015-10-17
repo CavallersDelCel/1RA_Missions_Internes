@@ -26,10 +26,13 @@ if ((_respawn == 0) or (_respawn == 1) and ({alive _x} count allPlayers <= 0)) e
 if (alive _unitat) then {
     // Si hi ha respawn de tipus BIRD.
     if (_respawn == 1) then {
-
         // Amaga el cos en cas de que sigui una gavina.
        if (_unitat isKindOf "seagull") then {
-           hideBody _unitat;
+           if (cc_mod_ace3) then {
+              [true] call ace_spectator_fnc_stageSpectator;
+           } else {
+               [[_unitat], "hideBody", true, true] call BIS_fnc_MP;
+           };
        };
 
         // Si hi ha ACE3 carregat utilitza el mode espectador de ACE 3. En cas contrari s'utilitza el mode

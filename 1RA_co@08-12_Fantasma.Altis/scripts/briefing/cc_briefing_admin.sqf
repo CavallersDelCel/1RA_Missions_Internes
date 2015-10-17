@@ -44,7 +44,7 @@ _briefingNotes = "
 <br/>
 <font color='#00FFFF'>Nom de la missió:</font> ""Operació Fantasma"".
 <br/>
-<font color='#00FFFF'>Versió:</font> 1.0.
+<font color='#00FFFF'>Versió:</font> 1.1.
 <br/>
 <font color='#00FFFF'>Autor:</font> CC_Magnetar.
 <br/>

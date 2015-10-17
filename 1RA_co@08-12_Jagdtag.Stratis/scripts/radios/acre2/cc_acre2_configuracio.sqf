@@ -101,10 +101,10 @@ cc_acre2_config_llistaCanals = ["ALFA","ALFA 1","ALFA 2","ALFA 3","COMANDAMENT",
 cc_acre2_config_FreqCanals = [200, 201, 202, 203, 41, 51, 61];
 
 // Llista d'unitats amb "Rifleman Radio" (fn_configEquipacio.sqf).
-cc_acre2_llistaRadioSoldats = ["rfl", "rflat", "gr", "ar", "dm", "mg", "amg", "at", "aat", "aa", "aaa", "en", "exp", "divme", "div"];
+cc_acre2_llistaRadioSoldats = ["rfl", "rflat", "gr", "ar", "dm", "mg", "amg", "at", "aat", "aa", "aaa", "en", "exp", "div", "hplt", "jplt"];
 
 // Llista d'unitats amb "Short Range Radio ""(fn_configEquipacio.sqf).
-cc_acre2_llistaRadioOficials = ["pl", "psg", "rto", "fo", "me", "sl", "tl", "sn", "sp", "divsl"];
+cc_acre2_llistaRadioOficials = ["pl", "psg", "rto", "fo", "me", "sl", "tl", "sn", "sp", "divsl", "divme"];
 
 // Llista d'unitats amb "Long Range Radio" (fn_configEquipacio.sqf).
 cc_acre2_llistaRadioRTO = ["rto", "fo","sl"];

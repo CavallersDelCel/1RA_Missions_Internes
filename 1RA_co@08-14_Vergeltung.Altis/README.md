@@ -27,7 +27,7 @@ aliat enfront un atac enemic. Els equips de foc tenen cobertura i evacuació aè
 ja que es considera una missió difícil i requereix coordinació a tres bandes. La partida no espera als jugadors i els esdeveniments succeiexen de cert temps. S'acaba un cop
 les forces enemigues hagin sigut eliminades en la seva totalitat. El brífing el dóna el líder d'equip de foc a dins de la partida.
 
-**Plantilla Bàsica per Missions (PBM)**: v0.4.1 (https://github.com/CavallersDelCel/1RA_Plantilla_Missio) per CC_Magnetar.
+**Plantilla Bàsica per Missions (PBM)**: v0.4.2 (https://github.com/CavallersDelCel/1RA_Plantilla_Missio) per CC_Magnetar.
 
 **Mods necessàris o recomenats**: Llista dels mods necessàris o recomenats per la missió.
 
@@ -120,25 +120,15 @@ Cavallers del Cel SOP "Standard Operating Procedure"
   * **HIMMELSFAUST - Helicòpter de combat - Canal 2 - Freqüència 602**
     * Pilot.
 
-##### REQUISITS
-
-Aquesta missió s'ha comprovat que funciona amb el següent:
-
-* Dynamic-AI-Creator (DAC) v3.1b (versió en script). **Necessari**.
-* RHS United States Army Forces (RHS USAF) v0.3.9.1. **Necessari**.
-* Community Base Addons (CBA) v2.0.
-* Advanced Combat Environment 3 (ACE3) v3.3.2.
-* Task Force Arrowhead Radio (TFAR) v0.9.7.3.
-
 # Plantilla Bàsica per Missions (PBM)
 
 **Autor**: CC_Magnetar.
 
 **Contribuïdors**: CC_Viper (Plantilles d'imatges).
 
-**Versió**: 0.4.1.
+**Versió**: 0.4.2.
 
-**Darrera modificació**: 2015/10/04.
+**Darrera modificació**: 2015/10/17.
 
 **Descripció**: Plantilla bàsica per generar missions pel grup d'Arma 1er Regiment Aerotransportat (1RA) de la Comunitat Catalana de Simulació - Cavallers del Cel.
 

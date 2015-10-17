@@ -8,7 +8,7 @@ Missió generada amb la Plantilla Bàsica per Missions (PBM) del grup 1er Regime
 
 **Nom de la missió**: Operació Fantasma.
 
-**Versió**: v1.01 (2015/10/04).
+**Versió**: v1.1 (2015/10/17).
 
 **Autor**: CC_Magnetar.
 
@@ -26,7 +26,17 @@ Missió generada amb la Plantilla Bàsica per Missions (PBM) del grup 1er Regime
 Per tal d'acomplir els objectius es requereixen entre 8 i 12 jugadors molt ben coordinats ja que es considera una missió difícil. La tasca no s'actualitza un cop completada
 i són els jugadors els qui decideixen si l'han completat o no.
 
-**Plantilla Bàsica per Missions (PBM)**: v0.4.1 (https://github.com/CavallersDelCel/1RA_Plantilla_Missio) per CC_Magnetar.
+**Plantilla Bàsica per Missions (PBM)**: v0.4.2 (https://github.com/CavallersDelCel/1RA_Plantilla_Missio) per CC_Magnetar.
+
+**Mods necessàris o recomenats**: 
+
+Aquesta missió s'ha comprovat que funciona amb el següent:
+
+* Dynamic-AI-Creator (DAC) v3.1b (versió en script). **Necessari**.
+* RHS United States Armed Forces (RHS USAF) v0.3.9.1. **Necessari**.
+* Community Base Addons (CBA) v2.0.
+* Advanced Combat Environment 3 (ACE3) v3.3.2.
+* Task Force Arrowhead Radio (TFAR) v0.9.7.3.
 
 ### Descripció detallada de la missió
 
@@ -104,25 +114,15 @@ Cavallers del Cel SOP "Standard Operating Procedure"
     * Franctirador.
     * Observador.
 
-##### REQUISITS
-
-Aquesta missió s'ha comprovat que funciona amb el següent:
-
-* Dynamic-AI-Creator (DAC) v3.1b (versió en script). **Necessari**.
-* RHS United States Armed Forces (RHS USAF) v0.3.9.1. **Necessari**.
-* Community Base Addons (CBA) v2.0.
-* Advanced Combat Environment 3 (ACE3) v3.3.2.
-* Task Force Arrowhead Radio (TFAR) v0.9.7.3.
-
 # Plantilla Bàsica per Missions (PBM)
 
 **Autor**: CC_Magnetar.
 
 **Contribuïdors**: CC_Viper (Plantilles d'imatges).
 
-**Versió**: 0.4.1.
+**Versió**: 0.4.2.
 
-**Darrera modificació**: 2015/10/04.
+**Darrera modificació**: 2015/10/17.
 
 **Descripció**: Plantilla bàsica per generar missions pel grup d'Arma 1er Regiment Aerotransportat (1RA) de la Comunitat Catalana de Simulació - Cavallers del Cel.
 

@@ -27,7 +27,16 @@ fins que les torres inhibidores de senyal siguin destruïdes. Partint d'escaça 
 que s'avança en la missió a través d'informes d'inteligència. Per tal d'acomplir els objectius es requereixen entre 8 i 12 jugadors molt ben coordinats ja que es
 considera una missió difícil. Les tasques no s'actualitzen un cop completades i són els jugadors els qui decideixen si les han completat o no.
 
-**Plantilla Bàsica per Missions (PBM)**: v0.4.1 (https://github.com/CavallersDelCel/1RA_Plantilla_Missio) per CC_Magnetar.
+**Plantilla Bàsica per Missions (PBM)**: v0.4.2 (https://github.com/CavallersDelCel/1RA_Plantilla_Missio) per CC_Magnetar.
+
+**Mods necessàris o recomenats**: Llista dels mods necessàris o recomenats per la missió.
+
+Aquesta missió s'ha comprovat que funciona amb el següent:
+
+* RHS United States Armed Forces (RHS USAF) v0.3.9.1. **Necessari**.
+* Community Base Addons (CBA) v2.0. **Necessari**.
+* Advanced Combat Environment 3 (ACE3) v3.3.2.
+* Task Force Arrowhead Radio (TFAR) v0.9.7.3. **Necessari**.
 
 ### Descripció detallada de la missió
 
@@ -43,11 +52,9 @@ a una granja abandonada a les coordenades 045068 però es té la certesa de que 
 
 Degut a la gravetat de la situació, dos equips altament especialitzats han sigut designats per actuar amb contundència i celeritat: és l'hora de caçar!
 
-
 ##### FORCES AMIGUES
 
 * Esquadra d'Infanteria mecanitzada Gossos d'Acer (sense comunicació per ràdio).
-
 
 ##### FORCES ENEMIGUES
 
@@ -114,9 +121,9 @@ Cavallers del Cel SOP "Standard Operating Procedure"
 
 **Contribuïdors**: CC_Viper (Plantilles d'imatges).
 
-**Versió**: 0.4.1.
+**Versió**: 0.4.2.
 
-**Darrera modificació**: 2015/10/04.
+**Darrera modificació**: 2015/10/17.
 
 **Descripció**: Plantilla bàsica per generar missions pel grup d'Arma 1er Regiment Aerotransportat (1RA) de la Comunitat Catalana de Simulació - Cavallers del Cel.
 
