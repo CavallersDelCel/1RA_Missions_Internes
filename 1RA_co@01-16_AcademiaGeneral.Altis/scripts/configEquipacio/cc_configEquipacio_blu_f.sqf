@@ -44,6 +44,7 @@
 //                                                                                                       //
 //                  cinst               Instructor en cap (Chief instructor)                             //
 //                  inst                Instructor (Instructor)                                          //
+//                  trnr                Entrenador (Trainer)                                             //
 //                  stcc                Estudiant (student)                                              //
 //                                                                                                       //
 //                  hmmwv               Equipació per HMMWVs                                             //
@@ -60,7 +61,7 @@
 //         0.8  (2015/07/15) Canvi a Params (Arma v1.48).                                                //
 //         0.9  (2015/10/07) Afegit els rols de pilot d'helicòpter (hplt) i d'avió de combat (jplt).     //
 //         0.10 (2015/10/18) Afegits els rols per l'acadèmia d'instructor en cap (cinst), instructor     //
-//                          (inst) i alumne dels Cavallers del Cel (stcc)                                //
+//                          (inst), entrenador (trnr) i alumne dels Cavallers del Cel (stcc).            //
 //=======================================================================================================//
 
 //=======================================================================================================//
@@ -94,6 +95,7 @@ _uniformeHPLT = "U_B_HeliPilotCoveralls";
 _uniformeJPLT = "U_B_HeliPilotCoveralls";
 _uniformeCINST = "U_Competitor";
 _uniformeINST = "U_Competitor";
+_uniformeTRNR = "U_Competitor";
 _uniformeSTCC = "U_B_CombatUniform_mcam_tshirt";
 
 // Armilles.
@@ -112,7 +114,7 @@ _cascHPLT = "rhsusf_hgu56p_mask";
 _cascJPLT = "rhs_jetpilot_usaf";
 _cascCINST = "H_MilCap_mcamo";
 _cascINST = "H_MilCap_mcamo";
-
+_cascTRNR = "H_MilCap_blue";
 
 // Ulleres.
 _ulleres = "G_Tactical_Clear";
@@ -226,7 +228,7 @@ if (cc_mod_ace3) then {
 
     // Objectes mèdics: Torniquets.
     _torniquet = "ACE_tourniquet";
-    
+
     // Paracaigudes
     _paracaigudesJPLT = "ACE_NonSteerableParachute";
 };
@@ -1553,10 +1555,10 @@ switch (_tipusUnitat) do
         _unitat addPrimaryWeaponItem _armaLaserLlanterna;
         _unitat addPrimaryWeaponItem _armaMira;
     };
-    
+
     // Instructor en cap (Chief instructor)
     case "cinst": {
-        // Treure tota l'equipació    
+        // Treure tota l'equipació
         removeAllWeapons _unitat;
         removeAllAssignedItems _unitat;
         clearAllItemsFromBackpack _unitat;
@@ -1570,7 +1572,7 @@ switch (_tipusUnitat) do
         // Uniforme i casc.
         _unitat forceAddUniform _uniformeCINST;
         _unitat addHeadgear _cascCINST;
-        
+
         // Objectes a l'uniforme.
         if (cc_mod_ace3 or cc_mod_agm) then {
             (uniformContainer _unitat) addItemCargoGlobal [_taps,1];
@@ -1578,7 +1580,7 @@ switch (_tipusUnitat) do
 
         // Binocles.
         _unitat addWeapon _vectorIV;
-        
+
         // Objectes comuns.
         if (cc_mod_ace3) then {
             (uniformContainer _unitat) addItemCargoGlobal [_microDAGR,1];
@@ -1590,10 +1592,10 @@ switch (_tipusUnitat) do
         _unitat linkItem _brujola;
         _unitat linkItem _radio;
     };
-    
+
     // Instructor (Instructor)
     case "inst": {
-        // Treure tota l'equipació    
+        // Treure tota l'equipació
         removeAllWeapons _unitat;
         removeAllAssignedItems _unitat;
         clearAllItemsFromBackpack _unitat;
@@ -1607,7 +1609,7 @@ switch (_tipusUnitat) do
         // Uniforme i casc.
         _unitat forceAddUniform _uniformeINST;
         _unitat addHeadgear _cascINST;
-        
+
         // Objectes a l'uniforme.
         if (cc_mod_ace3 or cc_mod_agm) then {
             (uniformContainer _unitat) addItemCargoGlobal [_taps,1];
@@ -1615,7 +1617,7 @@ switch (_tipusUnitat) do
 
         // Binocles.
         _unitat addWeapon _vectorIV;
-        
+
         // Objectes comuns.
         if (cc_mod_ace3) then {
             (uniformContainer _unitat) addItemCargoGlobal [_microDAGR,1];
@@ -1627,10 +1629,47 @@ switch (_tipusUnitat) do
         _unitat linkItem _brujola;
         _unitat linkItem _radio;
     };
-    
+
+    // Entrenador (Trainer)
+    case "trnr": {
+        // Treure tota l'equipació
+        removeAllWeapons _unitat;
+        removeAllAssignedItems _unitat;
+        clearAllItemsFromBackpack _unitat;
+        removeAllContainers _unitat;
+        removeHeadgear _unitat;
+        removeBackpack _unitat;
+        removeVest _unitat;
+        removeUniform _unitat;
+        removeGoggles _unitat;
+
+        // Uniforme i casc.
+        _unitat forceAddUniform _uniformeTRNR;
+        _unitat addHeadgear _cascTRNR;
+
+        // Objectes a l'uniforme.
+        if (cc_mod_ace3 or cc_mod_agm) then {
+            (uniformContainer _unitat) addItemCargoGlobal [_taps,1];
+        };
+
+        // Binocles.
+        _unitat addWeapon _vectorIV;
+
+        // Objectes comuns.
+        if (cc_mod_ace3) then {
+            (uniformContainer _unitat) addItemCargoGlobal [_microDAGR,1];
+        } else {
+            _unitat linkItem _gps;
+        };
+        _unitat linkItem _mapa;
+        _unitat linkItem _rellotge;
+        _unitat linkItem _brujola;
+        _unitat linkItem _radio;
+    };
+
     // Alumne (Student)
     case "stcc": {
-        // Treure tota l'equipació    
+        // Treure tota l'equipació
         removeAllWeapons _unitat;
         removeAllAssignedItems _unitat;
         clearAllItemsFromBackpack _unitat;
@@ -1643,12 +1682,12 @@ switch (_tipusUnitat) do
 
         // Uniforme i casc.
         _unitat forceAddUniform _uniformeSTCC;
-        
+
         // Objectes a l'uniforme.
         if (cc_mod_ace3 or cc_mod_agm) then {
             (uniformContainer _unitat) addItemCargoGlobal [_taps,1];
         };
-        
+
         // Objectes comuns.
         _unitat linkItem _mapa;
         _unitat linkItem _rellotge;
