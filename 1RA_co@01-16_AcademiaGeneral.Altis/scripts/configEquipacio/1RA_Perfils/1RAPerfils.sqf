@@ -65,13 +65,13 @@ _guardarPerfils = ["Estàs segur de desar els perfils?", "Perfils 1RA", true, tr
 if ( !_guardarPerfils ) exitWith{
 	// No fer res si la resposta és negativa (Cancel) i sortir del script
 };
+
 // Desactivar qualsevol moviment del jugador
 disableUserInput true;
 
-_blackScreen = execVM "fnc\effects\blackScreen.sqf";
-
 // Informa al jugador del que s'està fent.
-player sidechat format ["%1", "Carregant i desant tots els perfils. Trigarà 3 minuts, espera si us plau..."];
+titleCut ["Carregant i desant tots els perfils. Trigarà 3 minuts, espera si us plau...", "BLACK FADED", 999];
+
 
 //=======================================================================================================//
 // Líder d'Esquadra CC - Lider d'esquadra M4A1+M320 OCP                                                  //
@@ -149,11 +149,11 @@ player linkItem "tf_anprc152";
 // Insígnia
 [player,"PATCH_CC_CC"] call bis_fnc_setUnitInsignia;
 
-sleep 5;
+sleep 3;
 _namespace = profileNamespace;
 _loadout = [player,[_namespace,"CC - Lider d'esquadra M4A1+M320 OCP"]] call BIS_fnc_saveInventory;
 player sidechat format ["%1", "Perfil << Lider d'esquadra M4A1+M320 OCP >> desat"];
-sleep 5;
+sleep 3;
 
 //=======================================================================================================//
 // Líder d'Equip: CC - Lider d'equip M4A1+M320 OCP                                                       //
@@ -234,11 +234,11 @@ player linkItem "tf_anprc152";
 // Insígnia
 [player,"PATCH_CC_CC"] call bis_fnc_setUnitInsignia;
 
-sleep 5;
+sleep 3;
 _namespace = profileNamespace;
 _loadout = [player,[_namespace,"CC - Lider d'equip M4A1+M320 OCP"]] call BIS_fnc_saveInventory;
 player sidechat format ["%1", "Perfil << Lider d'equip M4A1+M320 OCP >> desat"];
-sleep 5;
+sleep 3;
 
 //=======================================================================================================//
 // Fuseller: CC - Fuseller M4A1 OCP                                                                      //
@@ -309,11 +309,11 @@ player linkItem "tf_rf7800str";
 // Insígnia
 [player,"PATCH_CC_CC"] call bis_fnc_setUnitInsignia;
 
-sleep 5;
+sleep 3;
 _namespace = profileNamespace;
 _loadout = [player,[_namespace,"CC - Fuseller M4A1 OCP"]] call BIS_fnc_saveInventory;
 player sidechat format ["%1", "Perfil << Fuseller M4A1 OCP >> desat"];
-sleep 5;
+sleep 3;
 
 //=======================================================================================================//
 // Granader: CC - Granader M4A1+M320 OCP                                                                 //
@@ -386,11 +386,11 @@ player linkItem "tf_rf7800str";
 // Insígnia
 [player,"PATCH_CC_CC"] call bis_fnc_setUnitInsignia;
 
-sleep 5;
+sleep 3;
 _namespace = profileNamespace;
 _loadout = [player,[_namespace,"CC - Granader M4A1+M320 OCP"]] call BIS_fnc_saveInventory;
 player sidechat format ["%1", "Perfil << Granader M4A1+M320 OCP >> desat"];
-sleep 5;
+sleep 3;
 
 //=======================================================================================================//
 // Fuseller Automàtic: CC - FA M249 OCP                                                                  //
@@ -457,11 +457,11 @@ player linkItem "tf_rf7800str";
 // Insígnia
 [player,"PATCH_CC_CC"] call bis_fnc_setUnitInsignia;
 
-sleep 5;
+sleep 3;
 _namespace = profileNamespace;
 _loadout = [player,[_namespace,"CC - FA M249 OCP"]] call BIS_fnc_saveInventory;
 player sidechat format ["%1", "Perfil << FA M249 OCP >> desat"];
-sleep 5;
+sleep 3;
 
 //=======================================================================================================//
 // Metrallador: CC - Metrallador M240B OCP                                                               //
@@ -526,11 +526,11 @@ player linkItem "tf_rf7800str";
 // Insígnia
 [player,"PATCH_CC_CC"] call bis_fnc_setUnitInsignia;
 
-sleep 5;
+sleep 3;
 _namespace = profileNamespace;
 _loadout = [player,[_namespace,"CC - Metrallador M240B OCP"]] call BIS_fnc_saveInventory;
 player sidechat format ["%1", "Perfil << Metrallador M240B OCP >> desat"];
-sleep 5;
+sleep 3;
 
 //=======================================================================================================//
 // Fuseller AT4: CC - AT M4A1+AT4 OCP                                                                    //
@@ -603,11 +603,11 @@ player linkItem "tf_rf7800str";
 // Insígnia
 [player,"PATCH_CC_CC"] call bis_fnc_setUnitInsignia;
 
-sleep 5;
+sleep 3;
 _namespace = profileNamespace;
 _loadout = [player,[_namespace,"CC - AT M4A1+AT4 OCP"]] call BIS_fnc_saveInventory;
 player sidechat format ["%1", "Perfil << AT M4A1+AT4 OCP >> desat"];
-sleep 5;
+sleep 3;
 
 //=======================================================================================================//
 // Antitanc: CC - AT M4A1+Javelin OCP                                                                    //
@@ -679,11 +679,11 @@ player linkItem "tf_rf7800str";
 // Insígnia
 [player,"PATCH_CC_CC"] call bis_fnc_setUnitInsignia;
 
-sleep 5;
+sleep 3;
 _namespace = profileNamespace;
 _loadout = [player,[_namespace,"CC - AT M4A1+Javelin OCP"]] call BIS_fnc_saveInventory;
 player sidechat format ["%1", "Perfil << AT M4A1+Javelin OCP >> desat"];
-sleep 5;
+sleep 3;
 
 //=======================================================================================================//
 // Antitanc: CC - AA M4A1+Stinger OCP                                                                    //
@@ -755,11 +755,11 @@ player linkItem "tf_rf7800str";
 // Insígnia
 [player,"PATCH_CC_CC"] call bis_fnc_setUnitInsignia;
 
-sleep 5;
+sleep 3;
 _namespace = profileNamespace;
 _loadout = [player,[_namespace,"CC - AA M4A1+Stinger OCP"]] call BIS_fnc_saveInventory;
 player sidechat format ["%1", "Perfil << AA M4A1+Stinger OCP >> desat"];
-sleep 5;
+sleep 3;
 
 //=======================================================================================================//
 // Tirador designat: CC - Tirador SR-25EC OCP                                                            //
@@ -833,11 +833,11 @@ player linkItem "tf_rf7800str";
 // Insígnia
 [player,"PATCH_CC_CC"] call bis_fnc_setUnitInsignia;
 
-sleep 5;
+sleep 3;
 _namespace = profileNamespace;
 _loadout = [player,[_namespace,"CC - Tirador SR-25EC OCP"]] call BIS_fnc_saveInventory;
 player sidechat format ["%1", "Perfil << Tirador SR-25EC OCP >> desat"];
-sleep 5;
+sleep 3;
 
 //=======================================================================================================//
 // Metge: CC - Metge M4A1 OCP                                                                            //
@@ -909,11 +909,11 @@ player linkItem "tf_rf7800str";
 // Insígnia
 [player,"PATCH_CC_CC"] call bis_fnc_setUnitInsignia;
 
-sleep 5;
+sleep 3;
 _namespace = profileNamespace;
 _loadout = [player,[_namespace,"CC - Metge M4A1 OCP"]] call BIS_fnc_saveInventory;
 player sidechat format ["%1", "Perfil << Metge M4A1 OCP >> desat"];
-sleep 5;
+sleep 3;
 
 //=======================================================================================================//
 // Explosius: CC - Explosius M4A1 OCP                                                                    //
@@ -986,11 +986,11 @@ player linkItem "tf_rf7800str";
 // Insígnia
 [player,"PATCH_CC_CC"] call bis_fnc_setUnitInsignia;
 
-sleep 5;
+sleep 3;
 _namespace = profileNamespace;
 _loadout = [player,[_namespace,"CC - Explosius M4A1 OCP"]] call BIS_fnc_saveInventory;
 player sidechat format ["%1", "Perfil << Explosius M4A1 OCP >> desat"];
-sleep 5;
+sleep 3;
 
 //=======================================================================================================//
 // Franctirador: CC - Franctirador M2010ESR OCP                                                          //
@@ -1065,11 +1065,11 @@ player linkItem "tf_anprc152";
 // Insígnia
 [player,"PATCH_CC_CC"] call bis_fnc_setUnitInsignia;
 
-sleep 5;
+sleep 3;
 _namespace = profileNamespace;
 _loadout = [player,[_namespace,"CC - Franctirador M2010ESR OCP"]] call BIS_fnc_saveInventory;
 player sidechat format ["%1", "Perfil << Franctirador M2010ESR OCP >> desat"];
-sleep 5;
+sleep 3;
 
 //=======================================================================================================//
 // Observador: CC - Observador M4A1 OCP                                                          //
@@ -1147,11 +1147,11 @@ player linkItem "tf_rf7800str";
 // Insígnia
 [player,"PATCH_CC_CC"] call bis_fnc_setUnitInsignia;
 
-sleep 5;
+sleep 3;
 _namespace = profileNamespace;
 _loadout = [player,[_namespace,"CC - Observador M4A1 OCP"]] call BIS_fnc_saveInventory;
 player sidechat format ["%1", "Perfil << Observador M4A1 OCP >> desat"];
-sleep 5;
+sleep 3;
 
 //=======================================================================================================//
 // Bussejador líder: CC - Bussejador lider M4A1                                                          //
@@ -1225,11 +1225,11 @@ player linkItem "tf_anprc152";
 // Insígnia
 [player,"PATCH_CC_CC"] call bis_fnc_setUnitInsignia;
 
-sleep 5;
+sleep 3;
 _namespace = profileNamespace;
 _loadout = [player,[_namespace,"CC - Bussejador lider M4A1"]] call BIS_fnc_saveInventory;
 player sidechat format ["%1", "Perfil << Bussejador lider M4A1>> desat"];
-sleep 5;
+sleep 3;
 
 //=======================================================================================================//
 // Bussejador: CC - Bussejador M4A1                                                                      //
@@ -1299,11 +1299,11 @@ player linkItem "tf_rf7800str";
 // Insígnia
 [player,"PATCH_CC_CC"] call bis_fnc_setUnitInsignia;
 
-sleep 5;
+sleep 3;
 _namespace = profileNamespace;
 _loadout = [player,[_namespace,"CC - Bussejador M4A1"]] call BIS_fnc_saveInventory;
 player sidechat format ["%1", "Perfil << Bussejador M4A1 >> desat"];
-sleep 5;
+sleep 3;
 
 //=======================================================================================================//
 // Bussejador metge: CC - Bussejador metge M4A1                                                          //
@@ -1374,11 +1374,11 @@ player linkItem "tf_rf7800str";
 // Insígnia
 [player,"PATCH_CC_CC"] call bis_fnc_setUnitInsignia;
 
-sleep 5;
+sleep 3;
 _namespace = profileNamespace;
 _loadout = [player,[_namespace,"CC - Bussejador metge M4A1"]] call BIS_fnc_saveInventory;
 player sidechat format ["%1", "Perfil << Bussejador metge M4A1 >> desat"];
-sleep 5;
+sleep 3;
 
 //=======================================================================================================//
 // Bussejador explosius: CC - Bussejador explosius M4A1                                                  //
@@ -1450,7 +1450,7 @@ player linkItem "tf_rf7800str";
 // Insígnia
 [player,"PATCH_CC_CC"] call bis_fnc_setUnitInsignia;
 
-sleep 5;
+sleep 3;
 _namespace = profileNamespace;
 _loadout = [player,[_namespace,"CC - Bussejador explosius M4A1"]] call BIS_fnc_saveInventory;
 player sidechat format ["%1", "Perfil << Bussejador explosius M4A1 >> desat"];
@@ -1458,9 +1458,7 @@ player sidechat format ["%1", "Perfil << Bussejador explosius M4A1 >> desat"];
 //=======================================================================================================//
 // Tots els perfils estan guardats                                                                       //
 //=======================================================================================================//
-terminate _blackScreen;
-sleep 5;
-cutText ["","BLACK IN",10];
+titleCut ["Tots els perfils desats.", "BLACK IN", 5];
 disableUserInput false;
 sleep 5;
 player sidechat format ["%1", "Tots els perfils desats."];

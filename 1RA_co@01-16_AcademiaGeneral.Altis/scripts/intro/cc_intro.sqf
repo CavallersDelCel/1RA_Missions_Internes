@@ -23,7 +23,7 @@ if (isDedicated) exitWith {};
 // Esperar a que la variable que habilita/deshabilita el text de Debug estigui inicialitzada.
 waitUntil {!isNil "cc_param_debugOutput"};
 
-#define nomMissio  "Nom de la missió"
+#define nomMissio  "Acadèmia general"
 
 // Identificar la facció de la unitat.
 _faccioUnitat = toLower (faction player);
@@ -35,8 +35,8 @@ if (_faccioUnitat != toLower (faction (leader group player))) then {
 
 // Introducció per la facció BLUFOR.
 if (_faccioUnitat == "blu_f") exitWith {
-    #define introText "Relaxar-se mata! Estigueu alerta!\nViper - Capità dels cavallers del Cel"
-    #define llocMissio "Localització"
+    #define introText "Benvinguts a l'acadèmia general del 1er Regiment Aerotransportat (1RA).\n\n\nWhoever said the pen is mightier than the sword obviously never encountered automatic weapons.\nDouglas MacArthur."
+    #define llocMissio "Camp de Tir"
 
     #include "cc_intro_pantallaNegre_typeText.sqf"
 

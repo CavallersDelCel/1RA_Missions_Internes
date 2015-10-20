@@ -12,7 +12,7 @@
 class Header {
     gameType = Coop;           // Mode de joc: https://community.bistudio.com/wiki/Multiplayer_Game_Types
     minPlayers = 1;            // Nombre mínim de jugadors.
-    maxPlayers = 14;           // Nombre màxim de jugadors.
+    maxPlayers = 19;           // Nombre màxim de jugadors.
     playerCountMultipleOf = 1; // Per fer balanç en partides tvt o pvp per exemple.
 };
 
@@ -26,17 +26,17 @@ class Header {
 //=======================================================================================================//
 
 onLoadName = "Acadèmia general";                       // Nom de la missió (apareix en gran).
-onLoadMission = "Acadèmia General del 1er Regiment Aerotransportat";    // Descripció breu de la missió.
+onLoadMission = "Acadèmia General del 1er Regiment Aerotransportat (1RA).";    // Descripció breu de la missió.
 onLoadIntro = "Plantilla Bàsica per Missions (PBM)";   // Missatge mostrat mentre es carrega la introducció.
 onLoadIntroTime = 0;                                   // Quan la intro es carrega mostra (1) o amaga (0)
                                                        // el dia i l'hora de la missió.
 onLoadMissionTime = 0;                                 // Quan la missió es carrega mostra (1) o amaga (0)
                                                        // el dia i l'hora de la missió.
 author = "CC_Magnetar";                                // Autor.
-loadScreen = "imatges\loadScreen.jpg";                 // Imatge mentre es carrega la missió.
-overviewPicture = "imatges\overviewPicture.jpg";       // Imatge que es mostra al seleccionar la missió.
+loadScreen = "imatges\portada.paa";                    // Imatge mentre es carrega la missió.
+overviewPicture = "imatges\portada.paa";               // Imatge que es mostra al seleccionar la missió.
                                                        // Ha d'estar en format .paa i aspecte 2:1.
-overviewText = "Acadèmia general del 1er Regiment Aerotransportat dels Cavallers del Cel.";              // Text que es mostra al seleccionar la missó.
+overviewText = "Acadèmia general del 1er Regiment Aerotransportat (1RA) dels Cavallers del Cel.";              // Text que es mostra al seleccionar la missó.
 
 //=======================================================================================================//
 // Consola de Debug de BIS: https://community.bistudio.com/wiki/Description.ext#enableDebugConsole       //
@@ -53,7 +53,7 @@ showMap     = 1;             // Mostra el mapa després de que comenci la missi�
 showWatch   = 1;             // Mostra el rellotge: 0 = deshabilitat, 1 = habilitat.
 forceRotorLibSimulation = 1; // Força la llibreria de model de vol avançat: 0 = opcions del client,
                              // 1 = força l'activació, 2 = força la desactivació.
-disableChannels[]={1,2,3,4}; // Deshabilita els canals: 0 = global, 1 = Side, 2 = Command, 3 = Group,
+disableChannels[]={};        // Deshabilita els canals: 0 = global, 1 = Side, 2 = Command, 3 = Group,
                              // 4 = Vehicle, 5 = Direct, 6 = System.
 
 //=======================================================================================================//
@@ -90,7 +90,7 @@ class Params {
         title = "Mode Debug";
         values[] = {0,1};
         texts[] = {"Desactivat","Activat"};
-        default = 1;
+        default = 0;
     };
 
     //===================================================================================================//
