@@ -23,7 +23,7 @@ if (isDedicated) exitWith {};
 // Esperar a que la variable que habilita/deshabilita el text de Debug estigui inicialitzada.
 waitUntil {!isNil "cc_param_debugOutput"};
 
-#define nomMissio  "Nom de la missió"
+#define nomMissio  "DCS i Arma 3"
 
 // Identificar la facció de la unitat.
 _faccioUnitat = toLower (faction player);
@@ -36,7 +36,7 @@ if (_faccioUnitat != toLower (faction (leader group player))) then {
 // Introducció per la facció BLUFOR.
 if (_faccioUnitat == "blu_f") exitWith {
     #define introText "Relaxar-se mata! Estigueu alerta!\nViper - Capità dels cavallers del Cel"
-    #define llocMissio "Localització"
+    #define llocMissio "Aeroport d'Altis"
 
     #include "cc_intro_pantallaNegre_typeText.sqf"
 
@@ -101,7 +101,7 @@ if (_faccioUnitat == "opf_f") exitWith {
 // Introducció per la facció RHS: USAF "United States Army".
 if (_faccioUnitat == "rhs_faction_usarmy_d") exitWith {
     #define introText "Relaxar-se mata! Estigueu alerta!\nViper - Capità dels cavallers del Cel"
-    #define llocMissio "Localització"
+    #define llocMissio "Aeroport d'Altis"
 
     #include "cc_intro_pantallaNegre_typeText.sqf"
 

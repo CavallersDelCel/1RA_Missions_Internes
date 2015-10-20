@@ -15,7 +15,7 @@ private["_metges", "_vehiclesMedics", "_edificisMedics", "_espExplosius", "_engi
 
 if (cc_mod_ace3) then {
     _ErrorModul = false;
-    _metges = ["CC_Alfa1_2", "CC_Alfa2_5"];
+    _metges = [CC_Alfa1_2, CC_Alfa2_5];
     _vehiclesMedics = [];
     _edificisMedics = [];
     _espExplosius = [];

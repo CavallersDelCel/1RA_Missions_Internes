@@ -1,30 +1,28 @@
 //=======================================================================================================//
-// Arxiu: cc_briefing_blu_f.sqf                                                                          //
-// Autor: CC_Magnetar                                                                                    //
-// Versió: 0.1                                                                                           //
-// Creació del Document: 22/02/2015                                                                      //
-// Descripció: Aquest document serveix per oferir informació de la missió si la unitat forma part de     //
-//             la facció BLUFOR (blu_f).                                                                 //
-//=======================================================================================================//
-
-//=======================================================================================================//
 // NOTES: CRÈDITS.                                                                                       //
 //=======================================================================================================//
 _credits = player createDiaryRecord ["diary", ["Crèdits","
-Missió generada per <font color='#00FFFF'>*** Autors ***</font> per a la <font color='#00FFFF'>Comunitat Catalana de Simulació - Cavallers del Cel</font>.
-<br/><br/>
-Amb la col·laboració de CC_Magnetar (plantilla) i *** possibles col·laboradors ***.
+Missió generada per <font color='#00FFFF'>Magnetar</font> per a la <font color='#00FFFF'>Comunitat Catalana de Simulació - Cavallers del Cel</font>.
 "]];
 
 //=======================================================================================================//
 // NOTES: RADIO.                                                                                         //
 //=======================================================================================================//
 _admlog = player createDiaryRecord ["diary", ["Freqüències de Radio","
-<font color='#FF0000' size='18'>Comandament</font>: 41 kHz.
+<font color='#FF0000' size='18'>Comandament</font>: 30 kHz.
 <br/><br/>
-<font color='#FF0000' size='18'>Suport</font>: 51 kHz.
+<font color='#FF0000' size='18'>Infanteria</font>: 40 kHz.
 <br/><br/>
-<font color='#FF0000' size='18'>Artilleria</font>: 61 kHz.
+<font color='#FF0000' size='18'>Blindats</font>: 50 kHz.
+<br/><br/>
+<font color='#FF0000' size='18'>Aeronaus</font>: 60 kHz.
+<br/><br/>
+<font color='#FF0000' size='18'>Artilleria</font>: 70 kHz.
+<br/>
+- FALCÓ 1 - Freqüència 61 kHz.
+- FALCÓ 2 - Freqüència 62 kHz.
+- FALCÓ 3 - Freqüència 63 kHz.
+- FALCÓ 4 - Freqüència 64 kHz.
 <br/><br/>
 <font color='#FF0000' size='18'>Alfa</font>
 <br/>
@@ -34,17 +32,7 @@ _admlog = player createDiaryRecord ["diary", ["Freqüències de Radio","
 <br/>
 - Equip de foc ""Alfa 1-2"": 202 kHz.
 <br/>
-- Equip de foc ""Alfa 1-3"": 203 kHz.
-<br/><br/>
-<font color='#FF0000' size='18'>Bravo</font>
-<br/>
-- Esquadra ""Bravo"": 210 kHz.
-<br/>
-- Equip de foc ""Bravo 1-1"": 211 kHz.
-<br/>
-- Equip de foc ""Bravo 1-2"": 212 kHz.
-<br/>
-- Equip de foc ""Bravo 1-3"": 213 kHz.
+- Pilots ""Alfa 1-3"": 203 kHz.
 "]];
 
 //=======================================================================================================//
@@ -53,61 +41,51 @@ _admlog = player createDiaryRecord ["diary", ["Freqüències de Radio","
 _admlog = player createDiaryRecord ["diary", ["Administració/Logística","
 <font color='#FF0000' size='18'>Suport</font>
 <br/>
-*** Descripció de les unitats de suport, evacuació mèdica, CAS etc. en cas d'existir.
+Sense suport addicional.
 <br/><br/>
 <font color='#FF0000' size='18'>Abastiment</font>
 <br/>
-*** Abastiment de les tropes: munició addicional, ...
+Sense abastiment, les tropes s'hauran d'espavilar amb el que tenen.
 "]];
 
 //=======================================================================================================//
 // NOTES: EXECUCIÓ.                                                                                      //
 //=======================================================================================================//
 _execucio = player createDiaryRecord ["diary", ["Execució","
-<font color='#FF0000' size='18'>Tasques principals</font>
+<font color='#FF0000' size='18'>Tasca principals</font>
 <br/>
-- <font color='#00FFFF'>Tasca principal 1</font>: *** Breu descripció ***.
-<br/>
-- <font color='#00FFFF'>Tasca principal 2</font>: *** Breu descripció ***.
-<br/><br/>
-<font color='#FF0000' size='18'>Tasques secundària</font>
-<br/>
-- <font color='#00FFFF'>Tasca secundària 1</font>: *** Breu descripció ***.
-<br/>
-- <font color='#00FFFF'>Tasca secundària 2</font>: *** Breu descripció ***.
-<br/><br/>
-<font color='#FF0000' size='18'>Execució</font>
-<br/>
-*** Descripció, per punts, de com executar la missió. ***
+- Coordinar correctament l'assalt a una posició amb unitats d'infanteria i d'aviació.
 "]];
 
 //=======================================================================================================//
 // NOTES: MISSIÓ.                                                                                        //
 //=======================================================================================================//
 _missio = player createDiaryRecord ["diary", ["Missió","
-*** Descripció de la missió. ***
+Eliminar les tropes enemigues a cada una de les zones amb el mínim de baixes possibles.
 "]];
 
 //=======================================================================================================//
 // NOTES: INTEL·LIGÈNCIA.                                                                                //
 //=======================================================================================================//
 _intel = player createDiaryRecord ["diary", ["Intel·ligència","
-*** Informe d'intel·ligència. ***
-<br/><br/>
 <font color='#FF0000' size='18'>Forces enemigues</font>
 <br/>
-*** Descripció de les forces enemigues.***
+- Zona 1: Zona poblada en la seva totalitat per unitats d'infanteria.<br/>
+- Zona 2: Zona poblada per unitats d'infanteria i vehicles lleugers.<br/>
+- Zona 3: Zona poblada per unitats d'infanteria, vehicles lleugers i blindats.<br/>
+- Zona 4: Zona poblada per unitats d'infanteria, vehicles lleugers, blindats i helicòpters.<br/>
+- Zona 5: Zona poblada per unitats d'infanteria, vehicles lleugers i helicòpters.
 <br/><br/>
 <font color='#FF0000' size='18'>Forces aliades</font>
 <br/>
-*** Breu descripció de les forces aliades.***
+- Esquadra Alfa amb suport aeri.
 "]];
 
 //=======================================================================================================//
 // NOTES: SITUACIÓ.                                                                                      //
 //=======================================================================================================//
 _situacio = player createDiaryRecord ["diary", ["SITREP","
-*** Breu descripció de la situació.***
+La zona d'Altis ha sigut invaïda per les forces del mal del CSAT. Els Cavallers del Cel han de destruïr aquesta amenaça que creix com a bolets...
 "]];
 
 //============================================ FI DEL FITXER ============================================//

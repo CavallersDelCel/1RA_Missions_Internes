@@ -11,40 +11,52 @@
 // NOTES: CRÈDITS.                                                                                       //
 //=======================================================================================================//
 _credits = player createDiaryRecord ["diary", ["Crèdits","
-Missió generada per <font color='#00FFFF'>*** Autors ***</font> per a la <font color='#00FFFF'>Comunitat Catalana de Simulació - Cavallers del Cel</font>.
+Missió generada per <font color='#00FFFF'>CC_Magnetar</font> per a la <font color='#00FFFF'>Comunitat Catalana de Simulació - Cavallers del Cel</font>.
 <br/><br/>
-Amb la col·laboració de CC_Magnetar (plantilla) i *** possibles col·laboradors ***.
+Amb la col·laboració de CC_Viper.
 "]];
 
 //=======================================================================================================//
 // NOTES: RADIO.                                                                                         //
 //=======================================================================================================//
 _admlog = player createDiaryRecord ["diary", ["Freqüències de Radio","
-<font color='#FF0000' size='18'>Comandament</font>: 41 kHz.
+<font color='#FF0000' size='18'>Comandament</font>: 30 kHz.
 <br/><br/>
-<font color='#FF0000' size='18'>Suport</font>: 51 kHz.
+<font color='#FF0000' size='18'>Infanteria</font>: 40 kHz.
 <br/><br/>
-<font color='#FF0000' size='18'>Artilleria</font>: 61 kHz.
+<font color='#FF0000' size='18'>Blindats</font>: 50 kHz.
+<br/><br/>
+<font color='#FF0000' size='18'>Aeronaus</font>: 60 kHz.
+<br/><br/>
+<font color='#FF0000' size='18'>Artilleria</font>: 70 kHz.
 <br/><br/>
 <font color='#FF0000' size='18'>Alfa</font>
 <br/>
-- Esquadra ""Alfa"": 200 kHz.
+- Esquadra ""Alfa 1"": 200 kHz.
 <br/>
-- Equip de foc ""Alfa 1-1"": 201 kHz.
+- Equip de foc ""Alfa 1-1"" (Assalt): 201 kHz.
 <br/>
-- Equip de foc ""Alfa 1-2"": 202 kHz.
+- Equip de foc ""Alfa 1-2"" (Suport): 202 kHz.
 <br/>
-- Equip de foc ""Alfa 1-3"": 203 kHz.
+- Equip de foc ""Alfa 1-3"" (Seguretat): 203 kHz.
 <br/><br/>
 <font color='#FF0000' size='18'>Bravo</font>
 <br/>
-- Esquadra ""Bravo"": 210 kHz.
+- Esquadra ""Alfa 2"": 210 kHz.
 <br/>
-- Equip de foc ""Bravo 1-1"": 211 kHz.
+- Equip de foc ""Alfa 2-1"" (Assalt): 211 kHz.
 <br/>
-- Equip de foc ""Bravo 1-2"": 212 kHz.
+- Equip de foc ""Alfa 2-2"" (Suport): 212 kHz.
 <br/>
-- Equip de foc ""Bravo 1-3"": 213 kHz.
+- Equip de foc ""Alfa 2-3"" (Seguretat): 213 kHz.
+<br/><br/>
+- Esquadra ""Alfa 3"": 210 kHz.
+<br/>
+- Equip de foc ""Alfa 3-1"" (Assalt): 211 kHz.
+<br/>
+- Equip de foc ""Alfa 3-2"" (Suport): 212 kHz.
+<br/>
+- Equip de foc ""Alfa 3-3"" (Seguretat): 213 kHz.
 "]];
 
 //=======================================================================================================//
@@ -53,11 +65,11 @@ _admlog = player createDiaryRecord ["diary", ["Freqüències de Radio","
 _admlog = player createDiaryRecord ["diary", ["Administració/Logística","
 <font color='#FF0000' size='18'>Suport</font>
 <br/>
-*** Descripció de les unitats de suport, evacuació mèdica, CAS etc. en cas d'existir.
+No hi ha cap unitat de suport durant l'acadèmia general.
 <br/><br/>
 <font color='#FF0000' size='18'>Abastiment</font>
 <br/>
-*** Abastiment de les tropes: munició addicional, ...
+Caixes de munició adequades a cada camp de tir.
 "]];
 
 //=======================================================================================================//
@@ -85,22 +97,20 @@ _execucio = player createDiaryRecord ["diary", ["Execució","
 // NOTES: MISSIÓ.                                                                                        //
 //=======================================================================================================//
 _missio = player createDiaryRecord ["diary", ["Missió","
-*** Descripció de la missió. ***
+Assolir els coneixements necessàris per les partides amb el 1er Regiment Aerotransportat dels Cavallers del Cel.
 "]];
 
 //=======================================================================================================//
 // NOTES: INTEL·LIGÈNCIA.                                                                                //
 //=======================================================================================================//
 _intel = player createDiaryRecord ["diary", ["Intel·ligència","
-*** Informe d'intel·ligència. ***
-<br/><br/>
 <font color='#FF0000' size='18'>Forces enemigues</font>
 <br/>
-*** Descripció de les forces enemigues.***
+Cap.
 <br/><br/>
 <font color='#FF0000' size='18'>Forces aliades</font>
 <br/>
-*** Breu descripció de les forces aliades.***
+Instructors i diversos elements de seguretat als camps de tir.
 "]];
 
 //=======================================================================================================//

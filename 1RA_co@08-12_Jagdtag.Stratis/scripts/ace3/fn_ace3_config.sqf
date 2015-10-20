@@ -15,10 +15,10 @@ private["_metges", "_vehiclesMedics", "_edificisMedics", "_espExplosius", "_engi
 
 if (cc_mod_ace3) then {
     _ErrorModul = false;
-    _metges = ["Esq1_ME", "Esq2_ME"];
+    _metges = [Esq1_ME, Esq2_ME];
     _vehiclesMedics = [];
     _edificisMedics = [];
-    _espExplosius = ["Esq2_EXP"];
+    _espExplosius = [Esq2_EXP];
     _enginyers = [];
     _vehiclesReparacio = [];
     _tallers = [];

@@ -20,7 +20,15 @@ _briefingAdmin = "
 <br/>
 Aquesta missió s'ha comprovat que funciona amb el següent:
 <br/><br/>
-*** Llistat d'addons i les seves versions. ***
+- Community Base Addons (CBA) v2.0.
+<br/>
+- RHS United States Army Forces (RHS USAF) v0.3.9.1.
+<br/>
+- Task Force Arrowhead Radio (TFAR) v0.9.7.3.
+<br/>
+- Advanced Combat Environment 3 (ACE3) v3.3.2.
+<br/>
+- Dynamic-AI-Creator (DAC) v3.1b (versió en script).
 <br/><br/>
 Si els requisits no es compleixen o les versions són diferents cal comprovar prèviament que tot funcioni correctament.
 <br/>
@@ -34,25 +42,27 @@ _briefingNotes = "
 <br/>
 <font color='#FF0000' size='18'>Notes del creador de la missió</font>
 <br/>
-<font color='#00FFFF'>Nom de la missió:</font> ""*** Nom de la missió ***"".
+<font color='#00FFFF'>Nom de la missió:</font> ""DCS i Arma 3"".
 <br/>
 <font color='#00FFFF'>Versió:</font> 1.0.
 <br/>
 <font color='#00FFFF'>Autor:</font> CC_Magnetar.
 <br/>
-<font color='#00FFFF'>Col·laboradors:</font> *** Listat de col·laboradors ***.
+<font color='#00FFFF'>Nombre mínim de jugadors:</font> 1.
 <br/>
-<font color='#00FFFF'>Nombre mínim de jugadors:</font> 8.
+<font color='#00FFFF'>Nombre màxim de jugadors:</font> 14.
 <br/>
-<font color='#00FFFF'>Nombre màxim de jugadors:</font> 12.
+<font color='#00FFFF'>Respawn:</font> Base.
 <br/>
-<font color='#00FFFF'>Respawn:</font> Deshabilitat.
+<font color='#00FFFF'>Dificultat:</font> Nula.
 <br/>
-<font color='#00FFFF'>Dificultat:</font> Elevada.
+<font color='#00FFFF'>Resum de la missió:</font> Pràctiques de coordinació entre els grups d'infanteria i d'aviació. La missió té varies zones DAC que es poden activar/desactivar a través d'accions assignades al líder d'esquadra. Cada zona conté un tipus especial d'unitats enemigues:
 <br/>
-<font color='#00FFFF'>Resum de la missió:</font>
-<br/><br/>
-*** Notes i missatges addicionals del creador de la missió. ***
+- Zona 1: Zona poblada en la seva totalitat per unitats d'infanteria.<br/>
+- Zona 2: Zona poblada per unitats d'infanteria i vehicles lleugers.<br/>
+- Zona 3: Zona poblada per unitats d'infanteria, vehicles lleugers i blindats.<br/>
+- Zona 4: Zona poblada per unitats d'infanteria, vehicles lleugers, blindats i helicòpters.<br/>
+- Zona 5: Zona poblada per unitats d'infanteria, vehicles lleugers i helicòpters.
 ";
 
 //=======================================================================================================//
