@@ -54,23 +54,23 @@ switch (_TypNumber) do
     case 0: {
         _Unit_Pool_S = [
             "O_crew_F","O_Helipilot_F","O_soldier_SL_F",   // Tripulació, Pilot d'helicòpter i líder d'esquadra
-            "O_soldier_TL_F",                              // Líder d'equip de foc (Fire Team Leader)
+            //"O_soldier_TL_F",                              // Líder d'equip de foc (Fire Team Leader)
             "O_soldier_F",                                 // Fuseller (Rifleman)
             "O_soldier_lite_F",                            // Fuseller lleuger (Light Rifleman)
-            "O_soldier_GL_F",                              // Granader (Grenadier)
+            //"O_soldier_GL_F",                              // Granader (Grenadier)
             "O_soldier_AR_F",                              // Fuseller automàtic (Automatic Rifleman)
-            "O_soldier_AAR_F",                             // Assistent de fuseller automàtic (Assistant Automatic Rifleman)
-            "O_soldier_LAT_F",                             // Fuseller amb AT4 (Rifleman AT)
-            "O_soldier_AT_F",                              // Antitanc (Antitank)
-            "O_soldier_AAT_F",                             // Assitent d'antitanc (Antitank Assistant)
-            "O_soldier_AA_F",                              // Antiaèri (Antiair)
-            "O_soldier_AAA_F",                             // Assistent d'antiaèri (Antiair Assistant)
-            "O_soldier_exp_F",                             // Explosius (Explosives)
-            "O_engineer_F",                                // Enginyer (Engineer)
-            "O_soldier_repair_F",                          // Mecànic (Repair Specialist)
-            "O_soldier_M_F",                               // Tirador (Marksman)
-            "O_spotter_F",                                 // Observador (Spotter)
-            "O_sniper_F",                                  // Franctirador (Sniper)
+            //"O_soldier_AAR_F",                             // Assistent de fuseller automàtic (Assistant Automatic Rifleman)
+            //"O_soldier_LAT_F",                             // Fuseller amb AT4 (Rifleman AT)
+            //"O_soldier_AT_F",                              // Antitanc (Antitank)
+            //"O_soldier_AAT_F",                             // Assitent d'antitanc (Antitank Assistant)
+            //"O_soldier_AA_F",                              // Antiaèri (Antiair)
+            //"O_soldier_AAA_F",                             // Assistent d'antiaèri (Antiair Assistant)
+            //"O_soldier_exp_F",                             // Explosius (Explosives)
+            //"O_engineer_F",                                // Enginyer (Engineer)
+            //"O_soldier_repair_F",                          // Mecànic (Repair Specialist)
+            //"O_soldier_M_F",                               // Tirador (Marksman)
+            //"O_spotter_F",                                 // Observador (Spotter)
+            //"O_sniper_F",                                  // Franctirador (Sniper)
             "O_medic_F"                                    // Metge
         ];
         _Unit_Pool_V = [

@@ -163,6 +163,28 @@ switch (_this select 0) do
 		_setSupTime = ["5 + ((skill _unit) * (5 * DAC_AI_Level))",2,5];
 		_setHidTime = ["(((10 * DAC_AI_Level) + ((skill _leader) * 50)) / ((count units _group) + 1))"];
 	};
+    //-------------------------------------------------------------------------------------------------------------------------
+    // Configuració utilitzada per l'acadèmia.
+    case 7:
+    {
+        //_setSkill = [global min,global max];
+        _setSkill   = [0.2,0.8];
+        _setCombat  = ["green"];
+        _setBehav   = ["safe"];
+        _setSpeed   = ["limited","normal"];
+        _setForm    = ["line","vee","column","wedge","stag column","ech left","ech right","file","diamond"];
+        _setFleeing = [0,200];
+        _setHeliVal = [50,100,0.7,1];
+        _setPause   = [[5,10],[5,10],[5,10],[20,30,5,5],[1,3],[0,0]];
+        _setBldgBeh = [3,50,120,600,1];
+        _setPatrol  = ["45 + (20 * (skill _leader))","(60 + (random 60)) + ((skill _leader) * 50)"];
+        _setSearch  = ["40 + ((skill _leader) * 150)","50 + ((skill _leader) * 50)"];
+        _setSupport = [0,0]; // sense suport per altres zones // sense artilleria
+        _setJoin    = 1;
+        _setEmpVeh  = [[150,100],[150,100]];
+        _setSupTime = ["5 + ((skill _unit) * (5 * DAC_AI_Level))",2,5];
+        _setHidTime = ["(((10 * DAC_AI_Level) + ((skill _leader) * 50)) / ((count units _group) + 1))"];
+    };
 //-------------------------------------------------------------------------------------------------------------------------
 	Default {
 				if(DAC_Basic_Value != 5) then

@@ -80,6 +80,11 @@ _execucio = player createDiaryRecord ["diary", ["Execució","
 - Balística i fonaments de la punteria amb fusell.<br/>
 - Fonaments de la punteria amb fusell reforçats.<br/>
 - Prioritzar i atacar objectius a diferents distàncies.
+<br/>
+<font color='#FF0000' size='18'>Tasques: Dia 2</font>
+<br/>
+- Patrulla i formacions. <br/>
+- Maniobrar i atacar objectius com a part d'una esquadra.
 "]];
 
 //=======================================================================================================//
@@ -95,7 +100,7 @@ Assolir els coneixements necessàris per les partides amb el 1er Regiment Aerotr
 _intel = player createDiaryRecord ["diary", ["Intel·ligència","
 <font color='#FF0000' size='18'>Forces enemigues</font>
 <br/>
-Cap.
+- Patrulles del CSAT a disposició del jugador (desactivades inicialment).
 <br/><br/>
 <font color='#FF0000' size='18'>Forces aliades</font>
 <br/>
@@ -108,9 +113,18 @@ Instructors i diversos elements de seguretat als camps de tir.
 _situacio = player createDiaryRecord ["diary", ["SITREP","
 <font color='#FF0000' size='18'>Dia 1</font>
 <br/><br/>
-En aquesta primera classe s'explicarà el funcionament del simulador, amb un enfoc especial en en les tecles i funcions més importants.
-Després es passarà a la part teòrica-practica per tal d'aprendre a disparar correctament i on es veuran els principis bàsics de la mecànica muscular,
-el càlcul simple de distàncies i la priorització de blancs(Manual EBC, pàgines de la 4 a la 75 exceptuant el capítol ""Patrulla i formacions"").
+En aquesta primera classe s'explicarà el funcionament del simulador, amb un enfoc especial en en les tecles
+i funcions més importants. Després es passarà a la part teòrica-practica per tal d'aprendre a disparar
+correctament i on es veuran els principis bàsics de la mecànica muscular, el càlcul simple de distàncies i
+la priorització de blancs(Manual EBC, pàgines de la 4 a la 75 exceptuant el capítol ""Patrulla i formacions"").
+<br/><br/>
+<font color='#FF0000' size='18'>Dia 2</font>
+<br/><br/>
+En la segona classe s'aprendrà com avançar en formació i els tipus que hi ha, què són les patrulles i com
+funcionen, quines reaccions són adequades a l'hora d'entrar en contacte amb enemics, com es composen les
+esquadres i s'explicaran breument les maniobres bàsiques d'atac i defensa. És una de les practiques més
+importants i cal que es tingui ben estudiats els capítols ""Patrulla i formacions"" (pàgines 51 a 67) i
+""Maniobrar i atacar objectius com a part d'una esquadra"" (pàgines 95 a 122) abans de la classe.
 "]];
 
 //============================================ FI DEL FITXER ============================================//

@@ -102,7 +102,7 @@ class Params {
         title = "Utilitzar DAC";
         values[] = {0,1};
         texts[] = {"Desactivat", "Activat"};
-        default = 0;
+        default = 1;
     };
 
     //===================================================================================================//
@@ -121,7 +121,7 @@ class Params {
         title = "Debug DAC";
         values[] = {0,1,2};
         texts[] = {"Desactivat", "Simplificat", "Complert"};
-        default = 0;
+        default = 1;
     };
 
     //===================================================================================================//
@@ -246,7 +246,7 @@ class CfgFunctions {
             file = "scripts\configGrup";
             class configGrup{};
         };
-        
+
         // Funcions per equipar els diferents rols amb els perfils dels Cavallers del Cel.
         class configEquipacio {
             file = "scripts\configEquipacio";
@@ -257,10 +257,11 @@ class CfgFunctions {
             file = "scripts\finalitzarMissio";
             class finalitzarMissio{};
         };
-        
+
         class misc {
             file = "scripts\misc";
             class misc_afegirAccio{};
+            class misc_evitarMorir{};
             class misc_teleport{};
             class misc_teleport_configurarPunts {};
         };
@@ -300,6 +301,9 @@ class CfgRemoteExec {
         mode = 2;
         jip = 1;
         class misc_afegirAccio{ allowedTargets = 0; };
+    };
+    class Commands {
+        class allowDamage{ allowedTargets = 0;}
     };
 };
 

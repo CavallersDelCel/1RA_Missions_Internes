@@ -16,7 +16,7 @@ private ["_llargada_grups1RA", "_llargada_frequencies1RA", "_llargada_frequencie
 //   - 1: El mod o script ha d'estar activat.                                                            //
 //   - 2: No importa si el mod o script està activat o desactivat per la missió.                         //
 //=======================================================================================================//
-cc_requereix_DAC         = 0;  // Variable per controlar l'ús del Dynamic-AI-Creator (DAC).
+cc_requereix_DAC         = 1;  // Variable per controlar l'ús del Dynamic-AI-Creator (DAC).
 cc_requereix_ASRAI       = 2;  // Variable per controlar l'ús del ASR AI 3.
 cc_requereix_ACE3        = 2;  // Variable per controlar l'ús del Advanced Combat Environment 3.
 cc_requereix_ACE3_BasMed = 2;  // Variable per controlar l'ús del sistema mèdic bàsic de ACE 3.

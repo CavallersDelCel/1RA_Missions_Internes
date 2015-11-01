@@ -24,6 +24,7 @@ Aquesta missió s'ha comprovat que funciona amb el següent:
 - Community Base Addons (CBA) v2.0.<br/>
 - Advanced Combat Environment 3 (ACE3) v0.3.2.<br/>
 - Task Force Arrowhead Radio (TFAR) v0.9.7.3.<br/>
+- Dynamic-AI-Creator (DAC) v3.1b (versió script).
 <br/><br/>
 Si els requisits no es compleixen o les versions són diferents cal comprovar prèviament que tot funcioni correctament.
 <br/>
@@ -53,8 +54,14 @@ _briefingNotes = "
 <br/>
 <font color='#00FFFF'>Dificultat:</font> Nul·la.
 <br/>
-<font color='#00FFFF'>Resum de la missió:</font> ""Acadèmia General"" és una missió que serveix per entrenar diferents
-aspectes de l'Arma 3 adaptats al nivell de simulació del grup 1er Regiment Aerotransportat (1RA) dels Cavallers del Cel.
+<font color='#00FFFF'>Resum de la missió:</font> ""Acadèmia General"" és una missió que serveix per entrenar
+diferents aspectes de l'Arma 3 adaptats al nivell de simulació del grup 1er Regiment Aerotransportat (1RA)
+dels Cavallers del Cel.
+<br/>
+Patrulles del CSAT estan disponibles a les següents posicions. Cal activar-les mitjançant els ordinadors a
+cada punt de teletransport.
+- Marcador ""Patrulla"": 3 zones DAC amb infanteria amb 2-3 grups. Cada grup està format per 2-4 unitats
+(Líder d'esquadra i unitats aleatòries [fuseller lleuger, fuseller, fuseller automàtic i metge].
 ";
 
 //=======================================================================================================//
