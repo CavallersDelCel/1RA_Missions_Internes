@@ -66,9 +66,13 @@ if (isServer) then {
     cc_script_zeus = [] execVM "scripts\zeus\cc_zeus_init.sqf"
 };
 
-// Configurar els punts de teleport
+// Configurar els punts de teleport i accions disponibles al cap d'instructors.
 if (hasInterface) then {
     [] call cc_fnc_misc_teleport_configurarPunts;
+
+    if (player == cc_instructor_cap) then {
+        pInmunitat = this addaction ["<t color='#ff0000'>Act. Inmunitat</t>","scripts\misc\cc_misc_accioInmunitat.sqf",[1]];
+    };
 };
 
 //============================================ FI DEL FITXER ============================================//

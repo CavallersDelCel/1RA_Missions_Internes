@@ -261,7 +261,6 @@ class CfgFunctions {
         class misc {
             file = "scripts\misc";
             class misc_afegirAccio{};
-            class misc_evitarMorir{};
             class misc_teleport{};
             class misc_teleport_configurarPunts {};
         };

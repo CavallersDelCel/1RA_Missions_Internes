@@ -399,7 +399,7 @@ class Mission
 					rank="CAPTAIN";
 					skill=0.60000002;
 					text="cc_instructor_cap";
-					init="[""Alfa"", 1, ""cinst"", this] call cc_fnc_configUnitat; if (local this) then {pInmunitat = this addaction [""<t color='#ff0000'>Act. Inmunitat</t>"",""scripts\misc\cc_misc_accioInmunitat.sqf"",[1]];};";
+					init="[""Alfa"", 1, ""cinst"", this] call cc_fnc_configUnitat;";
 					description="Instructor en cap";
 				};
 				class Item1
