@@ -300,7 +300,12 @@ class CfgRemoteExec {
     class Functions {
         mode = 2;
         jip = 1;
-        class misc_afegirAccio{ allowedTargets = 0; };
+        class misc_afegirAccio           { allowedTargets = 0; };
+        class cc_fnc_finalitzarMissio    { allowedTargets = 0; }; // Aquesta funció pot accedir a tothom.
+        class cc_fnc_zeus_afegirGrups    { allowedTargets = 2; }; // Aquesta funció només pot tenir com a objectiu servidors.
+        class cc_fnc_zeus_afegirObjectes { allowedTargets = 2; }; // Aquesta funció només pot tenir com a objectiu servidors.
+        class DAC_Activate               { allowedTargets = 2; }; // Aquesta funció només pot tenir com a objectiu servidors.
+        class DAC_Deactivate             { allowedTargets = 2; }; // Aquesta funció només pot tenir com a objectiu servidors.
     };
     class Commands {
         class allowDamage{ allowedTargets = 0;}
