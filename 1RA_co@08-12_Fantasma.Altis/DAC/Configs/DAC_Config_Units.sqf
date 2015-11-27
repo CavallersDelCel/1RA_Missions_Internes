@@ -40,6 +40,10 @@
 //                        20        RHS UNITED STATES ARMY DESERT                                        //
 //                        21        RHS UNITED STATES MARINE CORPS WOODLAND                              //
 //                        22        RHS UNITED STATES MARINE CORPS DESERT                                //
+//                        30        BWA3 Bundeswehr (Flecktarn)                                          //
+//                        31        BWA3 Bundeswehr (Tropentarn)                                         //
+//                        32        BWA3 Bundeswehr Fernspäher (Flecktarn)                               //
+//                        33        BWA3 Bundeswehr Fernspäher (Tropentarn)                              //
 //=======================================================================================================//
 
 private ["_TypNumber","_TempArray","_Unit_Pool_S","_Unit_Pool_V","_Unit_Pool_T","_Unit_Pool_A"];
@@ -1048,6 +1052,124 @@ switch (_TypNumber) do
             "RHS_UH1Y_FFAR_d",                             // UH1Y FFAR
             "RHS_UH1Y_d"                                   // UH1Y FFAR/MG
         ];
+    };
+
+    //===================================================================================================//
+    // BW: Bundeswehr (Flecktarn)                                                                        //
+    //===================================================================================================//
+    case 30: {
+        _Unit_Pool_S = [
+            "BWA3_Crew_Fleck","BWA3_Helipilot","BWA3_SL_Fleck",  // Tripulació, Pilot d'helicòpter i líder d'esquadra
+            "BWA3_TL_Fleck",                                     // Líder d'equip de foc (Fire Team Leader)
+            "BWA3_Rifleman_Fleck",                               // Fuseller (Rifleman)
+            "BWA3_Rifleman_lite_Fleck",                          // Fuseller lleuger (Light Rifleman)
+            "BWA3_Rifleman_unarmed_Fleck",                       // Fuseller desarmat (Unarmed Rifleman)
+            "BWA3_RiflemanG27_Fleck",                            // Fuseller amb G27 (Rifleman with G27)
+            "BWA3_RiflemanG28_Fleck",                            // Fuseller amb G28 (Rifleman with G28)
+            "BWA3_Grenadier_Fleck",                              // Granader (Grenadier)
+            "BWA3_GrenadierG27_Fleck",                           // Granader amb G27 (Grenadier with G27)
+            "BWA3_Autorifleman_Fleck",                           // Fuseller automàtic (Automatic Rifleman)
+            "BWA3_AutoriflemanMG5_Fleck",                        // Fuseller automàtic amb MG6 (Automatic Rifleman)
+            "BWA3_CombatLifeSaver_Fleck",                        // Metge (Combat Life Saver)
+            "BWA3_Marksman_Fleck",                               // Tirador (Marksman)
+            "BWA3_SniperG82_Fleck",                              // Franctirador (Sniper)
+            "BWA3_Spotter_Fleck",                                // Observador (Spotter)
+            "BWA3_RiflemanAT_RGW90_Fleck",                       // Antitanc amb RGW90 (Antitank with RGW90)
+            "BWA3_RiflemanAT_Pzf3_Fleck",                        // Antitanc amb Panzerfaust 3 (Antitank with Panzerfaust 3)
+            "BWA3_RiflemanAA_Fliegerfaust_Fleck",                // Antiaèri amb Fliegerfaust (Antiair with Fliegerfaust)
+            "BWA3_Engineer_Fleck"                                // Enginyer (Engineer)
+        ];
+        _Unit_Pool_V = [];
+        _Unit_Pool_T = [
+            "BWA3_Puma_Fleck",                            // IFV Puma
+            "BWA3_Leopard2A6M_Fleck"                      // MBT Leopard 2A6M
+        ];
+        _Unit_Pool_A = [
+            "BWA3_Tiger_Gunpod_PARS",                      // UH Tiger GunPod (PARS)
+            "BWA3_Tiger_Gunpod_FZ",                        // UH Tiger GunPod (FZ)
+            "BWA3_Tiger_Gunpod_Heavy",                     // UH Tiger GunPod (Heavy)
+            "BWA3_Tiger_RMK_PARS",                         // UH Tiger RMK (PARS)
+            "BWA3_Tiger_RMK_Universal",                    // UH Tiger RMK (Universal)
+            "BWA3_Tiger_RMK_FZ",                           // UH Tiger RMK (FZ)
+            "BWA3_Tiger_RMK_Heavy"                         // UH Tiger RMK (Heavy)
+        ];
+    };
+
+    //===================================================================================================//
+    // BW: Bundeswehr (Tropentarn)                                                                       //
+    //===================================================================================================//
+    case 31: {
+        _Unit_Pool_S = [
+            "BWA3_Crew_Fleck","BWA3_Helipilot","BWA3_TL_Tropen",  // Tripulació, Pilot d'helicòpter i líder d'esquadra
+            "BWA3_TL_Tropen",                                     // Líder d'equip de foc (Fire Team Leader)
+            "BWA3_Rifleman_Tropen",                               // Fuseller (Rifleman)
+            "BWA3_Rifleman_lite_Tropen",                          // Fuseller lleuger (Light Rifleman)
+            "BWA3_Rifleman_unarmed_Tropen",                       // Fuseller desarmat (Unarmed Rifleman)
+            "BWA3_RiflemanG27_Tropen",                            // Fuseller amb G27 (Rifleman with G27)
+            "BWA3_RiflemanG28_Tropen",                            // Fuseller amb G28 (Rifleman with G28)
+            "BWA3_Grenadier_Tropen",                              // Granader (Grenadier)
+            "BWA3_GrenadierG27_Tropen",                           // Granader amb G27 (Grenadier with G27)
+            "BWA3_Autorifleman_Tropen",                           // Fuseller automàtic (Automatic Rifleman)
+            "BWA3_AutoriflemanMG5_Tropen",                        // Fuseller automàtic amb MG6 (Automatic Rifleman)
+            "BWA3_CombatLifeSaver_Tropen",                        // Metge (Combat Life Saver)
+            "BWA3_Marksman_Tropen",                               // Tirador (Marksman)
+            "BWA3_SniperG82_Tropen",                              // Franctirador (Sniper)
+            "BWA3_Spotter_Tropen",                                // Observador (Spotter)
+            "BWA3_RiflemanAT_RGW90_Tropen",                       // Antitanc amb RGW90 (Antitank with RGW90)
+            "BWA3_RiflemanAT_Pzf3_Tropen",                        // Antitanc amb Panzerfaust 3 (Antitank with Panzerfaust 3)
+            "BWA3_RiflemanAA_Fliegerfaust_Tropen",                // Antiaèri amb Fliegerfaust (Antiair with Fliegerfaust)
+            "BWA3_Engineer_Tropen"                                // Enginyer (Engineer)
+        ];
+        _Unit_Pool_V = [];
+        _Unit_Pool_T = [
+            "BWA3_Puma_Tropen",                            // IFV Puma
+            "BWA3_Leopard2A6M_Tropen"                      // MBT Leopard 2A6M
+        ];
+        _Unit_Pool_A = [
+            "BWA3_Tiger_Gunpod_PARS",                      // UH Tiger GunPod (PARS)
+            "BWA3_Tiger_Gunpod_FZ",                        // UH Tiger GunPod (FZ)
+            "BWA3_Tiger_Gunpod_Heavy",                     // UH Tiger GunPod (Heavy)
+            "BWA3_Tiger_RMK_PARS",                         // UH Tiger RMK (PARS)
+            "BWA3_Tiger_RMK_Universal",                    // UH Tiger RMK (Universal)
+            "BWA3_Tiger_RMK_FZ",                           // UH Tiger RMK (FZ)
+            "BWA3_Tiger_RMK_Heavy"                         // UH Tiger RMK (Heavy)
+        ];
+    };
+
+    //===================================================================================================//
+    // BW: Bundeswehr Fernspäher (Flecktarn)                                                             //
+    //===================================================================================================//
+    case 32: {
+        _Unit_Pool_S = [
+            "BWA3_Crew_Fleck","BWA3_Helipilot","BWA3_recon_TL_Fleck",  // Tripulació, Pilot d'helicòpter i líder d'esquadra
+            "BWA3_recon_Fleck",                                        // Fernspäher explorador (Fernspäher Scout)
+            "BWA3_recon_LAT_Fleck",                                    // Fernspäher amb RGW90 (Fernspäher RGW90)
+            "BWA3_recon_Pioneer_Fleck",                                // Fernspäher pioner (Fernspäher Pioneer)
+            "BWA3_recon_Medic_Fleck",                                  // Fernspäher paramèdic (Fernspäher Paramedic)
+            "BWA3_recon_Marksman_Fleck",                               // Fernspäher tirador (Fernspäher Marksman)
+            "BWA3_recon_Radioman_Fleck"                                // Fernspäher operador de ràdio (Fernspäher radioman)
+        ];
+        _Unit_Pool_V = [];
+        _Unit_Pool_T = [];
+        _Unit_Pool_A = [];
+    };
+
+    //===================================================================================================//
+    // BW: Bundeswehr Fernspäher (Tropentarn)                                                            //
+    //===================================================================================================//
+    case 33: {
+        _Unit_Pool_S = [
+            "BWA3_Crew_Tropen","BWA3_Helipilot","BWA3_recon_TL_Tropen", // Tripulació, Pilot d'helicòpter i líder d'esquadra
+            "BWA3_recon_Tropen",                                        // Fernspäher explorador (Fernspäher Scout)
+            "BWA3_recon_LAT_Tropen",                                    // Fernspäher amb RGW90 (Fernspäher RGW90)
+            "BWA3_recon_Pioneer_Tropen",                                // Fernspäher pioner (Fernspäher Pioneer)
+            "BWA3_recon_Medic_Tropen",                                  // Fernspäher paramèdic (Fernspäher Paramedic)
+            "BWA3_recon_Marksman_Tropen",                               // Fernspäher tirador (Fernspäher Marksman)
+            "BWA3_recon_Radioman_Tropen"                                // Fernspäher operador de ràdio (Fernspäher radioman)
+        ];
+        _Unit_Pool_V = [];
+        _Unit_Pool_T = [];
+        _Unit_Pool_A = [];
     };
 
     //===================================================================================================//

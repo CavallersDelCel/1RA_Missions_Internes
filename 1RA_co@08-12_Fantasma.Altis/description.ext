@@ -1,87 +1,40 @@
 //=======================================================================================================//
 // Arxiu: Description.ext                                                                                //
 // Autor: CC_Magnetar                                                                                    //
-// Versió: 0.1                                                                                           //
+// Versió: 1.0                                                                                           //
 // Creació del Document: 2015/02/22                                                                      //
+// Descripció: El fitxer description.ext serveix per configurar la missió. En aquest cas es un fitxer    //
+//             totalment modular, on les variables que depenen de cada missió (respawn, autors,..) estan //
+//             definides en un fitxer apart, així com les funcions i els permisos que aquestes tenen.    //
+// Canvis: 0.1 (2015/02/22) Versió inicial.                                                              //
+//         1.0 (2015/11/26) Versió estable de la plantilla.                                              //
 //=======================================================================================================//
 
 //=======================================================================================================//
-// Header de la missió: - Definició del mode de joc, nombre mínim de jugadors i nombre màxim de jugadors.//
+// CONFIGURACIÓ DE LA MISSIÓ: Aquests paràmetres han de ser modificats pel creador de la missió.         //
 //=======================================================================================================//
+#include "configMissio\cc_configMissio.hpp"
 
-class Header {
-    gameType = Coop;           // Mode de joc: https://community.bistudio.com/wiki/Multiplayer_Game_Types
-    minPlayers = 8;      // Nombre mínim de jugadors
-    maxPlayers = 12;     // Nombre màxim de jugadors
-    playerCountMultipleOf = 1; // Per fer balanç en partides tvt o pvp per exemple.
+//=======================================================================================================//
+// CONFIGURACIÓ DELS ADDONS: Aquest fitxer ha de ser modificat pel creador de la missió i permet         //
+//                           configurar quins addons es mostren a la pantalla de paràmetres per tal de   //
+//                           que es puguin configurar.                                                   //
+//=======================================================================================================//
+class CfgComponents {
+    #define CC_COMPONENTS
+        #include "cc_components.hpp"
+    #undef CC_COMPONENTS
 };
 
 //=======================================================================================================//
-// Pantalla de càrrega: https://community.bistudio.com/wiki/Description.ext                              //
-//                                                                                                       //
-// Hi ha dues plantilles que són altament recomanables d'utilitzar a l'hora de crear les  imatges per    //
-// l'entrada "overviewPicture" (cc_plantilla_overviewPicture.psd) i pel post de la missió al fòrum       //
-// (cc_plantilla_forum.psd). Aquests fitxers Photoshop, cortesia de CC_Viper, són altament recomenables  //
-// però totalment opcionals al dependre de programes d'edició externs comercials.                        //
+// DEBRIEFING: Informació per quan acaba la missió.                                                      //
 //=======================================================================================================//
-
-onLoadName = "Operació Fantasma";                      // Nom de la missió (apareix en gran).
-onLoadMission = "Abatre el comandament local per desestabilitzar l'estructura militar a la regió.";    // Descripció breu de la missió.
-onLoadIntro = "Plantilla Bàsica per Missions (PBM)";   // Missatge mostrat mentre es carrega la introducció.
-onLoadIntroTime = 0;                                   // Quan la intro es carrega mostra (1) o amaga (0)
-                                                       // el dia i l'hora de la missió.
-onLoadMissionTime = 0;                                 // Quan la missió es carrega mostra (1) o amaga (0)
-                                                       // el dia i l'hora de la missió.
-author = "CC_Magnetar";                                // Autor.
-loadScreen = "imatges\loadScreen.jpg";                 // Imatge mentre es carrega la missió.
-overviewPicture = "imatges\overviewPicture.jpg";       // Imatge que es mostra al seleccionar la missió.
-                                                       // Ha d'estar en format .paa i aspecte 2:1.
-overviewText = "Inteligència informa de tensions internes en l'estructura militar del CSAT a la regió d'Altis. Si s'aconsegueix eliminar l'actual dirigent, les disputes internes debilitaran el control militar a la regió, facilitant les operacions militarsa per recuperar territori. Cal acabar amb el coronel enemic, a ser possible utilitzant les seves pròpies armes per tal de sembrar més el caos i simular un assassinat d'una de les faccions internes.";              // Text que es mostra al seleccionar la missó.
-
-//=======================================================================================================//
-// Consola de Debug de BIS: https://community.bistudio.com/wiki/Description.ext#enableDebugConsole       //
-//=======================================================================================================//
-enableDebugConsole = 1;  // Consola de Debub  Habilitada per SP i administradors en MP.
-
-//=======================================================================================================//
-// Configuració de diversos paràmetres de la missió.                                                     //
-//=======================================================================================================//
-showGPS     = 1;             // Permet el GPS: 0 = deshabilitat, 1 = habilitat.
-showCompass = 1;             // Brújola visible: 0 = deshabilitat, 1 = habilitat.
-showMap     = 1;             // Mostra el mapa després de que comenci la missió: 0 = deshabilitat,
-                             // 1 = habilitat.
-showWatch   = 1;             // Mostra el rellotge: 0 = deshabilitat, 1 = habilitat.
-forceRotorLibSimulation = 1; // Força la llibreria de model de vol avançat: 0 = opcions del client,
-                             // 1 = força l'activació, 2 = força la desactivació.
-disableChannels[]={1,2,3,4}; // Deshabilita els canals: 0 = global, 1 = Side, 2 = Command, 3 = Group,
-                             // 4 = Vehicle, 5 = Direct, 6 = System.
-
-//=======================================================================================================//
-// Respawn Settings: Definició del tipus de respawn. https://community.bistudio.com/wiki/Arma_3_Respawn  //
-//=======================================================================================================//
-respawn             = "BIRD";  // Es fa un respawn com a ocell, fi de la partida pel jugador.
-respawnDelay        = 10;      // Temps que es tarda en fer respawn (en segons).
-respawnVehicleDelay = 30;      // Temps que els vehicles tarden en fer respawn (en segons).
-RespawnDialog       = 0;       // En cas de ser un respawn de tipus 3 (BASE) mostra un compte enrere i la
-                               // puntuació (1) o no (0).
-respawnOnStart      = -1;      // 1: respawn al començar i executa el script de respawn a l'inici,
-                               // 0: sense respawn al començar i executa el script de respawn a l'inici,
-                               // -1: sense respawn al començar i sense executar el script de respawn a l'inici.
-joinUnassigned      = 1;       // 0: força el jugador al primer lloc lliure, 1: Deixa escollir el jugador.
-disabledAI          = 1;       // Amaga les unitats amigues jugables que no són controlades per un jugador.
-aiKills             = 0;       // Puntuació dels jugadors: 0 = deshabilitat, 1 = habilitat.
-
-respawnTemplates[]         = {"cc_respawn"};
-//respawnTemplatesWest[] = {"Seagull","cc_respawn"};
-//respawnTemplatesEast[] = {"Seagull","cc_respawn"};
-//respawnTemplatesCiv[]  = {"Seagull","cc_respawn"};
-//respawnTemplatesVirtual[] = {}; // Jugadors virtuals.
+#include "configMissio\cc_debriefingMissio.hpp"
 
 //=======================================================================================================//
 // PARAMETRES DE LA MISSIÓ: RETOCS PER L'ADMINISTRADOR                                                   //
 //=======================================================================================================//
 class Params {
-
     //===================================================================================================//
     // Debug: Variable per controlar Debug.                                                              //
     // Opció per defecte: Habilitat                                                                      //
@@ -90,209 +43,37 @@ class Params {
         title = "Mode Debug";
         values[] = {0,1};
         texts[] = {"Desactivat","Activat"};
-        default = 0;
-    };
-
-    //===================================================================================================//
-    // Dynamic-AI-Creator: Variable per controlar si es fa servir el Dynamic-AI-Creator (DAC) durant la //
-    //                     missió o si aquest es vol desactivar.                                         //
-    // Opció per defecte: Habilitat                                                                      //
-    //===================================================================================================//
-    class cc_param_utilitzarDAC {
-        title = "Utilitzar DAC";
-        values[] = {0,1};
-        texts[] = {"Desactivat", "Activat"};
         default = 1;
     };
 
-    //===================================================================================================//
-    // Debug del DAC: Variable per controlar la quantitat d'informació que es mostra a l'utilitzar el    //
-    //                DAC en una missió.                                                                 //
-    //                  - Desactivat: No es mostra cap informació referent al DAC.                       //
-    //                  - Simplificat: No es mostren les zones DAC al mapa ni missatges de reducció dels //
-    //                                 diferents grups. Missatges d'inicialització simplificats. Es      //
-    //                                 recomana aquest valor durant la missió.                           //
-    //                  - Complert: Es mostren les zones DAC i les unitats al mapa així com els diversos //
-    //                              missatges de reducció/creació dels diferents grups. Els missatges    //
-    //                              a l'inici dónen la màxima informació possible.                       //
-    // Opció per defecte: Complert.                                                                      //
-    //===================================================================================================//
-    class cc_param_debugDAC {
-        title = "Debug DAC";
-        values[] = {0,1,2};
-        texts[] = {"Desactivat", "Simplificat", "Complert"};
-        default = 1;
-    };
-
-    //===================================================================================================//
-    // ASR AI 3: Variable per controlar si es fa servir el mod d'inteligència artifical ASR AI 3 durant  //
-    //           la missió o si aquest es vol desactivar.                                                //
-    // Opció per defecte: Habilitat                                                                      //
-    //===================================================================================================//
-    class cc_param_utilitzarASRAI {
-        title = "Utilitzar ASR AI 3";
-        values[] = {0,1};
-        texts[] = {"Desactivat", "Activat"};
-        default = 1;
-    };
-
-    //===================================================================================================//
-    // Perfils: Utilitzar els perfils a l'hora d'equipar les unitats                                     //
-    // Opció per defecte: Els perfils no s'utilitzen.                                                    //
-    //===================================================================================================//
-    class cc_param_utilitzarPerfils {
-        title = "Utilitzar perfils";
-        values[] = {0,1};
-        texts[] = {"No","Si"};
-        default = 0;
-    };
-
-    //===================================================================================================//
-    // Sistema mèdic: Nivell de detall del sistema mèdic de ACE3.                                        //
-    // Opció per defecte: Avançat.                                                                       //
-    //===================================================================================================//
-    class cc_param_sistemaMedic {
-        title = "Sistema mèdic";
-        values[] = {0,1,2};
-        texts[] = {"Desactivat","ACE3 Bàsic","ACE3 Avançat"};
-        default = 2;
-    };
-
-    //===================================================================================================//
-    // Sistema de balística: Nivell de detall del sistema de balística de ACE3.                          //
-    // Opció per defecte: Avançat.                                                                       //
-    //===================================================================================================//
-    class cc_param_ace3Balistica {
-        title = "Sistema de balística de ACE3";
-        values[] = {0,1};
-        texts[] = {"Bàsic","Avançat"};
-        default = 1;
-    };
+    #define CC_PARAMETRES
+        #include "cc_components.hpp"
+    #undef CC_PARAMETRES
 };
 
 //=======================================================================================================//
-// DEBRIEFING: Informació per quan acaba la missió.                                                      //
+// FUNCIONS: Funcions per les missions dels Cavallers del Cel.                                           //
 //=======================================================================================================//
-class CfgDebriefing {
-    class FinalExit1 {
-        title = "Missió acabada amb èxit.";
-        subtitle = "";
-        description = "Les forces aliades han aconseguit acabar amb el coronel enemic i sembrar el caos en l'estructura de comandament enemiga.";
-        pictureBackground = "";
-        picture = "b_inf";
-        pictureColor[] = {0.0,0.3,0.6,1};
-    };
-
-    class FracasAbsolut {
-        title = "Fracàs Absolut.";
-        subtitle = "";
-        description = "Les forces aliades han sigut eliminades sense acabar amb l'estructura de comandament enemiga.";
-        pictureBackground = "";
-        picture = "KIA";
-        pictureColor[] = {0.0,0.3,0.6,1};
-    };
-
-    class FinalFallit1 {
-        title = "Missió fallida.";
-        subtitle = "";
-        description = "Les forces aliades han sigut eliminades després d'acabar amb el coronel enemic. Les disputes internes a l'estructura de comandament han començat.";
-        pictureBackground = "";
-        picture = "KIA";
-        pictureColor[] = {0.0,0.3,0.6,1};
-    };
-
-    class FinalFallit2 {
-        title = "Missió fallida.";
-        subtitle = "";
-        description = "Les forces aliades han abortat la missió.";
-        pictureBackground = "";
-        picture = "b_inf";
-        pictureColor[] = {0.0,0.3,0.6,1};
-    };
-};
-
-// Funcions per les missions dels Cavallers del Cel.
 class CfgFunctions {
     class CC {
-        // Funcions per configurar ACE 3
-        class ace3 {
-            file = "scripts\ace3";
-            class ace3_config {
-                PostInit = 1;  // La funció s'executa al iniciar la missió, DESPRÉS d'inicialitzar objectes.
-            };
-        };
-
-        // Funcions per inicialitzar i configurar ACRE 2.
-        class acre2 {
-            file = "scripts\radios\acre2";
-            class acre2_determinarIdiomes{};
-            class acre2_afegirRadios{};
-            class acre2_treureRadios{};
-            class acre2_configurarCanals{};
-            class acre2_configurarXatEspectador{};
-        };
-
-        // Funcions comunes i essencials pel funcionament dels scripts.
-        class comu {
-            file = "scripts\comu";
-            class processarParamsArray {
-                preInit = 1;   // La funció s'executa al iniciar la missió, ABANS d'inicialitzar objectes.
-                // postInit = 1;  // La funció s'executa al iniciar la missió, DESPRÉS d'inicialitzar objectes.
-            };
-            class processarMods {
-                preInit = 1;  // La funció s'executa al iniciar la missió, ABANS d'inicialitzar objectes.
-            };
-        };
-
-        // Funció per configurar les unitats.
-        class configUnitat {
-            file = "scripts\configUnitat";
-            class configUnitat{};
-        };
-
-        // Funcio per configurar els grups de les unitats i el seu identificador.
-        class  configGrup {
-            file = "scripts\configGrup";
-            class configGrup{};
-        };
-        // Funcions per equipar els diferents rols amb els perfils dels Cavallers del Cel.
-        class configEquipacio {
-            file = "scripts\configEquipacio";
-            class configEquipacio{};
-        };
-
-        class finalitzarMissio {
-            file = "scripts\finalitzarMissio";
-            class finalitzarMissio{};
-        };
-
-        // Funcions per inicialitzar el sistema de radio Task Force Arrowhead (TFAR).
-        class tfar {
-            file = "scripts\radios\tfar";
-            class tfar_treureRadios{};
-            class tfar_afegirRadios{};
-            class tfar_configurarFreqRadios{};
-            class tfar_configurarXatEspectador{};
-            class tfar_modificarSenyal{};
-            class tfar_configurarCanals{};
-            class tfar_configurarEstereo{};
-        };
-
-        class zeus {
-            file = "scripts\zeus";
-            class zeus_eventHandlers {
-                PostInit = 1;  // La funció s'executa al iniciar la missió, DESPRÉS d'inicialitzar objectes.
-            };
-            class zeus_afegirGrups{};
-            class zeus_afegirObjectes{};
-        };
+        #define CC_FUNCIONS
+            #include "cc_components.hpp"
+        #undef CC_FUNCIONS
     };
 };
 
-class CfgRespawnTemplates {
-    class cc_respawn {
-        onPlayerKilled = "scripts\respawn\cc_respawn.sqf";
-        onPlayerRespawn = "scripts\respawn\cc_respawn.sqf";
+//=======================================================================================================//
+// RESTRICCIONS A L'EXECUCIÓ DE FUNCIONS: Restringeix l'abast de les funcions.                           //
+//=======================================================================================================//
+class CfgRemoteExec {
+    // Llista de funcions que poden ser enviades pel client a través de remoteExec/remoteExecCall
+    class Functions {
+        mode = 2;  // Estat de remoteExec: 0: deshabilitat, 1: habilitat amb whitelist, 2: habilitat (per defecte).
+        jip = 1;   // Possibilitat d'enviar missatges JIP. 0: deshabilitat, 1: habilitat.
+
+        #define CC_REMOTEEXEC_FUNCIONS
+            #include "cc_components.hpp"
+        #undef CC_REMOTEEXEC_FUNCIONS
     };
 };
 
