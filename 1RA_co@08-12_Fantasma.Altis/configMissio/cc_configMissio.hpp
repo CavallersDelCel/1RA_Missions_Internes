@@ -65,8 +65,8 @@ respawnTemplates[]          = {"cc_respawn"};
 
 class CfgRespawnTemplates {
     class cc_respawn {
-        onPlayerKilled = "\src\respawn\scripts\respawn\cc_respawn.sqf";
-        onPlayerRespawn = "\src\respawn\scripts\cc_respawn.sqf";
+        onPlayerKilled = "..\src\respawn\scripts\respawn\cc_respawn.sqf";
+        onPlayerRespawn = "..\src\respawn\scripts\cc_respawn.sqf";
     };
 };
 
