@@ -21,14 +21,8 @@ if (isNil "cc_mod_ace3") then {
 if (!cc_mod_ace3) exitWith {};
 
 _ErrorModul = false;
-_metges = [];
-_vehiclesMedics = [];
-_edificisMedics = [];
-_espExplosius = [];
-_enginyers = [];
-_vehiclesReparacio = [];
-_tallers = [];
-_unitatsRendeixen = [];
+
+#include "..\..\..\configMissio\ace3\scripts\cc_ace3_config.sqf"
 
 // Definir les variables manualment utilitzant la funció de ACE 3 ACE_common_fnc_setSetting:
 //  ["setting_name"], Value, forceSetting(bool), broadcastSetting(bool)] ACE_common_fnc_setSetting
