@@ -12,7 +12,7 @@
 //         1.0 (2015/11/26) Versió estable de la plantilla.                                              //
 //=======================================================================================================//
 
-private["_metges", "_vehiclesMedics", "_edificisMedics", "_espExplosius", "_enginyers", "_vehiclesReparacio", "_tallers", "_unitatsRendeixen","_unitat", "_ErrorModul"];
+private["_ErrorModul"];
 
 if (isNil "cc_mod_ace3") then {
     cc_mod_ace3 = isClass (configFile >> "CfgPatches" >> "ace_common");        // Comprovar si ACE 3 està carregat.
@@ -22,7 +22,8 @@ if (!cc_mod_ace3) exitWith {};
 
 _ErrorModul = false;
 
-#include "..\..\..\configMissio\ace3\scripts\cc_ace3_config.sqf"
+// Incloure les variables que defineixen quines unitats tenen tractament especial (metges, enginyers, ...)
+#include "..\..\..\configMissio\ace3\scripts\cc_ace3_configuracio.sqf"
 
 // Definir les variables manualment utilitzant la funció de ACE 3 ACE_common_fnc_setSetting:
 //  ["setting_name"], Value, forceSetting(bool), broadcastSetting(bool)] ACE_common_fnc_setSetting
