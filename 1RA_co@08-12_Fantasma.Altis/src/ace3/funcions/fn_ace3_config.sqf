@@ -12,7 +12,7 @@
 //         1.0 (2015/11/26) Versió estable de la plantilla.                                              //
 //=======================================================================================================//
 
-private["_ErrorModul"];
+private["_ErrorModul", "_objecte"];
 
 if (isNil "cc_mod_ace3") then {
     cc_mod_ace3 = isClass (configFile >> "CfgPatches" >> "ace_common");        // Comprovar si ACE 3 està carregat.
@@ -178,20 +178,29 @@ if (isClass (configFile >> "CfgPatches" >> "ace_medical")) then {
 
     // Assignar rols de metge, vehicle mèdic i edificis mèdics.
     {
-        if (!isNil format["s%1",_x]) then {
-            _x setVariable ["ace_medical_medicClass", 1, true];
+        if (!isNil _x) then {
+            call compile format ["_objecte = %1", _x];
+            if (local _objecte) then {
+                _objecte setVariable ["ace_medical_medicClass", 1, true];
+            };
         };
     } foreach _metges;
 
     {
-        if (!isNil format["s%1",_x]) then {
-            _x setVariable ["ace_medical_medicClass", 1, true];
+        if (!isNil _x) then {
+            call compile format ["_objecte = %1", _x];
+            if (local _objecte) then {
+                _objecte setVariable ["ace_medical_medicClass", 1, true];
+            };
         };
     } foreach _vehiclesMedics;
 
     {
-        if (!isNil format["s%1",_x]) then {
-            _x setVariable ["ace_medical_isMedicalFacility", true, true];
+        if (!isNil _x) then {
+            call compile format ["_objecte = %1", _x];
+            if (local _objecte) then {
+                _objecte setVariable ["ace_medical_isMedicalFacility", true, true];
+            };
         };
     } foreach _edificisMedics;
 
@@ -264,20 +273,29 @@ if (isClass (configFile >> "CfgPatches" >> "ace_repair")) then {
     ["ace_repair_wheelRepairRequiredItems", 1, true, true] call ACE_common_fnc_setSetting;                     // 0* = No es requereixen eines, 1 = Es requereixen eines.
     // Assignar rols d'enginyer, vehicle de reparació i tallers.
     {
-        if (!isNil format["s%1",_x]) then {
-            _x setVariable ["ACE_IsEngineer", 1, true];
+        if (!isNil _x) then {
+            call compile format ["_objecte = %1", _x];
+            if (local _objecte) then {
+                _objecte setVariable ["ACE_IsEngineer", 1, true];
+            };
         };
     } foreach _enginyers;
 
     {
-        if (!isNil format["s%1",_x]) then {
-            _x setVariable ["ACE_isRepairVehicle", 1, true];
+        if (!isNil _x) then {
+            call compile format ["_objecte = %1", _x];
+            if (local _objecte) then {
+                _objecte setVariable ["ACE_isRepairVehicle", 1, true];
+            };
         };
     } foreach _vehiclesReparacio;
 
     {
-        if (!isNil format["s%1",_x]) then {
-            _x setVariable ["ACE_isRepairFacility", true, true];
+        if (!isNil _x) then {
+            call compile format ["_objecte = %1", _x];
+            if (local _objecte) then {
+                _objecte setVariable ["ACE_isRepairFacility", true, true];
+            };
         };
     } foreach _tallers;
 } else {
@@ -418,7 +436,7 @@ if (isClass (configFile >> "CfgPatches" >> "ace_captives")) then {
     ["ace_captives_allowSurrender", true, true, true] call ACE_common_fnc_setSetting;                          // 0 = No, 1* = Si.
 
     //{
-    //    _x setVariable ["XXXXX", true, true];
+    //    _objecte setVariable ["XXXXX", true, true];
     //} foreach _unitatsRendeixen;
 } else {
     _ErrorModul = true;
@@ -443,8 +461,11 @@ if (isClass (configFile >> "CfgPatches" >> "ace_explosives")) then {
 
     // Assignar rols d'especialista en explosius.
     {
-        if (!isNil format["s%1",_x]) then {
-            _x setVariable ["ACE_IsEOD", true, true];
+        if (!isNil _x) then {
+            call compile format ["_objecte = %1", _x];
+            if (local _objecte) then {
+                _objecte setVariable ["ACE_IsEOD", true, true];
+            };
         };
     } foreach _espExplosius;
 } else {
