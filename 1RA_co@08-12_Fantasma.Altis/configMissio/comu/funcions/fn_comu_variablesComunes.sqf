@@ -76,17 +76,17 @@ _llargada_frequencies1RA = count cc_var_frequencies1RA;
 _llargada_frequencies1RALR = count cc_var_frequencies1RALR;
 
 if (_llargada_grups1RA != _llargada_frequencies1RA) then {
-    player sideChat format ["ERROR (cc_variables_comunes.sqf): Les varibles ""_llargada_grups1RA"" i ""_llargada_frequencies1RA"" no tenen la mateixa mida."];
+    player sideChat format ["ERROR (fn_variables_comunes.sqf): Les varibles ""_llargada_grups1RA"" i ""_llargada_frequencies1RA"" no tenen la mateixa mida."];
 } else {
     {
         if ( count _x != count (cc_var_frequencies1RA select _forEachIndex) ) then {
-            player sideChat format ["ERROR (cc_variables_comunes.sqf): El subgrup %1 de les varibles ""_llargada_grups1RA"" i ""_llargada_frequencies1RA"" no té la mateixa mida.", _forEachIndex];
+            player sideChat format ["ERROR (fn_variables_comunes.sqf): El subgrup %1 de les varibles ""_llargada_grups1RA"" i ""_llargada_frequencies1RA"" no té la mateixa mida.", _forEachIndex];
         };
     } forEach cc_var_grups1RA;
 };
 
 if (_llargada_grups1RA != _llargada_frequencies1RALR) then {
-    player sideChat format ["ERROR (cc_variables_comunes.sqf): Les varibles ""_llargada_grups1RA"" i ""_llargada_frequencies1RALR"" no tenen la mateixa mida."];
+    player sideChat format ["ERROR (fn_variables_comunes.sqf): Les varibles ""_llargada_grups1RA"" i ""_llargada_frequencies1RALR"" no tenen la mateixa mida."];
 };
 
 //=======================================================================================================//

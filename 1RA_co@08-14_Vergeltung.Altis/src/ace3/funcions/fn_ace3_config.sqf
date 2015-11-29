@@ -14,10 +14,6 @@
 
 private["_ErrorModul", "_objecte"];
 
-if (isNil "cc_mod_ace3") then {
-    cc_mod_ace3 = isClass (configFile >> "CfgPatches" >> "ace_common");        // Comprovar si ACE 3 està carregat.
-};
-
 if (!cc_mod_ace3) exitWith {};
 
 _ErrorModul = false;

@@ -25,7 +25,7 @@ if (isDedicated) exitWith {};
 // Esperar a que la variable que habilita/deshabilita el text de Debug estigui inicialitzada.
 waitUntil {!isNil "cc_param_debugOutput"};
 
-#define nomMissio  "Vergeltun"
+#define nomMissio  "Vergeltung"
 
 // Identificar la facció de la unitat.
 _faccioUnitat = toLower (faction player);

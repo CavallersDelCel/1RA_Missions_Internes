@@ -19,10 +19,7 @@
     class ace3 {
         file = "src\ace3\funcions";
         class ace3_assignarFerides {};
-        class ace3_config {
-            PreInit = 1;
-            PostInit = 1; // La funció s'executa al iniciar la missió, DESPRÉS d'inicialitzar objectes.
-        };
+        class ace3_config          { PreInit = 1; };
     };
 #endif
 
