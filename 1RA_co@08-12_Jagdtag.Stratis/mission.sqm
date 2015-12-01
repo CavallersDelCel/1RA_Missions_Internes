@@ -41,12 +41,10 @@ class Mission
 		"A3_Boat_F_Boat_Armed_01",
 		"A3_armor_f_beta_APC_Tracked_02",
 		"blx_ridgback",
-		"A3_Structures_F_EPC_Items_Documents",
-		"3DEN"
+		"A3_Structures_F_EPC_Items_Documents"
 	};
 	addOnsAuto[]=
 	{
-		"3DEN",
 		"a3_modules_f_curator_curator",
 		"A3_Characters_F_OPFOR",
 		"a3_characters_f",

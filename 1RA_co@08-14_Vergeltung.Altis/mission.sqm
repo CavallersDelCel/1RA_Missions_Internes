@@ -18,8 +18,7 @@ class Mission
 		"RHS_US_A2_AirImport",
 		"A3_Air_F_Beta_Heli_Attack_01",
 		"A3_Characters_F_BLUFOR",
-		"a3_characters_f",
-		"3DEN",
+		"a3_characters_f"
 		"a3_modules_f_curator_curator",
 		"A3_Modules_F"
 	};
@@ -28,7 +27,6 @@ class Mission
 		"rhsusf_c_troops",
 		"A3_Characters_F_BLUFOR",
 		"a3_characters_f",
-		"3DEN",
 		"a3_modules_f_curator_curator",
 		"A3_Modules_F",
 		"A3_Structures_F_Mil_BagBunker",

@@ -10,7 +10,6 @@ class Mission
 		"A3_Air_F_Beta_Heli_Attack_01",
 		"A3_Air_F_Heli_Light_01",
 		"a3_map_altis",
-		"3DEN",
 		"a3_modules_f_curator_curator",
 		"A3_Air_F_Beta_Heli_Transport_01",
 		"A3_Weapons_F_Ammoboxes"
@@ -19,7 +18,6 @@ class Mission
 	{
 		"A3_Characters_F_BLUFOR",
 		"a3_characters_f",
-		"3DEN",
 		"a3_modules_f_curator_curator",
 		"A3_Modules_F_Multiplayer",
 		"A3_Air_F_EPC_Plane_CAS_01",

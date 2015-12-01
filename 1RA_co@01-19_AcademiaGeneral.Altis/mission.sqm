@@ -35,7 +35,6 @@ class Mission
 		"A3_Structures_F_Mil_Shelters",
 		"A3_Structures_F_Civ_Constructions",
 		"A3_Structures_F_Furniture",
-		"3DEN",
 		"a3_modules_f_curator_curator",
 		"A3_Characters_F_OPFOR",
 		"A3_Characters_F_Gamma"
@@ -47,7 +46,6 @@ class Mission
 		"A3_Data_F_Curator_Characters",
 		"A3_Characters_F_Beta",
 		"A3_armor_f_beta_APC_Tracked_02",
-		"3DEN",
 		"a3_modules_f_curator_curator",
 		"A3_Characters_F_OPFOR",
 		"A3_Characters_F_Gamma",
