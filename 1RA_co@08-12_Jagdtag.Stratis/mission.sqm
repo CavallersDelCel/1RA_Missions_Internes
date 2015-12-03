@@ -4488,7 +4488,7 @@ class Mission
 			leader=1;
 			skill=0.60000002;
 			text="LaptopIntel";
-			init="_intelIEDMar = LaptopIntel addAction [""Agafar Informació"", ""AgafarInfoIEDs.sqf""];";
+			init="_intelIEDMar = LaptopIntel addAction [""Agafar Informació"", ""configMissio\AgafarInfoIEDs.sqf""];";
 		};
 		class Item9
 		{
@@ -4566,7 +4566,7 @@ class Mission
 			vehicle="Land_File_research_F";
 			skill=0.60000002;
 			text="DocEspionatge";
-			init="_DocEspionatge = DocEspionatge addAction [""Agafar Documents"", ""AgafarInfoEspionatge.sqf""];";
+			init="_DocEspionatge = DocEspionatge addAction [""Agafar Documents"", ""configMissio\AgafarInfoEspionatge.sqf""];";
 		};
 		class Item17
 		{
@@ -4922,7 +4922,7 @@ class Mission
 			leader=1;
 			skill=0.60000002;
 			text="LaptopIntel_Terra";
-			init="_intelIEDTerra = LaptopIntel_Terra addAction [""Agafar Informació"", ""AgafarInfoIEDs.sqf""];";
+			init="_intelIEDTerra = LaptopIntel_Terra addAction [""Agafar Informació"", ""configMissio\AgafarInfoIEDs.sqf""];";
 		};
 		class Item49
 		{
@@ -5463,7 +5463,7 @@ class Mission
 			vehicle="Land_File_research_F";
 			skill=0.60000002;
 			text="DocRadio";
-			init="_DocRadio = DocRadio addAction [""Agafar Documents"", ""AgafarInfoRadio.sqf""];";
+			init="_DocRadio = DocRadio addAction [""Agafar Documents"", ""configMissio\AgafarInfoRadio.sqf""];";
 		};
 		class Item106
 		{
@@ -5792,7 +5792,7 @@ class Mission
 			interruptable=1;
 			age="UNKNOWN";
 			expCond="!alive trigTR1;";
-			expActiv="torresDestruides = torresDestruides + 1; [] call compile preprocessFile ""ActivarRadios.sqf"";";
+			expActiv="torresDestruides = torresDestruides + 1; [] call compile preprocessFile ""configMissio\ActivarRadios.sqf"";";
 			class Effects
 			{
 			};
@@ -5807,7 +5807,7 @@ class Mission
 			interruptable=1;
 			age="UNKNOWN";
 			expCond="!alive trigTR2;";
-			expActiv="torresDestruides = torresDestruides + 1; [] call compile preprocessFile ""ActivarRadios.sqf"";";
+			expActiv="torresDestruides = torresDestruides + 1; [] call compile preprocessFile ""configMissio\ActivarRadios.sqf"";";
 			class Effects
 			{
 			};
@@ -5822,7 +5822,7 @@ class Mission
 			interruptable=1;
 			age="UNKNOWN";
 			expCond="!alive trigTR3;";
-			expActiv="torresDestruides = torresDestruides + 1; [] call compile preprocessFile ""ActivarRadios.sqf"";";
+			expActiv="torresDestruides = torresDestruides + 1; [] call compile preprocessFile ""configMissio\ActivarRadios.sqf"";";
 			class Effects
 			{
 			};
@@ -5928,7 +5928,7 @@ class Mission
 			age="UNKNOWN";
 			name="TrigInitExtraccio";
 			expCond="this and triggerActivated trigTorres";
-			expActiv="hint ""Helicòpter d'extracció en camí""; null = execVM ""ExtraccioHelicopter.sqf""; ";
+			expActiv="hint ""Helicòpter d'extracció en camí""; null = execVM ""configMissio\ExtraccioHelicopter.sqf""; ";
 			class Effects
 			{
 			};

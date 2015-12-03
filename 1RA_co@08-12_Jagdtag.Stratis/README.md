@@ -27,7 +27,7 @@ fins que les torres inhibidores de senyal siguin destruïdes. Partint d'escaça 
 que s'avança en la missió a través d'informes d'inteligència. Per tal d'acomplir els objectius es requereixen entre 8 i 12 jugadors molt ben coordinats ja que es
 considera una missió difícil. Les tasques no s'actualitzen un cop completades i són els jugadors els qui decideixen si les han completat o no.
 
-**Plantilla Bàsica per Missions (PBM)**: v0.4.2 (https://github.com/CavallersDelCel/1RA_Plantilla_Missio) per CC_Magnetar.
+**Plantilla Bàsica per Missions (PBM)**: v1.0.1 (https://github.com/CavallersDelCel/1RA_Plantilla_Missio) per CC_Magnetar.
 
 **Mods necessàris o recomenats**: Llista dels mods necessàris o recomenats per la missió.
 
@@ -121,9 +121,9 @@ Cavallers del Cel SOP "Standard Operating Procedure"
 
 **Contribuïdors**: CC_Viper (Plantilles d'imatges).
 
-**Versió**: 0.4.2.
+**Versió**: 1.0.1
 
-**Darrera modificació**: 2015/10/17.
+**Darrera modificació**: 2015/11/26.
 
 **Descripció**: Plantilla bàsica per generar missions pel grup d'Arma 1er Regiment Aerotransportat (1RA) de la Comunitat Catalana de Simulació - Cavallers del Cel.
 
@@ -141,24 +141,46 @@ haurà d'afegir una opció per tal de que la funcionalitat es pugui desactivar.
 La plantilla té la següent estructura de carpetes.
 
 * "\" (Carpeta arrel): En aquesta carpeta es troben els fitxers essencials de la missió: description.ext, init.sqf, mission.sqm i briefing.sqf així com aquest fitxer de documentació.
+* "\configMissio": Carpeta on es guarden els diferents scripts/funcions organitzats en subcarpetes que cal modificar per cada missió.
+  * "\configMissio\acre2": Scripts i funcions per configurar el ACRE2.
+  * "\configMissio\briefing": Scripts per generar brífings per cada una de les faccions suportades. L'administrador de la partida té un briefing especial.
+  * "\configMissio\comu": Scripts i funcions que defineixen variables comunes i/o comproven la configuració dels mods carregats.
+  * "\configMissio\configEquipacio": Scripts i funcions per equipar les unitats per cada una de les faccions suportades. Serveix per infanteria, vehicles i caixes.
+  * "\configMissio\finalitzarMissio": Funcions que permeten acabar la partida quan es dónguin certes condicions durant la partida.
+  * "\configMissio\intro": Introducció a la missió. Cada una de les faccions suportades té una introducció a la missió pròpia.
+  * "\configMissio\tfar": Scripts i funcions per configurar el TFAR.
+  * "\configMissio\cc_components_addons.hpp": Fitxer per habilitar/deshabilitar quins mods es configuraran utilitzant els scripts de la plantilla.
+  * "\configMissio\cc_configMissio.hpp": Fitxer inclòs a `description.ext`. Configura variables com el nom de la missió, tipus de missió, autor, respawn, ...
+  * "\configMissio\cc_debriefingMissio.hpp": Fitxer inclòs a `description.ext`. Configura els diferents finals que pot tenir la missió.
 * "\DAC": Aquesta carpeta conté la versió script del Dynamic-AI-Creator v3.1b. És una eina, creada per Silola, per generar AI de forma dinàmica i que permet conservar recursos. Es pot trobar més informació a http://forums.bistudio.com/showthread.php?176926-DAC-V3-1-(Dynamic-AI-Creator)-released.
 * "\imatges": Carpeta on es guarden les diferents imatges. Conté plantilles per generar les imatges per la pròpia missió i pel fòrum.
-* "\scripts": Carpeta on es guarden els diferents scripts/funcions organitzats en subcarpetes.
-  * "\sripts\ace3": Scripts i funcions per configurar el ACE3.
-  * "\scripts\briefing": Scripts per generar brífings per cada una de les faccions suportades. L'administrador de la partida té un briefing especial.
-  * "\scripts\comu": Variables comunes.
-  * "\scripts\configEquipacio": Scripts i funcions per equipar les unitats per cada una de les faccions suportades. Serveix per infanteria, vehicles i caixes.
-  * "\scripts\intro": Introducció a la missió. Cada una de les faccions suportades té una introducció a la missió pròpia.
-  * "\scripts\radios": Scripts per configurar les ràdios. Inclou fitxers de configuració del TFAR i ACRE2.
-  * "\scripts\zeus": Scripts i funcions per configurar el Zeus.
+* "\src": Carpeta on es guarden els diferents scripts/funcions organitzats en subcarpetes que s'han de modificar cada missió.
+  * "\src\ace3": Scripts i funcions per configurar el ACE3.
+  * "\src\acre2": Scripts i funcions per configurar el ACRE2.
+  * "\src\asrai3": Scripts i funcions per configurar el ASR AI 3.
+  * "\src\zeus": Scripts i funcions per configurar el Zeus.
+  * "\src\briefing": Scripts per generar brífings per cada una de les faccions suportades. L'administrador de la partida té un briefing especial.
+  * "\src\comu": Scripts i funcions que defineixen variables comunes i/o comproven la configuració dels mods carregats.
+  * "\src\configEquipacio": Scripts i funcions per equipar les unitats per cada una de les faccions suportades. Serveix per infanteria, vehicles i caixes.
+  * "\src\configGrup": Scripts i funcions per configurar l'esquadra i l'equip de foc de la unitat.
+  * "\src\configUnitat": Scripts i funcions per configurar la unitat, incloent l'esquadra i l'equip de foc així com l'equipació depenent del rol. Perfils de 1RA.
+  * "\src\dac": Scripts i funcions per configurar el DAC.
+  * "\src\intro": Effectes durant la introducció a la missió.
+  * "\src\misc": Scripts i funcions miscel·lània.
+  * "\src\respawn": Plantilla de respawn del grup 1RA.
+  * "\src\tfar": Scripts i funcions per configurar el TFAR.
+  * "\src\tfar": Scripts i funcions per configurar el Zeus.
 
 ### Mods suportats
 
 La següent llista mostra els mods externs que actualment estan suportats i en negreta aquells mods que actualment estan a l'estàndard del grup 1RA.
 
 * Contingut:
-  * RHS Armed Forces of the Russian Federation (AFRF: http://www.rhsmods.org/mod/1.
+  * RHS Armed Forces of the Russian Federation (AFRF): http://www.rhsmods.org/mod/1.
   * **RHS United States Armed Forces (USAF)**: http://www.rhsmods.org/mod/2.
+  * Bundeswehr A3 (BWA3): http://www.bwmod.de/.
+* Intel·ligència Artifical.
+  * **ASR AI 3**: https://github.com/robalo/mods/tree/master/asr_ai3/addons.
 * Realisme:
   * **Advanced Combat Environment (ACE3)**: https://github.com/acemod/ACE3 o bé http://ace3mod.com/.
   * Advanced Gameplay Modification (AGM): https://github.com/KoffeinFlummi/AGM. **Obsolet**.
@@ -178,6 +200,7 @@ La següent llista mostra les faccions suportades per aquells scripts que permet
 | **FIA**                                                            | `blu_g_f`, `ind_g_f` i `opf_g_f` |
 | **Independent Force**                                              | `ind_f`                          |
 | **Opposing Force**                                                 | `opf_f`                          |
+| Bundeswehr                                                         | `bwa3_faction`                   |
 | RHS Insurgents                                                     | `rhs_faction_insurgents`         |
 | RHS Russian Airborne Troops (Vozdushno-desantnye voyska)           | `rhs_faction_vdv`                |
 | RHS Soviet Air Defense Troops (Voyska protivovozdushnoy oborony)   | `rhs_faction_vpvo`               |
