@@ -60,6 +60,18 @@ _briefingNotes = "
 <br/>
 ";
 
+//=======================================================================================================//
+// NOTES: FINALS DE LA MISSIÓ.                                                                           //
+//=======================================================================================================//
+
+_briefingFinals = "
+<br/>
+<font color='#FF0000' size='18'>Diferents finals de la missió</font>
+<br/>
+Selecciona un dels finals per activar-lo.
+<br/><br/>
+";
+
 // Fes una llista de tots els finals inclosos a desctiption.ext de forma automàtica.
 _tipusFinals = (missionConfigFile >> "CfgDebriefing");
 for [{ _x = 0 }, {_x < count _tipusFinals}, { _x = _x + 1}] do {
