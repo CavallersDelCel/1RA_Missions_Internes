@@ -79,7 +79,7 @@ for [{ _x = 0 }, {_x < count _tipusFinals}, { _x = _x + 1}] do {
     _titol = getText (missionConfigFile >> "CfgDebriefing" >> format["%1",_nomFinal] >> "title");
     _descripcio = getText (missionConfigFile >> "CfgDebriefing" >> format["%1",_nomFinal] >> "description");
     _briefingFinals = _briefingFinals + format [
-    "<execute expression=""[[%1],true] remoteExecCall [""BIS_fnc_endMission"", 0, true];"">- %2</execute>: %3.<br/>", _nomFinal, _titol, _descripcio
+    "<execute expression=""['%1',true] remoteExec ['BIS_fnc_endMission', 0, true];"">- %2</execute>: %3.<br/>", _nomFinal, _titol, _descripcio
     ];
 };
 

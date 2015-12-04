@@ -16,11 +16,13 @@ class Mission
 		"A3_Soft_F_MRAP_02",
 		"rhsusf_c_hmmwv",
 		"rhsusf_vehicles",
-		"A3_Weapons_F_Ammoboxes"
+		"A3_Weapons_F_Ammoboxes",
+		"3DEN"
 	};
 	addOnsAuto[]=
 	{
 		"rhsusf_c_troops",
+		"3DEN",
 		"a3_modules_f_curator_curator",
 		"A3_Modules_F_Sites",
 		"A3_Static_F_Gamma",
@@ -692,7 +694,7 @@ class Mission
 				{
 					position[]={21733.564,32.534931,20981.273};
 					idStatic=789542;
-					idObject=-680090586;
+					idObject=-677989338;
 					housePos=0;
 					speed="LIMITED";
 					combat="SAFE";
@@ -736,7 +738,7 @@ class Mission
 				{
 					position[]={21795.971,31.627041,20994.463};
 					idStatic=789543;
-					idObject=-680086489;
+					idObject=-677993433;
 					housePos=1;
 					class Effects
 					{
@@ -957,7 +959,7 @@ class Mission
 				items=2;
 				class Item0
 				{
-					position[]={24074.838,39.551941,22100.021};
+					position[]={24078.766,39.391193,22100.758};
 					azimut=-146.914;
 					id=28;
 					side="WEST";
