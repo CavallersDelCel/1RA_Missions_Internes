@@ -14,23 +14,13 @@
 // NOTES: CRÈDITS.                                                                                       //
 //=======================================================================================================//
 _credits = player createDiaryRecord ["diary", ["Crèdits","
-Missió generada per <font color='#00FFFF'>*** Autors ***</font> per a la <font color='#00FFFF'>Comunitat Catalana de Simulació - Cavallers del Cel</font>.
-<br/><br/>
-Amb la col·laboració de CC_Magnetar (plantilla) i *** possibles col·laboradors ***.
+Missió generada per <font color='#00FFFF'>CC_Magnetar</font> per a la <font color='#00FFFF'>Comunitat Catalana de Simulació - Cavallers del Cel</font>.
 "]];
 
 //=======================================================================================================//
 // NOTES: RADIO.                                                                                         //
 //=======================================================================================================//
 _admlog = player createDiaryRecord ["diary", ["Freqüències de Radio","
-<font color='#FF0000' size='18'>Comandament</font>: 41 kHz.
-<br/><br/>
-<font color='#FF0000' size='18'>Suport</font>: 51 kHz.
-<br/><br/>
-<font color='#FF0000' size='18'>Artilleria</font>: 61 kHz.
-<br/><br/>
-<font color='#FF0000' size='18'>Alfa</font>
-<br/>
 - Esquadra ""Alfa"": 200 kHz.
 <br/>
 - Equip de foc ""Alfa 1-1"": 201 kHz.
@@ -38,16 +28,6 @@ _admlog = player createDiaryRecord ["diary", ["Freqüències de Radio","
 - Equip de foc ""Alfa 1-2"": 202 kHz.
 <br/>
 - Equip de foc ""Alfa 1-3"": 203 kHz.
-<br/><br/>
-<font color='#FF0000' size='18'>Bravo</font>
-<br/>
-- Esquadra ""Bravo"": 210 kHz.
-<br/>
-- Equip de foc ""Bravo 1-1"": 211 kHz.
-<br/>
-- Equip de foc ""Bravo 1-2"": 212 kHz.
-<br/>
-- Equip de foc ""Bravo 1-3"": 213 kHz.
 "]];
 
 //=======================================================================================================//
@@ -56,11 +36,12 @@ _admlog = player createDiaryRecord ["diary", ["Freqüències de Radio","
 _admlog = player createDiaryRecord ["diary", ["Administració/Logística","
 <font color='#FF0000' size='18'>Suport</font>
 <br/>
-*** Descripció de les unitats de suport, evacuació mèdica, CAS etc. en cas d'existir.
+- ""November 1"": Helicòpter amb capacitats CAS.de combat denepent d'efectius d'última hora.<br/>
+- ""Rain 1-3"": 3 helicòpters de transport sense capacitat ofensiva.
 <br/><br/>
 <font color='#FF0000' size='18'>Abastiment</font>
 <br/>
-*** Abastiment de les tropes: munició addicional, ...
+Sense abastiment, les tropes s'hauran d'espavilar amb el que tenen.
 "]];
 
 //=======================================================================================================//
@@ -69,48 +50,74 @@ _admlog = player createDiaryRecord ["diary", ["Administració/Logística","
 _execucio = player createDiaryRecord ["diary", ["Execució","
 <font color='#FF0000' size='18'>Tasques principals</font>
 <br/>
-- <font color='#00FFFF'>Tasca principal 1</font>: *** Breu descripció ***.
+- <font color='#00FFFF'>Tasca principal 1</font>: Rescatar els marines capturats en l'atac enemic la setmana passada..
 <br/>
-- <font color='#00FFFF'>Tasca principal 2</font>: *** Breu descripció ***.
+- <font color='#00FFFF'>Tasca principal 2</font>: Recuperar qualsevol informe d'inteligència filtrat.
 <br/><br/>
 <font color='#FF0000' size='18'>Tasques secundària</font>
 <br/>
-- <font color='#00FFFF'>Tasca secundària 1</font>: *** Breu descripció ***.
-<br/>
-- <font color='#00FFFF'>Tasca secundària 2</font>: *** Breu descripció ***.
+- <font color='#00FFFF'>Tasca secundària 1</font>: Capturar el nou cap del grup insurgent.
 <br/><br/>
 <font color='#FF0000' size='18'>Execució</font>
 <br/>
-*** Descripció, per punts, de com executar la missió. ***
+- Inserció al punt <marker name=""Insercio"">LZ1</marker>.
+<br/>
+- Contactar amb la <marker name=""Insercio"">policia afgana</marker> per intercanviar informació sobre la localització del nou cap insurgent.
+<br/>
+- Acostar-se a l'àrea d'operacions i <marker name=""Eliminar"">rescatar els marines capturats</marker>.
+<br/>
+- Minimitzar les baixes civils per tal de guanyar-se el seu respecte i col·laboració.
+<br/>
+- Dirigir-se a la base aliada de Foxtrot pel <marker name=""Extraccio"">nord-est</marker> per tal de tractar mèdicament els marines capturats.
 "]];
 
 //=======================================================================================================//
 // NOTES: MISSIÓ.                                                                                        //
 //=======================================================================================================//
 _missio = player createDiaryRecord ["diary", ["Missió","
-*** Descripció de la missió. ***
+Dos equips d'infanteria i un de tiradors seran desplegats a Kunduz, Afghanistan, amb l'objectiu d'alliberar,
+amb la col·laboració passiva de la policia afgana, els marines capturats la setmana passada en un atac
+insurgent mai vist fins ara. Amb tota seguretat els marines capturats hauran estat sotmesos a tortura. És
+d'alta prioritat recuperar qualsevol possbile informació que s'hagi pogut extreure als nostres companys.
+<br/>
+Degut a la forta presència de tropes enemigues i a la hostilitat dels civils, s'ha considerat oportú assignar
+la unitat de suport aèri (CAS) ""November"" i l'equip d'evacuació ""Rain"" a l'esquadra alfa. Segons
+intel·ligència les tropes enemigues estan mal equipades i disposen de poques o nul·les possibilitats de
+contraatacar de forma efectiva un atac aèri o a distancia, especialment a la foscor.
 "]];
 
 //=======================================================================================================//
 // NOTES: INTEL·LIGÈNCIA.                                                                                //
 //=======================================================================================================//
 _intel = player createDiaryRecord ["diary", ["Intel·ligència","
-*** Informe d'intel·ligència. ***
 <br/><br/>
 <font color='#FF0000' size='18'>Forces enemigues</font>
 <br/>
-*** Descripció de les forces enemigues.***
+S'espera una forta presència d'unitats enemigues a la zona. Els insurgents estan mal equipats i no disposen
+de visió nocturna
 <br/><br/>
 <font color='#FF0000' size='18'>Forces aliades</font>
 <br/>
-*** Breu descripció de les forces aliades.***
+- Esquadra alfa amb equip de tiradors.
+- Helicòpter de combat (CAS) ""November"".
+- Equip d'evacuació ""Rain"": 3 helicòpters sense capacitats ofensives destinats a evacuació.
+<br/><br/>
+<font color='#FF0000' size='18'>Civils</font>
+<br/>
+Forta presència civil a l'àrea d'operacions. S'ha demostrat en passades operacions que els civils a la regió
+són simpatitzants de la insurgència i per tant són mitjanament hostils a les forces aliades.
 "]];
 
 //=======================================================================================================//
 // NOTES: SITUACIÓ.                                                                                      //
 //=======================================================================================================//
 _situacio = player createDiaryRecord ["diary", ["SITREP","
-*** Breu descripció de la situació.***
+La setmana passada, un convoy de marines que tornaven a casa va ser atacat brutalment i els pocs supervivents
+van ser capturats. Els autors de l'atac són un nou grup d'insurgents radicals a la regió de Kunduz.
+<br/>
+Degut a la retirada activa de tropes per raons polítiques, un grup reduït de soldats altament equipats s'ha
+assignat a la tasca de rescatar els companys capturats. S'espera, amb aquesta operació, llençar un missatge
+a qualsevol grup insurgent: cap atac quedarà sense resposta!
 "]];
 
 //============================================ FI DEL FITXER ============================================//
