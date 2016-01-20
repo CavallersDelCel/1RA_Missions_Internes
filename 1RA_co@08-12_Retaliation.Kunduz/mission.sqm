@@ -66,7 +66,7 @@ class Mission
 	randomSeed=644134;
 	class Intel
 	{
-		briefingName="Retaliation";
+		briefingName="1RA_co@08-12_Retaliation";
 		resistanceWest=0;
 		resistanceEast=1;
 		startWeather=0.16;
@@ -86,7 +86,7 @@ class Mission
 		year=2009;
 		month=7;
 		day=6;
-		hour=13;
+		hour=19;
 		minute=15;
 		startFogDecay=0.013;
 		forecastFogDecay=0.013;
@@ -1209,13 +1209,13 @@ class Mission
 				class Item0
 				{
 					position[]={2117.3074,38.128712,3087.6758};
-					azimut=81.530045;
+					azimut=81.529999;
 					id=24;
 					side="GUER";
 					vehicle="LOP_AM_Infantry_Marksman";
 					leader=1;
 					skill=0.60000002;
-					init="this setPos [getPos this select 0, getPos this select 1, 15];";
+					init="this setPos [getPos this select 0, getPos this select 1, 15]; this disableAI ""MOVE"";";
 				};
 			};
 		};
@@ -1228,13 +1228,13 @@ class Mission
 				class Item0
 				{
 					position[]={2104.1353,36.623978,3009.521};
-					azimut=179.42223;
+					azimut=179.422;
 					id=25;
 					side="GUER";
 					vehicle="LOP_AM_Infantry_Marksman";
 					leader=1;
 					skill=0.60000002;
-					init="this setPos [getPos this select 0, getPos this select 1, 15];";
+					init="this setPos [getPos this select 0, getPos this select 1, 15]; this disableAI ""MOVE"";";
 				};
 			};
 		};
@@ -1247,13 +1247,13 @@ class Mission
 				class Item0
 				{
 					position[]={2038.0548,37.052799,3020.2783};
-					azimut=207.66197;
+					azimut=207.662;
 					id=26;
 					side="GUER";
 					vehicle="LOP_AM_Infantry_Marksman";
 					leader=1;
 					skill=0.60000002;
-					init="this setPos [getPos this select 0, getPos this select 1, 15];";
+					init="this setPos [getPos this select 0, getPos this select 1, 15]; this disableAI ""MOVE"";";
 				};
 			};
 		};
@@ -1266,13 +1266,13 @@ class Mission
 				class Item0
 				{
 					position[]={2049.4705,38.13921,3097.1155};
-					azimut=348.50293;
+					azimut=348.50299;
 					id=27;
 					side="GUER";
 					vehicle="LOP_AM_Infantry_Marksman";
 					leader=1;
 					skill=0.60000002;
-					init="this setPos [getPos this select 0, getPos this select 1, 15];";
+					init="this setPos [getPos this select 0, getPos this select 1, 15]; this disableAI ""MOVE"";";
 				};
 			};
 		};
@@ -1291,7 +1291,7 @@ class Mission
 					vehicle="LOP_AM_Infantry_Marksman";
 					leader=1;
 					skill=0.60000002;
-					init="this setPos [getPos this select 0, getPos this select 1, 20];";
+					init="this setPos [getPos this select 0, getPos this select 1, 20]; this disableAI ""MOVE"";";
 				};
 			};
 		};
@@ -1401,7 +1401,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={4811.7769,4.6907873,3909.3198};
+					position[]={4742.4551,5.3410692,3834.2183};
 					azimut=-179.94901;
 					special="FLY";
 					id=35;
@@ -1410,7 +1410,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="HeliInsertion";
-					init="this setPos [getPos this select 0, getPos this select 1, 20]; this flyInHeight 10;";
+					init="this setPos [getPos this select 0, getPos this select 1, 10]; this flyInHeight 10;";
 				};
 			};
 			class Waypoints
@@ -1418,9 +1418,9 @@ class Mission
 				items=13;
 				class Item0
 				{
-					position[]={4805.25,4.6766906,3863.7568};
+					position[]={4735.687,5.0257206,3755.5701};
 					combatMode="BLUE";
-					speed="NORMAL";
+					speed="LIMITED";
 					combat="STEALTH";
 					class Effects
 					{
@@ -1429,10 +1429,10 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={4700.6147,6.5965381,3034.4485};
-					id=75;
+					position[]={4676.1016,6.2080283,3050.8364};
 					type="TR UNLOAD";
-					expActiv="HeliInsercio land ""HelipadHeli""; HeliInsercio engineOn false; {doGetOut  _x; unassignVehicle _x      } foreach assignedCargo (vehicle this);";
+					expCond="";
+					expActiv="HeliInsertion land 'LAND'; {doGetOut  _x; unassignVehicle _x      } foreach assignedCargo (vehicle this);";
 					class Effects
 					{
 					};
@@ -1440,9 +1440,9 @@ class Mission
 				};
 				class Item2
 				{
-					position[]={4698.3965,6.9707279,3022.9143};
-					type="HOLD";
-					expCond="player in HeliInsercio";
+					position[]={4674.9805,6.6061521,3040.0964};
+					speed="LIMITED";
+					expCond="({_x in HeliInsertion} count playableUnits) + ({_x in HeliInsertion_1} count playableUnits) == {alive _x} count playableUnits;";
 					class Effects
 					{
 					};
@@ -1454,7 +1454,7 @@ class Mission
 					combatMode="BLUE";
 					speed="FULL";
 					combat="STEALTH";
-					expCond="player in HeliInsercio";
+					expCond="";
 					class Effects
 					{
 					};
@@ -1533,7 +1533,7 @@ class Mission
 				class Item12
 				{
 					position[]={4601.8223,6.4081774,296.96564};
-					expActiv="deleteVehicle HeliInsertion;";
+					expActiv="{deleteVehicle _x;} forEach crew HeliInsertion; deleteVehicle HeliInsertion;";
 					class Effects
 					{
 					};
@@ -1885,7 +1885,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={4929.4468,9.1209908,3922.5439};
+					position[]={4837.939,7.0211215,4000.9304};
 					azimut=-179.94901;
 					special="FLY";
 					id=55;
@@ -1894,19 +1894,19 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="HeliInsertion_1";
-					init="this setPos [getPos this select 0, getPos this select 1, 20]; this flyInHeight 10;";
+					init="this setPos [getPos this select 0, getPos this select 1, 10]; this flyInHeight 10;";
 					syncId=5;
 					synchronizations[]={5};
 				};
 			};
 			class Waypoints
 			{
-				items=14;
+				items=13;
 				class Item0
 				{
-					position[]={4915.4839,8.766098,3861.1006};
+					position[]={4830.2388,4.3333406,3925.8965};
 					combatMode="BLUE";
-					speed="NORMAL";
+					speed="LIMITED";
 					combat="STEALTH";
 					class Effects
 					{
@@ -1915,10 +1915,10 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={4718.5747,6.2071218,3033.4128};
+					position[]={4740.812,6.1964493,3051.0134};
 					id=74;
 					type="TR UNLOAD";
-					expActiv="HeliInsercio_1 land ""HelipadHeli_1""; HeliInsercio_1 engineOn false; {doGetOut  _x; unassignVehicle _x      } foreach assignedCargo (vehicle this);";
+					expActiv="HeliInsertion_1 land 'LAND'; {doGetOut  _x; unassignVehicle _x      } foreach assignedCargo (vehicle this);";
 					class Effects
 					{
 					};
@@ -1926,9 +1926,9 @@ class Mission
 				};
 				class Item2
 				{
-					position[]={4720.3584,7.2511721,3016.9612};
-					type="HOLD";
-					expCond="player in HeliInsercio";
+					position[]={4741.2178,5.6377101,3040.3816};
+					speed="LIMITED";
+					expCond="({_x in HeliInsertion} count playableUnits) + ({_x in HeliInsertion_1} count playableUnits) == {alive _x} count playableUnits;";
 					class Effects
 					{
 					};
@@ -1940,6 +1940,7 @@ class Mission
 					combatMode="BLUE";
 					speed="FULL";
 					combat="STEALTH";
+					expCond="";
 					class Effects
 					{
 					};
@@ -2018,17 +2019,7 @@ class Mission
 				class Item12
 				{
 					position[]={4622.6279,5.5894885,183.2309};
-					expActiv="deleteVehicle HeliInsertion_1;";
-					class Effects
-					{
-					};
-					showWP="NEVER";
-				};
-				class Item13
-				{
-					position[]={4718.5747,6.2071218,3033.4128};
-					id=74;
-					name="HelipadHeli_1";
+					expActiv="{deleteVehicle _x;} forEach crew HeliInsertion_1; deleteVehicle HeliInsertion_1;";
 					class Effects
 					{
 					};
@@ -2370,7 +2361,8 @@ class Mission
 		};
 		class Item15
 		{
-			position[]={4718.5747,6.2071218,3033.4128};
+			position[]={4740.812,6.1964493,3051.0134};
+			azimut=180;
 			id=74;
 			side="EMPTY";
 			vehicle="Land_HelipadSquare_F";
@@ -2378,12 +2370,12 @@ class Mission
 		};
 		class Item16
 		{
-			position[]={4700.6147,6.5965381,3034.4485};
+			position[]={4676.665,6.1754494,3050.9863};
+			azimut=180;
 			id=75;
 			side="EMPTY";
 			vehicle="Land_HelipadSquare_F";
 			skill=0.60000002;
-			text="HelipadHeli";
 		};
 	};
 	class Markers

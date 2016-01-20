@@ -137,7 +137,7 @@ if (_faccioUnitat == "civ_f") then {
 };
 
 // Equipació per la facció RHS USA "United States Army" i "United States Marine Corps".
-if (((_faccioUnitat find "rhs_faction_usarmy_") >= 0) or ((_faccioUnitat find "rhs_faction_usmc_") >= 0)) then {
+if (((_faccioUnitat find "rhs_faction_usarmy_") >= 0) or ((_faccioUnitat find "rhs_faction_usmc_") >= 0) or ((_faccioUnitat find "rhs_faction_usn_") >= 0)) then {
     #include "..\..\..\configMissio\configEquipacio\scripts\cc_configEquipacio_rhs_usaf.sqf"
 };
 

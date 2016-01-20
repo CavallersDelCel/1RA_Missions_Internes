@@ -116,7 +116,7 @@ if (_faccioUnitat == "rhs_faction_usarmy_wd") exitWith {
 };
 
 // Briefing per la facció USA "United States Marine Corps"
-if (_faccioUnitat == "rhs_faction_usmc_d") exitWith {
+if ((_faccioUnitat == "rhs_faction_usmc_d") or (_faccioUnitat == "rhs_faction_usn_d")) exitWith {
     #include "..\..\..\configMissio\briefing\scripts\cc_briefing_rhs_usmc_d.sqf"
 
     // DEBUG OUTPUT
@@ -126,7 +126,7 @@ if (_faccioUnitat == "rhs_faction_usmc_d") exitWith {
 };
 
 // Briefing per la facció USA "United States Marine Corps"
-if (_faccioUnitat == "rhs_faction_usmc_wd") exitWith {
+if ((_faccioUnitat == "rhs_faction_usmc_wd") or (_faccioUnitat == "rhs_faction_usn_wd")) exitWith {
     #include "..\..\..\configMissio\briefing\scripts\cc_briefing_rhs_usmc_wd.sqf"
 
     // DEBUG OUTPUT
