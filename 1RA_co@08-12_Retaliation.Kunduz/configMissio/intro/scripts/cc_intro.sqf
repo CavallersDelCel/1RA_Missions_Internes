@@ -129,12 +129,12 @@ if (_faccioUnitat == "rhs_faction_usarmy_wd") exitWith {
 };
 
 // Introducció per la facció RHS: USAF "United States Marine Corps".
-if ((_faccioUnitat == "rhs_faction_usmc_d") or (_faccioUnitat == "rhs_faction_usn_d")) exitWith {
+if ((_faccioUnitat == "rhs_faction_usmc_d") or (_faccioUnitat == "rhs_faction_usn")) exitWith {
     #define introText "Whoever said the pen is mightier than the sword obviously never encountered automatic weapons.\nDouglas MacArthur."
     #define llocMissio "Kunduz, Afghanistan"
 
     if (_introType == 1) then {
-        ["markerRescue", "Retaliation<br/>Kunduz, Afghanistan", [400,200,0,1], "amarker"] execVM "src\intro\scripts\cc_intro_uav.sqf";
+        ["markerRescue", "Retaliation - Kunduz, Afghanistan", [400,200,0,1], "amarker"] execVM "src\intro\scripts\cc_intro_uav.sqf";
     } else {
         #include "..\..\..\src\intro\scripts\cc_intro_pantallaNegre_typeText.sqf"
     };
@@ -146,7 +146,7 @@ if ((_faccioUnitat == "rhs_faction_usmc_d") or (_faccioUnitat == "rhs_faction_us
 };
 
 // Introducció per la facció RHS: USAF "United States Marine Corps".
-if ((_faccioUnitat == "rhs_faction_usmc_wd") or (_faccioUnitat == "rhs_faction_usn_wd")) exitWith {
+if ((_faccioUnitat == "rhs_faction_usmc_wd") or (_faccioUnitat == "rhs_faction_usn")) exitWith {
     #define introText "Whoever said the pen is mightier than the sword obviously never encountered automatic weapons.\nDouglas MacArthur."
     #define llocMissio "Localització"
 

@@ -113,7 +113,7 @@ class Mission
 				class Item4
 				{
 					position[]={4824.0859,7.1279016,1983.8319};
-					azimut=166.36433;
+					azimut=166.364;
 					id=4;
 					side="WEST";
 					vehicle="rhsusf_navy_marpat_d_medic";
@@ -121,7 +121,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="CC_Alfa1_5";
-					init="[""Alfa"", 1, ""me"", this] call cc_fnc_configUnitat; this assignasCargo cc_truckFront; this moveinCargo cc_truckFront;";
+					init="[""Alfa"", 1, ""me"", this, ""rhs_faction_usmc_d""] call cc_fnc_configUnitat; this assignasCargo cc_truckFront; this moveinCargo cc_truckFront;";
 					description="Metge";
 				};
 			};

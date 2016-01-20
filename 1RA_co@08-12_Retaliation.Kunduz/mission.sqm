@@ -170,7 +170,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="CC_Alfa1_5";
-					init="[""Alfa"", 1, ""me"", this] call cc_fnc_configUnitat; this assignasCargo HeliInsertion; this moveinCargo HeliInsertion;";
+					init="[""Alfa"", 1, ""me"", this, ""rhs_faction_usmc_d""] call cc_fnc_configUnitat; this assignasCargo HeliInsertion; this moveinCargo HeliInsertion;";
 					description="Metge";
 				};
 			};

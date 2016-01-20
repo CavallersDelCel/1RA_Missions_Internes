@@ -14,23 +14,13 @@
 // NOTES: CRÈDITS.                                                                                       //
 //=======================================================================================================//
 _credits = player createDiaryRecord ["diary", ["Crèdits","
-Missió generada per <font color='#00FFFF'>*** Autors ***</font> per a la <font color='#00FFFF'>Comunitat Catalana de Simulació - Cavallers del Cel</font>.
-<br/><br/>
-Amb la col·laboració de CC_Magnetar (plantilla) i *** possibles col·laboradors ***.
+Missió generada per <font color='#00FFFF'>CC_Magnetar</font> per a la <font color='#00FFFF'>Comunitat Catalana de Simulació - Cavallers del Cel</font>.
 "]];
 
 //=======================================================================================================//
 // NOTES: RADIO.                                                                                         //
 //=======================================================================================================//
 _admlog = player createDiaryRecord ["diary", ["Freqüències de Radio","
-<font color='#FF0000' size='18'>Comandament</font>: 41 kHz.
-<br/><br/>
-<font color='#FF0000' size='18'>Suport</font>: 51 kHz.
-<br/><br/>
-<font color='#FF0000' size='18'>Artilleria</font>: 61 kHz.
-<br/><br/>
-<font color='#FF0000' size='18'>Alfa</font>
-<br/>
 - Esquadra ""Alfa"": 200 kHz.
 <br/>
 - Equip de foc ""Alfa 1-1"": 201 kHz.
@@ -38,16 +28,6 @@ _admlog = player createDiaryRecord ["diary", ["Freqüències de Radio","
 - Equip de foc ""Alfa 1-2"": 202 kHz.
 <br/>
 - Equip de foc ""Alfa 1-3"": 203 kHz.
-<br/><br/>
-<font color='#FF0000' size='18'>Bravo</font>
-<br/>
-- Esquadra ""Bravo"": 210 kHz.
-<br/>
-- Equip de foc ""Bravo 1-1"": 211 kHz.
-<br/>
-- Equip de foc ""Bravo 1-2"": 212 kHz.
-<br/>
-- Equip de foc ""Bravo 1-3"": 213 kHz.
 "]];
 
 //=======================================================================================================//
@@ -56,11 +36,11 @@ _admlog = player createDiaryRecord ["diary", ["Freqüències de Radio","
 _admlog = player createDiaryRecord ["diary", ["Administració/Logística","
 <font color='#FF0000' size='18'>Suport</font>
 <br/>
-*** Descripció de les unitats de suport, evacuació mèdica, CAS etc. en cas d'existir.
+Sense suports addicionals.
 <br/><br/>
 <font color='#FF0000' size='18'>Abastiment</font>
 <br/>
-*** Abastiment de les tropes: munició addicional, ...
+Sense abastiment, les tropes s'hauran d'espavilar amb el que tenen.
 "]];
 
 //=======================================================================================================//
@@ -69,48 +49,36 @@ _admlog = player createDiaryRecord ["diary", ["Administració/Logística","
 _execucio = player createDiaryRecord ["diary", ["Execució","
 <font color='#FF0000' size='18'>Tasques principals</font>
 <br/>
-- <font color='#00FFFF'>Tasca principal 1</font>: *** Breu descripció ***.
-<br/>
-- <font color='#00FFFF'>Tasca principal 2</font>: *** Breu descripció ***.
-<br/><br/>
-<font color='#FF0000' size='18'>Tasques secundària</font>
-<br/>
-- <font color='#00FFFF'>Tasca secundària 1</font>: *** Breu descripció ***.
-<br/>
-- <font color='#00FFFF'>Tasca secundària 2</font>: *** Breu descripció ***.
-<br/><br/>
-<font color='#FF0000' size='18'>Execució</font>
-<br/>
-*** Descripció, per punts, de com executar la missió. ***
+- Dirigir-se a l'aeroport per tornar cap a casa.
 "]];
 
 //=======================================================================================================//
 // NOTES: MISSIÓ.                                                                                        //
 //=======================================================================================================//
 _missio = player createDiaryRecord ["diary", ["Missió","
-*** Descripció de la missió. ***
+Dirigir-se a l'aeroport per tornar cap a casa.
 "]];
 
 //=======================================================================================================//
 // NOTES: INTEL·LIGÈNCIA.                                                                                //
 //=======================================================================================================//
 _intel = player createDiaryRecord ["diary", ["Intel·ligència","
-*** Informe d'intel·ligència. ***
-<br/><br/>
 <font color='#FF0000' size='18'>Forces enemigues</font>
 <br/>
-*** Descripció de les forces enemigues.***
+La província de Kunduz es considera una zona segura.
 <br/><br/>
 <font color='#FF0000' size='18'>Forces aliades</font>
 <br/>
-*** Breu descripció de les forces aliades.***
+- 2 HMMWVs amb M2.
+- Esquadra Alfa 1.
+- Esquadra Alfa 2.
 "]];
 
 //=======================================================================================================//
 // NOTES: SITUACIÓ.                                                                                      //
 //=======================================================================================================//
 _situacio = player createDiaryRecord ["diary", ["SITREP","
-*** Breu descripció de la situació.***
+Després d'uns mesos a Afghanistan, algunes de les tropes aliades tornen cap a casa...
 "]];
 
 //============================================ FI DEL FITXER ============================================//

@@ -90,7 +90,6 @@ contraatacar de forma efectiva un atac aèri o a distancia, especialment a la fo
 // NOTES: INTEL·LIGÈNCIA.                                                                                //
 //=======================================================================================================//
 _intel = player createDiaryRecord ["diary", ["Intel·ligència","
-<br/><br/>
 <font color='#FF0000' size='18'>Forces enemigues</font>
 <br/>
 S'espera una forta presència d'unitats enemigues a la zona. Els insurgents estan mal equipats i no disposen

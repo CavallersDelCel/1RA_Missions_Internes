@@ -80,7 +80,7 @@ enableDebugConsole = 1;  // Consola de Debub  Habilitada per SP i administradors
 //=======================================================================================================//
 showGPS     = 1;             // Permet el GPS: 0 = deshabilitat, 1 = habilitat.
 showCompass = 1;             // Brújola visible: 0 = deshabilitat, 1 = habilitat.
-showMap     = 1;             // Mostra el mapa després de que comenci la missió: 0 = deshabilitat,
+showMap     = 0;             // Mostra el mapa després de que comenci la missió: 0 = deshabilitat,
                              // 1 = habilitat.
 showWatch   = 1;             // Mostra el rellotge: 0 = deshabilitat, 1 = habilitat.
 forceRotorLibSimulation = 1; // Força la llibreria de model de vol avançat: 0 = opcions del client,

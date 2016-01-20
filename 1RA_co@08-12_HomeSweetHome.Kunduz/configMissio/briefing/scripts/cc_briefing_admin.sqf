@@ -22,7 +22,19 @@ _briefingAdmin = "
 <br/>
 Aquesta missió s'ha comprovat que funciona amb el següent:
 <br/><br/>
-*** Llistat d'addons i les seves versions. ***
+- Advanced Combat Environment 3 (ACE3) v3.4.2.
+<br/>
+- Community Base Addons (CBA) v2.0.
+<br/>
+- Kunduz, Afghanistan v1.08.
+<br/>
+- Leights Opfor Pack (LOP) v1.7.1.
+<br/>
+- RHS United States Army Forces (RHS USAF) v0.4.2.
+<br/>
+- RHS Armed Forces of the Russian Federation (RHS AFRF) v0.4.2.
+<br/>
+- Task Force Arrowhead Radio (TFAR) v0.9.7.3.
 <br/><br/>
 Si els requisits no es compleixen o les versions són diferents cal comprovar prèviament que tot funcioni correctament.
 <br/>
@@ -36,13 +48,13 @@ _briefingNotes = "
 <br/>
 <font color='#FF0000' size='18'>Notes del creador de la missió</font>
 <br/>
-<font color='#00FFFF'>Nom de la missió:</font> ""*** Nom de la missió ***"".
+<font color='#00FFFF'>Nom de la missió:</font> ""Retaliation"".
 <br/>
 <font color='#00FFFF'>Versió:</font> 1.0.
 <br/>
 <font color='#00FFFF'>Autor:</font> CC_Magnetar.
 <br/>
-<font color='#00FFFF'>Col·laboradors:</font> *** Listat de col·laboradors ***.
+<font color='#00FFFF'>Col·laboradors:</font> -.
 <br/>
 <font color='#00FFFF'>Nombre mínim de jugadors:</font> 8.
 <br/>
@@ -50,11 +62,11 @@ _briefingNotes = "
 <br/>
 <font color='#00FFFF'>Respawn:</font> Deshabilitat.
 <br/>
-<font color='#00FFFF'>Dificultat:</font> Elevada.
+<font color='#00FFFF'>Dificultat:</font> Impossible.
 <br/>
-<font color='#00FFFF'>Resum de la missió:</font>
-<br/><br/>
-*** Notes i missatges addicionals del creador de la missió. ***
+<font color='#00FFFF'>Resum de la missió:</font> ""Home Sweet Home..."" és una missió preludi per la missió
+""Retaliation"". Les tropes aliades es retiren cap a l'aeroport però són atacades per insurgents. En 5 o 10
+minuts, tots els jugadors haurien d'estar morts.
 ";
 
 //=======================================================================================================//

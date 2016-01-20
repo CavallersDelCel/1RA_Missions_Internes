@@ -127,7 +127,7 @@ if (_faccioUnitat == "rhs_faction_usarmy_wd") exitWith {
 };
 
 // Introducció per la facció RHS: USAF "United States Marine Corps".
-if ((_faccioUnitat == "rhs_faction_usmc_d") or (_faccioUnitat == "rhs_faction_usn_d")) exitWith {
+if ((_faccioUnitat == "rhs_faction_usmc_d") or (_faccioUnitat == "rhs_faction_usn")) exitWith {
     #define introText "Whoever said the pen is mightier than the sword obviously never encountered automatic weapons.\nDouglas MacArthur."
     #define llocMissio "Kunduz, Afghanistan\nAirport road"
 
@@ -140,7 +140,7 @@ if ((_faccioUnitat == "rhs_faction_usmc_d") or (_faccioUnitat == "rhs_faction_us
 };
 
 // Introducció per la facció RHS: USAF "United States Marine Corps".
-if ((_faccioUnitat == "rhs_faction_usmc_wd") or (_faccioUnitat == "rhs_faction_usn_wd")) exitWith {
+if ((_faccioUnitat == "rhs_faction_usmc_wd") or (_faccioUnitat == "rhs_faction_usn")) exitWith {
     #define introText "Whoever said the pen is mightier than the sword obviously never encountered automatic weapons.\nDouglas MacArthur."
     #define llocMissio "Localització"
 

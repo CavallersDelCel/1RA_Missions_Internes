@@ -14,50 +14,10 @@
 // DEBRIEFING: Informació per quan acaba la missió.                                                      //
 //=======================================================================================================//
 class CfgDebriefing {
-    class FinalExit1 {
-        title = "Final #1";
-        subtitle = "";
-        description = "*** Debriefing del final #1. ***";
-        pictureBackground = "";
-        picture = "b_inf";
-        pictureColor[] = {0.0,0.3,0.6,1};
-    };
-
-    class FinalExit2 {
-        title = "Final #2";
-        subtitle = "";
-        description = "*** Debriefing del final #2. ***";
-        pictureBackground = "";
-        picture = "b_inf";
-        pictureColor[] = {0.0,0.3,0.6,1};
-    };
-
-    //class FinalExit3, FinalExit4, ....
-
-    class FinalFallit1 {
-        title = "Missió fallida #1";
-        subtitle = "";
-        description = "*** Debriefing del final fallit #1. ***";
-        pictureBackground = "";
-        picture = "b_inf";
-        pictureColor[] = {0.0,0.3,0.6,1};
-    };
-
-    class FinalFallit2 {
-        title = "Missió fallida #2";
-        subtitle = "";
-        description = "*** Debriefing final fallit #2. ***";
-        pictureBackground = "";
-        picture = "b_inf";
-        pictureColor[] = {0.0,0.3,0.6,1};
-    };
-
-    //class FinalFallit3, FinalFallit4, ....
-
     class FracasAbsolut {
         title = "Fracàs absolut";
         subtitle = "";
-        description = "*** Descripció de què és fracàs absolut. ***";
+        description = "Totes les unitats del convoi han estat abatudes.";
         pictureBackground = "";
         picture = "KIA";
         pictureColor[] = {0.0,0.3,0.6,1};

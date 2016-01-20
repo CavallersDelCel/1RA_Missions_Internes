@@ -64,8 +64,8 @@
 //                  rhs_faction_usarmy_d    United States Army (Desert)                                  //
 //                  rhs_faction_usmc_wd     United States Marine Corps (Woodland)                        //
 //                  rhs_faction_usmc_d      United States Marine Corps (Desert)                          //
-//                  rhs_faction_usn_wd      United States Navy (Woodland)                                //
-//                  rhs_faction_usn_d       United States Navy (Desert)                                  //
+//                  rhs_faction_usn      United States Navy (Woodland)                                //
+//                  rhs_faction_usn       United States Navy (Desert)                                  //
 //                  rhs_faction_insurgents  Insurgents                                                   //
 //                  rhs_faction_vpvo        Soviet Air Defense Troops (Voyska protivovozdushnoy oborony) //
 //                  rhs_faction_vdv         Russian Airborne Troops (Vozdushno-desantnye voyska)         //
@@ -166,7 +166,7 @@ if (_faccioUnitat == "rhs_faction_usarmy_wd") then {
     _motxilla = "rhsusf_assault_eagleaiii_ucp";
 };
 
-if ((_faccioUnitat == "rhs_faction_usmc_d") or (_faccioUnitat == "rhs_faction_usn_d")) then {
+if ((_faccioUnitat == "rhs_faction_usmc_d") or (_faccioUnitat == "rhs_faction_usn")) then {
     // Uniformes
     _uniforme = "rhs_uniform_FROG01_d";
 
@@ -189,7 +189,7 @@ if ((_faccioUnitat == "rhs_faction_usmc_d") or (_faccioUnitat == "rhs_faction_us
     _motxilla = "rhsusf_assault_eagleaiii_ocp";
 };
 
-if ((_faccioUnitat == "rhs_faction_usmc_wd") or (_faccioUnitat == "rhs_faction_usn_wd")) then {
+if ((_faccioUnitat == "rhs_faction_usmc_wd") or (_faccioUnitat == "rhs_faction_usn")) then {
     // Uniformes
     _uniforme = "rhs_uniform_FROG01_wd";
 
