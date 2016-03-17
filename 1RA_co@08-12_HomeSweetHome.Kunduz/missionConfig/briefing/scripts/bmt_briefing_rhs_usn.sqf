@@ -56,7 +56,7 @@ _execution = player createDiaryRecord ["diary", ["Execution","
 <br/><br/>
 <font color='#FF0000' size='18'>Execution</font>
 <br/>
-Sit, relax, and enjoy the ride, you are returning home!
+Sit, relax, and enjoy the ride! You are returning home!
 "]];
 
 //=======================================================================================================//
@@ -76,8 +76,8 @@ Kunduz province is considered a safe zone.
 <br/><br/>
 <font color='#FF0000' size='18'>Allied forces</font>
 <br/>
-- 2 HMMWVs with M2.
-- Squad Alpha 1.
+- 2 HMMWVs with M2.<br/>
+- Squad Alpha 1.<br/>
 - Squad Alpha 2.
 "]];
 

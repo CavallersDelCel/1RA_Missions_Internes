@@ -23,14 +23,14 @@ class Header {
 //=======================================================================================================//
 
 onLoadName = "Home sweet home ...";            // Mission name.
-onLoadMission = "Un grup de marines tornen cap a casa.";  // Brief mission description.
+onLoadMission = "A group of marines returns home.";  // Brief mission description.
 onLoadIntro = "Arma 3 - Basic Mission Template (A3-BMT)";  // Message shown while loading introduction.
 onLoadIntroTime = 0;                             // Show (1) or hide (0) date and time on when loading introduction.
 onLoadMissionTime = 0;                           // Show (1) or hide (0) date and time on when loading mission.
 author = "TheMagnetar";                          // Author.
 loadScreen = "images\loadScreen.jpg";            // Image displayed when loading mission.
 overviewPicture = "images\overviewPicture.jpg";  // Imatge displayed when selecting mission (aspect 2:1).
-overviewText = "Un grup de marines tornen cap a casa després de servir a Kunduz, Afghanistan.";          // Text shown when selecting mission.
+overviewText = "A group of marines returns home after serving in Kunduz, Afghanistan.";          // Text shown when selecting mission.
 
 //=======================================================================================================//
 // Respawn Settings: https://community.bistudio.com/wiki/Arma_3_Respawn                                  //
@@ -81,4 +81,17 @@ disableChannels[]={1,2,3,4}; // Disable channels. MOTD and admin say have except
                              // 0 = global, 1 = Side, 2 = Command, 3 = Group, 4 = Vehicle, 5 = Direct,
                              // 6 = System.
 
+                             
+//=======================================================================================================//
+// Music and Soundtracks.                                                                                //
+//=======================================================================================================//
+class CfgMusic {
+	tracks[]={introSong};
+
+	class introSong {
+		name = "introSong";
+		sound[] = {"\music\SweetHomeAlabama.ogg", db+40, 1.0};
+	};
+};
+                             
 //============================================= END OF FILE =============================================//

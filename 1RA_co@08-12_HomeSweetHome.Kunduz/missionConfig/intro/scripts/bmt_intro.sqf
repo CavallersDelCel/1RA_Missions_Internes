@@ -104,7 +104,7 @@ switch (_unitFaction) do {
 
     // RHS: USAF "United States Marine Corps" (D) faction.
     case "rhs_faction_usmc_d": {
-        _missionLocation = "Kunduz, Afghanistan\nAirport road"; _uavMarker = "marker"; _uavMarkerType = [];
+        _missionLocation = "Kunduz, Afghanistan - Airport road"; _uavMarker = "marker"; _uavMarkerType = [];
 	};
 
     // RHS: USAF "United States Marine Corps" (WD) faction.
@@ -114,7 +114,7 @@ switch (_unitFaction) do {
 
     // RHS: USAF "United States Navy" faction.
     case "rhs_faction_usn": {
-        _missionLocation = "Kunduz, Afghanistan\nAirport road"; _uavMarker = "marker"; _uavMarkerType = [];
+        _missionLocation = "Kunduz, Afghanistan - Airport road"; _uavMarker = "marker"; _uavMarkerType = [];
 	};
 
     // RHS: Insurgents faction.
