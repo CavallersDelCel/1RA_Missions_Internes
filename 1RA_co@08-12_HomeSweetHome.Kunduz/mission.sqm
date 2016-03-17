@@ -67,7 +67,7 @@ class Mission
 					rank="LIEUTENANT";
 					skill=0.60000002;
 					text="CC_Alfa1_1";
-					init="[""Alfa"", 1, ""sl"", this] call cc_fnc_configUnitat; this assignasCargo cc_truckFront; this moveinCargo cc_truckFront;";
+					init="[""Alpha"", 1, ""sl"", this] call bmt_fnc_configUnit; this assignasCargo cc_truckFront; this moveinCargo cc_truckFront;";
 					description="Líder d'esquadra";
 				};
 				class Item1
@@ -80,7 +80,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="CC_Alfa1_2";
-					init="[""Alfa"", 1, ""rflat"", this] call cc_fnc_configUnitat; this assignasCargo cc_truckFront; this moveinCargo cc_truckFront;";
+					init="[""Alpha"", 1, ""rflat"", this] call bmt_fnc_configUnit; this assignasCargo cc_truckFront; this moveinCargo cc_truckFront;";
 					description="Fuseller (AT4)";
 				};
 				class Item2
@@ -94,7 +94,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="CC_Alfa1_3";
-					init="[""Alfa"", 1, ""ar"", this] call cc_fnc_configUnitat; this assignasCargo cc_truckFront; this moveinCargo cc_truckFront;";
+					init="[""Alpha"", 1, ""ar"", this] call bmt_fnc_configUnit; this assignasCargo cc_truckFront; this moveinCargo cc_truckFront;";
 					description="Fuseller automàtic (M249)";
 				};
 				class Item3
@@ -107,7 +107,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="CC_Alfa1_4";
-					init="[""Alfa"", 1, ""gr"", this] call cc_fnc_configUnitat; this assignasCargo cc_truckFront; this moveinCargo cc_truckFront;";
+					init="[""Alpha"", 1, ""gr"", this] call bmt_fnc_configUnit; this assignasCargo cc_truckFront; this moveinCargo cc_truckFront;";
 					description="Granader";
 				};
 				class Item4
@@ -121,7 +121,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="CC_Alfa1_5";
-					init="[""Alfa"", 1, ""me"", this, ""rhs_faction_usmc_d""] call cc_fnc_configUnitat; this assignasCargo cc_truckFront; this moveinCargo cc_truckFront;";
+					init="[""Alpha"", 1, ""me"", this, ""rhs_faction_usmc_d""] call bmt_fnc_configUnit; this assignasCargo cc_truckFront; this moveinCargo cc_truckFront;";
 					description="Metge";
 				};
 			};
@@ -143,7 +143,7 @@ class Mission
 					rank="SERGEANT";
 					skill=0.60000002;
 					text="CC_Alfa2_1";
-					init="[""Alfa"", 2, ""tl"", this] call cc_fnc_configUnitat; this assignasCargo cc_truckRear; this moveinCargo cc_truckRear;";
+					init="[""Alpha"", 2, ""tl"", this] call bmt_fnc_configUnit; this assignasCargo cc_truckRear; this moveinCargo cc_truckRear;";
 					description="Líder d'equip";
 				};
 				class Item1
@@ -156,7 +156,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="CC_Alfa2_2";
-					init="[""Alfa"", 2, ""at"", this] call cc_fnc_configUnitat; this assignasCargo cc_truckRear; this moveinCargo cc_truckRear;";
+					init="[""Alpha"", 2, ""at"", this] call bmt_fnc_configUnit; this assignasCargo cc_truckRear; this moveinCargo cc_truckRear;";
 					description="Antitanc (Javelin)";
 				};
 				class Item2
@@ -169,7 +169,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="CC_Alfa2_3";
-					init="[""Alfa"", 2, ""mg"", this] call cc_fnc_configUnitat; this assignasCargo cc_truckRear; this moveinCargo cc_truckRear;";
+					init="[""Alpha"", 2, ""mg"", this] call bmt_fnc_configUnit; this assignasCargo cc_truckRear; this moveinCargo cc_truckRear;";
 					description="Metrallador";
 				};
 				class Item3
@@ -181,7 +181,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="CC_Alfa2_4";
-					init="[""Alfa"", 2, ""rfl"", this] call cc_fnc_configUnitat; this assignasCargo cc_truckRear; this moveinCargo cc_truckRear;";
+					init="[""Alpha"", 2, ""rfl"", this] call bmt_fnc_configUnit; this assignasCargo cc_truckRear; this moveinCargo cc_truckRear;";
 					description="Fuseller";
 				};
 				class Item4
@@ -193,7 +193,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="CC_Alfa2_5";
-					init="[""Alfa"", 2, ""gr"", this] call cc_fnc_configUnitat; this assignasCargo cc_truckRear; this moveinCargo cc_truckRear;";
+					init="[""Alpha"", 2, ""gr"", this] call bmt_fnc_configUnit; this assignasCargo cc_truckRear; this moveinCargo cc_truckRear;";
 					description="Granader";
 				};
 			};
@@ -214,7 +214,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CC_Alfa3_1";
-					init="[""Alfa"", 3, ""sn"", this] call cc_fnc_configUnitat; this assignasCargo cc_truckRear; this moveinCargo cc_truckRear;";
+					init="[""Alpha"", 3, ""sn"", this] call bmt_fnc_configUnit; this assignasCargo cc_truckRear; this moveinCargo cc_truckRear;";
 					description="Franctirador";
 				};
 				class Item1
@@ -226,7 +226,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="CC_Alfa3_2";
-					init="[""Alfa"", 3, ""sp"", this] call cc_fnc_configUnitat; this assignasCargo cc_truckRear; this moveinCargo cc_truckRear;";
+					init="[""Alpha"", 3, ""sp"", this] call bmt_fnc_configUnit; this assignasCargo cc_truckRear; this moveinCargo cc_truckRear;";
 					description="Observador";
 				};
 			};

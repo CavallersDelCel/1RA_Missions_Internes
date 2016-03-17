@@ -1,22 +1,15 @@
 //=======================================================================================================//
-// Arxiu: DAC_Config_Units.sqf                                                                           //
-// Autor: Silola (silola@freenet.de), CC_Magnetar                                                        //
-// Versió: 0.1                                                                                           //
-// Creació del Document: 2015/07/13                                                                      //
-// Descripció: Aquest document serveix configurar les unitats que del Dynamic-AI-Creator (Silola,        //
-//             http://www.armaholic.com/page.php?id=25550) generarà al mapa. La versió actual d'aquest   //
-//             document ha estat modificada per CC_Magnetar per tal de cobrir les necessitats del        //
-//             1er Regiment Aerotransportat (1RA) de la Comunitat Catalana de Simulació, Cavallers del   //
-//             Cel.                                                                                      //
-//             This document is used in order to configure the units that the script Dynamic-AI-Creator  //
+// File: DAC_Config_Units.sqf                                                                            //
+// Author: Silola (silola@freenet.de), TheMagnetar                                                       //
+// Version 0.1                                                                                           //
+// File creation: 2015/07/13                                                                             //
+// Description: This document is used in order to configure the units that the script Dynamic-AI-Creator //
 //             (Silola, http://www.armaholic.com/page.php?id=25550) spawns on the map. The actual        //
-//             version of this document has been modified by CC_Magnetar in order to cover the needs of  //
-//             "1er Regiment Aerotransportat (1RA)" of the Catalan Community of Simulation "Cavallers    //
-//             del Cel".                                                                                 //
+//             version of this document has been modified by TheMagnetar.                                //
 //                                                                                                       //
-//             Les següents configuracions estan disponibless:                                           //
+//             The following configurations are available:                                               //
 //                                                                                                       //
-//                        Codi      Configuració                                                         //
+//                        Code      Configuration                                                        //
 //                        0         OPFOR CSAT                                                           //
 //                        1         OPFOR CSAT: Recon                                                    //
 //                        2         OPFOR CSAT: Urban                                                    //
@@ -28,9 +21,9 @@
 //                        8         INDEPENDENT: Recon                                                   //
 //                        9         INDEPENDENT: Diver                                                   //
 //                        10        CIVILS                                                               //
-//                        11        CIVILS: AFRO                                                         //
-//                        12        CIVILS: ASIÂTICS                                                     //
-//                        13        CIVILS: EUROPEUS                                                     //
+//                        11        CIVILIANS: AFRO                                                         //
+//                        12        CIVILIANS: ASIÂTICS                                                     //
+//                        13        CIVILIANS: EuropeanS                                                     //
 //                        14        FIA OPFOR                                                            //
 //                        15        FIA BLUFOR                                                           //
 //                        16        FIA INDEPENDENT                                                      //
@@ -58,37 +51,37 @@ switch (_TypNumber) do
     //===================================================================================================//
     case 0: {
         _Unit_Pool_S = [
-            "O_crew_F","O_Helipilot_F","O_soldier_SL_F",   // Tripulació, Pilot d'helicòpter i líder d'esquadra
-            "O_soldier_TL_F",                              // Líder d'equip de foc (Fire Team Leader)
-            "O_soldier_F",                                 // Fuseller (Rifleman)
-            "O_soldier_lite_F",                            // Fuseller lleuger (Light Rifleman)
-            "O_soldier_GL_F",                              // Granader (Grenadier)
-            "O_soldier_AR_F",                              // Fuseller automàtic (Automatic Rifleman)
-            "O_soldier_AAR_F",                             // Assistent de fuseller automàtic (Assistant Automatic Rifleman)
-            "O_soldier_LAT_F",                             // Fuseller amb AT4 (Rifleman AT)
-            "O_soldier_AT_F",                              // Antitanc (Antitank)
-            "O_soldier_AAT_F",                             // Assitent d'antitanc (Antitank Assistant)
-            "O_soldier_AA_F",                              // Antiaèri (Antiair)
-            "O_soldier_AAA_F",                             // Assistent d'antiaèri (Antiair Assistant)
-            "O_soldier_exp_F",                             // Explosius (Explosives)
-            "O_engineer_F",                                // Enginyer (Engineer)
-            "O_soldier_repair_F",                          // Mecànic (Repair Specialist)
-            "O_soldier_M_F",                               // Tirador (Marksman)
-            "O_spotter_F",                                 // Observador (Spotter)
-            "O_sniper_F",                                  // Franctirador (Sniper)
-            "O_medic_F"                                    // Metge
+            "O_crew_F","O_Helipilot_F","O_soldier_SL_F",   // Crew, Helicopter Pilot and Squad Leader
+            "O_soldier_TL_F",                              // Fireteam Leader
+            "O_soldier_F",                                 // Rifleman
+            "O_soldier_lite_F",                            // Light Rifleman
+            "O_soldier_GL_F",                              // Grenadier
+            "O_soldier_AR_F",                              // Automatic Rifleman
+            "O_soldier_AAR_F",                             // Assistant Automatic Rifleman
+            "O_soldier_LAT_F",                             // Rifleman with AT4
+            "O_soldier_AT_F",                              // Anti-Tank
+            "O_soldier_AAT_F",                             // Anti-Tank Assistant
+            "O_soldier_AA_F",                              // Anti-Aircraft
+            "O_soldier_AAA_F",                             // Anti-Aircraft Assistant
+            "O_soldier_exp_F",                             // Explosives
+            "O_engineer_F",                                // Engineer
+            "O_soldier_repair_F",                          // Repair Specialist
+            "O_soldier_M_F",                               // Designated Marksman
+            "O_spotter_F",                                 // Spotter
+            "O_sniper_F",                                  // Sniper
+            "O_medic_F"                                    // Medic
         ];
         _Unit_Pool_V = [
             "O_Quadbike_01_F",                             // Quad
             "O_MRAP_02_F",                                 // Ifrit
             "O_MRAP_02_gmg_F",                             // Ifrit GMG
             "O_MRAP_02_hmg_F",                             // Ifrit HMG
-            "O_Truck_02_covered_F",                        // Camió Kamaz covert
-            "O_Truck_02_Ammo_F",                           // Camió Kamaz amb munició
-            "O_Truck_02_transport_F",                      // Camió Kamaz de transport
-            "O_Truck_02_box_F",                            // Camió Kamaz amb kit de reparació
-            "O_Truck_02_fuel_F",                           // Camió Kamaz cisterna
-            "O_Truck_02_medical_F"                         // Camió Kamaz mèdic
+            "O_Truck_02_covered_F",                        // Kamaz Truck (Covered)
+            "O_Truck_02_Ammo_F",                           // Kamaz Truck (Ammo)
+            "O_Truck_02_transport_F",                      // Kamaz Truck (Transport)
+            "O_Truck_02_box_F",                            // Kamaz Truck (Repair box)
+            "O_Truck_02_fuel_F",                           // Kamaz Truck (Fuel)
+            "O_Truck_02_medical_F"                         // Kamaz Truck (Medical)
         ];
         _Unit_Pool_T = [
             "O_APC_Tracked_02_cannon_F",                   // BTR-K Kamysh
@@ -99,9 +92,9 @@ switch (_TypNumber) do
         ];
         _Unit_Pool_A = [
             "O_Heli_Attack_02_F",                          // Mi-48 Kajman
-            "O_Heli_Attack_02_black_F",                    // Mi-48 Kajman Negre
+            "O_Heli_Attack_02_black_F",                    // Mi-48 Kajman (Black)
             "O_Heli_Light_02_F",                           // PO-30 Orca
-            "O_Heli_Light_02_unarmed_F"                    // PO-30 Orca (sense armament)
+            "O_Heli_Light_02_unarmed_F"                    // PO-30 Orca (Unarmed)
         ];
     };
 
@@ -110,13 +103,13 @@ switch (_TypNumber) do
     //===================================================================================================//
     case 1: {
         _Unit_Pool_S = [
-            "O_crew_F","O_Helipilot_F","O_recon_TL_F",     // Tripulació, Pilot d'helicòpter i líder d'equip
-            "O_recon_F",                                   // Explorador (Recon Scout)
-            "O_recon_M_F",                                 // Tirador (Recon Marksman)
-            "O_recon_LAT_F",                               // Explorador amb AT4 (Recon Scout AT)
-            "O_recon_medic_F",                             // Metge (Recon Paramedic)
-            "O_recon_exp_F",                               // Explosius (Recon Demo Specialist)
-            "O_recon_JTAC_F"                               // JTAC (Recon JTAC)
+            "O_crew_F","O_Helipilot_F","O_recon_TL_F",     // Crew, Helicopter Pilot and Fireteam Leader
+            "O_recon_F",                                   // Recon Scout
+            "O_recon_M_F",                                 // Recon Marksman
+            "O_recon_LAT_F",                               // Recon Scout AT
+            "O_recon_medic_F",                             // Recon Paramedic
+            "O_recon_exp_F",                               // Recon Demo Specialist
+            "O_recon_JTAC_F"                               // Recon JTAC
         ];
         _Unit_Pool_V = [
             "O_Quadbike_01_F",                             // Quad
@@ -125,7 +118,7 @@ switch (_TypNumber) do
         _Unit_Pool_T = [];
         _Unit_Pool_A = [
             "O_Heli_Light_02_F",                           // PO-30 Orca
-            "O_Heli_Light_02_unarmed_F"                    // PO-30 Orca (sense armament)
+            "O_Heli_Light_02_unarmed_F"                    // PO-30 Orca (Unarmed)
         ];
     };
 
@@ -134,23 +127,23 @@ switch (_TypNumber) do
     //===================================================================================================//
     case 2: {
         _Unit_Pool_S = [
-            "O_crew_F","O_Helipilot_F","O_soldierU_SL_F",  // Tripulació, Pilot d'helicòpter i líder d'esquadra
-            "O_soldierU_TL_F",                             // Líder d'equip de foc (Fire Team Leader)
-            "O_soldierU_F",                                // Fuseller (Rifleman)
-            "O_soldierU_lite_F",                           // Fuseller lleuger (Light Rifleman)
-            "O_soldierU_GL_F",                             // Granader (Grenadier)
-            "O_soldierU_AR_F",                             // Fuseller automàtic (Automatic Rifleman)
-            "O_soldierU_AAR_F",                            // Assistent de fuseller automàtic (Assistant Automatic Rifleman)
-            "O_soldierU_LAT_F",                            // Fuseller amb AT4 (Rifleman AT)
-            "O_soldierU_AT_F",                             // Antitanc (Antitank)
-            "O_soldierU_AAT_F",                            // Assitent d'antitanc (Antitank Assistant)
-            "O_soldierU_AA_F",                             // Antiaèri (Antiair)
-            "O_soldierU_AAA_F",                            // Assistent d'antiaèri (Antiair Assistant)
-            "O_soldierU_exp_F",                            // Explosius (Explosives)
-            "O_engineerU_F",                               // Enginyer (Engineer)
-            "O_soldierU_repair_F",                         // Mecànic (Repair Specialist)
-            "O_soldierU_M_F",                              // Tirador (Marksman)
-            "O_medicU_F"                                   // Metge
+            "O_crew_F","O_Helipilot_F","O_soldierU_SL_F",  // Crew, Helicopter Pilot and Squad Leader
+            "O_soldierU_TL_F",                             // Fireteam Leader
+            "O_soldierU_F",                                // Rifleman
+            "O_soldierU_lite_F",                           // Light Rifleman
+            "O_soldierU_GL_F",                             // Grenadier
+            "O_soldierU_AR_F",                             // Automatic Rifleman
+            "O_soldierU_AAR_F",                            // Assistant Automatic Rifleman
+            "O_soldierU_LAT_F",                            // Rifleman with AT4
+            "O_soldierU_AT_F",                             // Anti-Tank
+            "O_soldierU_AAT_F",                            // Anti-Tank Assistant
+            "O_soldierU_AA_F",                             // Anti-Aircraft
+            "O_soldierU_AAA_F",                            // Anti-Aircraft Assistant
+            "O_soldierU_exp_F",                            // Explosives
+            "O_engineerU_F",                               // Engineer
+            "O_soldierU_repair_F",                         // Repair Specialist
+            "O_soldierU_M_F",                              // Designated Marksman
+            "O_medicU_F"                                   // Medic
         ];
         _Unit_Pool_V = [
             "O_MRAP_02_F",                                 // Ifrit
@@ -168,20 +161,20 @@ switch (_TypNumber) do
     //===================================================================================================//
     case 3: {
         _Unit_Pool_S = [
-            "O_diver_F","O_Helipilot_F","O_diver_TL_F",    // Tripulació, Pilot d'helicòpter i líder d'equip
-            "O_diver_F",                                   // Bussejador (Diver)
-            "O_diver_F",                                   // Bussejador (Diver)
-            "O_diver_exp_F"                                // Bussejador especialista en explosius (Diver Explosive Specialist)
+            "O_diver_F","O_Helipilot_F","O_diver_TL_F",    // Crew, Helicopter Pilot and Fireteam Leader
+            "O_diver_F",                                   // Diver
+            "O_diver_F",                                   // Diver
+            "O_diver_exp_F"                                // Diver Explosive Specialist
         ];
         _Unit_Pool_V = [
             "O_SDV_01_F",                                  // SDV
-            "O_Boat_Transport_01_F",                       // Bot inflable d'assalt (Assault Boat)
-            "O_Boat_Armed_01_hmg_F"                        // Bot HMG (Speedboat HMG)
+            "O_Boat_Transport_01_F",                       // Assault Boat
+            "O_Boat_Armed_01_hmg_F"                        // Speedboat HMG
         ];
         _Unit_Pool_T = [
             "O_SDV_01_F",                                  // SDV
-            "O_Boat_Transport_01_F",                       // Bot inflable d'assalt (Assault Boat)
-            "O_Boat_Armed_01_hmg_F"                        // Bot HMG (Speedboat HMG)
+            "O_Boat_Transport_01_F",                       // Assault Boat
+            "O_Boat_Armed_01_hmg_F"                        // Speedboat HMG
         ];
         _Unit_Pool_A = [];
     };
@@ -191,37 +184,37 @@ switch (_TypNumber) do
     //===================================================================================================//
     case 4: {
         _Unit_Pool_S = [
-            "B_crew_F","B_Helipilot_F","B_soldier_SL_F",   // Tripulació, Pilot d'helicòpter i líder d'esquadra
-            "B_soldier_TL_F",                              // Líder d'equip de foc (Fire Team Leader)
-            "B_soldier_F",                                 // Fuseller (Rifleman)
-            "B_soldier_lite_F",                            // Fuseller lleuger (Light Rifleman)
-            "B_soldier_GL_F",                              // Granader (Grenadier)
-            "B_soldier_AR_F",                              // Fuseller automàtic (Automatic Rifleman)
-            "B_soldier_AAR_F",                             // Assistent de fuseller automàtic (Assistant Automatic Rifleman)
-            "B_soldier_LAT_F",                             // Fuseller amb AT4 (Rifleman AT)
-            "B_soldier_AT_F",                              // Antitanc (Antitank)
-            "B_soldier_AAT_F",                             // Assitent d'antitanc (Antitank Assistant)
-            "B_soldier_AA_F",                              // Antiaèri (Antiair)
-            "B_soldier_AAA_F",                             // Assistent d'antiaèri (Antiair Assistant)
-            "B_soldier_exp_F",                             // Explosius (Explosives)
-            "B_engineer_F",                                // Enginyer (Engineer)
-            "B_soldier_repair_F",                          // Mecànic (Repair Specialist)
-            "B_soldier_M_F",                               // Tirador (Marksman)
-            "B_spotter_F",                                 // Observador (Spotter)
-            "B_sniper_F",                                  // Franctirador (Sniper)
-            "B_medic_F"                                    // Metge
+            "B_crew_F","B_Helipilot_F","B_soldier_SL_F",   // Crew, Helicopter Pilot and Squad Leader
+            "B_soldier_TL_F",                              // Fireteam Leader
+            "B_soldier_F",                                 // Rifleman
+            "B_soldier_lite_F",                            // Light Rifleman
+            "B_soldier_GL_F",                              // Grenadier
+            "B_soldier_AR_F",                              // Automatic Rifleman
+            "B_soldier_AAR_F",                             // Assistant Automatic Rifleman
+            "B_soldier_LAT_F",                             // Rifleman with AT4
+            "B_soldier_AT_F",                              // Anti-Tank
+            "B_soldier_AAT_F",                             // Anti-Tank Assistant
+            "B_soldier_AA_F",                              // Anti-Aircraft
+            "B_soldier_AAA_F",                             // Anti-Aircraft Assistant
+            "B_soldier_exp_F",                             // Explosives
+            "B_engineer_F",                                // Engineer
+            "B_soldier_repair_F",                          // Repair Specialist
+            "B_soldier_M_F",                               // Designated Marksman
+            "B_spotter_F",                                 // Spotter
+            "B_sniper_F",                                  // Sniper
+            "B_medic_F"                                    // Medic
         ];
         _Unit_Pool_V = [
             "B_Quadbike_01_F",                             // Quad
             "B_MRAP_01_F",                                 // Hunter
             "B_MRAP_01_gmg_F",                             // Hunter GMG
             "B_MRAP_01_hmg_F",                             // Hunter HMG
-            "B_Truck_01_covered_F",                        // HEMTT covert
-            "B_Truck_01_Ammo_F",                           // HEMTT amb munició
-            "B_Truck_01_transport_F",                      // HEMTT transport
-            "B_Truck_01_repair_F",                         // HEMTT amb kit de reparació
-            "B_Truck_01_fuel_F",                           // HEMTT cisterna
-            "B_Truck_01_medical_F"                         // HEMTT mèdic
+            "B_Truck_01_covered_F",                        // HEMTT (Covered)
+            "B_Truck_01_Ammo_F",                           // HEMTT (Ammo)
+            "B_Truck_01_transport_F",                      // HEMTT (transport)
+            "B_Truck_01_repair_F",                         // HEMTT (Repair)
+            "B_Truck_01_fuel_F",                           // HEMTT (Fuel)
+            "B_Truck_01_medical_F"                         // HEMTT (Medical)
         ];
         _Unit_Pool_T = [
             "B_APC_Wheeled_01_cannon_F",                   // AMV-7 Marshall
@@ -246,13 +239,13 @@ switch (_TypNumber) do
     //===================================================================================================//
     case 5: {
         _Unit_Pool_S = [
-            "B_crew_F","B_Helipilot_F","B_recon_TL_F",     // Tripulació, Pilot d'helicòpter i líder d'equip
-            "B_recon_F",                                   // Explorador (Recon Scout)
-            "B_recon_M_F",                                 // Tirador (Recon Marksman)
-            "B_recon_LAT_F",                               // Explorador amb AT4 (Recon Scout AT)
-            "B_recon_medic_F",                             // Metge (Recon Paramedic)
-            "B_recon_exp_F",                               // Explosius (Recon Demo Specialist)
-            "B_recon_JTAC_F"                               // JTAC (Recon JTAC)
+            "B_crew_F","B_Helipilot_F","B_recon_TL_F",     // Crew, Helicopter Pilot and Fireteam Leader
+            "B_recon_F",                                   // Recon Scout
+            "B_recon_M_F",                                 // Recon Marksman
+            "B_recon_LAT_F",                               // Recon Scout AT
+            "B_recon_medic_F",                             // Recon Paramedic
+            "B_recon_exp_F",                               // Recon Demo Specialist
+            "B_recon_JTAC_F"                               // Recon JTAC
         ];
         _Unit_Pool_V = [
             "B_Quadbike_01_F",                             // Quad
@@ -270,20 +263,20 @@ switch (_TypNumber) do
     //===================================================================================================//
     case 6: {
         _Unit_Pool_S = [
-            "B_diver_F","B_Helipilot_F","B_diver_TL_F",    // Tripulació, Pilot d'helicòpter i líder d'equip
-            "B_diver_F",                                   // Bussejador (Diver)
-            "B_diver_F",                                   // Bussejador (Diver)
-            "B_diver_exp_F"                                // Bussejador especialista en explosius (Diver Explosive Specialist)
+            "B_diver_F","B_Helipilot_F","B_diver_TL_F",    // Crew, Helicopter Pilot and Fireteam Leader
+            "B_diver_F",                                   // Diver
+            "B_diver_F",                                   // Diver
+            "B_diver_exp_F"                                // Diver Explosive Specialist
         ];
         _Unit_Pool_V = [
             "B_SDV_01_F",                                  // SDV
-            "B_Boat_Transport_01_F",                       // Bot inflable d'assalt (Assault Boat)
-            "B_Boat_Armed_01_minigun_F"                    // Bot amb metralladora (Speedboat Minigum)
+            "B_Boat_Transport_01_F",                       // Assault Boat
+            "B_Boat_Armed_01_minigun_F"                    // Speedboat with Minigun
         ];
         _Unit_Pool_T = [
             "B_SDV_01_F",                                  // SDV
-            "B_Boat_Transport_01_F",                       // Bot inflable d'assalt (Assault Boat)
-            "B_Boat_Armed_01_minigun_F"                    // Bot amb metralladora (Speedboat Minigum)
+            "B_Boat_Transport_01_F",                       // Assault Boat
+            "B_Boat_Armed_01_minigun_F"                    // Speedboat with Minigun
         ];
         _Unit_Pool_A = [];
     };
@@ -293,37 +286,37 @@ switch (_TypNumber) do
     //===================================================================================================//
     case 7: {
         _Unit_Pool_S = [
-            "I_crew_F","I_Helipilot_F","I_soldier_SL_F",   // Tripulació, Pilot d'helicòpter i líder d'esquadra
-            "I_soldier_TL_F",                              // Líder d'equip de foc (Fire Team Leader)
-            "I_soldier_F",                                 // Fuseller (Rifleman)
-            "I_soldier_lite_F",                            // Fuseller lleuger (Light Rifleman)
-            "I_soldier_GL_F",                              // Granader (Grenadier)
-            "I_soldier_AR_F",                              // Fuseller automàtic (Automatic Rifleman)
-            "I_soldier_AAR_F",                             // Assistent de fuseller automàtic (Assistant Automatic Rifleman)
-            "I_soldier_LAT_F",                             // Fuseller amb AT4 (Rifleman AT)
-            "I_soldier_AT_F",                              // Antitanc (Antitank)
-            "I_soldier_AAT_F",                             // Assitent d'antitanc (Antitank Assistant)
-            "I_soldier_AA_F",                              // Antiaèri (Antiair)
-            "I_soldier_AAA_F",                             // Assistent d'antiaèri (Antiair Assistant)
-            "I_soldier_exp_F",                             // Explosius (Explosives)
-            "I_engineer_F",                                // Enginyer (Engineer)
-            "I_soldier_repair_F",                          // Mecànic (Repair Specialist)
-            "I_soldier_M_F",                               // Tirador (Marksman)
-            "I_spotter_F",                                 // Observador (Spotter)
-            "I_sniper_F",                                  // Franctirador (Sniper)
-            "I_medic_F"                                    // Metge
+            "I_crew_F","I_Helipilot_F","I_soldier_SL_F",   // Crew, Helicopter Pilot and Squad Leader
+            "I_soldier_TL_F",                              // Fireteam Leader
+            "I_soldier_F",                                 // Rifleman
+            "I_soldier_lite_F",                            // Light Rifleman
+            "I_soldier_GL_F",                              // Grenadier
+            "I_soldier_AR_F",                              // Automatic Rifleman
+            "I_soldier_AAR_F",                             // Assistant Automatic Rifleman
+            "I_soldier_LAT_F",                             // Rifleman with AT4
+            "I_soldier_AT_F",                              // Anti-Tank
+            "I_soldier_AAT_F",                             // Anti-Tank Assistant
+            "I_soldier_AA_F",                              // Anti-Aircraft
+            "I_soldier_AAA_F",                             // Anti-Aircraft Assistant
+            "I_soldier_exp_F",                             // Explosives
+            "I_engineer_F",                                // Engineer
+            "I_soldier_repair_F",                          // Repair Specialist
+            "I_soldier_M_F",                               // Designated Marksman
+            "I_spotter_F",                                 // Spotter
+            "I_sniper_F",                                  // Sniper
+            "I_medic_F"                                    // Medic
         ];
         _Unit_Pool_V = [
             "I_Quadbike_01_F",                             // Quad
             "I_MRAP_03_F",                                 // Strider
             "I_MRAP_03_gmg_F",                             // Strider GMG
             "I_MRAP_03_hmg_F",                             // Strider HMG
-            "I_Truck_02_covered_F",                        // Zamak covert
-            "I_Truck_02_Ammo_F",                           // Zamak amb munició
-            "I_Truck_02_transport_F",                      // Zamak transport
-            "I_Truck_02_box_F",                            // Zamak amb kit de reparació
-            "I_Truck_02_fuel_F",                           // Zamak cisterna
-            "I_Truck_02_medical_F"                         // Zamak mèdic
+            "I_Truck_02_covered_F",                        // Zamak (Covered)
+            "I_Truck_02_Ammo_F",                           // Zamak (Ammo)
+            "I_Truck_02_transport_F",                      // Zamak (Transport)
+            "I_Truck_02_box_F",                            // Zamak (Repair)
+            "I_Truck_02_fuel_F",                           // Zamak (Fuel)
+            "I_Truck_02_medical_F"                         // Zamak (Medical)
         ];
         _Unit_Pool_T = [
             "I_APC_Wheeled_03_cannon_F",                   // AFV-4 Gorgon
@@ -332,7 +325,7 @@ switch (_TypNumber) do
         ];
         _Unit_Pool_A = [
             "I_Heli_Light_03_F",                           // WY-55 Helicat
-            "I_Heli_Light_03_unarmed_F"                    // WY-55 Helicat (sense armament)
+            "I_Heli_Light_03_unarmed_F"                    // WY-55 Helicat (Unarmed)
         ];
     };
 
@@ -341,13 +334,13 @@ switch (_TypNumber) do
     //===================================================================================================//
     case 8: {
         _Unit_Pool_S = [
-            "I_crew_F","I_Helipilot_F","I_recon_TL_F",     // Tripulació, Pilot d'helicòpter i líder d'equip
-            "I_recon_F",                                   // Explorador (Recon Scout)
-            "I_recon_M_F",                                 // Tirador (Recon Marksman)
-            "I_soldier_LAT_F",                             // Explorador amb AT4 (Recon Scout AT)
-            "I_recon_medic_F",                             // Metge (Recon Paramedic)
-            "I_recon_exp_F",                               // Explosius (Recon Demo Specialist)
-            "I_recon_JTAC_F"                               // JTAC (Recon JTAC)
+            "I_crew_F","I_Helipilot_F","I_recon_TL_F",     // Crew, Helicopter Pilot and Fireteam Leader
+            "I_recon_F",                                   // Recon Scout
+            "I_recon_M_F",                                 // Recon Marksman
+            "I_soldier_LAT_F",                             // Recon Scout AT
+            "I_recon_medic_F",                             // Recon Paramedic
+            "I_recon_exp_F",                               // Recon Demo Specialist
+            "I_recon_JTAC_F"                               // Recon JTAC
         ];
         _Unit_Pool_V = [
             "I_Quadbike_01_F",                             // Quad
@@ -356,7 +349,7 @@ switch (_TypNumber) do
         _Unit_Pool_T = [];
         _Unit_Pool_A = [
             "I_Heli_Light_03_F",                           // WY-55 Helicat
-            "I_Heli_Light_03_unarmed_F"                    // WY-55 Helicat (sense armament)
+            "I_Heli_Light_03_unarmed_F"                    // WY-55 Helicat (Unarmed)
         ];
     };
 
@@ -365,291 +358,291 @@ switch (_TypNumber) do
     //===================================================================================================//
     case 9: {
         _Unit_Pool_S = [
-            "I_diver_F","I_Helipilot_F","I_diver_TL_F",    // Tripulació, Pilot d'helicòpter i líder d'equip
-            "I_diver_F",                                   // Bussejador (Diver)
-            "I_diver_F",                                   // Bussejador (Diver)
-            "I_diver_exp_F"                                // Bussejador especialista en explosius (Diver Explosive Specialist)
+            "I_diver_F","I_Helipilot_F","I_diver_TL_F",    // Crew, Helicopter Pilot and Fireteam Leader
+            "I_diver_F",                                   // Diver
+            "I_diver_F",                                   // Diver
+            "I_diver_exp_F"                                // Diver Explosive Specialist
         ];
         _Unit_Pool_V = [
             "I_SDV_01_F",                                  // SDV
-            "I_Boat_Transport_01_F",                       // Bot inflable d'assalt (Assault Boat)
-            "I_Boat_Armed_01_minigun_F"                    // Bot amb metralladora (Speedboat Minigum)
+            "I_Boat_Transport_01_F",                       // Assault Boat
+            "I_Boat_Armed_01_minigun_F"                    // Speedboat with Minigun
         ];
         _Unit_Pool_T = [
             "I_SDV_01_F",                                  // SDV
-            "I_Boat_Transport_01_F",                       // Bot inflable d'assalt (Assault Boat)
-            "I_Boat_Armed_01_minigun_F"                    // Bot amb metralladora (Speedboat Minigum)
+            "I_Boat_Transport_01_F",                       // Assault Boat
+            "I_Boat_Armed_01_minigun_F"                    // Speedboat with Minigun
         ];
         _Unit_Pool_A = [];
     };
 
     //===================================================================================================//
-    // CIVILS                                                                                            //
+    // CIVILIANS                                                                                         //
     //===================================================================================================//
     case 10: {
         _Unit_Pool_S = [
-            "C_man_w_worker_F", "C_man_pilot_F", "C_man_1",// Tripulació, pilot d'helicopter, cap dels civils
-            "C_man_1_1_F",                                 // Civil
-            "C_man_1_2_F",                                 // Civil
-            "C_man_1_3_F",                                 // Civil
-            "C_man_polo_1_F",                              // Civil amb polo
-            "C_man_polo_2_F",                              // Civil amb polo
-            "C_man_polo_3_F",                              // Civil amb polo
-            "C_man_polo_4_F",                              // Civil amb polo
-            "C_man_polo_5_F",                              // Civil amb polo
-            "C_man_polo_6_F",                              // Civil amb polo
-            "C_man_shorts_1_F",                            // Civil amb shorts
-            "C_man_shorts_2_F",                            // Civil amb shorts
-            "C_man_shorts_3_F",                            // Civil amb shorts
-            "C_man_p_shorts_1_F",                          // Fugitiu amb shorts
-            "C_man_p_beggar_F",                            // Pidolaire
-            "C_man_p_fugitive_F",                          // Fugitiu
-            "C_man_hunter_1_F"                             // Caçador
+            "C_man_w_worker_F", "C_man_pilot_F", "C_man_1",// Crew, Helicopter Pilot, Civilian Leader
+            "C_man_1_1_F",                                 // Civilian
+            "C_man_1_2_F",                                 // Civilian
+            "C_man_1_3_F",                                 // Civilian
+            "C_man_polo_1_F",                              // Civilian with polo
+            "C_man_polo_2_F",                              // Civilian with polo
+            "C_man_polo_3_F",                              // Civilian with polo
+            "C_man_polo_4_F",                              // Civilian with polo
+            "C_man_polo_5_F",                              // Civilian with polo
+            "C_man_polo_6_F",                              // Civilian with polo
+            "C_man_shorts_1_F",                            // Civilian with shorts
+            "C_man_shorts_2_F",                            // Civilian with shorts
+            "C_man_shorts_3_F",                            // Civilian with shorts
+            "C_man_p_shorts_1_F",                          // Fugitive with shorts
+            "C_man_p_beggar_F",                            // Beggar
+            "C_man_p_fugitive_F",                          // Fugitive
+            "C_man_hunter_1_F"                             // Hunter
         ];
         _Unit_Pool_V = [
-            "C_Van_01_box_F",                              // Furgoneta amb caixa
-            "C_Van_01_transport_F",                        // Furgoneta de transport
-            "C_Van_01_fuel_F",                             // Furgoneta amb combustible
+            "C_Van_01_box_F",                              // Van (Box)
+            "C_Van_01_transport_F",                        // Van (Transport)
+            "C_Van_01_fuel_F",                             // Van (Fuel)
             "C_Hatchback_01_F",                            // VW
-            "C_Hatchback_01_sport_F",                      // VW esportiu
+            "C_Hatchback_01_sport_F",                      // VW (Sport)
             "C_Quadbike_01_F",                             // Quad
-            "C_Offroad_01_F",                              // 4x4
+            "C_Offroad_01_F",                              // Offroad
             "C_SUV_01_F"                                   // VW
         ];
         _Unit_Pool_T = [
-            "C_Van_01_box_F",                              // Furgoneta amb caixa
-            "C_Van_01_transport_F",                        // Furgoneta de transport
-            "C_Van_01_fuel_F",                             // Furgoneta amb combustible
+            "C_Van_01_box_F",                              // Van (Box)
+            "C_Van_01_transport_F",                        // Van (Transport)
+            "C_Van_01_fuel_F",                             // Van (Fuel)
             "C_Hatchback_01_F",                            // VW
-            "C_Hatchback_01_sport_F",                      // VW esportiu
+            "C_Hatchback_01_sport_F",                      // VW (Sport)
             "C_Quadbike_01_F",                             // Quad
-            "C_Offroad_01_F",                              // 4x4
+            "C_Offroad_01_F",                              // Offroad
             "C_SUV_01_F"                                   // VW
         ];
         _Unit_Pool_A = [];
     };
 
     //===================================================================================================//
-    // CIVILS                                                                                            //
+    // CIVILIANS                                                                                         //
     //===================================================================================================//
     case 10: {
         _Unit_Pool_S = [
-            "C_man_w_worker_F", "C_man_pilot_F", "C_man_1",// Tripulació, pilot d'helicopter, cap dels civils
-            "C_man_1_1_F",                                 // Civil
-            "C_man_1_2_F",                                 // Civil
-            "C_man_1_3_F",                                 // Civil
-            "C_man_polo_1_F",                              // Civil amb polo
-            "C_man_polo_1_F_afro",                         // Civil amb polo (Afro)
-            "C_man_polo_1_F_asia",                         // Civil amb polo (Asiàtic)
-            "C_man_polo_1_F_euro",                         // Civil amb polo (Europeu)
-            "C_man_polo_2_F",                              // Civil amb polo
-            "C_man_polo_2_F_afro",                         // Civil amb polo (Afro)
-            "C_man_polo_2_F_asia",                         // Civil amb polo (Asiàtic)
-            "C_man_polo_2_F_euro",                         // Civil amb polo (Europeu)
-            "C_man_polo_3_F",                              // Civil amb polo
-            "C_man_polo_3_F_afro",                         // Civil amb polo (Afro)
-            "C_man_polo_3_F_asia",                         // Civil amb polo (Asiàtic)
-            "C_man_polo_3_F_euro",                         // Civil amb polo (Europeu)
-            "C_man_polo_4_F",                              // Civil amb polo
-            "C_man_polo_4_F_afro",                         // Civil amb polo (Afro)
-            "C_man_polo_4_F_asia",                         // Civil amb polo (Asiàtic)
-            "C_man_polo_4_F_euro",                         // Civil amb polo (Europeu)
-            "C_man_polo_5_F",                              // Civil amb polo
-            "C_man_polo_5_F_afro",                         // Civil amb polo (Afro)
-            "C_man_polo_5_F_asia",                         // Civil amb polo (Asiàtic)
-            "C_man_polo_5_F_euro",                         // Civil amb polo (Europeu)
-            "C_man_polo_6_F",                              // Civil amb polo
-            "C_man_polo_6_F_afro",                         // Civil amb polo (Afro)
-            "C_man_polo_6_F_asia",                         // Civil amb polo (Asiàtic)
-            "C_man_polo_6_F_euro",                         // Civil amb polo (Europeu)
-            "C_man_shorts_1_F",                            // Civil amb shorts
-            "C_man_shorts_1_F_afro",                       // Civil amb shorts (Afro)
-            "C_man_shorts_1_F_asia",                       // Civil amb shorts (Asiàtic)
-            "C_man_shorts_1_F_euro",                       // Civil amb shorts (Europeu)
-            "C_man_shorts_2_F",                            // Civil amb shorts
-            "C_man_shorts_2_F_afro",                       // Civil amb shorts (Afro)
-            "C_man_shorts_2_F_asia",                       // Civil amb shorts (Asiàtic)
-            "C_man_shorts_2_F_euro",                       // Civil amb shorts (Europeu)
-            "C_man_shorts_3_F",                            // Civil amb shorts
-            "C_man_shorts_3_F_afro",                       // Civil amb shorts (Afro)
-            "C_man_shorts_3_F_asia",                       // Civil amb shorts (Asiàtic)
-            "C_man_shorts_3_F_euro",                       // Civil amb shorts (Europeu)
-            "C_man_p_shorts_1_F",                          // Fugitiu amb shorts
-            "C_man_p_shorts_1_F_afro",                     // Fugitiu amb shorts (Afro)
-            "C_man_p_shorts_1_F_asia",                     // Fugitiu amb shorts (Asiàtic)
-            "C_man_p_shorts_1_F_euro",                     // Fugitiu amb shorts (Europeu)
-            "C_man_p_beggar_F",                            // Pidolaire
-            "C_man_p_beggar_F_afro",                       // Pidolaire (Afro)
-            "C_man_p_beggar_F_asia",                       // Pidolaire (Asiàtic)
-            "C_man_p_beggar_F_euro",                       // Pidolaire (Europeu)
-            "C_man_p_fugitive_F",                          // Fugitiu
-            "C_man_p_fugitive_F_afro",                     // Fugitiu (Afro)
-            "C_man_p_fugitive_F_asia",                     // Fugitiu (Asiàtic)
-            "C_man_p_fugitive_F_euro",                     // Fugitiu (Europeu)
-            "C_man_hunter_1_F"                             // Caçador
+            "C_man_w_worker_F", "C_man_pilot_F", "C_man_1",// Crew, Helicopter Pilot, Civilian Leader
+            "C_man_1_1_F",                                 // Civilian
+            "C_man_1_2_F",                                 // Civilian
+            "C_man_1_3_F",                                 // Civilian
+            "C_man_polo_1_F",                              // Civilian with polo
+            "C_man_polo_1_F_afro",                         // Civilian with polo (Afro)
+            "C_man_polo_1_F_asia",                         // Civilian with polo (Asian)
+            "C_man_polo_1_F_euro",                         // Civilian with polo (European)
+            "C_man_polo_2_F",                              // Civilian with polo
+            "C_man_polo_2_F_afro",                         // Civilian with polo (Afro)
+            "C_man_polo_2_F_asia",                         // Civilian with polo (Asian)
+            "C_man_polo_2_F_euro",                         // Civilian with polo (European)
+            "C_man_polo_3_F",                              // Civilian with polo
+            "C_man_polo_3_F_afro",                         // Civilian with polo (Afro)
+            "C_man_polo_3_F_asia",                         // Civilian with polo (Asian)
+            "C_man_polo_3_F_euro",                         // Civilian with polo (European)
+            "C_man_polo_4_F",                              // Civilian with polo
+            "C_man_polo_4_F_afro",                         // Civilian with polo (Afro)
+            "C_man_polo_4_F_asia",                         // Civilian with polo (Asian)
+            "C_man_polo_4_F_euro",                         // Civilian with polo (European)
+            "C_man_polo_5_F",                              // Civilian with polo
+            "C_man_polo_5_F_afro",                         // Civilian with polo (Afro)
+            "C_man_polo_5_F_asia",                         // Civilian with polo (Asian)
+            "C_man_polo_5_F_euro",                         // Civilian with polo (European)
+            "C_man_polo_6_F",                              // Civilian with polo
+            "C_man_polo_6_F_afro",                         // Civilian with polo (Afro)
+            "C_man_polo_6_F_asia",                         // Civilian with polo (Asian)
+            "C_man_polo_6_F_euro",                         // Civilian with polo (European)
+            "C_man_shorts_1_F",                            // Civilian with shorts
+            "C_man_shorts_1_F_afro",                       // Civilian with shorts (Afro)
+            "C_man_shorts_1_F_asia",                       // Civilian with shorts (Asian)
+            "C_man_shorts_1_F_euro",                       // Civilian with shorts (European)
+            "C_man_shorts_2_F",                            // Civilian with shorts
+            "C_man_shorts_2_F_afro",                       // Civilian with shorts (Afro)
+            "C_man_shorts_2_F_asia",                       // Civilian with shorts (Asian)
+            "C_man_shorts_2_F_euro",                       // Civilian with shorts (European)
+            "C_man_shorts_3_F",                            // Civilian with shorts
+            "C_man_shorts_3_F_afro",                       // Civilian with shorts (Afro)
+            "C_man_shorts_3_F_asia",                       // Civilian with shorts (Asian)
+            "C_man_shorts_3_F_euro",                       // Civilian with shorts (European)
+            "C_man_p_shorts_1_F",                          // Fugitive with shorts
+            "C_man_p_shorts_1_F_afro",                     // Fugitive with shorts (Afro)
+            "C_man_p_shorts_1_F_asia",                     // Fugitive with shorts (Asian)
+            "C_man_p_shorts_1_F_euro",                     // Fugitive with shorts (European)
+            "C_man_p_beggar_F",                            // Beggar
+            "C_man_p_beggar_F_afro",                       // Beggar (Afro)
+            "C_man_p_beggar_F_asia",                       // Beggar (Asian)
+            "C_man_p_beggar_F_euro",                       // Beggar (European)
+            "C_man_p_fugitive_F",                          // Fugitive
+            "C_man_p_fugitive_F_afro",                     // Fugitive (Afro)
+            "C_man_p_fugitive_F_asia",                     // Fugitive (Asian)
+            "C_man_p_fugitive_F_euro",                     // Fugitive (European)
+            "C_man_hunter_1_F"                             // Hunter
         ];
         _Unit_Pool_V = [
-            "C_Van_01_box_F",                              // Furgoneta amb caixa
-            "C_Van_01_transport_F",                        // Furgoneta de transport
-            "C_Van_01_fuel_F",                             // Furgoneta amb combustible
+            "C_Van_01_box_F",                              // Van (Box)
+            "C_Van_01_transport_F",                        // Van (Transport)
+            "C_Van_01_fuel_F",                             // Van (Fuel)
             "C_Hatchback_01_F",                            // VW
-            "C_Hatchback_01_sport_F",                      // VW esportiu
+            "C_Hatchback_01_sport_F",                      // VW (Sport)
             "C_Quadbike_01_F",                             // Quad
-            "C_Offroad_01_F",                              // 4x4
+            "C_Offroad_01_F",                              // Offroad
             "C_SUV_01_F"                                   // VW
         ];
         _Unit_Pool_T = [
-            "C_Van_01_box_F",                              // Furgoneta amb caixa
-            "C_Van_01_transport_F",                        // Furgoneta de transport
-            "C_Van_01_fuel_F",                             // Furgoneta amb combustible
+            "C_Van_01_box_F",                              // Van (Box)
+            "C_Van_01_transport_F",                        // Van (Transport)
+            "C_Van_01_fuel_F",                             // Van (Fuel)
             "C_Hatchback_01_F",                            // VW
-            "C_Hatchback_01_sport_F",                      // VW esportiu
+            "C_Hatchback_01_sport_F",                      // VW (Sport)
             "C_Quadbike_01_F",                             // Quad
-            "C_Offroad_01_F",                              // 4x4
+            "C_Offroad_01_F",                              // Offroad
             "C_SUV_01_F"                                   // VW
         ];
         _Unit_Pool_A = [
             "C_Heli_Light_01_civil_F",                     // M900
-            "C_Heli_Light_01_blue_F"                       // M900 (blau)
+            "C_Heli_Light_01_blue_F"                       // M900 (Blue)
         ];
     };
 
     //===================================================================================================//
-    // CIVILS: AFRO                                                                                            //
+    // CIVILIANS: AFRO                                                                                   //
     //===================================================================================================//
     case 11: {
         _Unit_Pool_S = [
-            "C_man_w_worker_F", "C_man_pilot_F", "C_man_1",// Tripulació, pilot d'helicopter, cap dels civils
-            "C_man_polo_1_F_afro",                         // Civil amb polo
-            "C_man_polo_2_F_afro",                         // Civil amb polo
-            "C_man_polo_3_F_afro",                         // Civil amb polo
-            "C_man_polo_4_F_afro",                         // Civil amb polo
-            "C_man_polo_5_F_afro",                         // Civil amb polo
-            "C_man_polo_6_F_afro",                         // Civil amb polo
-            "C_man_shorts_1_F_afro",                       // Civil amb shorts
-            "C_man_shorts_2_F_afro",                       // Civil amb shorts
-            "C_man_shorts_3_F_afro",                       // Civil amb shorts
-            "C_man_p_shorts_1_F_afro",                     // Fugitiu amb shorts
-            "C_man_p_beggar_F_afro",                       // Pidolaire
-            "C_man_p_fugitive_F_afro"                      // Fugitiu
+            "C_man_w_worker_F", "C_man_pilot_F", "C_man_1",// Crew, Helicopter Pilot, Civilian Leader
+            "C_man_polo_1_F_afro",                         // Civilian with polo
+            "C_man_polo_2_F_afro",                         // Civilian with polo
+            "C_man_polo_3_F_afro",                         // Civilian with polo
+            "C_man_polo_4_F_afro",                         // Civilian with polo
+            "C_man_polo_5_F_afro",                         // Civilian with polo
+            "C_man_polo_6_F_afro",                         // Civilian with polo
+            "C_man_shorts_1_F_afro",                       // Civilian with shorts
+            "C_man_shorts_2_F_afro",                       // Civilian with shorts
+            "C_man_shorts_3_F_afro",                       // Civilian with shorts
+            "C_man_p_shorts_1_F_afro",                     // Fugitive with shorts
+            "C_man_p_beggar_F_afro",                       // Beggar
+            "C_man_p_fugitive_F_afro"                      // Fugitive
         ];
         _Unit_Pool_V = [
-            "C_Van_01_box_F",                              // Furgoneta amb caixa
-            "C_Van_01_transport_F",                        // Furgoneta de transport
-            "C_Van_01_fuel_F",                             // Furgoneta amb combustible
+            "C_Van_01_box_F",                              // Vanwith caixa
+            "C_Van_01_transport_F",                        // Vande transport
+            "C_Van_01_fuel_F",                             // Vanwith combustible
             "C_Hatchback_01_F",                            // VW
             "C_Hatchback_01_sport_F",                      // VW esportiu
             "C_Quadbike_01_F",                             // Quad
-            "C_Offroad_01_F",                              // 4x4
+            "C_Offroad_01_F",                              // Offroad
             "C_SUV_01_F"                                   // VW
         ];
         _Unit_Pool_T = [
-            "C_Van_01_box_F",                              // Furgoneta amb caixa
-            "C_Van_01_transport_F",                        // Furgoneta de transport
-            "C_Van_01_fuel_F",                             // Furgoneta amb combustible
+            "C_Van_01_box_F",                              // Vanwith caixa
+            "C_Van_01_transport_F",                        // Vande transport
+            "C_Van_01_fuel_F",                             // Vanwith combustible
             "C_Hatchback_01_F",                            // VW
             "C_Hatchback_01_sport_F",                      // VW esportiu
             "C_Quadbike_01_F",                             // Quad
-            "C_Offroad_01_F",                              // 4x4
+            "C_Offroad_01_F",                              // Offroad
             "C_SUV_01_F"                                   // VW
         ];
         _Unit_Pool_A = [
             "C_Heli_Light_01_civil_F",                     // M900
-            "C_Heli_Light_01_blue_F"                       // M900 (blau)
+            "C_Heli_Light_01_blue_F"                       // M900 (Blue)
         ];
     };
 
     //===================================================================================================//
-    // CIVILS: ASIÀTICS                                                                                  //
+    // CIVILIANS: Asian                                                                                  //
     //===================================================================================================//
     case 12: {
         _Unit_Pool_S = [
-            "C_man_w_worker_F", "C_man_pilot_F", "C_man_1",// Tripulació, pilot d'helicopter, cap dels civils
-            "C_man_polo_1_F_asia",                         // Civil amb polo
-            "C_man_polo_2_F_asia",                         // Civil amb polo
-            "C_man_polo_3_F_asia",                         // Civil amb polo
-            "C_man_polo_4_F_asia",                         // Civil amb polo
-            "C_man_polo_5_F_asia",                         // Civil amb polo
-            "C_man_polo_6_F_asia",                         // Civil amb polo
-            "C_man_shorts_1_F_asia",                       // Civil amb shorts
-            "C_man_shorts_2_F_asia",                       // Civil amb shorts
-            "C_man_shorts_3_F_asia",                       // Civil amb shorts
-            "C_man_p_shorts_1_F_asia",                     // Fugitiu amb shorts
-            "C_man_p_beggar_F_asia",                       // Pidolaire
-            "C_man_p_fugitive_F_asia"                      // Fugitiu
+            "C_man_w_worker_F", "C_man_pilot_F", "C_man_1",// Crew, Helicopter Pilot, Civilian Leader
+            "C_man_polo_1_F_asia",                         // Civilian with polo
+            "C_man_polo_2_F_asia",                         // Civilian with polo
+            "C_man_polo_3_F_asia",                         // Civilian with polo
+            "C_man_polo_4_F_asia",                         // Civilian with polo
+            "C_man_polo_5_F_asia",                         // Civilian with polo
+            "C_man_polo_6_F_asia",                         // Civilian with polo
+            "C_man_shorts_1_F_asia",                       // Civilian with shorts
+            "C_man_shorts_2_F_asia",                       // Civilian with shorts
+            "C_man_shorts_3_F_asia",                       // Civilian with shorts
+            "C_man_p_shorts_1_F_asia",                     // Fugitive with shorts
+            "C_man_p_beggar_F_asia",                       // Beggar
+            "C_man_p_fugitive_F_asia"                      // Fugitive
         ];
         _Unit_Pool_V = [
-            "C_Van_01_box_F",                              // Furgoneta amb caixa
-            "C_Van_01_transport_F",                        // Furgoneta de transport
-            "C_Van_01_fuel_F",                             // Furgoneta amb combustible
+            "C_Van_01_box_F",                              // Van (Box)
+            "C_Van_01_transport_F",                        // Van (Transport)
+            "C_Van_01_fuel_F",                             // Van (Fuel)
             "C_Hatchback_01_F",                            // VW
-            "C_Hatchback_01_sport_F",                      // VW esportiu
+            "C_Hatchback_01_sport_F",                      // VW (Sport)
             "C_Quadbike_01_F",                             // Quad
-            "C_Offroad_01_F",                              // 4x4
+            "C_Offroad_01_F",                              // Offroad
             "C_SUV_01_F"                                   // VW
         ];
         _Unit_Pool_T = [
-            "C_Van_01_box_F",                              // Furgoneta amb caixa
-            "C_Van_01_transport_F",                        // Furgoneta de transport
-            "C_Van_01_fuel_F",                             // Furgoneta amb combustible
+            "C_Van_01_box_F",                              // Van (Box)
+            "C_Van_01_transport_F",                        // Van (Transport)
+            "C_Van_01_fuel_F",                             // Van (Fuel)
             "C_Hatchback_01_F",                            // VW
-            "C_Hatchback_01_sport_F",                      // VW esportiu
+            "C_Hatchback_01_sport_F",                      // VW (Sport)
             "C_Quadbike_01_F",                             // Quad
-            "C_Offroad_01_F",                              // 4x4
+            "C_Offroad_01_F",                              // Offroad
             "C_SUV_01_F"                                   // VW
-            ];
+        ];
         _Unit_Pool_A = [
             "C_Heli_Light_01_civil_F",                     // M900
-            "C_Heli_Light_01_blue_F"                       // M900 (blau)
+            "C_Heli_Light_01_blue_F"                       // M900 (Blue)
         ];
     };
 
     //===================================================================================================//
-    // CIVILS: EUROPEU                                                                                   //
+    // CIVILIANS: European                                                                               //
     //===================================================================================================//
     case 13: {
         _Unit_Pool_S = [
-            "C_man_w_worker_F", "C_man_pilot_F", "C_man_1",// Tripulació, pilot d'helicopter, cap dels civils
+            "C_man_w_worker_F", "C_man_pilot_F", "C_man_1",// Crew, Helicopter Pilot, Civilian Leader
             "C_man_1_1_F",                                 // Civil
             "C_man_1_2_F",                                 // Civil
             "C_man_1_3_F",                                 // Civil
-            "C_man_polo_1_F_euro",                         // Civil amb polo
-            "C_man_polo_2_F_euro",                         // Civil amb polo
-            "C_man_polo_3_F_euro",                         // Civil amb polo
-            "C_man_polo_4_F_euro",                         // Civil amb polo
-            "C_man_polo_5_F_euro",                         // Civil amb polo
-            "C_man_polo_6_F_euro",                         // Civil amb polo
-            "C_man_shorts_1_F_euro",                       // Civil amb shorts
-            "C_man_shorts_2_F_euro",                       // Civil amb shorts
-            "C_man_shorts_3_F_euro",                       // Civil amb shorts
-            "C_man_p_shorts_1_F_euro",                     // Fugitiu amb shorts
-            "C_man_p_beggar_F_euro",                       // Pidolaire
-            "C_man_p_fugitive_F_euro",                     // Fugitiu
-            "C_man_hunter_1_F"                             // Caçador
+            "C_man_polo_1_F_euro",                         // Civilian with polo
+            "C_man_polo_2_F_euro",                         // Civilian with polo
+            "C_man_polo_3_F_euro",                         // Civilian with polo
+            "C_man_polo_4_F_euro",                         // Civilian with polo
+            "C_man_polo_5_F_euro",                         // Civilian with polo
+            "C_man_polo_6_F_euro",                         // Civilian with polo
+            "C_man_shorts_1_F_euro",                       // Civilian with shorts
+            "C_man_shorts_2_F_euro",                       // Civilian with shorts
+            "C_man_shorts_3_F_euro",                       // Civilian with shorts
+            "C_man_p_shorts_1_F_euro",                     // Fugitive with shorts
+            "C_man_p_beggar_F_euro",                       // Beggar
+            "C_man_p_fugitive_F_euro",                     // Fugitive
+            "C_man_hunter_1_F"                             // Hunter
         ];
         _Unit_Pool_V = [
-            "C_Van_01_box_F",                              // Furgoneta amb caixa
-            "C_Van_01_transport_F",                        // Furgoneta de transport
-            "C_Van_01_fuel_F",                             // Furgoneta amb combustible
+            "C_Van_01_box_F",                              // Van (Box)
+            "C_Van_01_transport_F",                        // Van (Transport)
+            "C_Van_01_fuel_F",                             // Van (Fuel)
             "C_Hatchback_01_F",                            // VW
-            "C_Hatchback_01_sport_F",                      // VW esportiu
+            "C_Hatchback_01_sport_F",                      // VW (Sport)
             "C_Quadbike_01_F",                             // Quad
-            "C_Offroad_01_F",                              // 4x4
+            "C_Offroad_01_F",                              // Offroad
             "C_SUV_01_F"                                   // VW
         ];
         _Unit_Pool_T = [
-            "C_Van_01_box_F",                              // Furgoneta amb caixa
-            "C_Van_01_transport_F",                        // Furgoneta de transport
-            "C_Van_01_fuel_F",                             // Furgoneta amb combustible
+            "C_Van_01_box_F",                              // Van (Box)
+            "C_Van_01_transport_F",                        // Van (Transport)
+            "C_Van_01_fuel_F",                             // Van (Fuel)
             "C_Hatchback_01_F",                            // VW
-            "C_Hatchback_01_sport_F",                      // VW esportiu
+            "C_Hatchback_01_sport_F",                      // VW (Sport)
             "C_Quadbike_01_F",                             // Quad
-            "C_Offroad_01_F",                              // 4x4
+            "C_Offroad_01_F",                              // Offroad
             "C_SUV_01_F"                                   // VW
         ];
         _Unit_Pool_A = [
             "C_Heli_Light_01_civil_F",                     // M900
-            "C_Heli_Light_01_blue_F"                       // M900 (blau)
+            "C_Heli_Light_01_blue_F"                       // M900 (Blue)
         ];
     };
 
@@ -658,24 +651,24 @@ switch (_TypNumber) do
     //===================================================================================================//
     case 14: {
         _Unit_Pool_S = [
-            "O_G_soldier_F","O_G_soldier_F","O_G_soldier_SL_F",  // Tripulació, Pilot d'helicòpter i líder d'esquadra
-            "O_G_soldier_TL_F",                                  // Líder d'equip de foc (Fire Team Leader)
-            "O_G_soldier_F",                                     // Fuseller (Rifleman)
-            "O_G_soldier_lite_F",                                // Fuseller lleuger (Light Rifleman)
-            "O_G_soldier_GL_F",                                  // Granader (Grenadier)
-            "O_G_soldier_AR_F",                                  // Fuseller automàtic (Automatic Rifleman)
-            "O_G_soldier_A_F",                                   // Fuseller, munició (Ammo Bearer)
-            "O_G_soldier_LAT_F",                                 // Fuseller amb AT4 (Rifleman AT)
-            "O_G_soldier_exp_F",                                 // Explosius (Explosives)
-            "O_G_engineer_F",                                    // Enginyer (Engineer)
-            "O_G_soldier_M_F",                                   // Tirador (Marksman)
-            "O_G_medic_F"                                        // Metge
+            "O_G_soldier_F","O_G_soldier_F","O_G_soldier_SL_F",  // Crew, Helicopter Pilot and Squad Leader
+            "O_G_soldier_TL_F",                                  // Fireteam Leader
+            "O_G_soldier_F",                                     // Rifleman
+            "O_G_soldier_lite_F",                                // Light Rifleman
+            "O_G_soldier_GL_F",                                  // Grenadier
+            "O_G_soldier_AR_F",                                  // Automatic Rifleman
+            "O_G_soldier_A_F",                                   // Ammo Bearer
+            "O_G_soldier_LAT_F",                                 // Rifleman with AT4
+            "O_G_soldier_exp_F",                                 // Explosives
+            "O_G_engineer_F",                                    // Engineer
+            "O_G_soldier_M_F",                                   // Designated Marksman
+            "O_G_medic_F"                                        // Medic
         ];
         _Unit_Pool_V = [
             "O_G_Quadbike_01_F",                                 // Quad
-            "O_G_Offroad_01_F",                                  // 4x4
-            "O_G_Offroad_01_armed_F",                            // 4x4 HMG
-            "B_G_Offroad_01_repair_F"                            // 4x4 reparació
+            "O_G_Offroad_01_F",                                  // Offroad
+            "O_G_Offroad_01_armed_F",                            // Offroad HMG
+            "B_G_Offroad_01_repair_F"                            // Offroad (Repair)
         ];
         _Unit_Pool_T = [];
         _Unit_Pool_A = [];
@@ -686,24 +679,24 @@ switch (_TypNumber) do
     //===================================================================================================//
     case 15: {
         _Unit_Pool_S = [
-            "B_G_soldier_F","B_G_soldier_F","B_G_soldier_SL_F",  // Tripulació, Pilot d'helicòpter i líder d'esquadra
-            "B_G_soldier_TL_F",                                  // Líder d'equip de foc (Fire Team Leader)
-            "B_G_soldier_F",                                     // Fuseller (Rifleman)
-            "B_G_soldier_lite_F",                                // Fuseller lleuger (Light Rifleman)
-            "B_G_soldier_GL_F",                                  // Granader (Grenadier)
-            "B_G_soldier_AR_F",                                  // Fuseller automàtic (Automatic Rifleman)
-            "B_G_soldier_A_F",                                   // Fuseller, munició (Ammo Bearer)
-            "B_G_soldier_LAT_F",                                 // Fuseller amb AT4 (Rifleman AT)
-            "B_G_soldier_exp_F",                                 // Explosius (Explosives)
-            "B_G_engineer_F",                                    // Enginyer (Engineer)
-            "B_G_soldier_M_F",                                   // Tirador (Marksman)
-            "B_G_medic_F"                                        // Metge
+            "B_G_soldier_F","B_G_soldier_F","B_G_soldier_SL_F",  // Crew, Helicopter Pilot and Squad Leader
+            "B_G_soldier_TL_F",                                  // Fireteam Leader
+            "B_G_soldier_F",                                     // Rifleman
+            "B_G_soldier_lite_F",                                // Light Rifleman
+            "B_G_soldier_GL_F",                                  // Grenadier
+            "B_G_soldier_AR_F",                                  // Automatic Rifleman
+            "B_G_soldier_A_F",                                   // Ammo Bearer
+            "B_G_soldier_LAT_F",                                 // Rifleman with AT4
+            "B_G_soldier_exp_F",                                 // Explosives
+            "B_G_engineer_F",                                    // Engineer
+            "B_G_soldier_M_F",                                   // Designated Marksman
+            "B_G_medic_F"                                        // Medic
         ];
         _Unit_Pool_V = [
             "B_G_Quadbike_01_F",                                 // Quad
-            "B_G_Offroad_01_F",                                  // 4x4
-            "B_G_Offroad_01_armed_F",                            // 4x4 HMG
-            "B_G_Offroad_01_repair_F"                            // 4x4 reparació
+            "B_G_Offroad_01_F",                                  // Offroad
+            "B_G_Offroad_01_armed_F",                            // Offroad HMG
+            "B_G_Offroad_01_repair_F"                            // Offroad (Repair)
         ];
         _Unit_Pool_T = [];
         _Unit_Pool_A = [];
@@ -714,24 +707,24 @@ switch (_TypNumber) do
     //===================================================================================================//
     case 16: {
         _Unit_Pool_S = [
-            "I_G_soldier_F","I_G_soldier_F","I_G_soldier_SL_F",  // Tripulació, Pilot d'helicòpter i líder d'esquadra
-            "I_G_soldier_TL_F",                                  // Líder d'equip de foc (Fire Team Leader)
-            "I_G_soldier_F",                                     // Fuseller (Rifleman)
-            "I_G_soldier_lite_F",                                // Fuseller lleuger (Light Rifleman)
-            "I_G_soldier_GL_F",                                  // Granader (Grenadier)
-            "I_G_soldier_AR_F",                                  // Fuseller automàtic (Automatic Rifleman)
-            "I_G_soldier_A_F",                                   // Fuseller, munició (Ammo Bearer)
-            "I_G_soldier_LAT_F",                                 // Fuseller amb AT4 (Rifleman AT)
-            "I_G_soldier_exp_F",                                 // Explosius (Explosives)
-            "I_G_engineer_F",                                    // Enginyer (Engineer)
-            "I_G_soldier_M_F",                                   // Tirador (Marksman)
-            "I_G_medic_F"                                        // Metge
+            "I_G_soldier_F","I_G_soldier_F","I_G_soldier_SL_F",  // Crew, Helicopter Pilot and Squad Leader
+            "I_G_soldier_TL_F",                                  // Fireteam Leader
+            "I_G_soldier_F",                                     // Rifleman
+            "I_G_soldier_lite_F",                                // Light Rifleman
+            "I_G_soldier_GL_F",                                  // Grenadier
+            "I_G_soldier_AR_F",                                  // Automatic Rifleman
+            "I_G_soldier_A_F",                                   // Ammo Bearer
+            "I_G_soldier_LAT_F",                                 // Rifleman with AT4
+            "I_G_soldier_exp_F",                                 // Explosives
+            "I_G_engineer_F",                                    // Engineer
+            "I_G_soldier_M_F",                                   // Designated Marksman
+            "I_G_medic_F"                                        // Medic
         ];
         _Unit_Pool_V = [
             "I_G_Quadbike_01_F",                                 // Quad
-            "I_G_Offroad_01_F",                                  // 4x4
-            "I_G_Offroad_01_armed_F",                            // 4x4 HMG
-            "I_G_Offroad_01_repair_F"                            // 4x4 reparació
+            "I_G_Offroad_01_F",                                  // Offroad
+            "I_G_Offroad_01_armed_F",                            // Offroad HMG
+            "I_G_Offroad_01_repair_F"                            // Offroad (Repair)
         ];
         _Unit_Pool_T = [];
         _Unit_Pool_A = [];
@@ -742,22 +735,22 @@ switch (_TypNumber) do
     //===================================================================================================//
     case 17: {
         _Unit_Pool_S = [
-            "rhs_vdv_combatcrew","rhs_pilot","rhs_vdv_sergeant",   // Tripulació, Pilot d'helicòpter i líder d'esquadra
-        "rhs_vdv_junior_sergeant",                     // Líder d'equip de foc (Fire Team Leader)
-            "rhs_vdv_rifleman",                            // Fuseller (Rifleman)
-            "rhs_vdv_grenadier",                           // Granader (Grenadier)
-            "rhs_vdv_grenadier_rpg",                       // Granader RPG (Grenadier RPG)
+            "rhs_vdv_combatcrew","rhs_pilot","rhs_vdv_sergeant",   // Crew, Helicopter Pilot and Squad Leader
+            "rhs_vdv_junior_sergeant",                     // Fireteam Leader
+            "rhs_vdv_rifleman",                            // Rifleman
+            "rhs_vdv_grenadier",                           // Grenadier
+            "rhs_vdv_grenadier_rpg",                       // Grenadier RPG
             "rhs_vdv_strelok_rpg_assist",
-            "rhs_vdv_machinegunner",                       // Metrallador (Machinegunner)
-            "rhs_vdv_machinegunner_assistant",             // Assistent de metrallador (Assistant Machinegunner)
-            "rhs_vdv_LAT",                                 // Fuseller amb AT4 (Rifleman AT)
-            "rhs_vdv_at",                                  // Antitanc (Antitank)
-            "rhs_vdv_aa",                                  // Antiaèri (Antiair)
-            "rhs_vdv_rshg2",                               // Explosius (Explosives)
-            "rhs_vdv_engineer",                            // Enginyer (Engineer)
+            "rhs_vdv_machinegunner",                       // Machinegunner
+            "rhs_vdv_machinegunner_assistant",             // Assistant Machinegunner
+            "rhs_vdv_LAT",                                 // Rifleman with AT4
+            "rhs_vdv_at",                                  // Anti-Tank
+            "rhs_vdv_aa",                                  // Anti-Aircraft
+            "rhs_vdv_rshg2",                               // Explosives
+            "rhs_vdv_engineer",                            // Engineer
             "rhs_vdv_efreitor",
-            "rhs_vdv_marksman",                            // Tirador (Marksman)
-            "rhs_vdv_medic"                                // Metge
+            "rhs_vdv_marksman",                            // Designated Marksman
+            "rhs_vdv_medic"                                // Medic
         ];
         _Unit_Pool_V = [
             "rhs_tigr_ffv_vdv",
@@ -765,7 +758,7 @@ switch (_TypNumber) do
             "RHS_Ural_Open_VDV_01"
         ];
         _Unit_Pool_T = [
-            "rhs_sprut_vdv",                               // Tanc
+            "rhs_sprut_vdv",                               // Tank
             "rhs_bmd1p",
             "rhs_bmd2m",
             "rhs_bmd4m_vdv",
@@ -788,22 +781,22 @@ switch (_TypNumber) do
     //===================================================================================================//
     case 18: {
         _Unit_Pool_S = [
-            "rhs_msv_combatcrew","rhs_pilot","rhs_msv_sergeant",   // Tripulació, Pilot d'helicòpter i líder d'esquadra
-            "rhs_msv_junior_sergeant",                     // Líder d'equip de foc (Fire Team Leader)
-            "rhs_msv_rifleman",                            // Fuseller (Rifleman)
-            "rhs_msv_grenadier",                           // Granader (Grenadier)
-            "rhs_msv_grenadier_rpg",                       // Granader RPG (Grenadier RPG)
+            "rhs_msv_combatcrew","rhs_pilot","rhs_msv_sergeant",   // Crew, Helicopter Pilot and Squad Leader
+            "rhs_msv_junior_sergeant",                     // Fireteam Leader
+            "rhs_msv_rifleman",                            // Rifleman
+            "rhs_msv_grenadier",                           // Grenadier
+            "rhs_msv_grenadier_rpg",                       // Grenadier RPG
             "rhs_msv_strelok_rpg_assist",
-            "rhs_msv_machinegunner",                       // Metrallador (Machinegunner)
-            "rhs_msv_machinegunner_assistant",             // Assistent de metrallador (Assistant Machinegunner)
-            "rhs_msv_LAT",                                 // Fuseller amb AT4 (Rifleman AT)
-            "rhs_msv_at",                                  // Antitanc (Antitank)
-            "rhs_msv_aa",                                  // Antiaèri (Antiair)
-            "rhs_msv_rshg2",                               // Explosius (Explosives)
-            "rhs_msv_engineer",                            // Enginyer (Engineer)
+            "rhs_msv_machinegunner",                       // Machinegunner
+            "rhs_msv_machinegunner_assistant",             // Assistant Machinegunner
+            "rhs_msv_LAT",                                 // Rifleman with AT4
+            "rhs_msv_at",                                  // Anti-Tank
+            "rhs_msv_aa",                                  // Anti-Aircraft
+            "rhs_msv_rshg2",                               // Explosives
+            "rhs_msv_engineer",                            // Engineer
             "rhs_msv_efreitor",
-            "rhs_msv_marksman",                            // Tirador (Marksman)
-            "rhs_msv_medic"                                // Metge
+            "rhs_msv_marksman",                            // Designated Marksman
+            "rhs_msv_medic"                                // Medic
         ];
         _Unit_Pool_V = [
             "rhs_tigr_msv",
@@ -842,28 +835,28 @@ switch (_TypNumber) do
     //===================================================================================================//
     case 19: {
         _Unit_Pool_S = [
-            "rhsusf_army_ocp_combatcrewman","rhsusf_army_ocp_helipilot","rhsusf_army_ocp_squadleader",   // Tripulació, Pilot d'helicòpter i líder d'esquadra
-            "rhsusf_army_ocp_teamleader",                  // Líder d'equip de foc (Fire Team Leader)
-            "rhsusf_army_ocp_rifleman",                    // Fuseller (Rifleman)
-            "rhsusf_army_ocp_riflemanl",                   // Fuseller lleuger (Light Rifleman)
-            "rhsusf_army_ocp_grenadier",                   // Granader (Grenadier)
-            "rhsusf_army_ocp_autorifleman",                // Fuseller automàtic (Automatic Rifleman)
-            "rhsusf_army_ocp_autoriflemana",               // Assistent de fuseller automàtic (Assistant Automatic Rifleman)
-            "rhsusf_army_ocp_riflemanat",                  // Fuseller amb M136 (Rifleman AT)
-            "rhsusf_army_ocp_javelin",                     // Antitanc amb Javelin (Antitank with Javelin)
-            "rhsusf_army_ocp_aa",                          // Antiaèri amb Stinger (Antiair with Stinger)
-            "rhsusf_army_ocp_explosives",                  // Explosius (Explosives)
-            "rhsusf_army_ocp_engineer",                    // Enginyer (Engineer)
-            "rhsusf_army_ocp_machinegunner",               // Metrallador (Machinegunner)
-            "rhsusf_army_ocp_machinegunnera",              // Assistent de metrallador (Assistant Machinegunner)
-            "rhsusf_army_ocp_marksman",                    // Tirador (Marksman)
-            "rhsusf_army_ocp_sniper",                      // Franctirador (Sniper)
-            "rhsusf_army_ocp_medic"                        // Metge
+            "rhsusf_army_ocp_combatcrewman","rhsusf_army_ocp_helipilot","rhsusf_army_ocp_squadleader",   // Crew, Helicopter Pilot and Squad Leader
+            "rhsusf_army_ocp_teamleader",                  // Fireteam Leader
+            "rhsusf_army_ocp_rifleman",                    // Rifleman
+            "rhsusf_army_ocp_riflemanl",                   // Light Rifleman
+            "rhsusf_army_ocp_grenadier",                   // Grenadier
+            "rhsusf_army_ocp_autorifleman",                // Automatic Rifleman
+            "rhsusf_army_ocp_autoriflemana",               // Assistant Automatic Rifleman
+            "rhsusf_army_ocp_riflemanat",                  // Rifleman AT (M136)
+            "rhsusf_army_ocp_javelin",                     // Anti-Tank (Javelin)
+            "rhsusf_army_ocp_aa",                          // Anti-Aircraft (Stinger)
+            "rhsusf_army_ocp_explosives",                  // Explosives
+            "rhsusf_army_ocp_engineer",                    // Engineer
+            "rhsusf_army_ocp_machinegunner",               // Machinegunner
+            "rhsusf_army_ocp_machinegunnera",              // Assistant Machinegunner
+            "rhsusf_army_ocp_marksman",                    // Designated Marksman
+            "rhsusf_army_ocp_sniper",                      // Sniper
+            "rhsusf_army_ocp_medic"                        // Medic
         ];
         _Unit_Pool_V = [
-            "rhsusf_m1025_w",                              // HMMWV sense armament
-            "rhsusf_m1025_w_mk19",                         // HMMWV amb mk19
-            "rhsusf_m1025_w_m2",                           // HMMWV amb m2
+            "rhsusf_m1025_w",                              // HMMWV (Unarmed)
+            "rhsusf_m1025_w_mk19",                         // HMMWV (MK19)
+            "rhsusf_m1025_w_m2",                           // HMMWV (M2)
             "rhsusf_m998_w_2dr",
             "rhsusf_m998_w_2dr_fulltop",
             "rhsusf_m998_w_2dr_halftop",
@@ -878,11 +871,11 @@ switch (_TypNumber) do
             "rhs_m2a3_buski_wd",                           // IPC
             "rhs_m2a3_wd",                                 // IPC
             "rhs_m6_wd",                                   // IPC
-            "rhsusf_m1a1aimwd_usarmy",                     // Tanc
-            "rhsusf_m1a1aim_tuski_wd",                     // Tanc
-            "rhsusf_m1a2sep1wd_usarmy",                    // Tanc
-            "rhsusf_m1a2sep1tuskiwd_usarmy",               // Tanc
-            "rhsusf_m109_usarmy"                           // Artilleria
+            "rhsusf_m1a1aimwd_usarmy",                     // Tank
+            "rhsusf_m1a1aim_tuski_wd",                     // Tank
+            "rhsusf_m1a2sep1wd_usarmy",                    // Tank
+            "rhsusf_m1a2sep1tuskiwd_usarmy",               // Tank
+            "rhsusf_m109_usarmy"                           // Artillery
         ];
         _Unit_Pool_A = [
             "RHS_AH64D_wd",                                // Boeing AH-64 Apache Longbow (Multi-Role)
@@ -900,28 +893,28 @@ switch (_TypNumber) do
     //===================================================================================================//
     case 20: {
         _Unit_Pool_S = [
-            "rhsusf_army_ucp_combatcrewman","rhsusf_army_ucp_helipilot","rhsusf_army_ucp_squadleader",   // Tripulació, Pilot d'helicòpter i líder d'esquadra
-            "rhsusf_army_ucp_teamleader",                  // Líder d'equip de foc (Fire Team Leader)
-            "rhsusf_army_ucp_rifleman",                    // Fuseller (Rifleman)
-            "rhsusf_army_ucp_riflemanl",                   // Fuseller lleuger (Light Rifleman)
-            "rhsusf_army_ucp_grenadier",                   // Granader (Grenadier)
-            "rhsusf_army_ucp_autorifleman",                // Fuseller automàtic (Automatic Rifleman)
-            "rhsusf_army_ucp_autoriflemana",               // Assistent de fuseller automàtic (Assistant Automatic Rifleman)
-            "rhsusf_army_ucp_riflemanat",                  // Fuseller amb M136 (Rifleman AT)
-            "rhsusf_army_ucp_javelin",                     // Antitanc amb Javelin (Antitank with Javelin)
-            "rhsusf_army_ucp_aa",                          // Antiaèri amb Stinger (Antiair with Stinger)
-            "rhsusf_army_ucp_explosives",                  // Explosius (Explosives)
-            "rhsusf_army_ucp_engineer",                    // Enginyer (Engineer)
-            "rhsusf_army_ucp_machinegunner",               // Metrallador (Machinegunner)
-            "rhsusf_army_ucp_machinegunnera",              // Assistent de metrallador (Assistant Machinegunner)
-            "rhsusf_army_ucp_marksman",                    // Tirador (Marksman)
-            "rhsusf_army_ucp_sniper",                      // Franctirador (Sniper)
-            "rhsusf_army_ucp_medic"                        // Metge
+            "rhsusf_army_ucp_combatcrewman","rhsusf_army_ucp_helipilot","rhsusf_army_ucp_squadleader",   // Crew, Helicopter Pilot and Squad Leader
+            "rhsusf_army_ucp_teamleader",                  // Fireteam Leader
+            "rhsusf_army_ucp_rifleman",                    // Rifleman
+            "rhsusf_army_ucp_riflemanl",                   // Light Rifleman
+            "rhsusf_army_ucp_grenadier",                   // Grenadier
+            "rhsusf_army_ucp_autorifleman",                // Automatic Rifleman
+            "rhsusf_army_ucp_autoriflemana",               // Assistant Automatic Rifleman
+            "rhsusf_army_ucp_riflemanat",                  // Rifleman AT (M136)
+            "rhsusf_army_ucp_javelin",                     // Anti-Tank (Javelin)
+            "rhsusf_army_ucp_aa",                          // Anti-Aircraft (Stinger)
+            "rhsusf_army_ucp_explosives",                  // Explosives
+            "rhsusf_army_ucp_engineer",                    // Engineer
+            "rhsusf_army_ucp_machinegunner",               // Machinegunner
+            "rhsusf_army_ucp_machinegunnera",              // Assistant Machinegunner
+            "rhsusf_army_ucp_marksman",                    // Designated Marksman
+            "rhsusf_army_ucp_sniper",                      // Sniper
+            "rhsusf_army_ucp_medic"                        // Medic
         ];
         _Unit_Pool_V = [
-            "rhsusf_m1025_d",                              // HMMWV sense armament
-            "rhsusf_m1025_d_Mk19",                         // HMMWV amb mk19
-            "rhsusf_m1025_d_m2",                           // HMMWV amb m2
+            "rhsusf_m1025_d",                              // HMMWV (Unarmed)
+            "rhsusf_m1025_d_Mk19",                         // HMMWV (MK19)
+            "rhsusf_m1025_d_m2",                           // HMMWV (M2)
             "rhsusf_m998_d_2dr",
             "rhsusf_m998_d_2dr_fulltop",
             "rhsusf_m998_d_2dr_halftop",
@@ -936,11 +929,11 @@ switch (_TypNumber) do
             "rhs_m2a3_buski",                              // IPC
             "rhs_m2a3",                                    // IPC
             "rhs_m6",                                      // IPC
-            "rhsusf_m1a1aimd_usarmy",                      // Tanc
-            "rhsusf_m1a1aim_tuski_d",                      // Tanc
-            "rhsusf_m1a2sep1d_usarmy",                     // Tanc
-            "rhsusf_m1a2sep1tuskid_usarmy",                // Tanc
-            "rhsusf_m109_usarmy"                           // Artilleria
+            "rhsusf_m1a1aimd_usarmy",                      // Tank
+            "rhsusf_m1a1aim_tuski_d",                      // Tank
+            "rhsusf_m1a2sep1d_usarmy",                     // Tank
+            "rhsusf_m1a2sep1tuskid_usarmy",                // Tank
+            "rhsusf_m109_usarmy"                           // Artillery
         ];
         _Unit_Pool_A = [
             "RHS_AH64D",                                   // Boeing AH-64 Apache Longbow (Multi-Role)
@@ -958,29 +951,29 @@ switch (_TypNumber) do
     //===================================================================================================//
     case 21: {
         _Unit_Pool_S = [
-            "rhsusf_usmc_marpat_wd_combatcrewman","rhsusf_usmc_marpat_wd_helipilot","rhsusf_usmc_marpat_wd_squadleader",   // Tripulació, Pilot d'helicòpter i líder d'esquadra
-            "rhsusf_usmc_marpat_wd_teamleader",            // Líder d'equip de foc (Fire Team Leader)
-            "rhsusf_usmc_marpat_wd_rifleman",              // Fuseller (Rifleman)
-            "rhsusf_usmc_marpat_wd_rifleman_light",        // Fuseller lleuger (Light Rifleman)
-            "rhsusf_usmc_marpat_wd_grenadier",             // Granader (Grenadier)
-            "rhsusf_usmc_marpat_wd_autorifleman_m249",     // Fuseller automàtic (Automatic Rifleman)
-            "rhsusf_usmc_marpat_wd_autorifleman_m249_ass", // Assistent de fuseller automàtic (Assistant Automatic Rifleman)
-            "rhsusf_usmc_marpat_wd_riflemanat",            // Fuseller amb M136 (Rifleman AT)
-            "rhsusf_usmc_marpat_wd_javelin",               // Antitanc amb Javelin (Antitank with Javelin)
-            "rhsusf_usmc_marpat_wd_stinger",               // Antiaèri amb Stinger (Antiair with Stinger)
-            "rhsusf_usmc_marpat_wd_explosives",            // Explosius (Explosives)
-            "rhsusf_usmc_marpat_wd_engineer",              // Enginyer (Engineer)
-            "rhsusf_usmc_marpat_wd_machinegunner",         // Metrallador (Machinegunner)
-            "rhsusf_usmc_marpat_wd_machinegunner_ass",     // Assistent de metrallador (Assistant Machinegunner)
-            "rhsusf_usmc_marpat_wd_marksman",              // Tirador (Marksman)
-            "rhsusf_usmc_marpat_wd_sniper",                // Franctirador (Sniper)
-            "rhsusf_usmc_marpat_wd_spotter",               // Observador (Spotter)
-            "rhsusf_navy_marpat_wd_medic"                  // Metge
+            "rhsusf_usmc_marpat_wd_combatcrewman","rhsusf_usmc_marpat_wd_helipilot","rhsusf_usmc_marpat_wd_squadleader",   // Crew, Helicopter Pilot and Squad Leader
+            "rhsusf_usmc_marpat_wd_teamleader",            // Fireteam Leader
+            "rhsusf_usmc_marpat_wd_rifleman",              // Rifleman
+            "rhsusf_usmc_marpat_wd_rifleman_light",        // Light Rifleman
+            "rhsusf_usmc_marpat_wd_grenadier",             // Grenadier
+            "rhsusf_usmc_marpat_wd_autorifleman_m249",     // Automatic Rifleman
+            "rhsusf_usmc_marpat_wd_autorifleman_m249_ass", // Assistant Automatic Rifleman
+            "rhsusf_usmc_marpat_wd_riflemanat",            // Rifleman AT (M136)
+            "rhsusf_usmc_marpat_wd_javelin",               // Anti-Tank (Javelin)
+            "rhsusf_usmc_marpat_wd_stinger",               // Anti-Aircraft (Stinger)
+            "rhsusf_usmc_marpat_wd_explosives",            // Explosives
+            "rhsusf_usmc_marpat_wd_engineer",              // Engineer
+            "rhsusf_usmc_marpat_wd_machinegunner",         // Machinegunner
+            "rhsusf_usmc_marpat_wd_machinegunner_ass",     // Assistant Machinegunner
+            "rhsusf_usmc_marpat_wd_marksman",              // Designated Marksman
+            "rhsusf_usmc_marpat_wd_sniper",                // Sniper
+            "rhsusf_usmc_marpat_wd_spotter",               // Spotter
+            "rhsusf_navy_marpat_wd_medic"                  // Medic
         ];
         _Unit_Pool_V = [
-            "rhsusf_m1025_w_s",                            // HMMWV sense armament
-            "rhsusf_m1025_w_s_Mk19",                       // HMMWV amb mk19
-            "rhsusf_m1025_w_s_m2",                         // HMMWV amb m2
+            "rhsusf_m1025_w_s",                            // HMMWV (Unarmed)
+            "rhsusf_m1025_w_s_Mk19",                       // HMMWV (MK19)
+            "rhsusf_m1025_w_s_m2",                         // HMMWV (M2)
             "rhsusf_m998_w_s_2dr",
             "rhsusf_m998_w_s_2dr_fulltop",
             "rhsusf_m998_w_s_2dr_halftop",
@@ -1009,29 +1002,29 @@ switch (_TypNumber) do
     //===================================================================================================//
     case 22: {
         _Unit_Pool_S = [
-            "rhsusf_usmc_marpat_d_combatcrewman","rhsusf_usmc_marpat_d_helipilot","rhsusf_usmc_marpat_d_squadleader",   // Tripulació, Pilot d'helicòpter i líder d'esquadra
-            "rhsusf_usmc_marpat_d_teamleader",             // Líder d'equip de foc (Fire Team Leader)
-            "rhsusf_usmc_marpat_d_rifleman",               // Fuseller (Rifleman)
-            "rhsusf_usmc_marpat_d_rifleman_light",         // Fuseller lleuger (Light Rifleman)
-            "rhsusf_usmc_marpat_d_grenadier",              // Granader (Grenadier)
-            "rhsusf_usmc_marpat_d_autorifleman_m249",      // Fuseller automàtic (Automatic Rifleman)
-            "rhsusf_usmc_marpat_d_autorifleman_m249_ass",  // Assistent de fuseller automàtic (Assistant Automatic Rifleman)
-            "rhsusf_usmc_marpat_d_riflemanat",             // Fuseller amb M136 (Rifleman AT)
-            "rhsusf_usmc_marpat_d_javelin",                // Antitanc amb Javelin (Antitank with Javelin)
-            "rhsusf_usmc_marpat_d_stinger",                // Antiaèri amb Stinger (Antiair with Stinger)
-            "rhsusf_usmc_marpat_d_explosives",             // Explosius (Explosives)
-            "rhsusf_usmc_marpat_d_engineer",               // Enginyer (Engineer)
-            "rhsusf_usmc_marpat_d_machinegunner",          // Metrallador (Machinegunner)
-            "rhsusf_usmc_marpat_d_machinegunner_ass",      // Assistent de metrallador (Assistant Machinegunner)
-            "rhsusf_usmc_marpat_d_marksman",               // Tirador (Marksman)
-            "rhsusf_usmc_marpat_d_sniper",                 // Franctirador (Sniper)
-            "rhsusf_usmc_marpat_d_spotter",                // Observador (Spotter)
-            "rhsusf_navy_marpat_d_medic"                   // Metge
+            "rhsusf_usmc_marpat_d_combatcrewman","rhsusf_usmc_marpat_d_helipilot","rhsusf_usmc_marpat_d_squadleader",   // Crew, Helicopter Pilot and Squad Leader
+            "rhsusf_usmc_marpat_d_teamleader",             // Fireteam Leader
+            "rhsusf_usmc_marpat_d_rifleman",               // Rifleman
+            "rhsusf_usmc_marpat_d_rifleman_light",         // Light Rifleman
+            "rhsusf_usmc_marpat_d_grenadier",              // Grenadier
+            "rhsusf_usmc_marpat_d_autorifleman_m249",      // Automatic Rifleman
+            "rhsusf_usmc_marpat_d_autorifleman_m249_ass",  // Assistant Automatic Rifleman
+            "rhsusf_usmc_marpat_d_riflemanat",             // Rifleman AT (M136)
+            "rhsusf_usmc_marpat_d_javelin",                // Anti-Tank (Javelin)
+            "rhsusf_usmc_marpat_d_stinger",                // Anti-Aircraft (Stinger)
+            "rhsusf_usmc_marpat_d_explosives",             // Explosives
+            "rhsusf_usmc_marpat_d_engineer",               // Engineer
+            "rhsusf_usmc_marpat_d_machinegunner",          // Machinegunner
+            "rhsusf_usmc_marpat_d_machinegunner_ass",      // Assistant Machinegunner
+            "rhsusf_usmc_marpat_d_marksman",               // Designated Marksman
+            "rhsusf_usmc_marpat_d_sniper",                 // Sniper
+            "rhsusf_usmc_marpat_d_spotter",                // Spotter
+            "rhsusf_navy_marpat_d_medic"                   // Medic
         ];
         _Unit_Pool_V = [
-            "rhsusf_m1025_d_s",                            // HMMWV sense armament
-            "rhsusf_m1025_d_s_Mk19",                       // HMMWV amb mk19
-            "rhsusf_m1025_d_s_m2",                         // HMMWV amb m2
+            "rhsusf_m1025_d_s",                            // HMMWV (Unarmed)
+            "rhsusf_m1025_d_s_Mk19",                       // HMMWV (MK19)
+            "rhsusf_m1025_d_s_m2",                         // HMMWV (M2)
             "rhsusf_m998_d_s_2dr",
             "rhsusf_m998_d_s_2dr_fulltop",
             "rhsusf_m998_d_s_2dr_halftop",
@@ -1057,25 +1050,25 @@ switch (_TypNumber) do
     //===================================================================================================//
     case 30: {
         _Unit_Pool_S = [
-            "BWA3_Crew_Fleck","BWA3_Helipilot","BWA3_SL_Fleck",  // Tripulació, Pilot d'helicòpter i líder d'esquadra
-            "BWA3_TL_Fleck",                                     // Líder d'equip de foc (Fire Team Leader)
-            "BWA3_Rifleman_Fleck",                               // Fuseller (Rifleman)
-            "BWA3_Rifleman_lite_Fleck",                          // Fuseller lleuger (Light Rifleman)
-            "BWA3_Rifleman_unarmed_Fleck",                       // Fuseller desarmat (Unarmed Rifleman)
-            "BWA3_RiflemanG27_Fleck",                            // Fuseller amb G27 (Rifleman with G27)
-            "BWA3_RiflemanG28_Fleck",                            // Fuseller amb G28 (Rifleman with G28)
-            "BWA3_Grenadier_Fleck",                              // Granader (Grenadier)
-            "BWA3_GrenadierG27_Fleck",                           // Granader amb G27 (Grenadier with G27)
-            "BWA3_Autorifleman_Fleck",                           // Fuseller automàtic (Automatic Rifleman)
-            "BWA3_AutoriflemanMG5_Fleck",                        // Fuseller automàtic amb MG6 (Automatic Rifleman)
-            "BWA3_CombatLifeSaver_Fleck",                        // Metge (Combat Life Saver)
-            "BWA3_Marksman_Fleck",                               // Tirador (Marksman)
-            "BWA3_SniperG82_Fleck",                              // Franctirador (Sniper)
-            "BWA3_Spotter_Fleck",                                // Observador (Spotter)
-            "BWA3_RiflemanAT_RGW90_Fleck",                       // Antitanc amb RGW90 (Antitank with RGW90)
-            "BWA3_RiflemanAT_Pzf3_Fleck",                        // Antitanc amb Panzerfaust 3 (Antitank with Panzerfaust 3)
-            "BWA3_RiflemanAA_Fliegerfaust_Fleck",                // Antiaèri amb Fliegerfaust (Antiair with Fliegerfaust)
-            "BWA3_Engineer_Fleck"                                // Enginyer (Engineer)
+            "BWA3_Crew_Fleck","BWA3_Helipilot","BWA3_SL_Fleck",  // Crew, Helicopter Pilot and Squad Leader
+            "BWA3_TL_Fleck",                                     // Fireteam Leader
+            "BWA3_Rifleman_Fleck",                               // Rifleman
+            "BWA3_Rifleman_lite_Fleck",                          // Light Rifleman
+            "BWA3_Rifleman_unarmed_Fleck",                       // Rifleman (Unarmed)
+            "BWA3_RiflemanG27_Fleck",                            // Rifleman (G27)
+            "BWA3_RiflemanG28_Fleck",                            // Rifleman (G28)
+            "BWA3_Grenadier_Fleck",                              // Grenadier
+            "BWA3_GrenadierG27_Fleck",                           // Grenadier (G27)
+            "BWA3_Autorifleman_Fleck",                           // Automatic Rifleman
+            "BWA3_AutoriflemanMG5_Fleck",                        // Automatic Rifleman (MG5)
+            "BWA3_CombatLifeSaver_Fleck",                        // Combat Life Saver
+            "BWA3_Marksman_Fleck",                               // Designated Marksman
+            "BWA3_SniperG82_Fleck",                              // Sniper
+            "BWA3_Spotter_Fleck",                                // Spotter
+            "BWA3_RiflemanAT_RGW90_Fleck",                       // Anti-Tank (RGW90)
+            "BWA3_RiflemanAT_Pzf3_Fleck",                        // Anti-Tank (Panzerfaust 3)
+            "BWA3_RiflemanAA_Fliegerfaust_Fleck",                // Anti-Aircraft (Fliegerfaust)
+            "BWA3_Engineer_Fleck"                                // Engineer
         ];
         _Unit_Pool_V = [];
         _Unit_Pool_T = [
@@ -1098,25 +1091,25 @@ switch (_TypNumber) do
     //===================================================================================================//
     case 31: {
         _Unit_Pool_S = [
-            "BWA3_Crew_Fleck","BWA3_Helipilot","BWA3_TL_Tropen",  // Tripulació, Pilot d'helicòpter i líder d'esquadra
-            "BWA3_TL_Tropen",                                     // Líder d'equip de foc (Fire Team Leader)
-            "BWA3_Rifleman_Tropen",                               // Fuseller (Rifleman)
-            "BWA3_Rifleman_lite_Tropen",                          // Fuseller lleuger (Light Rifleman)
-            "BWA3_Rifleman_unarmed_Tropen",                       // Fuseller desarmat (Unarmed Rifleman)
-            "BWA3_RiflemanG27_Tropen",                            // Fuseller amb G27 (Rifleman with G27)
-            "BWA3_RiflemanG28_Tropen",                            // Fuseller amb G28 (Rifleman with G28)
-            "BWA3_Grenadier_Tropen",                              // Granader (Grenadier)
-            "BWA3_GrenadierG27_Tropen",                           // Granader amb G27 (Grenadier with G27)
-            "BWA3_Autorifleman_Tropen",                           // Fuseller automàtic (Automatic Rifleman)
-            "BWA3_AutoriflemanMG5_Tropen",                        // Fuseller automàtic amb MG6 (Automatic Rifleman)
-            "BWA3_CombatLifeSaver_Tropen",                        // Metge (Combat Life Saver)
-            "BWA3_Marksman_Tropen",                               // Tirador (Marksman)
-            "BWA3_SniperG82_Tropen",                              // Franctirador (Sniper)
-            "BWA3_Spotter_Tropen",                                // Observador (Spotter)
-            "BWA3_RiflemanAT_RGW90_Tropen",                       // Antitanc amb RGW90 (Antitank with RGW90)
-            "BWA3_RiflemanAT_Pzf3_Tropen",                        // Antitanc amb Panzerfaust 3 (Antitank with Panzerfaust 3)
-            "BWA3_RiflemanAA_Fliegerfaust_Tropen",                // Antiaèri amb Fliegerfaust (Antiair with Fliegerfaust)
-            "BWA3_Engineer_Tropen"                                // Enginyer (Engineer)
+            "BWA3_Crew_Fleck","BWA3_Helipilot","BWA3_TL_Tropen",  // Crew, Helicopter Pilot and Squad Leader
+            "BWA3_TL_Tropen",                                     // Fireteam Leader
+            "BWA3_Rifleman_Tropen",                               // Rifleman
+            "BWA3_Rifleman_lite_Tropen",                          // Light Rifleman
+            "BWA3_Rifleman_unarmed_Tropen",                       // Rifleman (Unarmed)
+            "BWA3_RiflemanG27_Tropen",                            // Rifleman (G27)
+            "BWA3_RiflemanG28_Tropen",                            // Rifleman (G28)
+            "BWA3_Grenadier_Tropen",                              // Grenadier
+            "BWA3_GrenadierG27_Tropen",                           // Grenadier (G27)
+            "BWA3_Autorifleman_Tropen",                           // Automatic Rifleman
+            "BWA3_AutoriflemanMG5_Tropen",                        // Automatic Rifleman (MG5)
+            "BWA3_CombatLifeSaver_Tropen",                        // Combat Life Saver
+            "BWA3_Marksman_Tropen",                               // Designated Marksman
+            "BWA3_SniperG82_Tropen",                              // Sniper
+            "BWA3_Spotter_Tropen",                                // Spotter
+            "BWA3_RiflemanAT_RGW90_Tropen",                       // Anti-Tank (RGW90)
+            "BWA3_RiflemanAT_Pzf3_Tropen",                        // Anti-Tank (Panzerfaust 3)
+            "BWA3_RiflemanAA_Fliegerfaust_Tropen",                // Anti-Aircraft (Fliegerfaust)
+            "BWA3_Engineer_Tropen"                                // Engineer
         ];
         _Unit_Pool_V = [];
         _Unit_Pool_T = [
@@ -1139,13 +1132,13 @@ switch (_TypNumber) do
     //===================================================================================================//
     case 32: {
         _Unit_Pool_S = [
-            "BWA3_Crew_Fleck","BWA3_Helipilot","BWA3_recon_TL_Fleck",  // Tripulació, Pilot d'helicòpter i líder d'esquadra
-            "BWA3_recon_Fleck",                                        // Fernspäher explorador (Fernspäher Scout)
-            "BWA3_recon_LAT_Fleck",                                    // Fernspäher amb RGW90 (Fernspäher RGW90)
-            "BWA3_recon_Pioneer_Fleck",                                // Fernspäher pioner (Fernspäher Pioneer)
-            "BWA3_recon_Medic_Fleck",                                  // Fernspäher paramèdic (Fernspäher Paramedic)
-            "BWA3_recon_Marksman_Fleck",                               // Fernspäher tirador (Fernspäher Marksman)
-            "BWA3_recon_Radioman_Fleck"                                // Fernspäher operador de ràdio (Fernspäher radioman)
+            "BWA3_Crew_Fleck","BWA3_Helipilot","BWA3_recon_TL_Fleck",  // Crew, Helicopter Pilot and Squad Leader
+            "BWA3_recon_Fleck",                                        // Fernspäher Scout
+            "BWA3_recon_LAT_Fleck",                                    // Fernspäher Light AT (RGW90)
+            "BWA3_recon_Pioneer_Fleck",                                // Fernspäher Pioneer
+            "BWA3_recon_Medic_Fleck",                                  // Fernspäher Paramedic
+            "BWA3_recon_Marksman_Fleck",                               // Fernspäher Designated Marksman
+            "BWA3_recon_Radioman_Fleck"                                // Fernspäher Radioman
         ];
         _Unit_Pool_V = [];
         _Unit_Pool_T = [];
@@ -1157,13 +1150,13 @@ switch (_TypNumber) do
     //===================================================================================================//
     case 33: {
         _Unit_Pool_S = [
-            "BWA3_Crew_Tropen","BWA3_Helipilot","BWA3_recon_TL_Tropen", // Tripulació, Pilot d'helicòpter i líder d'esquadra
-            "BWA3_recon_Tropen",                                        // Fernspäher explorador (Fernspäher Scout)
-            "BWA3_recon_LAT_Tropen",                                    // Fernspäher amb RGW90 (Fernspäher RGW90)
-            "BWA3_recon_Pioneer_Tropen",                                // Fernspäher pioner (Fernspäher Pioneer)
-            "BWA3_recon_Medic_Tropen",                                  // Fernspäher paramèdic (Fernspäher Paramedic)
-            "BWA3_recon_Marksman_Tropen",                               // Fernspäher tirador (Fernspäher Marksman)
-            "BWA3_recon_Radioman_Tropen"                                // Fernspäher operador de ràdio (Fernspäher radioman)
+            "BWA3_Crew_Tropen","BWA3_Helipilot","BWA3_recon_TL_Tropen", // Crew, Helicopter Pilot and Squad Leader
+            "BWA3_recon_Tropen",                                        // Fernspäher Scout
+            "BWA3_recon_LAT_Tropen",                                    // Fernspäher Light AT (RGW90)
+            "BWA3_recon_Pioneer_Tropen",                                // Fernspäher Pioneer
+            "BWA3_recon_Medic_Tropen",                                  // Fernspäher Paramedic
+            "BWA3_recon_Marksman_Tropen",                               // Fernspäher Designated Marksman
+            "BWA3_recon_Radioman_Tropen"                                // Fernspäher Radioman
         ];
         _Unit_Pool_V = [];
         _Unit_Pool_T = [];
@@ -1177,22 +1170,22 @@ switch (_TypNumber) do
         _Unit_Pool_S = [
             "LOP_AM_Infantry_Engineer", "LOP_AM_Infantry_Engineer", "LOP_AM_Infantry_SL",  // Crew, Helicopter pilot and Section Leader
             "LOP_AM_Infantry_TL",          // Team Leader
-            "LOP_AM_Infantry_AT",          // Antitank (RPG-7)
-            "LOP_AM_Infantry_AT_Asst",     // Antitank assistant
+            "LOP_AM_Infantry_AT",          // Anti-Tank (RPG-7)
+            "LOP_AM_Infantry_AT_Asst",     // Anti-Tank assistant
             "LOP_AM_Infantry_AR",          // Machinegunner (PKM)
             "LOP_AM_Infantry_AR_Asst",     // Machinegunner
             "LOP_AM_Infantry_Corpsman",    // Corpsman
             "LOP_AM_Infantry_Engineer",    // IED man (Engineer)
             "LOP_AM_Infantry_GL",          // Grenadier (AKM GP-25)
-            "LOP_AM_Infantry_Marksman",    // Designated marksman
+            "LOP_AM_Infantry_Marksman",    // Designated Marksman
             "LOP_AM_Infantry_Rifleman",    // Rifleman (AKM)
             "LOP_AM_Infantry_Rifleman_2",  // Rifleman (AKMS)
             "LOP_AM_Infantry_Rifleman_3"   // Rifleman (Lee Enfield)
         ];
         _Unit_Pool_V = [
-            "LOP_AM_Landrover",            // Landrover (unarmed)
+            "LOP_AM_Landrover",            // Landrover (Unarmed)
             "LOP_AM_Landrover_M2",         // Landrover (M2)
-            "LOP_AM_Offroad",              // Technical (unarmed)
+            "LOP_AM_Offroad",              // Technical (Unarmed)
             "LOP_AM_Offroad_M2",           // Technical (M2)
             "LOP_AM_Truck"                 // Truck (cargo)
         ];
@@ -1223,4 +1216,4 @@ if (count _this == 2) then {
 };
 _TempArray
 
-//============================================ FI DEL FITXER ============================================//
+//============================================= END OF FILE =============================================//

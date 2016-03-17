@@ -1,6 +1,6 @@
 ## scripts/briefing
 
-En aquesta carpeta es troben els diferents fitxers per escriure el briefing a les diverses faccions suportades a la Plantilla Bàsica per Missions (PBM) i un especial per l'administrador. Cadascun dels fitxers de té la següent estructura a excepció de `cc_briefing_admin.sqf`. Cal destacar que els apartats apareixen en ordre invers a Arma 3: la secció que primer s'introdueix apareix en última posició al llistat.
+En aquesta carpeta es troben els diferents fitxers per escriure el briefing a les diverses faccions suportades a la Plantilla Bàsica per Missions (PBM) i un especial per l'administrador. Cadascun dels fitxers de té la següent estructura a excepció de `bmt_briefing_admin.sqf`. Cal destacar que els apartats apareixen en ordre invers a Arma 3: la secció que primer s'introdueix apareix en última posició al llistat.
 
 #### Admin
 
@@ -27,34 +27,34 @@ En aquesta secció s'han de mencionar de forma obligatòria totes aquelles perso
 
 Aquesta entrada mostrarà les diferents freqüències de ràdio que utilitzaran les diverses esquadres o equips de foc. Es recomana la següent estructura:
 
-* Comandament de missió: 41 kHz.
+* Command de missió: 41 kHz.
 * Suport: 51 kHz.
-* Artilleria: 61 kHz.
+* Artillery: 61 kHz.
 * **Nom de l'esquadra 1**:
-* Esquadra 1: 200 khz.
-  * Equip de foc 1: 201 khz.
-  * Equip de foc 2: 202 khz.
-  * Equip de foc 3: 203 khz.
-* Esquadra 2: 210 khz.
-  * Equip de foc 1: 211 khz.
-  * Equip de foc 2: 212 khz.
-  * Equip de foc 3: 213 khz.
+* Squad 1: 200 khz.
+  * Fireteam 1: 201 khz.
+  * Fireteam 2: 202 khz.
+  * Fireteam 3: 203 khz.
+* Squad 2: 210 khz.
+  * Fireteam 1: 211 khz.
+  * Fireteam 2: 212 khz.
+  * Fireteam 3: 213 khz.
 
-Cal recordar de configurar les freqüències de les ràdios per cada esquadra i equip de foc als documents `cc_acre2_configuracio.sqf` en el cas d'utilitzar ACRE2 i `fn_tfar_configurarFreqRadios.sqf`si s'utilitza el TFAR. Els fitxers es poden trobar a la carpeta `/scripts/radios/acre2`i `scripts/radios/tfar` respectivament.
+Cal recordar de configurar les freqüències de les ràdios per cada esquadra i equip de foc als documents `bmt_acre2_configuracio.sqf` en el cas d'utilitzar ACRE2 i `fn_tfar_configureFrequencies.sqf`si s'utilitza el TFAR. Els fitxers es poden trobar a la carpeta `/scripts/radios/acre2`i `scripts/radios/tfar` respectivament.
 
-#### Administració/Logística
+#### Administration/Logistics
 
 En aquesta secció s'informa als jugadors de les diferents unitats de suport (artilleria, cas, extracció) que hi ha a la seva disponibilitat així com la possibilitat de reequipar-se.
 
-#### Execució
+#### Execution
 
 En aquest apartat s'el·labora en com realitzar la missió i la prioritat de les tasques en cas d'haver-n'hi. Es recomana també que s'incereixin enllaços a les diverses marques al mapa, utilitzant les comandes `<marker>` per facilitar la lectura.
 
-#### Missió
+#### Mission
 
 En aquesta secció s'haurà d'explicar en línies generals de què va la missió. Cal que l'informació sigui breu i concisa. Cal cobrir les diferents fases de la missió: inserció, informació general i extracció. Si és necessàri, es poden incloure imatges, especialment si s'ha d'eliminar o rescatar algú en concret.
 
-#### Intel·ligència
+#### Intel
 
 La secció d'intel·legència ha de donar informació, en cas d'haver-n'hi, sobre les tropes enemigues i aliades a la zona.
 
