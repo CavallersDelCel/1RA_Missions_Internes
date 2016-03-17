@@ -42,7 +42,7 @@
         title = "Use Virtual Arsenal profiles";
         values[] = {0,1};
         texts[] = {"No","Yes"};
-        default = 0;
+        default = BMT_VAPROFILES;
     };
 #endif
 

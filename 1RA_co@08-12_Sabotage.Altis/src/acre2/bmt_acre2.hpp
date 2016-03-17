@@ -52,7 +52,7 @@
         title = "Distribute radios";
         values[] = {0, 1};
         texts[] = {"No", "Yes"};
-        default = 1;
+        default = BMT_ACRE2_DISTRIBUTE_RADIOS;
     };
 
     //===================================================================================================//
@@ -66,7 +66,7 @@
         title = "Configure radio channels";
         values[] = {0, 1};
         texts[] = {"No", "Yes"};
-        default = 1;
+        default = BMT_ACRE2_CONFIGURE_CHANNELS;
     };
 #endif
 

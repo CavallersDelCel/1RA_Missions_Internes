@@ -33,10 +33,10 @@
 //                  dm                      Designated Marksman                                          //
 //                  mg                      Machine Gunner                                               //
 //                  amg                     Assitant Machine Gunner                                      //
-//                  at                      Anti-Tank)                                                    //
+//                  at                      Anti-Tank)                                                   //
 //                  aat                     AT Ammo handler                                              //
-//                  aa                      Anti-Aircraft gunner                                              //
-//                  aaa                     Anti-Aircraft Assitant                                            //
+//                  aa                      Anti-Aircraft gunner                                         //
+//                  aaa                     Anti-Aircraft Assitant                                       //
 //                  en                      Engineer                                                     //
 //                  exp                     Explosives Specialist                                        //
 //                  sn                      Sniper                                                       //
@@ -89,11 +89,6 @@ if (isNil "_unitFaction") then {
     _unitFaction = toLower (faction _unit);
 } else {
     _unitFaction = toLower _unitFaction;
-
-    // Use leader faction if unit's faction is different.
-    if (_unitFaction != toLower (faction (leader group player))) then {
-        _unitFaction = toLower (faction (leader group player));
-    };
 };
 
 // Save unit type.

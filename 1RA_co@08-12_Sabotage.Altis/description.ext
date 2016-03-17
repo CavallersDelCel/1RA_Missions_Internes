@@ -11,6 +11,12 @@
 //=======================================================================================================//
 
 //=======================================================================================================//
+// MISSION PARAMETERS DEFINITIONS: The variables here defined allow controlling the default values of    //
+//                                 the mission parameters.                                               //
+//=======================================================================================================//
+#include "missionConfig\bmt_missionParameters_definitions.hpp"
+
+//=======================================================================================================//
 // MISSION CONFIGURATION: These parameters must be modified by the mission editor.                       //
 //=======================================================================================================//
 #include "missionConfig\bmt_missionConfig.hpp"
@@ -44,7 +50,7 @@ class Params {
         title = "Debug Mode";
         values[] = {0,1};
         texts[] = {"Deactivated","Activated"};
-        default = 0;
+        default = BMT_DEBUG;
     };
 
     #define BMT_PARAMETERS

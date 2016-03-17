@@ -37,13 +37,6 @@ if (!isNil "bmt_param_t8units_enabled") then {
 };
 
 //=======================================================================================================//
-// Initialise the VCOM AI script if the A3BMT VCOMAI component is loaded.                                //
-//=======================================================================================================//
-//if (!isNil "bmt_param_t8units_activated") then {
-//    bmt_script_t8units = [] execVM "src\vcomai\scripts\bmt_vcomai_init.sqf";
-//};
-
-//=======================================================================================================//
 // Use virtual arsenal profiles instead of custom loadout equipment. When enabled the loadout defined in //
 // configEquipment scripts is overwritten by the equivalent Virtual Arsenal profile.                     //
 //=======================================================================================================//

@@ -44,7 +44,7 @@
         title = "Medical system";
         values[] = {0, 1, 2};
         texts[] = {"Disabled", "Basic", "Advanced"};
-        default = 2;
+        default = BMT_ACE3_MEDICAL;
     };
 
     //===================================================================================================//
@@ -55,7 +55,7 @@
         title = "Ballistics";
         values[] = {0,1};
         texts[] = {"Basic", "Advanced"};
-        default = 1;
+        default = BMT_ACE3_BALLISTICS;
     };
 #endif
 

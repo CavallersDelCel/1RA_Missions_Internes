@@ -39,7 +39,7 @@
         title = "Use T8 Units";
         values[] = {0,1};
         texts[] = {"Disabled", "Enabled"};
-        default = 1;
+        default = BMT_T8UNITS_ENABLE;
     };
 
     //===================================================================================================//
@@ -53,7 +53,7 @@
         title = "T8 Units Debug";
         values[] = {0,1};
         texts[] = {"Disabled", "Enabled"};
-        default = 0;
+        default = BMT_T8UNITS_DEBUG;
     };
 
     //===================================================================================================//
@@ -64,7 +64,7 @@
         title = "DAC compatibility";
         values[] = {0,1};
         texts[] = {"Disabled", "Enabled"};
-        default = 1;
+        default = BMT_T8UNITS_DAC;
     };
 #endif
 
