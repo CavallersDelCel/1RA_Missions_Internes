@@ -14,9 +14,7 @@ private ["_credits", "_radio", "_adminLog", "_execution", "_mission", "_intel", 
 // NOTES: CREDITS.                                                                                       //
 //=======================================================================================================//
 _credits = player createDiaryRecord ["diary", ["Credits","
-Mission created by <font color='#00FFFF'>*** Authors ***</font> for the community <font color='#00FFFF'>*** name of the community ***</font>.
-<br/><br/>
-With the collaboration of Magnetar (A3-BMT template) and *** possible collaborators ***.
+Mission and templatecreated by <font color='#00FFFF'>TheMagnetar</font> for the community <font color='#00FFFF'>Cavallers del Cel</font>.
 "]];
 
 //=======================================================================================================//
@@ -31,23 +29,13 @@ _radio = player createDiaryRecord ["diary", ["Radio frequencies","
 <br/><br/>
 <font color='#FF0000' size='18'>Alpha</font>
 <br/>
-- Squad ""Alpha"": 200 kHz.
+- Squad ""Alpha 1"": 200 kHz.
 <br/>
 - Fireteam ""Alpha 1-1"": 201 kHz.
 <br/>
 - Fireteam ""Alpha 1-2"": 202 kHz.
 <br/>
 - Fireteam ""Alpha 1-3"": 203 kHz.
-<br/><br/>
-<font color='#FF0000' size='18'>Bravo</font>
-<br/>
-- Squad ""Bravo"": 210 kHz.
-<br/>
-- Fireteam ""Bravo 1-1"": 211 kHz.
-<br/>
-- Fireteam ""Bravo 1-2"": 212 kHz.
-<br/>
-- Fireteam ""Bravo 1-3"": 213 kHz.
 "]];
 
 //=======================================================================================================//
@@ -56,11 +44,11 @@ _radio = player createDiaryRecord ["diary", ["Radio frequencies","
 _adminLog = player createDiaryRecord ["diary", ["Administration/Logistics","
 <font color='#FF0000' size='18'>CAS</font>
 <br/>
-*** Description, if they exist, of support units like CAS, field artillery, medevac, ... ***
+Without additional support.
 <br/><br/>
 <font color='#FF0000' size='18'>Supply</font>
 <br/>
-*** Troop supply: additional ammunition, ... ***
+Without resupply.
 "]];
 
 //=======================================================================================================//
@@ -69,26 +57,22 @@ _adminLog = player createDiaryRecord ["diary", ["Administration/Logistics","
 _execution = player createDiaryRecord ["diary", ["Execution","
 <font color='#FF0000' size='18'>Main tasks</font>
 <br/>
-- <font color='#00FFFF'>Main task 1</font>: *** Brief description ***.
-<br/>
-- <font color='#00FFFF'>Main task 2</font>: *** Brief description ***.
-<br/><br/>
-<font color='#FF0000' size='18'>Secondary tasks</font>
-<br/>
-- <font color='#00FFFF'>Secondary task 1</font>: *** Brief description ***.
-<br/>
-- <font color='#00FFFF'>Secondary task 2</font>: *** Brief description ***.
+- <font color='#00FFFF'>Main task</font>: Destroy anti-air defenses.
 <br/><br/>
 <font color='#FF0000' size='18'>Execution</font>
 <br/>
-*** Description, using bullet points, of how to execute the mission. ***
+- Insertion at LZ.<br/>
+- Destroy the anti-air defenses present at the enemy camp.
+- Evacuate at FRV.
 "]];
 
 //=======================================================================================================//
 // NOTES: MISSION.                                                                                       //
 //=======================================================================================================//
 _mission = player createDiaryRecord ["diary", ["Mission","
-*** Mission description. ***
+The preparation to stablish a foothold on the island of Altis has begun. A small team has been sent to eliminate
+the weakened enemy air defenses at the north of the island. Removing this thread will to allow our air units
+to deploy the rest of the platoon and stablish the first FOB on Altis.
 "]];
 
 //=======================================================================================================//
@@ -99,18 +83,21 @@ _intel = player createDiaryRecord ["diary", ["Intel","
 <br/><br/>
 <font color='#FF0000' size='18'>Enemy forces</font>
 <br/>
-*** Description of enemy forces.***
+Enemy forces consist mainly of infantry units. A single wheeled unit has been spotted in the area.
 <br/><br/>
 <font color='#FF0000' size='18'>Allied forces</font>
 <br/>
-*** Description of allied forces. ***
+None.
 "]];
 
 //=======================================================================================================//
 // NOTES: SITUATION.                                                                                     //
 //=======================================================================================================//
 _situation = player createDiaryRecord ["diary", ["SITREP","
-*** Brief description of the situation.***
+After a series of defeats, which lead to the obliteration of allied forces in the island of Altis, the NATO
+high command has decided to regain control of the situation. The first step will be establishing a foothold
+at the north of Altis that will serve as a FOB for hit-and-run operations in the island while the main force
+strikes from the south.
 "]];
 
 //============================================= END OF FILE =============================================//

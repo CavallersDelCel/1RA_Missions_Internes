@@ -23,39 +23,48 @@ _briefingAdmin = "
 <br/>
 This mission correctly runs using the following:
 <br/><br/>
-*** List of addons with the corresponding tested version number. ***
+- Advanced Combat Environment (ACE 3) v3.5.0.
+- Advanced Combat Radio Environment (ACRE2) v2.1.0.
+- ASR AI 3.
+- Community Base Addons (CBA) v2.3.1.
+- Dynamic-AI-Creator (DAC) v3.1b.
+- RHS United States Army Forces (RHS-USAF) v0.4.0.1.
+- T8-Units v0.61.
 <br/><br/>
 If the previous requirements are not met, the mission ought to be tested before playing it.
 <br/>
 ";
 
 //=======================================================================================================//
-// NOTES: MISSION AUTHOR'S REMARKS.                                                                        //
+// NOTES: MISSION AUTHOR'S REMARKS.                                                                      //
 //=======================================================================================================//
 
 _briefingNotes = "
 <br/>
 <font color='#FF0000' size='18'>Mission author's remarks</font>
 <br/>
-<font color='#00FFFF'>Mission name:</font> ""*** Mission name ***"".
+<font color='#00FFFF'>Mission name:</font> ""Sabotage"".
 <br/>
 <font color='#00FFFF'>Version</font> 1.0.
 <br/>
-<font color='#00FFFF'>Author:</font> *** Author(s) name(s) ***.
+<font color='#00FFFF'>Author:</font> TheMagnetar.
 <br/>
-<font color='#00FFFF'>Collaborators:</font> *** List of collaborators ***.
+<font color='#00FFFF'>Collaborators:</font> -.
 <br/>
-<font color='#00FFFF'>Minimum number of players:</font> *** xx ***.
+<font color='#00FFFF'>Minimum number of players:</font> 4.
 <br/>
-<font color='#00FFFF'>Maximum number of players:</font> *** yy ***.
+<font color='#00FFFF'>Maximum number of players:</font> 12.
 <br/>
-<font color='#00FFFF'>Respawn:</font> *** Type of respawn ***.
+<font color='#00FFFF'>Respawn:</font> None (Spectator).
 <br/>
-<font color='#00FFFF'>Difficulty:</font> *** Expected mission difficulty ***.
+<font color='#00FFFF'>Difficulty:</font> High.
 <br/>
 <font color='#00FFFF'>Mission summary:</font>
 <br/><br/>
-*** Additional notes and remarks from the mission author. ***
+A virtual arsenal ammo box has been added at the LZ in order to resupply in case scripts do not function properly.
+The mission is rather simple in its concept: players have to attack the enemy camp and destroy the air defenses but
+thanks to DAC and T8, unit patrolls are dynamic and the experience changes every time the mission is played. There is
+only one wheeled unit present (without heavy weapons), the rest are plain and simple infantry units.
 ";
 
 //=======================================================================================================//
