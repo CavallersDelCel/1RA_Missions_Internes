@@ -1,8 +1,8 @@
-# Mission name
+# Operation Ghost
 
 <Banner URL>
 <p align="center">
-    <img src="https://github.com/CavallersDelCel/1RA_Missions_Internes/blob/master/1RA_co%4008-12_Fantasma.Altis/imatges/cc_op_fantasma.jpg">
+    <img src="https://github.com/CavallersDelCel/1RA_Missions_Internes/blob/master/1RA_co%4008-12_Ghost.Altis/imatges/cc_op_fantasma.jpg">
 </p>
 
 Mission generated using the "Arma 3 Basic Mission Template" (A3-BMT).
@@ -62,10 +62,10 @@ strong civilian presence. This is not the first time that Ohmid Raheem uses civi
 
 ##### AREA OF OPERATIONS
 
-The area of operations in summer.
-
 <p align="center">
-    <img src="https://github.com/CavallersDelCel/1RA_Missions_Internes/blob/master/1RA_co%4008-12_Fantasma.Altis/images/AO_Summer.png">
+    <img src="https://github.com/CavallersDelCel/1RA_Missions_Internes/blob/master/1RA_co%4008-12_Ghost.Altis/images/AO_Summer.png">
+    
+    The area of operations in summer.
 </p>
 
 ##### ALLIED FORCES
@@ -88,11 +88,11 @@ Two infatry teams and one sniper team will be deployed in the north-west of Sofi
 Once the task is completed, the allied forces will head to Sofia in order to regroup with the rest of the alliead forces and prepare the offensive to retake the north part of Altis.
 
 <p align="center">
-    <img src="https://github.com/CavallersDelCel/1RA_Missions_Internes/blob/master/1RA_co%4008-12_Fantasma.Altis/images/Map.png">
+    <img src="https://github.com/CavallersDelCel/1RA_Missions_Internes/blob/master/1RA_co%4008-12_Ghost.Altis/images/Map.png">
 </p>
 
 <p align="center">
-    <img src="https://github.com/CavallersDelCel/1RA_Missions_Internes/blob/master/1RA_co%4008-12_Fantasma.Altis/images/OhmidRaheem.jpg.png">
+    <img src="https://github.com/CavallersDelCel/1RA_Missions_Internes/blob/master/1RA_co%4008-12_Ghost.Altis/images/OhmidRaheem.jpg.png">
     Colonel Ohmid Raheem a week ago.
 </p>
 
