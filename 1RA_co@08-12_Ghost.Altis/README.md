@@ -2,7 +2,7 @@
 
 <Banner URL>
 <p align="center">
-    <img src="https://github.com/CavallersDelCel/1RA_Missions_Internes/blob/master/1RA_co%4008-12_Ghost.Altis/imatges/cc_op_fantasma.jpg">
+    <img src="https://github.com/CavallersDelCel/1RA_Missions_Internes/blob/master/1RA_co%4008-12_Ghost.Altis/images/cc_op_fantasma.jpg">
 </p>
 
 Mission generated using the "Arma 3 Basic Mission Template" (A3-BMT).
@@ -31,9 +31,7 @@ and therefore, the players must decide if they have completed it or not.
 
 **Arma 3 Basic Mission Template (A3-BMT)**: v1.0 (https://github.com/CavallersDelCel/1RA_Plantilla_Missio) by TheMagnetar.
 
-**Necessary or recommended addons**: List of necessary and/or recommended addons.
-
-This mission works with the following set of addons:
+**Necessary or recommended addons**: This mission works with the following set of addons:
 
 * Advanced Combat Environment 3 (ACE3) v3.5.0.
 * Advanced Combat Radio Environment 2 (ACRE2) v2.1.0.
@@ -63,10 +61,9 @@ strong civilian presence. This is not the first time that Ohmid Raheem uses civi
 ##### AREA OF OPERATIONS
 
 <p align="center">
-    <img src="https://github.com/CavallersDelCel/1RA_Missions_Internes/blob/master/1RA_co%4008-12_Ghost.Altis/images/AO_Summer.png">
-    
-    The area of operations in summer.
+    <img src="https://github.com/CavallersDelCel/1RA_Missions_Internes/blob/master/1RA_co%4008-12_Ghost.Altis/images/AO_Summer.jpg">
 </p>
+<center>The area of operations in summer.</center>
 
 ##### ALLIED FORCES
 
@@ -87,14 +84,15 @@ Two infatry teams and one sniper team will be deployed in the north-west of Sofi
 
 Once the task is completed, the allied forces will head to Sofia in order to regroup with the rest of the alliead forces and prepare the offensive to retake the north part of Altis.
 
+<center>Operation Ghost.</center>
 <p align="center">
     <img src="https://github.com/CavallersDelCel/1RA_Missions_Internes/blob/master/1RA_co%4008-12_Ghost.Altis/images/Map.png">
 </p>
 
 <p align="center">
-    <img src="https://github.com/CavallersDelCel/1RA_Missions_Internes/blob/master/1RA_co%4008-12_Ghost.Altis/images/OhmidRaheem.jpg.png">
-    Colonel Ohmid Raheem a week ago.
+    <img src="https://github.com/CavallersDelCel/1RA_Missions_Internes/blob/master/1RA_co%4008-12_Ghost.Altis/images/OhmidRaheem.jpg">
 </p>
+<center>Colonel Ohmid Raheem a week ago.</center>
 
 **Tasks**
 * Insertion at LZ1.
