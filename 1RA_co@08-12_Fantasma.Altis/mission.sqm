@@ -40,7 +40,7 @@ class Mission
 	randomSeed=11578151;
 	class Intel
 	{
-		briefingName="[1RA - CC] Operació fantasma v1.01";
+		briefingName="[1RA - CC] Operation Ghost v1.01";
 		startFog=0.69;
 		startWind=0.34999999;
 		startWindDir=25;
@@ -80,9 +80,9 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=0.60000002;
-					text="CC_Alfa1_1";
-					init="[""Alfa"", 1, ""sl"", this] call cc_fnc_configUnitat; this assignAsCargoIndex [Cotxe2, 1]; this moveInCargo Cotxe2;";
-					description="Líder d'esquadra";
+					text="bmt_Alpha1_1";
+					init="[""Alpha"", 1, ""sl"", this] call bmt_fnc_configUnit; this assignAsCargoIndex [bmt_Car2, 1]; this moveInCargo bmt_Car2;";
+					description="Squad leader";
 				};
 				class Item1
 				{
@@ -93,9 +93,9 @@ class Mission
 					vehicle="rhsusf_army_ocp_medic";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="CC_Alfa1_2";
-					init="[""Alfa"", 1, ""me"", this] call cc_fnc_configUnitat; this assignAsCargoIndex [Cotxe2, 2]; this moveInCargo [Cotxe2,2];";
-					description="Metge";
+					text="bmt_Alpha1_2";
+					init="[""Alpha"", 1, ""me"", this] call bmt_fnc_configUnit; this assignAsCargoIndex [bmt_Car2, 2]; this moveInCargo [bmt_Car2,2];";
+					description="Medic";
 				};
 				class Item2
 				{
@@ -106,9 +106,9 @@ class Mission
 					vehicle="rhsusf_army_ocp_rifleman";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="CC_Alfa1_3";
-					init="[""Alfa"", 1, ""rflat"", this] call cc_fnc_configUnitat; this moveinDriver Cotxe2;";
-					description="Fuseller (AT4)";
+					text="bmt_Alpha1_3";
+					init="[""Alpha"", 1, ""rflat"", this] call bmt_fnc_configUnit; this moveinDriver bmt_Car2;";
+					description="Rifleman (AT4)";
 				};
 				class Item3
 				{
@@ -119,9 +119,9 @@ class Mission
 					vehicle="rhsusf_army_ocp_autorifleman";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="CC_Alfa1_4";
-					init="[""Alfa"", 1, ""ar"", this] call cc_fnc_configUnitat; this assignAsCargoIndex [Cotxe2, 3]; this moveInCargo [Cotxe2, 3];";
-					description="Fuseller automàtic";
+					text="bmt_Alpha1_4";
+					init="[""Alpha"", 1, ""ar"", this] call bmt_fnc_configUnit; this assignAsCargoIndex [bmt_Car2, 3]; this moveInCargo [bmt_Car2, 3];";
+					description="Automatic rifleman";
 				};
 				class Item4
 				{
@@ -132,9 +132,9 @@ class Mission
 					vehicle="rhsusf_army_ocp_grenadier";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="CC_Alfa1_5";
-					init="[""Alfa"", 1, ""gr"", this] call cc_fnc_configUnitat; this moveInGunner Cotxe2;";
-					description="Granader";
+					text="bmt_Alpha1_5";
+					init="[""Alpha"", 1, ""gr"", this] call bmt_fnc_configUnit; this moveInGunner bmt_Car2;";
+					description="Grenadier";
 				};
 			};
 		};
@@ -854,7 +854,7 @@ class Mission
 					vehicle="O_officer_F";
 					leader=1;
 					skill=0.60000002;
-					text="CoronelEnemic";
+					text="EnemyColonel";
 				};
 			};
 			class Waypoints
@@ -893,9 +893,9 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.60000002;
-					text="CC_Alfa2_1";
-					init="[""Alfa"", 2, ""tl"", this] call cc_fnc_configUnitat; this moveInCargo Cotxe1;";
-					description="Líder d'equip";
+					text="bmt_Alpha2_1";
+					init="[""Alpha"", 2, ""tl"", this] call bmt_fnc_configUnit; this moveInCargo bmt_Car1;";
+					description="Team leader";
 				};
 				class Item1
 				{
@@ -906,9 +906,9 @@ class Mission
 					vehicle="rhsusf_army_ocp_javelin";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="CC_Alfa2_2";
-					init="[""Alfa"", 2, ""at"", this] call cc_fnc_configUnitat; this moveInGunner Cotxe1;";
-					description="Antitanc (Javelin)";
+					text="bmt_Alpha2_2";
+					init="[""Alpha"", 2, ""at"", this] call bmt_fnc_configUnit; this moveInGunner bmt_Car1;";
+					description="Anti-armor (Javelin)";
 				};
 				class Item2
 				{
@@ -919,9 +919,9 @@ class Mission
 					vehicle="rhsusf_army_ocp_machinegunner";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="CC_Alfa2_3";
-					init="[""Alfa"", 2, ""mg"", this] call cc_fnc_configUnitat; this assignAsCargoIndex [Cotxe1, 3]; this moveInCargo [Cotxe1, 3];";
-					description="Metrallador";
+					text="bmt_Alpha2_3";
+					init="[""Alpha"", 2, ""mg"", this] call bmt_fnc_configUnit; this assignAsCargoIndex [bmt_Car1, 3]; this moveInCargo [bmt_Car1, 3];";
+					description="Machinegunner";
 				};
 				class Item3
 				{
@@ -932,9 +932,9 @@ class Mission
 					vehicle="rhsusf_army_ocp_rifleman";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="CC_Alfa2_4";
-					init="[""Alfa"", 2, ""rflat"", this] call cc_fnc_configUnitat; this moveinDriver Cotxe1;";
-					description="Fuseller (AT4)";
+					text="bmt_Alpha2_4";
+					init="[""Alpha"", 2, ""rflat"", this] call bmt_fnc_configUnit; this moveinDriver bmt_Car1;";
+					description="Rifleman (AT4)";
 				};
 				class Item4
 				{
@@ -945,9 +945,9 @@ class Mission
 					vehicle="rhsusf_army_ocp_medic";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="CC_Alfa2_5";
-					init="[""Alfa"", 2, ""me"", this] call cc_fnc_configUnitat; this assignAsCargoIndex [Cotxe1, 2]; this moveInCargo [Cotxe1, 2];";
-					description="Metge";
+					text="bmt_Alpha2_5";
+					init="[""Alpha"", 2, ""me"", this] call bmt_fnc_configUnit; this assignAsCargoIndex [bmt_Car1, 2]; this moveInCargo [bmt_Car1, 2];";
+					description="Medic";
 				};
 			};
 		};
@@ -968,9 +968,9 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.60000002;
-					text="CC_Alfa3_1";
-					init="[""Alfa"", 3, ""sn"", this] call cc_fnc_configUnitat; this assignAsCargoIndex [Cotxe3, 1]; this moveInCargo [Cotxe3, 1];";
-					description="Franctirador";
+					text="bmt_Alpha3_1";
+					init="[""Alpha"", 3, ""sn"", this] call bmt_fnc_configUnit; this assignAsCargoIndex [bmt_Car3, 1]; this moveInCargo [bmt_Car3, 1];";
+					description="Sniper";
 				};
 				class Item1
 				{
@@ -981,9 +981,9 @@ class Mission
 					vehicle="rhsusf_army_ocp_sniper";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="CC_Alfa3_2";
-					init="[""Alfa"", 3, ""sp"", this] call cc_fnc_configUnitat; this moveinDriver Cotxe3;";
-					description="Observador";
+					text="bmt_Alpha3_2";
+					init="[""Alpha"", 3, ""sp"", this] call bmt_fnc_configUnit; this moveinDriver bmt_Car3;";
+					description="Spotter";
 				};
 			};
 		};
@@ -1026,8 +1026,8 @@ class Mission
 			side="EMPTY";
 			vehicle="rhsusf_m1025_d_m2";
 			skill=0.60000002;
-			text="Cotxe1";
-			init="[""hmmwv1"",this] call cc_fnc_configEquipacio; this engineOn true;";
+			text="bmt_Car1";
+			init="[""hmmwv1"",this] call bmt_fnc_configEquipment; this engineOn true;";
 		};
 		class Item4
 		{
@@ -1037,8 +1037,8 @@ class Mission
 			side="EMPTY";
 			vehicle="rhsusf_m1025_d_m2";
 			skill=0.60000002;
-			text="Cotxe3";
-			init="[""hmmwv3"",this] call cc_fnc_configEquipacio; this engineOn true;";
+			text="bmt_Car3";
+			init="[""hmmwv3"",this] call bmt_fnc_configEquipment; this engineOn true;";
 		};
 		class Item5
 		{
@@ -1048,8 +1048,8 @@ class Mission
 			side="EMPTY";
 			vehicle="rhsusf_m1025_d_Mk19";
 			skill=0.60000002;
-			text="Cotxe2";
-			init="[""hmmwv2"",this] call cc_fnc_configEquipacio; this engineOn true;";
+			text="bmt_Car2";
+			init="[""hmmwv2"",this] call bmt_fnc_configEquipment; this engineOn true;";
 		};
 		class Item6
 		{
@@ -1076,8 +1076,8 @@ class Mission
 		class Item1
 		{
 			position[]={25618.311,20.850199,21357.883};
-			name="Extraccio";
-			text="Reagrupament";
+			name="Extraction";
+			text="Regroup";
 			type="mil_end";
 			colorName="ColorWEST";
 		};
@@ -1092,8 +1092,8 @@ class Mission
 		class Item3
 		{
 			position[]={21891.275,23.634609,21015.043};
-			name="Eliminar";
-			text="Eliminar";
+			name="Assassinate";
+			text="Assassinate";
 			type="mil_objective";
 			colorName="ColorWEST";
 		};
@@ -1217,9 +1217,9 @@ class Mission
 			rectangular=1;
 			interruptable=1;
 			age="UNKNOWN";
-			name="trigCoronel";
-			expCond="!alive CoronelEnemic";
-			expActiv="coronelMort = 1;";
+			name="trigColonel";
+			expCond="!alive EnemyColonel";
+			expActiv="colonelDead = 1;";
 			class Effects
 			{
 			};
@@ -1234,9 +1234,9 @@ class Mission
 			activationBy="ANY";
 			interruptable=1;
 			age="UNKNOWN";
-			name="Extraccio";
+			name="Extraction";
 			expCond="{_x in thisList} count playableUnits == {alive _x} count playableUnits";
-			expActiv="0 = [[],""cc_fnc_finalitzarMissio"",true] spawn BIS_fnc_MP;";
+			expActiv="[] remoteExecCall [""bmt_fnc_endMission"", 0, true];";
 			class Effects
 			{
 			};
