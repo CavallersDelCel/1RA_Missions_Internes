@@ -142,7 +142,7 @@ switch (_this select 0) do
 		_setHidTime = ["(((10 * DAC_AI_Level) + ((skill _leader) * 50)) / ((count units _group) + 1))"];
 	};
     //-------------------------------------------------------------------------------------------------------------------------
-    // Configuració utilitzada per civils desarmats.
+    // Configuration used for unarmed civillians..
 	case 6:
 	{
 		//_setSkill = [global min,global max];

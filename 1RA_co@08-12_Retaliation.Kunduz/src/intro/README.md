@@ -1,6 +1,6 @@
 ## scripts/intro
 
-En aquesta carpeta es troben els diferents fitxers per crear una introducció a la partida. El fitxer `cc_intro.sqf` és el fitxer al qual s'ha d'accedir desde `init.sqf`
+En aquesta carpeta es troben els diferents fitxers per crear una introducció a la partida. El fitxer `bmt_intro.sqf` és el fitxer al qual s'ha d'accedir desde `init.sqf`
 i per norma general no s'ha de modificar.
 
 Cada una de les faccions suportades té un fitxer propi que s'ha de customitzar si algun dels jugadors forma part d'aquesta facció i l'efecte que de moment està configurat

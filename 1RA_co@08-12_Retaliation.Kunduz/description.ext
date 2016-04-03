@@ -1,84 +1,92 @@
 //=======================================================================================================//
-// Arxiu: Description.ext                                                                                //
-// Autor: CC_Magnetar                                                                                    //
-// Versió: 1.0                                                                                           //
-// Creació del Document: 2015/02/22                                                                      //
-// Descripció: El fitxer description.ext serveix per configurar la missió. En aquest cas es un fitxer    //
-//             totalment modular, on les variables que depenen de cada missió (respawn, autors,..) estan //
-//             definides en un fitxer apart, així com les funcions i els permisos que aquestes tenen.    //
-// Canvis: 0.1 (2015/02/22) Versió inicial.                                                              //
-//         1.0 (2015/11/26) Versió estable de la plantilla.                                              //
+// File: Description.ext                                                                                 //
+// Author: TheMagnetar                                                                                   //
+// Version: 1.0                                                                                          //
+// File creation: 2015/02/22                                                                             //
+// Description: This file is used in order to configure different scenario attributes. In this case this //
+//              file presents a modular structure, where mission dependant variables (respawn type,      //
+//              authors, ...) are defined in a separate file. Functions and their permissions are        //
+//              declared also in this way.                                                               //
+// Changes: 1.0 (2015/11/26) First public version.                                                       //
 //=======================================================================================================//
 
 //=======================================================================================================//
-// CONFIGURACIÓ DE LA MISSIÓ: Aquests paràmetres han de ser modificats pel creador de la missió.         //
+// MISSION PARAMETERS DEFINITIONS: The variables here defined allow controlling the default values of    //
+//                                 the mission parameters.                                               //
 //=======================================================================================================//
-#include "configMissio\cc_configMissio.hpp"
+#include "missionConfig\bmt_missionParameters_definitions.hpp"
 
 //=======================================================================================================//
-// CONFIGURACIÓ DELS ADDONS: Aquest fitxer ha de ser modificat pel creador de la missió i permet         //
-//                           configurar quins addons es mostren a la pantalla de paràmetres per tal de   //
-//                           que es puguin configurar.                                                   //
+// MISSION CONFIGURATION: These parameters must be modified by the mission editor.                       //
+//=======================================================================================================//
+#include "missionConfig\bmt_missionConfig.hpp"
+
+//=======================================================================================================//
+// ADDON CONFIGURATION: This file must be modified by the mission editor and allow configuring which     //
+//                      addons are configured using the scripts provided in "Arma 3 Basic Mission        //
+//                      Template" (A3-BMT). Some addons may also allow further tweaking in the parameter //
+//                      selection screen.                                                                //
 //=======================================================================================================//
 class CfgComponents {
-    #define CC_COMPONENTS
-        #include "cc_components.hpp"
-    #undef CC_COMPONENTS
+    #define BMT_COMPONENTS
+        #include "bmt_components.hpp"
+    #undef BMT_COMPONENTS
 };
 
 //=======================================================================================================//
-// DEBRIEFING: Informació per quan acaba la missió.                                                      //
+// DEBRIEFING: Additional information displayed when mission ends.                                       //
 //=======================================================================================================//
-#include "configMissio\cc_debriefingMissio.hpp"
+#include "missionConfig\bmt_missionDebriefing.hpp"
 
 //=======================================================================================================//
-// PARAMETRES DE LA MISSIÓ: RETOCS PER L'ADMINISTRADOR                                                   //
+// MISSION PARAMETERS: This section defines which parameters are available in the parameter selection    //
+//                     screen. Only the administrator can modify them.                                   //
 //=======================================================================================================//
 class Params {
     //===================================================================================================//
-    // Debug: Variable per controlar Debug.                                                              //
-    // Opció per defecte: Habilitat                                                                      //
+    // Debug: Variable to control the level of debug output. Activated by default.                       //
     //===================================================================================================//
-    class cc_param_debugOutput {
-        title = "Mode Debug";
+    class bmt_param_debugOutput {
+        title = "Debug Mode";
         values[] = {0,1};
-        texts[] = {"Desactivat","Activat"};
-        default = 0;
+        texts[] = {"Deactivated","Activated"};
+        default = BMT_DEBUG;
     };
 
-    #define CC_PARAMETRES
-        #include "cc_components.hpp"
-    #undef CC_PARAMETRES
+    #define BMT_PARAMETERS
+        #include "bmt_components.hpp"
+    #undef BMT_PARAMETERS
 };
 
 //=======================================================================================================//
-// FUNCIONS: Funcions per les missions dels Cavallers del Cel.                                           //
+// FUNCTIONS: Functions used in the "Arma 3 Basic Mission Template" (A3-BMT).                            //
 //=======================================================================================================//
 class CfgFunctions {
-    class CC {
-        #define CC_FUNCIONS
-            #include "cc_components.hpp"
-        #undef CC_FUNCIONS
+    class bmt {
+        #define BMT_FUNCTIONS_INTERNAL
+            #include "bmt_components.hpp"
+        #undef BMT_FUNCTIONS_INTERNAL
     };
-    
-    #define CC_FUNCIONS_EXTERN
-            #include "cc_components.hpp"
-    #undef CC_FUNCIONS_EXTERN
+
+    #define BMT_FUNCTIONS_EXTERNAL
+        #include "bmt_components.hpp"
+    #undef BMT_FUNCTIONS_EXTERNAL
 };
 
 //=======================================================================================================//
-// RESTRICCIONS A L'EXECUCIÓ DE FUNCIONS: Restringeix l'abast de les funcions.                           //
+// REMOTE FUNCTION RESTRICTIONS: This section defines the restriction of remote execution of functions.  //
+//                               https://community.bistudio.com/wiki/CfgRemoteExec                       //
 //=======================================================================================================//
 class CfgRemoteExec {
-    // Llista de funcions que poden ser enviades pel client a través de remoteExec/remoteExecCall
+    // List of functions that can be send by the client by using emoteExec/remoteExecCall.
     class Functions {
-        mode = 2;  // Estat de remoteExec: 0: deshabilitat, 1: habilitat amb whitelist, 2: habilitat (per defecte).
-        jip = 1;   // Possibilitat d'enviar missatges JIP. 0: deshabilitat, 1: habilitat.
+        mode = 2;  // Default remoteExecc state: 0: deactivated, 1: activated with whitelist, 2: activated ignoring whitelist (default).
+        jip = 1;   // Hability to send JIP messages. 0: deactivated, 1: activatedt.
 
-        #define CC_REMOTEEXEC_FUNCIONS
-            #include "cc_components.hpp"
-        #undef CC_REMOTEEXEC_FUNCIONS
+        #define BMT_FUNCTIONS_REMOTEEXEC
+            #include "bmt_components.hpp"
+        #undef BMT_FUNCTIONS_REMOTEEXEC
     };
 };
 
-//============================================ FI DEL FITXER ============================================//
+//============================================= END OF FILE =============================================//

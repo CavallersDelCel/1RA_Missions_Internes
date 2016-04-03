@@ -23,13 +23,13 @@ switch (_TypNumber) do
 	case 1:
 	{
 		_Events_Unit_S =	[
-								["{_x addCuratorEditableObjects [(units _group),true]} forEach allCurators"],  // S'executa durant la creacció.
-								[],  // S'executa al arribar al waypoint.
-								[],  // S'executa quan el grup està eliminat.
-								[],  // S'executa quan s'elimina la unitat.
-								[],  // S'executa abans de que es redueixi el grup per guardar recursos.
-								["{_x addCuratorEditableObjects [[_unit],true]} forEach allCurators"],  // S'executa després de que es redueixi el grup per guardar recursos.
-								[]   // S'executa al detectar enemics.
+								["{_x addCuratorEditableObjects [(units _group),true]} forEach allCurators"],  // Executes when creating/spawning units.
+								[],  // Executes when reaching waypoints.
+								[],  // Executes when group is eliminated.
+								[],  // Executes when unit is eliminated.
+								[],  // Executes before group reduction.
+								["{_x addCuratorEditableObjects [[_unit],true]} forEach allCurators"],  // Executes after building up after reduction.
+								[]   // Executes when detecting enemies.
 							];
 		_Events_Unit_V = 	[
 								["{vehicleGen = vehicle _x} forEach units _group; {_x addCuratorEditableObjects [[vehicleGen],true]} forEach allCurators; {_x addCuratorEditableObjects [(units _group),true]} forEach allCurators"],

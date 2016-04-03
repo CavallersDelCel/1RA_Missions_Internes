@@ -1,127 +1,132 @@
-# Nom de la missió
+# Mission name
 
-Imatge capçalera.
+<Banner URL>
 
-Missió generada amb la Plantilla Bàsica per Missions (PBM) del grup 1er Regiment Aerotransportat (1RA) de la Comunitat Catalana de Simulació - Cavallers del Cel.
+Mission generated using the "Arma 3 Basic Mission Template" (A3-BMT).
 
-**Nom de la missió**: Nom de la missió.
+**Mission name**: Mission name.
 
-**Versió**: vx.x (data).
+**Version**: vx.x (date).
 
-**Autor**: Nom de l'autor.
+**Author**: Author name.
 
-**Contribuïdors**: Noms dels col·laboradors.
+**Contributors**: Names of the contributers.
 
-**Tipus de missió**: Tipus de missió (Coop, TvT, PvP).
+**Game type**: Game type (Coop, TvT, PvP, ZvZ, ...).
 
-**Nombre mínim de jugadors**: Nombre mínim de jugadors recomanats per l'autor.
+**Minimum number of players**: Minimum number of players suggested by the author.
 
-**Nombre màxim de jugadors**: Nombre màxim de jugadors recomanats per l'autor.
+**Minimum number of players**: Maximum number of players suggested by the author.
 
-**Respawn**: Tipus de respawn.
+**Respawn**: Respawn type (None, bird, base, ...).
 
-**Dificultat**: Dificultat de la missió.
+**Dificulty**: Mission Dificulty.
 
-**Resum de la missió**: Breu descripció de la missió.
+**Mission summary**: Brief description of the mission.
 
-**Plantilla Bàsica per Missions (PBM)**: v1.0.1 (https://github.com/CavallersDelCel/1RA_Plantilla_Missio) per CC_Magnetar.
+**Arma 3 Basic Mission Template (A3-BMT)**: v1.0 (https://github.com/CavallersDelCel/1RA_Plantilla_Missio) by TheMagnetar.
 
-**Mods necessàris o recomenats**: Llista dels mods necessàris o recomenats per la missió.
+**Necessary or recommended addons**: List of necessary and/or recommended addons.
 
-### Descripció detallada de la missió
+### Detailed mission description
 
-Descripció detallada de la missió. Aquest text pot ser el mateix que el que es penja al fòrum.
+Detailed description of the mission. This text can be the same as the one posted on the forums.
 
-# Plantilla Bàsica per Missions (PBM)
+# Arma 3 Basic Mission Template (A3-BMT)
 
-**Autor**: CC_Magnetar.
+**Author**: TheMagnetar.
 
-**Contribuïdors**: CC_Viper (Plantilles d'imatges).
+**Version**: 1.0.
 
-**Versió**: 1.0.1
+**Last modified**: 2015/11/26.
 
-**Darrera modificació**: 2015/11/26.
+**Description**: The "Arma 3 Basic Mission Template" (A3-BMT) was designed in order to ease the amount of work
+required when editing a mission for Arma 3. Although originally envisaged to satisfy the needs of the "1er Regiment Aerotransportat (1RA)" of the Catalan community of simulation "Cavallers del Cel", its scope has broaden since its
+adoption by other communities.
 
-**Descripció**: Plantilla bàsica per generar missions pel grup d'Arma 1er Regiment Aerotransportat (1RA) de la Comunitat Catalana de Simulació - Cavallers del Cel.
+### Requirements:
 
-### Requeriments:
+The "Arma 3 Basic Mission Template (A3-BMT) has been designed to be flexible and to be independent from external addons.
+Any contributer that wants to add an external script must include it with an option to deactivate it.
 
-La Plantilla Bàsica per Missions (PBM) està pensada per ser flexible i no depèn de cap mod extern a excepció de:
+### Structure:
 
-* CC_Icona: Addon que afegeix la icona del grup 1er Regiment Aerotransportat (1RA).
+The template has the following folder structure:
 
-La resta de la missió es mantindrà, per una decisió de disseny, *independent de qualsevol addon extern*. Qualsevol col·laborador que vulgui afegir algun script en particular
-haurà d'afegir una opció per tal de que la funcionalitat es pugui desactivar.
+* "\" (root foler): This folder contains those files that are essential for the mission and the template: description.ext, init.sqf, mission.sqm, bmt_components.hpp and this README file.
+* "\DAC": This folder contains the configuration files for the addon Dynamic-AI-Creator. The mission creator does not need to place External DAC Logic since this is handled automatically by the template. This tool, created by Silola, allow generating AI quickly and dynamically and it allows to save some resources through AI caching techniques. More information can be found in http://forums.bistudio.com/showthread.php?176926-DAC-V3-1-(Dynamic-AI-Creator)-released.
+* "\externalScripts": This folder contains third party addons and scripts.
+  * "\externalScripts\T8": The `T8 Units` script by T-800a. This is a less dynamic AI creator that is compatible with DAC. More information can be found in https://forums.bistudio.com/topic/172795-release-t8-units-a-less-dynamic-ai-creator/.
+* "\images": Folder where all images are stored.
+* "\missionConfig": Folder where scripts and functions, organised in subfolders, that need to be modified for every mission are stored. It contains:
+  * "\missionConfig\ace3": Scripts and functions to configure ACE3.
+  * "\missionConfig\acre2": Scripts and functions to configure ACRE2.
+  * "\missionConfig\briefing": Scripts to generate the briefings for each of the supported factions. Server administrator has a especial briefing.
+  * "\missionConfig\configEquipment": Scripts and functions to equip the unit for each of the supported factions. They can be used for vehicles, infantry and ammo boxes.
+  * "\missionConfig\core": Scripts and functions that define core variables and/or check the configuration of loaded addons.
+  * "\missionConfig\endMission": Functions that allow ending the mission once certain conditions are met.
+  * "\missionConfig\intro": Scripts for mission introduction screens. Each of the supported factions has an own introduction.
+  * "\missionConfig\t8units": Scripts to configure the `T8 Units` unit generation script by T-800a. More information can be found in https://forums.bistudio.com/topic/172795-release-t8-units-a-less-dynamic-ai-creator/.
+  * "\missionConfig\tfar": Scripts and functions to configure el TFAR.  
+  * "\missionConfig\bmt_components_addons.hpp": File where the configuration of external addons using the scripts included in the template can be enabled or disabled.
+  * "\missionConfig\bmt_missionConfig.hpp": File included in `description.ext`. It declares variables such as mission name, game type, author, respawn, ...
+  * "\missionConfig\bmt_missionDebriefing.hpp": File included in `description.ext`. It defines the different endings of the mission.
+* "\src": Folder where scripts and functions, organised in subfolders, that must not be modified for a especific mission are stored. It contains:
+  * "\src\ace3": Scripts and functions to configure ACE3.
+  * "\src\acre2": Scripts and functions to configure ACRE2.
+  * "\src\asrai3": Scripts and functions to configure ASR AI 3.
+  * "\src\briefing": Scripts to generate the briefings for each of the supported factions. Server administrator has a especial briefing.
+  * "\src\configEquipment": Scripts and functions to equip the unit for each of the supported factions. They can be used for vehicles, infantry and ammo boxes.
+  * "\src\configGroup": Scripts and functions that defines to which squad and fireteam the unit belongs to.
+  * "\src\configUnit": Scripts and functions to configure the unit, squad and fireteam as well as the loadout of the unit depending on the role. Virtual arsenal profiles.
+  * "\src\core": Scripts and functions that define core variables and/or check the configuration of loaded addons.
+  * "\src\dac": Scripts and functions to configure DAC. They automatically place the necessary game logics for a proper DAC initialisation.
+  * "\src\intro": Effects during mission introduction screen.
+  * "\src\misc": Miscellaneous scripts and functions.
+  * "\src\respawn": Custom respawn template that switches to ACE3 or vanilla if the former is not loaded.
+  * "\src\t8units": Scripts to initialise T8 Units.
+  * "\src\tfar": Scripts and functions to configure TFAR.
+  * "\src\zeus": Scripts and functions to configure Zeus.
 
-### Estructura:
+### Supported addons
 
-La plantilla té la següent estructura de carpetes.
+The following is a list showing the currently supported addons.
 
-* "\" (Carpeta arrel): En aquesta carpeta es troben els fitxers essencials de la missió: description.ext, init.sqf, mission.sqm i briefing.sqf així com aquest fitxer de documentació.
-* "\configMissio": Carpeta on es guarden els diferents scripts/funcions organitzats en subcarpetes que cal modificar per cada missió.
-  * "\configMissio\acre2": Scripts i funcions per configurar el ACRE2.
-  * "\configMissio\briefing": Scripts per generar brífings per cada una de les faccions suportades. L'administrador de la partida té un briefing especial.
-  * "\configMissio\comu": Scripts i funcions que defineixen variables comunes i/o comproven la configuració dels mods carregats.
-  * "\configMissio\configEquipacio": Scripts i funcions per equipar les unitats per cada una de les faccions suportades. Serveix per infanteria, vehicles i caixes.
-  * "\configMissio\finalitzarMissio": Funcions que permeten acabar la partida quan es dónguin certes condicions durant la partida.
-  * "\configMissio\intro": Introducció a la missió. Cada una de les faccions suportades té una introducció a la missió pròpia.
-  * "\configMissio\tfar": Scripts i funcions per configurar el TFAR.
-  * "\configMissio\cc_components_addons.hpp": Fitxer per habilitar/deshabilitar quins mods es configuraran utilitzant els scripts de la plantilla.
-  * "\configMissio\cc_configMissio.hpp": Fitxer inclòs a `description.ext`. Configura variables com el nom de la missió, tipus de missió, autor, respawn, ...
-  * "\configMissio\cc_debriefingMissio.hpp": Fitxer inclòs a `description.ext`. Configura els diferents finals que pot tenir la missió.
-* "\DAC": Aquesta carpeta conté la versió script del Dynamic-AI-Creator v3.1b. És una eina, creada per Silola, per generar AI de forma dinàmica i que permet conservar recursos. Es pot trobar més informació a http://forums.bistudio.com/showthread.php?176926-DAC-V3-1-(Dynamic-AI-Creator)-released.
-* "\imatges": Carpeta on es guarden les diferents imatges. Conté plantilles per generar les imatges per la pròpia missió i pel fòrum.
-* "\src": Carpeta on es guarden els diferents scripts/funcions organitzats en subcarpetes que s'han de modificar cada missió.
-  * "\src\ace3": Scripts i funcions per configurar el ACE3.
-  * "\src\acre2": Scripts i funcions per configurar el ACRE2.
-  * "\src\asrai3": Scripts i funcions per configurar el ASR AI 3.
-  * "\src\zeus": Scripts i funcions per configurar el Zeus.
-  * "\src\briefing": Scripts per generar brífings per cada una de les faccions suportades. L'administrador de la partida té un briefing especial.
-  * "\src\comu": Scripts i funcions que defineixen variables comunes i/o comproven la configuració dels mods carregats.
-  * "\src\configEquipacio": Scripts i funcions per equipar les unitats per cada una de les faccions suportades. Serveix per infanteria, vehicles i caixes.
-  * "\src\configGrup": Scripts i funcions per configurar l'esquadra i l'equip de foc de la unitat.
-  * "\src\configUnitat": Scripts i funcions per configurar la unitat, incloent l'esquadra i l'equip de foc així com l'equipació depenent del rol. Perfils de 1RA.
-  * "\src\dac": Scripts i funcions per configurar el DAC.
-  * "\src\intro": Effectes durant la introducció a la missió.
-  * "\src\misc": Scripts i funcions miscel·lània.
-  * "\src\respawn": Plantilla de respawn del grup 1RA.
-  * "\src\tfar": Scripts i funcions per configurar el TFAR.
-  * "\src\tfar": Scripts i funcions per configurar el Zeus.
-
-### Mods suportats
-
-La següent llista mostra els mods externs que actualment estan suportats i en negreta aquells mods que actualment estan a l'estàndard del grup 1RA.
-
-* Contingut:
+* Contents:
   * RHS Armed Forces of the Russian Federation (AFRF): http://www.rhsmods.org/mod/1.
-  * **RHS United States Armed Forces (USAF)**: http://www.rhsmods.org/mod/2.
+  * RHS United States Armed Forces (USAF): http://www.rhsmods.org/mod/2.
   * Bundeswehr A3 (BWA3): http://www.bwmod.de/.
-* Intel·ligència Artifical.
-  * **ASR AI 3**: https://github.com/robalo/mods/tree/master/asr_ai3/addons.
-* Realisme:
-  * **Advanced Combat Environment (ACE3)**: https://github.com/acemod/ACE3 o bé http://ace3mod.com/.
-  * Advanced Gameplay Modification (AGM): https://github.com/KoffeinFlummi/AGM. **Obsolet**.
-* Sistema de ràdios:
+* Artificial Intelligence (AI):
+  * ASR AI 3: https://github.com/robalo/mods/tree/master/asr_ai3/addons.
+* Realism:
+  * Advanced Combat Environment (ACE3): https://github.com/acemod/ACE3 o bé http://ace3mod.com/.
+  * Advanced Gameplay Modification (AGM): https://github.com/KoffeinFlummi/AGM. **Obsolete**.
+* Radio system:
   * Advanced Combat Radio Environment 2 (ACRE2): http://forums.bistudio.com/showthread.php?191848-ACRE2-Stable-Release.
-  * **Task Force Arrowhead Radio (TFAR)**: https://github.com/michail-nikolaev/task-force-arma-3-radio.
+  * Task Force Arrowhead Radio (TFAR): https://github.com/michail-nikolaev/task-force-arma-3-radio.
 
-### Faccions suportades
+### Supported factions
 
-La següent llista mostra les faccions suportades per aquells scripts que permeten un major grau de control en equipacions, objectius etc: *briefing.sqf*,
-*fn_acre2_determinarIdiomes.sqf* (babel), *fn_configEquipacio.sqf* i *intro.sqf* . En negreta aquells mods a l'estàndard del grup 1RA:
+The following list shows the supported factions for those scripts that allow a greater control degree of
+equipment and tasks:
 
-| **Faccio**        | **Codi**          |
+* Briefing: *src\briefing\scripts\bmt_briefing.sqf* and its child files in folder *missionConfig\briefing\scripts*.
+* Equipment: *src\configEquipment\functions\fn_configEquipment.sqf* and its child files in folder *missionConfig\configEquipment\scripts*.
+* Babel (ACRE2): *missionConfig\acre2\scripts\bmt_acre2_configuration.sqf* (babel).
+* Introduction: *missionConfig\intro\scripts\bmt_intro.sqf*.
+
+| **Faction**        | **Code**          |
 | ------------- | ------------- |
-| **Blue Force**                                                     | `blu_f`                          |
-| **Civils**                                                         | `civ_f`                          |
-| **FIA**                                                            | `blu_g_f`, `ind_g_f` i `opf_g_f` |
-| **Independent Force**                                              | `ind_f`                          |
-| **Opposing Force**                                                 | `opf_f`                          |
-| Bundeswehr                                                         | `bwa3_faction`                   |
-| RHS Insurgents                                                     | `rhs_faction_insurgents`         |
-| RHS Russian Airborne Troops (Vozdushno-desantnye voyska)           | `rhs_faction_vdv`                |
-| RHS Soviet Air Defense Troops (Voyska protivovozdushnoy oborony)   | `rhs_faction_vpvo`               |
-| **RHS United States Army (Desert)**                                | `rhs_faction_usarmy_d`           |
-| **RHS United States Army (Woodland)**                              | `rhs_faction_usarmy_wd`          |
-| **RHS United States Marine Corps (Desert)**                        | `rhs_faction_usmc_d`             |
-| **RHS United States Marine Corps (Woodland)**                      | `rhs_faction_usmc_wd`            |
+| Blue Force                                                       | `blu_f`                          |
+| Civils                                                           | `civ_f`                          |
+| FIA                                                              | `blu_g_f`, `ind_g_f` i `opf_g_f` |
+| Independent Force                                                | `ind_f`                          |
+| Opposing Force                                                   | `opf_f`                          |
+| Bundeswehr                                                       | `bwa3_faction`                   |
+| RHS Insurgents                                                   | `rhs_faction_insurgents`         |
+| RHS Russian Airborne Troops (Vozdushno-desantnye voyska)         | `rhs_faction_vdv`                |
+| RHS Soviet Air Defense Troops (Voyska protivovozdushnoy oborony) | `rhs_faction_vpvo`               |
+| RHS United States Army (Desert)                                  | `rhs_faction_usarmy_d`           |
+| RHS United States Army (Woodland)                                | `rhs_faction_usarmy_wd`          |
+| RHS United States Marine Corps (Desert)                          | `rhs_faction_usmc_d`             |
+| RHS United States Marine Corps (Woodland)                        | `rhs_faction_usmc_wd`            |
