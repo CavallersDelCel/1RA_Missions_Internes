@@ -8,13 +8,15 @@
 // Changes: 1.0 (2015/11/26) First public version.                                                       //
 //=======================================================================================================//
 
-private["_radioList", "_presetList", "_radio", "_presetName", "_channelName", "_channel", "_presetData"];
+private["_radioList", "_nameList", "_presetList", "_radio", "_presetName", "_name", "_channelName", "_channel", "_presetData"];
 
-_radioList = ["ACRE_PRC343","ACRE_PRC148","ACRE_PRC152","ACRE_PRC117F"];
+_radioList = ["ACRE_PRC148","ACRE_PRC152","ACRE_PRC117F"];
+_nameList = ["label", "description", "name"];
 _presetList = ["default2","default3","default4"];
 
 {
     _radio = _x;
+    _name = _nameList select _forEachIndex;
     {
         _presetName = _x;
         _channel = 1;
@@ -22,12 +24,9 @@ _presetList = ["default2","default3","default4"];
             _channelName = _x;
             _frequencies = bmt_array_frequenciesShortRange select _forEachIndex;
             {
-                _presetData = [_radio, _presetName, _channel] call acre_api_fnc_getPresetChannelData;
-                //diag_log format ["ACRE 2 preset info %1", _presetData];
-                (_presetData select 1) set [0, _frequencies select _forEachIndex];
-                (_presetData select 1) set [1, _frequencies select _forEachIndex];
-                (_presetData select 1) set [5, toUpper (_channelName select _forEachIndex)];
-                [_radio, _presetName, _channel, _presetData] call acre_api_fnc_setPresetChannelData;
+                [_radio, _presetName, _channel, _name, toUpper (_channelName select _forEachIndex)] call acre_api_fnc_setPresetChannelField;
+                [_radio, _presetName, _channel, "frequencyTX", _frequencies select _forEachIndex] call acre_api_fnc_setPresetChannelField;
+                [_radio, _presetName, _channel, "frequencyRX", _frequencies select _forEachIndex] call acre_api_fnc_setPresetChannelField;
                 _channel = _channel + 1;
             } forEach _channelName;
         } forEach bmt_array_groups;

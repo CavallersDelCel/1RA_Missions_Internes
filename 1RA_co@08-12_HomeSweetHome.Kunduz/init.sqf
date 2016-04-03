@@ -40,7 +40,7 @@ if (!isNil "bmt_param_t8units_enabled") then {
 // Use virtual arsenal profiles instead of custom loadout equipment. When enabled the loadout defined in //
 // configEquipment scripts is overwritten by the equivalent Virtual Arsenal profile.                     //
 //=======================================================================================================//
-if (bmt_param_useVAProfiles == 1 && hasInterface) then {
+if ((bmt_param_useVAProfiles == 1) && hasInterface) then {
     bmt_script_useVAProfiles = [] execVM "src\configEquipment\scripts\bmt_configEquipment_VAprofiles.sqf";
 };
 

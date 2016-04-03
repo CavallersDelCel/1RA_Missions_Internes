@@ -12,9 +12,6 @@
 // Parameters passed when onPlayerRespawn and onPlayerKilled.
 params [["_unit",objNull], ["_assassin",objNull], ["_respawn",0], ["_respawnDelay",0]];
 
-private ["_rscLayer"];
-_rscLayer = "BIS_fnc_respawnSpectator" call bis_fnc_rscLayer;
-
 if (isNull _assassin) then {
     _assassin = _unit;
 };
@@ -24,19 +21,19 @@ if ((_respawn == 0) or (_respawn == 1) and ({alive _x} count allPlayers <= 0)) e
 };
 
 if (alive _unit) then {
-    // If ther is respawn of type BIRD.
+    // If there is respawn of type BIRD.
     if (_respawn == 1) then {
         // Hide seagull body.
        if (_unit isKindOf "seagull") then {
-           if (bmt_mod_ace3) then {
+           if (bmt_mod_ace3 && (bmt_param_ace3_spectator ==  1)) then {
               [true] call ace_spectator_fnc_stageSpectator;
            } else {
                _unit remoteExecCall [0, true];
            };
        };
 
-        // If ACE 3 is loaded use the spectator mode of ACE3. Use the vanila one otherwise.
-        if (bmt_mod_ace3) then {
+        // If ACE 3 is loaded use the spectator mode of ACE3. Use the vanila one otherwise (End Game Spectator).
+        if (bmt_mod_ace3 && (bmt_param_ace3_spectator ==  1)) then {
             if ( bmt_param_debugOutput == 1) then {
                 player sideChat format ["DEBUG (bmt_respawn_espectador.sqf): Using ACE3 spectator mode."];
             };
@@ -45,7 +42,7 @@ if (alive _unit) then {
             [0, _assassin] call ace_spectator_fnc_setCameraAttributes;
             [true] call ace_spectator_fnc_setSpectator;
         } else {
-            if ( bmt_param_debugOutput == 1) then {
+            if (bmt_param_debugOutput == 1) then {
                 player sideChat format ["DEBUG (bmt_respawn_espectador.sqf): Using vanila spectator mode."];
             };
 
@@ -60,12 +57,13 @@ if (alive _unit) then {
                 [true] call acre_api_fnc_setSpectator;
             };
 
-            RscSpectator_allowFreeCam = true;
-            BIS_fnc_feedback_allowPP = false;   // Disable dying effects.
-            _rscLayer cutrsc ["RscSpectator","plain"];
+            // Start the End Game Spectator.
+            // - All sides can be viewed.
+            // - The AI cannot be observed.
+            ["Initialize", [_unit, [], false]] call BIS_fnc_EGSpectator;
         };
     } else {
-        if (bmt_mod_ace3) then {
+        if (bmt_mod_ace3 && (bmt_param_ace3_spectator ==  1)) then {
             [false] call ace_spectator_fnc_setSpectator;
         } else {
 
@@ -77,12 +75,11 @@ if (alive _unit) then {
 
             // Advanced Combat Radio Environment 2 (ACRE 2)
             if (bmt_mod_acre2) then {
-                [true] call acre_api_fnc_setSpectator;
+                [false] call acre_api_fnc_setSpectator;
             };
 
-            RscSpectator_allowFreeCam = false;
-            BIS_fnc_feedback_allowPP = true;
-            _rscLayer cuttext ["","plain"];
+            // Exit the End Game Spectator mode.
+            ["Terminate"] call BIS_fnc_EGSpectator;
         };
 
         // Assign equipment
@@ -94,13 +91,13 @@ if (alive _unit) then {
     // If respawn time is less than 1 second, do not enter spectator mode.
     if (playerRespawnTime <= 1) exitWith {};
 
-    // If ACE 3 is loaded use the spectator mode of ACE3. Use the vanila one otherwise.
-    if (bmt_mod_ace3) then {
+    // If ACE 3 is loaded use the spectator mode of ACE3. Use the vanila one otherwise (End Game Spectator).
+    if (bmt_mod_ace3 && (bmt_param_ace3_spectator ==  1)) then {
         if ( bmt_param_debugOutput == 1) then {
             player sideChat format ["DEBUG (bmt_respawn_espectador.sqf): Using ACE3 spectator mode."];
         };
 
-        // Configura la càmera de l'espectador de ACE3.
+        // Configure ACE3 spectator camera.
         [0, _assassin] call ace_spectator_fnc_setCameraAttributes;
         [true] call ace_spectator_fnc_setSpectator;
     } else {
@@ -119,9 +116,10 @@ if (alive _unit) then {
             [true] call acre_api_fnc_setSpectator;
         };
 
-        RscSpectator_allowFreeCam = true;
-        BIS_fnc_feedback_allowPP = false;   // Disable dying effects.
-        _rscLayer cutrsc ["RscSpectator","plain"];
+        // Start the End Game Spectator.
+        // - All sides can be viewed.
+        // - The AI cannot be observed.
+        ["Initialize", [_unit, [], false]] call BIS_fnc_EGSpectator;
     };
 };
 

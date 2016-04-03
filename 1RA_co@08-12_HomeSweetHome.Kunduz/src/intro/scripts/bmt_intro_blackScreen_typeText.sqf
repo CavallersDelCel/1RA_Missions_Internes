@@ -16,9 +16,6 @@ titleCut ["", "BLACK FADED", 999];
 
 waitUntil{!(isNil "bmt_preload_completed")};
 
-playMusic ["introSong",1];
-0 fademusic 1;
-
 // Disable simulation for all units during the black screen.
 {
     _x enableSimulation false;
@@ -51,9 +48,5 @@ sleep 5;
 "dynamicBlur" ppEffectCommit 5;
 
 titleCut ["", "BLACK IN", 5];
-sleep 5;
-20 fadeMusic 0;
-sleep 20;
-playMusic "";
 
 //============================================= END OF FILE =============================================//

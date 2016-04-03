@@ -17,7 +17,7 @@ waitUntil{
 #include "..\..\..\missionConfig\acre2\scripts\bmt_acre2_configuration.sqf"
 
 // Configure presets for each radio.
-[] execVM "src\acre2\scripts\bmt_acre2_configurePresets.sqf";
+[] call bmt_fnc_acre2_configurePresets;
 
 // Configure the client side.
 if (hasInterface) then {

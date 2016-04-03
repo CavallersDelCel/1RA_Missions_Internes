@@ -24,7 +24,7 @@ Mission generated using the "Arma 3 Basic Mission Template" (A3-BMT).
 
 **Mission summary**: Brief description of the mission.
 
-**Arma 3 Basic Mission Template (A3-BMT)**: v1.0 (https://github.com/CavallersDelCel/1RA_Plantilla_Missio) by Magnetar   .
+**Arma 3 Basic Mission Template (A3-BMT)**: v1.0 (https://github.com/CavallersDelCel/1RA_Plantilla_Missio) by TheMagnetar.
 
 **Necessary or recommended addons**: List of necessary and/or recommended addons.
 
@@ -34,7 +34,7 @@ Detailed description of the mission. This text can be the same as the one posted
 
 # Arma 3 Basic Mission Template (A3-BMT)
 
-**Author**: Magnetar.
+**Author**: TheMagnetar.
 
 **Version**: 1.0.
 
