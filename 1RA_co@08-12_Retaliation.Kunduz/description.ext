@@ -43,7 +43,7 @@ class Params {
         title = "Mode Debug";
         values[] = {0,1};
         texts[] = {"Desactivat","Activat"};
-        default = 1;
+        default = 0;
     };
 
     #define CC_PARAMETRES

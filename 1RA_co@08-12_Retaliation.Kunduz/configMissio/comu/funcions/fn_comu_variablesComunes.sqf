@@ -12,13 +12,13 @@
 private ["_llargada_grups1RA", "_llargada_frequencies1RA", "_llargada_frequencies1RALR"];
 
 // Llista d'unitats amb "Rifleman Radio" (fn_configEquipacio.sqf).
-cc_var_llistaRadioSoldats = ["rfl", "rflat", "gr", "ar", "dm", "mg", "amg", "at", "aat", "aa", "aaa", "en", "exp", "div", "hplt", "jplt"];
+cc_var_llistaRadioSoldats = ["rfl", "rflat", "rfluav", "gr", "ar", "dm", "mg", "amg", "at", "aat", "aa", "aaa", "en", "exp", "div", "hplt", "jplt", "me", "divme"];
 
 // Llista d'unitats amb "Short Range Radio ""(fn_configEquipacio.sqf).
-cc_var_llistaRadioOficials = ["pl", "psg", "rto", "fo", "me", "sl", "tl", "sn", "sp", "divsl", "divme"];
+cc_var_llistaRadioOficials = ["pl", "psg", "rto", "fo", "sl", "tl", "sn", "sp", "divsl"];
 
 // Llista d'unitats amb "Long Range Radio" (fn_configEquipacio.sqf).
-cc_var_llistaRadioRTO = ["rto", "fo","sl"];
+cc_var_llistaRadioRTO = ["rto", "fo"];
 
 //=======================================================================================================//
 // Configuració de les ràdios: Les següents variables ajuden a tenir una configuració automàtica de les  //

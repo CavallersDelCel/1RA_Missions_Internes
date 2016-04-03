@@ -38,7 +38,7 @@ enableEnvironment false;
     _uavMovement select 3,     // Direction of camera movement (0: anti-clockwise, 1: clockwise, default: random)
     [   
         // add Icon at enemy/target position
-       ["\a3\ui_f\data\map\markers\nato\o_inf.paa", _colorEast, markerPos "markerRescue", 1, 1, 0, "Rescatar els marines", 0]
+       ["\a3\ui_f\data\map\markers\military\objective_ca.paa", _colorEast, markerPos "markerRescue", 1, 1, 0, "Rescatar els marines", 0]
     ]
 ] spawn BIS_fnc_establishingShot;
 

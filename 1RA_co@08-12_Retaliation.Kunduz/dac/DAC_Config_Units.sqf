@@ -1178,23 +1178,26 @@ switch (_TypNumber) do
             "LOP_AM_Infantry_Engineer", "LOP_AM_Infantry_Engineer", "LOP_AM_Infantry_SL",  // Crew, Helicopter pilot and Section Leader
             "LOP_AM_Infantry_TL",          // Team Leader
             "LOP_AM_Infantry_AT",          // Antitank (RPG-7)
-            "LOP_AM_Infantry_AT_Asst",     // Antitank assistant
+            //"LOP_AM_Infantry_AT_Asst",     // Antitank assistant
             "LOP_AM_Infantry_AR",          // Machinegunner (PKM)
-            "LOP_AM_Infantry_AR_Asst",     // Machinegunner
+            //"LOP_AM_Infantry_AR_Asst",     // Machinegunner
             "LOP_AM_Infantry_Corpsman",    // Corpsman
             "LOP_AM_Infantry_Engineer",    // IED man (Engineer)
             "LOP_AM_Infantry_GL",          // Grenadier (AKM GP-25)
             "LOP_AM_Infantry_Marksman",    // Designated marksman
             "LOP_AM_Infantry_Rifleman",    // Rifleman (AKM)
             "LOP_AM_Infantry_Rifleman_2",  // Rifleman (AKMS)
-            "LOP_AM_Infantry_Rifleman_3"   // Rifleman (Lee Enfield)
+            "LOP_AM_Infantry_Rifleman_3",  // Rifleman (Lee Enfield)
+            "LOP_AM_Infantry_Rifleman",    // Rifleman (AKM)
+            "LOP_AM_Infantry_Rifleman_2",  // Rifleman (AKMS)
+            "LOP_AM_Infantry_Rifleman_3"  // Rifleman (Lee Enfield)
         ];
         _Unit_Pool_V = [
-            "LOP_AM_Landrover",            // Landrover (unarmed)
+            //"LOP_AM_Landrover",            // Landrover (unarmed)
             "LOP_AM_Landrover_M2",         // Landrover (M2)
-            "LOP_AM_Offroad",              // Technical (unarmed)
-            "LOP_AM_Offroad_M2",           // Technical (M2)
-            "LOP_AM_Truck"                 // Truck (cargo)
+            //"LOP_AM_Offroad",              // Technical (unarmed)
+            "LOP_AM_Offroad_M2"            // Technical (M2)
+            //"LOP_AM_Truck"                 // Truck (cargo)
         ];
         _Unit_Pool_T = [
             "LOP_AM_BTR60",                // BTR 60

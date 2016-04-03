@@ -60,15 +60,15 @@ _execucio = player createDiaryRecord ["diary", ["Execució","
 <br/><br/>
 <font color='#FF0000' size='18'>Execució</font>
 <br/>
-- Inserció al punt <marker name=""Insercio"">LZ1</marker>.
+- Inserció al punt <marker name=""markerStart"">LZ1</marker>.
 <br/>
-- Contactar amb la <marker name=""Insercio"">policia afgana</marker> per intercanviar informació sobre la localització del nou cap insurgent.
+- Contactar amb la <marker name=""markerPolice"">policia afgana</marker> per intercanviar informació sobre la localització del nou cap insurgent.
 <br/>
-- Acostar-se a l'àrea d'operacions i <marker name=""Eliminar"">rescatar els marines capturats</marker>.
+- Acostar-se a l'àrea d'operacions i <marker name=""markerRescue"">rescatar els marines capturats</marker>.
 <br/>
 - Minimitzar les baixes civils per tal de guanyar-se el seu respecte i col·laboració.
 <br/>
-- Dirigir-se a la base aliada de Foxtrot pel <marker name=""Extraccio"">nord-est</marker> per tal de tractar mèdicament els marines capturats.
+- Dirigir-se a la base aliada de Foxtrot pel <marker name=""markerEnd"">nord-est</marker> per tal de tractar mèdicament els marines capturats.
 "]];
 
 //=======================================================================================================//
@@ -97,8 +97,8 @@ de visió nocturna
 <br/><br/>
 <font color='#FF0000' size='18'>Forces aliades</font>
 <br/>
-- Esquadra alfa amb equip de tiradors.
-- Helicòpter de combat (CAS) ""November"".
+- Esquadra alfa amb equip de tiradors.<br/>
+- Helicòpter de combat (CAS) ""November"".<br/>
 - Equip d'evacuació ""Rain"": 3 helicòpters sense capacitats ofensives destinats a evacuació.
 <br/><br/>
 <font color='#FF0000' size='18'>Civils</font>

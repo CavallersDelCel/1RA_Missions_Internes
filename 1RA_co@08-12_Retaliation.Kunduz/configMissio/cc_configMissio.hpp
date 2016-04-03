@@ -15,7 +15,7 @@
 
 class Header {
     gameType = Coop;           // Mode de joc: https://community.bistudio.com/wiki/Multiplayer_Game_Types
-    minPlayers = 5;            // Nombre mínim de jugadors.
+    minPlayers = 8;            // Nombre mínim de jugadors.
     maxPlayers = 12;           // Nombre màxim de jugadors.
     playerCountMultipleOf = 1; // Per fer balanç en partides tvt o pvp per exemple.
 };

@@ -18,7 +18,6 @@
 #ifdef CC_FUNCIONS
     class misc {
         file = "src\misc\funcions";
-        class misc_createDiaryEntry {};
         class misc_teleport         {};
         class misc_teleport_configurarPunts { postInit = 1; };
     };

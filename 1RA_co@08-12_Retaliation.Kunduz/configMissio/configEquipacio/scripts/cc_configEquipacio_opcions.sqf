@@ -15,4 +15,8 @@ cc_var_equiparVisioNocturna = 2; // Global. Equipa la unitat amb visió nocturna
                                  // 1 = Visió nocturna a la motxilla.
                                  // 2 = Visió nocturna equipada (deshabilitat per bussejadors).
 
+cc_var_equipMap = 2;        // 0 = No maps
+                            // 1 = Only platoon, squad and team leaders
+                            // 2 = Everybody
+
 //============================================ FI DEL FITXER ============================================//

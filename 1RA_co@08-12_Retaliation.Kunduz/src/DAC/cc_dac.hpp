@@ -62,7 +62,7 @@
         title = "Debug DAC";
         values[] = {0,1,2};
         texts[] = {"Desactivat", "Simplificat", "Complert"};
-        default = 2;
+        default = 1;
     };
 #endif
 
