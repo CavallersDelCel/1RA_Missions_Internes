@@ -13,7 +13,7 @@ private ["_expSpecialists", "_engineers", "_repairVehicles", "_repairFacilities"
 private ["_surrenderedUnits", "_handcuffedUnits"];
 
 // Unit name variables must be declared as string.
-_medics = ["CC_Alfa1_5"];
+_medics = ["bmt_alpha1_5"];
 _medicVehicles = [];
 _medicFacilities = [];
 _doctors = [];

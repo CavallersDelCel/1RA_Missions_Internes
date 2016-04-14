@@ -21,41 +21,47 @@ private ["_debriefingEntries", "_endingEntry", "_endingTitle", "_endingDescripti
 _briefingAdmin = "
 <font color='#FF0000' size='18'>Information for the administrator</font>
 <br/>
-This mission correctly runs using the following:
+This mission runs correctly using the following:
 <br/><br/>
-*** List of addons with the corresponding tested version number. ***
+- Advanced Combat Environment 3 (ACE3) v3.5.1.
+<br/>
+- Advanced Combat Radio Environment 2 (ACRE2) v2.1.0.
+<br/>
+- Community Base Addons (CBA) v2.3.1.
+<br/>
+- RHS United States Army Forces (RHS USAF) v0.4.0.1. (Required)
+<br/>
+- Task Force Arrowhead Radio (TFAR) v0.9.7.3.
 <br/><br/>
 If the previous requirements are not met, the mission ought to be tested before playing it.
 <br/>
 ";
 
 //=======================================================================================================//
-// NOTES: MISSION AUTHOR'S REMARKS.                                                                        //
+// NOTES: MISSION AUTHOR'S REMARKS.                                                                      //
 //=======================================================================================================//
 
 _briefingNotes = "
 <br/>
 <font color='#FF0000' size='18'>Mission author's remarks</font>
 <br/>
-<font color='#00FFFF'>Mission name:</font> ""*** Mission name ***"".
+<font color='#00FFFF'>Mission name:</font> ""La Tempesta"".
 <br/>
 <font color='#00FFFF'>Version</font> 1.0.
 <br/>
-<font color='#00FFFF'>Author:</font> *** Author(s) name(s) ***.
+<font color='#00FFFF'>Author:</font> CC_Kronus.
 <br/>
-<font color='#00FFFF'>Collaborators:</font> *** List of collaborators ***.
+<font color='#00FFFF'>Collaborators:</font> TheMagnetar.
 <br/>
-<font color='#00FFFF'>Minimum number of players:</font> *** xx ***.
+<font color='#00FFFF'>Minimum number of players:</font> 08.
 <br/>
-<font color='#00FFFF'>Maximum number of players:</font> *** yy ***.
+<font color='#00FFFF'>Maximum number of players:</font> 12.
 <br/>
-<font color='#00FFFF'>Respawn:</font> *** Type of respawn ***.
+<font color='#00FFFF'>Respawn:</font> BASE with Spectator.
 <br/>
-<font color='#00FFFF'>Difficulty:</font> *** Expected mission difficulty ***.
+<font color='#00FFFF'>Difficulty:</font> Normal.
 <br/>
-<font color='#00FFFF'>Mission summary:</font>
-<br/><br/>
-*** Additional notes and remarks from the mission author. ***
+<font color='#00FFFF'>Mission summary:</font> Localitzar la zona d'impacte i assegurar el dispositiu experimental que transportava l'aparell.
 ";
 
 //=======================================================================================================//

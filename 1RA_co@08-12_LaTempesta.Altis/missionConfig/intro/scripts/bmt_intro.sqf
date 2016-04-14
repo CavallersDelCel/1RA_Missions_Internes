@@ -22,7 +22,7 @@ _introType = "blackScreen";
 
 _quotes = ["Whoever said the pen is mightier than the sword obviously never encountered automatic weapons.\nDouglas MacArthur."];
 
-_missionName = "Mission name";
+_missionName = "La Tempesta";
 _introText = selectRandom _quotes;
 
 // Identify which faction the unit belongs to.
@@ -104,7 +104,7 @@ switch (_unitFaction) do {
 
     // RHS: USAF "United States Marine Corps" (D) faction.
     case "rhs_faction_usmc_d": {
-        _missionLocation = "Location"; _uavMarker = "marker"; _uavMarkerType = [];
+        _missionLocation = "FOB Collserola, Altis"; _uavMarker = "marker"; _uavMarkerType = [];
 	};
 
     // RHS: USAF "United States Marine Corps" (WD) faction.

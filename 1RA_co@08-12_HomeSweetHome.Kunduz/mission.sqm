@@ -66,8 +66,8 @@ class Mission
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.60000002;
-					text="CC_Alfa1_1";
-					init="[""Alpha"", 1, ""sl"", this] call bmt_fnc_configUnit; this assignasCargo cc_truckFront; this moveinCargo cc_truckFront;";
+					text="bmt_alpha1_1";
+					init="[""Alpha"", 1, ""sl"", this] call bmt_fnc_configUnit; this assignasCargo bmt_truckFront; this moveinCargo bmt_truckFront;";
 					description="Squad Leader";
 				};
 				class Item1
@@ -79,8 +79,8 @@ class Mission
 					vehicle="rhsusf_usmc_marpat_d_rifleman_m4";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="CC_Alfa1_2";
-					init="[""Alpha"", 1, ""rfluav"", this] call bmt_fnc_configUnit; this assignasCargo cc_truckFront; this moveinCargo cc_truckFront;";
+					text="bmt_alpha1_2";
+					init="[""Alpha"", 1, ""rfluav"", this] call bmt_fnc_configUnit; this assignasCargo bmt_truckFront; this moveinCargo bmt_truckFront;";
 					description="Rifleman (UAV)";
 				};
 				class Item2
@@ -93,8 +93,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
-					text="CC_Alfa1_3";
-					init="[""Alpha"", 1, ""ar"", this] call bmt_fnc_configUnit; this assignasCargo cc_truckFront; this moveinCargo cc_truckFront;";
+					text="bmt_alpha1_3";
+					init="[""Alpha"", 1, ""ar"", this] call bmt_fnc_configUnit; this assignasCargo bmt_truckFront; this moveinCargo bmt_truckFront;";
 					description="Automatic Rifleman (M249)";
 				};
 				class Item3
@@ -106,8 +106,8 @@ class Mission
 					vehicle="rhsusf_usmc_marpat_d_grenadier";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="CC_Alfa1_4";
-					init="[""Alpha"", 1, ""gr"", this] call bmt_fnc_configUnit; this assignasCargo cc_truckFront; this moveinCargo cc_truckFront;";
+					text="bmt_alpha1_4";
+					init="[""Alpha"", 1, ""gr"", this] call bmt_fnc_configUnit; this assignasCargo bmt_truckFront; this moveinCargo bmt_truckFront;";
 					description="Grenadier";
 				};
 				class Item4
@@ -120,8 +120,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
-					text="CC_Alfa1_5";
-					init="[""Alpha"", 1, ""me"", this, ""rhs_faction_usmc_d""] call bmt_fnc_configUnit; this assignasCargo cc_truckFront; this moveinCargo cc_truckFront;";
+					text="bmt_alpha1_5";
+					init="[""Alpha"", 1, ""me"", this, ""rhs_faction_usmc_d""] call bmt_fnc_configUnit; this assignasCargo bmt_truckFront; this moveinCargo bmt_truckFront;";
 					description="Medic";
 				};
 			};
@@ -142,8 +142,8 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=0.60000002;
-					text="CC_Alfa2_1";
-					init="[""Alpha"", 2, ""tl"", this] call bmt_fnc_configUnit; this assignasCargo cc_truckRear; this moveinCargo cc_truckRear;";
+					text="bmt_alpha2_1";
+					init="[""Alpha"", 2, ""tl"", this] call bmt_fnc_configUnit; this assignasCargo bmt_truckRear; this moveinCargo bmt_truckRear;";
 					description="Team Leader";
 				};
 				class Item1
@@ -155,8 +155,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
-					text="CC_Alfa2_2";
-					init="[""Alpha"", 2, ""at"", this] call bmt_fnc_configUnit; this assignasCargo cc_truckRear; this moveinCargo cc_truckRear;";
+					text="bmt_alpha2_2";
+					init="[""Alpha"", 2, ""at"", this] call bmt_fnc_configUnit; this assignasCargo bmt_truckRear; this moveinCargo bmt_truckRear;";
 					description="Anti-Armor (Javelin)";
 				};
 				class Item2
@@ -168,8 +168,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
-					text="CC_Alfa2_3";
-					init="[""Alpha"", 2, ""mg"", this] call bmt_fnc_configUnit; this assignasCargo cc_truckRear; this moveinCargo cc_truckRear;";
+					text="bmt_alpha2_3";
+					init="[""Alpha"", 2, ""mg"", this] call bmt_fnc_configUnit; this assignasCargo bmt_truckRear; this moveinCargo bmt_truckRear;";
 					description="Machinegunner";
 				};
 				class Item3
@@ -180,8 +180,8 @@ class Mission
 					vehicle="rhsusf_usmc_marpat_d_rifleman_m4";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="CC_Alfa2_4";
-					init="[""Alpha"", 2, ""rflat"", this] call bmt_fnc_configUnit; this assignasCargo cc_truckRear; this moveinCargo cc_truckRear;";
+					text="bmt_alpha2_4";
+					init="[""Alpha"", 2, ""rflat"", this] call bmt_fnc_configUnit; this assignasCargo bmt_truckRear; this moveinCargo bmt_truckRear;";
 					description="Rifleman (AT4)";
 				};
 				class Item4
@@ -192,8 +192,8 @@ class Mission
 					vehicle="rhsusf_usmc_marpat_d_grenadier";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="CC_Alfa2_5";
-					init="[""Alpha"", 2, ""gr"", this] call bmt_fnc_configUnit; this assignasCargo cc_truckRear; this moveinCargo cc_truckRear;";
+					text="bmt_alpha2_5";
+					init="[""Alpha"", 2, ""gr"", this] call bmt_fnc_configUnit; this assignasCargo bmt_truckRear; this moveinCargo bmt_truckRear;";
 					description="Grenadier";
 				};
 			};
@@ -213,8 +213,8 @@ class Mission
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
-					text="CC_Alfa3_1";
-					init="[""Alpha"", 3, ""sn"", this] call bmt_fnc_configUnit; this assignasCargo cc_truckRear; this moveinCargo cc_truckRear;";
+					text="bmt_alpha3_1";
+					init="[""Alpha"", 3, ""sn"", this] call bmt_fnc_configUnit; this assignasCargo bmt_truckRear; this moveinCargo bmt_truckRear;";
 					description="Sniper";
 				};
 				class Item1
@@ -225,8 +225,8 @@ class Mission
 					vehicle="rhsusf_usmc_marpat_d_sniper";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="CC_Alfa3_2";
-					init="[""Alpha"", 3, ""sp"", this] call bmt_fnc_configUnit; this assignasCargo cc_truckRear; this moveinCargo cc_truckRear;";
+					text="bmt_alpha3_2";
+					init="[""Alpha"", 3, ""sp"", this] call bmt_fnc_configUnit; this assignasCargo bmt_truckRear; this moveinCargo bmt_truckRear;";
 					description="Spotter";
 				};
 			};
@@ -247,7 +247,7 @@ class Mission
 					vehicle="rhsusf_m1025_d_s_m2";
 					leader=1;
 					skill=0.60000002;
-					text="cc_carFront";
+					text="bmt_carFront";
 					syncId=0;
 					synchronizations[]={4,7,6,5};
 				};
@@ -260,7 +260,7 @@ class Mission
 					side="WEST";
 					vehicle="rhsusf_M1078A1P2_B_d_open_fmtv_usarmy";
 					skill=0.60000002;
-					text="cc_truckFront";
+					text="bmt_truckFront";
 					syncId=1;
 					synchronizations[]={7,6,5,4};
 				};
@@ -273,7 +273,7 @@ class Mission
 					side="WEST";
 					vehicle="rhsusf_M1078A1P2_B_d_open_fmtv_usarmy";
 					skill=0.60000002;
-					text="cc_truckRear";
+					text="bmt_truckRear";
 					syncId=2;
 					synchronizations[]={7,6,5,4};
 				};
@@ -286,7 +286,7 @@ class Mission
 					side="WEST";
 					vehicle="rhsusf_m1025_d_s_m2";
 					skill=0.60000002;
-					text="cc_carRear";
+					text="bmt_carRear";
 					syncId=3;
 					synchronizations[]={7,6,5,4};
 				};
@@ -331,7 +331,7 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=0.5;
-					init="this assignasCargo cc_truckFront; this moveinCargo cc_truckFront;";
+					init="this assignasCargo bmt_truckFront; this moveinCargo bmt_truckFront;";
 				};
 				class Item1
 				{
@@ -341,7 +341,7 @@ class Mission
 					vehicle="rhsusf_usmc_marpat_d_teamleader";
 					rank="CORPORAL";
 					skill=0.44999999;
-					init="this assignasCargo cc_truckFront; this moveinCargo cc_truckFront;";
+					init="this assignasCargo bmt_truckFront; this moveinCargo bmt_truckFront;";
 				};
 				class Item2
 				{
@@ -350,7 +350,7 @@ class Mission
 					side="WEST";
 					vehicle="rhsusf_usmc_marpat_d_autorifleman";
 					skill=0.40000001;
-					init="this assignasCargo cc_truckFront; this moveinCargo cc_truckFront;";
+					init="this assignasCargo bmt_truckFront; this moveinCargo bmt_truckFront;";
 				};
 				class Item3
 				{
@@ -360,7 +360,7 @@ class Mission
 					vehicle="rhsusf_usmc_marpat_d_rifleman";
 					rank="CORPORAL";
 					skill=0.44999999;
-					init="this assignasCargo cc_truckFront; this moveinCargo cc_truckFront;";
+					init="this assignasCargo bmt_truckFront; this moveinCargo bmt_truckFront;";
 				};
 				class Item4
 				{
@@ -369,7 +369,7 @@ class Mission
 					side="WEST";
 					vehicle="rhsusf_usmc_marpat_d_rifleman_m4";
 					skill=0.40000001;
-					init="this assignasCargo cc_truckFront; this moveinCargo cc_truckFront;";
+					init="this assignasCargo bmt_truckFront; this moveinCargo bmt_truckFront;";
 				};
 				class Item5
 				{
@@ -379,7 +379,7 @@ class Mission
 					vehicle="rhsusf_usmc_marpat_d_teamleader";
 					rank="CORPORAL";
 					skill=0.44999999;
-					init="this assignasCargo cc_truckFront; this moveinCargo cc_truckFront;";
+					init="this assignasCargo bmt_truckFront; this moveinCargo bmt_truckFront;";
 				};
 				class Item6
 				{
@@ -388,7 +388,7 @@ class Mission
 					side="WEST";
 					vehicle="rhsusf_usmc_marpat_d_autorifleman";
 					skill=0.40000001;
-					init="this assignasCargo cc_truckFront; this moveinCargo cc_truckFront;";
+					init="this assignasCargo bmt_truckFront; this moveinCargo bmt_truckFront;";
 				};
 				class Item7
 				{
@@ -397,7 +397,7 @@ class Mission
 					side="WEST";
 					vehicle="rhsusf_usmc_marpat_d_rifleman_m4";
 					skill=0.40000001;
-					init="this assignasCargo cc_truckRear; this moveinCargo cc_truckRear;";
+					init="this assignasCargo bmt_truckRear; this moveinCargo bmt_truckRear;";
 				};
 				class Item8
 				{
@@ -406,7 +406,7 @@ class Mission
 					side="WEST";
 					vehicle="rhsusf_usmc_marpat_d_riflemanat";
 					skill=0.40000001;
-					init="this assignasCargo cc_truckRear; this moveinCargo cc_truckRear;";
+					init="this assignasCargo bmt_truckRear; this moveinCargo bmt_truckRear;";
 				};
 				class Item9
 				{
@@ -416,7 +416,7 @@ class Mission
 					vehicle="rhsusf_usmc_marpat_d_teamleader";
 					rank="CORPORAL";
 					skill=0.44999999;
-					init="this assignasCargo cc_truckRear; this moveinCargo cc_truckRear;";
+					init="this assignasCargo bmt_truckRear; this moveinCargo bmt_truckRear;";
 				};
 				class Item10
 				{
@@ -425,7 +425,7 @@ class Mission
 					side="WEST";
 					vehicle="rhsusf_usmc_marpat_d_autorifleman";
 					skill=0.40000001;
-					init="this assignasCargo cc_truckRear; this moveinCargo cc_truckRear;";
+					init="this assignasCargo bmt_truckRear; this moveinCargo bmt_truckRear;";
 				};
 				class Item11
 				{
@@ -434,7 +434,7 @@ class Mission
 					side="WEST";
 					vehicle="rhsusf_usmc_marpat_d_rifleman_m4";
 					skill=0.40000001;
-					init="this assignasCargo cc_truckRear; this moveinCargo cc_truckRear;";
+					init="this assignasCargo bmt_truckRear; this moveinCargo bmt_truckRear;";
 				};
 				class Item12
 				{
@@ -443,7 +443,7 @@ class Mission
 					side="WEST";
 					vehicle="rhsusf_usmc_marpat_d_marksman";
 					skill=0.40000001;
-					init="this assignasCargo cc_truckRear; this moveinCargo cc_truckRear;";
+					init="this assignasCargo bmt_truckRear; this moveinCargo bmt_truckRear;";
 				};
 			};
 		};
@@ -1265,7 +1265,7 @@ class Mission
 			side="EMPTY";
 			vehicle="IEDLandSmall_F";
 			skill=0.60000002;
-			text="cc_ied1";
+			text="bmt_ied1";
 		};
 		class Item1
 		{
@@ -1274,7 +1274,7 @@ class Mission
 			side="EMPTY";
 			vehicle="IEDLandSmall_F";
 			skill=0.60000002;
-			text="cc_ied2";
+			text="bmt_ied2";
 		};
 		class Item2
 		{
@@ -1369,7 +1369,7 @@ class Mission
 			activationBy="WEST";
 			interruptable=1;
 			age="UNKNOWN";
-			expActiv="cc_ied1 setDamage 1; cc_ied2 setDamage 1;";
+			expActiv="bmt_ied1 setDamage 1; bmt_ied2 setDamage 1;";
 			class Effects
 			{
 			};
@@ -1386,7 +1386,7 @@ class Mission
 			activationBy="WEST";
 			interruptable=1;
 			age="UNKNOWN";
-			expActiv="cc_carFront setDamage 1; cc_truckFront setHit [""motor"", 1]; cc_trucRear setHit [""motor"", 1]; cc_carRear setHit [""motor"", 1];";
+			expActiv="bmt_carFront setDamage 1; bmt_truckFront setHit [""motor"", 1]; bmt_truckRear setHit [""motor"", 1]; bmt_carRear setHit [""motor"", 1];";
 			class Effects
 			{
 			};
@@ -1403,7 +1403,7 @@ class Mission
 			activationBy="WEST";
 			interruptable=1;
 			age="UNKNOWN";
-			expActiv="cc_carFront setDamage 1; cc_truckFront setHit [""motor"", 1]; cc_trucRear setHit [""motor"", 1]; cc_carRear setHit [""motor"", 1];";
+			expActiv="bmt_carFront setDamage 1; bmt_truckFront setHit [""motor"", 1]; bmt_truckRear setHit [""motor"", 1]; bmt_carRear setHit [""motor"", 1];";
 			class Effects
 			{
 			};
@@ -1420,7 +1420,7 @@ class Mission
 			activationBy="WEST";
 			interruptable=1;
 			age="UNKNOWN";
-			expActiv="cc_carFront setDamage 1; cc_truckFront setHit [""motor"", 1]; cc_trucRear setHit [""motor"", 1]; cc_carRear setHit [""motor"", 1];";
+			expActiv="bmt_carFront setDamage 1; bmt_truckFront setHit [""motor"", 1]; bmt_truckRear setHit [""motor"", 1]; bmt_carRear setHit [""motor"", 1];";
 			class Effects
 			{
 			};

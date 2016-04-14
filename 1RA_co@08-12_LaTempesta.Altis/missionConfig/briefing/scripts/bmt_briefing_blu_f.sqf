@@ -42,8 +42,6 @@ _radio = player createDiaryRecord ["diary", ["Freqüències de ràdio","
 - Equip de foc ""Alfa 1-1"": 201 kHz.
 <br/>
 - Equip de foc ""Alfa 1-2"": 202 kHz.
-<br/>
-- Equip de foc ""Alfa 1-3"": 203 kHz.
 "]];
 
 //=======================================================================================================//
@@ -100,6 +98,7 @@ FOB COLLSEROLA es troba en una zona amb nombrosa insurgència hostil.
 - Morters FOB COLLSEROLA.<br/>
 <br/><br/>
 <font color='#FF0000' size='18'>Civils</font>
+<br/>
 La població civil de la zona no es pot considerar hostil però sabem que dóna suport a la insurgència.
 "]];
 
