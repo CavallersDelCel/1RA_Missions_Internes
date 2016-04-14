@@ -14,13 +14,16 @@ intelConfiscated = 0;
 rescuedMarines = 0;
 
 bmt_fnc_checkMarines = compileFinal "
-    private _listMarines = [bmt_marine1, bmt_marine2, bmt_marine3, bmt_marine4];
+    if (isServer) then {
+        private _listMarines = [bmt_marine1, bmt_marine2, bmt_marine3, bmt_marine4];
 
-    {
-        if ((_x in thisList) and (alive _x)) then {
-            rescuedMarines = rescuedMarines + 1;
-        };
-    } forEach _listMarines;
+        {
+            if (alive _x) then {
+                rescuedMarines = rescuedMarines + 1;
+            };
+        } forEach _listMarines;
+        publicVariable rescuedMarines;
+    };
 ";
 
 bmt_fnc_createIntelEntry = compileFinal "

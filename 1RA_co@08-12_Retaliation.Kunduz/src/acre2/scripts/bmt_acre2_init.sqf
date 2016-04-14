@@ -9,7 +9,7 @@
 //=======================================================================================================//
 
 // Wait until ACRE 2 is initialised.
-waitUntil{
+waitUntil {
     [] call acre_api_fnc_isInitialized;
 };
 

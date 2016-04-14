@@ -8,9 +8,6 @@
 // Changes: 1.0 (2015/11/26) First public version.                                                       //
 //=======================================================================================================//
 
-// Give TFAR time to initialise.
-sleep 3;
-
 // Configure TFAR. If player is alive then radios will be removed to be added later depending on the role
 // as defined in "bmt_tfar_configuracio.sqf". Spectator chat will be force if unit is not alive.
 
@@ -28,7 +25,7 @@ if (alive player) then {
         [] call bmt_fnc_tfar_addRadios;
     };
 
-    sleep 10;
+    sleep 3;
     // Configure active channels.
     if (bmt_param_tfar_configureChannels == 1) then {
         [] call bmt_fnc_tfar_configureChannels;

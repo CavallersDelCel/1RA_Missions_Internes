@@ -61,6 +61,7 @@ private["_uavBattery", "_cableTie", "_mapTools", "_microDAGR", "_earPlugs", "_ve
 private["_atropine", "_epinephrine", "_morphine", "_bandage", "_elasticBandage", "_quickClot", "_packingBandage"];
 private["_bloodBag250", "_bloodBag500", "_bloodBag1000", "_plasmaBag250", "_plasmaBag500", "_plasmaBag1000", "_salineBag250", "_salineBag500", "_salineBag1000"];
 private["_personalAidKid", "_surgicalKit", "_tourniquet"];
+private["_flashlight"];
 
 //=======================================================================================================//
 // Get unit role and if it is an infantry unit.                                                          //
@@ -264,6 +265,7 @@ if (bmt_mod_ace3) then {
     _microDAGR = "ACE_microDAGR";
     _earPlugs = "ACE_EarPlugs";
     _vectorIV = "ACE_Vector";
+    _flashlight = selectRandom ["ACE_Flashlight_MX991", "ACE_Flashlight_KSF1", "ACE_Flashlight_XL50"];
 
     // Objects for designated marksman/sniper/observer.
     _atragmx = "ACE_ATragMX";
@@ -344,6 +346,9 @@ if (_isInfantry) then {
         (uniformContainer _unit) addItemCargoGlobal [_earPlugs,1];
         (uniformContainer _unit) addItemCargoGlobal [_morphine,1];
         (uniformContainer _unit) addItemCargoGlobal [_epinephrine,1];
+        if (bmt_var_equipFlashlight) then {
+            (uniformContainer _unit) addItemCargoGlobal [_flashlight, 1];
+        };
     };
     (uniformContainer _unit) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",2];
 
@@ -1494,6 +1499,9 @@ switch (_unitRole) do
             (uniformContainer _unit) addItemCargoGlobal [_earPlugs,1];
             (uniformContainer _unit) addItemCargoGlobal [_morphine,1];
             (uniformContainer _unit) addItemCargoGlobal [_epinephrine,1];
+            if (bmt_var_equipFlashlight) then {
+                (uniformContainer _unit) addItemCargoGlobal [_flashlight, 1];
+            };
         };
         (uniformContainer _unit) addItemCargoGlobal [_pweaponSilencerSN,1];
         (uniformContainer _unit) addMagazineCargoGlobal ["rhsusf_5Rnd_300winmag_xm2010",2];
@@ -1558,6 +1566,9 @@ switch (_unitRole) do
             (uniformContainer _unit) addItemCargoGlobal [_earPlugs,1];
             (uniformContainer _unit) addItemCargoGlobal [_morphine,1];
             (uniformContainer _unit) addItemCargoGlobal [_epinephrine,1];
+            if (bmt_var_equipFlashlight) then {
+                (uniformContainer _unit) addItemCargoGlobal [_flashlight, 1];
+            };
         };
         (uniformContainer _unit) addItemCargoGlobal [_pweaponSilencer,1];
         (uniformContainer _unit) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",2];
@@ -1630,6 +1641,9 @@ switch (_unitRole) do
             (uniformContainer _unit) addItemCargoGlobal [_morphine,1];
             (uniformContainer _unit) addItemCargoGlobal [_epinephrine,1];
             (uniformContainer _unit) addItemCargoGlobal [_bandage,2];
+            if (bmt_var_equipFlashlight) then {
+                (uniformContainer _unit) addItemCargoGlobal [_flashlight, 1];
+            };
         };
         (uniformContainer _unit) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",4];
         (uniformContainer _unit) addMagazineCargoGlobal ["20Rnd_556x45_UW_mag",3];
@@ -1692,6 +1706,9 @@ switch (_unitRole) do
             (uniformContainer _unit) addItemCargoGlobal [_morphine,1];
             (uniformContainer _unit) addItemCargoGlobal [_epinephrine,1];
             (uniformContainer _unit) addItemCargoGlobal [_bandage,2];
+            if (bmt_var_equipFlashlight) then {
+                (uniformContainer _unit) addItemCargoGlobal [_flashlight, 1];
+            };
         };
         (uniformContainer _unit) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",4];
         (uniformContainer _unit) addMagazineCargoGlobal ["20Rnd_556x45_UW_mag",3];
@@ -1754,6 +1771,9 @@ switch (_unitRole) do
             (uniformContainer _unit) addItemCargoGlobal [_morphine,1];
             (uniformContainer _unit) addItemCargoGlobal [_epinephrine,1];
             (uniformContainer _unit) addItemCargoGlobal [_bandage,2];
+            if (bmt_var_equipFlashlight) then {
+                (uniformContainer _unit) addItemCargoGlobal [_flashlight, 1];
+            };
         };
         (uniformContainer _unit) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",4];
         (uniformContainer _unit) addMagazineCargoGlobal ["20Rnd_556x45_UW_mag",3];
@@ -1807,6 +1827,9 @@ switch (_unitRole) do
             (uniformContainer _unit) addItemCargoGlobal [_morphine,1];
             (uniformContainer _unit) addItemCargoGlobal [_epinephrine,1];
             (uniformContainer _unit) addItemCargoGlobal [_bandage,2];
+            if (bmt_var_equipFlashlight) then {
+                (uniformContainer _unit) addItemCargoGlobal [_flashlight, 1];
+            };
         };
         (uniformContainer _unit) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",4];
         (uniformContainer _unit) addMagazineCargoGlobal ["20Rnd_556x45_UW_mag",3];
@@ -1858,6 +1881,9 @@ switch (_unitRole) do
             (uniformContainer _unit) addItemCargoGlobal [_earPlugs,1];
             (uniformContainer _unit) addItemCargoGlobal [_morphine,1];
             (uniformContainer _unit) addItemCargoGlobal [_epinephrine,1];
+            if (bmt_var_equipFlashlight) then {
+                (uniformContainer _unit) addItemCargoGlobal [_flashlight, 1];
+            };
         };
         (uniformContainer _unit) addItemCargoGlobal [_pweaponSilencer,1];
         (uniformContainer _unit) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",2];
@@ -1888,6 +1914,9 @@ switch (_unitRole) do
             (uniformContainer _unit) addItemCargoGlobal [_earPlugs,1];
             (uniformContainer _unit) addItemCargoGlobal [_morphine,1];
             (uniformContainer _unit) addItemCargoGlobal [_epinephrine,1];
+            if (bmt_var_equipFlashlight) then {
+                (uniformContainer _unit) addItemCargoGlobal [_flashlight, 1];
+            };
         };
         (uniformContainer _unit) addItemCargoGlobal [_pweaponSilencer,1];
         (uniformContainer _unit) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",2];

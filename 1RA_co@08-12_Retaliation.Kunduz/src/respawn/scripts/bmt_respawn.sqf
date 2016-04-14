@@ -16,40 +16,42 @@ if (isNull _assassin) then {
     _assassin = _unit;
 };
 
-if ((_respawn == 0) or (_respawn == 1) and ({alive _x} count allPlayers <= 0)) exitWith {
-    remoteExec ["bmt_fnc_endMission", 0, true];
-};
+//if ((_respawn == 0) or (_respawn == 1) and ({alive _x} count allPlayers <= 0)) exitWith {
+//    [] remoteExecCall ["bmt_fnc_endMission", 0, true];
+//};
 
 if (alive _unit) then {
+
     // If there is respawn of type BIRD.
     if (_respawn == 1) then {
         // Hide seagull body.
        if (_unit isKindOf "seagull") then {
            if (bmt_mod_ace3 && (bmt_param_ace3_spectator ==  1)) then {
-              [true] call ace_spectator_fnc_stageSpectator;
+               _assassin = selectRandom (allUnits - allDead);
+               [_unit] call ace_spectator_fnc_stageSpectator;
            } else {
-               _unit remoteExecCall [0, true];
+               //_unit remoteExecCall [0, true];
            };
        };
 
         // If ACE 3 is loaded use the spectator mode of ACE3. Use the vanila one otherwise (End Game Spectator).
         if (bmt_mod_ace3 && (bmt_param_ace3_spectator ==  1)) then {
             if ( bmt_param_debugOutput == 1) then {
-                player sideChat format ["DEBUG (bmt_respawn_espectador.sqf): Using ACE3 spectator mode."];
+                player sideChat format ["DEBUG (bmt_respawn.sqf): Using ACE3 spectator mode."];
             };
 
             // Configure ACE3 spectator camera.
-            [0, _assassin] call ace_spectator_fnc_setCameraAttributes;
+            [2, _assassin] call ace_spectator_fnc_setCameraAttributes;
             [true] call ace_spectator_fnc_setSpectator;
         } else {
             if (bmt_param_debugOutput == 1) then {
-                player sideChat format ["DEBUG (bmt_respawn_espectador.sqf): Using vanila spectator mode."];
+                player sideChat format ["DEBUG (bmt_respawn.sqf): Using vanila spectator mode."];
             };
 
             // Put units into spectator mode depending on the radio system used.
             // Task Force Arrowhead Radio (TFAR)
             if (bmt_mod_tfar) then {
-                [_unit, true] call TFAR_fnc_forceSpectator;
+                [player, true] call TFAR_fnc_forceSpectator;
             };
 
             // Advanced Combat Radio Environment 2 (ACRE 2)
@@ -57,10 +59,11 @@ if (alive _unit) then {
                 [true] call acre_api_fnc_setSpectator;
             };
 
+            BIS_fnc_feedback_allowPP = false;  // Disable dying effects.
             // Start the End Game Spectator.
             // - All sides can be viewed.
             // - The AI cannot be observed.
-            ["Initialize", [_unit, [], false]] call BIS_fnc_EGSpectator;
+            ["Initialize", [player, [], false]] call BIS_fnc_EGSpectator;
         };
     } else {
         if (bmt_mod_ace3 && (bmt_param_ace3_spectator ==  1)) then {
@@ -70,7 +73,7 @@ if (alive _unit) then {
             // Exit spectator mode depending on which radio system is used.
             // Task Force Arrowhead Radio (TFAR)
             if (bmt_mod_tfar) then {
-                [_unit, false] call TFAR_fnc_forceSpectator;
+                [player, false] call TFAR_fnc_forceSpectator;
             };
 
             // Advanced Combat Radio Environment 2 (ACRE 2)
@@ -78,6 +81,7 @@ if (alive _unit) then {
                 [false] call acre_api_fnc_setSpectator;
             };
 
+            BIS_fnc_feedback_allowPP = true;  // Enable dying effects.
             // Exit the End Game Spectator mode.
             ["Terminate"] call BIS_fnc_EGSpectator;
         };
@@ -108,7 +112,7 @@ if (alive _unit) then {
         // Put units into spectator mode depending on the radio system used.
         // Task Force Arrowhead Radio (TFAR)
         if (bmt_mod_tfar) then {
-            [_unit, true] call TFAR_fnc_forceSpectator;
+            [player, true] call TFAR_fnc_forceSpectator;
         };
 
         // Advanced Combat Radio Environment 2 (ACRE 2)
@@ -116,6 +120,7 @@ if (alive _unit) then {
             [true] call acre_api_fnc_setSpectator;
         };
 
+        BIS_fnc_feedback_allowPP = false;  // Disable dying effects.
         // Start the End Game Spectator.
         // - All sides can be viewed.
         // - The AI cannot be observed.

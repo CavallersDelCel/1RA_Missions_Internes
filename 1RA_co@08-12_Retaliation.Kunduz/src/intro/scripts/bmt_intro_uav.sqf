@@ -9,7 +9,7 @@
 
 params ["_markerName", "_text", "_uavMovement", "_markers"];
 
-waitUntil{!(isNil "bmt_preload_completat")};
+waitUntil{!(isNil "bmt_preload_completed")};
 
 // Disable simulation for all units during the UAV feed.
 {

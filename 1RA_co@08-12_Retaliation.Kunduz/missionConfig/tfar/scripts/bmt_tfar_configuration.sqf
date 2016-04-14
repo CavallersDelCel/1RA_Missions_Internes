@@ -8,6 +8,8 @@
 // Changes: 1.0 (2015/11/26) First public version.                                                       //
 //=======================================================================================================//
 
+waitUntil {!isNil "TF_defaultWestPersonalRadio"};
+
 // Disables automatic distribution of long range radios to squad and team leaders.
 tf_no_auto_long_range_radio = true;
 

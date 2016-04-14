@@ -169,7 +169,7 @@ if (_recognised) then {
     };
 
     if (bmt_param_debugOutput == 1) then {
-        player sideChat format ["DEBUG (intro.sqf): Using introductory text for faction %1.", _unitFaction];
+        player sideChat format ["DEBUG (intro.sqf): Using introductory text (%1) for faction %2.", _introType, _unitFaction];
     };
 } else {
     player globalchat format ["ERROR (bmt_intro.sqf): Faction %1 is not defined.", _unitFaction];
