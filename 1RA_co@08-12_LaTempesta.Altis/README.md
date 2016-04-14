@@ -1,32 +1,38 @@
-# Mission name
+# La Tempesta
 
 <Banner URL>
 
 Mission generated using the "Arma 3 Basic Mission Template" (A3-BMT).
 
-**Mission name**: Mission name.
+**Mission name**: La Tempesta.
 
-**Version**: vx.x (date).
+**Version**: v1.0 (2016/04/14).
 
-**Author**: Author name.
+**Author**: CC_Kronus.
 
-**Contributors**: Names of the contributers.
+**Contributors**: TheMagnetar.
 
-**Game type**: Game type (Coop, TvT, PvP, ZvZ, ...).
+**Game type**: Coop.
 
-**Minimum number of players**: Minimum number of players suggested by the author.
+**Minimum number of players**: 8.
 
-**Minimum number of players**: Maximum number of players suggested by the author.
+**Minimum number of players**: 12.
 
-**Respawn**: Respawn type (None, bird, base, ...).
+**Respawn**: Base with spectator.
 
-**Dificulty**: Mission Dificulty.
+**Dificulty**: Normal.
 
 **Mission summary**: Brief description of the mission.
 
 **Arma 3 Basic Mission Template (A3-BMT)**: v1.0 (https://github.com/CavallersDelCel/1RA_Plantilla_Missio) by TheMagnetar.
 
-**Necessary or recommended addons**: List of necessary and/or recommended addons.
+**Necessary or recommended addons**: This mission works with the following set of addons:
+
+* Advanced Combat Environment 3 (ACE3) v3.5.1.
+* Advanced Combat Radio Environment 2 (ACRE2) v2.1.0.
+* Community Base Addons (CBA) v2.3.1.
+* RHS United States Armed Forces (RHS USAF) v0.4.0.1. **Required**.
+* Task Force Arrowhead Radio (TFAR) v0.9.7.3.
 
 ### Detailed mission description
 

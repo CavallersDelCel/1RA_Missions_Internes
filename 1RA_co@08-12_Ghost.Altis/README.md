@@ -78,7 +78,7 @@ The presence of civilians in the area of operations make CAS support non-viable.
 
 * Strong presence of civilian population.
 
-##### MISSIÓ i EXECUCIÓ
+##### MISSION AND EXECUTION
 
 Two infatry teams and one sniper team will be deployed in the north-west of Sofia, Altis, with the objective of **eliminating the colonel Ohmid Raheem**. He coordinates the military operations in the north of Altis from the coast.
 
