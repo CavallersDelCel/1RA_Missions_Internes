@@ -1,0 +1,3 @@
+[submodule "scripts/configEquipment/Perfils1RA"]
+	path = scripts/configEquipment/Perfils1RA
+	url = https://github.com/CavallersDelCel/Perfils1RA.git
