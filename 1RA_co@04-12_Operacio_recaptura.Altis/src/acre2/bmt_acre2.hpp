@@ -21,6 +21,7 @@
         class acre2_addRadios{};
         class acre2_configureChannels{};
         class acre2_configureLanguages{};
+        class acre2_configurePresets{};
         class acre2_configureSpectatorChat{};
         class acre2_removeRadios{};
     };
@@ -52,7 +53,7 @@
         title = "Distribute radios";
         values[] = {0, 1};
         texts[] = {"No", "Yes"};
-        default = 1;
+        default = BMT_ACRE2_DISTRIBUTE_RADIOS;
     };
 
     //===================================================================================================//
@@ -66,7 +67,7 @@
         title = "Configure radio channels";
         values[] = {0, 1};
         texts[] = {"No", "Yes"};
-        default = 1;
+        default = BMT_ACRE2_CONFIGURE_CHANNELS;
     };
 #endif
 

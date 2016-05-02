@@ -9,12 +9,12 @@
 // Changes: 1.0 (2015/11/26) First public version.                                                       //
 //=======================================================================================================//
 
-if (bmt_var_requires_TFAR != 2) then {
-    if (bmt_mod_tfar and (bmt_var_requires_TFAR == 0)) then {
+if (bmt_var_requires_tfar != 2) then {
+    if (bmt_mod_tfar and (bmt_var_requires_tfar == 0)) then {
         player sideChat format ["ERROR (bmt_core_checkConfiguration_tfar.sqf): TFAR is loaded but this mission does not support it."];
     };
 
-    if (!bmt_mod_tfar and (bmt_var_requires_TFAR == 1)) then {
+    if (!bmt_mod_tfar and (bmt_var_requires_tfar == 1)) then {
         player sideChat format ["ERROR (bmt_core_checkConfiguration_tfar.sqf): TFAR is necessary for this mission but it is not loaded."];
     };
 };

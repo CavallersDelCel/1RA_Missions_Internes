@@ -1,5 +1,5 @@
 //=======================================================================================================//
-// File: bmt_missionConfig.hpp                                                                            //
+// File: bmt_missionConfig.hpp                                                                           //
 // Author: TheMagnetar                                                                                   //
 // Version: 1.0                                                                                          //
 // File creation: 2015/11/05                                                                             //
@@ -35,7 +35,7 @@ overviewText = "Torna a captur un especialista en explosius enemic.";          /
 //=======================================================================================================//
 // Respawn Settings: https://community.bistudio.com/wiki/Arma_3_Respawn                                  //
 //=======================================================================================================//
-respawn             = "BIRD";  // Respawn type BIRD, end of game for the player.
+respawn             = "BASE";  // Respawn type BASE.
 respawnDelay        = 10;      // Respawn delay in seconds.
 respawnVehicleDelay = 30;      // Vehicle respawn delay in seconds.
 RespawnDialog       = 0;       // Show (1) or hide (0) the scoreboard and respawn countdown timer for a
@@ -49,7 +49,7 @@ joinUnassigned      = 1;       // Auto assign player (0) a free playable slot. L
 disabledAI          = 1;       // Hide playable units without an assigned player.
 aiKills             = 0;       // Show (1) or hide (0) AI score.
 
-respawnTemplates[]          = {"bmt_respawn"};
+respawnTemplates[]          = {"Tickets", "bmt_respawn"};
 //respawnTemplatesWest[]      = {"bmt_respawn"};
 //respawnTemplatesEast[]      = {"bmt_respawn"};
 //respawnTemplatesCiv[]       = {"bmt_respawn"};
@@ -57,8 +57,8 @@ respawnTemplates[]          = {"bmt_respawn"};
 
 class CfgRespawnTemplates {
     class bmt_respawn {
-        onPlayerKilled = "src\respawn\scripts\bmt_respawn.sqf";
-        onPlayerRespawn = "src\respawn\scripts\bmt_respawn.sqf";
+        onPlayerKilled = "src\respawn\scripts\bmt_respawn_onPlayerKilled.sqf";
+        onPlayerRespawn = "src\respawn\scripts\bmt_respawn_onPlayerRespawn.sqf";
     };
 };
 

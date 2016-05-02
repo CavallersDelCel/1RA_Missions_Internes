@@ -13,7 +13,7 @@ private ["_credits", "_radio", "_adminLog", "_execution", "_mission", "_intel", 
 //=======================================================================================================//
 // NOTES: CREDITS.                                                                                       //
 //=======================================================================================================//
-_credits = player createDiaryRecord ["diary", ["Credits","
+_credits = player createDiaryRecord ["diary", ["Crèdits","
 Mission created by <font color='#00FFFF'>Viper</font> for the community <font color='#00FFFF'>Cavallers del Cel</font>.
 <br/><br/>
 With the collaboration of Magnetar (A3-BMT template).
@@ -22,47 +22,57 @@ With the collaboration of Magnetar (A3-BMT template).
 //=======================================================================================================//
 // NOTES: RADIO.                                                                                         //
 //=======================================================================================================//
-_radio = player createDiaryRecord ["diary", ["Radio frequencies","
-<font color='#FF0000' size='18'>Command</font>: 41 kHz.
+_radio = player createDiaryRecord ["diary", ["Freqüències de ràdio","
+<font color='#FF0000' size='18'>Comandament</font>: 30 kHz.
 <br/><br/>
-<font color='#FF0000' size='18'>CAS</font>: 51 kHz.
+<font color='#FF0000' size='18'>Infanteria</font>: 40 kHz.
 <br/><br/>
-<font color='#FF0000' size='18'>Artillery</font>: 61 kHz.
+<font color='#FF0000' size='18'>Blindats</font>: 50 kHz.
 <br/><br/>
-<font color='#FF0000' size='18'>Alpha</font>
-<br/>
-- Squad ""Alpha"": 200 kHz.
-<br/>
-- Fireteam ""Alpha 1-1"": 201 kHz.
-<br/>
-- Fireteam ""Alpha 1-2"": 202 kHz.
-<br/>
-- Fireteam ""Alpha 1-3"": 203 kHz.
+<font color='#FF0000' size='18'>Aeronaus</font>: 60 kHz.
 <br/><br/>
-<font color='#FF0000' size='18'>Bravo</font>
+<font color='#FF0000' size='18'>Artilleria</font>: 70 kHz.
+<br/><br/>
+<font color='#FF0000' size='18'>Alfa</font>
 <br/>
-- Squad ""Bravo"": 210 kHz.
+- Esquadra ""Alfa 1"": 200 kHz.
 <br/>
-- Fireteam ""Bravo 1-1"": 211 kHz.
+- Equip de foc ""Alfa 1-1"" (Assalt): 201 kHz.
 <br/>
-- Fireteam ""Bravo 1-2"": 212 kHz.
+- Equip de foc ""Alfa 1-2"" (Suport): 202 kHz.
 <br/>
-- Fireteam ""Bravo 1-3"": 213 kHz.
+- Equip de foc ""Alfa 1-3"" (Seguretat): 203 kHz.
+<br/><br/>
+- Esquadra ""Alfa 2"": 210 kHz.
+<br/>
+- Equip de foc ""Alfa 2-1"" (Assalt): 211 kHz.
+<br/>
+- Equip de foc ""Alfa 2-2"" (Suport): 212 kHz.
+<br/>
+- Equip de foc ""Alfa 2-3"" (Seguretat): 213 kHz.
+<br/><br/>
+- Esquadra ""Alfa 3"": 220 kHz.
+<br/>
+- Equip de foc ""Alfa 3-1"" (Assalt): 221 kHz.
+<br/>
+- Equip de foc ""Alfa 3-2"" (Suport): 222 kHz.
+<br/>
+- Equip de foc ""Alfa 3-3"" (Seguretat): 223 kHz.
 "]];
 
 //=======================================================================================================//
 // NOTES: ADMINISTRATION/LOGISTICS.                                                                       //
 //=======================================================================================================//
-_adminLog = player createDiaryRecord ["diary", ["Administration/Logistics","
+_adminLog = player createDiaryRecord ["diary", ["Administració/Logística","
 <font color='#FF0000' size='18'>CAS</font>
 <br/>
 Teniu suport aeri proporcionat per un UH-1Y emplaçat a la base d'operacions, però nomes s'ha de fer servir en cas extrem, ja que heu de capturar l'objectiu amb vida i està envoltat de cases civils.
 <br/>
 <font color='#FF0000' size='18'>Transport</font>
 <br/>
-També podreu demanar transport aeri (només lider si te el MicroDAGR) si el transport planificat falla.
+També podreu demanar transport aèri (només lider si te el MicroDAGR) si el transport planificat falla.
 <br/><br/>
-<font color='#FF0000' size='18'>Supply</font>
+<font color='#FF0000' size='18'>Abastiment</font>
 <br/>
 Virtual Arsenal limitat a la base.
 "]];
@@ -70,16 +80,16 @@ Virtual Arsenal limitat a la base.
 //=======================================================================================================//
 // NOTES: EXECUTION.                                                                                     //
 //=======================================================================================================//
-_execution = player createDiaryRecord ["diary", ["Execution","
-<font color='#FF0000' size='18'>Main tasks</font>
+_execution = player createDiaryRecord ["diary", ["Execució","
+<font color='#FF0000' size='18'>Tasques principals</font>
 <br/>
-- <font color='#00FFFF'>Main task 1</font>: Capturar amb vida el HVT, nom en clau Boomer.
+- <font color='#00FFFF'>Tasca principal 1</font>: Capturar amb vida el HVT, nom en clau Boomer.
 <br/><br/>
-<font color='#FF0000' size='18'>Secondary tasks</font>
+<font color='#FF0000' size='18'>Tasques secundàries</font>
 <br/>
-- <font color='#00FFFF'>Secondary task 1</font>: Recopilar informació enemiga.
+- <font color='#00FFFF'>Tasca secundà 1</font>: Recopilar informació enemiga.
 <br/><br/>
-<font color='#FF0000' size='18'>Execution</font>
+<font color='#FF0000' size='18'>Execució</font>
 <br/>
 A les 0150 pujareu als helicòpters de transport UH-1Y, per ser inserits a traves del mar. Aterraran en un clar a pocs metres a l'Oest del recinte enemic. Per tant serà una inserció en calent.
 Alternativament podeu demanar un transport aeri per un equip de reconeixement  abans de l'hora de sortida, per fer una inserció segura i avançar al PO2 i proporcionar informació avançada i suport de foc durant el combat si cal.
@@ -104,25 +114,25 @@ La missió incorpora un script que tanca algunes portes amb clau i permet també
 //=======================================================================================================//
 // NOTES: MISSION.                                                                                       //
 //=======================================================================================================//
-_mission = player createDiaryRecord ["diary", ["Mission","
+_mission = player createDiaryRecord ["diary", ["Missió","
 L'enemic ha tingut una activitat intensa col·locant mines i trampes al front. Estan intentant obstaculitzar l'avançament de les nostres tropes. Intel·ligència creu que s'ha detectat una sofisticació en els dispositius i la forma de col·locar-los, això amb informes de camp, apunten a un responsable. Es creu que un enginyer aliat, recentment reclutat per l'enemic, es el responsable. Es per tant un objectiu molt important, ja que no només ajuda a l'enemic, si no que te informació nostre. La vostre missió serà la de capturar-ho amb vida, nom en clau de l'objectiu, Boomer.
 "]];
 
 //=======================================================================================================//
 // NOTES: INTEL.                                                                                         //
 //=======================================================================================================//
-_intel = player createDiaryRecord ["diary", ["Intel","
+_intel = player createDiaryRecord ["diary", ["Intel·ligència","
 Es preveu posibles atacs enemics a la zona d'operacions.
 <br/><br/>
-<font color='#FF0000' size='18'>Enemy forces</font>
+<font color='#FF0000' size='18'>Forces enemigues</font>
 <br/>
 - Patrulla de infanteria motoritzada
 <br/>
 - S'estima que els rebels tenen pocs vehicles blindats pesats.
 <br/>
-- No es preveu antiaéria.
+- No es preveu antiaèria.
 <br/><br/>
-<font color='#FF0000' size='18'>Allied forces</font>
+<font color='#FF0000' size='18'>Forces aliades</font>
 <br/>
 - 2on escamot del 1er Regiment Aerotransportat.
 "]];

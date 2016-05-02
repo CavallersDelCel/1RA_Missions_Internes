@@ -25,7 +25,7 @@
 //                  rfl                     Rifleman                                                     //
 //                  rflat                   Rifleman with AT4                                            //
 //                  gr                      Grenadier                                                    //
-//                  ar                      Automàtic Rifleman                                           //
+//                  ar                      Automatic Rifleman                                           //
 //                  dm                      Designated Marksman                                          //
 //                  mg                      Machine Gunner                                               //
 //                  amg                     Assitant Machine Gunner                                      //
@@ -134,7 +134,7 @@ _pweaponScopeSN = "rhsusf_acc_LEUPOLDMK4_2";
 _pweaponBipodDM = "rhsusf_acc_harris_bipod";
 _pweaponBipodSN = "rhsusf_acc_harris_bipod";
 
-// Llençadores AT/AA.
+// AT/AA Launchers
 _pweaponLauncherRF = "rhs_weap_M136_hedp";
 _pweaponLauncherAT = "rhs_weap_fgm148";
 _pweaponLauncherAA = "rhs_weap_fim92";
@@ -292,7 +292,7 @@ switch (_unitRole) do
         // Items in the backpack.
         if (bmt_mod_ace3 or bmt_mod_agm) then {
             (unitBackpack _unit) addItemCargoGlobal [_bandage,2];
-            if (bmt_mod_ace3 and bmt_param_ace3_medicalSystem == 2) then {
+            if (bmt_mod_ace3 and (bmt_param_ace3_medicalSystem == 2)) then {
                 (unitBackpack _unit) addItemCargoGlobal [_elasticBandage,3];
                 (unitBackpack _unit) addItemCargoGlobal [_quickClot,3];
                 (unitBackpack _unit) addItemCargoGlobal [_packingBandage,3];
@@ -345,7 +345,7 @@ switch (_unitRole) do
         // Items in the backpack.
         if (bmt_mod_ace3 or bmt_mod_agm) then {
             (unitBackpack _unit) addItemCargoGlobal [_bandage,2];
-            if (bmt_mod_ace3 and bmt_param_ace3_medicalSystem == 2) then {
+            if (bmt_mod_ace3 and (bmt_param_ace3_medicalSystem == 2)) then {
                 (unitBackpack _unit) addItemCargoGlobal [_elasticBandage,3];
                 (unitBackpack _unit) addItemCargoGlobal [_quickClot,3];
                 (unitBackpack _unit) addItemCargoGlobal [_packingBandage,3];
@@ -395,7 +395,7 @@ switch (_unitRole) do
         // Items in the backpack.
         if (bmt_mod_ace3 or bmt_mod_agm) then {
             (unitBackpack _unit) addItemCargoGlobal [_bandage,2];
-            if (bmt_mod_ace3 and bmt_param_ace3_medicalSystem == 2) then {
+            if (bmt_mod_ace3 and (bmt_param_ace3_medicalSystem == 2)) then {
                 (unitBackpack _unit) addItemCargoGlobal [_elasticBandage,3];
                 (unitBackpack _unit) addItemCargoGlobal [_quickClot,3];
                 (unitBackpack _unit) addItemCargoGlobal [_packingBandage,3];
@@ -442,7 +442,7 @@ switch (_unitRole) do
         // Items in the backpack.
         if (bmt_mod_ace3 or bmt_mod_agm) then {
             (unitBackpack _unit) addItemCargoGlobal [_bandage,2];
-            if (bmt_mod_ace3 and bmt_param_ace3_medicalSystem == 2) then {
+            if (bmt_mod_ace3 and (bmt_param_ace3_medicalSystem == 2)) then {
                 (unitBackpack _unit) addItemCargoGlobal [_elasticBandage,3];
                 (unitBackpack _unit) addItemCargoGlobal [_quickClot,3];
                 (unitBackpack _unit) addItemCargoGlobal [_packingBandage,3];
@@ -489,7 +489,7 @@ switch (_unitRole) do
         if (bmt_mod_ace3 or bmt_mod_agm) then {
             (unitBackpack _unit) addItemCargoGlobal [_morphine,8];
             (unitBackpack _unit) addItemCargoGlobal [_epinephrine,8];
-            if (bmt_mod_ace3 and bmt_param_ace3_medicalSystem == 2) then {
+            if (bmt_mod_ace3 and (bmt_param_ace3_medicalSystem == 2)) then {
                 (unitBackpack _unit) addItemCargoGlobal [_bandage,10];
                 (unitBackpack _unit) addItemCargoGlobal [_elasticBandage,10];
                 (unitBackpack _unit) addItemCargoGlobal [_quickClot,10];
@@ -501,7 +501,7 @@ switch (_unitRole) do
                 (unitBackpack _unit) addItemCargoGlobal [_salineBag500,6];
             };
 
-            if( bmt_mod_agm or (bmt_mod_ace3 and bmt_param_ace3_medicalSystem == 0)) then {
+            if( bmt_mod_agm or (bmt_mod_ace3 and (bmt_param_ace3_medicalSystem == 1))) then {
                 (unitBackpack _unit) addItemCargoGlobal [_bandage,20];
                 (unitBackpack _unit) addItemCargoGlobal [_bloodBag500,2];
             };
@@ -530,7 +530,7 @@ switch (_unitRole) do
         if (bmt_mod_ace3 or bmt_mod_agm) then {
             (vestContainer _unit) addItemCargoGlobal [_bandage,2];
             (vestContainer _unit) addItemCargoGlobal [_mapTools,1];
-					if (bmt_mod_ace3) then {
+            if (bmt_mod_ace3) then {
                 (vestContainer _unit) addItemCargoGlobal [_microDAGR,1];
             };
         };
@@ -543,7 +543,7 @@ switch (_unitRole) do
         // Items in the backpack.
         if (bmt_mod_ace3 or bmt_mod_agm) then {
             (unitBackpack _unit) addItemCargoGlobal [_bandage,2];
-            if (bmt_mod_ace3 and bmt_param_ace3_medicalSystem == 2) then {
+            if (bmt_mod_ace3 and (bmt_param_ace3_medicalSystem == 2)) then {
                 (unitBackpack _unit) addItemCargoGlobal [_elasticBandage,3];
                 (unitBackpack _unit) addItemCargoGlobal [_quickClot,3];
                 (unitBackpack _unit) addItemCargoGlobal [_packingBandage,3];
@@ -593,7 +593,7 @@ switch (_unitRole) do
         // Items in the backpack.
         if (bmt_mod_ace3 or bmt_mod_agm) then {
             (unitBackpack _unit) addItemCargoGlobal [_bandage,2];
-            if (bmt_mod_ace3 and bmt_param_ace3_medicalSystem == 2) then {
+            if (bmt_mod_ace3 and (bmt_param_ace3_medicalSystem == 2)) then {
                 (unitBackpack _unit) addItemCargoGlobal [_elasticBandage,3];
                 (unitBackpack _unit) addItemCargoGlobal [_quickClot,3];
                 (unitBackpack _unit) addItemCargoGlobal [_packingBandage,3];
@@ -637,7 +637,7 @@ switch (_unitRole) do
         // Items in the backpack.
         if (bmt_mod_ace3 or bmt_mod_agm) then {
             (unitBackpack _unit) addItemCargoGlobal [_bandage,2];
-            if (bmt_mod_ace3 and bmt_param_ace3_medicalSystem == 2) then {
+            if (bmt_mod_ace3 and (bmt_param_ace3_medicalSystem == 2)) then {
                 (unitBackpack _unit) addItemCargoGlobal [_elasticBandage,3];
                 (unitBackpack _unit) addItemCargoGlobal [_quickClot,3];
                 (unitBackpack _unit) addItemCargoGlobal [_packingBandage,3];
@@ -678,7 +678,7 @@ switch (_unitRole) do
         // Items in the backpack.
         if (bmt_mod_ace3 or bmt_mod_agm) then {
             (unitBackpack _unit) addItemCargoGlobal [_bandage,2];
-            if (bmt_mod_ace3 and bmt_param_ace3_medicalSystem == 2) then {
+            if (bmt_mod_ace3 and (bmt_param_ace3_medicalSystem == 2)) then {
                 (unitBackpack _unit) addItemCargoGlobal [_elasticBandage,3];
                 (unitBackpack _unit) addItemCargoGlobal [_quickClot,3];
                 (unitBackpack _unit) addItemCargoGlobal [_packingBandage,3];
@@ -725,7 +725,7 @@ switch (_unitRole) do
         // Items in the backpack.
         if (bmt_mod_ace3 or bmt_mod_agm) then {
             (unitBackpack _unit) addItemCargoGlobal [_bandage,2];
-            if (bmt_mod_ace3 and bmt_param_ace3_medicalSystem == 2) then {
+            if (bmt_mod_ace3 and (bmt_param_ace3_medicalSystem == 2)) then {
                 (unitBackpack _unit) addItemCargoGlobal [_elasticBandage,3];
                 (unitBackpack _unit) addItemCargoGlobal [_quickClot,3];
                 (unitBackpack _unit) addItemCargoGlobal [_packingBandage,3];
@@ -766,7 +766,7 @@ switch (_unitRole) do
         // Items in the backpack.
         if (bmt_mod_ace3 or bmt_mod_agm) then {
             (unitBackpack _unit) addItemCargoGlobal [_bandage,2];
-            if (bmt_mod_ace3 and bmt_param_ace3_medicalSystem == 2) then {
+            if (bmt_mod_ace3 and (bmt_param_ace3_medicalSystem == 2)) then {
                 (unitBackpack _unit) addItemCargoGlobal [_elasticBandage,3];
                 (unitBackpack _unit) addItemCargoGlobal [_quickClot,3];
                 (unitBackpack _unit) addItemCargoGlobal [_packingBandage,3];
@@ -807,7 +807,7 @@ switch (_unitRole) do
         // Items in the backpack.
         if (bmt_mod_ace3 or bmt_mod_agm) then {
             (unitBackpack _unit) addItemCargoGlobal [_bandage,2];
-            if (bmt_mod_ace3 and bmt_param_ace3_medicalSystem == 2) then {
+            if (bmt_mod_ace3 and (bmt_param_ace3_medicalSystem == 2)) then {
                 (unitBackpack _unit) addItemCargoGlobal [_elasticBandage,3];
                 (unitBackpack _unit) addItemCargoGlobal [_quickClot,3];
                 (unitBackpack _unit) addItemCargoGlobal [_packingBandage,3];
@@ -847,7 +847,7 @@ switch (_unitRole) do
         // Items in the backpack.
         if (bmt_mod_ace3 or bmt_mod_agm) then {
             (unitBackpack _unit) addItemCargoGlobal [_bandage,2];
-            if (bmt_mod_ace3 and bmt_param_ace3_medicalSystem == 2) then {
+            if (bmt_mod_ace3 and (bmt_param_ace3_medicalSystem == 2)) then {
                 (unitBackpack _unit) addItemCargoGlobal [_elasticBandage,3];
                 (unitBackpack _unit) addItemCargoGlobal [_quickClot,3];
                 (unitBackpack _unit) addItemCargoGlobal [_packingBandage,3];
@@ -885,7 +885,7 @@ switch (_unitRole) do
         // Items in the backpack.
         if (bmt_mod_ace3 or bmt_mod_agm) then {
             (unitBackpack _unit) addItemCargoGlobal [_bandage,2];
-            if (bmt_mod_ace3 and bmt_param_ace3_medicalSystem == 2) then {
+            if (bmt_mod_ace3 and (bmt_param_ace3_medicalSystem == 2)) then {
                 (unitBackpack _unit) addItemCargoGlobal [_elasticBandage,3];
                 (unitBackpack _unit) addItemCargoGlobal [_quickClot,3];
                 (unitBackpack _unit) addItemCargoGlobal [_packingBandage,3];
@@ -928,7 +928,7 @@ switch (_unitRole) do
         // Items in the backpack.
         if (bmt_mod_ace3 or bmt_mod_agm) then {
             (unitBackpack _unit) addItemCargoGlobal [_bandage,2];
-            if (bmt_mod_ace3 and bmt_param_ace3_medicalSystem == 2) then {
+            if (bmt_mod_ace3 and (bmt_param_ace3_medicalSystem == 2)) then {
                 (unitBackpack _unit) addItemCargoGlobal [_elasticBandage,3];
                 (unitBackpack _unit) addItemCargoGlobal [_quickClot,3];
                 (unitBackpack _unit) addItemCargoGlobal [_packingBandage,3];
@@ -973,7 +973,7 @@ switch (_unitRole) do
         // Items in the backpack.
         if (bmt_mod_ace3 or bmt_mod_agm) then {
             (unitBackpack _unit) addItemCargoGlobal [_bandage,2];
-            if (bmt_mod_ace3 and bmt_param_ace3_medicalSystem == 2) then {
+            if (bmt_mod_ace3 and (bmt_param_ace3_medicalSystem == 2)) then {
                 (unitBackpack _unit) addItemCargoGlobal [_elasticBandage,3];
                 (unitBackpack _unit) addItemCargoGlobal [_quickClot,3];
                 (unitBackpack _unit) addItemCargoGlobal [_packingBandage,3];
@@ -1011,7 +1011,7 @@ switch (_unitRole) do
         // Items in the backpack.
         if (bmt_mod_ace3 or bmt_mod_agm) then {
             (unitBackpack _unit) addItemCargoGlobal [_bandage,2];
-            if (bmt_mod_ace3 and bmt_param_ace3_medicalSystem == 2) then {
+            if (bmt_mod_ace3 and (bmt_param_ace3_medicalSystem == 2)) then {
                 (unitBackpack _unit) addItemCargoGlobal [_elasticBandage,3];
                 (unitBackpack _unit) addItemCargoGlobal [_quickClot,3];
                 (unitBackpack _unit) addItemCargoGlobal [_packingBandage,3];
@@ -1056,7 +1056,7 @@ switch (_unitRole) do
         // Items in the backpack.
         if (bmt_mod_ace3 or bmt_mod_agm) then {
             (unitBackpack _unit) addItemCargoGlobal [_bandage,2];
-            if (bmt_mod_ace3 and bmt_param_ace3_medicalSystem == 2) then {
+            if (bmt_mod_ace3 and (bmt_param_ace3_medicalSystem == 2)) then {
                 (unitBackpack _unit) addItemCargoGlobal [_elasticBandage,3];
                 (unitBackpack _unit) addItemCargoGlobal [_quickClot,3];
                 (unitBackpack _unit) addItemCargoGlobal [_packingBandage,3];
@@ -1097,7 +1097,7 @@ switch (_unitRole) do
         // Items in the backpack.
         if (bmt_mod_ace3 or bmt_mod_agm) then {
             (unitBackpack _unit) addItemCargoGlobal [_bandage,2];
-            if (bmt_mod_ace3 and bmt_param_ace3_medicalSystem == 2) then {
+            if (bmt_mod_ace3 and (bmt_param_ace3_medicalSystem == 2)) then {
                 (unitBackpack _unit) addItemCargoGlobal [_elasticBandage,3];
                 (unitBackpack _unit) addItemCargoGlobal [_quickClot,3];
                 (unitBackpack _unit) addItemCargoGlobal [_packingBandage,3];
@@ -1122,9 +1122,7 @@ switch (_unitRole) do
         // Items in the uniform.
         (uniformContainer _unit) addItemCargoGlobal [_pweaponSilencer,1];
         if (bmt_mod_ace3 or bmt_mod_agm) then {
-            (vestContainer _unit) addItemCargoGlobal ["MineDetector",1];
-			(vestContainer _unit) addItemCargoGlobal [_defusalKit,1];
-			(vestContainer _unit) addItemCargoGlobal [_clacker,1];
+            (uniformContainer _unit) addItemCargoGlobal [_clacker,1];
         };
         (uniformContainer _unit) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",1];
 
@@ -1139,7 +1137,7 @@ switch (_unitRole) do
         // Items in the backpack.
         if (bmt_mod_ace3 or bmt_mod_agm) then {
             (unitBackpack _unit) addItemCargoGlobal [_bandage,2];
-            if (bmt_mod_ace3 and bmt_param_ace3_medicalSystem == 2) then {
+            if (bmt_mod_ace3 and (bmt_param_ace3_medicalSystem == 2)) then {
                 (unitBackpack _unit) addItemCargoGlobal [_elasticBandage,3];
                 (unitBackpack _unit) addItemCargoGlobal [_quickClot,3];
                 (unitBackpack _unit) addItemCargoGlobal [_packingBandage,3];
@@ -1191,7 +1189,7 @@ switch (_unitRole) do
         // Items in the backpack.
         if (bmt_mod_ace3 or bmt_mod_agm) then {
             (unitBackpack _unit) addItemCargoGlobal [_bandage,2];
-            if (bmt_mod_ace3 and bmt_param_ace3_medicalSystem == 2) then {
+            if (bmt_mod_ace3 and (bmt_param_ace3_medicalSystem == 2)) then {
                 (unitBackpack _unit) addItemCargoGlobal [_elasticBandage,3];
                 (unitBackpack _unit) addItemCargoGlobal [_quickClot,3];
                 (unitBackpack _unit) addItemCargoGlobal [_packingBandage,3];
@@ -1244,7 +1242,7 @@ switch (_unitRole) do
         // Items in the backpack.
         if (bmt_mod_ace3 or bmt_mod_agm) then {
             (unitBackpack _unit) addItemCargoGlobal [_bandage,2];
-            if (bmt_mod_ace3 and bmt_param_ace3_medicalSystem == 2) then {
+            if (bmt_mod_ace3 and (bmt_param_ace3_medicalSystem == 2)) then {
                 (unitBackpack _unit) addItemCargoGlobal [_elasticBandage,3];
                 (unitBackpack _unit) addItemCargoGlobal [_quickClot,3];
                 (unitBackpack _unit) addItemCargoGlobal [_packingBandage,3];
@@ -1292,7 +1290,7 @@ switch (_unitRole) do
         // Items in the backpack.
         if (bmt_mod_ace3 or bmt_mod_agm) then {
             (unitBackpack _unit) addItemCargoGlobal [_bandage,2];
-            if (bmt_mod_ace3 and bmt_param_ace3_medicalSystem == 2) then {
+            if (bmt_mod_ace3 and (bmt_param_ace3_medicalSystem == 2)) then {
                 (unitBackpack _unit) addItemCargoGlobal [_elasticBandage,3];
                 (unitBackpack _unit) addItemCargoGlobal [_quickClot,3];
                 (unitBackpack _unit) addItemCargoGlobal [_packingBandage,3];
@@ -1348,7 +1346,7 @@ switch (_unitRole) do
         if (bmt_mod_ace3 or bmt_mod_agm) then {
             (unitBackpack _unit) addItemCargoGlobal [_morphine,8];
             (unitBackpack _unit) addItemCargoGlobal [_epinephrine,8];
-            if (bmt_mod_ace3 and bmt_param_ace3_medicalSystem == 2) then {
+            if (bmt_mod_ace3 and (bmt_param_ace3_medicalSystem == 2)) then {
                 (unitBackpack _unit) addItemCargoGlobal [_bandage,8];
                 (unitBackpack _unit) addItemCargoGlobal [_elasticBandage,8];
                 (unitBackpack _unit) addItemCargoGlobal [_quickClot,8];
@@ -1359,7 +1357,7 @@ switch (_unitRole) do
                 (unitBackpack _unit) addItemCargoGlobal [_personalAidKid,2];
                 (unitBackpack _unit) addItemCargoGlobal [_salineBag500,3];
             };
-            if( bmt_mod_agm or (bmt_mod_ace3 and bmt_param_ace3_medicalSystem == 0)) then {
+            if( bmt_mod_agm or (bmt_mod_ace3 and (bmt_param_ace3_medicalSystem == 1))) then {
                 (unitBackpack _unit) addItemCargoGlobal [_bandage,15];
                 (unitBackpack _unit) addItemCargoGlobal [_bloodBag500,2];
             };
@@ -1406,7 +1404,7 @@ switch (_unitRole) do
         // Items in the backpack.
         if (bmt_mod_ace3 or bmt_mod_agm) then {
             (unitBackpack _unit) addItemCargoGlobal [_bandage,2];
-            if (bmt_mod_ace3 and bmt_param_ace3_medicalSystem == 2) then {
+            if (bmt_mod_ace3 and (bmt_param_ace3_medicalSystem == 2)) then {
                 (unitBackpack _unit) addItemCargoGlobal [_elasticBandage,3];
                 (unitBackpack _unit) addItemCargoGlobal [_quickClot,3];
                 (unitBackpack _unit) addItemCargoGlobal [_packingBandage,3];
@@ -1456,7 +1454,7 @@ switch (_unitRole) do
         // Items in the backpack.
         if (bmt_mod_ace3 or bmt_mod_agm) then {
             (unitBackpack _unit) addItemCargoGlobal [_bandage,2];
-            if (bmt_mod_ace3 and bmt_param_ace3_medicalSystem == 2) then {
+            if (bmt_mod_ace3 and (bmt_param_ace3_medicalSystem == 2)) then {
                 (unitBackpack _unit) addItemCargoGlobal [_elasticBandage,3];
                 (unitBackpack _unit) addItemCargoGlobal [_quickClot,3];
                 (unitBackpack _unit) addItemCargoGlobal [_packingBandage,3];
@@ -1484,7 +1482,7 @@ switch (_unitRole) do
         removeHeadgear _unit;
         removeGoggles _unit;
 
-        // Uniforme i paracaigudes.
+        // Uniform and parachute.
         _unit forceAddUniform _uniformHPLT;
         _unit addBackpack _parachuteHPLT;
         _unit addHeadgear _helmetHPLT;
@@ -1514,7 +1512,7 @@ switch (_unitRole) do
         removeHeadgear _unit;
         removeGoggles _unit;
 
-        // Uniforme i paracaigudes.
+        // Uniform and parachute.
         _unit forceAddUniform _uniformJPLT;
         _unit addBackpack _parachuteJPLT;
         _unit addHeadgear _helmetJPLT;
@@ -1559,7 +1557,7 @@ switch (_unitRole) do
             _unit addItemCargoGlobal [_epinephrine,10];
             _unit addItemCargoGlobal [_bandage,10];
             _unit addItemCargoGlobal [_bloodBag500,5];
-            if (bmt_mod_ace3 and bmt_param_ace3_medicalSystem == 2) then {
+            if (bmt_mod_ace3 and (bmt_param_ace3_medicalSystem == 2)) then {
                 _unit addItemCargoGlobal [_atropine,10];
                 _unit addItemCargoGlobal [_elasticBandage,10];
                 _unit addItemCargoGlobal [_quickClot,10];
@@ -1599,7 +1597,7 @@ switch (_unitRole) do
             _unit addItemCargoGlobal [_epinephrine,10];
             _unit addItemCargoGlobal [_bandage,10];
             _unit addItemCargoGlobal [_bloodBag500,5];
-            if (bmt_mod_ace3 and bmt_param_ace3_medicalSystem == 2) then {
+            if (bmt_mod_ace3 and (bmt_param_ace3_medicalSystem == 2)) then {
                 _unit addItemCargoGlobal [_atropine,10];
                 _unit addItemCargoGlobal [_elasticBandage,10];
                 _unit addItemCargoGlobal [_quickClot,10];
@@ -1631,7 +1629,7 @@ switch (_unitRole) do
             _unit addItemCargoGlobal [_epinephrine,10];
             _unit addItemCargoGlobal [_bandage,10];
             _unit addItemCargoGlobal [_bloodBag500,5];
-            if (bmt_mod_ace3 and bmt_param_ace3_medicalSystem == 2) then {
+            if (bmt_mod_ace3 and (bmt_param_ace3_medicalSystem == 2)) then {
                 _unit addItemCargoGlobal [_atropine,10];
                 _unit addItemCargoGlobal [_elasticBandage,10];
                 _unit addItemCargoGlobal [_quickClot,10];
@@ -1668,7 +1666,7 @@ switch (_unitRole) do
         // Items in the backpack.
         if (bmt_mod_ace3 or bmt_mod_agm) then {
             (unitBackpack _unit) addItemCargoGlobal [_bandage,2];
-            if (bmt_mod_ace3 and bmt_param_ace3_medicalSystem == 2) then {
+            if (bmt_mod_ace3 and (bmt_param_ace3_medicalSystem == 2)) then {
                 (unitBackpack _unit) addItemCargoGlobal [_elasticBandage,3];
                 (unitBackpack _unit) addItemCargoGlobal [_quickClot,3];
                 (unitBackpack _unit) addItemCargoGlobal [_packingBandage,3];

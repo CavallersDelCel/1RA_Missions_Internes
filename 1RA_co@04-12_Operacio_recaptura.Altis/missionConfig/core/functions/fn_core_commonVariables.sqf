@@ -13,24 +13,24 @@ private ["_length_groups", "_length_frequencies", "_length_frequenciesLR"];
 //=======================================================================================================//
 // Configuration of mods and scripts required by the mission. Each and every of the following variables  //
 // can have the following values:                                                                        //
-//   - 0 mod or script must be disabled.                                                                 //
-//   - 1 mod or script must be enabled.                                                                  //
+//   - 0: mod or script must be disabled.                                                                //
+//   - 1: mod or script must be enabled.                                                                 //
 //   - 2: It does not matter if the mod or script is enabled or disabled for the mission.                //
 //=======================================================================================================//
 
-bmt_var_requires_ACE3        = 2;  // Variable to control the use of Advanced Combat Environment 3.
-bmt_var_requires_ACE3_BasMed = 2;  // Variable to control the use of basic medical system of ACE 3.
-bmt_var_requires_ACE3_AdvMed = 2;  // Variable to control the use of advanced medical system of ACE 3.
-bmt_var_requires_ACE3_AdvBal = 2;  // Variable to control the use of advanced ballistics of ACE 3.
-bmt_var_requires_ACRE2       = 2;  // Variable to control the use of Advanced Combat Radio Environment 2.
+bmt_var_requires_ace3        = 2;  // Variable to control the use of Advanced Combat Environment 3.
+bmt_var_requires_ace3_BasMed = 2;  // Variable to control the use of basic medical system of ACE 3.
+bmt_var_requires_ace3_AdvMed = 2;  // Variable to control the use of advanced medical system of ACE 3.
+bmt_var_requires_ace3_AdvBal = 2;  // Variable to control the use of advanced ballistics of ACE 3.
+bmt_var_requires_acre2       = 2;  // Variable to control the use of Advanced Combat Radio Environment 2.
 bmt_var_requires_asrai3      = 2;  // Variable to control the use of ASR AI 3.
 bmt_var_requires_dac         = 2;  // Variable to control the use of Dynamic-AI-Creator (DAC).
 bmt_var_requires_perfils1RA  = 2;  // Variable to control the use of Virtual Arsenal Profiles.
 bmt_var_requires_t8units     = 2;  // Variable to control the use of T8 Units.
-bmt_var_requires_TFAR        = 2;  // Variable to control the use of Task Force Arrowhead Radio.
+bmt_var_requires_tfar        = 2;  // Variable to control the use of Task Force Arrowhead Radio.
 
 // List of units with a "Rifleman Radio" (fn_configEquipment.sqf).
-bmt_array_riflemanRadio = ["rfl", "rflat", "rfluav", "gr", "ar", "dm", "mg", "amg", "at", "aat", "aa", "aaa", "en", "exp", "div", "hplt", "jplt"];
+bmt_array_riflemanRadio = ["me", "rfl", "rflat", "rfluav", "gr", "ar", "aar", "dm", "mg", "amg", "at", "aat", "aa", "aaa", "en", "exp", "divme", "divexp", "div", "hplt", "jplt", "ccrw"];
 
 // List of units with a "Short Range Radio ""(fn_configEquipment.sqf).
 bmt_array_shortRangeRadio = ["pl", "psg", "rto", "fo", "sl", "tl", "sn", "sp", "divsl"];
@@ -65,7 +65,7 @@ bmt_array_groups = [
     ["Bravo", "Bravo 1", "Bravo 2", "Bravo 3"],
     ["Charlie", "Charlie 1", "Charlie 2", "Charlie  3"],
     ["Command"],
-    ["Suport"],
+    ["Support"],
     ["Artillery"]
 ];
 

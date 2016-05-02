@@ -9,6 +9,7 @@
 //              http://ace3mod.com/wiki/missionmaker/modules.html                                        //
 // Changes: 1.0 (2015/11/26) First public version.                                                       //
 //=======================================================================================================//
+
 if (!bmt_mod_ace3) exitWith {};
 if (!isServer) exitWith {};
 

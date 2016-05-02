@@ -24,7 +24,7 @@ Mission generated using the "Arma 3 Basic Mission Template" (A3-BMT).
 
 **Mission summary**: Brief description of the mission.
 
-**Arma 3 Basic Mission Template (A3-BMT)**: v1.0 (https://github.com/CavallersDelCel/1RA_Plantilla_Missio) by Magnetar   .
+**Arma 3 Basic Mission Template (A3-BMT)**: v1.0 (https://github.com/CavallersDelCel/1RA_Plantilla_Missio) by TheMagnetar.
 
 **Necessary or recommended addons**: List of necessary and/or recommended addons.
 
@@ -34,11 +34,11 @@ Detailed description of the mission. This text can be the same as the one posted
 
 # Arma 3 Basic Mission Template (A3-BMT)
 
-**Author**: Magnetar.
+**Author**: TheMagnetar.
 
 **Version**: 1.0.
 
-**Last modified**: 2015/11/26.
+**Last modified**: 2016/04/06.
 
 **Description**: The "Arma 3 Basic Mission Template" (A3-BMT) was designed in order to ease the amount of work
 required when editing a mission for Arma 3. Although originally envisaged to satisfy the needs of the "1er Regiment Aerotransportat (1RA)" of the Catalan community of simulation "Cavallers del Cel", its scope has broaden since its

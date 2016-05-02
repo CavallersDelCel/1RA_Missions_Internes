@@ -31,8 +31,6 @@ class CfgDebriefing {
         pictureColor[] = {0.0,0.3,0.6,1};
     };
 
-    //class EndingSuccess3, EndingSuccess4, ....
-
     class EndingFailure1 {
         title = "Missió fallida";
         subtitle = "";
@@ -50,8 +48,6 @@ class CfgDebriefing {
         picture = "KIA";
         pictureColor[] = {0.0,0.3,0.6,1};
     };
-
-    //class EndingFailure3, EndingFailure4, ....
 
     class Disaster {
         title = "Missió fracassada";

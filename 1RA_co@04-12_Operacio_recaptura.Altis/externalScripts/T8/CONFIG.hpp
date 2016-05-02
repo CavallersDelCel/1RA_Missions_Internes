@@ -71,6 +71,7 @@ if (bmt_param_t8units_dac == 0) then {
 } else {
     T8U_var_AllowDAC			= true;         // Allow DAC
 };
+T8U_var_DACtimeout				= 180;			// Time out after calling DAC to help group
 
 // standard side for spawned units
 T8U_var_EnemySide 				= EAST;

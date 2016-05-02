@@ -3,11 +3,14 @@
 // Author: TheMagnetar                                                                                   //
 // Version: 1.0                                                                                          //
 // File creation: 2015/02/22                                                                             //
-// Description: Aquest document serveix per oferir diverses informacions de la missió depenent de la     //
-//             facció dels jugadors. Això només serà útil en el cas de que es vulgui més endavant fer    //
-//             partides TvT. De moment només està inclòs com a plantilla.                                //
+// Description: This script is responsible for generating briefing entries depending on the player's     //
+//              faction. This is useful for TvT missions or with missions where factions in the same     //
+//              side have different objectives.                                                          //
 // Changes: 1.0 (2015/11/26) First public version.                                                       //
 //=======================================================================================================//
+
+// Do not execute the rest of the script if it is not a player.
+if (!hasInterface) exitWith {};
 
 // Wait until unit player is initalised in order to execute the rest of the script.
 if (!isDedicated && (isNull player)) then {

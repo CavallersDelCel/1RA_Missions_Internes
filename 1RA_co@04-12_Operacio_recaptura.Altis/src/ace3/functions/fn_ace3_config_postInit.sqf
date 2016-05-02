@@ -124,9 +124,9 @@ if (isClass (configFile >> "CfgPatches" >> "ace_explosives")) then {
 
 if (bmt_param_debugOutput == 1) then {
     if (_moduleError) then {
-        player sideChat format ["DEBUG (fn_ace3_config_postInit.sqf): ACE 3 no es pot configurar completament ja que hi ha fitxers que no estan carregats."];
+        player sideChat format ["DEBUG (fn_ace3_config.sqf): ACE 3 cannot be completely configured since some required files are not loaded."];
     } else {
-        player sideChat format ["DEBUG (fn_ace3_config_postInit.sqf): ACE 3 configurat."];
+        player sideChat format ["DEBUG (fn_ace3_config_postInit.sqf): ACE 3 configured."];
     };
 };
 

@@ -44,7 +44,7 @@
         title = "Medical system";
         values[] = {0, 1, 2};
         texts[] = {"Disabled", "Basic", "Advanced"};
-        default = 2;
+        default = BMT_ACE3_MEDICAL;
     };
 
     //===================================================================================================//
@@ -55,7 +55,18 @@
         title = "Ballistics";
         values[] = {0,1};
         texts[] = {"Basic", "Advanced"};
-        default = 1;
+        default = BMT_ACE3_BALLISTICS;
+    };
+
+    //===================================================================================================//
+    // Spectator: Use ACE3 spectator mode instead of BI's End Game Spectator                             //
+    // Default option: ACE 3 Spectator.                                                                  //
+    //===================================================================================================//
+    class bmt_param_ace3_spectator {
+        title = "ACE 3 Spectator mode";
+        values[] = {0,1};
+        texts[] = {"BI (End Game)", "ACE 3 Spectator"};
+        default = BMT_ACE3_SPECTATOR;
     };
 #endif
 

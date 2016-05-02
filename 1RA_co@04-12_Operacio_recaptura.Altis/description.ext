@@ -11,6 +11,12 @@
 //=======================================================================================================//
 
 //=======================================================================================================//
+// MISSION PARAMETERS DEFINITIONS: The variables here defined allow controlling the default values of    //
+//                                 the mission parameters.                                               //
+//=======================================================================================================//
+#include "missionConfig\bmt_missionParameters_definitions.hpp"
+
+//=======================================================================================================//
 // MISSION CONFIGURATION: These parameters must be modified by the mission editor.                       //
 //=======================================================================================================//
 #include "missionConfig\bmt_missionConfig.hpp"
@@ -44,7 +50,7 @@ class Params {
         title = "Debug Mode";
         values[] = {0,1};
         texts[] = {"Deactivated","Activated"};
-        default = 1;
+        default = BMT_DEBUG;
     };
 
     #define BMT_PARAMETERS
@@ -66,7 +72,7 @@ class CfgFunctions {
             #include "bmt_components.hpp"
         #undef BMT_FUNCTIONS_INTERNAL
     };
-	
+
 	class SAF {
 		#define SAF_FNCS
 			#include "sushi_scripts\core\init.cpp"
@@ -78,8 +84,6 @@ class CfgFunctions {
         #include "bmt_components.hpp"
     #undef BMT_FUNCTIONS_EXTERNAL
 };
-
-//============================================= END OF FILE =============================================//
 
 //=======================================================================================================//
 // REMOTE FUNCTION RESTRICTIONS: This section defines the restriction of remote execution of functions.  //

@@ -45,7 +45,7 @@
         title = "Configure Zeus for the Administrator";
         values[] = {0,1};
         texts[] = {"No", "Yes"};
-        default = 1;
+        default = BMT_ZEUS_ADMIN;
     };
 #endif
 

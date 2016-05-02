@@ -14,7 +14,7 @@
 //=======================================================================================================//
 
 #include "..\src\ace3\bmt_ace3.hpp"         // Functions to configure ACE 3.
-//#include "..\src\acre2\bmt_acre2.hpp"       // Functions to initialise and configure ACRE 2.
+#include "..\src\acre2\bmt_acre2.hpp"       // Functions to initialise and configure ACRE 2.
 #include "asrai3\bmt_asrai3.hpp"            // Functions to configure ASR AI 3.
 #include "..\src\dac\bmt_dac.hpp"           // Functions to configure DAC.
 //#include "..\src\t8units\bmt_t8units.hpp"   // Functions to configure T8 Units.

@@ -15,7 +15,9 @@
 #include "src\configEquipment\bmt_configEquipment.hpp" // Loadout and equipment related functions.
 #include "src\configGroup\bmt_configGroup.hpp"         // Group configuration functions.
 #include "src\configUnit\bmt_configUnit.hpp"           // Unit configuration functions.
+//#include "src\jip\bmt_jip.hpp"                         // JIP support.
 #include "src\misc\bmt_misc.hpp"                       // Miscellaneous functions.
+#include "src\respawn\bmt_respawn.hpp"                     // Respawn tickets configuration.
 #include "src\zeus\bmt_zeus.hpp"                       // Zeus related functions.
 
 // Mission especific function declarations.

@@ -10,40 +10,40 @@
 //=======================================================================================================//
 
 // Check that Both basic and advance medical systems are not marked as required.
-if ((bmt_var_requires_ACE3_BasMed == 1) and (bmt_var_requires_ACE3_AdvMed == 1)) then {
+if ((bmt_var_requires_ace3_BasMed == 1) and (bmt_var_requires_ace3_AdvMed == 1)) then {
     player sideChat format ["ERROR (bmt_core_checkConfiguration_ace3.sqf): Both basic and advance medical systems are marked as required."];
 };
 
 // ACE 3 must be enabled if basic medical system is marked as necessary.
-if ((bmt_var_requires_ACE3_BasMed == 1) and (bmt_var_requires_ACE3 != 1)) then {
+if ((bmt_var_requires_ace3_BasMed == 1) and (bmt_var_requires_ace3 != 1)) then {
     player sideChat format ["WARNING (bmt_core_checkConfiguration_ace3.sqf): ACE3 is not marked as necessary while the basic medical system is. Marking ACE3 as required."];
-    bmt_var_requires_ACE3 = 1;
+    bmt_var_requires_ace3 = 1;
 };
 
 // ACE 3 must be enabled if advanced medical system is marked as necessary.
-if ((bmt_var_requires_ACE3_AdvMed == 1) and (bmt_var_requires_ACE3 != 1)) then {
+if ((bmt_var_requires_ace3_AdvMed == 1) and (bmt_var_requires_ace3 != 1)) then {
     player sideChat format ["WARNING (bmt_core_checkConfiguration_ace3.sqf): ACE3 is not marked as necessary while the advanced medical system is. Marking ACE3 as required."];
-    bmt_var_requires_ACE3 = 1;
+    bmt_var_requires_ace3 = 1;
 };
 
 // ACE 3 must be enabled if advanced ballistics is marked as necessary.
-if ((bmt_var_requires_ACE3_AdvBal == 1) and (bmt_var_requires_ACE3 != 1)) then {
+if ((bmt_var_requires_ace3_AdvBal == 1) and (bmt_var_requires_ace3 != 1)) then {
     player sideChat format ["WARNING (bmt_core_checkConfiguration_ace3.sqf): ACE3 is not marked as necessary while the advanced ballistics system is. Marking ACE3 as required."];
-    bmt_var_requires_ACE3 = 1;
+    bmt_var_requires_ace3 = 1;
 };
 
-if ((bmt_var_requires_ACE3_BasMed == 0) and (bmt_var_requires_ACE3_AdvMed == 0) and bmt_mod_ace3medical) then {
+if ((bmt_var_requires_ace3_BasMed == 0) and (bmt_var_requires_ace3_AdvMed == 0) and bmt_mod_ace3medical) then {
     player sideChat format ["ERROR (bmt_core_checkConfiguration_ace3.sqf): Despite having disabled both basic and advanced ACE 3 medical systems the file ace_medical.pbo is loaded."];
 };
 
 // Advanced Combat Environment 3 (ACE3): Basic Medical System.
-if (bmt_var_requires_ACE3_BasMed != 2) then {
+if (bmt_var_requires_ace3_BasMed != 2) then {
     if (bmt_mod_ace3medical) then {
-        if ((bmt_var_requires_ACE3_BasMed == 1) and (bmt_param_ace3_medicalSystem != 1)) then {
+        if ((bmt_var_requires_ace3_BasMed == 1) and (bmt_param_ace3_medicalSystem != 1)) then {
             player sideChat format ["ERROR (bmt_core_checkConfiguration_ace3.sqf): ACE3 basic medical system is disabled but must be enabled for this mission."];
         };
 
-        if ((bmt_var_requires_ACE3_BasMed == 0) and (bmt_param_ace3_medicalSystem == 1)) then {
+        if ((bmt_var_requires_ace3_BasMed == 0) and (bmt_param_ace3_medicalSystem == 1)) then {
             player sideChat format ["ERROR (bmt_core_checkConfiguration_ace3.sqf): ACE3 basic medical system is active but it must be deactivated for this mission."];
         };
     } else {
@@ -60,13 +60,13 @@ if (bmt_var_requires_ACE3_BasMed != 2) then {
 };
 
 // Advanced Combat Environment 3 (ACE3): Advanced Medical System.
-if (bmt_var_requires_ACE3_AdvMed != 2) then {
+if (bmt_var_requires_ace3_AdvMed != 2) then {
     if (bmt_mod_ace3medical) then {
-        if ((bmt_var_requires_ACE3_AdvMed == 1) and (bmt_param_ace3_medicalSystem != 2)) then {
+        if ((bmt_var_requires_ace3_AdvMed == 1) and (bmt_param_ace3_medicalSystem != 2)) then {
             player sideChat format ["ERROR (bmt_core_checkConfiguration_ace3.sqf): ACE3 advanced medical system is disabled but must be enabled for this mission."];
         };
 
-        if ((bmt_var_requires_ACE3_AdvMed == 0) and (bmt_param_ace3_medicalSystem == 2)) then {
+        if ((bmt_var_requires_ace3_AdvMed == 0) and (bmt_param_ace3_medicalSystem == 2)) then {
             player sideChat format ["ERROR (bmt_core_checkConfiguration_ace3.sqf): ACE3 advanced medical system is active but it must be deactivated for this mission."];
         };
     } else {
@@ -83,9 +83,9 @@ if (bmt_var_requires_ACE3_AdvMed != 2) then {
 };
 
 // Advanced Combat Environment 3 (ACE3): Advanced ballistics.
-if (bmt_var_requires_ACE3_AdvBal != 2) then {
+if (bmt_var_requires_ace3_AdvBal != 2) then {
     if (bmt_mod_ace3advbal) then {
-        if (bmt_var_requires_ACE3_AdvBal != bmt_param_ace3_ballistics) then {
+        if (bmt_var_requires_ace3_AdvBal != bmt_param_ace3_ballistics) then {
             if (bmt_param_ace3_ballistics == 1) then {
                 player sideChat format ["ERROR (bmt_core_checkConfiguration_ace3.sqf): ACE3 advanced ballistics is disabled but must be enabled for this mission."];
             } else {

@@ -32,23 +32,23 @@ bmt_script_briefing = [] execVM "src\briefing\scripts\bmt_briefing.sqf";
 //=======================================================================================================//
 // Initialise the T8 Units script if the A3BMT T8Units component is loaded.                              //
 //=======================================================================================================//
-if (!isNil "bmt_param_t8units_activated") then {
+if (!isNil "bmt_param_t8units_enabled") then {
     bmt_script_t8units = [] execVM "src\t8units\scripts\bmt_t8units_init.sqf";
-};
-
-//=======================================================================================================//
-// Initialise the VCOM AI script if the A3BMT VCOMAI component is loaded.                                //
-//=======================================================================================================//
-if (!isNil "bmt_param_t8units_activated") then {
-    bmt_script_t8units = [] execVM "src\vcomai\scripts\bmt_vcomai_init.sqf";
 };
 
 //=======================================================================================================//
 // Use virtual arsenal profiles instead of custom loadout equipment. When enabled the loadout defined in //
 // configEquipment scripts is overwritten by the equivalent Virtual Arsenal profile.                     //
 //=======================================================================================================//
-if (bmt_param_useVAProfiles == 1 && hasInterface) then {
+if ((bmt_param_useVAProfiles == 1) && hasInterface) then {
     bmt_script_useVAProfiles = [] execVM "src\configEquipment\scripts\bmt_configEquipment_VAprofiles.sqf";
+};
+
+//=======================================================================================================//
+// JIP supprt.                                                                                           //
+//=======================================================================================================//
+if (!isNil "bmt_param_jip_timeLimit") then {
+    #include "src\jip\scripts\bmt_jip_init.sqf"
 };
 
 //=======================================================================================================//
@@ -59,12 +59,12 @@ if (bmt_param_useVAProfiles == 1 && hasInterface) then {
 
 // Configure TFAR if it is loaded (see file fn_core_processMods.sqf).
 if (bmt_mod_tfar) then {
-    [] execVM "src\tfar\scripts\bmt_tfar_init.sqf";
+    bmt_script_tfar = [] execVM "src\tfar\scripts\bmt_tfar_init.sqf";
 };
 
 // Configure ACRE 2 if it is loaded (see file fn_core_processMods.sqf).
 if (bmt_mod_acre2) then {
-    [] execVM "src\acre2\scripts\bmt_acre2_init.sqf";
+    bmt_script_acre2 = [] execVM "src\acre2\scripts\bmt_acre2_init.sqf";
 };
 
 //=======================================================================================================//

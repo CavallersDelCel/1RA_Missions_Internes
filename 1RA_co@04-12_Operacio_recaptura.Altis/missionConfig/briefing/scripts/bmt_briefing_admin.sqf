@@ -21,39 +21,37 @@ private ["_debriefingEntries", "_endingEntry", "_endingTitle", "_endingDescripti
 _briefingAdmin = "
 <font color='#FF0000' size='18'>Information for the administrator</font>
 <br/>
-This mission correctly runs using the following:
+This mission runs correctly using the following:
 <br/><br/>
-CBA A3
+- Advanced Combat Environment 3 (ACE3) v3.5.1.
 <br/>
-TFAR
+- Advanced Combat Radio Environment 2 (ACRE2) v2.1.0.
 <br/>
-A3 Paddle Mod
+- Advanced Live Infantry Virtual Environment (ALIVE) v1.0.4. (Required)
 <br/>
-ASR AI3
+- Community Base Addons (CBA) v2.3.1.
 <br/>
-ALIVE
+- Dynamic-AI-Creator (DAC) v3.1b. (Required)
 <br/>
-DAC
+- Mine Detector v1.11. (Required)
 <br/>
-Mine_Detector
+- RHS United States Army Forces (RHS USAF) v0.4.0.1. (Required)
 <br/>
-RHS USF
-<br/>
-ACE3
+- Task Force Arrowhead Radio (TFAR) v0.9.7.3.*** List of addons with the corresponding tested version number. ***
 <br/><br/>
 If the previous requirements are not met, the mission ought to be tested before playing it.
 <br/>
 ";
 
 //=======================================================================================================//
-// NOTES: MISSION AUTHOR'S REMARKS.                                                                        //
+// NOTES: MISSION AUTHOR'S REMARKS.                                                                      //
 //=======================================================================================================//
 
 _briefingNotes = "
 <br/>
 <font color='#FF0000' size='18'>Mission author's remarks</font>
 <br/>
-<font color='#00FFFF'>Mission name:</font> ""OperaciÛ recaptura"".
+<font color='#00FFFF'>Mission name:</font> ""Operaci√≥ recaptura"".
 <br/>
 <font color='#00FFFF'>Version</font> 1.0.
 <br/>
@@ -67,11 +65,11 @@ _briefingNotes = "
 <br/>
 <font color='#00FFFF'>Respawn:</font> Sense reaparicio.
 <br/>
-<font color='#00FFFF'>Difficulty:</font> Mitja dificultat.
+<font color='#00FFFF'>Difficulty:</font> Dificultat mitja.
 <br/>
 <font color='#00FFFF'>Mission summary:</font>
 <br/><br/>
-Aquesta missio es va crear pensant en fer servir el RHS americ‡, l'ACE 3 i l'ALIVE.
+Aquesta missio es va crear pensant en fer servir el RHS americ√†, l'ACE 3 i l'ALIVE.
 ";
 
 //=======================================================================================================//

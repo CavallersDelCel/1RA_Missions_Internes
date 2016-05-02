@@ -9,7 +9,7 @@
 //=======================================================================================================//
 
 // Check that TFAR and ACRE 2 are not marked as required simultaneously.
-if ((bmt_var_requires_TFAR == 1) and (bmt_var_requires_ACRE2 == 1)) then {
+if ((bmt_var_requires_tfar == 1) and (bmt_var_requires_acre2 == 1)) then {
     player sideChat format ["ERROR (bmt_core_checkConfiguration.sqf): Both TFAR and ACRE2 are marked as required."];
 };
 

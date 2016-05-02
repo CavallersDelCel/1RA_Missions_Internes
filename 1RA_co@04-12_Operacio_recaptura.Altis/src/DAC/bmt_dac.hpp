@@ -43,7 +43,7 @@
         title = "Use DAC";
         values[] = {0,1};
         texts[] = {"Disabled", "Enabled"};
-        default = 1;
+        default = BMT_DAC_ENABLE;
     };
 
     //===================================================================================================//
@@ -62,7 +62,7 @@
         title = "Debug DAC";
         values[] = {0,1,2};
         texts[] = {"Disabled", "Simplificat", "Complert"};
-        default = 2;
+        default = BMT_DAC_DEBUG;
     };
 #endif
 
