@@ -57,7 +57,7 @@
 // Variable declarations.                                                                                //
 //=======================================================================================================//
 private["_isInfantry"];
-private["_uniform", "_vestSL", "_vestTL", "_vestRFL", "_vestGR", "_vestDM", "_vestME", "_vestAR", "_vestMG", "_vestCRW", "_helmet", "_helmetSN", "_helmetCRW", "_backpack", "_uavBackpack"];
+private["_uniform", "_vestSL", "_vestTL", "_vestRFL", "_vestGR", "_vestDM", "_vestME", "_vestAR", "_vestMG", "_vestCRW", "_helmet", "_helmetSN", "_helmetCRW", "_helmetOPC", "_backpack", "_uavBackpack"];
 private["_uavBattery", "_cableTie", "_mapTools", "_microDAGR", "_earPlugs", "_vectorIV", "_atragmx", "_kestrel", "_clacker", "_clackerm26", "_defusalKit", "_cellphone"];
 private["_atropine", "_epinephrine", "_morphine", "_bandage", "_elasticBandage", "_quickClot", "_packingBandage"];
 private["_bloodBag250", "_bloodBag500", "_bloodBag1000", "_plasmaBag250", "_plasmaBag500", "_plasmaBag1000", "_salineBag250", "_salineBag500", "_salineBag1000"];
@@ -103,6 +103,7 @@ if (_unitFaction == "rhs_faction_usarmy_d") then {
     _helmet = "rhsusf_ach_helmet_headset_ocp";
     _helmetSN = "rhs_Booniehat_ocp";
     _helmetCRW = "rhsusf_cvc_helmet";
+	_helmetOPC = "rhsusf_opscore_rg_cover_pelt";
 
     // Backpacks.
     _backpack = "rhsusf_assault_eagleaiii_ocp";
@@ -148,7 +149,7 @@ if (_unitFaction == "rhs_faction_usmc_d") then {
     _vestCRW = "rhusf_spc_crew";
 
     // Helmets.
-    _helmet = "rhsusf_mich_helmet_marpatd_norotos_arc";
+    _helmet = "rhsusf_opscore_rg_cover_pelt";
     _helmetSN = "rhs_booniehat_marpatd";
     _helmetCRW = "rhsusf_cvc_helmet";
 
@@ -172,12 +173,12 @@ if (_unitFaction == "rhs_faction_usmc_wd") then {
     _vestCRW = "rhusf_spc_crew";
 
     // Helmets.
-    _helmet = "rhsusf_mich_helmet_marpatwd_norotos_arc";
+    _helmet = "rhsusf_opscore_rg_cover_pelt";
     _helmetSN = "rhs_booniehat_marpatwd";
     _helmetCRW = "rhsusf_cvc_green_helmet";
 
     // Backpacks.
-    _backpack = "rhsusf_assault_eagleaiii_ucp";
+    _backpack = "rhsusf_assault_eagleaiii_coy";
 };
 
 // Common uniforms.
