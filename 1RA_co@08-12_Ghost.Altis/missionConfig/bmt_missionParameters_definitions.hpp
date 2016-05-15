@@ -11,13 +11,14 @@
 //=======================================================================================================//
 // GENERAL: General mission parameters.                                                                  //
 //=======================================================================================================//
-#define BMT_DEBUG     1  // 0 = Debug disabled, 1 = Debug enabled
+#define BMT_DEBUG     0  // 0 = Debug disabled, 1 = Debug enabled
 
 //=======================================================================================================//
 // Advanced Combat Environment 3 (ACE3)                                                                  //
 //=======================================================================================================//
-#define BMT_ACE3_MEDICAL    2 // 0 = Disabled, 1 = Basic medical system, 2 = Advanced medical system
-#define BMT_ACE3_BALLISTICS 1 // 0 = Basic, 1 = Advanced ballistics
+#define BMT_ACE3_BALLISTICS 1 // 0 = Basic, 1 = Advanced ballistics.
+#define BMT_ACE3_MEDICAL    2 // 0 = Disabled, 1 = Basic medical system, 2 = Advanced medical system.
+#define BMT_ACE3_SPECTATOR  0 // 0 = BI (End Game), 1 = ACE 3 Spectator mode.
 
 //=======================================================================================================//
 // Advanced Combat Radio Environment 2 (ACRE2)                                                           //
@@ -35,7 +36,19 @@
 // Dynamic-AI-Creator 3 (DAC3)                                                                           //
 //=======================================================================================================//
 #define BMT_DAC_ENABLE 1 // 0 = Disable, 1 = Enable
-#define BMT_DAC_DEBUG  2 // 0 = No debug, 1 = Simplified debug, 2 = Full debug
+#define BMT_DAC_DEBUG  1 // 0 = No debug, 1 = Simplified debug, 2 = Full debug
+
+//=======================================================================================================//
+// JIP support                                                                                           //
+//=======================================================================================================//
+#define BMT_JIP_ENABLED      1    // 0 = JIP disabled, 1 = JIP enabled.
+
+//=======================================================================================================//
+// RESPAWN                                                                                               //
+//=======================================================================================================//
+#define BMT_RESPAWN_NUMTICKETS_CONFIG    2 // 0 = Unlimited, 1 = No tickets, 2 = Mission based.
+#define BMT_RESPAWN_SAVEGEAR             0 // 0 = Gear is not saved, 1 gear is saved.
+#define BMT_RESPAWN_TICKETS              1 // 0 = per side, 1 = on a player basis.
 
 //=======================================================================================================//
 // T8 Units                                                                                              //

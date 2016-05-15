@@ -21,6 +21,7 @@
         class acre2_addRadios{};
         class acre2_configureChannels{};
         class acre2_configureLanguages{};
+        class acre2_configurePresets{};
         class acre2_configureSpectatorChat{};
         class acre2_removeRadios{};
     };

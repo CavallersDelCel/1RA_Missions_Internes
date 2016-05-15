@@ -20,10 +20,10 @@
 //                        7         INDEPENDENT                                                          //
 //                        8         INDEPENDENT: Recon                                                   //
 //                        9         INDEPENDENT: Diver                                                   //
-//                        10        CIVILS                                                               //
-//                        11        CIVILIANS: AFRO                                                         //
-//                        12        CIVILIANS: ASIÂTICS                                                     //
-//                        13        CIVILIANS: EuropeanS                                                     //
+//                        10        CIVILIANS                                                            //
+//                        11        CIVILIANS: Afro                                                      //
+//                        12        CIVILIANS: Asiatics                                                  //
+//                        13        CIVILIANS: Europeans                                                 //
 //                        14        FIA OPFOR                                                            //
 //                        15        FIA BLUFOR                                                           //
 //                        16        FIA INDEPENDENT                                                      //
@@ -38,6 +38,7 @@
 //                        32        BWA3 Bundeswehr Fernspäher (Flecktarn)                               //
 //                        33        BWA3 Bundeswehr Fernspäher (Tropentarn)                              //
 //                        40        Leights Opfor Pack: Afghan Militia                                   //
+//                        41        Leights Opfor Pack: Takistan Civilians                               //
 //=======================================================================================================//
 
 private ["_TypNumber","_TempArray","_Unit_Pool_S","_Unit_Pool_V","_Unit_Pool_T","_Unit_Pool_A"];
@@ -84,11 +85,11 @@ switch (_TypNumber) do
             //"O_Truck_02_medical_F"                         // Kamaz Truck (Medical)
         ];
         _Unit_Pool_T = [
-            "O_APC_Tracked_02_cannon_F",                   // BTR-K Kamysh
-            "O_APC_Tracked_02_AA_F",                       // ZSU-39 Tigris
-            "O_APC_Wheeled_02_rcws_F",                     // MSE-3 Marid
-            "O_MBT_02_arty_F",                             // 2S9 Sochor
-            "O_MBT_02_cannon_F"                            // T-100 Varsuk
+            "O_APC_Tracked_02_cannon_F"                   // BTR-K Kamysh
+            //"O_APC_Tracked_02_AA_F",                       // ZSU-39 Tigris
+            //"O_APC_Wheeled_02_rcws_F",                     // MSE-3 Marid
+            //"O_MBT_02_arty_F",                             // 2S9 Sochor
+            //"O_MBT_02_cannon_F"                            // T-100 Varsuk
         ];
         _Unit_Pool_A = [
             "O_Heli_Attack_02_F",                          // Mi-48 Kajman
@@ -1194,6 +1195,29 @@ switch (_TypNumber) do
             "LOP_AM_M113_W",               // M113A3
             "LOP_AM_T72BA"                 // T-72B (obr. 1984g.)
         ];
+        _Unit_Pool_A = [];
+    };
+
+    //===================================================================================================//
+    // (LOP) Leights Opfor Pack: Takistan Civilians                                                      //
+    //===================================================================================================//
+    case 41: {
+        _Unit_Pool_S = [
+            "LOP_Tak_Civ_Man_01",
+            "LOP_Tak_Civ_Man_02",
+            "LOP_Tak_Civ_Man_03",
+            "LOP_Tak_Civ_Man_04"
+        ];
+        _unit_Pool_V = [
+            "LOP_TAK_Civ_Offroad",
+            "LOP_TAK_Civ_Hatchback",
+            "LOP_TAK_Civ_Landrover",
+            "LOP_TAK_Civ_Ural",
+            "LOP_TAK_Civ_Ural_open",
+            "LOP_TAK_Civ_UAZ",
+            "LOP_TAK_Civ_UAZ_Open"
+        ];
+        _Unit_Pool_T = [];
         _Unit_Pool_A = [];
     };
 

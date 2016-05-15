@@ -40,8 +40,6 @@ class CfgDebriefing {
         pictureColor[] = {0.0,0.3,0.6,1};
     };
 
-    //class EndingFailure3, EndingFailure4, ....
-
     class Disaster {
         title = "Disaster";
         subtitle = "";

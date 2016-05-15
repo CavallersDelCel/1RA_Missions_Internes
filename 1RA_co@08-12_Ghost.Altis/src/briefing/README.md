@@ -17,7 +17,7 @@ Aquest apartat només apareix al jugador que estigui com a administrador del ser
   * **Respawn**: Tipus de respawn a la missió (ocell, a base, deshabilitat, ...)
   * **Dificultat**: Dificultat de la missió segons l'autor.
   * **Resum de la missió: Breu resum de la missió.
-* *Diferents finals de la missió*: Aquesta secció permet a l'administrador acabar la missió de la forma que es desitgi. Seleccionar una de les entrades farà que la missió finalitzi de forma automàtica.
+* *Diferents finals de la missió*: Aquesta secció permet a l'administrador acabar la missió de la forma que es desitgi. Seleccionar una de les entrades farà que la missió finalitzi de forma Automatica.
 
 #### Crèdits
 

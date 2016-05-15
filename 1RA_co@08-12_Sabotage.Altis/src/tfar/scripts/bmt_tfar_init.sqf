@@ -8,10 +8,12 @@
 // Changes: 1.0 (2015/11/26) First public version.                                                       //
 //=======================================================================================================//
 
+waitUntil {!isNil "TF_defaultWestPersonalRadio"};
+
 // Include the configuration file.
 #include "..\..\..\missionConfig\tfar\scripts\bmt_tfar_configuration.sqf"
 
-if(isDedicated) then {
+if (isDedicated) then {
     // Configure the server side (dedicated).
     [] execVM "src\tfar\scripts\bmt_tfar_initServer.sqf";
 } else {
@@ -19,7 +21,7 @@ if(isDedicated) then {
     [] execVM "src\tfar\scripts\bmt_tfar_initClient.sqf";
 
     // Configure the server side (non-dedicated).
-    if((!isDedicated) && (isServer)) then {
+    if (isServer) then {
         [] execVM "src\tfar\scripts\bmt_tfar_initServer.sqf";
     };
 };

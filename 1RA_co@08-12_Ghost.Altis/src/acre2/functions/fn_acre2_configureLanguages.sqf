@@ -17,16 +17,10 @@ private["_unitFaction"];
 // Identificar la facció de la unitat.
 _unitFaction = toLower (faction player);
 
-// Si la faccio de la unitat és different a la del líder, aquesta última es la que s'utilitzarà.
-if (_unitFaction != toLower (faction (leader group player))) then {
-    _unitFaction = toLower (faction (leader group player));
-};
-
 // DEBUG OUTPUT.
 if ( bmt_param_debugOutput == 1 ) then {
     player sideChat format ["DEBUG (fn_acre2_determinarbmt_acre2_configureLanguages.sqf): unit faction: %1", _unitFaction];
 };
-
 
 // Languages for BLUFOR faction.
 if (_unitFaction == "blu_f") exitWith {

@@ -19,6 +19,7 @@
 //                  psg                     Platoon Sergeant                                             //
 //                  rto                     Platoon Radiotelephone Operator                              //
 //                  fo                      Forward Observer                                             //
+//                  jtac                    Joint Terminal Attack Controller                             //
 //                  me                      Platoon Medic                                                //
 //                  sl                      Squad Leader                                                 //
 //                  tl                      Team Leader                                                  //
@@ -26,7 +27,8 @@
 //                  rflat                   Rifleman with AT4                                            //
 //                  rfluav                  Rifleman with UAV (Raven)                                    //
 //                  gr                      Grenadier                                                    //
-//                  ar                      Automàtic Rifleman                                           //
+//                  ar                      Automatic Rifleman                                           //
+//                  aar                     Assitant Automatic Rifleman                                  //
 //                  dm                      Designated Marksman                                          //
 //                  mg                      Machine Gunner                                               //
 //                  amg                     Assitant Machine Gunner                                      //
@@ -61,6 +63,7 @@ private["_uavBattery", "_cableTie", "_mapTools", "_microDAGR", "_earPlugs", "_ve
 private["_atropine", "_epinephrine", "_morphine", "_bandage", "_elasticBandage", "_quickClot", "_packingBandage"];
 private["_bloodBag250", "_bloodBag500", "_bloodBag1000", "_plasmaBag250", "_plasmaBag500", "_plasmaBag1000", "_salineBag250", "_salineBag500", "_salineBag1000"];
 private["_personalAidKid", "_surgicalKit", "_tourniquet"];
+private["_flashlight"];
 
 //=======================================================================================================//
 // Get unit role and if it is an infantry unit.                                                          //
@@ -226,7 +229,7 @@ _pweaponScopeSN = "rhsusf_acc_LEUPOLDMK4_2";
 _pweaponBipodDM = "rhsusf_acc_harris_bipod";
 _pweaponBipodSN = "rhsusf_acc_harris_bipod";
 
-// Llençadores AT/AA.
+// AT/AA Launchers
 _pweaponLauncherRF = "rhs_weap_M136_hedp";
 _pweaponLauncherAT = "rhs_weap_fgm148";
 _pweaponLauncherAA = "rhs_weap_fim92";
@@ -260,6 +263,7 @@ if (bmt_mod_ace3) then {
     _microDAGR = "ACE_microDAGR";
     _earPlugs = "ACE_EarPlugs";
     _vectorIV = "ACE_Vector";
+    _flashlight = selectRandom ["ACE_Flashlight_MX991", "ACE_Flashlight_KSF1", "ACE_Flashlight_XL50"];
 
     // Objects for designated marksman/sniper/observer.
     _atragmx = "ACE_ATragMX";
@@ -340,6 +344,9 @@ if (_isInfantry) then {
         (uniformContainer _unit) addItemCargoGlobal [_earPlugs,1];
         (uniformContainer _unit) addItemCargoGlobal [_morphine,1];
         (uniformContainer _unit) addItemCargoGlobal [_epinephrine,1];
+        if (bmt_var_equipFlashlight) then {
+            (uniformContainer _unit) addItemCargoGlobal [_flashlight, 1];
+        };
     };
     (uniformContainer _unit) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",2];
 
@@ -556,7 +563,6 @@ switch (_unitRole) do
         };
         (vestContainer _unit) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",8];
         (vestContainer _unit) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",1];
-        (vestContainer _unit) addMagazineCargoGlobal ["rhs_mag_M433_HEDP",2];
         (vestContainer _unit) addMagazineCargoGlobal ["rhs_mag_mk84",1];
         (vestContainer _unit) addMagazineCargoGlobal ["rhs_mag_m67",2];
 
@@ -594,6 +600,61 @@ switch (_unitRole) do
         _unit linkItem _uavTerminal;
     };
 
+    // Joint Terminal Attack Controller.
+    case "jtac": {
+        // Vest and Backpack.
+        _unit addVest _vestSL;
+        _unit addBackpack _backpack;
+
+        // Items in the uniform.
+        (uniformContainer _unit) addItemCargoGlobal [_pweaponSilencer,1];
+        (uniformContainer _unit) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",1];
+        (uniformContainer _unit) addMagazineCargoGlobal ["Laserbatteries",1];
+        
+        // Items in the vest.
+        if (bmt_mod_ace3 or bmt_mod_agm) then {
+            (vestContainer _unit) addItemCargoGlobal [_bandage,2];
+            (vestContainer _unit) addItemCargoGlobal [_mapTools,1];
+            if (bmt_mod_ace3) then {
+                (vestContainer _unit) addItemCargoGlobal [_microDAGR,1];
+            };
+        };
+        (vestContainer _unit) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",5];
+        (vestContainer _unit) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",1];
+        (vestContainer _unit) addMagazineCargoGlobal ["rhs_mag_m714_White",2];
+        (vestContainer _unit) addMagazineCargoGlobal ["rhs_mag_mk84",1];
+        (vestContainer _unit) addMagazineCargoGlobal ["rhs_mag_m67",2];
+
+        // Items in the backpack.
+        if (bmt_mod_ace3 or bmt_mod_agm) then {
+            (unitBackpack _unit) addItemCargoGlobal [_bandage,2];
+            if (bmt_mod_ace3 and (bmt_param_ace3_medicalSystem == 2)) then {
+                (unitBackpack _unit) addItemCargoGlobal [_elasticBandage,3];
+                (unitBackpack _unit) addItemCargoGlobal [_quickClot,3];
+                (unitBackpack _unit) addItemCargoGlobal [_packingBandage,3];
+                (unitBackpack _unit) addItemCargoGlobal [_tourniquet,1];
+            };
+        };
+
+        // Primary weapon
+        _unit addWeapon _pweapon;
+        _unit addPrimaryWeaponItem _pweaponSurefire;
+        _unit addPrimaryWeaponItem _pweaponLaserLantern;
+        _unit addPrimaryWeaponItem _pweaponScope;
+
+        // Night vision.
+        if ((bmt_var_equipNightVision == 1) or (bmt_var_equipNightVision == 2)) then {
+            if (bmt_var_equipNightVision == 1) then {
+                (unitBackpack _unit) addItemCargoGlobal [_nightVision,1];
+            } else {
+                _unit linkItem _nightVision;
+            };
+        };
+
+        // Objects.
+        _unit addWeapon "Laserdesignator";
+    };
+    
     // Platoon Medic.
     case "me": {
         // Vest and Backpack.
@@ -630,7 +691,7 @@ switch (_unitRole) do
                 (unitBackpack _unit) addItemCargoGlobal [_salineBag500,6];
             };
 
-            if( bmt_mod_agm or (bmt_mod_ace3 and bmt_param_ace3_medicalSystem == 0)) then {
+            if( bmt_mod_agm or (bmt_mod_ace3 and (bmt_param_ace3_medicalSystem == 1))) then {
                 (unitBackpack _unit) addItemCargoGlobal [_bandage,20];
                 (unitBackpack _unit) addItemCargoGlobal [_bloodBag500,2];
             };
@@ -1022,6 +1083,57 @@ switch (_unitRole) do
                 _unit linkItem _nightVision;
             };
         };
+    };
+
+    // Assitant Automatic Rifleman.
+    case "aar": {
+        // Vest and Backpack.
+        _unit addVest _vestRFL;
+        _unit addBackpack _backpack;
+
+        // Items in the uniform.
+        (uniformContainer _unit) addItemCargoGlobal [_pweaponSilencer,1];
+        (uniformContainer _unit) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",1];
+
+        // Items in the vest.
+        if (bmt_mod_ace3 or bmt_mod_agm) then {
+            (vestContainer _unit) addItemCargoGlobal [_bandage,2];
+        };
+        (vestContainer _unit) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",8];
+        (vestContainer _unit) addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",1];
+        (vestContainer _unit) addMagazineCargoGlobal ["rhs_mag_m67",4];
+
+        // Items in the backpack.
+        if (bmt_mod_ace3 or bmt_mod_agm) then {
+            (unitBackpack _unit) addItemCargoGlobal [_bandage,2];
+            if (bmt_mod_ace3 and (bmt_param_ace3_medicalSystem == 2)) then {
+                (unitBackpack _unit) addItemCargoGlobal [_elasticBandage,3];
+                (unitBackpack _unit) addItemCargoGlobal [_quickClot,3];
+                (unitBackpack _unit) addItemCargoGlobal [_packingBandage,3];
+                (unitBackpack _unit) addItemCargoGlobal [_tourniquet,1];
+            };
+        };
+        (unitBackpack _unit) addMagazineCargoGlobal ["rhs_mag_mk84",1];
+        (unitBackpack _unit) addMagazineCargoGlobal ["rhs_mag_an_m8hc",2];
+        (unitBackpack _unit) addMagazineCargoGlobal ["rhsusf_200Rnd_556x45_soft_pouch",2];
+
+        // Primary weapon
+        _unit addWeapon _pweapon;
+        _unit addPrimaryWeaponItem _pweaponSurefire;
+        _unit addPrimaryWeaponItem _pweaponLaserLantern;
+        _unit addPrimaryWeaponItem _pweaponScope;
+
+        // Night vision.
+        if ((bmt_var_equipNightVision == 1) or (bmt_var_equipNightVision == 2)) then {
+            if (bmt_var_equipNightVision == 1) then {
+                (unitBackpack _unit) addItemCargoGlobal [_nightVision,1];
+            } else {
+                _unit linkItem _nightVision;
+            };
+        };
+
+        // Binoculars.
+        _unit addWeapon _binoculars;
     };
 
     // Designated Marksman.
@@ -1490,6 +1602,9 @@ switch (_unitRole) do
             (uniformContainer _unit) addItemCargoGlobal [_earPlugs,1];
             (uniformContainer _unit) addItemCargoGlobal [_morphine,1];
             (uniformContainer _unit) addItemCargoGlobal [_epinephrine,1];
+            if (bmt_var_equipFlashlight) then {
+                (uniformContainer _unit) addItemCargoGlobal [_flashlight, 1];
+            };
         };
         (uniformContainer _unit) addItemCargoGlobal [_pweaponSilencerSN,1];
         (uniformContainer _unit) addMagazineCargoGlobal ["rhsusf_5Rnd_300winmag_xm2010",2];
@@ -1554,6 +1669,9 @@ switch (_unitRole) do
             (uniformContainer _unit) addItemCargoGlobal [_earPlugs,1];
             (uniformContainer _unit) addItemCargoGlobal [_morphine,1];
             (uniformContainer _unit) addItemCargoGlobal [_epinephrine,1];
+            if (bmt_var_equipFlashlight) then {
+                (uniformContainer _unit) addItemCargoGlobal [_flashlight, 1];
+            };
         };
         (uniformContainer _unit) addItemCargoGlobal [_pweaponSilencer,1];
         (uniformContainer _unit) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",2];
@@ -1626,6 +1744,9 @@ switch (_unitRole) do
             (uniformContainer _unit) addItemCargoGlobal [_morphine,1];
             (uniformContainer _unit) addItemCargoGlobal [_epinephrine,1];
             (uniformContainer _unit) addItemCargoGlobal [_bandage,2];
+            if (bmt_var_equipFlashlight) then {
+                (uniformContainer _unit) addItemCargoGlobal [_flashlight, 1];
+            };
         };
         (uniformContainer _unit) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",4];
         (uniformContainer _unit) addMagazineCargoGlobal ["20Rnd_556x45_UW_mag",3];
@@ -1688,6 +1809,9 @@ switch (_unitRole) do
             (uniformContainer _unit) addItemCargoGlobal [_morphine,1];
             (uniformContainer _unit) addItemCargoGlobal [_epinephrine,1];
             (uniformContainer _unit) addItemCargoGlobal [_bandage,2];
+            if (bmt_var_equipFlashlight) then {
+                (uniformContainer _unit) addItemCargoGlobal [_flashlight, 1];
+            };
         };
         (uniformContainer _unit) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",4];
         (uniformContainer _unit) addMagazineCargoGlobal ["20Rnd_556x45_UW_mag",3];
@@ -1710,7 +1834,7 @@ switch (_unitRole) do
                 (unitBackpack _unit) addItemCargoGlobal [_personalAidKid,2];
                 (unitBackpack _unit) addItemCargoGlobal [_salineBag500,3];
             };
-            if( bmt_mod_agm or (bmt_mod_ace3 and bmt_param_ace3_medicalSystem == 0)) then {
+            if( bmt_mod_agm or (bmt_mod_ace3 and (bmt_param_ace3_medicalSystem == 1))) then {
                 (unitBackpack _unit) addItemCargoGlobal [_bandage,15];
                 (unitBackpack _unit) addItemCargoGlobal [_bloodBag500,2];
             };
@@ -1750,6 +1874,9 @@ switch (_unitRole) do
             (uniformContainer _unit) addItemCargoGlobal [_morphine,1];
             (uniformContainer _unit) addItemCargoGlobal [_epinephrine,1];
             (uniformContainer _unit) addItemCargoGlobal [_bandage,2];
+            if (bmt_var_equipFlashlight) then {
+                (uniformContainer _unit) addItemCargoGlobal [_flashlight, 1];
+            };
         };
         (uniformContainer _unit) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",4];
         (uniformContainer _unit) addMagazineCargoGlobal ["20Rnd_556x45_UW_mag",3];
@@ -1803,6 +1930,9 @@ switch (_unitRole) do
             (uniformContainer _unit) addItemCargoGlobal [_morphine,1];
             (uniformContainer _unit) addItemCargoGlobal [_epinephrine,1];
             (uniformContainer _unit) addItemCargoGlobal [_bandage,2];
+            if (bmt_var_equipFlashlight) then {
+                (uniformContainer _unit) addItemCargoGlobal [_flashlight, 1];
+            };
         };
         (uniformContainer _unit) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",4];
         (uniformContainer _unit) addMagazineCargoGlobal ["20Rnd_556x45_UW_mag",3];
@@ -1844,7 +1974,7 @@ switch (_unitRole) do
         removeHeadgear _unit;
         removeGoggles _unit;
 
-        // Uniforme i paracaigudes.
+        // Uniform and parachute.
         _unit forceAddUniform _uniformHPLT;
         _unit addBackpack _parachuteHPLT;
         _unit addHeadgear _helmetHPLT;
@@ -1854,6 +1984,9 @@ switch (_unitRole) do
             (uniformContainer _unit) addItemCargoGlobal [_earPlugs,1];
             (uniformContainer _unit) addItemCargoGlobal [_morphine,1];
             (uniformContainer _unit) addItemCargoGlobal [_epinephrine,1];
+            if (bmt_var_equipFlashlight) then {
+                (uniformContainer _unit) addItemCargoGlobal [_flashlight, 1];
+            };
         };
         (uniformContainer _unit) addItemCargoGlobal [_pweaponSilencer,1];
         (uniformContainer _unit) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",2];
@@ -1874,7 +2007,7 @@ switch (_unitRole) do
         removeHeadgear _unit;
         removeGoggles _unit;
 
-        // Uniforme i paracaigudes.
+        // Uniform and parachute.
         _unit forceAddUniform _uniformJPLT;
         _unit addBackpack _parachuteJPLT;
         _unit addHeadgear _helmetJPLT;
@@ -1884,6 +2017,9 @@ switch (_unitRole) do
             (uniformContainer _unit) addItemCargoGlobal [_earPlugs,1];
             (uniformContainer _unit) addItemCargoGlobal [_morphine,1];
             (uniformContainer _unit) addItemCargoGlobal [_epinephrine,1];
+            if (bmt_var_equipFlashlight) then {
+                (uniformContainer _unit) addItemCargoGlobal [_flashlight, 1];
+            };
         };
         (uniformContainer _unit) addItemCargoGlobal [_pweaponSilencer,1];
         (uniformContainer _unit) addMagazineCargoGlobal ["rhsusf_mag_7x45acp_MHP",2];

@@ -66,7 +66,11 @@ T8U_fnc_rmNVG_TEST =
 
 //////////////////////////////////////  UNIT SETUP  //////////////////////////////////////
 
-// Group configs for Leights Opfor Pack.
+// Vanilla group configs.
+#include "bmt_t8_groupConfigs_blu_f.sqf"
+#include "bmt_t8_groupConfigs_opf_f.sqf"
+
+// Leights Opfor Pack group configs.
 #include "bmt_t8_groupConfigs_LOP.sqf"
 
 // ------------------------------------------------ THE END ---------------------------------------------------

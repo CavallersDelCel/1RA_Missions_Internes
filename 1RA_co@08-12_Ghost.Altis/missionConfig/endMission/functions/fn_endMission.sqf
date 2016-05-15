@@ -13,7 +13,7 @@ if (colonelDead == 1 && ({alive _x} count playableUnits > 0)) then {
     ["EndingSuccess1",true] call BIS_fnc_endMission;
 };
 
-if (colonelDead == 1 && ({alive _x} count playableUnits > 0)) then {
+if (colonelDead == 1 && ({_x getVariable ["bmt_var_playerAlive", true]} count allPlayers <= 0)) then {
     ["EndingFailure1",false] call BIS_fnc_endMission;
 };
 
@@ -22,7 +22,7 @@ if (colonelDead == 0 && ({alive _x} count playableUnits > 0)) then {
 };
 
 // If all players are dead and none of the objectives were completed, the mission was a total disaster.
-if ({alive _x} count allPlayers <= 0) then {
+if ({_x getVariable ["bmt_var_playerAlive", true]} count allPlayers <= 0) then {
     ["Disaster",false] spawn BIS_fnc_endMission;
 };
 

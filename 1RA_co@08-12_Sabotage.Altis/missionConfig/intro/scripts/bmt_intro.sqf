@@ -22,7 +22,7 @@ _introType = "blackScreen";
 
 _quotes = ["Whoever said the pen is mightier than the sword obviously never encountered automatic weapons.\nDouglas MacArthur."];
 
-_missionName = "Sabotage";
+_missionName = getText (missionConfigFile >> "onLoadName");
 _introText = selectRandom _quotes;
 
 // Identify which faction the unit belongs to.
@@ -95,42 +95,42 @@ switch (_unitFaction) do {
     // RHS: USAF "United States Army" (OCP) faction.
     case "rhs_faction_usarmy_d": {
         _missionLocation = "Location"; _uavMarker = "marker"; _uavMarkerType = [];
-	};
+    };
 
     // RHS: USAF "United States Army" (UCP) faction.
     case "rhs_faction_usarmy_wd": {
         _missionLocation = "Location"; _uavMarker = "marker"; _uavMarkerType = [];
-	};
+    };
 
     // RHS: USAF "United States Marine Corps" (D) faction.
     case "rhs_faction_usmc_d": {
-        _missionLocation = "Nord d'Altis"; _uavMarker = "marker"; _uavMarkerType = [];
-	};
+        _missionLocation = "Location"; _uavMarker = "marker"; _uavMarkerType = [];
+    };
 
     // RHS: USAF "United States Marine Corps" (WD) faction.
     case "rhs_faction_usmc_wd": {
-        _missionLocation = "Location"; _uavMarker = "marker"; _uavMarkerType = [];
-	};
+        _missionLocation = "Nord d'Altis"; _uavMarker = "marker"; _uavMarkerType = [];
+    };
 
     // RHS: USAF "United States Navy" faction.
     case "rhs_faction_usn": {
         _missionLocation = "Location"; _uavMarker = "marker"; _uavMarkerType = [];
-	};
+    };
 
     // RHS: Insurgents faction.
     case "rhs_faction_insurgents": {
         _missionLocation = "Location"; _uavMarker = "marker"; _uavMarkerType = [];
-	};
+    };
 
     // RHS: AFRF "Russian Airborne Troops" faction.
     case "rhs_faction_vdv": {
         _missionLocation = "Location"; _uavMarker = "marker"; _uavMarkerType = [];
-	};
+    };
 
     // RHS: AFRF "Soviet Air Defense Forces" faction.
     case "rhs_faction_vpvo": {
         _missionLocation = "Location"; _uavMarker = "marker"; _uavMarkerType = [];
-	};
+    };
 
     //====================================================================================================//
     // Bundeswehr.                                                                                        //
@@ -139,7 +139,7 @@ switch (_unitFaction) do {
     // German army "Bundeswehr" faction.
     case "bwa3_faction": {
         _missionLocation = "Location"; _uavMarker = "marker"; _uavMarkerType = [];
-	};
+    };
 
     // Unrecognised faction.
     default {
@@ -150,18 +150,21 @@ switch (_unitFaction) do {
 // Check wether a faction is recognised or not.
 if (_recognised) then {
 
-    switch (_introType) do {
-        case "blackScreen": {
-            [_missionName, _missionLocation, _introText] execVM "src\intro\scripts\bmt_intro_blackScreen_typeText.sqf";
+    // Only execute if the player is alive.
+    if (alive player) then {
+        switch (_introType) do {
+            case "blackScreen": {
+                [_missionName, _missionLocation, _introText] execVM "src\intro\scripts\bmt_intro_blackScreen_typeText.sqf";
+            };
+
+            case "uavFeed": {
+                [_uavMarker, _missionName + " - " + _missionLocation, [400,200,0,1], _uavMarkerType] execVM "src\intro\scripts\bmt_intro_uav.sqf";
+            };
         };
 
-        case "uavFeed": {
-            [_uavMarker, _missionName + " - " + _missionLocation, [400,200,0,1], _uavMarkerType] execVM "src\intro\scripts\bmt_intro_uav.sqf";
+        if (bmt_param_debugOutput == 1) then {
+            player sideChat format ["DEBUG (intro.sqf): Using introductory text for faction %1.", _unitFaction];
         };
-    };
-
-    if (bmt_param_debugOutput == 1) then {
-        player sideChat format ["DEBUG (intro.sqf): Using introductory text for faction %1.", _unitFaction];
     };
 } else {
     player globalchat format ["ERROR (bmt_intro.sqf): Faction %1 is not defined.", _unitFaction];

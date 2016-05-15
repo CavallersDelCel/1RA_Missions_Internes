@@ -31,7 +31,7 @@ if (isServer) then {
 //===============|=============================================================================================|
 
 if (isNil "DAC_STRPlayers")        then { DAC_STRPlayers       = ["s1","s2","s3","s4","s5","s6","s7","s8","s9","s10"]  };
-if (isNil "DAC_AI_Count_Level")    then { DAC_AI_Count_Level   = [[2,4],[3,6],[4,8],[6,12],[1,0]]                      };
+if (isNil "DAC_AI_Count_Level")    then { DAC_AI_Count_Level   = [[2,4],[3,6],[4,8],[6,12],[1,1]]                      };
 if (isNil "DAC_Dyn_Weather")       then { DAC_Dyn_Weather      = [0,0,0,[0, 0, 0],0]                                   };
 if (isNil "DAC_Reduce_Value")      then { DAC_Reduce_Value     = [1500,1550,0.3]                                       };
 if (isNil "DAC_AI_Spawn")          then { DAC_AI_Spawn         = [[10,5,5],[10,5,15],0,120,250,0]                      };
@@ -63,12 +63,12 @@ DAC_Marker_Val		= 	[];
 DAC_Zones			=	[];
 
 //=============================================================================================================|
-	
+
 _scr = [] spawn (compile preprocessFile "\DAC_Source\Scripts\DAC_Start_Creator.sqf");
 waituntil {scriptdone _scr};
 sleep 0.1;
 waituntil {(DAC_Basic_Value > 0)};
-	
+
 if(DAC_Code < 2) then {
     //===========================================|
     // StartScriptOnServer                       |

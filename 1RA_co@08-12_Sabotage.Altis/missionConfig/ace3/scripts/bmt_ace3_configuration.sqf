@@ -11,17 +11,29 @@
 private ["_medics", "_doctors", "_medicVehicles", "_medicFacilities"];
 private ["_expSpecialists", "_engineers", "_repairVehicles", "_repairFacilities"];
 private ["_surrenderedUnits", "_handcuffedUnits"];
+private ["_heliFRIES"];
 
 // Unit name variables must be declared as string.
-_medics = ["cc_alpha1_2", "cc_alpha2_4"];
+
+// Medical
+_medics = ["bmt_alpha2_4"];
 _medicVehicles = [];
 _medicFacilities = [];
 _doctors = [];
-_expSpecialists = ["cc_alpha2_5"];
+
+// Explosives
+_expSpecialists = ["bmt_alpha2_5"];
+
+// Repair
 _engineers = [];
 _repairVehicles = [];
 _repairFacilities = [];
+
+// Captives
 _surrenderedUnits = [];
 _handcuffedUnits = [];
+
+// Fastroping
+_heliFRIES = [];
 
 //============================================= END OF FILE =============================================//

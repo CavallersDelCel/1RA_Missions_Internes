@@ -8,16 +8,11 @@
 // Changes: 1.0 (2015/11/26) First public version.                                                        //
 //=======================================================================================================//
 
-private["_unit","_presetName"];
-
-// Wait unit player is initalised in order to execute the rest of the script.
-waitUntil {sleep 0.1; !isNull player};
-
-_unit = player;
+private["_presetName"];
 
 // Configure the radio presets depending on the side the unit belongs to.
 if (bmt_acre2_differentPresets) then {
-    switch(side _unit) do {
+    switch(side player) do {
         case blufor: {_presetName = "default2"};
         case opfor: {_presetName = "default3"};
         case independent: {_presetName = "default4"};
@@ -35,13 +30,20 @@ if (bmt_acre2_differentPresets) then {
 // Configure ACRE2. If player is alive then radios will be removed to be added later depending on the role
 // as defined in "bmt_acre2_configuracio.sqf". Spectator chat will be force if unit is not alive.
 
-if (alive _unit) then {
-    // Wait until gear assignement is finished.
-    waitUntil{(_unit getVariable ["bmt_var_configEquipment_Ready", false])};
+sleep 1;
 
+if (alive player) then {
+    // Wait until gear assignement is finished.
+    waitUntil{(player getVariable ["bmt_var_configEquipment_Ready", false])};
+    
+    // Wait until ACRE 2 is initialised.
+    waitUntil {
+        [] call acre_api_fnc_isInitialized;
+    };
+    
     // Define languages per side.
     [] call bmt_fnc_acre2_configureLanguages;
-
+    
     // Remove all radios.
     [] call bmt_fnc_acre2_removeRadios;
 
@@ -60,7 +62,7 @@ if (alive _unit) then {
     [] call bmt_fnc_acre2_configureSpectatorChat;
 
     if ( bmt_param_debugOutput == 1) then {
-        _unit sideChat format ["DEBUG (fn_acre2_initClient.sqf): Radios configurades."];
+        player sideChat format ["DEBUG (fn_acre2_initClient.sqf): Radios configured."];
     };
 } else {
     // Player is dead and therefore radios do not need to be configured.

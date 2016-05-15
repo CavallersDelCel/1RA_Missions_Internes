@@ -18,6 +18,14 @@ class Header {
     playerCountMultipleOf = 1; // Balancing in tvt or pvp game types.
 };
 
+class bmt_config {
+    bmt_config_jipAllowedTime = 300;   // JIP players are enabled until the specified time (in seconds). To
+                                       // enable always JIP players set to -1.
+    bmt_config_numAllowedRespawns = -1; // Number of allowed respawns. Set to -1 to have unlimited respawns,
+                                       // 0 to disable respawn and a positive number to limit the number of
+                                       // respawns.
+};
+
 //=======================================================================================================//
 // Loading screen: https://community.bistudio.com/wiki/Description.ext                                   //
 //=======================================================================================================//
@@ -35,7 +43,8 @@ overviewText = "Inteligence informs of internal tensions in the military structu
 //=======================================================================================================//
 // Respawn Settings: https://community.bistudio.com/wiki/Arma_3_Respawn                                  //
 //=======================================================================================================//
-respawn             = "BIRD";  // Respawn type BIRD, end of game for the player.
+respawn             = "BASE";  // Respawn type BASE. Recommended. Allows JIP and the number of respawns
+                               // can be limited in "bmt_config_numAllowedRespawns" side wise or player wise. 
 respawnDelay        = 10;      // Respawn delay in seconds.
 respawnVehicleDelay = 30;      // Vehicle respawn delay in seconds.
 RespawnDialog       = 0;       // Show (1) or hide (0) the scoreboard and respawn countdown timer for a
@@ -57,8 +66,8 @@ respawnTemplates[]          = {"bmt_respawn"};
 
 class CfgRespawnTemplates {
     class bmt_respawn {
-        onPlayerKilled = "src\respawn\scripts\bmt_respawn.sqf";
-        onPlayerRespawn = "src\respawn\scripts\bmt_respawn.sqf";
+        onPlayerKilled = "src\respawn\scripts\bmt_respawn_onPlayerKilled.sqf";
+        onPlayerRespawn = "src\respawn\scripts\bmt_respawn_onPlayerRespawn.sqf";
     };
 };
 

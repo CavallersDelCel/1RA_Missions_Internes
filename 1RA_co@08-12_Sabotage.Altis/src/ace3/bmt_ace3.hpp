@@ -57,6 +57,17 @@
         texts[] = {"Basic", "Advanced"};
         default = BMT_ACE3_BALLISTICS;
     };
+
+    //===================================================================================================//
+    // Spectator: Use ACE3 spectator mode instead of BI's End Game Spectator                             //
+    // Default option: ACE 3 Spectator.                                                                  //
+    //===================================================================================================//
+    class bmt_param_ace3_spectator {
+        title = "ACE 3 Spectator mode";
+        values[] = {0,1};
+        texts[] = {"BI (End Game)", "ACE 3 Spectator"};
+        default = BMT_ACE3_SPECTATOR;
+    };
 #endif
 
 // Define function scope in multiplayer.

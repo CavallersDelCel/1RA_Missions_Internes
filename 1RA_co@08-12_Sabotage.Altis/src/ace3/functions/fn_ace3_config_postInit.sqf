@@ -110,7 +110,7 @@ if (isClass (configFile >> "CfgPatches" >> "ace_explosives")) then {
     // Explosive System: http://ace3mod.com/wiki/missionmaker/modules.html#1.5-explosive-system           //
     //====================================================================================================//
 
-    // Assignar rols d'especialista en explosius.
+    // Assign explosives specialist roles.
     {
         if (!isNil _x) then {
             call compile format ["_object = %1", _x];
@@ -122,12 +122,28 @@ if (isClass (configFile >> "CfgPatches" >> "ace_explosives")) then {
     diag_log "(BMT Debug) File not found: ace_explosives.pbo.";
 };
 
-if (bmt_param_debugOutput == 1) then {
-    if (_moduleError) then {
-        player sideChat format ["DEBUG (fn_ace3_config_postInit.sqf): ACE 3 no es pot configurar completament ja que hi ha fitxers que no estan carregats."];
-    } else {
-        player sideChat format ["DEBUG (fn_ace3_config_postInit.sqf): ACE 3 configurat."];
-    };
+if (isClass (configFile >> "CfgPatches" >> "ace_fastroping")) then {
+    //====================================================================================================//
+    // Fast roping: http://ace3mod.com/wiki/feature/fastroping.html                                       //
+    //====================================================================================================//
+
+    // Equip a helicopter with FRIES.
+    {
+        if (!isNil _x) then {
+            call compile format ["_object = %1", _x];
+            [_object] call ace_fastroping_fnc_equipFRIES;
+        };
+    } foreach _heliFRIES;
+} else {
+    _moduleError = true;
+    diag_log "(BMT Debug) File not found: ace_fastroping.pbo.";
 };
 
+if (bmt_param_debugOutput == 1) then {
+    if (_moduleError) then {
+        player sideChat format ["DEBUG (fn_ace3_config.sqf): ACE 3 cannot be completely configured since some required files are not loaded."];
+    } else {
+        player sideChat format ["DEBUG (fn_ace3_config_postInit.sqf): ACE 3 configured."];
+    };
+};
 //============================================ FI DEL FITXER ============================================//

@@ -21,7 +21,7 @@ private ["_debriefingEntries", "_endingEntry", "_endingTitle", "_endingDescripti
 _briefingAdmin = "
 <font color='#FF0000' size='18'>Information for the administrator</font>
 <br/>
-This mission correctly runs using the following:
+This mission runs correctly using the following:
 <br/><br/>
 - Advanced Combat Environment 3 (ACE3) v3.5.0.
 <br/>
@@ -40,7 +40,7 @@ If the previous requirements are not met, the mission ought to be tested before 
 ";
 
 //=======================================================================================================//
-// NOTES: MISSION AUTHOR'S REMARKS.                                                                        //
+// NOTES: MISSION AUTHOR'S REMARKS.                                                                      //
 //=======================================================================================================//
 
 _briefingNotes = "

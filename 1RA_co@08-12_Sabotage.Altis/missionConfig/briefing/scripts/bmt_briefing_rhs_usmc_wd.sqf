@@ -15,15 +15,13 @@ private ["_credits", "_radio", "_adminLog", "_execution", "_mission", "_intel", 
 // NOTES: CREDITS.                                                                                       //
 //=======================================================================================================//
 _credits = player createDiaryRecord ["diary", ["Credits","
-Mission created by <font color='#00FFFF'>*** Authors ***</font> for the community <font color='#00FFFF'>*** name of the community ***</font>.
-<br/><br/>
-With the collaboration of Magnetar (A3-BMT template) and *** possible collaborators ***.
+Mission created by <font color='#00FFFF'>TheMagnetar</font> for the community <font color='#00FFFF'>Cavallers del Cel</font>.
 "]];
 
 //=======================================================================================================//
 // NOTES: RADIO.                                                                                         //
 //=======================================================================================================//
-_radio = player createDiaryRecord ["diary", ["Radio frequencies","
+_radio = player createDiaryRecord ["diary", ["Freqüències de ràdio","
 <font color='#FF0000' size='18'>Command</font>: 41 kHz.
 <br/><br/>
 <font color='#FF0000' size='18'>CAS</font>: 51 kHz.
@@ -54,14 +52,14 @@ _radio = player createDiaryRecord ["diary", ["Radio frequencies","
 //=======================================================================================================//
 // NOTES: ADMINISTRATION/LOGISTICS.                                                                       //
 //=======================================================================================================//
-_adminLog = player createDiaryRecord ["diary", ["Administration/Logistics","
-<font color='#FF0000' size='18'>CAS</font>
+_adminLog = player createDiaryRecord ["diary", ["Administració/Logística","
+<font color='#FF0000' size='18'>ARTILLERIA</font>
 <br/>
-*** Description, if they exist, of support units like CAS, field artillery, medevac, ... ***
+- Unitat d'artilleria ""Feuer Regen"" amb: 3 SADARM, 1 SMOKE and 1 HE.
 <br/><br/>
-<font color='#FF0000' size='18'>Supply</font>
+<font color='#FF0000' size='18'>Subministrament</font>
 <br/>
-*** Troop supply: additional ammunition, ... ***
+Sense subministrament addicional.
 "]];
 
 //=======================================================================================================//
@@ -70,48 +68,50 @@ _adminLog = player createDiaryRecord ["diary", ["Administration/Logistics","
 _execution = player createDiaryRecord ["diary", ["Execution","
 <font color='#FF0000' size='18'>Main tasks</font>
 <br/>
-- <font color='#00FFFF'>Main task 1</font>: *** Brief description ***.
-<br/>
-- <font color='#00FFFF'>Main task 2</font>: *** Brief description ***.
-<br/><br/>
-<font color='#FF0000' size='18'>Secondary tasks</font>
-<br/>
-- <font color='#00FFFF'>Secondary task 1</font>: *** Brief description ***.
-<br/>
-- <font color='#00FFFF'>Secondary task 2</font>: *** Brief description ***.
+- <font color='#00FFFF'>Tasca principal</font>: Destruir les defenses antiaèries.
 <br/><br/>
 <font color='#FF0000' size='18'>Execution</font>
 <br/>
-*** Description, using bullet points, of how to execute the mission. ***
+- Inserció a <marker name=""markerInsertion"">(147,226)</marker>.<br/>
+- Eliminar les defenses antiaèries a <marker name=""markerAntiair"">(142,212)</marker>.<br/>
+- Evacuar a <marker name=""markerExtraction"">(166,217)</marker>.<br/>
 "]];
 
 //=======================================================================================================//
 // NOTES: MISSION.                                                                                       //
 //=======================================================================================================//
 _mission = player createDiaryRecord ["diary", ["Mission","
-*** Mission description. ***
+Destruir les bateries antiaèries per tal de disminuir la capacitat de defensa de les tropes enemigues al
+nord d'Altis.
 "]];
 
 //=======================================================================================================//
 // NOTES: INTEL.                                                                                         //
 //=======================================================================================================//
 _intel = player createDiaryRecord ["diary", ["Intel","
-*** Intelligence information. ***
-<br/><br/>
-<font color='#FF0000' size='18'>Enemy forces</font>
+<font color='#FF0000' size='18'>Forces enemigues</font>
 <br/>
-*** Description of enemy forces.***
+- Les unitats antiaèries estan situades a prop d'un campament enemic.
+- No s'ha detectat presència d'unitats blindades.
 <br/><br/>
-<font color='#FF0000' size='18'>Allied forces</font>
+<font color='#FF0000' size='18'>Forces aliades</font>
 <br/>
-*** Description of allied forces. ***
+- Esquadra ""Schattenschlag"".<br/>
+- Unitat d'artilleria ""Feuer Regen"".
 "]];
 
 //=======================================================================================================//
 // NOTES: SITUATION.                                                                                     //
 //=======================================================================================================//
 _situation = player createDiaryRecord ["diary", ["SITREP","
-*** Brief description of the situation.***
+Amb la part est d'Altis assegurada i el front central estancat durant setmanes, l'alt comandament ha decidit
+canviar d'estratègia. Una unitat de marines serà desplaçada al <marker name=""markerInsertion"">nord d'altis</marker> 
+per tal d'efectuar un atac llampec al <marker name=""markerAntiair"">campament enemic</marker> i destruir
+la seva capacitat de defensa antiaèria.<br/>
+Degut a que la majoria de tropes està assignada al front central per tal d'evitar l'avanç de les tropes enemigues,
+l'esquadra ""Schattenschlag"" estarà pràcticament sola. Tot i això, s'ha aconseguit posicionar la unitat
+d'artilleria ""Feuer Regen"" lo suficientment aprop com per ser utilitzada durant l'atac. No obstant,
+aquesta és una posició d'alt risc. Es recomana, per tant, celeritat i contundència!<br/>
 "]];
 
 //============================================= END OF FILE =============================================//

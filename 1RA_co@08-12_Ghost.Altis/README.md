@@ -1,131 +1,36 @@
-# Operation Ghost
+# Mission name
 
 <Banner URL>
-<p align="center">
-    <img src="https://github.com/CavallersDelCel/1RA_Missions_Internes/blob/master/1RA_co%4008-12_Ghost.Altis/images/cc_op_fantasma.jpg">
-</p>
 
 Mission generated using the "Arma 3 Basic Mission Template" (A3-BMT).
 
-**Mission name**: Operation Ghost.
+**Mission name**: Mission name.
 
-**Version**: v1.1 (2015/10/17).
+**Version**: vx.x (date).
 
-**Author**: TheMagnetar.
+**Author**: Author name.
 
-**Contributors**: -.
+**Contributors**: Names of the contributers.
 
-**Game type**: Coop.
+**Game type**: Game type (Coop, TvT, PvP, ZvZ, ...).
 
-**Minimum number of players**: 8.
+**Minimum number of players**: Minimum number of players suggested by the author.
 
-**Minimum number of players**: 12.
+**Minimum number of players**: Maximum number of players suggested by the author.
 
-**Respawn**: None (Spectator).
+**Respawn**: Respawn type (None, bird, base, ...).
 
-**Dificulty**: Very high.
+**Dificulty**: Mission Dificulty.
 
-**Mission summary**: *Operation Ghost* is a mission where two fire teams and a sniper team must eliminate an enemy officer in a highly populated civilian area. In order
-to complete the objective, between 8 to 12 well coordinated players are required, since it is considered a difficult mission. The task is not updated once it is completed
-and therefore, the players must decide if they have completed it or not.
+**Mission summary**: Brief description of the mission.
 
 **Arma 3 Basic Mission Template (A3-BMT)**: v1.0 (https://github.com/CavallersDelCel/1RA_Plantilla_Missio) by TheMagnetar.
 
-**Necessary or recommended addons**: This mission works with the following set of addons:
-
-* Advanced Combat Environment 3 (ACE3) v3.5.0.
-* Advanced Combat Radio Environment 2 (ACRE2) v2.1.0.
-* Community Base Addons (CBA) v2.3.1.
-* Dynamic-AI-Creator (DAC) v3.1b. **Required**.
-* RHS United States Armed Forces (RHS USAF) v0.4.0.1. **Required**.
-* Task Force Arrowhead Radio (TFAR) v0.9.7.3.
+**Necessary or recommended addons**: List of necessary and/or recommended addons.
 
 ### Detailed mission description
 
-The unrelenting advance of the CSAT forces has coerced the allied countries to intervene in order to stop
-the constant annexion of territory using brute force. The island of Altis has been considered a key
-strategic point to achieve control of de Mediterranean sea. After several trials, a foothold has been
-secured at the north-east part of Altis but the situation is far from being considered safe.
-
-Throug a series of cell phone interventions, the inteligence service has discovered that the latest defeats
-of the CSAT forces in the Mediterranean have made one of their most charismatic leaders, colonel Ohmid
-Raheem, to be at the centre of critics. The presence of two fations, those loial to the colonel and those
-who believe his golden years are over, opens the possibility of generating internal conflicts if he is
-eliminated that would facilitate future military operations in the island.
-
-Conscious of the precariousness of his situation, colonel Ohmid Raheem has surrounded himself by his most
-loial troops and moved to the north of Altis in order to personally command a supposed grand scale attack
-to recover the total control of the island, establishing his base of operations in a holiday resort with
-strong civilian presence. This is not the first time that Ohmid Raheem uses civilians as human shields.
-
-##### AREA OF OPERATIONS
-
-<p align="center">
-    <img src="https://github.com/CavallersDelCel/1RA_Missions_Internes/blob/master/1RA_co%4008-12_Ghost.Altis/images/AO_Summer.jpg">
-</p>
-<center>The area of operations in summer.</center>
-
-##### ALLIED FORCES
-
-* Due to the possibility of an imminent enemy attack, no additional troops could be assigned to this mission.
-The presence of civilians in the area of operations make CAS support non-viable..
-
-##### ENEMY FORCES
-
-* Strong presence of enemy forces in the area of operations. Armored vehicles have been sighted.
-
-##### CIVILIANS
-
-* Strong presence of civilian population.
-
-##### MISSION AND EXECUTION
-
-Two infatry teams and one sniper team will be deployed in the north-west of Sofia, Altis, with the objective of **eliminating the colonel Ohmid Raheem**. He coordinates the military operations in the north of Altis from the coast.
-
-Once the task is completed, the allied forces will head to Sofia in order to regroup with the rest of the alliead forces and prepare the offensive to retake the north part of Altis.
-
-<center>Operation Ghost.</center>
-<p align="center">
-    <img src="https://github.com/CavallersDelCel/1RA_Missions_Internes/blob/master/1RA_co%4008-12_Ghost.Altis/images/Map.png">
-</p>
-
-<p align="center">
-    <img src="https://github.com/CavallersDelCel/1RA_Missions_Internes/blob/master/1RA_co%4008-12_Ghost.Altis/images/OhmidRaheem.jpg">
-</p>
-<center>Colonel Ohmid Raheem a week ago.</center>
-
-**Tasks**
-* Insertion at LZ1.
-* Approach the area of operations and eliminate the objective.
-* Minimise civilian casualties in order to enhance further collaboration.
-* Regroup at Sofia.
-
-##### ADMINISTRATION/LOGISTICS
-
-**Suport**
-* Without additional support.
-
-**Supply**
-* Without resupply.
-
-##### ROLES
-
-* **ALPHA SQUAD - Channel 1 - Frequency 200**
-  * **ALFA 1 - Fireteam on a HMMWV with M2 - Channel 2 - Frequency 201**
-    * Squad leader.
-    * Rifleman (AT4).
-    * Automatic Rifleman (M249).
-    * Granadier.
-    * Medic.
-  * **ALPHA 2 - Fireteam on a HMMWV with GMG - Channel 3 - Frequency 202**
-    * Team leader.
-    * Anti-armor (Javelin).
-    * Machinegunner.
-    * Rifleman (AT4).
-    * Medic.
-  * **ALPHA 3 - Sniper team on a HMMWV with M2 - Channel 4 - Frequency 203**
-    * Sniper.
-    * Spotter.
+Detailed description of the mission. This text can be the same as the one posted on the forums.
 
 # Arma 3 Basic Mission Template (A3-BMT)
 
@@ -133,7 +38,7 @@ Once the task is completed, the allied forces will head to Sofia in order to reg
 
 **Version**: 1.0.
 
-**Last modified**: 2015/11/26.
+**Last modified**: 2016/04/06.
 
 **Description**: The "Arma 3 Basic Mission Template" (A3-BMT) was designed in order to ease the amount of work
 required when editing a mission for Arma 3. Although originally envisaged to satisfy the needs of the "1er Regiment Aerotransportat (1RA)" of the Catalan community of simulation "Cavallers del Cel", its scope has broaden since its

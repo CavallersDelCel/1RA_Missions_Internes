@@ -29,7 +29,7 @@
 //                  rfl                     Rifleman                                                     //
 //                  rflat                   Rifleman with AT4                                            //
 //                  gr                      Grenadier                                                    //
-//                  ar                      Automàtic Rifleman                                           //
+//                  ar                      Automatic Rifleman                                           //
 //                  dm                      Designated Marksman                                          //
 //                  mg                      Machine Gunner                                               //
 //                  amg                     Assitant Machine Gunner                                      //

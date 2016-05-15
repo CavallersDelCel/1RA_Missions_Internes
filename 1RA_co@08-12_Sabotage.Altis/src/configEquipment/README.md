@@ -6,7 +6,7 @@ Addicionalment, el fitxer 'bmt_configEquipment_perfils.sqf` equipa la unitat amb
 
 #### Els fitxers `bmt_configEquipment_*.sqf`
 
-Per tal d'equipar, depenent de mods de realisme com ACE3 i/o del sistema mèdic que s'utilitzi de forma automàtica, una de les unitats jugables o vehicle que pertanyin a una facció cal posar la següent entrada a la línia d'init de la unitat.
+Per tal d'equipar, depenent de mods de realisme com ACE3 i/o del sistema mèdic que s'utilitzi de forma Automatica, una de les unitats jugables o vehicle que pertanyin a una facció cal posar la següent entrada a la línia d'init de la unitat.
 
 `["ROL_JUGADOR",this] call bmt_fnc_configEquipment;`
 

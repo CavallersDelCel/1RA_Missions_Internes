@@ -24,7 +24,7 @@ Mission created by <font color='#00FFFF'>TheMagnetar</font> for the community <f
 _admlog = player createDiaryRecord ["diary", ["Ohmid Raheem","
 The colonel Ohmid Raheem a week ago.
 <br/><br/>
-<img image='imatges\OhmidRaheem.jpg' width='338' height='512'/>
+<img image='images\OhmidRaheem.jpg' width='338' height='512'/>
 "]];
 
 //=======================================================================================================//

@@ -8,16 +8,11 @@
 // Changes: 1.0 (2015/11/26) First public version.                                                       //
 //=======================================================================================================//
 
-// Wait until ACRE 2 is initialised.
-waitUntil{
-    [] call acre_api_fnc_isInitialized;
-};
-
 // Include the configuration file.
 #include "..\..\..\missionConfig\acre2\scripts\bmt_acre2_configuration.sqf"
 
 // Configure presets for each radio.
-[] execVM "src\acre2\scripts\bmt_acre2_configurePresets.sqf";
+[] call bmt_fnc_acre2_configurePresets;
 
 // Configure the client side.
 if (hasInterface) then {

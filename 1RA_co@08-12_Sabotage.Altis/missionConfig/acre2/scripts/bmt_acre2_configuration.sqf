@@ -70,9 +70,9 @@ bmt_acre2_language_bwa3    = ["german"];
 //   - true: sides do not share radio presets.
 bmt_acre2_differentPresets = true;
 
-// Variable to determine if the radio defined in "bmt_acre2_riflemanRadio",an AN/PRC 343 by default,
+// Variable to determine if the radio defined in "bmt_acre2_riflemanRadio", an AN/PRC 343 by default,
 // is distributed to everybody indenpendently to the unit's role.
-//    - false: only the units in "bmt_acre2_llistaRadioSoldats" will get this radio.
+//    - false: only the units in "bmt_array_riflemanRadio" will get this radio.
 //    - true: all units will receive the radio defined in "bmt_acre2_riflemanRadio".
 bmt_acre2_riflemanRadioEverybody = true;
 
