@@ -24,9 +24,11 @@ Mission generated using the "Arma 3 Basic Mission Template" (A3-BMT).
 
 **Mission summary**: "Operation Flypaper" is a mission in Tanoa in which the players have to sabotage the
 enemy airbase. The airbase does not have static defenses and only infantry patrols and one wheeled vehicle
-are present. The players are inserted using HALO.
+are present. The players are inserted using HALO. Tasks are not updated once they are completed and it is
+up to the players to decide if it has been completed or not. Patrols and enemy units are totally random.
 
-**Arma 3 Basic Mission Template (A3-BMT)**: v1.0 (https://github.com/CavallersDelCel/1RA_Plantilla_Missio) by TheMagnetar.
+**Arma 3 Basic Mission Template (A3-BMT)**: v1.0 (https://github.com/CavallersDelCel/1RA_Plantilla_Missio)
+by TheMagnetar.
 
 **Necessary or recommended addons**: List of necessary and/or recommended addons.
 
@@ -39,19 +41,22 @@ are present. The players are inserted using HALO.
 * RHS Armed Forces of the Russian Federation (RHS AFRF) v0.4.1.1. **Required**.
 * Task Force Arrowhead Radio (TFAR) v0.9.12.
 
-### Detailed mission description
+## Detailed mission description
 
-##### SITREP
+### SITREP
 
 The Russian presence on Tanoa is reaching highly threating levels. For the past months they have been
 sending high amount of troops. The Russian interests on the island have collided several times with the
 allied forces and an all-out war is inevitable after the air attack last week on the allied forces on the
 island. The attack wiped out most of our forward bases. However, the rush of the Russian Federation in
-order to stablish dominance has opened a window for us to counter attack and deliver a major blow to their
+order to establish dominance has opened a window for us to counter attack and deliver a major blow to their
 aerial assets. The airfield defenses are still not completed and a small team should be able to infiltrate
 and sabotage them.
 
-##### INTEL
+### INTEL
+
+**Allied forces**
+* Squad *Alpha 1*.
 
 **Enemy forces**
 * Enemy does not possess any static defenses.
@@ -59,25 +64,23 @@ and sabotage them.
 * Low presence of wheeled vehicles.
 * Very low presence of mecanised infantry or armored vehicles.
 
-**Allied forces**
-* Alpha squad.
+**Civilians**
+Strong civilian presence in the area of operations.
 
-##### MISSION
+### MISSION AND EXECUTION
 
-The russian airfield has its static defenses not yet completed. The team should infiltrate the airfield and
+The Russian airfield has its static defenses not yet completed. The team should infiltrate the airfield and
 sabotage the enemy air assets. Contact with enemy patrols should be minimised: stealth is a priority.
 
-##### EXECUTION
-
 **Main task**
-* *Main task*: Destroy the enemy air assets on the russian airfield.
+* Destroy the enemy air assets on the Russian airfield.
 
 **Execution**
 * Alpha squad will HALO jump at the insertion point.
 * Destroy as many enemy air assets as possible.
 * Head towards the extraction point.
 
-##### ADMINISTRATION/LOGISTICS
+### ADMINISTRATION/LOGISTICS
 
 **Support**
 * None
@@ -85,30 +88,23 @@ sabotage the enemy air assets. Contact with enemy patrols should be minimised: s
 **Supply**
 * Ammo box is delivered during HALO.
 
-##### RADIO FREQUENCIES
+### ROLES AND RADIO FREQUENCIES
 
-* **Squad Alpha 1**: Squad frequency 200 kHz.
-  * **Fireteam Alpha 1-1**: Fireteam frequency 201 kHz.
-  * **Fireteam Alpha 1-2**: Fireteam frequency 202 kHz.
-  * **Sniper team Alpha 1-3**: Sniper team frequency 203 kHz.
-
-##### ROLES
-
-* **Squad Alpha 1**
-  * **Fireteam Alpha 1-1**
+* Squad *Alpha 1*: frequency 200 kHz.
+  * Fireteam *Alpha 1-1*: Radio frequency 201 kHz.
     * Squad leader.
     * Explosives specialist.
     * Rifleman (UAV).
-    * Automatic rifleman.
+    * Automatic rifleman (M249).
     * Combat medic.
-  * **Fireteam Alpha 1-2**
+  * Fireteam *Alpha 1-2*: Radio frequency 202 kHz.
     * Team leader.
     * Rifleman (AT4).
-    * Machine gunner.
+    * Machine gunner (M240B).
     * Explosives specialist.
     * Grenadier.
     * Rifleman.
-  * **Sniper team Alpha 1-3**
+  * Sniper team *Alpha 1-3*: Radio frequency 203 kHz.
     * Sniper.
     * Spotter.
 
