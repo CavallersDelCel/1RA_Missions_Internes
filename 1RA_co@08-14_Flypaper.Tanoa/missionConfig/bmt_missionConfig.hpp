@@ -24,8 +24,8 @@ class bmt_config {
     bmt_config_missionVersion = "v1.0 (2016.10.15)";
     bmt_config_missionCollaborators = "-";
     bmt_config_missionDifficulty = "High";
-    bmt_config_missionSummary = """Operation Flypaper"" is a mission in Tanoa in which the players have to sabotage the enemy airbase. The airbase does not have static defenses and only infantry patrols and one wheeled vehicle are present. The players are inserted using HALO. Tasks are not updated once they are completed and it is up to the players to decide if it has been completed or not. Patrols and enemy units are totally random.";
-    bmt_config_missionNotesAndRemarks = "-";
+    bmt_config_missionSummary = """Operation Flypaper"" is a mission in Tanoa in which the players have to sabotage the enemy airbase. The airbase does not have static defenses and only infantry patrols and one wheeled vehicle are present. The players are inserted using HALO";
+    bmt_config_missionNotesAndRemarks = "Tasks are not updated once they are completed and it is up to the players to decide if it has been completed or not. Patrols and enemy units are totally random";
 
 
     bmt_config_jipAllowedTime = 300;   // JIP players are enabled until the specified time (in seconds). To

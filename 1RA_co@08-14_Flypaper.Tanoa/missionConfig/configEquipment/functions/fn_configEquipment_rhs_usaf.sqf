@@ -263,7 +263,7 @@ _pistol = "rhsusf_weap_m1911a1";
 
 // Objects.
 _gps = "ItemGPS";
-_watch = "ItemWatch";
+_watch = "ACE_Altimeter";
 _map = "ItemMap";
 _compass = "ItemCompass";
 _radio = "ItemRadio";
@@ -273,7 +273,7 @@ _uavTerminal = "B_UavTerminal";
 _binoculars = "lerca_1200_tan";
 
 // Night vision.
-_nightVision = "rhsusf_ANPVS_14";
+_nightVision = "rhsusf_ANPVS_15";
 
 if (bmt_mod_ace3) then {
     //===================================================================================================//
@@ -392,7 +392,7 @@ switch (_unitRole) do
     case "pl": {
         // Vest and Backpack.
         _unit addVest _vestSL;
-        _unit addBackpack _parachute;
+        _unit addBackpack _parachuteHPLT;
 
         // Items in the uniform.
         (uniformContainer _unit) addItemCargoGlobal [_pweaponSilencer,1];
@@ -439,7 +439,7 @@ switch (_unitRole) do
     case "psg": {
         // Vest and Backpack.
         _unit addVest _vestSL;
-        _unit addBackpack _parachute;
+        _unit addBackpack _parachuteHPLT;
 
         // Items in the uniform.
         (uniformContainer _unit) addItemCargoGlobal [_pweaponSilencer,1];
@@ -486,7 +486,7 @@ switch (_unitRole) do
     case "rto": {
         // Vest and Backpack.
         _unit addVest _vestSL;
-        _unit addBackpack _parachute;
+        _unit addBackpack _parachuteHPLT;
 
         // Items in the uniform.
         (uniformContainer _unit) addItemCargoGlobal [_pweaponSilencer,1];
@@ -526,7 +526,7 @@ switch (_unitRole) do
     case "fo": {
         // Vest and Backpack.
         _unit addVest _vestSL;
-        _unit addBackpack _parachute;
+        _unit addBackpack _parachuteHPLT;
 
         // Items in the uniform.
         (uniformContainer _unit) addItemCargoGlobal [_pweaponSilencer,1];
@@ -569,7 +569,7 @@ switch (_unitRole) do
         case "jtac": {
             // Vest and Backpack.
             _unit addVest _vestSL;
-            _unit addBackpack _parachute;
+            _unit addBackpack _parachuteHPLT;
 
             // Items in the uniform.
             (uniformContainer _unit) addItemCargoGlobal [_pweaponSilencer,1];
@@ -613,7 +613,7 @@ switch (_unitRole) do
     case "me": {
         // Vest and Backpack.
         _unit addVest _vestME;
-        _unit addBackpack _parachute;
+        _unit addBackpack _parachuteHPLT;
 
         // Items in the uniform.
         (uniformContainer _unit) addItemCargoGlobal [_pweaponSilencer,1];
@@ -649,7 +649,7 @@ switch (_unitRole) do
     case "sl": {
         // Vest and Backpack.
         _unit addVest _vestSL;
-        _unit addBackpack _parachute;
+        _unit addBackpack _parachuteHPLT;
 
         // Items in the uniform.
         (uniformContainer _unit) addItemCargoGlobal [_pweaponSilencer,1];
@@ -697,7 +697,7 @@ switch (_unitRole) do
     case "tl": {
         // Vest and Backpack.
         _unit addVest _vestTL;
-        _unit addBackpack _parachute;
+        _unit addBackpack _parachuteHPLT;
 
         // Items in the uniform.
         (uniformContainer _unit) addItemCargoGlobal [_pweaponSilencer,1];
@@ -737,7 +737,7 @@ switch (_unitRole) do
     case "rfl": {
         // Vest and Backpack.
         _unit addVest _vestRFL;
-        _unit addBackpack _parachute;
+        _unit addBackpack _parachuteHPLT;
 
         // Items in the uniform.
         (uniformContainer _unit) addItemCargoGlobal [_pweaponSilencer,1];
@@ -771,7 +771,7 @@ switch (_unitRole) do
     case "rflat": {
         // Vest and Backpack.
         _unit addVest _vestRFL;
-        _unit addBackpack _parachute;
+        _unit addBackpack _parachuteHPLT;
 
         // Items in the uniform.
         (uniformContainer _unit) addItemCargoGlobal [_pweaponSilencer,1];
@@ -809,7 +809,7 @@ switch (_unitRole) do
     case "rfluav": {
         // Vest and Backpack.
         _unit addVest _vestRFL;
-        _unit addBackpack _parachute;
+        _unit addBackpack _parachuteHPLT;
 
         // Items in the uniform.
         (uniformContainer _unit) addItemCargoGlobal [_pweaponSilencer,1];
@@ -846,7 +846,7 @@ switch (_unitRole) do
     case "gr": {
         // Vest and Backpack.
         _unit addVest _vestGR;
-        _unit addBackpack _parachute;
+        _unit addBackpack _parachuteHPLT;
 
         // Items in the uniform.
         (uniformContainer _unit) addItemCargoGlobal [_pweaponSilencer,1];
@@ -882,7 +882,7 @@ switch (_unitRole) do
     case "ar": {
         // Vest and Backpack.
         _unit addVest _vestAR;
-        _unit addBackpack _parachute;
+        _unit addBackpack _parachuteHPLT;
 
         // Items in the uniform.
         (uniformContainer _unit) addMagazineCargoGlobal ["rhsusf_100Rnd_556x45_soft_pouch",2];
@@ -913,7 +913,7 @@ switch (_unitRole) do
     case "aar": {
         // Vest and Backpack.
         _unit addVest _vestRFL;
-        _unit addBackpack _parachute;
+        _unit addBackpack _parachuteHPLT;
 
         // Items in the uniform.
         (uniformContainer _unit) addItemCargoGlobal [_pweaponSilencer,1];
@@ -950,7 +950,7 @@ switch (_unitRole) do
     case "dm": {
         // Vest and Backpack.
         _unit addVest _vestDM;
-        _unit addBackpack _parachute;
+        _unit addBackpack _parachuteHPLT;
 
         // Items in the uniform.
         (uniformContainer _unit) addMagazineCargoGlobal ["rhsusf_20Rnd_762x51_m118_special_Mag",1];
@@ -988,7 +988,7 @@ switch (_unitRole) do
     case "mg": {
         // Vest and Backpack.
         _unit addVest _vestMG;
-        _unit addBackpack _parachute;
+        _unit addBackpack _parachuteHPLT;
 
         // Items in the uniform.
         (uniformContainer _unit) addMagazineCargoGlobal ["rhsusf_100Rnd_762x51",1];
@@ -1018,7 +1018,7 @@ switch (_unitRole) do
     case "amg": {
         // Vest and Backpack.
         _unit addVest _vestRFL;
-        _unit addBackpack _parachute;
+        _unit addBackpack _parachuteHPLT;
 
         // Items in the uniform.
         (uniformContainer _unit) addItemCargoGlobal [_pweaponSilencer,1];
@@ -1055,7 +1055,7 @@ switch (_unitRole) do
     case "at": {
         // Vest and Backpack.
         _unit addVest _vestRFL;
-        _unit addBackpack _parachute;
+        _unit addBackpack _parachuteHPLT;
 
         // Items in the uniform.
         (uniformContainer _unit) addItemCargoGlobal [_pweaponSilencer,1];
@@ -1092,7 +1092,7 @@ switch (_unitRole) do
     case "aat": {
         // Vest and Backpack.
         _unit addVest _vestRFL;
-        _unit addBackpack _parachute;
+        _unit addBackpack _parachuteHPLT;
 
         // Items in the uniform.
         (uniformContainer _unit) addItemCargoGlobal [_pweaponSilencer,1];
@@ -1126,7 +1126,7 @@ switch (_unitRole) do
     case "aa": {
         // Vest and Backpack.
         _unit addVest _vestRFL;
-        _unit addBackpack _parachute;
+        _unit addBackpack _parachuteHPLT;
 
         // Items in the uniform.
         (uniformContainer _unit) addItemCargoGlobal [_pweaponSilencer,1];
@@ -1163,7 +1163,7 @@ switch (_unitRole) do
     case "aaa": {
         // Vest and Backpack.
         _unit addVest _vestRFL;
-        _unit addBackpack _parachute;
+        _unit addBackpack _parachuteHPLT;
 
         // Items in the uniform.
         (uniformContainer _unit) addItemCargoGlobal [_pweaponSilencer,1];
@@ -1197,7 +1197,7 @@ switch (_unitRole) do
     case "en": {
         // Vest and Backpack.
         _unit addVest _vestRFL;
-        _unit addBackpack _parachute;
+        _unit addBackpack _parachuteHPLT;
 
         // Items in the uniform.
         (uniformContainer _unit) addItemCargoGlobal [_pweaponSilencer,1];
@@ -1234,7 +1234,7 @@ switch (_unitRole) do
     case "exp": {
         // Vest and Backpack.
         _unit addVest _vestRFL;
-        _unit addBackpack _parachute;
+        _unit addBackpack _parachuteHPLT;
 
         // Items in the uniform.
         (uniformContainer _unit) addItemCargoGlobal [_pweaponSilencer, 1];
@@ -1273,7 +1273,7 @@ switch (_unitRole) do
         removeUniform _unit;
         _unit forceAddUniform _uniformSN;
         _unit addVest _vestRFL;
-        _unit addBackpack _parachute;
+        _unit addBackpack _parachuteHPLT;
 
         // Helmet.
         removeHeadgear _unit;
@@ -1326,7 +1326,7 @@ switch (_unitRole) do
         removeUniform _unit;
         _unit forceAddUniform _uniformSN;
         _unit addVest _vestRFL;
-        _unit addBackpack _parachute;
+        _unit addBackpack _parachuteHPLT;
 
         // Helmet.
         removeHeadgear _unit;
@@ -1689,7 +1689,7 @@ switch (_unitRole) do
     case "ccrw": {
         // Vest and Backpack.
         _unit addVest _vestCRW;
-        _unit addBackpack _parachute;
+        _unit addBackpack _parachuteHPLT;
 
         // Helmet.
         removeHeadgear _unit;
@@ -1817,12 +1817,13 @@ switch (_unitRole) do
         clearBackpackCargoGlobal _unit;
 
         // AT equipment
-        (unitBackpack _unit) addItemCargoGlobal ["rhs_m136_hedp_mag",1];
+        _unit addItemCargoGlobal ["rhs_m136_hedp_mag", 1];
         _unit addWeaponCargoGlobal [_pweaponLauncherRF, 1];
+        _unit addItemCargoGlobal ["rhsusf_acc_premier_anpvs27", 1];
 
         // Sights
         _unit addItemCargoGlobal ["rhsusf_acc_eotech_552", 11];
-        _unit addItemCargoGlobal [_backpack, 5];
+        _unit addBackpackCargoGlobal [_backpack, 5];
 
         {
             switch (_forEachIndex) do {
@@ -1879,7 +1880,7 @@ switch (_unitRole) do
             };
         } foreach everyBackpack _unit;
 
-        _unit addItemCargoGlobal [_uavBackpack, 1];
+        _unit addBackpackCargoGlobal [_uavBackpack, 1];
     };
 
     default {
@@ -1887,7 +1888,7 @@ switch (_unitRole) do
 
         // Vest and Backpack.
         _unit addVest _vestRFL;
-        _unit addBackpack _parachute;
+        _unit addBackpack _parachuteHPLT;
 
         // Items in the uniform.
         (uniformContainer _unit) addItemCargoGlobal [_pweaponSilencer,1];

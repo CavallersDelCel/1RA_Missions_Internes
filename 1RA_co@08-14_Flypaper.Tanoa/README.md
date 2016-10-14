@@ -65,7 +65,7 @@ and sabotage them.
 * Very low presence of mecanised infantry or armored vehicles.
 
 **Civilians**
-Strong civilian presence in the area of operations.
+Civilians live in the adjacent towns.
 
 ### MISSION AND EXECUTION
 
