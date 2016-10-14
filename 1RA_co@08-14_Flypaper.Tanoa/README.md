@@ -1,6 +1,8 @@
 # Operation Flypaper
 
-<Banner URL>
+<p align="center">
+    <img src="https://github.com/CavallersDelCel/1RA_Missions_Internes/blob/master/1RA_co%4008-14_Flypaper.Tanoa/images/PortadaForum.jpg">
+</p>
 
 Mission generated using the "Arma 3 Basic Mission Template" (A3-BMT).
 
@@ -53,6 +55,23 @@ order to establish dominance has opened a window for us to counter attack and de
 aerial assets. The airfield defenses are still not completed and a small team should be able to infiltrate
 and sabotage them.
 
+### MISSION AND EXECUTION
+
+The Russian airfield has its static defenses not yet completed. The team should infiltrate the airfield and
+sabotage the enemy air assets. Contact with enemy patrols should be minimised: stealth is a priority.
+
+<p align="center">
+    <img src="https://github.com/CavallersDelCel/1RA_Missions_Internes/blob/master/1RA_co%4008-14_Flypaper.Tanoa/images/Map.png">
+</p>
+
+**Main task**
+* Destroy the enemy air assets on the Russian airfield.
+
+**Execution**
+* *Alpha* squad will HALO jump at the insertion point.
+* Destroy as many enemy air assets as possible.
+* Head towards the extraction point and blend in with the population.
+
 ### INTEL
 
 **Allied forces**
@@ -65,20 +84,7 @@ and sabotage them.
 * Very low presence of mecanised infantry or armored vehicles.
 
 **Civilians**
-Civilians live in the adjacent towns.
-
-### MISSION AND EXECUTION
-
-The Russian airfield has its static defenses not yet completed. The team should infiltrate the airfield and
-sabotage the enemy air assets. Contact with enemy patrols should be minimised: stealth is a priority.
-
-**Main task**
-* Destroy the enemy air assets on the Russian airfield.
-
-**Execution**
-* Alpha squad will HALO jump at the insertion point.
-* Destroy as many enemy air assets as possible.
-* Head towards the extraction point.
+* Civilians live in the adjacent towns.
 
 ### ADMINISTRATION/LOGISTICS
 
