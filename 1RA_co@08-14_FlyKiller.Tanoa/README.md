@@ -4,33 +4,113 @@
 
 Mission generated using the "Arma 3 Basic Mission Template" (A3-BMT).
 
-**Mission name**: Mission name.
+**Mission name**: Operation Flypaper.
 
-**Version**: vx.x (date).
+**Version**: v1.0 (2016/10/15).
 
-**Author**: Author name.
+**Author**: TheMagnetar.
 
-**Contributors**: Names of the contributers.
+**Contributors**: -.
 
-**Game type**: Game type (Coop, TvT, PvP, ZvZ, ...).
+**Game type**: Coop.
 
-**Minimum number of players**: Minimum number of players suggested by the author.
+**Minimum number of players**: 8.
 
-**Minimum number of players**: Maximum number of players suggested by the author.
+**Minimum number of players**: 14.
 
-**Respawn**: Respawn type (None, bird, base, ...).
+**Respawn**: None (Spectator).
 
-**Dificulty**: Mission Dificulty.
+**Dificulty**: High.
 
-**Mission summary**: Brief description of the mission.
+**Mission summary**: "Operation Flypaper" is a mission in Tanoa in which the players have to sabotage the
+enemy airbase. The airbase does not have static defenses and only infantry patrols and one wheeled vehicle
+are present. The players are inserted using HALO.
 
 **Arma 3 Basic Mission Template (A3-BMT)**: v1.0 (https://github.com/CavallersDelCel/1RA_Plantilla_Missio) by TheMagnetar.
 
 **Necessary or recommended addons**: List of necessary and/or recommended addons.
 
+* Advanced Combat Environment (ACE 3) v3.8.0.
+* Advanced Combat Radio Environment (ACRE 2) v2.2.0.
+* Advanced Light Infantry Virtual Environment (ALiVE) v1.2.0. **Required**.
+* Community Base Addons (CBA) v3.1.0. **Required**.
+* Dynamic-AI-Creator (DAC) v3.1b addon version. **Required**.
+* RHS United States Armed Forces (RHS USAF) v0.4.1.1. **Required**.
+* RHS Armed Forces of the Russian Federation (RHS AFRF) v0.4.1.1. **Required**.
+* Task Force Arrowhead Radio (TFAR) v0.9.12.
+
 ### Detailed mission description
 
-Detailed description of the mission. This text can be the same as the one posted on the forums.
+##### SITREP
+
+The Russian presence on Tanoa is reaching highly threating levels. For the past months they have been
+sending high amount of troops. The Russian interests on the island have collided several times with the
+allied forces and an all-out war is inevitable after the air attack last week on the allied forces on the
+island. The attack wiped out most of our forward bases. However, the rush of the Russian Federation in
+order to stablish dominance has opened a window for us to counter attack and deliver a major blow to their
+aerial assets. The airfield defenses are still not completed and a small team should be able to infiltrate
+and sabotage them.
+
+##### INTEL
+
+**Enemy forces**
+* Enemy does not possess any static defenses.
+* Strong presence of infantry enemy patrols.
+* Low presence of wheeled vehicles.
+* Very low presence of mecanised infantry or armored vehicles.
+
+**Allied forces**
+* Alpha squad.
+
+##### MISSION
+
+The russian airfield has its static defenses not yet completed. The team should infiltrate the airfield and
+sabotage the enemy air assets. Contact with enemy patrols should be minimised: stealth is a priority.
+
+##### EXECUTION
+
+**Main task**
+* *Main task*: Destroy the enemy air assets on the russian airfield.
+
+**Execution**
+* Alpha squad will HALO jump at the insertion point.
+* Destroy as many enemy air assets as possible.
+* Head towards the extraction point.
+
+##### ADMINISTRATION/LOGISTICS
+
+**Support**
+* None
+
+**Supply**
+* Ammo box is delivered during HALO.
+
+##### RADIO FREQUENCIES
+
+* **Squad Alpha 1**: Squad frequency 200 kHz.
+  * **Fireteam Alpha 1-1**: Fireteam frequency 201 kHz.
+  * **Fireteam Alpha 1-2**: Fireteam frequency 202 kHz.
+  * **Sniper team Alpha 1-3**: Sniper team frequency 203 kHz.
+
+##### ROLES
+
+* **Squad Alpha 1**
+  * **Fireteam Alpha 1-1**
+    * Squad leader.
+    * Explosives specialist.
+    * Rifleman (UAV).
+    * Automatic rifleman.
+    * Combat medic.
+  * **Fireteam Alpha 1-2**
+    * Team leader.
+    * Rifleman (AT4).
+    * Machine gunner.
+    * Explosives specialist.
+    * Grenadier.
+    * Rifleman.
+  * **Sniper team Alpha 1-3**
+    * Sniper.
+    * Spotter.
 
 # Arma 3 Basic Mission Template (A3-BMT)
 
