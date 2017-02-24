@@ -23,3 +23,5 @@ if (paramsArray select 18 == 0) then {
 if (paramsArray select 2 != 0) then {
 		setTimeMultiplier (paramsArray select 2);
 };
+
+[] execVM "AOW_MissionCreator\BaseCreator\ReBuild.sqf";

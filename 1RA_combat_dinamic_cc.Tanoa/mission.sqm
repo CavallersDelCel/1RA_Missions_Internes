@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=169;
+		nextID=170;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={2296.1877,31.541128,13188.604};
-		dir[]={0.083505705,-0.73437577,0.67376316};
-		up[]={0.090326808,0.67862403,0.72876191};
-		aside[]={0.9925375,-1.6775157e-006,-0.1230089};
+		pos[]={2411.417,31.541128,13329.375};
+		dir[]={0.25330606,-0.74945146,0.61188018};
+		up[]={0.28665218,0.66194516,0.69241822};
+		aside[]={0.9240793,-1.9561267e-006,-0.38254431};
 	};
 };
 binarizationWanted=0;
@@ -253,7 +253,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=93;
+		items=94;
 		class Item0
 		{
 			dataType="Marker";
@@ -353,6 +353,7 @@ class Mission
 					};
 					id=5;
 					type="B_medic_F";
+					atlOffset=9.5367432e-007;
 				};
 				class Item2
 				{
@@ -1259,7 +1260,6 @@ class Mission
 					};
 					id=37;
 					type="B_Soldier_GL_F";
-					atlOffset=9.5367432e-007;
 				};
 				class Item16
 				{
@@ -1700,7 +1700,6 @@ class Mission
 					};
 					id=58;
 					type="B_Helipilot_F";
-					atlOffset=9.5367432e-007;
 				};
 			};
 			class Attributes
@@ -6989,6 +6988,47 @@ class Mission
 					};
 				};
 				nAttributes=2;
+			};
+		};
+		class Item93
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2420.4021,13.182593,13337.002};
+				angles[]={6.2192717,0.058974676,6.2778621};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="HSupport1";
+				createAsSimpleObject=1;
+			};
+			id=169;
+			type="Sign_Arrow_Blue_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
 			};
 		};
 	};

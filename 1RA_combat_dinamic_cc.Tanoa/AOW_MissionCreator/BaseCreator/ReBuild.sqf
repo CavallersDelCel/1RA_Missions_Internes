@@ -17,7 +17,7 @@ if (getMarkerColor "VVS1" != "") then {// Delete old Base markers if base re loc
 };
 
 // Make sure no player can't destroy important base part
-if (getMarkerColor "VVS1" == "") then {
+// if (getMarkerColor "VVS1" == "") then {
 	[[NBCar, false],"AOW_fnc_base_allowdamage",true,true] spawn BIS_fnc_MP;
 	[[NBArmored, false],"AOW_fnc_base_allowdamage",true,true] spawn BIS_fnc_MP;
 	[[NBHelicopter, false],"AOW_fnc_base_allowdamage",true,true] spawn BIS_fnc_MP;
@@ -25,9 +25,9 @@ if (getMarkerColor "VVS1" == "") then {
 	[[NBPlane, false],"AOW_fnc_base_allowdamage",true,true] spawn BIS_fnc_MP;
 	[[NBDrone, false],"AOW_fnc_base_allowdamage",true,true] spawn BIS_fnc_MP;
 	[[NBShip, false],"AOW_fnc_base_allowdamage",true,true] spawn BIS_fnc_MP;
-	[[NBAmmo, false],"AOW_fnc_base_allowdamage",true,true] spawn BIS_fnc_MP;
-	[[NBAmmo2, false],"AOW_fnc_base_allowdamage",true,true] spawn BIS_fnc_MP;
-	/************** Canvis dels Cavallers del Cel per CC_Viper ***************************/
+	//[[NBAmmo, false],"AOW_fnc_base_allowdamage",true,true] spawn BIS_fnc_MP;
+	//[[NBAmmo2, false],"AOW_fnc_base_allowdamage",true,true] spawn BIS_fnc_MP;
+	// Canvis dels Cavallers del Cel per CC_Viper
 	[[NBAmmobox, false],"AOW_fnc_base_allowdamage",true,true] spawn BIS_fnc_MP;
 	[[cartell01, false],"AOW_fnc_base_allowdamage",true,true] spawn BIS_fnc_MP;
 	[[cartell02, false],"AOW_fnc_base_allowdamage",true,true] spawn BIS_fnc_MP;
@@ -37,10 +37,9 @@ if (getMarkerColor "VVS1" == "") then {
 	[[baseFlagPole2, false],"AOW_fnc_base_allowdamage",true,true] spawn BIS_fnc_MP;
 	[[baseFlagPole3, false],"AOW_fnc_base_allowdamage",true,true] spawn BIS_fnc_MP;
 	[[tablet, false],"AOW_fnc_base_allowdamage",true,true] spawn BIS_fnc_MP;
-	[[taulapet, false],"AOW_fnc_base_allowdamage",true,true] spawn BIS_fnc_MP;
-	/************** Fi dels canvis dels Cavallers del Cel per CC_Viper *******************/
-	
-};
+	//[[taulapet, false],"AOW_fnc_base_allowdamage",true,true] spawn BIS_fnc_MP;
+	// Fi dels canvis dels Cavallers del Cel per CC_Viper
+//};
 
 // Flag Pole
 [[baseFlagPole, [localize "str_AOW_Menu1","AOW_MHQ\DialogMHQ.sqf",[],6,false,true,"",""]],"AOW_fnc_addAction",true,true] spawn BIS_fnc_MP;
@@ -51,7 +50,7 @@ publicVariable "baseFlagPole";
 
 // Respawn + MHQ markers
 createMarker ["respawn_west",getPos Hrespawn_west];
-createMarker ["respawn_east",getPos Hrespawn_east];
+//createMarker ["respawn_east",getPos Hrespawn_east];
 _spawn_mhq = createMarker ["Spawn_MHQ", getPos HSpawn_MHQ];
 _spawn_mhq setMarkerDir getDir Hspawn_MHQ;
 
@@ -122,12 +121,12 @@ NBShip setObjectTextureGlobal [0, "images\cart_vaixells.paa"];
 // [[NBAmmo, [localize "str_AOW_Menu_Ammo1","scripts\arsenal.sqf",[],6,false,true,"",""]],"AOW_fnc_addAction",true,true] spawn BIS_fnc_MP;
 // [[NBAmmo, [localize "str_AOW_Menu_Ammo2","[player, [profileNamespace, 'AOW_Respawn_Loadout']] call BIS_fnc_saveInventory; profileNamespace setVariable ['AOW_Respawn_Loadout_Check',1]; hint'Equipament desat';",[],5.9,false,true,"",""]],"AOW_fnc_addAction",true,true] spawn BIS_fnc_MP;
 // [[NBAmmo, [localize "str_AOW_Menu_Ammo3","userconfig\LEA\loadout.sqf",[],5.8,false,true,"",""]],"AOW_fnc_addAction",true,true] spawn BIS_fnc_MP;
-NBAmmo setObjectTextureGlobal [0, "images\cart_arsenal1.paa"];
+/*NBAmmo setObjectTextureGlobal [0, "images\cart_arsenal1.paa"];
 NBAmmo2 setObjectTextureGlobal [0, "images\cart_arsenal2.paa"];
 publicVariable "NBAmmo2";
 NBAmmo3 setObjectTextureGlobal [0, "images\cart_arsenal2.paa"];
 NBAmmo4 setObjectTextureGlobal [0, "images\cart_arsenal2.paa"];
-NBAmmo5 setObjectTextureGlobal [0, "images\cart_arsenal2.paa"];
+NBAmmo5 setObjectTextureGlobal [0, "images\cart_arsenal2.paa"];*/
 
 // 1RA: CC_Viper: Canvis per afegir el virtual arsenal, noves imatges, banderes i cartells //
 //AMMOBOX DEPOT
@@ -137,14 +136,14 @@ NBAmmo5 setObjectTextureGlobal [0, "images\cart_arsenal2.paa"];
 
 // Tablet perfils
 [[tablet, ["<t color='#027CE7'>Desar perfils 1RA</t>","1RAPerfils.sqf",[],6,false,true,"",""]],"AOW_fnc_addAction",true,true] spawn BIS_fnc_MP;
-tablet attachTo [taulapet, [0,0.5,0.57]];
+//tablet attachTo [taulapet, [0,0.5,0.57]];
 
 // Sign images
 Sign1 setObjectTextureGlobal [0, "images\cart_campcavallers.paa"];
 Sign2 setObjectTextureGlobal [0, "images\cart_relax.paa"];
-Sign2b setObjectTextureGlobal [0, "images\cart_relax.paa"];
-Sign3 setObjectTextureGlobal [0, "images\cart_stop1.paa"];
-Sign4 setObjectTextureGlobal [0, "images\cart_stop2.paa"];
+//Sign2b setObjectTextureGlobal [0, "images\cart_relax.paa"];
+//Sign3 setObjectTextureGlobal [0, "images\cart_stop1.paa"];
+//Sign4 setObjectTextureGlobal [0, "images\cart_stop2.paa"];
 cart_repair setObjectTextureGlobal [0, "images\cart_reparacio.paa"];
 
 // Textures de banderes
@@ -197,7 +196,6 @@ deleteVehicle hVVS4;
 deleteVehicle hVVS5;
 deleteVehicle hVVS6;
 deleteVehicle Hrespawn_west;
-deleteVehicle Hrespawn_east;
 deleteVehicle HSpawn_MHQ;
 deleteVehicle HSupport1;
 deleteVehicle HRepair;
