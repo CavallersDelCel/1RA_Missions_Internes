@@ -249,7 +249,7 @@
 	<Key ID="str_AOW_Menu_SpawnP_2">
       <English>&lt;t color='#ff0000'&gt;Place planes delivery point&lt;/t&gt;</English>
       <French>&lt;t color='#ff0000'&gt;Placer lieu de livraison pour avions&lt;/t&gt;</French>
-	  <Spanish>&lt;t color='#ff0000'&gt;Eatablir el punt de lliurament d'avions&lt;/t&gt;</Spanish>
+	  <Spanish>&lt;t color='#ff0000'&gt;Establir el punt de lliurament d'avions&lt;/t&gt;</Spanish>
     </Key>
 	<Key ID="str_AOW_Menu_SpawnP_3">
       <English>&lt;t color='#ff0000'&gt;Teleport on planes delivery point&lt;/t&gt;</English>
@@ -269,7 +269,7 @@
 	<Key ID="str_AOW_Menu_SpawnS_2">
       <English>&lt;t color='#ff0000'&gt;Place ships delivery point&lt;/t&gt;</English>
       <French>&lt;t color='#ff0000'&gt;Placer lieu de livraison pour bateaux&lt;/t&gt;</French>
-	  <Spanish>&lt;t color='#ff0000'&gt;Eatablir el punt de lliurament de vaixells&lt;/t&gt;</Spanish>
+	  <Spanish>&lt;t color='#ff0000'&gt;Establir el punt de lliurament de vaixells&lt;/t&gt;</Spanish>
     </Key>
 	<Key ID="str_AOW_Menu_SpawnS_3">
       <English>&lt;t color='#ff0000'&gt;Teleport on ships delivery point&lt;/t&gt;</English>

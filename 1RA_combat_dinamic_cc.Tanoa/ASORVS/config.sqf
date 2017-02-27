@@ -4,12 +4,13 @@ ASORVS_BrightMaps = [];
 
 ASORVS_UnitInsigniaAsBackground = false;
 //Background logo. Can be in a mod or in a mission. .paa (recommended) or .jpg
-ASORVS_BackgroundLogo =   "A3\ui_f\data\Logos\arma3_expansion_ca.paa";
-//ASORVS_BackgroundLogo = "clan_logo.jpg"; //Image in your mission folder.
+//ASORVS_BackgroundLogo =   "A3\ui_f\data\Logos\arma3_expansion_ca.paa";
+//ASORVS_BackgroundLogo = "images\fons_cc1ra_asorvs.paa"; //Image in your mission folder.
 //ASORVS_BackgroundLogo = "clan-textures\clan_logo.paa"; //Image in clan-textures.pbo addon
 
 //Background tile (Arma 3 loading screen noise)
-ASORVS_BackgroundTile = "A3\ui_f\data\GUI\cfg\LoadingScreens\loadingnoise_ca.paa";
+//ASORVS_BackgroundTile = "A3\ui_f\data\GUI\cfg\LoadingScreens\loadingnoise_ca.paa";
+ASORVS_BackgroundTile = "images\fons_cc1ra_asorvs.paa";
 
 //Items that should not be shown in any lists
 ASORVS_Blacklist = [];

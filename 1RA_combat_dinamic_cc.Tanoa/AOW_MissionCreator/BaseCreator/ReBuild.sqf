@@ -45,7 +45,7 @@ if (getMarkerColor "VVS1" != "") then {// Delete old Base markers if base re loc
 [[baseFlagPole, [localize "str_AOW_Menu1","AOW_MHQ\DialogMHQ.sqf",[],6,false,true,"",""]],"AOW_fnc_addAction",true,true] spawn BIS_fnc_MP;
 [[baseFlagPole, [localize "str_AOW_Menu2","AOW_MissionCreator\ZoneCreator\Zone1.sqf",[],5.9,false,true,"",""]],"AOW_fnc_addAction",true,true] spawn BIS_fnc_MP;
 [[baseFlagPole, [localize "str_AOW_Menu3","AOW_MissionCreator\TasksCreator\Tasks1.sqf",[],5.8,false,true,"",""]],"AOW_fnc_addAction",true,true] spawn BIS_fnc_MP;
-[[baseFlagPole, [localize "str_AOW_Menu4","AOW_MissionCreator\BaseCreator\Base1.sqf",[],5.7,false,true,"",""]],"AOW_fnc_addAction",true,true] spawn BIS_fnc_MP;
+//[[baseFlagPole, [localize "str_AOW_Menu4","AOW_MissionCreator\BaseCreator\Base1.sqf",[],5.7,false,true,"",""]],"AOW_fnc_addAction",true,true] spawn BIS_fnc_MP;
 publicVariable "baseFlagPole";
 
 // Respawn + MHQ markers
@@ -58,7 +58,7 @@ _spawn_mhq setMarkerDir getDir Hspawn_MHQ;
 _mVVS1 = createMarker ["VVS1", getPos HVVS1];
 _mVVS1 setMarkerType "b_motor_inf";
 _mVVS1 setMarkerText localize "str_AOW_Marker_Car";
-_mVVS1 setMarkerDir (getDir NBCar);
+_mVVS1 setMarkerDir (getDir HVVS1);
 NBCar setObjectTextureGlobal [0, "images\cart_cotxes.paa"];
 [[NBCar, [localize "str_AOW_Menu_Car",{[["cars"], [], "VVS1"] execVM "ASORVS\open.sqf"},[],6,false,true,"",""]],"AOW_fnc_addAction",true,true] spawn BIS_fnc_MP;
 
@@ -66,7 +66,7 @@ NBCar setObjectTextureGlobal [0, "images\cart_cotxes.paa"];
 _mVVS2 = createMarker ["VVS2", getPos HVVS2];
 _mVVS2 setMarkerType "b_armor";
 _mVVS2 setMarkerText localize "str_AOW_Marker_Tank";
-_mVVS2 setMarkerDir (getDir NBArmored);
+_mVVS2 setMarkerDir (getDir HVVS2);
 NBArmored setObjectTextureGlobal [0, "images\cart_blindats.paa"];
 [[NBArmored, [localize "str_AOW_Menu_Tank",{[["tanks"], [], "VVS2"] execVM "ASORVS\open.sqf"},[],6,false,true,"",""]],"AOW_fnc_addAction",true,true] spawn BIS_fnc_MP;
 
@@ -82,7 +82,7 @@ NBHelicopter setObjectTextureGlobal [0, "images\cart_helicopters.paa"];
 _mVVS4 = createMarker ["VVS4", getPos HVVS4];
 _mVVS4 setMarkerType "b_support";
 _mVVS4 setMarkerText localize "str_AOW_Marker_Support";
-_mVVS4 setMarkerDir (getDir NBSupport);
+_mVVS4 setMarkerDir (getDir HVVS4);
 NBSupport setObjectTextureGlobal [0, "images\cart_suport.paa"];
 [[NBSupport, [localize "str_AOW_Menu_Support",{[["support"], [], "VVS4"] execVM "ASORVS\open.sqf"},[],6,false,true,"",""]],"AOW_fnc_addAction",true,true] spawn BIS_fnc_MP;
 
