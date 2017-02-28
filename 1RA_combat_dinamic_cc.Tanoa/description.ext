@@ -36,6 +36,11 @@ class Header
 	maxPlayers = 44;
 };
 
+// ACE 3 - Cavallers del Cel
+class ACE_Settings {
+    #include "cc_ace3_settings.hpp"
+};
+
 // AOW GUI
 #include "AOW_GUI\Defines.hpp"
 #include "AOW_GUI\AowMenu.hpp"
