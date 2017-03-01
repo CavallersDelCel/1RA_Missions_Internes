@@ -400,7 +400,7 @@ class ace_medical_menu_maxRange {
     force = 1;
 };
 class ace_microdagr_mapDataAvailable {
-    value = 2;
+    value = 0;
     typeName = "SCALAR";
     force = 1;
 };
